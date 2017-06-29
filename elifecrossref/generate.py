@@ -210,41 +210,6 @@ class crossrefXML(object):
         resource = 'http://elifesciences.org/lookup/doi/' + poa_article.doi
         self.resource.text = resource
 
-    def set_crossmark(self, parent, poa_article):
-        self.crossmark = SubElement(parent, 'crossmark')
-
-        self.crossmark_version = SubElement(self.crossmark, 'crossmark_version')
-        self.crossmark_version.text = "1"
-
-        self.crossmark_policy = SubElement(self.crossmark, 'crossmark_policy')
-        self.crossmark_policy.text = self.elife_crossmark_policy
-
-        self.crossmark_domains = SubElement(self.crossmark, 'crossmark_domains')
-        self.crossmark_domain = SubElement(self.crossmark_domains, 'crossmark_domain')
-        self.crossmark_domain_domain = SubElement(self.crossmark_domain, 'domain')
-        self.crossmark_domain_domain.text = self.elife_crossmark_domain
-
-        self.crossmark_domain_exclusive = SubElement(self.crossmark, 'crossmark_domain_exclusive')
-        self.crossmark_domain_exclusive.text = "false"
-
-        self.set_custom_metadata(self.crossmark, poa_article)
-
-    def set_custom_metadata(self, parent, poa_article):
-        self.custom_metadata = SubElement(parent, 'custom_metadata')
-
-        self.ai_program = SubElement(self.custom_metadata, 'ai:program')
-        self.ai_program.set('name', 'AccessIndicators')
-
-        license_href = poa_article.license.href
-
-        license_ref_applies_to = ['am']
-
-        if license_href:
-            for applies_to in license_ref_applies_to:
-                self.ai_program_ref = SubElement(self.ai_program, 'ai:license_ref')
-                self.ai_program_ref.set('applies_to', applies_to)
-                self.ai_program_ref.text = license_href
-
     def set_contributors(self, parent, poa_article, contrib_types=None):
         # If contrib_type is None, all contributors will be added regardless of their type
         self.contributors = SubElement(parent, "contributors")
@@ -519,9 +484,6 @@ class crossrefXML(object):
             root_xml_element = utils.append_minidom_xml_to_elementtree_xml(
                 parent, reparsed
             )
-        else:
-            # Empty
-            self.subtitle = SubElement(parent, tag_name)
 
     def crossref_mime_type(self, jats_mime_type):
         """
@@ -567,10 +529,6 @@ class crossrefXML(object):
         mime_types['video/gif'] = 'image/gif'
 
         return mime_types.get(jats_mime_type.lower())
-
-
-    def printXML(self):
-        print self.root
 
     def prettyXML(self):
         encoding = 'utf-8'
