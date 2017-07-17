@@ -25,13 +25,6 @@ class TestGenerate(unittest.TestCase):
         self.passes.append(('elife-12444-v2.xml', 'elife-crossref-12444-20170717071707.xml', default_pub_date))
         self.passes.append(('elife-00666.xml', 'elife-crossref-00666-20170717071707.xml', default_pub_date))
 
-    def clean_crossref_xml_for_comparison(self, xml_content):
-        # For now running a test on a PoA article ignore the
-        # <publication_date media_type="online"> which is set to the date it is generated
-
-        xml_content = re.sub(ur'<!--.*-->', '', xml_content)
-        return xml_content
-
     def read_file_content(self, file_name):
         fp = open(file_name, 'rb')
         content = fp.read()
@@ -42,24 +35,20 @@ class TestGenerate(unittest.TestCase):
         for (article_xml_file, crossref_xml_file, pub_date) in self.passes:
             file_path = TEST_DATA_PATH + article_xml_file
             articles = parse.build_articles_from_article_xmls([file_path])
-
-            crossref_xml = generate.build_crossref_xml_for_articles(articles, pub_date)
-
+            crossref_xml = generate.build_crossref_xml_for_articles(articles, pub_date, False)
             model_crossref_xml = self.read_file_content(TEST_DATA_PATH + crossref_xml_file)
-
-            clean_generated_crossref_xml = self.clean_crossref_xml_for_comparison(crossref_xml)
-            clean_model_crossref_xml = self.clean_crossref_xml_for_comparison(model_crossref_xml)
-
-            self.assertEqual(clean_generated_crossref_xml, clean_model_crossref_xml)
+            self.assertEqual(crossref_xml, model_crossref_xml)
 
     def test_parse_do_no_pass_pub_date(self):
         # For test coverage build a crossrefXML object without passing in a pub_date
         article_xml_file = 'elife_poa_e02725.xml'
-        pub_date = None
         file_path = TEST_DATA_PATH + article_xml_file
         articles = parse.build_articles_from_article_xmls([file_path])
-        crossref_object = generate.crossrefXML(articles, pub_date)
+        crossref_object = generate.crossrefXML(articles, None, True)
         self.assertIsNotNone(crossref_object.pub_date)
+        self.assertIsNotNone(crossref_object.generated)
+        self.assertIsNotNone(crossref_object.last_commit)
+        self.assertIsNotNone(crossref_object.comment)
 
 if __name__ == '__main__':
     unittest.main()
