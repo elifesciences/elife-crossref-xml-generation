@@ -41,6 +41,8 @@ class crossrefXML(object):
         # Publication date
         if pub_date is None:
             self.pub_date = time.gmtime()
+        else:
+            self.pub_date = pub_date
 
         # Generate batch id
         batch_doi = ''
@@ -539,14 +541,14 @@ class crossrefXML(object):
         #return reparsed.toprettyxml(indent="\t", encoding = encoding)
         return reparsed.toxml(encoding=encoding)
 
-def build_crossref_xml_for_articles(poa_articles):
+def build_crossref_xml_for_articles(poa_articles, pub_date=None):
     """
     Given a list of article article objects,
     and then generate crossref XML from them
     """
 
     # test the XML generator
-    eXML = crossrefXML(poa_articles)
+    eXML = crossrefXML(poa_articles, pub_date)
     prettyXML = eXML.prettyXML()
 
     # Write to file
