@@ -19,13 +19,14 @@ class crossrefXML(object):
         """
         self.root = Element('doi_batch')
 
+        self.crossref_config = crossref_config
         # set the boiler plate values
         self.config_contrib_types = crossref_config.get("contrib_types")
-        self.config_journal_id = crossref_config.get("journal_id")
-        self.config_journal_title = crossref_config.get("journal_title")
+        self.config_depositor_name = crossref_config.get("depositor_name")
+        self.config_registrant = crossref_config.get("registrant")
         self.config_email_address = crossref_config.get("email_address")
         self.config_epub_issn = crossref_config.get("epub_issn")
-        self.config_publisher_name = crossref_config.get("publisher_name")
+        self.config_journal_title = crossref_config.get("journal_title")
         self.config_crossmark_policy = crossref_config.get("crossmark_policy")
         self.config_crossmark_domain = crossref_config.get("crossmark_domain")
 
@@ -76,12 +77,12 @@ class crossrefXML(object):
         self.timestamp.text = time.strftime("%Y%m%d%H%M%S", self.pub_date)
         self.set_depositor(self.head)
         self.registrant = SubElement(self.head, 'registrant')
-        self.registrant.text = self.config_journal_title
+        self.registrant.text = self.config_registrant
 
     def set_depositor(self, parent):
         self.depositor = SubElement(parent, 'depositor')
         self.name = SubElement(self.depositor, 'depositor_name')
-        self.name.text = self.config_journal_title
+        self.name.text = self.config_depositor_name
         self.email_address = SubElement(self.depositor, 'email_address')
         self.email_address.text = self.config_email_address
 
@@ -213,7 +214,7 @@ class crossrefXML(object):
 
         self.resource = SubElement(self.doi_data, 'resource')
 
-        resource = 'http://elifesciences.org/lookup/doi/' + poa_article.doi
+        resource = self.crossref_config.get("doi_pattern").format(doi=poa_article.doi)
         self.resource.text = resource
 
     def set_contributors(self, parent, poa_article, contrib_types=None):
