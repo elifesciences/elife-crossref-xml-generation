@@ -65,13 +65,13 @@ def append_minidom_xml_to_elementtree_xml(parent, xml, recursive=False, attribut
 
     return parent
 
-def elife_journal_volume(pub_date):
+def calculate_journal_volume(pub_date, year):
     """
     volume value is based on the pub date year
     pub_date is a python time object
     """
     try:
-        volume = str(pub_date.tm_year - 2011)
+        volume = str(pub_date.tm_year - year + 1)
     except:
         volume = None
     return volume

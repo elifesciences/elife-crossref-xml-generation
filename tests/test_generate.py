@@ -14,7 +14,7 @@ class TestGenerate(unittest.TestCase):
 
     def setUp(self):
         self.passes = []
-        default_pub_date = time.gmtime(1500275827)
+        default_pub_date = time.strptime("2017-07-17 07:17:07", "%Y-%m-%d %H:%M:%S")
         self.passes.append(('elife-02935-v2.xml', 'elife-crossref-02935-20170717071707.xml', 'elife', default_pub_date))
         self.passes.append(('elife_poa_e02725.xml', 'elife-crossref-02725-20170717071707.xml', 'elife', default_pub_date))
         self.passes.append(('elife-15743-v1.xml', 'elife-crossref-15743-20170717071707.xml', 'elife', default_pub_date))

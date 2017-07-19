@@ -29,6 +29,7 @@ class crossrefXML(object):
         self.config_journal_title = crossref_config.get("journal_title")
         self.config_crossmark_policy = crossref_config.get("crossmark_policy")
         self.config_crossmark_domain = crossref_config.get("crossmark_domain")
+        self.config_year_of_first_volume = crossref_config.get("year_of_first_volume")
 
         self.root.set('version', "4.3.5")
         self.root.set('xmlns', 'http://www.crossref.org/schema/4.3.5')
@@ -130,7 +131,9 @@ class crossrefXML(object):
             if poa_article.volume:
                 self.volume.text = poa_article.volume
             else:
-                self.volume.text = utils.elife_journal_volume(pub_date)
+                if self.config_year_of_first_volume:
+                    self.volume.text = utils.calculate_journal_volume(
+                        pub_date, int(self.config_year_of_first_volume))
 
             # Add journal article
             self.set_journal_article(self.journal, poa_article)
