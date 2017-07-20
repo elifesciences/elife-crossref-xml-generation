@@ -11,6 +11,12 @@ setup(name='elifecrossref',
     long_description=readme,
     packages=['elifecrossref'],
     license = 'MIT',
+    install_requires=[
+        "elifetools",
+        "elifearticle",
+        "GitPython",
+        "configparser"
+    ],
     url='https://github.com/elifesciences/elife-crossref-xml-generation',
     maintainer='eLife Sciences Publications Ltd.',
     maintainer_email='py@elifesciences.org',
