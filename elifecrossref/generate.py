@@ -25,8 +25,6 @@ class crossrefXML(object):
         self.config_depositor_name = crossref_config.get("depositor_name")
         self.config_registrant = crossref_config.get("registrant")
         self.config_email_address = crossref_config.get("email_address")
-        self.config_epub_issn = crossref_config.get("epub_issn")
-        self.config_journal_title = crossref_config.get("journal_title")
         self.config_crossmark_policy = crossref_config.get("crossmark_policy")
         self.config_crossmark_domain = crossref_config.get("crossmark_domain")
         self.config_year_of_first_volume = crossref_config.get("year_of_first_volume")
@@ -92,9 +90,7 @@ class crossrefXML(object):
 
         for poa_article in poa_articles:
             # Create a new journal record for each article
-            # Use a list of one for now
-            poa_article_list = [poa_article]
-            self.set_journal(self.body, poa_article_list)
+            self.set_journal(self.body, poa_article)
 
     def get_pub_date(self, poa_article):
         """
@@ -109,44 +105,38 @@ class crossrefXML(object):
             pub_date = self.pub_date
         return pub_date
 
-    def set_journal(self, parent, poa_articles):
-
+    def set_journal(self, parent, poa_article):
         # Add journal for each article
-        for poa_article in poa_articles:
-            self.journal = SubElement(parent, 'journal')
-            self.set_journal_metadata(self.journal)
+        self.journal = SubElement(parent, 'journal')
+        self.set_journal_metadata(self.journal, poa_article)
 
-            self.journal_issue = SubElement(self.journal, 'journal_issue')
+        self.journal_issue = SubElement(self.journal, 'journal_issue')
 
-            #self.publication_date = self.set_date(self.journal_issue,
-            #                                      poa_article, 'publication_date')
+        pub_date = self.get_pub_date(poa_article)
+        self.set_publication_date(self.journal_issue, pub_date)
 
-            # Get the issue date from the first article in the list when doing one article per issue
-            pub_date = self.get_pub_date(poa_articles[0])
-            self.set_publication_date(self.journal_issue, pub_date)
+        self.journal_volume = SubElement(self.journal_issue, 'journal_volume')
+        self.volume = SubElement(self.journal_volume, 'volume')
+        # Use volume from the article unless not present then use the default
+        if poa_article.volume:
+            self.volume.text = poa_article.volume
+        else:
+            if self.config_year_of_first_volume:
+                self.volume.text = utils.calculate_journal_volume(
+                    pub_date, int(self.config_year_of_first_volume))
 
-            self.journal_volume = SubElement(self.journal_issue, 'journal_volume')
-            self.volume = SubElement(self.journal_volume, 'volume')
-            # Use volume from the article unless not present then use the default
-            if poa_article.volume:
-                self.volume.text = poa_article.volume
-            else:
-                if self.config_year_of_first_volume:
-                    self.volume.text = utils.calculate_journal_volume(
-                        pub_date, int(self.config_year_of_first_volume))
+        # Add journal article
+        self.set_journal_article(self.journal, poa_article)
 
-            # Add journal article
-            self.set_journal_article(self.journal, poa_article)
-
-    def set_journal_metadata(self, parent):
+    def set_journal_metadata(self, parent, poa_article):
         # journal_metadata
         journal_metadata = SubElement(parent, 'journal_metadata')
         journal_metadata.set("language", "en")
         self.full_title = SubElement(journal_metadata, 'full_title')
-        self.full_title.text = self.config_journal_title
+        self.full_title.text = poa_article.journal_title
         self.issn = SubElement(journal_metadata, 'issn')
         self.issn.set("media_type", "electronic")
-        self.issn.text = self.config_epub_issn
+        self.issn.text = poa_article.journal_issn
 
     def set_journal_article(self, parent, poa_article):
         self.journal_article = SubElement(parent, 'journal_article')
