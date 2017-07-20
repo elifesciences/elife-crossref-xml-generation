@@ -1,3 +1,3 @@
-git+https://github.com/elifesciences/elifearticle.git@aa9ee22091821f19b655b0d0b22c998f3318d21d#egg=elifearticle
+git+https://github.com/elifesciences/elife-article.git@aa9ee22091821f19b655b0d0b22c998f3318d21d#egg=elifearticle
 GitPython==0.3.2.1
 configparser==3.5.0
