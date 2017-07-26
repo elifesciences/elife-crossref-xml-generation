@@ -405,6 +405,10 @@ class crossrefXML(object):
                     self.cyear = SubElement(self.citation, 'cYear')
                     self.cyear.text = ref.year
 
+                if ref.article_title:
+                    self.article_title = SubElement(self.citation, 'article_title')
+                    self.article_title.text = ref.article_title
+
                 if ref.doi:
                     self.doi = SubElement(self.citation, 'doi')
                     self.doi.text = ref.doi
