@@ -349,10 +349,11 @@ class crossrefXML(object):
                 self.ai_program_ref.text = poa_article.license.href
 
     def set_archive_locations(self, parent, poa_article, archive_locations):
-        for archive_location in archive_locations:
+        if archive_locations and len(archive_locations) > 0:
             self.archive_locations = SubElement(parent, 'archive_locations')
-            self.archive = SubElement(self.archive_locations, 'archive')
-            self.archive.set('name', archive_location)
+            for archive_location in archive_locations:
+                self.archive = SubElement(self.archive_locations, 'archive')
+                self.archive.set('name', archive_location)
 
     def set_citation_list(self, parent, poa_article):
         """
