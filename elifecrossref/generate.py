@@ -5,7 +5,7 @@ from xml.etree.ElementTree import Element, SubElement, Comment
 from xml.dom import minidom
 import time
 import os
-from conf import config
+from conf import config, parse_raw_config
 
 TMP_DIR = 'tmp'
 
@@ -21,14 +21,6 @@ class crossrefXML(object):
 
         self.crossref_config = crossref_config
         # set the boiler plate values
-        self.config_contrib_types = crossref_config.get("contrib_types")
-        self.config_depositor_name = crossref_config.get("depositor_name")
-        self.config_registrant = crossref_config.get("registrant")
-        self.config_email_address = crossref_config.get("email_address")
-        self.config_crossmark_policy = crossref_config.get("crossmark_policy")
-        self.config_crossmark_domain = crossref_config.get("crossmark_domain")
-        self.config_year_of_first_volume = crossref_config.get("year_of_first_volume")
-
         self.root.set('version', "4.3.5")
         self.root.set('xmlns', 'http://www.crossref.org/schema/4.3.5')
         self.root.set('xmlns:xsi', 'http://www.w3.org/2001/XMLSchema-instance')
@@ -50,7 +42,7 @@ class crossrefXML(object):
         if len(poa_articles) == 1:
             # If only one article is supplied, then add the doi to the batch file name
             batch_doi = str(poa_articles[0].manuscript).zfill(5) + '-'
-        self.batch_id = (str(crossref_config.get('batch_file_prefix')) + batch_doi +
+        self.batch_id = (str(self.crossref_config.get('batch_file_prefix')) + batch_doi +
                                    time.strftime("%Y%m%d%H%M%S", self.pub_date))
 
         # set comment
@@ -76,14 +68,14 @@ class crossrefXML(object):
         self.timestamp.text = time.strftime("%Y%m%d%H%M%S", self.pub_date)
         self.set_depositor(self.head)
         self.registrant = SubElement(self.head, 'registrant')
-        self.registrant.text = self.config_registrant
+        self.registrant.text = self.crossref_config.get("registrant")
 
     def set_depositor(self, parent):
         self.depositor = SubElement(parent, 'depositor')
         self.name = SubElement(self.depositor, 'depositor_name')
-        self.name.text = self.config_depositor_name
+        self.name.text = self.crossref_config.get("depositor_name")
         self.email_address = SubElement(self.depositor, 'email_address')
-        self.email_address.text = self.config_email_address
+        self.email_address.text = self.crossref_config.get("email_address")
 
     def set_body(self, parent, poa_articles):
         self.body = SubElement(parent, 'body')
@@ -121,9 +113,9 @@ class crossrefXML(object):
         if poa_article.volume:
             self.volume.text = poa_article.volume
         else:
-            if self.config_year_of_first_volume:
+            if self.crossref_config.get("year_of_first_volume"):
                 self.volume.text = utils.calculate_journal_volume(
-                    pub_date, int(self.config_year_of_first_volume))
+                    pub_date, self.crossref_config.get("year_of_first_volume"))
 
         # Add journal article
         self.set_journal_article(self.journal, poa_article)
@@ -145,7 +137,8 @@ class crossrefXML(object):
         # Set the title with italic tag support
         self.set_titles(self.journal_article, poa_article)
 
-        self.set_contributors(self.journal_article, poa_article, self.config_contrib_types)
+        self.set_contributors(self.journal_article, poa_article,
+                              self.crossref_config.get("contrib_types"))
 
         self.set_abstract(self.journal_article, poa_article)
         self.set_digest(self.journal_article, poa_article)
@@ -162,15 +155,12 @@ class crossrefXML(object):
         # Disable crossmark for now
         #self.set_crossmark(self.journal_article, poa_article)
 
-        #self.archive_locations = SubElement(self.journal_article, 'archive_locations')
-        #self.archive = SubElement(self.archive_locations, 'archive')
-        #self.archive.set("name", "CLOCKSS")
-
         self.set_fundref(self.journal_article, poa_article)
 
         self.set_access_indicators(self.journal_article, poa_article)
 
-        self.set_archive_locations(self.journal_article, poa_article)
+        self.set_archive_locations(self.journal_article, poa_article,
+                                   self.crossref_config.get("archive_locations"))
 
         self.set_doi_data(self.journal_article, poa_article)
 
@@ -358,10 +348,12 @@ class crossrefXML(object):
                 self.ai_program_ref.set('applies_to', applies_to)
                 self.ai_program_ref.text = poa_article.license.href
 
-    def set_archive_locations(self, parent, poa_article):
-        self.archive_locations = SubElement(parent, 'archive_locations')
-        self.archive = SubElement(self.archive_locations, 'archive')
-        self.archive.set('name', 'CLOCKSS')
+    def set_archive_locations(self, parent, poa_article, archive_locations):
+        if archive_locations and len(archive_locations) > 0:
+            self.archive_locations = SubElement(parent, 'archive_locations')
+            for archive_location in archive_locations:
+                self.archive = SubElement(self.archive_locations, 'archive')
+                self.archive.set('name', archive_location)
 
     def set_citation_list(self, parent, poa_article):
         """
@@ -549,7 +541,8 @@ def build_crossref_xml_for_articles(poa_articles, config_section="elife", pub_da
     and then generate crossref XML from them
     """
 
-    crossref_config = config[config_section]
+    raw_config = config[config_section]
+    crossref_config = parse_raw_config(raw_config)
 
     # test the XML generator
     eXML = crossrefXML(poa_articles, crossref_config, pub_date, add_comment)
