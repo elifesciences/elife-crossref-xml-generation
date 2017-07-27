@@ -469,17 +469,21 @@ class crossrefXML(object):
         tag_name = 'subtitle'
         # Use <i> tags, not <italic> tags, <b> tags not <bold>
         if component.subtitle:
-            tag_converted_string = eautils.xml_escape_ampersand(component.subtitle)
-            tag_converted_string = eautils.escape_unmatched_angle_brackets(tag_converted_string)
-            tag_converted_string = eautils.replace_tags(tag_converted_string, 'italic', 'i')
-            tag_converted_string = eautils.replace_tags(tag_converted_string, 'bold', 'b')
-            tag_converted_string = eautils.replace_tags(tag_converted_string, 'underline', 'u')
+            tag_converted_string = self.convert_inline_tags(component.subtitle)
             tagged_string = '<' + tag_name + '>' + tag_converted_string + '</' + tag_name + '>'
             reparsed = minidom.parseString(tagged_string.encode('utf-8'))
 
             root_xml_element = utils.append_minidom_xml_to_elementtree_xml(
                 parent, reparsed
             )
+
+    def convert_inline_tags(self, original_string):
+        tag_converted_string = eautils.xml_escape_ampersand(original_string)
+        tag_converted_string = eautils.escape_unmatched_angle_brackets(tag_converted_string)
+        tag_converted_string = eautils.replace_tags(tag_converted_string, 'italic', 'i')
+        tag_converted_string = eautils.replace_tags(tag_converted_string, 'bold', 'b')
+        tag_converted_string = eautils.replace_tags(tag_converted_string, 'underline', 'u')
+        return tag_converted_string
 
     def crossref_mime_type(self, jats_mime_type):
         """
