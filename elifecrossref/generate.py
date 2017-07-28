@@ -382,8 +382,7 @@ class crossrefXML(object):
                         self.author = SubElement(self.citation, 'author')
                         self.author.text = ref.authors[0].get("surname")
                     elif ref.authors[0].get("collab"):
-                        self.author = SubElement(self.citation, 'author')
-                        self.author.text = ref.authors[0].get("collab")
+                        self.add_clean_tag(self.citation, 'author', ref.authors[0].get("collab"))
 
                 if ref.volume:
                     self.volume = SubElement(self.citation, 'volume')
@@ -469,13 +468,27 @@ class crossrefXML(object):
         tag_name = 'subtitle'
         # Use <i> tags, not <italic> tags, <b> tags not <bold>
         if component.subtitle:
-            tag_converted_string = self.convert_inline_tags(component.subtitle)
-            tagged_string = '<' + tag_name + '>' + tag_converted_string + '</' + tag_name + '>'
-            reparsed = minidom.parseString(tagged_string.encode('utf-8'))
+            self.add_inline_tag(parent, tag_name, component.subtitle)
 
-            root_xml_element = utils.append_minidom_xml_to_elementtree_xml(
-                parent, reparsed
-            )
+    def add_clean_tag(self, parent, tag_name, original_string):
+        "remove allowed tags and then add a tag the parent"
+        tag_converted_string = original_string
+        for tag in eautils.allowed_tags():
+            tag_converted_string = tag_converted_string.replace(tag, '')
+        tagged_string = '<' + tag_name + '>' + tag_converted_string + '</' + tag_name + '>'
+        reparsed = minidom.parseString(tagged_string.encode('utf-8'))
+        root_xml_element = utils.append_minidom_xml_to_elementtree_xml(
+            parent, reparsed
+        )
+
+    def add_inline_tag(self, parent, tag_name, original_string):
+        "replace inline tags found in the original_string and then add a tag the parent"
+        tag_converted_string = self.convert_inline_tags(original_string)
+        tagged_string = '<' + tag_name + '>' + tag_converted_string + '</' + tag_name + '>'
+        reparsed = minidom.parseString(tagged_string.encode('utf-8'))
+        root_xml_element = utils.append_minidom_xml_to_elementtree_xml(
+            parent, reparsed
+        )
 
     def convert_inline_tags(self, original_string):
         tag_converted_string = eautils.xml_escape_ampersand(original_string)
