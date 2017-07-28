@@ -25,6 +25,7 @@ class TestGenerate(unittest.TestCase):
         self.passes.append(('elife-16988-v1.xml', 'elife-crossref-16988-20170717071707.xml', 'elife', default_pub_date))
         self.passes.append(('elife-12444-v2.xml', 'elife-crossref-12444-20170717071707.xml', 'elife', default_pub_date))
         self.passes.append(('elife-00666.xml', 'elife-crossref-00666-20170717071707.xml', 'elife', default_pub_date))
+        self.passes.append(('elife-11134-v2.xml', 'elife-crossref-11134-20170717071707.xml', 'elife', default_pub_date))
 
     def read_file_content(self, file_name):
         fp = open(file_name, 'rb')

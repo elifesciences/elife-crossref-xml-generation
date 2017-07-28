@@ -175,18 +175,7 @@ class crossrefXML(object):
         root_tag_name = 'titles'
         tag_name = 'title'
         root_xml_element = Element(root_tag_name)
-        # Crossref allows <i> tags, not <italic> tags
-        tag_converted_title = poa_article.title
-        tag_converted_title = eautils.replace_tags(tag_converted_title, 'italic', 'i')
-        tag_converted_title = eautils.replace_tags(tag_converted_title, 'bold', 'b')
-        tag_converted_title = eautils.replace_tags(tag_converted_title, 'underline', 'u')
-        tagged_string = '<' + tag_name + '>' + tag_converted_title + '</' + tag_name + '>'
-        reparsed = minidom.parseString(eautils.xml_escape_ampersand(tagged_string).encode('utf-8'))
-
-        root_xml_element = utils.append_minidom_xml_to_elementtree_xml(
-            root_xml_element, reparsed
-            )
-
+        self.add_inline_tag(root_xml_element, tag_name, poa_article.title)
         parent.append(root_xml_element)
 
     def set_doi_data(self, parent, poa_article):
@@ -397,8 +386,7 @@ class crossrefXML(object):
                     self.cyear.text = ref.year
 
                 if ref.article_title:
-                    self.article_title = SubElement(self.citation, 'article_title')
-                    self.article_title.text = ref.article_title
+                    self.add_clean_tag(self.citation, 'article_title', ref.article_title)
 
                 if ref.doi:
                     self.doi = SubElement(self.citation, 'doi')
@@ -472,10 +460,14 @@ class crossrefXML(object):
 
     def add_clean_tag(self, parent, tag_name, original_string):
         "remove allowed tags and then add a tag the parent"
+        namespaces = ' xmlns:mml="http://www.w3.org/1998/Math/MathML" '
         tag_converted_string = original_string
         for tag in eautils.allowed_tags():
             tag_converted_string = tag_converted_string.replace(tag, '')
-        tagged_string = '<' + tag_name + '>' + tag_converted_string + '</' + tag_name + '>'
+        remove_tags = ['inline-formula', 'mml:*']
+        for tag in remove_tags:
+            tag_converted_string = eautils.remove_tag(tag, tag_converted_string)
+        tagged_string = '<' + tag_name + namespaces + '>' + tag_converted_string + '</' + tag_name + '>'
         reparsed = minidom.parseString(tagged_string.encode('utf-8'))
         root_xml_element = utils.append_minidom_xml_to_elementtree_xml(
             parent, reparsed
