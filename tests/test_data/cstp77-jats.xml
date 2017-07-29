@@ -1,0 +1,1460 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.0 20120330//EN" "http://jats.nlm.nih.gov/publishing/1.0/JATS-journalpublishing1.dtd">
+<!--<?xml-stylesheet type="text/xsl" href="article.xsl"?>-->
+<article article-type="research-article" dtd-version="1.0" xml:lang="en" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<front>
+<journal-meta>
+<journal-id journal-id-type="issn">2057-4991</journal-id>
+<journal-title-group>
+<journal-title>Citizen Science: Theory and Practice</journal-title>
+</journal-title-group>
+<issn pub-type="epub">2057-4991</issn>
+<publisher>
+<publisher-name>Ubiquity Press</publisher-name>
+</publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="doi">10.5334/cstp.77</article-id>
+<article-categories>
+<subj-group>
+<subject>Research paper</subject>
+</subj-group>
+</article-categories>
+<title-group>
+<article-title>Public Perceptions of Citizen Science</article-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author" corresp="yes">
+<name>
+<surname>Lewandowski</surname>
+<given-names>Eva</given-names>
+</name>
+<email>eva.lewandowski@wisconsin.gov</email>
+<xref ref-type="aff" rid="aff-1"/>
+</contrib>
+<contrib contrib-type="author">
+<name>
+<surname>Caldwell</surname>
+<given-names>Wendy</given-names>
+</name>
+<xref ref-type="aff" rid="aff-2"/>
+</contrib>
+<contrib contrib-type="author">
+<name>
+<surname>Elmquist</surname>
+<given-names>Dane</given-names>
+</name>
+<xref ref-type="aff" rid="aff-2"/>
+</contrib>
+<contrib contrib-type="author">
+<name>
+<surname>Oberhauser</surname>
+<given-names>Karen</given-names>
+</name>
+<xref ref-type="aff" rid="aff-2"/>
+</contrib>
+</contrib-group>
+<aff id="aff-1">Wisconsin Department of Natural Resources, US</aff>
+<aff id="aff-2">University of Minnesota, US</aff>
+<pub-date publication-format="electronic" date-type="pub" iso-8601-date="2017-07-04">
+<day>04</day>
+<month>07</month>
+<year>2017</year>
+</pub-date>
+<volume>2</volume>
+<issue>1</issue>
+<elocation-id>3</elocation-id>
+<history>
+<date date-type="received" iso-8601-date="2016-08-11">
+<day>11</day>
+<month>08</month>
+<year>2016</year>
+</date>
+<date date-type="accepted" iso-8601-date="2017-03-28">
+<day>28</day>
+<month>03</month>
+<year>2017</year>
+</date>
+</history>
+<permissions>
+<copyright-statement>Copyright: &#x00A9; 2017 The Author(s)</copyright-statement>
+<copyright-year>2017</copyright-year>
+<license license-type="open-access" xlink:href="http://creativecommons.org/licenses/by/4.0/">
+<license-p>This is an open-access article distributed under the terms of the Creative Commons Attribution 4.0 International License (CC-BY 4.0), which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited. See <uri xlink:href="http://creativecommons.org/licenses/by/4.0/">http://creativecommons.org/licenses/by/4.0/</uri>.</license-p>
+</license>
+</permissions>
+<self-uri xlink:href="http://theoryandpractice.citizenscienceassociation.org/articles/10.5334/cstp.77/"/>
+<abstract>
+<p>Members of the public are the foundation and the backbone of citizen science, but much remains unknown about how the public views citizen science. We conducted a survey of public familiarity with, and perceptions of, citizen science. We found that less than half of respondents were familiar with the term &#8220;citizen science,&#8221; but over 70% were familiar with the concept by another name. Most respondents were more confident in hypothetical citizen science findings when professional scientists were involved to some degree, compared to situations in which only citizen scientists were involved. Confidence in citizen science findings tended to increase with age, despite the fact that self-confidence in respondents&#8217; own abilities to perform citizen science tasks decreased with age. Fewer than half of respondents (31&#8211;47%), and more men than women, were confident in their own ability to perform science process tasks, with the exception of collecting data (53% confident), and only slightly more predicted they would enjoy such activities. Based on our findings, we suggest ways in which leaders of citizen science projects can better promote recruitment, retention, and engagement on the part of volunteers and the public as a whole.</p>
+</abstract>
+<kwd-group>
+<kwd>citizen science</kwd>
+<kwd>public participation in scientific research</kwd>
+<kwd>public opinion</kwd>
+<kwd>self-confidence</kwd>
+</kwd-group>
+</article-meta>
+</front>
+<body>
+<sec>
+<title>Introduction</title>
+<p>Citizen science plays an increasingly large role in many fields, including astronomy, meteorology, and medicine. It has become especially prevalent and powerful in the fields of ecology and conservation (<xref ref-type="bibr" rid="B16">Follett and Strezov 2015</xref>). The ability of a multitude of volunteers to collect large quantities of data across space and time far outstrips the capacity of one or a few professional scientists. Because much of conservation research focuses on geographically widespread issues, such as climate change or the spread of invasive species, such research can particularly benefit from the use of citizen science to increase data collection capacity (<xref ref-type="bibr" rid="B12">Dickinson et al. 2010</xref>). Additionally, when volunteers contribute to other aspects of research, such as identifying a research topic or disseminating results, the research can benefit from their many unique perspectives, skill sets, and knowledge. Volunteers can bring many improvements to research, and they have the potential to benefit as well. Participation in citizen science has the potential to increase volunteers&#8217; knowledge of the field of study, such as ecology and conservation (e.g., <xref ref-type="bibr" rid="B3">Brossard et al. 2005</xref>; <xref ref-type="bibr" rid="B19">Jordan et al. 2011</xref>); to increase science literacy (<xref ref-type="bibr" rid="B10">Crall et al. 2013</xref>) and engagement in conservation actions (<xref ref-type="bibr" rid="B22">Lewandowski and Oberhauser 2017</xref>); and to promote positive attitudes toward nature (<xref ref-type="bibr" rid="B14">Evans et al. 2005</xref>).</p>
+<p>These benefits of citizen science, to both the research and the volunteers, can be realized only when volunteers choose to participate in citizen science projects. Gauging the public&#8217;s knowledge and perceptions of citizen science can inform strategies for attracting and recruiting potential citizen science participants. The recruitment of volunteers is a crucial component of creating and maintaining a citizen science project in any field, and recruitment strategies have been linked to changes in data quality within citizen science projects by expanding data collection areas and more closely matching volunteer motivations to project experiences (<xref ref-type="bibr" rid="B23">Lewandowski and Specht 2015</xref>). We have some understanding of the experiences and outcomes of existing citizen science volunteers (e.g., <xref ref-type="bibr" rid="B10">Crall et al. 2013</xref>; <xref ref-type="bibr" rid="B19">Jordan et al. 2011</xref>) and professional scientists&#8217; opinions of citizen science (<xref ref-type="bibr" rid="B30">Riesch and Potter 2014</xref>), but only one study has examined the public&#8217;s interest in participating in citizen science (<xref ref-type="bibr" rid="B24">Martin et al. 2016</xref>), and that research focused on marine citizen science and only on a subset of the public that already was involved in the marine environment in some way. No other studies of attitudes and knowledge about citizen science on the part of the general public have been conducted.</p>
+<p>In addition to influencing recruitment and retention, public perceptions of citizen science can influence confidence in the findings of citizen science projects. Citizen science findings in any field can be used to inform policy, and conservation or ecological findings can be used as the basis for conservation management decisions (<xref ref-type="bibr" rid="B8">Cooper et al. 2007</xref>; <xref ref-type="bibr" rid="B25">McKinley et al. 2015</xref>). Additionally, the source of scientific knowledge can influence how members of the public trust and interpret that knowledge (<xref ref-type="bibr" rid="B18">Jenkins 1999</xref>). A multifaceted effort is under way to increase the public&#8217;s participation in science policy in general (<xref ref-type="bibr" rid="B29">Rayner 2003</xref>; <xref ref-type="bibr" rid="B35">Stocklmayer et al. 2010</xref>) and conservation policy in specific (<xref ref-type="bibr" rid="B33">Shanley and Lopez 2009</xref>); furthermore, conservation often can be undertaken by individual members of the public in addition to governmental or non-governmental organizations. As a result, public buy-in is often important to conservation, and public confidence in the findings of citizen science could play a crucial role in conservation.</p>
+<p>We studied public perceptions of citizen science to address gaps in our understanding of this topic. Here, we present the results of a public opinion survey designed to provide baseline data for the following research questions:</p>
+<list list-type="order">
+<list-item><p>To what extent is the public familiar with the term and the concept of citizen science?</p></list-item>
+<list-item><p>What portion of the public would enjoy or feel confident engaging in citizen science tasks?</p></list-item>
+<list-item><p>How does confidence in citizen science findings compare to confidence in findings produced wholly by professional scientists?</p></list-item>
+</list>
+</sec>
+<sec sec-type="methods">
+<title>Methods</title>
+<p>We conducted public opinion research at the 2015 Minnesota State Fair, a 12-day, annual event held on the 320 acre State Fairgrounds in Falcon Heights, MN. In 2015, the fair was attended by more than 1.7 million people (<xref ref-type="bibr" rid="B26">Minnesota State Fair 2015</xref>). We conducted our research in the University of Minnesota Driven to Discover Research Building, which throughout the fair housed a daily contingent of up to ten university research projects requiring public participation. We collected data during four, six-hour shifts between August 27 and September 3. Visitors to the building were asked to voluntarily complete an &#8220;opinion survey on science.&#8221; To participate in the study, respondents were required to be sufficiently fluent in English to complete the questionnaire and at least 18 years of age. Respondents were given the opportunity to enter a prize drawing for one of four Monarch Larva Monitoring Project Kits (containing supplies for participating in a citizen science project) after completing the questionnaire. Program rules prohibited researchers from leaving the building to recruit fairgoers, so all study respondents entered the property of their own volition.</p>
+<p>We created the questionnaire using Qualtrics software, and the majority of respondents completed it on Apple iPads; paper copies were available upon request to individuals who were unwilling or unable to use iPads. While there was no time constraint for completing the questionnaire, we intentionally designed it to take approximately five minutes to finish, in recognition of the recreational nature of the State Fair and the voluntary participation of the respondents.</p>
+<p>The questionnaire was designed according to Dillman et al. (<xref ref-type="bibr" rid="B13">2008</xref>). It included questions on demographics, participation in citizen science by study respondents, and familiarity with citizen science, which was divided into three separate questions. First, respondents were asked if they were familiar with the term &#8220;citizen science.&#8221; Second we provided a definition of citizen science, to determine if the added context spurred respondents&#8217; memories of the term. Third, to determine if respondents were familiar with the concept of citizen science under another name, we asked if they were familiar with other terms for citizen science, such as community-based monitoring or crowd science. We also asked respondents about their confidence in citizen science findings compared to the findings of research conducted solely by professionals in three situations: When citizen scientists only collected data, when they collaborated with professionals in all aspects of the research, and when they alone (with no professional involvement) were completely responsible for all aspects of the research. Additionally, we asked about their predicted self-confidence and enjoyment in performing possible citizen science tasks, including general science process tasks (identifying a research question, designing a study, collecting data, analyzing data, writing reports, and describing projects to others) and specific data collection actions (monitoring rainfall, identifying invasive plants, observing plant phenology, making one-time observations about animals, and regularly monitoring animals). We provided very brief descriptions of each task (see supplementary information) in order to duplicate the initial stages of recruitment or introduction to a project. This first exposure often occurs in the form of a social media post, profile on a volunteering database, flier, or public talk, and can be fairly minimal.</p>
+<p>To maintain the brevity of the questionnaire, we limited our questions on specific data collection tasks to those that might be performed with an outdoor nature-based project. Two other exhibits at the State Fair contained in-depth, interactive information on citizen science (projects in the Driven to Discover Building did not use the term citizen science), so we asked respondents if they had visited those areas to control for any effect of proximate exposure to citizen science outreach. Respondents were required only to confirm their age; all other questions were optional. The University of Minnesota IRB Human Subjects Committee approved our research (Study number 1504E69663). (The complete questionnaire is available in the supplementary information.)</p>
+<p>We conducted statistical analyses in R version 3.0.1. We used the glm function to perform separate binomial logistic regressions on the two dependent variables, predicted enjoyment of citizen science tasks (yes/no), and predicted self-confidence in performing citizen science tasks (yes/no). We used the polr function in the MASS package to perform ordinal logistic regression on the dependent variable confidence in citizen science findings (less confident, equally confident, or more confident when compared to purely professional findings). Our independent variables in regressions consisted of experience with one or more citizen science projects (binary), education (ordinal), age (continuous), gender, and visiting other citizen science exhibits at the fair (binary). Because fewer than one percent of our respondents reported their gender as something other than male or female, we removed responses that did not fit those categories for our regression analyses and treated gender as a binary variable. We used the pR2 function in the psl package to calculate McFadden&#8217;s pseudo R-squared values for our regression analyses. We used pairwise chi-square tests with Bonferroni corrections to examine differences between confidence in different types of citizen science projects, predicted enjoyment of different citizen science tasks, and predicted self-confidence in performing different citizen science tasks.</p>
+</sec>
+<sec>
+<title>Results</title>
+<p>485 individuals completed the questionnaire, but not all respondents answered each question. As a result, sample sizes varied slightly from question to question. Of the respondents, 91% lived in Minnesota, with the rest spread throughout the United States (n = 481). Sixty-three percent of study respondents were female and 37% were male; of the 485 respondents, one person reported their gender as &#8220;other&#8221; and one person did not select a gender. When asked about race, 90% identified as white and 3% or less identified as American Indian or Alaska native, Asian, Black, Hawaiian or other Pacific Islander, Multiracial, or other. Four percent identified their ethnicity as Hispanic (n = 482). The mean age of study respondents was 42.4, but the age distribution was bimodal, with 23% in their 20s and 23% in their 50s (n = 361, Figure <xref ref-type="fig" rid="F1">1</xref>). Twenty-one percent of respondents had a high school degree or less, 14% had an associate&#8217;s degree, 37% had a bachelor&#8217;s degree, and 28% had a graduate degree (n = 481). Seven percent of respondents were actively involved in citizen science at the time of the survey, 12% had been involved in the past, and 81% had never participated in citizen science (n = 480).</p>
+<fig id="F1">
+<label>Figure 1</label>
+<caption>
+<p>Age of participants. N = 361.</p>
+</caption>
+<graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="cstp-2-1-77-g1.png"/>
+</fig>
+<p>Of the 485 respondents, 25% initially reported that they were familiar with the term citizen science. Results of the first regression with familiarity with the term as the dependent variable indicate that individuals with higher levels of education were more likely to be familiar with the term, as were those with citizen science experience (Table <xref ref-type="table" rid="T1">1</xref>). When provided with a definition of the term, 43% (n = 484) reported that they recalled hearing or seeing the term before; experience with citizen science was a positive predictor of familiarity with the term in the second regression analysis (Table <xref ref-type="table" rid="T1">1</xref>). Seventy-three percent of respondents (n = 484) stated that they were familiar with at least one of the following terms sometimes used to describe citizen science: Public participation in research, crowd science, crowd-sourced science, and community-based monitoring. In the third regression analysis, which considered familiarity with these additional terms as the dependent variable, familiarity was positively correlated with citizen science experience and negatively correlated with age and participation in other citizen science events at the 2015 Minnesota State Fair (Table <xref ref-type="table" rid="T1">1</xref>).</p>
+<table-wrap id="T1">
+<label>Table 1</label>
+<caption>
+<p>Regression coefficients for three measures of familiarity with the concept of citizen science: Familiarity with the term, recollection of hearing about citizen science after being provided with a definition, and familiarity with other similar terms. For details on independent variables, see text. Asterisks indicate significant p-values for coefficients: *p &lt; 0.05, **p &lt; 0.01, ***p &lt; 0.001. N = 357.</p>
+</caption>
+<table>
+<tr>
+<th align="left">Familiarity</th>
+<th align="center">Intercept</th>
+<th align="center">CS Experience</th>
+<th align="center">Education</th>
+<th align="center">Age</th>
+<th align="center">Gender (Male)</th>
+<th align="center">Fair CS</th>
+<th align="center">Pseudo R<sup>2</sup></th>
+</tr>
+<tr>
+<td colspan="8"><hr/></td>
+</tr>
+<tr>
+<td align="left">Term</td>
+<td align="right">&#8211;2.17***</td>
+<td align="right">0.95**</td>
+<td align="right">0.43***</td>
+<td align="right">&#8211;0.01</td>
+<td align="right">0.12</td>
+<td align="right">0.33</td>
+<td align="right">0.27</td>
+</tr>
+<tr>
+<td align="left">Definition</td>
+<td align="right">&#8211;0.33</td>
+<td align="right">1.26***</td>
+<td align="right">0.16</td>
+<td align="right">&#8211;0.01</td>
+<td align="right">&#8211;0.07</td>
+<td align="right">0.14</td>
+<td align="right">0.30</td>
+</tr>
+<tr>
+<td align="left">Other Terms</td>
+<td align="right">1.74***</td>
+<td align="right">0.82*</td>
+<td align="right">0.10</td>
+<td align="right">&#8211;0.02*</td>
+<td align="right">&#8211;0.11</td>
+<td align="right">&#8211;0.64*</td>
+<td align="right">0.31</td>
+</tr>
+</table>
+</table-wrap>
+<p>Chi-square tests revealed significant differences in respondents&#8217; confidence in citizen science projects compared to purely professional projects based on the degree of citizen scientist involvement (&#967;<sup>2</sup> = 156, df = 4, n = 463, p &lt; 0.001). Study respondents were less likely to be confident in citizen science findings when citizen scientists were completely responsible for all aspects of the research (Figure <xref ref-type="fig" rid="F2">2</xref>). When only citizen scientists collect data, a subsequent regression analysis (not illustrated in Figure <xref ref-type="fig" rid="F2">2</xref>) revealed that age was positively correlated with confidence in citizen science findings compared to those produced solely by professionals (t = 2.62, n = 355, p &lt; 0.05); none of the other predictor variables had a significant effect on confidence. No predictor variables had a significant effect on confidence in citizen science findings when volunteers collaborate fully with professionals. A separate regression analysis of confidence in findings when citizen scientists are completely responsible indicated that confidence increased with age (t = 2.63, n = 353, p &lt; 0.05) but decreased with education level (t = &#8211;3.28, n = 353, p &lt; 0.05).</p>
+<fig id="F2">
+<label>Figure 2</label>
+<caption>
+<p>Confidence in citizen science findings compared to those generated by professional scientists. Pairwise comparisons were conducted within each confidence level (e.g. collect data vs. collaborate fully for results of &#8220;less confident&#8221;). Different number combinations for each letter indicate significant differences (p &lt; 0.05) based on pairwise chi-square tests with Bonferroni corrections. N<sub>total</sub> = 479.</p>
+</caption>
+<graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="cstp-2-1-77-g2.png"/>
+</fig>
+<p>When asked about their own confidence in performing different science process tasks, respondents were most likely to report feeling confident about identifying a research question, collecting data, and describing the project and its results to others (Figure <xref ref-type="fig" rid="F3">3a</xref>). Collecting data was the only task about which more than half the respondents felt confident. When asked if they would enjoy or feel confident engaging in specific nature-related data collection tasks, there were more positive responses. Monitoring rainfall with a rain gauge was the task at which most respondents felt confident, with almost 70% responding positively; the activity about which the smallest number of respondents felt confident (33%) was identifying plants (Figure <xref ref-type="fig" rid="F3">3b</xref>). Confidence in all of the science process tasks decreased significantly with age. There was a similar, non-significant trend of confidence decreasing with age for the specific data collection tasks. Men had higher confidence levels than women for five out of the six science process aspects of citizen science (both genders felt equally confident about collecting data), but there were no gender differences in confidence about any of the specific data collection tasks. Experience with citizen science was correlated with confidence in all of the science processes and in two of the specific data collection tasks (identifying plants and collecting phenological data, Table <xref ref-type="table" rid="T2">2</xref>).</p>
+<fig id="F3">
+<label>Figure 3</label>
+<caption>
+<p>Percentage of participants who reported that they would feel confident <bold>(a)</bold> or enjoy <bold>(c)</bold> science process tasks; percentage of participants who reported that they would feel confident <bold>(b)</bold> or enjoy <bold>(d)</bold> engaging in nature-based data collection tasks. Details on tasks can be found in the text. Different letters between tasks indicate significant differences (p &lt; 0.05) based on pairwise chi-square tests with Bonferroni corrections. N<sub>total</sub> = 484.</p>
+</caption>
+<graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="cstp-2-1-77-g3.png"/>
+</fig>
+<table-wrap id="T2">
+<label>Table 2</label>
+<caption>
+<p>Regression coefficients with <italic>confidence</italic> in citizen science activities as dependent variables, and prior citizen science experience, education, age, gender, and participation in other fair activities as independent variables. Bolded coefficients indicate significant p-values: *p &lt; 0.05, **p &lt; 0.01, ***p &lt; .001. N = 357.</p>
+</caption>
+<table>
+<tr>
+<th align="left">Confidence</th>
+<th align="center">Intercept</th>
+<th align="center">CS Experience</th>
+<th align="center">Education</th>
+<th align="center">Age</th>
+<th align="center">Gender (Male)</th>
+<th align="center">Fair CS</th>
+<th align="center">Pseudo R<sup>2</sup></th>
+</tr>
+<tr>
+<td colspan="8"><hr/></td>
+</tr>
+<tr>
+<td align="left">Question</td>
+<td align="right">0.28</td>
+<td align="right"><bold>0.58*</bold></td>
+<td align="right"><bold>0.29**</bold></td>
+<td align="right"><bold>&#8211;0.04***</bold></td>
+<td align="right"><bold>0.59*</bold></td>
+<td align="right">0.04</td>
+<td align="right">0.32</td>
+</tr>
+<tr>
+<td align="left">Design</td>
+<td align="right">&#8211;0.01</td>
+<td align="right"><bold>0.95**</bold></td>
+<td align="right">0.17</td>
+<td align="right"><bold>&#8211;0.04***</bold></td>
+<td align="right"><bold>0.75**</bold></td>
+<td align="right">&#8211;0.13</td>
+<td align="right">0.32</td>
+</tr>
+<tr>
+<td align="left">Collect</td>
+<td align="right">0.68</td>
+<td align="right"><bold>0.76*</bold></td>
+<td align="right">0.16</td>
+<td align="right"><bold>&#8211;0.03***</bold></td>
+<td align="right">0.31</td>
+<td align="right">0.16</td>
+<td align="right">0.31</td>
+</tr>
+<tr>
+<td align="left">Analyze</td>
+<td align="right">0.29</td>
+<td align="right"><bold>0.59*</bold></td>
+<td align="right">0.02</td>
+<td align="right"><bold>&#8211;0.03***</bold></td>
+<td align="right"><bold>0.81***</bold></td>
+<td align="right">0.17</td>
+<td align="right">0.27</td>
+</tr>
+<tr>
+<td align="left">Write</td>
+<td align="right">&#8211;0.14</td>
+<td align="right"><bold>0.75**</bold></td>
+<td align="right">0.20</td>
+<td align="right"><bold>&#8211;0.03***</bold></td>
+<td align="right"><bold>0.60*</bold></td>
+<td align="right">0.17</td>
+<td align="right">0.30</td>
+</tr>
+<tr>
+<td align="left">Describe</td>
+<td align="right">&#8211;0.07</td>
+<td align="right"><bold>1.22***</bold></td>
+<td align="right"><bold>0.25*</bold></td>
+<td align="right"><bold>&#8211;0.03***</bold></td>
+<td align="right"><bold>0.68**</bold></td>
+<td align="right">0.44</td>
+<td align="right">0.33</td>
+</tr>
+<tr>
+<td align="left">Rainfall</td>
+<td align="right">0.36</td>
+<td align="right">0.17</td>
+<td align="right">0.22</td>
+<td align="right">&#8211;0.01</td>
+<td align="right">0.27</td>
+<td align="right">0.20</td>
+<td align="right">0.28</td>
+</tr>
+<tr>
+<td align="left">ID Plants</td>
+<td align="right"><bold>&#8211;1.42***</bold></td>
+<td align="right"><bold>0.78**</bold></td>
+<td align="right">0.13</td>
+<td align="right">0.00</td>
+<td align="right">0.33</td>
+<td align="right"><bold>0.47*</bold></td>
+<td align="right">0.29</td>
+</tr>
+<tr>
+<td align="left">Phenology</td>
+<td align="right">&#8211;0.52</td>
+<td align="right"><bold>0.90**</bold></td>
+<td align="right">0.13</td>
+<td align="right">&#8211;0.01</td>
+<td align="right">0.39</td>
+<td align="right">0.15</td>
+<td align="right">0.29</td>
+</tr>
+<tr>
+<td align="left">One-time Obs</td>
+<td align="right">&#8211;0.04</td>
+<td align="right">0.27</td>
+<td align="right">0.11</td>
+<td align="right">&#8211;0.01</td>
+<td align="right">0.09</td>
+<td align="right">0.44</td>
+<td align="right">0.27</td>
+</tr>
+<tr>
+<td align="left">Monitoring</td>
+<td align="right">&#8211;0.55</td>
+<td align="right">0.40</td>
+<td align="right">0.06</td>
+<td align="right">&#8211;0.01</td>
+<td align="right">0.24</td>
+<td align="right"><bold>0.64**</bold></td>
+<td align="right">0.29</td>
+</tr>
+</table>
+</table-wrap>
+<p>When respondents were asked what tasks they would enjoy doing, the results were similar to those for confidence in tasks. Writing reports about the project&#8217;s data and conclusions was rated as the least enjoyable task (Figure <xref ref-type="fig" rid="F3">3c</xref>). For each specific data collection task, at least 40% of respondents thought they would enjoy it (Figure <xref ref-type="fig" rid="F3">3d</xref>). Prior experience with citizen science was correlated with enjoyment for three science process activities and one data collection activity (collecting phenological data), and men were less likely than women to predict that they would enjoy identifying plants or collecting phenological data (Table <xref ref-type="table" rid="T3">3</xref>).</p>
+<table-wrap id="T3">
+<label>Table 3</label>
+<caption>
+<p>Regression coefficients with <italic>enjoyment</italic> of citizen science activities as dependent variables, and prior citizen science experience, education, age, gender, and participation in other fair activities as independent variables. Bolded coefficients indicate significant p-values: *p &lt; 0.05, **p &lt; 0.01, ***p &lt; .001. N = 357.</p>
+</caption>
+<table>
+<tr>
+<th align="left">Enjoyment</th>
+<th align="center">Intercept</th>
+<th align="center">CS Experience</th>
+<th align="center">Education</th>
+<th align="center">Age</th>
+<th align="center">Gender (Male)</th>
+<th align="center">Fair CS</th>
+<th align="center">Pseudo R<sup>2</sup></th>
+</tr>
+<tr>
+<td colspan="8"><hr/></td>
+</tr>
+<tr>
+<td align="left">Question</td>
+<td align="right">&#8211;0.56</td>
+<td align="right"><bold>0.79**</bold></td>
+<td align="right">0.04</td>
+<td align="right">0.00</td>
+<td align="right">0.03</td>
+<td align="right">0.14</td>
+<td align="right">0.28</td>
+</tr>
+<tr>
+<td align="left">Design</td>
+<td align="right">&#8211;0.57</td>
+<td align="right"><bold>0.72**</bold></td>
+<td align="right">0.06</td>
+<td align="right">&#8211;0.01</td>
+<td align="right">0.05</td>
+<td align="right">&#8211;0.05</td>
+<td align="right">0.27</td>
+</tr>
+<tr>
+<td align="left">Collect</td>
+<td align="right">&#8211;0.30</td>
+<td align="right">0.32</td>
+<td align="right">0.03</td>
+<td align="right">0.00</td>
+<td align="right">&#8211;0.12</td>
+<td align="right">0.31</td>
+<td align="right">0.27</td>
+</tr>
+<tr>
+<td align="left">Analyze</td>
+<td align="right">&#8211;0.32</td>
+<td align="right"><bold>0.56*</bold></td>
+<td align="right">0.11</td>
+<td align="right"><bold>&#8211;0.02*</bold></td>
+<td align="right">0.27</td>
+<td align="right">0.18</td>
+<td align="right">0.28</td>
+</tr>
+<tr>
+<td align="left">Write</td>
+<td align="right"><bold>&#8211;1.64***</bold></td>
+<td align="right">0.52</td>
+<td align="right"><bold>0.27*</bold></td>
+<td align="right">&#8211;0.01</td>
+<td align="right">0.20</td>
+<td align="right">0.11</td>
+<td align="right">0.28</td>
+</tr>
+<tr>
+<td align="left">Describe</td>
+<td align="right">&#8211;0.44</td>
+<td align="right">0.52</td>
+<td align="right">0.13</td>
+<td align="right">&#8211;0.01</td>
+<td align="right">&#8211;0.07</td>
+<td align="right">0.21</td>
+<td align="right">0.27</td>
+</tr>
+<tr>
+<td align="left">Rainfall</td>
+<td align="right"><bold>&#8211;1.17**</bold></td>
+<td align="right">0.19</td>
+<td align="right">0.20</td>
+<td align="right">0.01</td>
+<td align="right">&#8211;0.14</td>
+<td align="right">0.30</td>
+<td align="right">0.28</td>
+</tr>
+<tr>
+<td align="left">ID Plants</td>
+<td align="right">&#8211;0.58</td>
+<td align="right">0.41</td>
+<td align="right">0.09</td>
+<td align="right">0.00</td>
+<td align="right"><bold>&#8211;0.51*</bold></td>
+<td align="right"><bold>0.60**</bold></td>
+<td align="right">0.29</td>
+</tr>
+<tr>
+<td align="left">Phenology</td>
+<td align="right">&#8211;0.77</td>
+<td align="right"><bold>0.75**</bold></td>
+<td align="right">0.08</td>
+<td align="right">0.00</td>
+<td align="right"><bold>&#8211;0.50*</bold></td>
+<td align="right">0.12</td>
+<td align="right">0.29</td>
+</tr>
+<tr>
+<td align="left">One-time Obs</td>
+<td align="right">&#8211;0.01</td>
+<td align="right">0.49</td>
+<td align="right">0.01</td>
+<td align="right">0.00</td>
+<td align="right">&#8211;0.22</td>
+<td align="right">0.40</td>
+<td align="right">0.28</td>
+</tr>
+<tr>
+<td align="left">Monitoring</td>
+<td align="right">&#8211;0.56</td>
+<td align="right">0.49</td>
+<td align="right">&#8211;0.08</td>
+<td align="right">0.01</td>
+<td align="right">&#8211;0.30</td>
+<td align="right">0.13</td>
+<td align="right">0.27</td>
+</tr>
+</table>
+</table-wrap>
+</sec>
+<sec>
+<title>Discussion</title>
+<p>Members of the public are both potential participants in and beneficiaries of citizen science. Their familiarity with citizen science and interest in participating in it are likely to affect recruitment and retention, and their confidence in its results could affect public support for and acceptance of citizen science research.</p>
+<p>Given that only 25% of our respondents initially recognized the term &#8220;citizen science,&#8221; but that many more were familiar with the concept under another name, volunteer recruitment efforts or results dissemination that use only &#8220;citizen science&#8221; might be unclear or ineffective for many people. The list of additional names for citizen science that we provided on the questionnaire is by no means exhaustive. This indicates that the public&#8217;s familiarity with the concept of citizen science, if not the specific name, could be even higher than reported here. The terms used to describe citizen science and similar concepts have varied widely over time and across disciplines (<xref ref-type="bibr" rid="B6">Comber et al. 2014</xref>; <xref ref-type="bibr" rid="B34">Shirk et al. 2012</xref>). Many published papers that use citizen science data do not use the term &#8220;citizen science&#8221; (<xref ref-type="bibr" rid="B9">Cooper et al. 2014</xref>), but its prevalence is rising (<xref ref-type="bibr" rid="B16">Follett and Strezov 2015</xref>). The recent creation of membership organizations such as the Citizen Science Association, the Australian Citizen Science Association, and the European Citizen Science Association as well as this journal (<italic>Citizen Science: Theory and Practice</italic>) also indicate the growing consensus for terminology among scientists and practitioners. Popular science books (e.g., <xref ref-type="bibr" rid="B5">Busch and Kaspari 2013</xref>; <xref ref-type="bibr" rid="B31">Russell 2014</xref>) and content on websites such as <ext-link ext-link-type="uri" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.citizensciencetoday.org">www.citizensciencetoday.org</ext-link> and Discover Magazine&#8217;s Citizen Science Salon suggest that the term is growing in use among the public as well. As a result, practitioners who wish to recruit volunteers or share their results with the public might benefit from using &#8220;citizen science&#8221; and clearly defining it when they do so. Alternatively, they could use both &#8220;citizen science&#8221; and another prevalent term in their community or field, making it clear that the two are synonymous.</p>
+<p>The negative correlation between participating in other citizen-science themed activities at the State Fair and familiarity with other terms for citizen science indicates that respondents may report familiarity only with the term that they have most recently encountered. In this case, fairgoers who participated in hands-on activities described as &#8220;citizen science&#8221; might not have immediately recalled seeing or hearing other similar terms, because their recent experience was at the forefront of their mind.</p>
+<p>With the exception of data collection, fewer than half of respondents were confident in their ability to perform specific science process tasks. These results are not surprising in light of documented low levels of science literacy among the American public; for instance, the National Science Board found that less than half of Americans demonstrated an understanding of scientific inquiry (<xref ref-type="bibr" rid="B27">2012</xref>). Our results provide additional evidence for the need to improve understanding of the processes of science, and there is some evidence from other recent work that citizen science volunteers can improve their knowledge about these processes (<xref ref-type="bibr" rid="B10">Crall et al. 2013</xref>). Indeed, our respondents who reported experience with citizen science were more confident in their ability to engage in all of the science processes, although it is impossible to separate cause from effect in this finding. Our results also indicate that citizen science project leaders may need to increase volunteers&#8217; confidence in performing scientific tasks, perhaps by offering activities with a range of difficulties, targeting specific age or other demographic groups, or using more understandable and relatable names for activities. For example, while only 53% of our respondents said they would feel confident collecting data, 69% reported that they would be confident measuring rainfall, which is a data collection task. Clearly, as with describing citizen science in general, the terminology used to describe volunteer tasks is important.</p>
+<p>For every science process task, confidence decreased with age. This is consistent with research that has found lower understanding of the science process among individuals over 65 and that adults demonstrate less familiarity with experimental design than middle school students (<xref ref-type="bibr" rid="B27">National Science Board 2012</xref>). These results could indicate recent improvements in science education, or they could result from more recent exposure of younger respondents to formal science education. The higher self-confidence of men regarding science process is in keeping with many other studies indicating that men demonstrate more confidence in fields ranging from medicine (<xref ref-type="bibr" rid="B1">Blanch et al. 2008</xref>) to computer science (<xref ref-type="bibr" rid="B17">Irani 2004</xref>). Martin et al. (<xref ref-type="bibr" rid="B24">2016</xref>) examined members of the public&#8217;s &#8220;interest&#8221; in various citizen science opportunities, and found that interest decreased with age. It is not possible to know how much of that interest was related to confidence versus enjoyment of a task, but the pattern is similar to what was found in our study.</p>
+<p>Differences between ages and genders can influence and inform project recruitment. Younger people and men might be initially more inclined to volunteer as citizen scientists based on their higher levels of confidence; however, many other factors, including sense of place, environmental commitment, and altruism can influence recruitment of volunteers (<xref ref-type="bibr" rid="B11">Dickinson et al. 2012</xref>; <xref ref-type="bibr" rid="B28">Newman et al. 2017</xref>) and influence the decision to volunteer, and women were significantly more likely than men to state that they would enjoy several data collection tasks. In the United States, women are more likely than men to volunteer, and 35&#8211;44 year olds are the most likely to volunteer (<xref ref-type="bibr" rid="B4">Bureau of Labor Statistics 2014</xref>). Targeted recruitment could increase the gender and age representation in a citizen science project if needed. We treated confidence and enjoyment in citizen science activities as binomial variables, providing a broad-strokes picture. While this is appropriate for the purposes of this study, additional research could consider these opinions as Likert-type items. This would provide more detailed information and would be especially useful when conducted as project-specific surveys of populations targeted for recruitment.</p>
+<p>To our knowledge, no other study has examined the public&#8217;s potential confidence in performing citizen science tasks. However, a limited number of studies have examined these factors for existing citizen science volunteers. Koss et al. (<xref ref-type="bibr" rid="B20">2009</xref>) found that 10&#8211;40% of volunteers participating in underwater marine surveys reported not feeling confident in their data collection abilities, depending on the task. Kremen et al. (<xref ref-type="bibr" rid="B21">2011</xref>) found that volunteers&#8217; confidence in identifying insects was higher when identifying to a more general taxon level than when asked to identify to species level. Additionally, volunteers increased their confidence over time, after training, or after repeated monitoring opportunities (<xref ref-type="bibr" rid="B15">Finn et al. 2010</xref>; <xref ref-type="bibr" rid="B32">Savan et al. 2003</xref>). These findings suggest that the low levels of confidence in performing citizen science tasks found in this study might not be completely different from confidence levels of existing volunteers, and that those confidence levels can increase over time.</p>
+<p>Respondents&#8217; confidence in the findings of citizen science research compared to the findings of research conducted solely by professionals indicates that the majority of people are confident in citizen science findings if professional scientists are involved in some way, indicating a high degree of public support for citizen science. Interestingly, up to 24% of respondents were more confident in findings that involved citizen scientists than in solely professional findings. It has been suggested that citizen science has the potential to minimize bias, introduce new viewpoints, empower volunteers with decision making capacity, and democratize science (<xref ref-type="bibr" rid="B2">Bonney et al. 2015</xref>; reviewed in <xref ref-type="bibr" rid="B7">Conrad and Hilchey 2011</xref>; <xref ref-type="bibr" rid="B11">Dickinson et al. 2012</xref>), all of which could be potential reasons for higher confidence in citizen science findings. Some individuals may place more trust in local knowledge than in information generated by scientific professionals, which also could lead to more confidence in citizen science findings (<xref ref-type="bibr" rid="B18">Jenkins 1999</xref>). An area of future study would be to examine which of these reasons, if any, members of the public cite for their confidence in citizen science. Confidence in citizen science findings was highest when professionals and citizen scientists collaborated fully on all aspects of research. Currently this type of full partnership is relatively uncommon in citizen science, but it should be considered if there is concern about public confidence or use of a project&#8217;s findings.</p>
+<p>While most respondents indicated confidence in citizen science-professional pairings, this was not the case when respondents were asked about research conducted solely by citizen scientists. This lack of confidence could present difficulties for projects that are created and led by citizen scientists without professional involvement, an approach that is a recognized subsection of citizen science and is sometimes encouraged by programs in the citizen community (e.g., SciStarter, <ext-link ext-link-type="uri" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.CitSci.org">CitSci.org</ext-link>), and platforms like <ext-link ext-link-type="uri" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.CitSci.org">CitSci.org</ext-link>, Zooniverse Project Builder, and iNaturalist allow anyone to create a web interface for data collection or classification. Such projects could have difficulty recruiting volunteers or finding external uses for their results, if potential volunteers are considering the reliability or efficacy of a project when deciding to volunteer. It is important to note that we looked only at three discrete options on the diverse spectrum of volunteer involvement in citizen science (citizen scientists as data collectors, full citizen scientist-professional collaborations, and citizen scientists acting alone); future research could explore public confidence in the many different types and levels of volunteer involvement.</p>
+<p>The results of our work are likely not completely representative of Americans or Minnesota residents as a whole. People who chose to enter a research-oriented building at the State Fair and to complete an opinion questionnaire on science are probably more interested in science than those who did not. As a result, they might be more likely to be familiar with citizen science or to have participated in the past. In addition, the admission fee ($13 for adults under 65, $11 for those 65 and over) to enter the State Fair might act as a barrier for some individuals. Furthermore, the racial composition of our respondents was not wholly representative of Minnesota or the United States (<xref ref-type="bibr" rid="B36">U.S. Census Bureau 2011</xref>), and we lacked sufficient diversity among our respondents to consider race in our analysis. Nevertheless, our data provide an important first look at public perceptions of citizen science and reveal interesting patterns in opinions and knowledge, especially related to age and gender, which can elucidate our understanding of the field and inform practitioners&#8217; strategies.</p>
+</sec>
+</body>
+<back>
+<ack>
+<title>Acknowledgements</title>
+<p>We appreciate the assistance of S. Weaver, C. Stenoien, and B. Bohn in the University of Minnesota Monarch Lab with data collection; the University of Minnesota Driven to Discover Research Building Team for providing research facilities and equipment; three anonymous reviewers; and Minnesota State Fair attendees for completing our questionnaire. EJL was partially supported by a Conservation Biology Graduate Program Fellowship during this project.</p>
+</ack>
+<sec>
+<title>Competing Interests</title>
+<p>The authors have no competing interests to declare.</p>
+</sec>
+<ref-list>
+<ref id="B1">
+<label>1</label>
+<element-citation publication-type="journal">
+<person-group person-group-type="author">
+<name>
+<surname>Blanch</surname>
+<given-names>D.C.</given-names>
+</name>
+<name>
+<surname>Hall</surname>
+<given-names>J.A.</given-names>
+</name>
+<name>
+<surname>Roter</surname>
+<given-names>D.L.</given-names>
+</name>
+<name>
+<surname>Frankel</surname>
+<given-names>R.M.</given-names>
+</name>
+</person-group>
+<article-title>Medical student gender and issues of confidence</article-title>
+<source>Patient Education and Counseling</source>
+<year iso-8601-date="2008">2008</year>
+<volume>72</volume>
+<fpage>374</fpage>
+<lpage>381</lpage>
+<pub-id pub-id-type="doi">10.1016/j.pec.2008.05.021</pub-id>
+</element-citation>
+</ref>
+<ref id="B2">
+<label>2</label>
+<element-citation publication-type="journal">
+<person-group person-group-type="author">
+<name>
+<surname>Bonney</surname>
+<given-names>R.</given-names>
+</name>
+<name>
+<surname>Phillips</surname>
+<given-names>T.B.</given-names>
+</name>
+<name>
+<surname>Ballard</surname>
+<given-names>H.L.</given-names>
+</name>
+<name>
+<surname>Enck</surname>
+<given-names>J.W.</given-names>
+</name>
+</person-group>
+<article-title>Can citizen science enhance public understanding of science?</article-title>
+<source>Public Understanding of Science</source>
+<year iso-8601-date="2015">2015</year>
+<volume>25</volume>
+<issue>1</issue>
+<fpage>2</fpage>
+<lpage>16</lpage>
+<pub-id pub-id-type="doi">10.1177/0963662515607406</pub-id>
+</element-citation>
+</ref>
+<ref id="B3">
+<label>3</label>
+<element-citation publication-type="journal">
+<person-group person-group-type="author">
+<name>
+<surname>Brossard</surname>
+<given-names>D.</given-names>
+</name>
+<name>
+<surname>Lewenstein</surname>
+<given-names>B.</given-names>
+</name>
+<name>
+<surname>Bonney</surname>
+<given-names>R.</given-names>
+</name>
+</person-group>
+<article-title>Scientific knowledge and attitude change: The impact of a citizen science project</article-title>
+<source>International Journal of Science Education</source>
+<year iso-8601-date="2005">2005</year>
+<volume>27</volume>
+<issue>9</issue>
+<fpage>1099</fpage>
+<lpage>1121</lpage>
+<pub-id pub-id-type="doi">10.1080/09500690500069483</pub-id>
+</element-citation>
+</ref>
+<ref id="B4">
+<label>4</label>
+<element-citation publication-type="book">
+<person-group person-group-type="author">
+<collab>Bureau of Labor Statistics</collab>
+</person-group>
+<source>Volunteering in the United States-2014</source>
+<year iso-8601-date="2014">2014</year>
+<publisher-loc>Washington, D.C.</publisher-loc>
+<publisher-name>U.S. Department of Labor</publisher-name>
+<comment>No. USDL-15-0280</comment>
+</element-citation>
+</ref>
+<ref id="B5">
+<label>5</label>
+<element-citation publication-type="book">
+<person-group person-group-type="author">
+<name>
+<surname>Busch</surname>
+<given-names>A.</given-names>
+</name>
+<name>
+<surname>Kaspari</surname>
+<given-names>D.C.</given-names>
+</name>
+</person-group>
+<source>The incidental steward: Reflections on citizen science</source>
+<year iso-8601-date="2013">2013</year>
+<publisher-loc>New Haven</publisher-loc>
+<publisher-name>Yale University Press</publisher-name>
+</element-citation>
+</ref>
+<ref id="B6">
+<label>6</label>
+<element-citation publication-type="confproc">
+<person-group person-group-type="author">
+<name>
+<surname>Comber</surname>
+<given-names>A.</given-names>
+</name>
+<name>
+<surname>Schade</surname>
+<given-names>S.</given-names>
+</name>
+<name>
+<surname>See</surname>
+<given-names>L.</given-names>
+</name>
+<name>
+<surname>Mooney</surname>
+<given-names>P.</given-names>
+</name>
+<name>
+<surname>Foody</surname>
+<given-names>G.</given-names>
+</name>
+</person-group>
+<article-title>Semantic analysis of citizen sensing, crowdsourcing and VGI</article-title>
+<conf-name>Paper presented at Connecting a Digital Europe through Location and Place. Proceedings of the AGILE 2014 International Conference on Geographic Information Science</conf-name>
+<year iso-8601-date="2014">2014</year>
+<conf-loc>Castell&#243;n</conf-loc>
+</element-citation>
+</ref>
+<ref id="B7">
+<label>7</label>
+<element-citation publication-type="journal">
+<person-group person-group-type="author">
+<name>
+<surname>Conrad</surname>
+<given-names>C.C.</given-names>
+</name>
+<name>
+<surname>Hilchey</surname>
+<given-names>K.G.</given-names>
+</name>
+</person-group>
+<article-title>A review of citizen science and community-based environmental monitoring: Issues and opportunities</article-title>
+<source>Environmental Monitoring and Assessment</source>
+<year iso-8601-date="2011">2011</year>
+<volume>176</volume>
+<issue>1&#8211;4</issue>
+<fpage>273</fpage>
+<lpage>291</lpage>
+<pub-id pub-id-type="doi">10.1007/s10661-010-1582-5</pub-id>
+</element-citation>
+</ref>
+<ref id="B8">
+<label>8</label>
+<element-citation publication-type="journal">
+<person-group person-group-type="author">
+<name>
+<surname>Cooper</surname>
+<given-names>C.B.</given-names>
+</name>
+<name>
+<surname>Dickinson</surname>
+<given-names>J.</given-names>
+</name>
+<name>
+<surname>Phillips</surname>
+<given-names>T.</given-names>
+</name>
+<name>
+<surname>Bonney</surname>
+<given-names>R.</given-names>
+</name>
+</person-group>
+<article-title>Citizen science as a tool for conservation in residential ecosystems</article-title>
+<source>Ecology and Society</source>
+<year iso-8601-date="2007">2007</year>
+<volume>12</volume>
+<issue>2</issue>
+<fpage>11</fpage>
+<pub-id pub-id-type="doi">10.5751/ES-02197-120211</pub-id>
+</element-citation>
+</ref>
+<ref id="B9">
+<label>9</label>
+<element-citation publication-type="journal">
+<person-group person-group-type="author">
+<name>
+<surname>Cooper</surname>
+<given-names>C.B.</given-names>
+</name>
+<name>
+<surname>Shirk</surname>
+<given-names>J.</given-names>
+</name>
+<name>
+<surname>Zuckerberg</surname>
+<given-names>B.</given-names>
+</name>
+</person-group>
+<article-title>The invisible prevalence of citizen science in global research: Migratory birds and climate change</article-title>
+<source>PloS One</source>
+<year iso-8601-date="2014">2014</year>
+<volume>9</volume>
+<issue>9</issue>
+<fpage>e106508</fpage>
+<pub-id pub-id-type="doi">10.1371/journal.pone.0106508</pub-id>
+</element-citation>
+</ref>
+<ref id="B10">
+<label>10</label>
+<element-citation publication-type="journal">
+<person-group person-group-type="author">
+<name>
+<surname>Crall</surname>
+<given-names>A.W.</given-names>
+</name>
+<name>
+<surname>Jordan</surname>
+<given-names>R.</given-names>
+</name>
+<name>
+<surname>Holfelder</surname>
+<given-names>K.</given-names>
+</name>
+<name>
+<surname>Newman</surname>
+<given-names>G.J.</given-names>
+</name>
+<name>
+<surname>Graham</surname>
+<given-names>J.</given-names>
+</name>
+<name>
+<surname>Waller</surname>
+<given-names>D.M.</given-names>
+</name>
+</person-group>
+<article-title>The impacts of an invasive species citizen science training program on participant attitudes, behavior, and science literacy</article-title>
+<source>Public Understanding of Science</source>
+<year iso-8601-date="2013">2013</year>
+<volume>22</volume>
+<issue>6</issue>
+<fpage>745</fpage>
+<lpage>764</lpage>
+<pub-id pub-id-type="doi">10.1177/0963662511434894</pub-id>
+</element-citation>
+</ref>
+<ref id="B11">
+<label>11</label>
+<element-citation publication-type="journal">
+<person-group person-group-type="author">
+<name>
+<surname>Dickinson</surname>
+<given-names>J.L.</given-names>
+</name>
+<name>
+<surname>Shirk</surname>
+<given-names>J.</given-names>
+</name>
+<name>
+<surname>Bonter</surname>
+<given-names>D.</given-names>
+</name>
+<name>
+<surname>Bonney</surname>
+<given-names>R.</given-names>
+</name>
+<name>
+<surname>Crain</surname>
+<given-names>R.L.</given-names>
+</name>
+<name>
+<surname>Martin</surname>
+<given-names>J.</given-names>
+</name>
+<name>
+<surname>Purcell</surname>
+<given-names>K.</given-names>
+</name>
+<etal/>
+</person-group>
+<article-title>The current state of citizen science as a tool for ecological research and public engagement</article-title>
+<source>Frontiers in Ecology and the Environment</source>
+<year iso-8601-date="2012">2012</year>
+<volume>10</volume>
+<issue>6</issue>
+<fpage>291</fpage>
+<lpage>297</lpage>
+<pub-id pub-id-type="doi">10.1890/110236</pub-id>
+</element-citation>
+</ref>
+<ref id="B12">
+<label>12</label>
+<element-citation publication-type="journal">
+<person-group person-group-type="author">
+<name>
+<surname>Dickinson</surname>
+<given-names>J.L.</given-names>
+</name>
+<name>
+<surname>Zuckerberg</surname>
+<given-names>B.</given-names>
+</name>
+<name>
+<surname>Bonter</surname>
+<given-names>D.N.</given-names>
+</name>
+</person-group>
+<article-title>Citizen science as an ecological research tool: Challenges and benefits</article-title>
+<source>Annual Review of Ecology, Evolution, and Systematics</source>
+<year iso-8601-date="2010">2010</year>
+<volume>41</volume>
+<fpage>149</fpage>
+<lpage>172</lpage>
+<pub-id pub-id-type="doi">10.1146/annurev-ecolsys-102209-144636</pub-id>
+</element-citation>
+</ref>
+<ref id="B13">
+<label>13</label>
+<element-citation publication-type="book">
+<person-group person-group-type="author">
+<name>
+<surname>Dillman</surname>
+<given-names>D.A.</given-names>
+</name>
+<name>
+<surname>Smyth</surname>
+<given-names>J.D.</given-names>
+</name>
+<name>
+<surname>Christian</surname>
+<given-names>L.M.</given-names>
+</name>
+</person-group>
+<source>Internet, mail, and mixed-mode surveys</source>
+<year iso-8601-date="2008">2008</year>
+<publisher-loc>New York, NY</publisher-loc>
+<publisher-name>Wiley</publisher-name>
+</element-citation>
+</ref>
+<ref id="B14">
+<label>14</label>
+<element-citation publication-type="journal">
+<person-group person-group-type="author">
+<name>
+<surname>Evans</surname>
+<given-names>C.</given-names>
+</name>
+<name>
+<surname>Abrams</surname>
+<given-names>E.</given-names>
+</name>
+<name>
+<surname>Reitsma</surname>
+<given-names>R.</given-names>
+</name>
+<name>
+<surname>Roux</surname>
+<given-names>K.</given-names>
+</name>
+<name>
+<surname>Salmonsen</surname>
+<given-names>L.</given-names>
+</name>
+<name>
+<surname>Marra</surname>
+<given-names>P.P.</given-names>
+</name>
+</person-group>
+<article-title>The Neighborhood Nestwatch Program: Participant outcomes of a citizen-science ecological research project</article-title>
+<source>Conservation Biology</source>
+<year iso-8601-date="2005">2005</year>
+<volume>19</volume>
+<issue>3</issue>
+<fpage>589</fpage>
+<lpage>594</lpage>
+<pub-id pub-id-type="doi">10.1111/j.1523-1739.2005.00s01.x</pub-id>
+</element-citation>
+</ref>
+<ref id="B15">
+<label>15</label>
+<element-citation publication-type="journal">
+<person-group person-group-type="author">
+<name>
+<surname>Finn</surname>
+<given-names>P.G.</given-names>
+</name>
+<name>
+<surname>Udy</surname>
+<given-names>N.S.</given-names>
+</name>
+<name>
+<surname>Baltais</surname>
+<given-names>S.J.</given-names>
+</name>
+<name>
+<surname>Price</surname>
+<given-names>K.</given-names>
+</name>
+<name>
+<surname>Coles</surname>
+<given-names>L.</given-names>
+</name>
+</person-group>
+<article-title>Assessing the quality of seagrass data collected by community volunteers in Moreton Bay Marine Park, Australia</article-title>
+<source>Environmental Conservation</source>
+<year iso-8601-date="2010">2010</year>
+<volume>37</volume>
+<issue>01</issue>
+<fpage>83</fpage>
+<lpage>89</lpage>
+<pub-id pub-id-type="doi">10.1017/S0376892910000251</pub-id>
+</element-citation>
+</ref>
+<ref id="B16">
+<label>16</label>
+<element-citation publication-type="journal">
+<person-group person-group-type="author">
+<name>
+<surname>Follett</surname>
+<given-names>R.</given-names>
+</name>
+<name>
+<surname>Strezov</surname>
+<given-names>V.</given-names>
+</name>
+</person-group>
+<article-title>An analysis of citizen science based research: Usage and publication patterns</article-title>
+<source>PloS ONE</source>
+<year iso-8601-date="2015">2015</year>
+<volume>10</volume>
+<issue>11</issue>
+<pub-id pub-id-type="doi">10.1371/journal.pone.0143687</pub-id>
+</element-citation>
+</ref>
+<ref id="B17">
+<label>17</label>
+<element-citation publication-type="journal">
+<person-group person-group-type="author">
+<name>
+<surname>Irani</surname>
+<given-names>L.</given-names>
+</name>
+</person-group>
+<article-title>Understanding gender and confidence in CS course culture</article-title>
+<source>ACM SIGCSE Bulletin</source>
+<year iso-8601-date="2004">2004</year>
+<volume>36</volume>
+<issue>1</issue>
+<fpage>195</fpage>
+<lpage>199</lpage>
+<pub-id pub-id-type="doi">10.1145/1028174.971371</pub-id>
+</element-citation>
+</ref>
+<ref id="B18">
+<label>18</label>
+<element-citation publication-type="journal">
+<person-group person-group-type="author">
+<name>
+<surname>Jenkins</surname>
+<given-names>E.W.</given-names>
+</name>
+</person-group>
+<article-title>School science, citizenship and the public understanding of science</article-title>
+<source>International Journal of Science Education</source>
+<year iso-8601-date="1999">1999</year>
+<volume>21</volume>
+<issue>7</issue>
+<fpage>703</fpage>
+<lpage>710</lpage>
+<pub-id pub-id-type="doi">10.1080/095006999290363</pub-id>
+</element-citation>
+</ref>
+<ref id="B19">
+<label>19</label>
+<element-citation publication-type="journal">
+<person-group person-group-type="author">
+<name>
+<surname>Jordan</surname>
+<given-names>R.C.</given-names>
+</name>
+<name>
+<surname>Gray</surname>
+<given-names>S.A.</given-names>
+</name>
+<name>
+<surname>Howe</surname>
+<given-names>D.V.</given-names>
+</name>
+<name>
+<surname>Brooks</surname>
+<given-names>W.R.</given-names>
+</name>
+<name>
+<surname>Ehrenfeld</surname>
+<given-names>J.G.</given-names>
+</name>
+</person-group>
+<article-title>Knowledge gain and behavioral change in citizen-science programs</article-title>
+<source>Conservation Biology</source>
+<year iso-8601-date="2011">2011</year>
+<volume>25</volume>
+<issue>6</issue>
+<fpage>1148</fpage>
+<lpage>1154</lpage>
+<pub-id pub-id-type="doi">10.1111/j.1523-1739.2011.01745.x</pub-id>
+</element-citation>
+</ref>
+<ref id="B20">
+<label>20</label>
+<element-citation publication-type="journal">
+<person-group person-group-type="author">
+<name>
+<surname>Koss</surname>
+<given-names>R.</given-names>
+</name>
+<name>
+<surname>Miller</surname>
+<given-names>K.</given-names>
+</name>
+<name>
+<surname>Wescott</surname>
+<given-names>G.</given-names>
+</name>
+<name>
+<surname>Boxshall</surname>
+<given-names>A.</given-names>
+</name>
+<name>
+<surname>Bellgrove</surname>
+<given-names>A.</given-names>
+</name>
+<name>
+<surname>Gilmour</surname>
+<given-names>P.</given-names>
+</name>
+<name>
+<surname>Bunce</surname>
+<given-names>A.</given-names>
+</name>
+<name>
+<surname>McBurnie</surname>
+<given-names>J.</given-names>
+</name>
+<name>
+<surname>Ierodiaconou</surname>
+<given-names>D.</given-names>
+</name>
+</person-group>
+<article-title>An evaluation of Sea Search as a citizen science programme in Marine Protected Areas</article-title>
+<source>Pacific Conservation Biology</source>
+<year iso-8601-date="2009">2009</year>
+<volume>15</volume>
+<fpage>116</fpage>
+<lpage>127</lpage>
+<pub-id pub-id-type="doi">10.1071/PC090116</pub-id>
+</element-citation>
+</ref>
+<ref id="B21">
+<label>21</label>
+<element-citation publication-type="journal">
+<person-group person-group-type="author">
+<name>
+<surname>Kremen</surname>
+<given-names>C.</given-names>
+</name>
+<name>
+<surname>Ullmann</surname>
+<given-names>K.S.</given-names>
+</name>
+<name>
+<surname>Thorp</surname>
+<given-names>R.W.</given-names>
+</name>
+</person-group>
+<article-title>Evaluating the quality of citizen-scientist data on pollinator communities</article-title>
+<source>Conservation Biology</source>
+<year iso-8601-date="2011">2011</year>
+<volume>25</volume>
+<fpage>607</fpage>
+<lpage>617</lpage>
+<pub-id pub-id-type="doi">10.1111/j.1523-1739.2011.01657.x</pub-id>
+</element-citation>
+</ref>
+<ref id="B22">
+<label>22</label>
+<element-citation publication-type="journal">
+<person-group person-group-type="author">
+<name>
+<surname>Lewandowski</surname>
+<given-names>E.</given-names>
+</name>
+<name>
+<surname>Oberhauser</surname>
+<given-names>K.S.</given-names>
+</name>
+</person-group>
+<article-title>Butterfly citizen scientists in the United States increase their engagement in conservation</article-title>
+<source>Biological Conservation</source>
+<year iso-8601-date="2017">2017</year>
+<volume>208</volume>
+<fpage>106</fpage>
+<lpage>112</lpage>
+<pub-id pub-id-type="doi">10.1016/j.biocon.2015.07.029</pub-id>
+</element-citation>
+</ref>
+<ref id="B23">
+<label>23</label>
+<element-citation publication-type="journal">
+<person-group person-group-type="author">
+<name>
+<surname>Lewandowski</surname>
+<given-names>E.</given-names>
+</name>
+<name>
+<surname>Specht</surname>
+<given-names>H.</given-names>
+</name>
+</person-group>
+<article-title>Influence of volunteer and project characteristics on data quality of biological surveys</article-title>
+<source>Conservation Biology</source>
+<year iso-8601-date="2015">2015</year>
+<volume>29</volume>
+<issue>3</issue>
+<fpage>713</fpage>
+<lpage>723</lpage>
+<pub-id pub-id-type="doi">10.1111/cobi.12481</pub-id>
+</element-citation>
+</ref>
+<ref id="B24">
+<label>24</label>
+<element-citation publication-type="journal">
+<person-group person-group-type="author">
+<name>
+<surname>Martin</surname>
+<given-names>V.Y.</given-names>
+</name>
+<name>
+<surname>Christidis</surname>
+<given-names>L.</given-names>
+</name>
+<name>
+<surname>Pecl</surname>
+<given-names>G.T.</given-names>
+</name>
+</person-group>
+<article-title>Public interest in marine citizen science: Is there potential for growth?</article-title>
+<source>BioScience</source>
+<year iso-8601-date="2016">2016</year>
+<volume>66</volume>
+<issue>8</issue>
+<fpage>683</fpage>
+<lpage>692</lpage>
+<pub-id pub-id-type="doi">10.1093/biosci/biw070</pub-id>
+</element-citation>
+</ref>
+<ref id="B25">
+<label>25</label>
+<element-citation publication-type="journal">
+<person-group person-group-type="author">
+<name>
+<surname>McKinley</surname>
+<given-names>D.C.</given-names>
+</name>
+<name>
+<surname>Miller-Rushing</surname>
+<given-names>A.J.</given-names>
+</name>
+<name>
+<surname>Ballard</surname>
+<given-names>H.L.</given-names>
+</name>
+<name>
+<surname>Bonney</surname>
+<given-names>R.</given-names>
+</name>
+<name>
+<surname>Brown</surname>
+<given-names>H.</given-names>
+</name>
+<name>
+<surname>Evans</surname>
+<given-names>D.M.</given-names>
+</name>
+<name>
+<surname>Ryan</surname>
+<given-names>S.F.</given-names>
+</name>
+<etal/>
+</person-group>
+<article-title>Investing in citizen science can improve natural resource management and environmental protection</article-title>
+<source>Issues in Ecology</source>
+<year iso-8601-date="2015">2015</year>
+<volume>19</volume>
+</element-citation>
+</ref>
+<ref id="B26">
+<label>26</label>
+<element-citation publication-type="webpage">
+<person-group person-group-type="author">
+<collab>Minnesota State Fair</collab>
+</person-group>
+<article-title>Minnesota state fair website</article-title>
+<year iso-8601-date="2015">2015</year>
+<comment>Available at: <uri>http://www.mnstatefair.org/</uri> [Last Accessed 27 July 2016]</comment>
+</element-citation>
+</ref>
+<ref id="B27">
+<label>27</label>
+<element-citation publication-type="book">
+<person-group person-group-type="author">
+<collab>National Science Board</collab>
+</person-group>
+<source>Science and engineering indicators 2012 (NSB 12-01)</source>
+<year iso-8601-date="2012">2012</year>
+<publisher-loc>Arlington</publisher-loc>
+<publisher-name>National Science Foundation</publisher-name>
+</element-citation>
+</ref>
+<ref id="B28">
+<label>28</label>
+<element-citation publication-type="journal">
+<person-group person-group-type="author">
+<name>
+<surname>Newman</surname>
+<given-names>G.</given-names>
+</name>
+<name>
+<surname>Chandler</surname>
+<given-names>M.</given-names>
+</name>
+<name>
+<surname>Clyde</surname>
+<given-names>M.</given-names>
+</name>
+<name>
+<surname>McGreavy</surname>
+<given-names>B.</given-names>
+</name>
+<name>
+<surname>Haklay</surname>
+<given-names>M.</given-names>
+</name>
+<name>
+<surname>Ballard</surname>
+<given-names>H.</given-names>
+</name>
+<name>
+<surname>Gallo</surname>
+<given-names>J.</given-names>
+</name>
+<etal/>
+</person-group>
+<article-title>Leveraging the power of place in citizen science for effective conservation decision making</article-title>
+<source>Biological Conservation</source>
+<year iso-8601-date="2017">2017</year>
+<volume>208</volume>
+<fpage>55</fpage>
+<lpage>64</lpage>
+<pub-id pub-id-type="doi">10.1016/j.biocon.2016.07.019</pub-id>
+</element-citation>
+</ref>
+<ref id="B29">
+<label>29</label>
+<element-citation publication-type="journal">
+<person-group person-group-type="author">
+<name>
+<surname>Rayner</surname>
+<given-names>S.</given-names>
+</name>
+</person-group>
+<article-title>Democracy in the age of assessment: Reflections on the roles of expertise and democracy in public-sector decision making</article-title>
+<source>Science and Public Policy</source>
+<year iso-8601-date="2003">2003</year>
+<volume>30</volume>
+<issue>3</issue>
+<fpage>163</fpage>
+<lpage>170</lpage>
+<pub-id pub-id-type="doi">10.3152/147154303781780533</pub-id>
+</element-citation>
+</ref>
+<ref id="B30">
+<label>30</label>
+<element-citation publication-type="journal">
+<person-group person-group-type="author">
+<name>
+<surname>Riesch</surname>
+<given-names>H.</given-names>
+</name>
+<name>
+<surname>Potter</surname>
+<given-names>C.</given-names>
+</name>
+</person-group>
+<article-title>Citizen science as seen by scientists: Methodological, epistemological and ethical dimensions</article-title>
+<source>Public Understanding of Science</source>
+<year iso-8601-date="2014">2014</year>
+<volume>23</volume>
+<issue>1</issue>
+<fpage>107</fpage>
+<lpage>120</lpage>
+<pub-id pub-id-type="doi">10.1177/0963662513497324</pub-id>
+</element-citation>
+</ref>
+<ref id="B31">
+<label>31</label>
+<element-citation publication-type="book">
+<person-group person-group-type="author">
+<name>
+<surname>Russell</surname>
+<given-names>S.A.</given-names>
+</name>
+</person-group>
+<source>Diary of a citizen scientist: Chasing tiger beetles and other new ways of engaging the world</source>
+<year iso-8601-date="2014">2014</year>
+<publisher-loc>Corvalis</publisher-loc>
+<publisher-name>Oregon State University Press</publisher-name>
+</element-citation>
+</ref>
+<ref id="B32">
+<label>32</label>
+<element-citation publication-type="journal">
+<person-group person-group-type="author">
+<name>
+<surname>Savan</surname>
+<given-names>B.</given-names>
+</name>
+<name>
+<surname>Morgan</surname>
+<given-names>A.J.</given-names>
+</name>
+<name>
+<surname>Gore</surname>
+<given-names>C.</given-names>
+</name>
+</person-group>
+<article-title>Volunteer environmental monitoring and the role of the universities: The case of Citizens&#8217; Environment Watch</article-title>
+<source>Environmental management</source>
+<year iso-8601-date="2003">2003</year>
+<volume>31</volume>
+<issue>5</issue>
+<fpage>0561</fpage>
+<lpage>0568</lpage>
+<pub-id pub-id-type="doi">10.1007/s00267-002-2897-y</pub-id>
+</element-citation>
+</ref>
+<ref id="B33">
+<label>33</label>
+<element-citation publication-type="journal">
+<person-group person-group-type="author">
+<name>
+<surname>Shanley</surname>
+<given-names>P.</given-names>
+</name>
+<name>
+<surname>Lopez</surname>
+<given-names>C.</given-names>
+</name>
+</person-group>
+<article-title>Out of the loop: Why research rarely reaches policy makers and the public and what can be done</article-title>
+<source>Biotropica</source>
+<year iso-8601-date="2009">2009</year>
+<volume>41</volume>
+<issue>5</issue>
+<fpage>535</fpage>
+<lpage>544</lpage>
+<pub-id pub-id-type="doi">10.1111/j.1744-7429.2009.00561.x</pub-id>
+</element-citation>
+</ref>
+<ref id="B34">
+<label>34</label>
+<element-citation publication-type="journal">
+<person-group person-group-type="author">
+<name>
+<surname>Shirk</surname>
+<given-names>J.L.</given-names>
+</name>
+<name>
+<surname>Ballard</surname>
+<given-names>H.L.</given-names>
+</name>
+<name>
+<surname>Wilderman</surname>
+<given-names>C.C.</given-names>
+</name>
+<name>
+<surname>Phillips</surname>
+<given-names>T.</given-names>
+</name>
+<name>
+<surname>Wiggins</surname>
+<given-names>A.</given-names>
+</name>
+<name>
+<surname>Jordan</surname>
+<given-names>R.</given-names>
+</name>
+<name>
+<surname>Bonney</surname>
+<given-names>R.</given-names>
+</name>
+<etal/>
+</person-group>
+<article-title>Public participation in scientific research: A framework for deliberate design</article-title>
+<source>Ecology and Society</source>
+<year iso-8601-date="2012">2012</year>
+<volume>17</volume>
+<issue>2</issue>
+<fpage>29</fpage>
+<pub-id pub-id-type="doi">10.5751/ES-04705-170229</pub-id>
+</element-citation>
+</ref>
+<ref id="B35">
+<label>35</label>
+<element-citation publication-type="journal">
+<person-group person-group-type="author">
+<name>
+<surname>Stocklmayer</surname>
+<given-names>S.M.</given-names>
+</name>
+<name>
+<surname>Rennie</surname>
+<given-names>L.J.</given-names>
+</name>
+<name>
+<surname>Gilbert</surname>
+<given-names>J.K.</given-names>
+</name>
+</person-group>
+<article-title>The roles of the formal and informal sectors in the provision of effective science education</article-title>
+<source>Studies in Science Education</source>
+<year iso-8601-date="2010">2010</year>
+<volume>46</volume>
+<issue>1</issue>
+<fpage>1</fpage>
+<lpage>44</lpage>
+<pub-id pub-id-type="doi">10.1080/03057260903562284</pub-id>
+</element-citation>
+</ref>
+<ref id="B36">
+<label>36</label>
+<element-citation publication-type="book">
+<person-group person-group-type="author">
+<collab>U.S. Census Bureau</collab>
+</person-group>
+<source>Overview of race and hispanic origin: 2010</source>
+<year iso-8601-date="2011">2011</year>
+<publisher-name>U.S. Census Bureau</publisher-name>
+<comment>No. C2010BR-02</comment>
+</element-citation>
+</ref>
+</ref-list>
+</back>
+</article>

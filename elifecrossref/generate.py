@@ -41,7 +41,7 @@ class crossrefXML(object):
         batch_doi = ''
         if len(poa_articles) == 1:
             # If only one article is supplied, then add the doi to the batch file name
-            batch_doi = str(poa_articles[0].manuscript).zfill(5) + '-'
+            batch_doi = str(poa_articles[0].manuscript) + '-'
         self.batch_id = (str(self.crossref_config.get('batch_file_prefix')) + batch_doi +
                                    time.strftime("%Y%m%d%H%M%S", self.pub_date))
 
@@ -148,6 +148,10 @@ class crossrefXML(object):
         self.set_publication_date(self.journal_article, pub_date)
 
         self.publisher_item = SubElement(self.journal_article, 'publisher_item')
+        if self.crossref_config.get("elocation_id") and poa_article.elocation_id:
+            self.item_number = SubElement(self.publisher_item, 'item_number')
+            self.item_number.set("item_number_type", "article_number")
+            self.item_number.text = poa_article.elocation_id
         self.identifier = SubElement(self.publisher_item, 'identifier')
         self.identifier.set("id_type", "doi")
         self.identifier.text = poa_article.doi
@@ -325,9 +329,9 @@ class crossrefXML(object):
         Set the AccessIndicators
         """
 
-        applies_to = ['vor', 'am', 'tdm']
+        applies_to = self.crossref_config.get("access_indicators_applies_to")
 
-        if poa_article.license.href:
+        if len(applies_to) > 0 and poa_article.license.href:
 
             self.ai_program = SubElement(parent, 'ai:program')
             self.ai_program.set('name', 'AccessIndicators')
@@ -376,6 +380,10 @@ class crossrefXML(object):
                 if ref.volume:
                     self.volume = SubElement(self.citation, 'volume')
                     self.volume.text = ref.volume[0:31]
+
+                if ref.issue:
+                    self.issue = SubElement(self.citation, 'issue')
+                    self.issue.text = ref.issue
 
                 if ref.fpage:
                     self.first_page = SubElement(self.citation, 'first_page')
