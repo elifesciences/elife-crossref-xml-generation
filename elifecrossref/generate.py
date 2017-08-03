@@ -369,13 +369,16 @@ class crossrefXML(object):
                         self.volume_title = SubElement(self.citation, 'volume_title')
                         self.volume_title.text = ref.source
 
-                # Only set the first author surname
-                if len(ref.authors) > 0:
-                    if ref.authors[0].get("surname"):
+                # Only consider authors with group-type author
+                authors = [c for c in ref.authors if c.get('group-type') == 'author']
+                if len(authors) > 0:
+                    # Only set the first author surname
+                    first_author = authors[0]
+                    if first_author.get("surname"):
                         self.author = SubElement(self.citation, 'author')
-                        self.author.text = ref.authors[0].get("surname")
-                    elif ref.authors[0].get("collab"):
-                        self.add_clean_tag(self.citation, 'author', ref.authors[0].get("collab"))
+                        self.author.text = first_author.get("surname")
+                    elif first_author.get("collab"):
+                        self.add_clean_tag(self.citation, 'author', first_author.get("collab"))
 
                 if ref.volume:
                     self.volume = SubElement(self.citation, 'volume')
