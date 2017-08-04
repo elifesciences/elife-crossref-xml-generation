@@ -552,14 +552,16 @@ class crossrefXML(object):
 
         return mime_types.get(jats_mime_type.lower())
 
-    def prettyXML(self):
+    def output_XML(self, pretty=False, indent=""):
         encoding = 'utf-8'
 
         rough_string = ElementTree.tostring(self.root, encoding)
         reparsed = minidom.parseString(rough_string)
 
-        #return reparsed.toprettyxml(indent="\t", encoding = encoding)
-        return reparsed.toxml(encoding=encoding)
+        if pretty is True:
+            return reparsed.toprettyxml(indent, encoding=encoding)
+        else:
+            return reparsed.toxml(encoding=encoding)
 
 
 def build_crossref_xml(poa_articles, config_section="elife", pub_date=None, add_comment=True):
@@ -575,15 +577,14 @@ def build_crossref_xml(poa_articles, config_section="elife", pub_date=None, add_
 def crossref_xml(poa_articles, config_section="elife", pub_date=None, add_comment=True):
     "build crossref xml and return output as a string"
     cXML = build_crossref_xml(poa_articles, config_section, pub_date, add_comment)
-    prettyXML = cXML.prettyXML()
-    return prettyXML
+    return cXML.output_XML()
 
 
 def crossref_xml_to_disk(poa_articles, config_section="elife", pub_date=None, add_comment=True):
     "build crossref xml and write the output to disk"
     cXML = build_crossref_xml(poa_articles, config_section, pub_date, add_comment)
-    prettyXML = cXML.prettyXML()
+    XML_string = cXML.output_XML()
     # Write to file
     filename = TMP_DIR + os.sep + cXML.batch_id + '.xml'
     with open(filename, "wb") as fp:
-        fp.write(prettyXML)
+        fp.write(XML_string)

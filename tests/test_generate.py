@@ -44,7 +44,10 @@ class TestGenerate(unittest.TestCase):
             self.assertEqual(crossref_xml, model_crossref_xml)
 
     def test_parse_do_no_pass_pub_date(self):
-        # For test coverage build a crossrefXML object without passing in a pub_date
+        """
+        For test coverage build a crossrefXML object without passing in a pub_date
+        and also test pretty output too for coverage
+        """
         article_xml_file = 'elife_poa_e02725.xml'
         file_path = TEST_DATA_PATH + article_xml_file
         articles = parse.build_articles_from_article_xmls([file_path])
@@ -54,6 +57,7 @@ class TestGenerate(unittest.TestCase):
         self.assertIsNotNone(crossref_object.generated)
         self.assertIsNotNone(crossref_object.last_commit)
         self.assertIsNotNone(crossref_object.comment)
+        self.assertIsNotNone(crossref_object.output_XML(pretty=True, indent='\t'))
 
     def test_crossref_xml_to_disk(self):
         "test writing to disk for test coverage"
