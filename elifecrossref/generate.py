@@ -561,23 +561,29 @@ class crossrefXML(object):
         #return reparsed.toprettyxml(indent="\t", encoding = encoding)
         return reparsed.toxml(encoding=encoding)
 
-def build_crossref_xml_for_articles(poa_articles, config_section="elife", pub_date=None, add_comment=True):
-    """
-    Given a list of article article objects,
-    and then generate crossref XML from them
-    """
 
+def build_crossref_xml(poa_articles, config_section="elife", pub_date=None, add_comment=True):
+    """
+    Given a list of article article objects
+    generate crossref XML from them
+    """
     raw_config = config[config_section]
     crossref_config = parse_raw_config(raw_config)
+    return crossrefXML(poa_articles, crossref_config, pub_date, add_comment)
 
-    # test the XML generator
-    eXML = crossrefXML(poa_articles, crossref_config, pub_date, add_comment)
-    prettyXML = eXML.prettyXML()
 
-    # Write to file
-    f = open(TMP_DIR + os.sep + eXML.batch_id + '.xml', "wb")
-    f.write(prettyXML)
-    f.close()
-
+def crossref_xml(poa_articles, config_section="elife", pub_date=None, add_comment=True):
+    "build crossref xml and return output as a string"
+    cXML = build_crossref_xml(poa_articles, config_section, pub_date, add_comment)
+    prettyXML = cXML.prettyXML()
     return prettyXML
-    #print prettyXML
+
+
+def crossref_xml_to_disk(poa_articles, config_section="elife", pub_date=None, add_comment=True):
+    "build crossref xml and write the output to disk"
+    cXML = build_crossref_xml(poa_articles, config_section, pub_date, add_comment)
+    prettyXML = cXML.prettyXML()
+    # Write to file
+    filename = TMP_DIR + os.sep + cXML.batch_id + '.xml'
+    with open(filename, "wb") as fp:
+        fp.write(prettyXML)
