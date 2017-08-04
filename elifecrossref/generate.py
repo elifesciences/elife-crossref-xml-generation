@@ -90,9 +90,14 @@ class crossrefXML(object):
         or by default use the run time pub date
         """
         pub_date = None
-        try:
-            pub_date = poa_article.get_date("pub").date
-        except:
+
+        pub_date_obj = poa_article.get_date("pub")
+        if not pub_date_obj:
+            pub_date_obj = poa_article.get_date("publication")
+
+        if pub_date_obj:
+            pub_date = pub_date_obj.date
+        else:
             # Default use the run time date
             pub_date = self.pub_date
         return pub_date
