@@ -91,9 +91,10 @@ class crossrefXML(object):
         """
         pub_date = None
 
-        pub_date_obj = poa_article.get_date("pub")
-        if not pub_date_obj:
-            pub_date_obj = poa_article.get_date("publication")
+        for date_type in self.crossref_config.get('pub_date_types'):
+            pub_date_obj = poa_article.get_date(date_type)
+            if pub_date_obj:
+                break
 
         if pub_date_obj:
             pub_date = pub_date_obj.date

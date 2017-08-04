@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE article
+  PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD with MathML3 v1.1d1 20130915//EN" "JATS-archivearticle1-mathml3.dtd">
+<article xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article" xml:lang="en" dtd-version="1.1d1"><front><journal-meta><journal-id journal-id-type="hwp">bmjopen</journal-id><journal-id journal-id-type="nlm-ta">BMJ Open</journal-id><journal-id journal-id-type="publisher-id">bmjopen</journal-id><journal-title-group><journal-title>BMJ Open</journal-title><abbrev-journal-title abbrev-type="publisher">BMJ Open</abbrev-journal-title><abbrev-journal-title>BMJ Open</abbrev-journal-title></journal-title-group><issn pub-type="ppub">2044-6055</issn><issn pub-type="epub">2044-6055</issn><publisher><publisher-name>British Medical Journal Publishing Group</publisher-name></publisher></journal-meta><article-meta><article-id pub-id-type="publisher-id">bmjopen-2013-003269</article-id><article-id pub-id-type="doi">10.1136/bmjopen-2013-003269</article-id><article-categories><subj-group subj-group-type="heading">
+<subject>Epidemiology</subject>
+<subj-group>
+<subject>Research</subject>
+</subj-group>
+</subj-group><subj-group subj-group-type="hwp-journal-coll"><subject>Open access</subject></subj-group><subj-group subj-group-type="hwp-journal-coll"><subject>Epidemiology</subject></subj-group><subj-group subj-group-type="hwp-journal-coll"><subject>Gastroenterology and hepatology</subject></subj-group></article-categories><title-group><article-title>Hospital-based surveillance of rotavirus gastroenteritis among children under 5 years of age in the Republic of Ivory Coast: a cross-sectional study</article-title></title-group><contrib-group>
+<contrib contrib-type="author"><name><surname>Akoua-Koffi</surname><given-names>Chantal</given-names></name><xref ref-type="aff">1</xref></contrib>
+<contrib contrib-type="author"><name><surname>Asse Kouadio</surname><given-names>Vincent</given-names></name><xref ref-type="aff">2</xref></contrib>
+<contrib contrib-type="author"><name><surname>Yao Atteby</surname><given-names>Jean Jacques</given-names></name><xref ref-type="aff">3</xref></contrib>
+</contrib-group><aff id="af1"><label>1</label><institution>Pasteur Institute of Ivory Coast/Medical Sciences Training and Research Unit of Bouake</institution>, <addr-line>Abidjan</addr-line>, <country>Republic of Ivory Coast</country></aff><aff id="af2"><label>2</label><addr-line>Medical Pediatrics Department</addr-line>, <institution>Northern Abobo Hospital</institution>, <addr-line>Abidjan</addr-line>, <country>Republic of Ivory Coast</country></aff><aff id="af3"><label>3</label><addr-line>Department of Pediatrics</addr-line>, <institution>University Teaching Hospital of Treichville/Medical Sciences Training and Research Unit of Abidjan</institution>, <addr-line>Abidjan</addr-line>, <country>Republic of Ivory Coast</country></aff><author-notes>
+<corresp><label>Correspondence to</label> Professor Chantal Akoua-Koffi; <email>akouamc@yahoo.fr</email></corresp>
+</author-notes><pub-date pub-type="ppub"><month>1</month><year>2014</year></pub-date><pub-date pub-type="epub-original"><day>30</day><month>1</month><year>2014</year></pub-date><pub-date pub-type="epub">
+    <day>31</day><month>1</month><year>2014</year>
+  </pub-date><volume>4</volume><issue>1</issue><elocation-id>e003269</elocation-id><history>
+<date date-type="received"><day>6</day><month>6</month><year>2013</year></date>
+<date date-type="rev-recd"><day>30</day><month>7</month><year>2013</year></date>
+<date date-type="accepted"><day>20</day><month>8</month><year>2013</year></date>
+</history><permissions><copyright-statement>Published by the BMJ Publishing Group Limited. For permission to use (where not already granted under a licence) please go to http://group.bmj.com/group/rights-licensing/permissions</copyright-statement><copyright-year>2014</copyright-year><license license-type="open-access" xlink:href="http://creativecommons.org/licenses/"><license-p>This is an Open Access article distributed in accordance with the Creative Commons Attribution Non Commercial (CC BY-NC 3.0) license, which permits others to distribute, remix, adapt, build upon this work non-commercially, and license their derivative works on different terms, provided the original work is properly cited and the use is non-commercial. See: <ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by-nc/3.0/">http://creativecommons.org/licenses/by-nc/3.0/</ext-link></license-p></license></permissions><self-uri xlink:href="http://bmjopen.bmj.com/content/4/1/e003269.full.pdf" content-type="application/pdf" xlink:role="http://schema.highwire.org/variant/full-text">http://bmjopen.bmj.com/content/4/1/e003269.full.pdf</self-uri><self-uri xlink:href="http://bmjopen.bmj.com/content/4/1/e003269.full" content-type="application/xhtml+xml" xlink:role="http://schema.highwire.org/variant/full-text">http://bmjopen.bmj.com/content/4/1/e003269.full</self-uri><self-uri xlink:href="http://dx.doi.org/10.1136/bmjopen-2013-003269" content-type="doi" xlink:role="default">http://dx.doi.org/10.1136/bmjopen-2013-003269</self-uri><abstract><sec>
+<title>Objectives</title>
+<p>To estimate the proportion of rotavirus gastroenteritis (RVGE) among children aged less than 5 years who had been diagnosed with acute gastroenteritis (AGE) and admitted to hospitals and emergency rooms (ERs). The seasonal distribution of RVGE and most prevalent rotavirus (RV) strains was also assessed.</p>
+</sec><sec>
+<title>Design</title>
+<p>A cross-sectional hospital-based surveillance study.</p>
+</sec><sec>
+<title>Setting</title>
+<p>5 reference paediatric hospitals across Abidjan.</p>
+</sec><sec>
+<title>Participants</title>
+<p>Children aged less than 5 years, who were hospitalised/visiting ERs for WHO-defined AGE, were enrolled. Written informed consent was obtained from parents/guardians before enrolment. Children who acquired nosocomial infection were excluded from the study.</p>
+</sec><sec>
+<title>Primary and secondary outcome measures</title>
+<p>The proportion of RVGE among AGE hospitalisations and ER visits was expressed with 95% exact CI. Stool samples were collected from all enrolled children and were tested for the presence of RV using an enzyme immunoassay. RV-positive samples were serotyped using reverse transcriptase-PCR.</p>
+</sec><sec>
+<title>Results</title>
+<p>Of 357 enrolled children (mean age 13.6±11.14 months), 332 were included in the final analyses; 56.3% (187/332) were hospitalised and 43.7% (145/332) were admitted to ERs. The proportion of RVGE hospitalisations and ER visits among all AGE cases was 30.1% (95% CI 23.6% to 37.3%) and 26.9% (95% CI 19.9% to 34.9%), respectively. Ninety-five children (28.6%) were RV positive; the highest number of RVGE cases was observed in children aged 6–11 months. The number of GE cases peaked in July and August 2008; the highest percentage of RV-positive cases was observed in January 2008. G1P[8] wild-type and G8P[6] were the most commonly detected strains.</p>
+</sec><sec>
+<title>Conclusions</title>
+<p>RVGE causes substantial morbidity among children under 5 years of age and remains a health concern in the Republic of Ivory Coast, where implementation of prevention strategies such as vaccination might help to reduce disease burden.</p>
+</sec>
+</abstract><kwd-group>
+<kwd>Virology</kwd>
+<kwd>Infectious Diseases</kwd>
+</kwd-group></article-meta></front><body>
+<boxed-text><caption><title>Strengths and limitations of this study</title></caption><list list-type="bullet">
+<list-item>
+<p>Our study was conducted in large city-based paediatric hospitals and our findings are, therefore, likely to be representative of the whole population.</p></list-item>
+<list-item>
+<p>Our systematic approach for enrolment allowed the easy identification of acute gastroenteritis (AGE) cases.</p></list-item>
+<list-item>
+<p>Our study enrolled only a proportion of all reported AGE cases and only severe cases were included.</p></list-item>
+</list></boxed-text>
+<sec id="s1" sec-type="intro">
+<title>Introduction</title>
+<p>Wild-type rotavirus (RV) causes approximately 111 million gastroenteritis (GE) episodes, 25 million clinic visits, 2 million hospitalisations and over 453 000 deaths each year among children younger than 5 years of age.<xref ref-type="bibr">1</xref> <xref ref-type="bibr">2</xref> It has been reported that RV mortality is highest among the low-income countries of Asia, Africa and Latin America.<xref ref-type="bibr">3</xref> A systematic review and meta-analysis of published studies in 2009 found that the overall mortality rate associated with RV infection in children under 5 years of age in sub-Saharan Africa was 243.3 deaths/100 000 children (95% CI 187.6 to 301.7).<xref ref-type="bibr">4</xref> Globally, RV infection rates are also highest among younger children, with approximately 95% children experiencing at least one episode of RVGE by the time they reach 5 years of age.<xref ref-type="bibr">5</xref></p>
+<p>RVGE is characterised by fever, diarrhoea and vomiting, leading to severe dehydration and increased hospitalisation. Over 90% of children with RVGE suffer from dehydration-associated mortality due to diarrhoea and associated vomiting.<xref ref-type="bibr">6–8</xref> It has been suggested that RV infections are more common during the cooler months of the year and that RVGE disease burden is similar in high-income and low-income nations.<xref ref-type="bibr">1</xref> However, due to malnutrition and lack of access to appropriate treatment facilities, it is the children from the low-income countries who die more frequently.<xref ref-type="bibr">1</xref></p>
+<p>As improvements in hygiene and sanitation have not been accompanied by reductions in the incidence of RV-associated diseases,<xref ref-type="bibr">9</xref> vaccination against RV is, therefore, considered as a public health priority for low-income nations.<xref ref-type="bibr">10</xref> The introduction of RV vaccination could have significant benefits for children aged less than 3 years, and might help to reduce diarrhoea-associated childhood morbidity and mortality in low-income countries and RV-related hospitalisation in high-income countries.<xref ref-type="bibr">11</xref> <xref ref-type="bibr">12</xref></p>
+<p>The most common globally circulating RV serotypes associated with RVGE are G1, G2, G3 and G4.<xref ref-type="bibr">13</xref> In addition, G9 has emerged over the past decade as a globally important serotype.<xref ref-type="bibr">14</xref> Together, these serotypes are responsible for 95% of worldwide paediatric RVGE cases.<xref ref-type="bibr">15</xref></p>
+<p>The epidemiology of RV infection has been followed in several small studies conducted in Abidjan in the Republic of Ivory Coast,<xref ref-type="bibr">16–21</xref> but recent data for this region are limited. Nevertheless, data on RVGE disease, the number of hospitalisations and the number of emergency room (ER) visits following acute GE (AGE) are critical to formulate effective policies to control RV-related AGE and are important to fully determine the need for RV vaccines and the possible impact of their introduction.</p>
+<p>This study was designed to estimate the proportion of RVGE among children younger than 5 years of age who were diagnosed with AGE and admitted to hospitals and ERs in the Republic of Ivory Coast. The seasonal distribution of RVGE and the prevalent RV types were also studied.</p>
+</sec>
+<sec id="s2" sec-type="methods">
+<title>Methods</title>
+<sec id="s2a">
+<title>Study design</title>
+<p>This cross-sectional, hospital-based surveillance study was conducted across five reference paediatric hospitals in Abidjan, the Republic of Ivory Coast between December 2007 and February 2009. The study was conducted in accordance with Good Clinical Practice, Declaration of Helsinki (V.1996) and applicable local regulations. Written informed consent was obtained from parents/guardians before children were enrolled.</p>
+<p>Children presenting AGE were identified by checking hospital and ER logbooks. Male or female children aged less than 5 years, who were hospitalised or visited ER for AGE (≥3 looser than normal stools per day with or without ≥2 episodes of vomiting within 24 h), were included in the study. Children were excluded if they acquired AGE by possible nosocomial infection (within 12 h after hospital admission).</p>
+<p>Unique study numbers were assigned sequentially to all enrolled children in order to maintain their confidentiality. Parents/guardians were interviewed and medical records were reviewed by the site staff to complete the study questionnaire and/or case report form. Information including demography (date of birth, gender, height and weight, nutritional status and area of residence), admission date and diagnosis at admission, date of discharge and administration of oral and/or intravenous rehydration/antibiotics were recorded and encoded in the study database. Details such as body temperature, duration of diarrhoea or vomiting, treatment and behavioural symptoms were also recorded. The severity of RVGE was defined according to the Vesikari Scale (mild: score &lt;7; moderate: 7–10 and severe: ≥11).<xref ref-type="bibr">22</xref></p>
+<p>Stool samples collected within 4–10 days of the onset of GE from all enrolled children as part of the study procedures were labelled, stored at a temperature of −20°C to −70°C and then transported to the Pasteur Institute, Abidjan, within 72 h of collection for testing. RV testing was performed using the IDEIA rotavirus kit (DAKO Ltd, Cambridgeshire, UK) provided by the regional laboratory (Ivory Coast National Laboratory for Rotavirus, affiliated to the WHO regional reference laboratory located in Accra, Ghana (West Africa), at the Noguchi Memorial Institute for Medical Research). A random subset of RV-positive stool samples were subsequently tested using reverse transcriptase-PCR of the VP7 and VP4 genes followed by reverse hybridisation on a strip at the DDL Diagnostic Laboratory (Rijswijk, The Netherlands) to identify G and P genotypes and to differentiate the presence of wild-type G1 RV from the vaccine strain virus.<xref ref-type="bibr">23</xref> A visible pattern is observed on the strip after hybridisation which is specific to each genotype. As a complementary tool, sequence analysis was performed to identify the genotypes for samples that yielded an unclear pattern that could not be recognised. The resulting sequence was analysed by BLAST search against the GenBank database to determine the RV genotype.<xref ref-type="bibr">23</xref></p>
+</sec>
+<sec id="s2b">
+<title>Analyses</title>
+<p>All children meeting the predefined eligibility criteria were included in the final analyses.</p>
+<p>The occurrence of severe dehydrating RVGE (based on the Vesikari Scale<xref ref-type="bibr">22</xref>) administered treatment (including intravenous rehydration), duration of hospitalisation and outcome were all reported, together with the seasonal distribution of RVGE and the occurrence of RV types.</p>
+<p>All statistical analyses were performed using Statistical Analysis System (SAS) V.9.2 and the graphs were generated using Microsoft Excel. Categorical data such as gender, seasonal distribution and disease severity were presented as proportions with one decimal. Burden of GE/RVGE among hospitalisations/ER visits was expressed as proportions with their 95% exact CI. Exploratory analyses of estimation of the crude OR were performed using univariate logistic regression considering RV status outcome variable. Clinical characteristics and outcome at discharge were considered as the confounding factors for this analysis. Univariate logistic regression was used to estimate the association between outcome at discharge as the dependent variable and RV status/nutritional status as the independent factor. Nutritional status was derived using the weight-for-age Z-scores based on the WHO child growth standards. Associations between these derived nutritional status and the RV positivity were analysed using the χ<sup>2</sup> test with 95% exact CI. Association between the clinical characteristics before/during hospitalisation and RV status were analysed using χ<sup>2</sup> and fisher's exact test with 95% exact CI.</p>
+</sec>
+</sec>
+<sec id="s3" sec-type="results">
+<title>Results</title>
+<sec id="s3a">
+<title>Demographic characteristics</title>
+<p>A total of 1330 children (917 hospitalised and 413 visiting ER) presenting AGE were identified from hospital logs. Of these, 357 children were enrolled into the study. Informed consent was not collected for 973 children, due to parent refusal, non-collection of samples and failure of the surveillance to capture the cases. The mean age (SD) of the enrolled children was 13.6 months (±11.14 months; <xref ref-type="table">table 1</xref>).</p>
+<table-wrap id="BMJOPEN2013003269TB1" position="float">
+<label>Table 1</label>
+<caption><p>Demographic characteristics of enrolled children (N=357)</p></caption>
+<table frame="hsides" rules="groups">
+<colgroup>
+<col align="left"/>
+<col align="left"/>
+<col align="left"/>
+<col align="left"/>
+<col align="left"/>
+<col align="left"/>
+<col align="left"/>
+<col align="left"/>
+</colgroup>
+<thead valign="bottom">
+<tr>
+<th align="left" rowspan="2">Characteristics</th>
+<th align="left" rowspan="2">Parameters</th>
+<th align="left" colspan="2">Total (N*=357)<hr/></th>
+<th align="left" colspan="2">Emergency room (N=161)<hr/></th>
+<th align="left" colspan="2">Hospitalised (N=196)<hr/></th>
+</tr>
+<tr>
+<th align="left">N†</th>
+<th align="left">Per cent‡</th>
+<th align="left">n</th>
+<th align="left">Per cent</th>
+<th align="left">n</th>
+<th align="left">Per cent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="3">Age (months)</td>
+<td>N</td>
+<td>357</td>
+<td>–</td>
+<td>161</td>
+<td>–</td>
+<td>196</td>
+<td>–</td>
+</tr>
+<tr>
+<td>Mean</td>
+<td>13.6</td>
+<td>–</td>
+<td>13.7</td>
+<td>–</td>
+<td>13.5</td>
+<td>–</td>
+</tr>
+<tr>
+<td>SD</td>
+<td>11.14</td>
+<td>–</td>
+<td>11.39</td>
+<td>–</td>
+<td>10.96</td>
+<td>–</td>
+</tr>
+<tr>
+<td rowspan="2">Gender</td>
+<td>Female</td>
+<td>152</td>
+<td>42.6</td>
+<td>69</td>
+<td>42.9</td>
+<td>83</td>
+<td>42.3</td>
+</tr>
+<tr>
+<td>Male</td>
+<td>205</td>
+<td>57.4</td>
+<td>92</td>
+<td>57.1</td>
+<td>113</td>
+<td>57.7</td>
+</tr>
+</tbody>
+</table>
+<table-wrap-foot>
+<fn>
+<p>*Number of children.</p></fn>
+<fn>
+<p>†Number of children in a given category.</p></fn>
+<fn>
+<p>‡n/N×100.</p></fn>
+</table-wrap-foot>
+</table-wrap>
+<p>A total of 332 children were included in the final analysis; 25 were excluded due to not meeting the inclusion/exclusion criteria (protocol violation) in two cases and failure to either collect or analyse the stool samples for RV in the remaining 23 children.</p>
+<p>Among those included in the final analysis, 56.3% (187/332) children had been hospitalised and the remaining 43.7% (145/332) had visited an ER.</p>
+</sec>
+<sec id="s3b">
+<title>Proportion of GE and RVGE hospitalisations</title>
+<p>The proportion of all AGE-related hospitalisations and ER visits that were diagnosed with RVGE was 30.1% (n=56; 95% CI 23.6% to 37.3%) and 26.9% (n=39; 95% CI 19.9% to 34.9%), respectively.</p>
+<p>Most of the children hospitalised and visiting the ER due to AGE corresponded to children under 2 years of age (84.8% and 84.5%, respectively). The number of RV-positive and RV-negative children stratified by age is shown in <xref ref-type="fig">figure 1</xref>. Ninety-five children (28.6%) were RV positive, of whom over 80% were aged less than 24 months. The highest number of RVGE cases was seen in children aged 6–11 months (40% (38/95); <xref ref-type="fig">figure 1</xref>).</p>
+<fig id="BMJOPEN2013003269F1">
+<label>Figure 1</label>
+<caption><p>Distribution of GE cases by RV status by age groups (N=332). GE, gastroenteritis; RV, rotavirus.</p></caption>
+<graphic xlink:href="bmjopen-4-e003269-F1.jpg"/>
+</fig>
+<p>The seasonal distribution of RV-attributable GE hospitalisation is shown in <xref ref-type="fig">figure 2</xref>. The number of GE cases was highest in July and August 2008 and the percentage of RV-positive cases was highest in January 2008.</p>
+<fig id="BMJOPEN2013003269F2">
+<label>Figure 2</label>
+<caption><p>Seasonality of acute GE and RVGE hospitalisations (N=331). GE, gastroenteritis; RV, rotavirus.</p></caption>
+<graphic xlink:href="bmjopen-4-e003269-F2.jpg"/>
+</fig>
+</sec>
+<sec id="s3c">
+<title>Clinical characteristics of GE and RVGE hospitalisations</title>
+<p>Among RV-positive and RV-negative children, severe GE (score ≥11 on the Vesikari Scale) was recorded in 64.2% (61/95) and 55.5% (131/236) of children before hospitalisation, respectively (<xref ref-type="table">table 2</xref>).</p>
+<table-wrap id="BMJOPEN2013003269TB2" position="float">
+<label>Table 2</label>
+<caption><p>Clinical characteristics of children by RV status (N=331)</p></caption>
+<table frame="hsides" rules="groups">
+<colgroup>
+<col align="left"/>
+<col align="char" char=" "/>
+<col align="char" char=" "/>
+<col align="char" char="."/>
+</colgroup>
+<thead valign="bottom">
+<tr>
+<th align="left">Characteristics</th>
+<th align="left">RV positive (N*=95) n† (%‡)</th>
+<th align="left">RV negative (N=236) n (%)</th>
+<th align="left">p Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="4">Severity§ before hospitalisation</td>
+</tr>
+<tr>
+<td> Mild (&lt;7)</td>
+<td>6 (6.3)</td>
+<td>27 (11.4)</td>
+<td>0.2300¶</td>
+</tr>
+<tr>
+<td> Moderate (7–10)</td>
+<td>28 (29.5)</td>
+<td>78 (33.1)</td>
+<td/>
+</tr>
+<tr>
+<td> Severe (≥11)</td>
+<td>61 (64.2)</td>
+<td>131 (55.5)</td>
+<td/>
+</tr>
+<tr>
+<td colspan="4">Symptoms before hospitalisation</td>
+</tr>
+<tr>
+<td> Diarrhoea</td>
+<td>95 (100.0)</td>
+<td>235 (99.6)</td>
+<td>1.0000**</td>
+</tr>
+<tr>
+<td> Vomiting</td>
+<td>81 (85.3)</td>
+<td>170 (72.0)</td>
+<td>0.0037**</td>
+</tr>
+<tr>
+<td> Fever</td>
+<td>44 (46.3)</td>
+<td>116 (49.2)</td>
+<td>0.8557¶</td>
+</tr>
+<tr>
+<td colspan="4">Classification of nutrition</td>
+</tr>
+<tr>
+<td> Overweight</td>
+<td>5 (5.3)</td>
+<td>8 (3.4)</td>
+<td>0.1981¶</td>
+</tr>
+<tr>
+<td> Adequate (normal)</td>
+<td>66 (69.5)</td>
+<td>152 (64.4)</td>
+<td/>
+</tr>
+<tr>
+<td> Moderately malnourished</td>
+<td>15 (15.8)</td>
+<td>32 (13.6)</td>
+<td/>
+</tr>
+<tr>
+<td> Severely malnourished</td>
+<td>9 (9.5)</td>
+<td>44 (18.6)</td>
+<td/>
+</tr>
+<tr>
+<td colspan="4">Outcome at discharge</td>
+</tr>
+<tr>
+<td> Recovered</td>
+<td>27 (28.4)</td>
+<td>40 (16.9)</td>
+<td>0.0145**</td>
+</tr>
+<tr>
+<td> Ongoing GE</td>
+<td>68 (71.6)</td>
+<td>184 (78.0)</td>
+<td/>
+</tr>
+<tr>
+<td> Transferred</td>
+<td>0 (0.0)</td>
+<td>4 (1.7)</td>
+<td/>
+</tr>
+<tr>
+<td> Died</td>
+<td>0 (0.0)</td>
+<td>8 (3.4)</td>
+<td/>
+</tr>
+</tbody>
+</table>
+<table-wrap-foot>
+<fn>
+<p>One child was excluded from analysis as RV status was not determined.</p></fn>
+<fn>
+<p>Nutritional status was derived using the weight-for-age Z-scores (WAZ).</p></fn>
+<fn>
+<p>*Number of children.</p></fn>
+<fn>
+<p>†Number of children in a given category.</p></fn>
+<fn>
+<p>‡n/N×100.</p></fn>
+<fn>
+<p>§Severity using the 20-point Vesikari Scale.</p></fn>
+<fn>
+<p>¶χ<sup>2</sup> p Value.</p></fn>
+<fn>
+<p>**Fisher's exact test p Value.</p></fn>
+<fn>
+<p>GE, gastroenteritis; RV, rotavirus.</p></fn>
+</table-wrap-foot>
+</table-wrap>
+<p>The percentage of children recording GE-associated symptoms (diarrhoea, vomiting and fever) was similar across RV-positive and RV-negative groups before hospitalisation. However, a significant (p=0.0037) association between vomiting and RV-positive status was observed before hospital admission (<xref ref-type="table">table 2</xref>).</p>
+<p>Nutritional status based on weight indicated that adequately and moderately malnourished children were distributed similarly across RV-positive and RV-negative groups. However, a higher number of severely malnourished children was observed in the RV-negative group (<xref ref-type="table">table 2</xref>).</p>
+<p>Oral rehydration was the most commonly used treatment for GE in RV-positive and RV-negative groups (70.5% and 75.8%, respectively), followed by intravenous rehydration therapy (54.7% and 53%, respectively).</p>
+<p>At discharge, the majority of children among RV-positive and RV-negative groups (71.6% (68/95) and 78% (184/236), respectively) had ongoing GE. Eight RV-negative children (3.4%) died, of whom all but one (87.5% (7/8)) were severely malnourished. The unadjusted OR estimate indicated that severely malnourished children had 22.2 (95% CI 2.5 to 198.8) times higher risk of dying as compared with children with adequate nutritional status (p=0.0056; <xref ref-type="table">table 2</xref>).</p>
+</sec>
+<sec id="s3d">
+<title>RV-type distribution</title>
+<p>Fifty-three of 95 RV-positive stool samples were assessed for RV type in this study. The most prevalent RV types were G1P[8] wild-type (34% (18/53)) and G8P[6] (18.9% (10/53)). Mixed RV types were detected in 30.2% (16/53). The RV vaccine strain (G1P[8] vaccine strain) was not detected in any sample. The other detected RV types are shown in <xref ref-type="fig">figure 3</xref>.</p>
+<fig id="BMJOPEN2013003269F3">
+<label>Figure 3</label>
+<caption><p>Distribution of RV G and P types (N=331). RV, rotavirus.</p></caption>
+<graphic xlink:href="bmjopen-4-e003269-F3.jpg"/>
+</fig>
+</sec>
+</sec>
+<sec id="s4" sec-type="discussion">
+<title>Discussion</title>
+<p>This study into RVGE disease burden found that RV infection is the primary cause of hospitalisation due to GE in children aged less than 5 years in the Republic of Ivory Coast.</p>
+<p>We identified RV in 30.1% and 26.9% children either hospitalised or visiting an ER for AGE, respectively. This is consistent with an earlier epidemiological study in Abidjan that demonstrated the general prevalence of RVGE in children younger than 5 years to be 27.9% between 1997 and 2000.<xref ref-type="bibr">21</xref> In addition, a review of published studies (1975–1992) of RVGE in Africa detected RV in 24–29% of children hospitalised for diarrhoea.<xref ref-type="bibr">9</xref></p>
+<p>In the present study, RV disease burden was predominantly observed among young children (over 90% (87/95) were aged up to 23 months), which is consistent with previous studies conducted across the African continent.<xref ref-type="bibr">9</xref> A study conducted in Nigeria showed that over 90% of RVGE-positive cases were observed in children aged less than 2 years<xref ref-type="bibr">24</xref> and two independent studies conducted in Egypt (1995–1996)<xref ref-type="bibr">25</xref> and Libya (October 2007–September 2008)<xref ref-type="bibr">26</xref> indicated that the incidence of RVGE was highest among children aged 6–11 months; all comparable to the results of the present study.</p>
+<p>As observed in previous studies conducted in sub-Saharan Africa between 1975 and 1992,<xref ref-type="bibr">9</xref> most GE cases in this study were observed between July and August 2008.</p>
+<p>Almost all children who died following AGE in this study were severely malnourished, indicating the importance of nutritional status in potentially determining the outcome of AGE. Previous reports substantiate these findings, where malnourishment has been associated with a considerable risk of diarrhoea-associated mortality.<xref ref-type="bibr">27</xref> <xref ref-type="bibr">28</xref></p>
+<p>The circulation of mixed RV types in the African countries has been previously reported.<xref ref-type="bibr">29</xref> <xref ref-type="bibr">30</xref> In this study, although wild-type G1P[8] was the most commonly detected (34% (18/53)) RV type, several (30.2% (16/53)) mixed RV types were detected. The proportion of mixed RV types observed in this study is comparable to that reported by the WHO's RV surveillance in the African region.<xref ref-type="bibr">31</xref> In this report, nearly 42% of the circulating RV types during 2006–2009 comprised mixed RV types.<xref ref-type="bibr">31</xref></p>
+<p>There is no available antiviral therapy for RV infection,<xref ref-type="bibr">32</xref> and RVGE management predominantly includes fluid and electrolyte replacement and improvements in sanitation and water supply.<xref ref-type="bibr">33</xref> Antibiotic treatment is not justified during RVGE and its use is limited to cases with documented bacterial coinfection. However, it has been suggested that improvements in hygiene and provision of safe water may not be as effective in the prevention of RVGE as they are to GE due to other causes.<xref ref-type="bibr">33</xref></p>
+<p>Previous studies have established that RV vaccination confers protection against severe RVGE and has helped relieve the global burden of this disease.<xref ref-type="bibr">34–37</xref> These effects have been observed in similar settings in Asia, Africa and Latin America.<xref ref-type="bibr">29</xref> <xref ref-type="bibr">38</xref> <xref ref-type="bibr">39</xref> The efficacy of RV vaccines against severe RVGE has been found to be 59% in South Africa and Malawi<xref ref-type="bibr">40</xref> and 64% in Kenya, Ghana and Mali.<xref ref-type="bibr">41</xref> RV vaccination may, therefore, represent the most effective primary public health intervention against RVGE. Indeed in 2009, the WHO recommended the inclusion of RV vaccines in the routine childhood vaccine programmes of all countries.<xref ref-type="bibr">42</xref> RV vaccines are available in the private sector in the Republic of Ivory Coast, but no RV vaccine is currently included in the universal mass vaccination programme.</p>
+<p>Data presented in this study highlight the magnitude of RV-associated disease burden and might allow policymakers to determine the need to implement prevention strategies in the Republic of Ivory Coast. Indeed, the inclusion of a RV vaccine, as a prevention strategy, might help to reduce the burden of AGE and AGE-associated hospitalisations.</p>
+<p>The results of this study need to be interpreted in the light of several strengths and limitations. Among the strengths, the systematic approach followed in this study to identify children by checking hospital and ER logbooks enabled easy identification of AGE cases using standard case definitions. Second, the study was conducted in reference hospitals seeing over 1300 AGE cases annually, which complies with the recommendations of WHO's generic protocol for hospital-based RVGE in children.<xref ref-type="bibr">43</xref> By including multiple centres, these data more closely represent the local population. In addition, the quality check processes performed on the laboratory tests of RV-positive samples provide credibility to the results.</p>
+<p>However, the study does have limitations. As a large number of children who presented with GE were not enrolled and tested for RV, the possibility of selection bias might be considered. Our reported prevalence of RVGE might have been affected by selecting only severe GE cases with more severe disease characteristics, including longer hospital stays. Nonetheless, this study provides a realistic picture of the role of RV among more severe cases of RVGE, which incur substantial direct and indirect medical costs and impact public health in this setting. It should be noted that most of the participants who were not enrolled were either not captured during surveillance or did not consent to participate in the study. Second, only 53 of 95 RV-positive stool samples were available for strain identification which limited the possibility of describing the circulating strains. Nevertheless, by using a reference laboratory with validated techniques and experience for PCR confirmation, it was possible to provide accurate estimates for the identified strains. Finally, firm conclusions regarding the seasonality of RV and the variation in circulating RV strains could not been drawn as the surveillance activities were conducted for just 1 year following recommendations from WHO.<xref ref-type="bibr">43</xref> Nevertheless, routine surveillance is warranted as RV circulation might vary from one calendar year to another.</p>
+</sec>
+<sec id="s5" sec-type="conclusions">
+<title>Conclusion</title>
+<p>RVGE in children aged less than 5 years continues to be a major public health challenge in the Republic of Ivory Coast. In our study, the disease, which peaked in July and August, mainly affected infants aged 6–11 months. Wild-type G1P[8] and G8P[6] were the most frequently reported RV types. The inclusion of a RV vaccine into local preventative programmes might, therefore, help to reduce the disease burden of RVGE.</p>
+</sec>
+</body><back>
+<ack>
+<p>The authors would like to thank Véronique Agbaya-Akran Awo and Mariam Drame for their contribution to the study conduct at the site; Vrushali Sanghrajka for statistical inputs. The authors also thank Dr Lamine Soumahoro (head of Medical Department) and Dr Marie-José Anguibi-Pokou (both employed by GlaxoSmithKline (GSK) group of companies) for their involvement in monitoring of the study sites, ensuring the supply of study material and conducting trainings on Good Clinical practices. The authors acknowledge the contributions of Dominique Luyts and Karin Hallez for providing logistical support as clinical operation managers and Rodrigo DeAntonio for intellectual inputs and review of the manuscript (all employed by GSK group of companies); Dr Ekaza Euloge from Pasteur Institute of Ivory Coast for his assistance in molecular testing in Abidjan; Dr Berah and Dr Niamen for sample collection; DDL Diagnostic Laboratory (the Netherlands) for performing reverse transcriptase (RT)-PCR and nested PCR to determine rotavirus G and P types. The authors also thank Harshith Bhat (employed by GSK group of companies) for medical writing, Abdelilah Ibrahimi (XPE Pharma and Science for GSK group of companies) and Valentine Wascotte for Publication coordination (all employed by GSK group of companies) and Julia Donnelly for copy-editing (freelance on behalf of GSK group of companies).</p>
+</ack>
+<fn-group>
+<fn>
+<label>Contributors</label>
+<p>CA-K was the principal investigator and contributed to the conception, design, analysis and interpretation of the study. VAK and JJYA coordinated the study together with CA-K and contributed to the interpretation of the results. All authors participated in the development of this manuscript.</p></fn>
+<fn>
+<label>Funding</label>
+<p>GSK Biologicals SA was the funding source and was involved in all stages of the study conduct and analysis. GSK Biologicals SA also took in charge all costs associated with the development and the publishing of the present manuscript.</p></fn>
+<fn>
+<label>Competing interests</label>
+<p>None.</p></fn>
+<fn>
+<label>Patient consent</label>
+<p>Obtained.</p></fn>
+<fn>
+<label>Ethics approval</label>
+<p>National Ethics Committee.</p></fn>
+<fn>
+<label>Provenance and peer review</label>
+<p>Not commissioned; externally peer reviewed.</p></fn>
+<fn>
+<label>Data sharing statement</label>
+<p>Researchers can request access to anonymised patient-level data from GSK clinical studies to conduct further research through the GSK website at the following URL address: <ext-link xlink:href="https://clinicalstudydata.gsk.com" ext-link-type="uri">https://clinicalstudydata.gsk.com</ext-link></p></fn>
+</fn-group>
+<ref-list><title>References</title>
+<ref id="R1"><label>1</label><mixed-citation><person-group person-group-type="author"><name><surname>Parashar</surname><given-names>UD</given-names></name><name><surname>Hummelman</surname><given-names>EG</given-names></name><name><surname>Bresee</surname><given-names>JS</given-names></name><etal/></person-group>. <article-title>Global Illness and deaths caused by rotavirus disease in children</article-title>. <source>Emerg Infect Dis</source> <year>2003</year>;<volume>9</volume>:<fpage>565</fpage>–<lpage>71</lpage>.</mixed-citation></ref>
+<ref id="R2"><label>2</label><mixed-citation><person-group person-group-type="author"><name><surname>Tate</surname><given-names>JE</given-names></name><name><surname>Burton</surname><given-names>AH</given-names></name><name><surname>Boschi-Pinto</surname><given-names>C</given-names></name><etal/></person-group>. <article-title>WHO-coordinated Global Rotavirus Surveillance Network. 2008 estimate of worldwide rotavirus-associated mortality in children younger than 5 years before the introduction of universal rotavirus vaccination programmes: a systematic review and meta-analysis</article-title>. <source>Lancet Infect Dis</source> <year>2012</year>;<volume>12</volume>:<fpage>136</fpage>–<lpage>41</lpage>.</mixed-citation></ref>
+<ref id="R3"><label>3</label><mixed-citation><person-group person-group-type="author"><name><surname>Parashar</surname><given-names>UD</given-names></name><name><surname>Burton</surname><given-names>A</given-names></name><name><surname>Lanata</surname><given-names>C</given-names></name><etal/></person-group>. <article-title>Global mortality associated with rotavirus disease among children in 2004</article-title>. <source>J Infect Dis</source> <year>2009</year>;<volume>200</volume>:<fpage>S9</fpage>–<lpage>15</lpage>.</mixed-citation></ref>
+<ref id="R4"><label>4</label><mixed-citation><person-group person-group-type="author"><name><surname>Sanchez-Padilla</surname><given-names>E</given-names></name><name><surname>Grais</surname><given-names>RF</given-names></name><name><surname>Guerin</surname><given-names>PJ</given-names></name><etal/></person-group>. <article-title>Burden of disease and circulating serotypes of rotavirus infection in sub-Saharan Africa: systematic review and meta-analysis</article-title>. <source>Lancet Infect Dis</source> <year>2009</year>;<volume>9</volume>:<fpage>567</fpage>–<lpage>76</lpage>.</mixed-citation></ref>
+<ref id="R5"><label>5</label><mixed-citation><person-group person-group-type="author"><name><surname>Parashar</surname><given-names>UD</given-names></name><name><surname>Bresee</surname><given-names>JS</given-names></name><name><surname>Gentsch</surname><given-names>JR</given-names></name><etal/></person-group>. <article-title>Rotavirus</article-title>. <source>Emerg Infect Dis</source> <year>1998</year>;<volume>4</volume>:<fpage>561</fpage>–<lpage>70</lpage>.</mixed-citation></ref>
+<ref id="R6"><label>6</label><mixed-citation><person-group person-group-type="author"><name><surname>Glass</surname><given-names>RI</given-names></name><name><surname>Kilgore</surname><given-names>PE</given-names></name><name><surname>Holman</surname><given-names>RC</given-names></name><etal/></person-group>. <article-title>The epidemiology of rotavirus diarrhea in the United States: surveillance and estimates of disease burden</article-title>. <source>J Infect Dis</source> <year>1996</year>;<volume>174</volume>:<fpage>S5</fpage>–<lpage>11</lpage>.</mixed-citation></ref>
+<ref id="R7"><label>7</label><mixed-citation><person-group person-group-type="author"><name><surname>Gurwith</surname><given-names>M</given-names></name><name><surname>Wenman</surname><given-names>W</given-names></name><name><surname>Gurwith</surname><given-names>D</given-names></name><etal/></person-group>. <article-title>Diarrhea among infants and young children in Canada: a longitudinal study in three northern communities</article-title>. <source>J Infect Dis</source> <year>1983</year>;<volume>147</volume>:<fpage>685</fpage>–<lpage>92</lpage>.</mixed-citation></ref>
+<ref id="R8"><label>8</label><mixed-citation><person-group person-group-type="author"><name><surname>Rodriguez</surname><given-names>WJ</given-names></name><name><surname>Kim</surname><given-names>HW</given-names></name><name><surname>Brandt</surname><given-names>CD</given-names></name><etal/></person-group>. <article-title>Longitudinal study of rotavirus infection and gastroenteritis in families served by a pediatric medical practice: clinical and epidemiologic observations</article-title>. <source>Pediatr Infect Dis J</source> <year>1987</year>;<volume>6</volume>:<fpage>170</fpage>–<lpage>6</lpage>.</mixed-citation></ref>
+<ref id="R9"><label>9</label><mixed-citation><person-group person-group-type="author"><name><surname>Cunliffe</surname><given-names>NA</given-names></name><name><surname>Kilgore</surname><given-names>PE</given-names></name><name><surname>Bresee</surname><given-names>JS</given-names></name><etal/></person-group>. <article-title>Epidemiology of rotavirus diarrhea in Africa: a review to assess the need for rotavirus immunization</article-title>. <source>Bull World Health Organ</source> <year>1998</year>;<volume>76</volume>:<fpage>525</fpage>–<lpage>37</lpage>.</mixed-citation></ref>
+<ref id="R10"><label>10</label><mixed-citation><person-group person-group-type="author"><name><surname>Naficy</surname><given-names>AB</given-names></name><name><surname>Abu-Elyazeed</surname><given-names>R</given-names></name><name><surname>Holmes</surname><given-names>JL</given-names></name><etal/></person-group>. <article-title>Epidemiology of rotavirus diarrhea in Egyptian children and implications for disease control</article-title>. <source>Am J Epidemiol</source> <year>1999</year>;<volume>150</volume>:<fpage>770</fpage>–<lpage>6</lpage>.</mixed-citation></ref>
+<ref id="R11"><label>11</label><mixed-citation><person-group person-group-type="author"><name><surname>Cunliffe</surname><given-names>NA</given-names></name><name><surname>Nakagomi</surname><given-names>O</given-names></name></person-group>. <article-title>A critical time for rotavirus vaccines: a review</article-title>. <source>Expert Rev Vaccines</source> <year>2005</year>;<volume>4</volume>:<fpage>521</fpage>–<lpage>32</lpage>.</mixed-citation></ref>
+<ref id="R12"><label>12</label><mixed-citation><person-group person-group-type="author"><name><surname>Glass</surname><given-names>RI</given-names></name><name><surname>Bresse</surname><given-names>JS</given-names></name><name><surname>Turcios</surname><given-names>R</given-names></name><etal/></person-group>. <article-title>Rotavirus vaccines: targeting the developing world</article-title>. <source>J Infect Dis</source> <year>2005</year>;<volume>192</volume>:<fpage>S160</fpage>–<lpage>6</lpage>.</mixed-citation></ref>
+<ref id="R13"><label>13</label><mixed-citation><person-group person-group-type="author"><name><surname>Steele</surname><given-names>AD</given-names></name><name><surname>Ivanoff</surname><given-names>B</given-names></name></person-group>. <article-title>Rotavirus strains circulating in Africa during 1996–1999: emergence of G9 strains and P[6] strains</article-title>. <source>Vaccine</source> <year>2003</year>;<volume>21</volume>:<fpage>361</fpage>–<lpage>7</lpage>.</mixed-citation></ref>
+<ref id="R14"><label>14</label><mixed-citation><person-group person-group-type="author"><name><surname>Yang</surname><given-names>J</given-names></name><name><surname>Wang</surname><given-names>T</given-names></name><name><surname>Wang</surname><given-names>Y</given-names></name><etal/></person-group>. <article-title>Emergence of human rotavirus group A genotype G9 strains, Wuhan, China</article-title>. <source>Emerg Infect Dis</source> <year>2007</year>;<volume>13</volume>:<fpage>1587</fpage>–<lpage>9</lpage>.</mixed-citation></ref>
+<ref id="R15"><label>15</label><mixed-citation><person-group person-group-type="author"><name><surname>Atkinson</surname><given-names>W</given-names></name><name><surname>Hamborsky</surname><given-names>J</given-names></name><name><surname>McIntyre</surname><given-names>L</given-names></name><etal/></person-group>. <source>Epidemiology and prevention of vaccine-preventable diseases</source>. <publisher-loc>Washington, DC</publisher-loc>: <publisher-name>Public Health Foundation</publisher-name>, <year>2008</year>.</mixed-citation></ref>
+<ref id="R16"><label>16</label><mixed-citation><person-group person-group-type="author"><name><surname>Cowpli-Bony</surname><given-names>M</given-names></name><name><surname>Loukou</surname><given-names>YG</given-names></name><name><surname>Teby</surname><given-names>A</given-names></name><etal/></person-group>. <article-title>Technique immunoenzymatique epidemiologie des diarrhees aigues a rotavirus chez 115 enfants diarrheiques atteints de malnutrition a Abidjan</article-title>. <source>Rev Med Côte d'Ivoire</source> <year>1987</year>;<volume>79</volume>:<fpage>21</fpage>–<lpage>5</lpage>.</mixed-citation></ref>
+<ref id="R17"><label>17</label><mixed-citation><person-group person-group-type="author"><name><surname>Lougou</surname><given-names>YG</given-names></name><name><surname>Selly</surname><given-names>E</given-names></name></person-group>. <article-title>Sous-groupes de rotavirus humains en Côte d'Ivoire determines par immunoenzymologie</article-title>. <source>Rev Med Côte d'Ivoire</source> <year>1987</year>;<volume>81</volume>:<fpage>4</fpage>–<lpage>9</lpage>.</mixed-citation></ref>
+<ref id="R18"><label>18</label><mixed-citation><person-group person-group-type="author"><name><surname>Akoua-Koffi</surname><given-names>C</given-names></name><name><surname>Faye-Kette</surname><given-names>H</given-names></name><name><surname>Kouakou</surname><given-names>K</given-names></name><etal/></person-group>. <article-title>Interet de l'utilisation d'un test au latex (Rotalex) pour le depistage de rotavirus dans les selles diarrheiques a Abidjan</article-title>. <source>Med Afr Noire</source> <year>1993</year>;<volume>40</volume>:<fpage>599</fpage>–<lpage>602</lpage>.</mixed-citation></ref>
+<ref id="R19"><label>19</label><mixed-citation><person-group person-group-type="author"><name><surname>Akran</surname><given-names>VA</given-names></name><name><surname>Akoua-Koffi</surname><given-names>C</given-names></name><name><surname>Hette</surname><given-names>K</given-names></name><etal/></person-group>. <article-title>Electrophoretypes of rotavirus in children 15 years of age in Abidjan, Côte d'Ivoire in 1997</article-title>. <source>Afr J Health Sci</source> <year>2001</year>;<volume>8</volume>:<fpage>33</fpage>–<lpage>8</lpage>.</mixed-citation></ref>
+<ref id="R20"><label>20</label><mixed-citation><person-group person-group-type="author"><name><surname>Niangue-Beugre</surname><given-names>NN</given-names></name><name><surname>Couitchere</surname><given-names>L</given-names></name><name><surname>Oulai</surname><given-names>SM</given-names></name><etal/></person-group>. <article-title>Aspect epidemiologiques, cliniques et etiologiques des diarrhees aigues des enfants ages de 1 mois a 5 ans recus dans le service de pediatrie du CHU de Treichville (Côte d'Ivoire)</article-title>. <source>Arch Pediatr</source> <year>2006</year>;<volume>13</volume>:<fpage>395</fpage>–<lpage>8</lpage>.</mixed-citation></ref>
+<ref id="R21"><label>21</label><mixed-citation><person-group person-group-type="author"><name><surname>Akoua-Koffi</surname><given-names>C</given-names></name><name><surname>Akran</surname><given-names>V</given-names></name><name><surname>Peenze</surname><given-names>I</given-names></name><etal/></person-group>. <article-title>Epidemiological and virological aspects rotavirus diarrhea in Abidjan, Côte d'Ivoire (1997–2000)</article-title>. <source>Bull Soc Pathol Exot</source> <year>2007</year>;<volume>100</volume>:<fpage>246</fpage>–<lpage>9</lpage>.</mixed-citation></ref>
+<ref id="R22"><label>22</label><mixed-citation><person-group person-group-type="author"><name><surname>Ruuska</surname><given-names>T</given-names></name><name><surname>Vesikari</surname><given-names>T</given-names></name></person-group>. <article-title>Rotavirus disease in Finnish children: use of numerical scores for clinical severity of diarrheal episodes</article-title>. <source>Scand J Infect Dis</source> <year>1990</year>;<volume>22</volume>:<fpage>259</fpage>–<lpage>67</lpage>.</mixed-citation></ref>
+<ref id="R23"><label>23</label><mixed-citation><person-group person-group-type="author"><name><surname>van Doorn</surname><given-names>LJ</given-names></name><name><surname>Kleter</surname><given-names>B</given-names></name><name><surname>Hoefnagel</surname><given-names>E</given-names></name><etal/></person-group>. <article-title>Detection and genotyping of human rotavirus VP4 and VP7 genes by reverse transcriptase PCR and reverse hybridization</article-title>. <source>J Clin Microbiol</source> <year>2009</year>;<volume>47</volume>:<fpage>2704</fpage>–<lpage>12</lpage>.</mixed-citation></ref>
+<ref id="R24"><label>24</label><mixed-citation><person-group person-group-type="author"><name><surname>Junaid</surname><given-names>SA</given-names></name><name><surname>Umeh</surname><given-names>C</given-names></name><name><surname>Olabode</surname><given-names>AO</given-names></name><etal/></person-group>. <article-title>Incidence of rotavirus infection in children with gastroenteritis attending Jos university teaching hospital, Nigeria</article-title>. <source>Virol J</source> <year>2011</year>;<volume>8</volume>:<fpage>233</fpage>.</mixed-citation></ref>
+<ref id="R25"><label>25</label><mixed-citation><person-group person-group-type="author"><name><surname>Khoury</surname><given-names>H</given-names></name><name><surname>Ogilvie</surname><given-names>I</given-names></name><name><surname>El Khoury</surname><given-names>AC</given-names></name><etal/></person-group>. <article-title>Burden of rotavirus gastroenteritis in the Middle Eastern and North African pediatric population</article-title>. <source>BMC Infect Dis</source> <year>2011</year>;<volume>11</volume>:<fpage>9</fpage>.</mixed-citation></ref>
+<ref id="R26"><label>26</label><mixed-citation><person-group person-group-type="author"><name><surname>Abugalia</surname><given-names>M</given-names></name><name><surname>Cuevas</surname><given-names>L</given-names></name><name><surname>Kirby</surname><given-names>A</given-names></name><etal/></person-group>. <article-title>Clinical features and molecular epidemiology of rotavirus and norovirus infections in Libyan children</article-title>. <source>J Med Virol</source> <year>2011</year>;<volume>83</volume>:<fpage>1849</fpage>–<lpage>56</lpage>.</mixed-citation></ref>
+<ref id="R27"><label>27</label><mixed-citation><person-group person-group-type="author"><name><surname>Ochoa</surname><given-names>TJ</given-names></name><name><surname>Salazar-Lindo</surname><given-names>E</given-names></name><name><surname>Cleary</surname><given-names>TG</given-names></name></person-group>. <article-title>Management of children with infection-associated persistent diarrhea</article-title>. <source>Semin Pediatr Infect Dis</source> <year>2004</year>;<volume>15</volume>:<fpage>229</fpage>–<lpage>36</lpage>.</mixed-citation></ref>
+<ref id="R28"><label>28</label><mixed-citation><person-group person-group-type="author"><name><surname>Uysal</surname><given-names>G</given-names></name><name><surname>Sökmen</surname><given-names>A</given-names></name><name><surname>Vidinlisan</surname><given-names>S</given-names></name></person-group>. <article-title>Clinical risk factors for fatal diarrhea in hospitalized children</article-title>. <source>Indian J Pediatr</source> <year>2000</year>;<volume>67</volume>:<fpage>329</fpage>–<lpage>33</lpage>.</mixed-citation></ref>
+<ref id="R29"><label>29</label><mixed-citation><person-group person-group-type="author"><name><surname>Armah</surname><given-names>GE</given-names></name><name><surname>Steele</surname><given-names>AD</given-names></name><name><surname>Esona</surname><given-names>MD</given-names></name><etal/></person-group>. <article-title>Diversity of rotavirus strains circulating in West Africa from 1996 to 2000</article-title>. <source>J Infect Dis</source> <year>2010</year>;<volume>202</volume><issue>(Suppl)</issue>:<fpage>S64</fpage>–<lpage>71</lpage>.</mixed-citation></ref>
+<ref id="R30"><label>30</label><mixed-citation><person-group person-group-type="author"><name><surname>Todd</surname><given-names>S</given-names></name><name><surname>Page</surname><given-names>NA</given-names></name><name><surname>Steele</surname><given-names>DA</given-names></name><etal/></person-group>. <article-title>Rotavirus strain types circulating in Africa: review of studies published during 1997–2006</article-title>. <source>J Infect Dis</source> <year>2010</year>;<volume>202</volume>:<fpage>S34</fpage>–<lpage>42</lpage>.</mixed-citation></ref>
+<ref id="R31"><label>31</label><mixed-citation><collab>World Health Organization</collab>. <article-title>Rotavirus surveillance in the African Region. Updates of Rotavirus surveillance in the African Region</article-title>. <comment><ext-link xlink:href="http://www.afro.who.int/index.php?option=com_content&amp;view=article&amp;id=2486:rotavirus-surveillance-in-the-african-region&amp;catid=1980&amp;Itemid=2737" ext-link-type="uri">http://www.afro.who.int/index.php?option=com_content&amp;view=article&amp;id=2486:rotavirus-surveillance-in-the-african-region&amp;catid=1980&amp;Itemid=2737</ext-link> (accessed 26 Jul 2013</comment>).</mixed-citation></ref>
+<ref id="R32"><label>32</label><mixed-citation><person-group person-group-type="author"><name><surname>Dennehy</surname><given-names>PH</given-names></name></person-group>. <article-title>Transmission of rotavirus and other enteric pathogens in the home</article-title>. <source>Pediatr Infect Dis J</source> <year>2000</year>;<volume>19</volume>:<fpage>S103</fpage>–<lpage>5</lpage>.</mixed-citation></ref>
+<ref id="R33"><label>33</label><mixed-citation><person-group person-group-type="author"><name><surname>Parashar</surname><given-names>UD</given-names></name><name><surname>Gibson</surname><given-names>CJ</given-names></name><name><surname>Bresse</surname><given-names>JS</given-names></name><etal/></person-group>. <article-title>Rotavirus and severe childhood diarrhea</article-title>. <source>Emerg Infect Dis</source> <year>2006</year>;<volume>12</volume>:<fpage>304</fpage>–<lpage>6</lpage>.</mixed-citation></ref>
+<ref id="R34"><label>34</label><mixed-citation><person-group person-group-type="author"><name><surname>Paulke-Korienk</surname><given-names>M</given-names></name><name><surname>Rendi-Wagner</surname><given-names>P</given-names></name><name><surname>Kundi</surname><given-names>M</given-names></name><etal/></person-group>. <article-title>Universal mass vaccination against rotavirus gastroenteritis: impact on hospitalization rates in Austrian children</article-title>. <source>Pediatr Infect Dis J</source> <year>2010</year>;
+<volume>29</volume>:<fpage>319</fpage>–<lpage>23</lpage>.</mixed-citation></ref>
+<ref id="R35"><label>35</label><mixed-citation><person-group person-group-type="author"><name><surname>Richardson</surname><given-names>V</given-names></name><name><surname>Hernandez-Pichardo</surname><given-names>J</given-names></name><name><surname>Quintanar-Solares</surname><given-names>M</given-names></name><etal/></person-group>. <article-title>Reduction in childhood diarrhea deaths after rotavirus vaccine introduction in Mexico</article-title>. <source>N Engl J Med</source> <year>2010</year>;<volume>362</volume>:<fpage>299</fpage>–<lpage>305</lpage>.</mixed-citation></ref>
+<ref id="R36"><label>36</label><mixed-citation><person-group person-group-type="author"><name><surname>Yen</surname><given-names>C</given-names></name><name><surname>Tate</surname><given-names>JE</given-names></name><name><surname>Patel</surname><given-names>MM</given-names></name><etal/></person-group>. <article-title>Rotavirus vaccines: update on global impact and future priorities</article-title>. <source>Hum Vaccin</source> <year>2011</year>;<volume>7</volume>:<fpage>1282</fpage>–<lpage>90</lpage>.</mixed-citation></ref>
+<ref id="R37"><label>37</label><mixed-citation><collab>Centers for Disease Control</collab>. <article-title>Rotavirus surveillance—worldwide, 2001–2008</article-title>. <source>MMWR Morb Mortal Wkly Rep</source> <year>2008</year>;<volume>57</volume>:<fpage>1255</fpage>–<lpage>7</lpage>.</mixed-citation></ref>
+<ref id="R38"><label>38</label><mixed-citation><person-group person-group-type="author"><name><surname>Ruiz-Palacios</surname><given-names>GM</given-names></name><name><surname>Pérez-Schael</surname><given-names>I</given-names></name><name><surname>Velázquez</surname><given-names>FR</given-names></name><etal/></person-group>. <article-title>Safety and efficacy of an attenuated vaccine against severe rotavirus gastroenteritis</article-title>. <source>N Engl J Med</source> <year>2006</year>;<volume>354</volume>:<fpage>11</fpage>–<lpage>22</lpage>.</mixed-citation></ref>
+<ref id="R39"><label>39</label><mixed-citation><person-group person-group-type="author"><name><surname>Linhares</surname><given-names>AC</given-names></name><name><surname>Velázquez</surname><given-names>FR</given-names></name><name><surname>Pérez-Schael</surname><given-names>I</given-names></name><etal/></person-group>. <article-title>Efficacy and safety of an oral live attenuated human rotavirus vaccine against rotavirus gastroenteritis during the first 2 years of life in Latin American infants: randomized, double-blind controlled study</article-title>. <source>Lancet</source> <year>2008</year>;<volume>371</volume>:<fpage>1181</fpage>–<lpage>99</lpage>.</mixed-citation></ref>
+<ref id="R40"><label>40</label><mixed-citation><person-group person-group-type="author"><name><surname>Madhi</surname><given-names>SA</given-names></name><name><surname>Cunliffe</surname><given-names>NA</given-names></name><name><surname>Steele</surname><given-names>D</given-names></name><etal/></person-group>. <article-title>Effect of human rotavirus vaccine on severe diarrhea in African infants</article-title>. <source>N Engl J Med</source> <year>2010</year>;<volume>362</volume>:<fpage>289</fpage>–<lpage>98</lpage>.</mixed-citation></ref>
+<ref id="R41"><label>41</label><mixed-citation><person-group person-group-type="author"><name><surname>Armah</surname><given-names>GE</given-names></name><name><surname>Sow</surname><given-names>SO</given-names></name><name><surname>Breiman</surname><given-names>RF</given-names></name><etal/></person-group>. <article-title>Efficacy of pentavalent rotavirus vaccine against severe rotavirus gastroenteritis in infants in developing countries in sub-Saharan Africa: a randomized, double-blind, placebo-controlled trial</article-title>. <source>Lancet</source> <year>2010</year>;<volume>376</volume>:<fpage>606</fpage>–<lpage>14</lpage>.</mixed-citation></ref>
+<ref id="R42"><label>42</label><mixed-citation><article-title>Meeting of the Strategic Advisory Group of Experts on immunization, October 2009—conclusions and recommendations</article-title>. <source>Wkly Epidemiol Rec</source> <year>2009</year>;<volume>84</volume>:<fpage>517</fpage>–<lpage>32</lpage>.</mixed-citation></ref>
+<ref id="R43"><label>43</label><mixed-citation><collab>World Health Organization</collab>. <article-title>Generic protocols for (i) hospital-based surveillance to estimate the burden of rotavirus gastroenteritis in children and (ii) a community-based survey on utilization of health care services for gastroenteritis in children</article-title>. <comment><italic>Vaccine Assessment and Monitoring team of the Department of Vaccines and Biologicals</italic>. 2002, Vol. WHO/V&amp;B/02.15</comment>.</mixed-citation></ref></ref-list>
+</back></article>
