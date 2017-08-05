@@ -256,7 +256,7 @@ class crossrefXML(object):
             self.set_abstract_tag(parent, abstract, type="abstract")
 
     def set_digest(self, parent, poa_article):
-        if poa_article.digest:
+        if hasattr(poa_article, 'digest') and poa_article.digest:
             self.set_abstract_tag(parent, poa_article.digest, type="executive-summary")
 
     def set_abstract_tag(self, parent, abstract, type):
@@ -337,7 +337,8 @@ class crossrefXML(object):
 
         applies_to = self.crossref_config.get("access_indicators_applies_to")
 
-        if len(applies_to) > 0 and poa_article.license.href:
+        if (len(applies_to) > 0 and hasattr(poa_article, 'license')
+            and poa_article.license and poa_article.license.href):
 
             self.ai_program = SubElement(parent, 'ai:program')
             self.ai_program.set('name', 'AccessIndicators')
