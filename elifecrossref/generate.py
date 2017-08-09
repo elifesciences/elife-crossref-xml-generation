@@ -191,7 +191,11 @@ class crossrefXML(object):
         root_tag_name = 'titles'
         tag_name = 'title'
         root_xml_element = Element(root_tag_name)
-        self.add_inline_tag(root_xml_element, tag_name, poa_article.title)
+        title = poa_article.title
+        if self.crossref_config.get('face_markup') is True:
+            self.add_inline_tag(root_xml_element, tag_name, poa_article.title)
+        else:
+            self.add_clean_tag(root_xml_element, tag_name, poa_article.title)
         parent.append(root_xml_element)
 
     def set_doi_data(self, parent, poa_article):
@@ -276,16 +280,26 @@ class crossrefXML(object):
             attributes = ['abstract-type']
             attributes_text = ' abstract-type="executive-summary" '
 
-        tag_converted_abstract = abstract
-        tag_converted_abstract = eautils.xml_escape_ampersand(tag_converted_abstract)
-        tag_converted_abstract = eautils.escape_unmatched_angle_brackets(tag_converted_abstract)
-        tag_converted_abstract = eautils.replace_tags(tag_converted_abstract, 'p', 'jats:p')
-        tag_converted_abstract = eautils.replace_tags(tag_converted_abstract, 'italic', 'jats:italic')
-        tag_converted_abstract = eautils.replace_tags(tag_converted_abstract, 'bold', 'jats:bold')
-        tag_converted_abstract = eautils.replace_tags(tag_converted_abstract, 'underline', 'jats:underline')
-        tag_converted_abstract = eautils.replace_tags(tag_converted_abstract, 'sub', 'jats:sub')
-        tag_converted_abstract = eautils.replace_tags(tag_converted_abstract, 'sup', 'jats:sup')
-        tag_converted_abstract = eautils.replace_tags(tag_converted_abstract, 'sc', 'jats:sc')
+        # Convert the abstract to jats abstract tags, or strip all the inline tags
+        if self.crossref_config.get('jats_abstract') is True:
+            tag_converted_abstract = abstract
+            tag_converted_abstract = eautils.xml_escape_ampersand(tag_converted_abstract)
+            tag_converted_abstract = eautils.escape_unmatched_angle_brackets(tag_converted_abstract)
+            tag_converted_abstract = eautils.replace_tags(tag_converted_abstract, 'p', 'jats:p')
+            tag_converted_abstract = eautils.replace_tags(tag_converted_abstract, 'italic', 'jats:italic')
+            tag_converted_abstract = eautils.replace_tags(tag_converted_abstract, 'bold', 'jats:bold')
+            tag_converted_abstract = eautils.replace_tags(tag_converted_abstract, 'underline', 'jats:underline')
+            tag_converted_abstract = eautils.replace_tags(tag_converted_abstract, 'sub', 'jats:sub')
+            tag_converted_abstract = eautils.replace_tags(tag_converted_abstract, 'sup', 'jats:sup')
+            tag_converted_abstract = eautils.replace_tags(tag_converted_abstract, 'sc', 'jats:sc')
+        else:
+            # Strip inline tags, keep the p tags
+            tag_converted_abstract = abstract
+            tag_converted_abstract = eautils.xml_escape_ampersand(tag_converted_abstract)
+            tag_converted_abstract = eautils.escape_unmatched_angle_brackets(tag_converted_abstract)
+            tag_converted_abstract = self.clean_tags(tag_converted_abstract, do_not_clean=['<p>', '</p>'])
+            tag_converted_abstract = eautils.replace_tags(tag_converted_abstract, 'p', 'jats:p')
+            tag_converted_abstract = tag_converted_abstract
 
         tagged_string = '<' + tag_name + namespaces + attributes_text + '>'
         tagged_string += tag_converted_abstract
@@ -480,17 +494,29 @@ class crossrefXML(object):
         tag_name = 'subtitle'
         # Use <i> tags, not <italic> tags, <b> tags not <bold>
         if component.subtitle:
-            self.add_inline_tag(parent, tag_name, component.subtitle)
+            if self.crossref_config.get('face_markup') is True:
+                self.add_inline_tag(parent, tag_name, component.subtitle)
+            else:
+                self.add_clean_tag(parent, tag_name, component.subtitle)
+
+    def clean_tags(self, original_string, do_not_clean=[]):
+        "remove all unwanted inline tags from the string"
+        tag_converted_string = original_string
+        for tag in eautils.allowed_tags():
+            if tag not in do_not_clean:
+                tag_converted_string = tag_converted_string.replace(tag, '')
+        remove_tags = ['inline-formula', 'mml:*']
+        for tag in remove_tags:
+            if tag not in do_not_clean:
+                tag_converted_string = eautils.remove_tag(tag, tag_converted_string)
+        return tag_converted_string
 
     def add_clean_tag(self, parent, tag_name, original_string):
         "remove allowed tags and then add a tag the parent"
         namespaces = ' xmlns:mml="http://www.w3.org/1998/Math/MathML" '
-        tag_converted_string = original_string
-        for tag in eautils.allowed_tags():
-            tag_converted_string = tag_converted_string.replace(tag, '')
-        remove_tags = ['inline-formula', 'mml:*']
-        for tag in remove_tags:
-            tag_converted_string = eautils.remove_tag(tag, tag_converted_string)
+        tag_converted_string = self.clean_tags(original_string)
+        tag_converted_string = eautils.xml_escape_ampersand(tag_converted_string)
+        tag_converted_string = eautils.escape_unmatched_angle_brackets(tag_converted_string)
         tagged_string = '<' + tag_name + namespaces + '>' + tag_converted_string + '</' + tag_name + '>'
         reparsed = minidom.parseString(tagged_string.encode('utf-8'))
         root_xml_element = utils.append_minidom_xml_to_elementtree_xml(

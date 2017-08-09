@@ -11,6 +11,8 @@ def parse_raw_config(raw_config):
     int_values = []
     list_values = []
 
+    boolean_values.append("jats_abstract")
+    boolean_values.append("face_markup")
     boolean_values.append("crossmark")
     boolean_values.append("elocation_id")
     int_values.append("year_of_first_volume")
