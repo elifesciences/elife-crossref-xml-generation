@@ -13,23 +13,14 @@ class crossrefXML(object):
 
     def __init__(self, poa_articles, crossref_config, pub_date=None, add_comment=True):
         """
-        set the root node
-        get the article type from the object passed in to the class
-        set default values for items that are boilder plate for this XML
+        Initialise the configuration, set the root node
+        set default values for dates and batch id
+        then build out the XML using the article objects
         """
-        self.root = Element('doi_batch')
-
+        # Set the config
         self.crossref_config = crossref_config
-        # set the boiler plate values
-        self.root.set('version', "4.3.5")
-        self.root.set('xmlns', 'http://www.crossref.org/schema/4.3.5')
-        self.root.set('xmlns:xsi', 'http://www.w3.org/2001/XMLSchema-instance')
-        self.root.set('xmlns:fr', 'http://www.crossref.org/fundref.xsd')
-        self.root.set('xmlns:ai', 'http://www.crossref.org/AccessIndicators.xsd')
-        self.root.set('xsi:schemaLocation', ('http://www.crossref.org/schema/4.3.5 ' +
-                                             'http://www.crossref.org/schemas/crossref4.3.5.xsd'))
-        self.root.set('xmlns:mml', 'http://www.w3.org/1998/Math/MathML')
-        self.root.set('xmlns:jats', 'http://www.ncbi.nlm.nih.gov/JATS1')
+        # Create the root XML node
+        self.set_root(schema_version="4.3.5") 
 
         # Publication date
         if pub_date is None:
@@ -54,7 +45,22 @@ class crossrefXML(object):
                                    ' from version ' + self.last_commit)
             self.root.append(self.comment)
 
+        # Build out the Crossref XML
         self.build(self.root, poa_articles)
+
+    def set_root(self, schema_version):
+        self.root = Element('doi_batch')
+        # set the boiler plate values
+        if schema_version == "4.3.5":
+            self.root.set('version', "4.3.5")
+            self.root.set('xmlns', 'http://www.crossref.org/schema/4.3.5')
+            self.root.set('xmlns:xsi', 'http://www.w3.org/2001/XMLSchema-instance')
+            self.root.set('xmlns:fr', 'http://www.crossref.org/fundref.xsd')
+            self.root.set('xmlns:ai', 'http://www.crossref.org/AccessIndicators.xsd')
+            self.root.set('xsi:schemaLocation', ('http://www.crossref.org/schema/4.3.5 ' +
+                                                 'http://www.crossref.org/schemas/crossref4.3.5.xsd'))
+            self.root.set('xmlns:mml', 'http://www.w3.org/1998/Math/MathML')
+            self.root.set('xmlns:jats', 'http://www.ncbi.nlm.nih.gov/JATS1')
 
     def build(self, root, poa_articles):
         self.set_head(self.root)
