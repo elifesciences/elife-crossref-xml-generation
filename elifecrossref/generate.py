@@ -13,23 +13,14 @@ class crossrefXML(object):
 
     def __init__(self, poa_articles, crossref_config, pub_date=None, add_comment=True):
         """
-        set the root node
-        get the article type from the object passed in to the class
-        set default values for items that are boilder plate for this XML
+        Initialise the configuration, set the root node
+        set default values for dates and batch id
+        then build out the XML using the article objects
         """
-        self.root = Element('doi_batch')
-
+        # Set the config
         self.crossref_config = crossref_config
-        # set the boiler plate values
-        self.root.set('version', "4.3.5")
-        self.root.set('xmlns', 'http://www.crossref.org/schema/4.3.5')
-        self.root.set('xmlns:xsi', 'http://www.w3.org/2001/XMLSchema-instance')
-        self.root.set('xmlns:fr', 'http://www.crossref.org/fundref.xsd')
-        self.root.set('xmlns:ai', 'http://www.crossref.org/AccessIndicators.xsd')
-        self.root.set('xsi:schemaLocation', ('http://www.crossref.org/schema/4.3.5 ' +
-                                             'http://www.crossref.org/schemas/crossref4.3.5.xsd'))
-        self.root.set('xmlns:mml', 'http://www.w3.org/1998/Math/MathML')
-        self.root.set('xmlns:jats', 'http://www.ncbi.nlm.nih.gov/JATS1')
+        # Create the root XML node
+        self.set_root(schema_version="4.3.5") 
 
         # Publication date
         if pub_date is None:
@@ -54,7 +45,22 @@ class crossrefXML(object):
                                    ' from version ' + self.last_commit)
             self.root.append(self.comment)
 
+        # Build out the Crossref XML
         self.build(self.root, poa_articles)
+
+    def set_root(self, schema_version):
+        self.root = Element('doi_batch')
+        # set the boiler plate values
+        if schema_version == "4.3.5":
+            self.root.set('version', "4.3.5")
+            self.root.set('xmlns', 'http://www.crossref.org/schema/4.3.5')
+            self.root.set('xmlns:xsi', 'http://www.w3.org/2001/XMLSchema-instance')
+            self.root.set('xmlns:fr', 'http://www.crossref.org/fundref.xsd')
+            self.root.set('xmlns:ai', 'http://www.crossref.org/AccessIndicators.xsd')
+            self.root.set('xsi:schemaLocation', ('http://www.crossref.org/schema/4.3.5 ' +
+                                                 'http://www.crossref.org/schemas/crossref4.3.5.xsd'))
+            self.root.set('xmlns:mml', 'http://www.w3.org/1998/Math/MathML')
+            self.root.set('xmlns:jats', 'http://www.ncbi.nlm.nih.gov/JATS1')
 
     def build(self, root, poa_articles):
         self.set_head(self.root)
@@ -185,7 +191,11 @@ class crossrefXML(object):
         root_tag_name = 'titles'
         tag_name = 'title'
         root_xml_element = Element(root_tag_name)
-        self.add_inline_tag(root_xml_element, tag_name, poa_article.title)
+        title = poa_article.title
+        if self.crossref_config.get('face_markup') is True:
+            self.add_inline_tag(root_xml_element, tag_name, poa_article.title)
+        else:
+            self.add_clean_tag(root_xml_element, tag_name, poa_article.title)
         parent.append(root_xml_element)
 
     def set_doi_data(self, parent, poa_article):
@@ -270,16 +280,26 @@ class crossrefXML(object):
             attributes = ['abstract-type']
             attributes_text = ' abstract-type="executive-summary" '
 
-        tag_converted_abstract = abstract
-        tag_converted_abstract = eautils.xml_escape_ampersand(tag_converted_abstract)
-        tag_converted_abstract = eautils.escape_unmatched_angle_brackets(tag_converted_abstract)
-        tag_converted_abstract = eautils.replace_tags(tag_converted_abstract, 'p', 'jats:p')
-        tag_converted_abstract = eautils.replace_tags(tag_converted_abstract, 'italic', 'jats:italic')
-        tag_converted_abstract = eautils.replace_tags(tag_converted_abstract, 'bold', 'jats:bold')
-        tag_converted_abstract = eautils.replace_tags(tag_converted_abstract, 'underline', 'jats:underline')
-        tag_converted_abstract = eautils.replace_tags(tag_converted_abstract, 'sub', 'jats:sub')
-        tag_converted_abstract = eautils.replace_tags(tag_converted_abstract, 'sup', 'jats:sup')
-        tag_converted_abstract = eautils.replace_tags(tag_converted_abstract, 'sc', 'jats:sc')
+        # Convert the abstract to jats abstract tags, or strip all the inline tags
+        if self.crossref_config.get('jats_abstract') is True:
+            tag_converted_abstract = abstract
+            tag_converted_abstract = eautils.xml_escape_ampersand(tag_converted_abstract)
+            tag_converted_abstract = eautils.escape_unmatched_angle_brackets(tag_converted_abstract)
+            tag_converted_abstract = eautils.replace_tags(tag_converted_abstract, 'p', 'jats:p')
+            tag_converted_abstract = eautils.replace_tags(tag_converted_abstract, 'italic', 'jats:italic')
+            tag_converted_abstract = eautils.replace_tags(tag_converted_abstract, 'bold', 'jats:bold')
+            tag_converted_abstract = eautils.replace_tags(tag_converted_abstract, 'underline', 'jats:underline')
+            tag_converted_abstract = eautils.replace_tags(tag_converted_abstract, 'sub', 'jats:sub')
+            tag_converted_abstract = eautils.replace_tags(tag_converted_abstract, 'sup', 'jats:sup')
+            tag_converted_abstract = eautils.replace_tags(tag_converted_abstract, 'sc', 'jats:sc')
+        else:
+            # Strip inline tags, keep the p tags
+            tag_converted_abstract = abstract
+            tag_converted_abstract = eautils.xml_escape_ampersand(tag_converted_abstract)
+            tag_converted_abstract = eautils.escape_unmatched_angle_brackets(tag_converted_abstract)
+            tag_converted_abstract = self.clean_tags(tag_converted_abstract, do_not_clean=['<p>', '</p>'])
+            tag_converted_abstract = eautils.replace_tags(tag_converted_abstract, 'p', 'jats:p')
+            tag_converted_abstract = tag_converted_abstract
 
         tagged_string = '<' + tag_name + namespaces + attributes_text + '>'
         tagged_string += tag_converted_abstract
@@ -474,17 +494,29 @@ class crossrefXML(object):
         tag_name = 'subtitle'
         # Use <i> tags, not <italic> tags, <b> tags not <bold>
         if component.subtitle:
-            self.add_inline_tag(parent, tag_name, component.subtitle)
+            if self.crossref_config.get('face_markup') is True:
+                self.add_inline_tag(parent, tag_name, component.subtitle)
+            else:
+                self.add_clean_tag(parent, tag_name, component.subtitle)
+
+    def clean_tags(self, original_string, do_not_clean=[]):
+        "remove all unwanted inline tags from the string"
+        tag_converted_string = original_string
+        for tag in eautils.allowed_tags():
+            if tag not in do_not_clean:
+                tag_converted_string = tag_converted_string.replace(tag, '')
+        remove_tags = ['inline-formula', 'mml:*']
+        for tag in remove_tags:
+            if tag not in do_not_clean:
+                tag_converted_string = eautils.remove_tag(tag, tag_converted_string)
+        return tag_converted_string
 
     def add_clean_tag(self, parent, tag_name, original_string):
         "remove allowed tags and then add a tag the parent"
         namespaces = ' xmlns:mml="http://www.w3.org/1998/Math/MathML" '
-        tag_converted_string = original_string
-        for tag in eautils.allowed_tags():
-            tag_converted_string = tag_converted_string.replace(tag, '')
-        remove_tags = ['inline-formula', 'mml:*']
-        for tag in remove_tags:
-            tag_converted_string = eautils.remove_tag(tag, tag_converted_string)
+        tag_converted_string = self.clean_tags(original_string)
+        tag_converted_string = eautils.xml_escape_ampersand(tag_converted_string)
+        tag_converted_string = eautils.escape_unmatched_angle_brackets(tag_converted_string)
         tagged_string = '<' + tag_name + namespaces + '>' + tag_converted_string + '</' + tag_name + '>'
         reparsed = minidom.parseString(tagged_string.encode('utf-8'))
         root_xml_element = utils.append_minidom_xml_to_elementtree_xml(
