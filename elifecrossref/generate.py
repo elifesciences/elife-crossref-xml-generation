@@ -1,4 +1,5 @@
 from elifearticle import utils as eautils
+from elifetools import utils as etoolsutils
 import utils
 from xml.etree import ElementTree
 from xml.etree.ElementTree import Element, SubElement, Comment
@@ -286,8 +287,9 @@ class crossrefXML(object):
         # Convert the abstract to jats abstract tags, or strip all the inline tags
         if self.crossref_config.get('jats_abstract') is True:
             tag_converted_abstract = abstract
-            tag_converted_abstract = eautils.xml_escape_ampersand(tag_converted_abstract)
-            tag_converted_abstract = eautils.escape_unmatched_angle_brackets(tag_converted_abstract)
+            tag_converted_abstract = etoolsutils.escape_ampersand(tag_converted_abstract)
+            tag_converted_abstract = etoolsutils.escape_unmatched_angle_brackets(
+                tag_converted_abstract, utils.allowed_tags())
             tag_converted_abstract = eautils.replace_tags(tag_converted_abstract, 'p', 'jats:p')
             tag_converted_abstract = eautils.replace_tags(tag_converted_abstract, 'italic', 'jats:italic')
             tag_converted_abstract = eautils.replace_tags(tag_converted_abstract, 'bold', 'jats:bold')
@@ -298,8 +300,9 @@ class crossrefXML(object):
         else:
             # Strip inline tags, keep the p tags
             tag_converted_abstract = abstract
-            tag_converted_abstract = eautils.xml_escape_ampersand(tag_converted_abstract)
-            tag_converted_abstract = eautils.escape_unmatched_angle_brackets(tag_converted_abstract)
+            tag_converted_abstract = etoolsutils.escape_ampersand(tag_converted_abstract)
+            tag_converted_abstract = etoolsutils.escape_unmatched_angle_brackets(
+                tag_converted_abstract, utils.allowed_tags())
             tag_converted_abstract = self.clean_tags(tag_converted_abstract, do_not_clean=['<p>', '</p>'])
             tag_converted_abstract = eautils.replace_tags(tag_converted_abstract, 'p', 'jats:p')
             tag_converted_abstract = tag_converted_abstract
@@ -505,7 +508,7 @@ class crossrefXML(object):
     def clean_tags(self, original_string, do_not_clean=[]):
         "remove all unwanted inline tags from the string"
         tag_converted_string = original_string
-        for tag in eautils.allowed_tags():
+        for tag in utils.allowed_tags():
             if tag not in do_not_clean:
                 tag_converted_string = tag_converted_string.replace(tag, '')
         remove_tags = ['inline-formula', 'mml:*']
@@ -518,8 +521,9 @@ class crossrefXML(object):
         "remove allowed tags and then add a tag the parent"
         namespaces = ' xmlns:mml="http://www.w3.org/1998/Math/MathML" '
         tag_converted_string = self.clean_tags(original_string)
-        tag_converted_string = eautils.xml_escape_ampersand(tag_converted_string)
-        tag_converted_string = eautils.escape_unmatched_angle_brackets(tag_converted_string)
+        tag_converted_string = etoolsutils.escape_ampersand(tag_converted_string)
+        tag_converted_string = etoolsutils.escape_unmatched_angle_brackets(
+                tag_converted_string, utils.allowed_tags())
         tagged_string = '<' + tag_name + namespaces + '>' + tag_converted_string + '</' + tag_name + '>'
         reparsed = minidom.parseString(tagged_string.encode('utf-8'))
         root_xml_element = utils.append_minidom_xml_to_elementtree_xml(
@@ -536,8 +540,9 @@ class crossrefXML(object):
         )
 
     def convert_inline_tags(self, original_string):
-        tag_converted_string = eautils.xml_escape_ampersand(original_string)
-        tag_converted_string = eautils.escape_unmatched_angle_brackets(tag_converted_string)
+        tag_converted_string = etoolsutils.escape_ampersand(original_string)
+        tag_converted_string = etoolsutils.escape_unmatched_angle_brackets(
+                tag_converted_string, utils.allowed_tags())
         tag_converted_string = eautils.replace_tags(tag_converted_string, 'italic', 'i')
         tag_converted_string = eautils.replace_tags(tag_converted_string, 'bold', 'b')
         tag_converted_string = eautils.replace_tags(tag_converted_string, 'underline', 'u')
