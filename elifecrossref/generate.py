@@ -210,6 +210,9 @@ class crossrefXML(object):
         self.resource.text = resource
 
     def set_contributors(self, parent, poa_article, contrib_types=None):
+        # First check for any contributors
+        if len(poa_article.contributors) < 1:
+            return
         # If contrib_type is None, all contributors will be added regardless of their type
         self.contributors = SubElement(parent, "contributors")
 

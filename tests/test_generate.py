@@ -4,6 +4,7 @@ import os
 import re
 from elifecrossref import generate
 from elifearticle import parse
+from elifearticle.article import Article
 from elifecrossref.conf import config, parse_raw_config
 
 TEST_BASE_PATH = os.path.dirname(os.path.abspath(__file__)) + os.sep
@@ -103,6 +104,22 @@ class TestGenerate(unittest.TestCase):
         with open(generate.TMP_DIR + crossref_xml_file, 'rb') as fp:
             generated_output = fp.read()
         self.assertEqual(generated_output, expected_output)
+
+
+    def test_generate_no_contributors(self):
+        """
+        Test when an article has no contributors
+        """
+        "build an article object and component, generate Crossref XML"
+        doi = "10.7554/eLife.00666"
+        title = "Test article"
+        article = Article(doi, title)
+        # generate the crossrefXML
+        cXML = generate.build_crossref_xml([article])
+        crossref_xml_string = cXML.output_XML()
+        self.assertIsNotNone(crossref_xml_string)
+        # A quick test just look for a string value to test
+        self.assertTrue('<contributors' not in crossref_xml_string)
 
 
 if __name__ == '__main__':
