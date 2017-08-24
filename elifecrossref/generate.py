@@ -1,4 +1,5 @@
 from elifearticle import utils as eautils
+from elifearticle.article import Article, Component
 from elifetools import utils as etoolsutils
 import utils
 from xml.etree import ElementTree
@@ -219,8 +220,15 @@ class crossrefXML(object):
 
         self.resource = SubElement(self.doi_data, 'resource')
 
-        resource = self.crossref_config.get("doi_pattern").format(doi=poa_article.doi)
+        resource = self.generate_resource_url(poa_article, poa_article)
         self.resource.text = resource
+
+    def generate_resource_url(self, obj, poa_article):
+        # Generate a resource value for doi_data based on the object provided
+        if isinstance (obj, Article):
+            return self.crossref_config.get("doi_pattern").format(
+                doi=obj.doi,
+                manuscript=obj.manuscript)
 
     def set_contributors(self, parent, poa_article, contrib_types=None):
         # First check for any contributors
