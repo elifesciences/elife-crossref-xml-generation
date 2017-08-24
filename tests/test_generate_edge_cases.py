@@ -54,5 +54,56 @@ class TestGenerateComponentList(unittest.TestCase):
         raw_config['face_markup'] = face_markup
 
 
+class TestGenerateContributors(unittest.TestCase):
+
+    def setUp(self):
+        pass
+
+    def test_generate_no_contributors(self):
+        """
+        Test when an article has no contributors
+        """
+        "build an article object and component, generate Crossref XML"
+        doi = "10.7554/eLife.00666"
+        title = "Test article"
+        article = Article(doi, title)
+        # generate the crossrefXML
+        cXML = generate.build_crossref_xml([article])
+        crossref_xml_string = cXML.output_XML()
+        self.assertIsNotNone(crossref_xml_string)
+        # A quick test just look for a string value to test
+        self.assertTrue('<contributors' not in crossref_xml_string)
+
+
+class TestGenerateCrossrefSchemaVersion(unittest.TestCase):
+
+    def setUp(self):
+        pass
+
+    def test_generate_crossref_schema_version(self):
+        """
+        Test non-default crossref schema version
+        """
+        "build an article object and component, generate Crossref XML"
+        doi = "10.7554/eLife.00666"
+        title = "Test article"
+        article = Article(doi, title)
+        # load a config and override the value
+        raw_config = config['elife']
+        crossref_schema_version = raw_config.get('crossref_schema_version')
+        raw_config['crossref_schema_version'] = '4.3.5'
+        crossref_config = parse_raw_config(raw_config)
+        # generate the crossrefXML
+        cXML = generate.build_crossref_xml([article])
+        crossref_xml_string = cXML.output_XML()
+        self.assertIsNotNone(crossref_xml_string)
+        # A quick test just look for a string value to test
+        self.assertTrue('xmlns="http://www.crossref.org/schema/4.3.5"' in crossref_xml_string)
+        # now set the config back to normal
+        raw_config['crossref_schema_version'] = crossref_schema_version
+
+
+
+
 if __name__ == '__main__':
     unittest.main()
