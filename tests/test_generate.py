@@ -106,21 +106,6 @@ class TestGenerate(unittest.TestCase):
         self.assertEqual(generated_output, expected_output)
 
 
-    def test_generate_no_contributors(self):
-        """
-        Test when an article has no contributors
-        """
-        "build an article object and component, generate Crossref XML"
-        doi = "10.7554/eLife.00666"
-        title = "Test article"
-        article = Article(doi, title)
-        # generate the crossrefXML
-        cXML = generate.build_crossref_xml([article])
-        crossref_xml_string = cXML.output_XML()
-        self.assertIsNotNone(crossref_xml_string)
-        # A quick test just look for a string value to test
-        self.assertTrue('<contributors' not in crossref_xml_string)
-
 
 if __name__ == '__main__':
     unittest.main()

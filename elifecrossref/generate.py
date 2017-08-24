@@ -21,7 +21,7 @@ class crossrefXML(object):
         # Set the config
         self.crossref_config = crossref_config
         # Create the root XML node
-        self.set_root(schema_version="4.3.5") 
+        self.set_root(self.crossref_config.get('crossref_schema_version')) 
 
         # Publication date
         if pub_date is None:
@@ -60,6 +60,18 @@ class crossrefXML(object):
             self.root.set('xmlns:ai', 'http://www.crossref.org/AccessIndicators.xsd')
             self.root.set('xsi:schemaLocation', ('http://www.crossref.org/schema/4.3.5 ' +
                                                  'http://www.crossref.org/schemas/crossref4.3.5.xsd'))
+            self.root.set('xmlns:mml', 'http://www.w3.org/1998/Math/MathML')
+            self.root.set('xmlns:jats', 'http://www.ncbi.nlm.nih.gov/JATS1')
+        elif schema_version == "4.3.7":
+            self.root.set('version', "4.3.7")
+            self.root.set('xmlns', 'http://www.crossref.org/schema/4.3.7')
+            self.root.set('xmlns:xsi', 'http://www.w3.org/2001/XMLSchema-instance')
+            self.root.set('xmlns:fr', 'http://www.crossref.org/fundref.xsd')
+            self.root.set('xmlns:ai', 'http://www.crossref.org/AccessIndicators.xsd')
+            self.root.set('xmlns:ct', 'http://www.crossref.org/clinicaltrials.xsd')
+            self.root.set('xmlns:rel', 'http://www.crossref.org/relations.xsd')
+            self.root.set('xsi:schemaLocation', ('http://www.crossref.org/schema/4.3.7 ' +
+                                                 'http://www.crossref.org/schemas/crossref4.3.7.xsd'))
             self.root.set('xmlns:mml', 'http://www.w3.org/1998/Math/MathML')
             self.root.set('xmlns:jats', 'http://www.ncbi.nlm.nih.gov/JATS1')
 
