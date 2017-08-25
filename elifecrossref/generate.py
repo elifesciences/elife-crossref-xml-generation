@@ -229,6 +229,36 @@ class crossrefXML(object):
             return self.crossref_config.get("doi_pattern").format(
                 doi=obj.doi,
                 manuscript=obj.manuscript)
+        elif isinstance (obj, Component):
+            component_id = obj.id
+            prefix1 = ''
+            if self.crossref_config.get('elife_style_component_doi') is True:
+                component_id, prefix1 = self.elife_style_component_attributes(obj)
+            return self.crossref_config.get("component_doi_pattern").format(
+                doi=poa_article.doi,
+                manuscript=poa_article.manuscript,
+                prefix1=prefix1,
+                id=component_id)
+
+    def elife_style_component_attributes(self, obj):
+        # Some special additional logic for elife style
+        component_id = obj.id
+        if obj.type and obj.type == 'abstract':
+            if obj.title and 'digest' in obj.title.lower():
+                component_id = 'digest'
+            else:
+                component_id = 'abstract'
+        elif obj.type and obj.type == 'sub-article':
+            if obj.asset and obj.asset == 'dec':
+                component_id = 'decision-letter'
+            elif obj.asset and  obj.asset == 'resp':
+                component_id = 'author-response'
+        # Set the URL prefix for some types
+        prefix1 = ''
+        if (obj.asset and obj.asset in ['figsupp', 'data']
+            or obj.type and obj.type in ['supplementary-material']):
+            prefix1 = '/figures'
+        return component_id, prefix1
 
     def set_contributors(self, parent, poa_article, contrib_types=None):
         # First check for any contributors
@@ -496,7 +526,7 @@ class crossrefXML(object):
                 self.doi_tag.text = comp.doi
                 if comp.doi_resource:
                     self.resource = SubElement(self.doi_data, 'resource')
-                    self.resource.text = comp.doi_resource
+                    self.resource.text = self.generate_resource_url(comp, poa_article)
 
     def set_component_permissions(self, parent, permissions):
         # Specific license to the component
