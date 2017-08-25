@@ -3,7 +3,6 @@ import time
 import os
 import re
 from elifecrossref import generate
-from elifearticle import parse
 from elifearticle.article import Article
 from elifecrossref.conf import config, parse_raw_config
 
@@ -39,7 +38,7 @@ class TestGenerate(unittest.TestCase):
     def test_parse(self):
         for (article_xml_file, crossref_xml_file, config_section, pub_date) in self.passes:
             file_path = TEST_DATA_PATH + article_xml_file
-            articles = parse.build_articles_from_article_xmls([file_path])
+            articles = generate.build_articles_for_crossref([file_path])
             crossref_xml = generate.crossref_xml(articles, config_section, pub_date, False)
             model_crossref_xml = self.read_file_content(TEST_DATA_PATH + crossref_xml_file)
             self.assertEqual(crossref_xml, model_crossref_xml)
@@ -51,7 +50,7 @@ class TestGenerate(unittest.TestCase):
         """
         article_xml_file = 'elife_poa_e02725.xml'
         file_path = TEST_DATA_PATH + article_xml_file
-        articles = parse.build_articles_from_article_xmls([file_path])
+        articles = generate.build_articles_for_crossref([file_path])
         raw_config = config['elife']
         crossref_config = parse_raw_config(raw_config)
         crossref_object = generate.crossrefXML(articles, crossref_config, None, True)
@@ -68,7 +67,7 @@ class TestGenerate(unittest.TestCase):
         """
         article_xml_file = 'elife-16988-v1.xml'
         file_path = TEST_DATA_PATH + article_xml_file
-        articles = parse.build_articles_from_article_xmls([file_path])
+        articles = generate.build_articles_for_crossref([file_path])
         raw_config = config['elife']
         # override config values - need to save the originals first then set them back
         #  so that other tests will pass
@@ -95,7 +94,7 @@ class TestGenerate(unittest.TestCase):
         pub_date = self.default_pub_date
         file_path = TEST_DATA_PATH + article_xml_file
         # build the article object
-        articles = parse.build_articles_from_article_xmls([file_path])
+        articles = generate.build_articles_for_crossref([file_path])
         # generate and write to disk
         generate.crossref_xml_to_disk(articles, config_section, pub_date, False)
         # check the output matches

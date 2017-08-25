@@ -1,5 +1,6 @@
 from elifearticle import utils as eautils
 from elifearticle.article import Article, Component
+from elifearticle import parse
 from elifetools import utils as etoolsutils
 import utils
 from xml.etree import ElementTree
@@ -681,3 +682,14 @@ def crossref_xml_to_disk(poa_articles, config_section="elife", pub_date=None, ad
     filename = TMP_DIR + os.sep + cXML.batch_id + '.xml'
     with open(filename, "wb") as fp:
         fp.write(XML_string)
+
+def build_articles_for_crossref(article_xmls, detail='brief', build_parts=[]):
+    "specify some detail and build_parts specific to generating crossref output"
+    detail = 'brief'
+    build_parts = [
+        'abstract', 'basic', 'components', 'contributors', 'funding',
+        'license', 'pub_dates', 'references', 'volume']
+    return build_articles(article_xmls, detail, build_parts)
+
+def build_articles(article_xmls, detail='full', build_parts=[]):
+    return parse.build_articles_from_article_xmls(article_xmls, detail, build_parts)
