@@ -521,12 +521,14 @@ class crossrefXML(object):
                 self.set_component_permissions(self.component, comp.permissions)
 
             if comp.doi:
-                self.doi_data = SubElement(self.component, 'doi_data')
-                self.doi_tag = SubElement(self.doi_data, 'doi')
-                self.doi_tag.text = comp.doi
-                if comp.doi_resource:
+                # Try generating a resource value then continue
+                resource_url = self.generate_resource_url(comp, poa_article)
+                if resource_url and resource_url != '':
+                    self.doi_data = SubElement(self.component, 'doi_data')
+                    self.doi_tag = SubElement(self.doi_data, 'doi')
+                    self.doi_tag.text = comp.doi
                     self.resource = SubElement(self.doi_data, 'resource')
-                    self.resource.text = self.generate_resource_url(comp, poa_article)
+                    self.resource.text = resource_url
 
     def set_component_permissions(self, parent, permissions):
         # Specific license to the component
