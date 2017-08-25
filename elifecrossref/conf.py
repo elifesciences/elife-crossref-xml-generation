@@ -15,6 +15,7 @@ def parse_raw_config(raw_config):
     boolean_values.append("face_markup")
     boolean_values.append("crossmark")
     boolean_values.append("elocation_id")
+    boolean_values.append("elife_style_component_doi")
     int_values.append("year_of_first_volume")
     list_values.append("contrib_types")
     list_values.append("archive_locations")
