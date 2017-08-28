@@ -170,7 +170,7 @@ class TestGenerateCrossrefUnstructuredCitation(unittest.TestCase):
         pass
 
     def test_set_unstructured_citation_no_face_markup(self):
-        "no publisher name concatenation"
+        "unstructured citation example with no face markup"
         article_title = 'PhD thesis: Submicroscopic <italic>Plasmodium falciparum</italic> gametocytaemia and the contribution to malaria transmission'
         expected = '<citation><unstructured_citation>PhD thesis: Submicroscopic Plasmodium falciparum gametocytaemia and the contribution to malaria transmission.</unstructured_citation></citation>'
         crossref_config = {}
@@ -184,7 +184,7 @@ class TestGenerateCrossrefUnstructuredCitation(unittest.TestCase):
         self.assertEqual(rough_string, expected)
 
     def test_set_unstructured_citation_face_markup(self):
-        "no publisher name concatenation"
+        "unstructured citation example which does include face markup"
         article_title = 'PhD thesis: Submicroscopic <italic>Plasmodium falciparum</italic> gametocytaemia and the contribution to malaria transmission'
         expected = '<citation><unstructured_citation>PhD thesis: Submicroscopic <i>Plasmodium falciparum</i> gametocytaemia and the contribution to malaria transmission.</unstructured_citation></citation>'
         # load a config and override the value
