@@ -504,6 +504,48 @@ class crossrefXML(object):
                     self.first_page = SubElement(self.citation, 'first_page')
                     self.first_page.text = ref.elocation_id
 
+                # unstructured-citation
+                if self.do_unstructured_citation(ref) is True:
+                    self.set_unstructured_citation(self.citation, ref)
+
+    def do_unstructured_citation(self, ref):
+        "decide if a citation should have an unstructured_citation tag added"
+        if ref.publication_type and ref.publication_type in ['patent']:
+            return True
+        return False
+
+    def set_unstructured_citation(self, parent, ref):
+        # tag_content
+        tag_content = ''
+        author_line = self.citation_author_line(ref)
+        if ref.publication_type and ref.publication_type in ['patent']:
+            tag_content = '. '.join([item for item in [
+                author_line, ref.year, ref.article_title, ref.source,
+                ref.patent, ref.uri] if item is not None])
+            tag_content += '.'
+        # add the tag if there is tag_content
+        if tag_content != '':
+            self.unstructured_citation = SubElement(parent, 'unstructured_citation')
+            self.unstructured_citation.text = tag_content
+
+    def citation_author_line(self, ref):
+        author_line = None
+        author_names = []
+        # extract all authors regardless of their group-type
+        for author in ref.authors:
+            author_name = ''
+            if author.get('surname'):
+                author_name = author.get('surname')
+                if author.get('given-names'):
+                    author_name += ' ' + author.get('given-names')
+            elif author.get('collab'):
+                author_name = author.get('collab')
+            if author_name != '':
+                author_names.append(author_name)
+        if len(author_names) > 0:
+            author_line = ', '.join(author_names)
+        return author_line
+
     def set_component_list(self, parent, poa_article):
         """
         Set the component_list from the article object component_list objects
