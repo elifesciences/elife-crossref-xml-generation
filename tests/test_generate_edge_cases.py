@@ -4,7 +4,9 @@ import os
 import re
 from elifecrossref import generate
 from elifecrossref.conf import config, parse_raw_config
-from elifearticle.article import Article, Component
+from elifearticle.article import Article, Component, Citation
+from xml.etree import ElementTree
+from xml.etree.ElementTree import Element
 
 class TestGenerateComponentList(unittest.TestCase):
 
@@ -120,6 +122,87 @@ class TestGenerateCrossrefSchemaVersion(unittest.TestCase):
         # now set the config back to normal
         raw_config['crossref_schema_version'] = original_crossref_schema_version
 
+
+class TestGenerateCrossrefCitationPublisher(unittest.TestCase):
+
+    def setUp(self):
+        self.publisher_loc = "Nijmegen, The Netherlands"
+        self.publisher_name = "Radboud University Nijmegen Medical Centre"
+
+    def test_generate_citation_publisher_none(self):
+        "no publisher name concatenation"
+        citation = Citation()
+        cXML = generate.crossrefXML([], {})
+        self.assertIsNone(cXML.citation_publisher(citation))
+
+    def test_generate_citation_publisher_loc_only(self):
+        "no publisher name concatenation"
+        citation = Citation()
+        citation.publisher_loc = self.publisher_loc
+        cXML = generate.crossrefXML([], {})
+        self.assertEqual(
+            cXML.citation_publisher(citation),
+            "Nijmegen, The Netherlands")
+
+    def test_generate_citation_publisher_name_only(self):
+        "no publisher name concatenation"
+        citation = Citation()
+        citation.publisher_name = self.publisher_name
+        cXML = generate.crossrefXML([], {})
+        self.assertEqual(
+            cXML.citation_publisher(citation),
+            "Radboud University Nijmegen Medical Centre")
+
+    def test_generate_citation_publisher_all(self):
+        "no publisher name concatenation"
+        citation = Citation()
+        citation.publisher_loc = self.publisher_loc
+        citation.publisher_name = self.publisher_name
+        cXML = generate.crossrefXML([], {})
+        self.assertEqual(
+            cXML.citation_publisher(citation),
+            "Nijmegen, The Netherlands: Radboud University Nijmegen Medical Centre")
+
+
+class TestGenerateCrossrefUnstructuredCitation(unittest.TestCase):
+
+    def setUp(self):
+        pass
+
+    def test_set_unstructured_citation_no_face_markup(self):
+        "unstructured citation example with no face markup"
+        article_title = 'PhD thesis: Submicroscopic <italic>Plasmodium falciparum</italic> gametocytaemia and the contribution to malaria transmission'
+        expected = '<citation><unstructured_citation>PhD thesis: Submicroscopic Plasmodium falciparum gametocytaemia and the contribution to malaria transmission.</unstructured_citation></citation>'
+        crossref_config = {}
+        citation = Citation()
+        citation.article_title = article_title
+        citation.publication_type = 'patent'
+        cXML = generate.crossrefXML([], crossref_config)
+        parent = Element('citation')
+        citation_element = cXML.set_unstructured_citation(parent, citation)
+        rough_string = ElementTree.tostring(citation_element)
+        self.assertEqual(rough_string, expected)
+
+    def test_set_unstructured_citation_face_markup(self):
+        "unstructured citation example which does include face markup"
+        article_title = 'PhD thesis: Submicroscopic <italic>Plasmodium falciparum</italic> gametocytaemia and the contribution to malaria transmission'
+        expected = '<citation><unstructured_citation>PhD thesis: Submicroscopic <i>Plasmodium falciparum</i> gametocytaemia and the contribution to malaria transmission.</unstructured_citation></citation>'
+        # load a config and override the value
+        raw_config = config['elife']
+        original_face_markup = raw_config.get('face_markup')
+        raw_config['face_markup'] = 'true'
+        crossref_config = parse_raw_config(raw_config)
+        # continue
+        citation = Citation()
+        citation.article_title = article_title
+        citation.publication_type = 'patent'
+        cXML = generate.crossrefXML([], crossref_config)
+        parent = Element('citation')
+        citation_element = cXML.set_unstructured_citation(parent, citation)
+        rough_string = ElementTree.tostring(citation_element)
+        self.assertEqual(rough_string, expected)
+        # now set the config back to normal
+        raw_config['face_markup'] = original_face_markup
 
 
 
