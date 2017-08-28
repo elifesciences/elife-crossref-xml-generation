@@ -510,7 +510,7 @@ class crossrefXML(object):
 
     def do_unstructured_citation(self, ref):
         "decide if a citation should have an unstructured_citation tag added"
-        if ref.publication_type and ref.publication_type in ['patent']:
+        if ref.publication_type and ref.publication_type in ['patent', 'thesis']:
             return True
         return False
 
@@ -523,10 +523,19 @@ class crossrefXML(object):
                 author_line, ref.year, ref.article_title, ref.source,
                 ref.patent, ref.uri] if item is not None])
             tag_content += '.'
+        if ref.publication_type and ref.publication_type in ['thesis']:
+            tag_content = '. '.join([item for item in [
+                author_line, ref.year, ref.article_title,
+                self.citation_publisher(ref)] if item is not None])
+            tag_content += '.'
         # add the tag if there is tag_content
         if tag_content != '':
-            self.unstructured_citation = SubElement(parent, 'unstructured_citation')
-            self.unstructured_citation.text = tag_content
+            # handle inline tagging
+            if self.crossref_config.get('face_markup') is True:
+                self.add_inline_tag(parent, 'unstructured_citation', tag_content)
+            else:
+                self.add_clean_tag(parent, 'unstructured_citation', tag_content)
+        return parent
 
     def citation_author_line(self, ref):
         author_line = None
@@ -545,6 +554,13 @@ class crossrefXML(object):
         if len(author_names) > 0:
             author_line = ', '.join(author_names)
         return author_line
+
+    def citation_publisher(self, ref):
+        if ref.publisher_loc or ref.publisher_name:
+            return ': '.join([item for item in [
+                ref.publisher_loc, ref.publisher_name] if item is not None])
+        else:
+            return None
 
     def set_component_list(self, parent, poa_article):
         """
