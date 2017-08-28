@@ -510,7 +510,7 @@ class crossrefXML(object):
 
     def do_unstructured_citation(self, ref):
         "decide if a citation should have an unstructured_citation tag added"
-        if ref.publication_type and ref.publication_type in ['patent', 'thesis']:
+        if ref.publication_type and ref.publication_type in ['patent', 'thesis', 'confproc']:
             return True
         return False
 
@@ -518,15 +518,11 @@ class crossrefXML(object):
         # tag_content
         tag_content = ''
         author_line = self.citation_author_line(ref)
-        if ref.publication_type and ref.publication_type in ['patent']:
-            tag_content = '. '.join([item for item in [
-                author_line, ref.year, ref.article_title, ref.source,
-                ref.patent, ref.uri] if item is not None])
-            tag_content += '.'
-        if ref.publication_type and ref.publication_type in ['thesis']:
-            tag_content = '. '.join([item for item in [
-                author_line, ref.year, ref.article_title,
-                self.citation_publisher(ref)] if item is not None])
+        
+        if ref.publication_type and ref.publication_type in ['patent', 'thesis', 'confproc']:
+            tag_content = '. '.join([item.rstrip('.') for item in [
+                author_line, ref.year, ref.article_title, self.citation_publisher(ref),
+                ref.source, ref.patent, ref.conf_name, ref.uri] if item is not None])
             tag_content += '.'
         # add the tag if there is tag_content
         if tag_content != '':
