@@ -499,6 +499,10 @@ class crossrefXML(object):
                     self.doi = SubElement(self.citation, 'doi')
                     self.doi.text = ref.doi
 
+                if ref.isbn:
+                    self.isbn = SubElement(self.citation, 'isbn')
+                    self.isbn.text = ref.isbn
+
                 if ref.elocation_id:
                     # Until an alternate tag is available, elocation-id goes into the first_page tag
                     self.first_page = SubElement(self.citation, 'first_page')
