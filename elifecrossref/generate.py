@@ -488,9 +488,13 @@ class crossrefXML(object):
                     self.first_page = SubElement(self.citation, 'first_page')
                     self.first_page.text = ref.fpage
 
-                if ref.year:
+                if ref.year or ref.year_numeric:
                     self.cyear = SubElement(self.citation, 'cYear')
-                    self.cyear.text = ref.year
+                    # Prefer the numeric year value if available
+                    if ref.year_numeric:
+                        self.cyear.text = str(ref.year_numeric)
+                    else:
+                        self.cyear.text = ref.year
 
                 if ref.article_title or ref.data_title:
                     if ref.article_title:
