@@ -492,8 +492,11 @@ class crossrefXML(object):
                     self.cyear = SubElement(self.citation, 'cYear')
                     self.cyear.text = ref.year
 
-                if ref.article_title:
-                    self.add_clean_tag(self.citation, 'article_title', ref.article_title)
+                if ref.article_title or ref.data_title:
+                    if ref.article_title:
+                        self.add_clean_tag(self.citation, 'article_title', ref.article_title)
+                    elif ref.data_title:
+                        self.add_clean_tag(self.citation, 'article_title', ref.data_title)
 
                 if ref.doi:
                     self.doi = SubElement(self.citation, 'doi')
