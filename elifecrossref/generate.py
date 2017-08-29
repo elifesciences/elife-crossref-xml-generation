@@ -172,6 +172,10 @@ class crossrefXML(object):
     def set_journal_article(self, parent, poa_article):
         self.journal_article = SubElement(parent, 'journal_article')
         self.journal_article.set("publication_type", "full_text")
+        if (self.crossref_config.get("reference_distribution_opts")
+            and self.crossref_config.get("reference_distribution_opts") != ''):
+            self.journal_article.set("reference_distribution_opts",
+                                     self.crossref_config.get("reference_distribution_opts"))
 
         # Set the title with italic tag support
         self.set_titles(self.journal_article, poa_article)
