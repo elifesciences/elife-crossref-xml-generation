@@ -469,8 +469,7 @@ class crossrefXML(object):
                         self.volume_title = SubElement(self.citation, 'volume_title')
                         self.volume_title.text = ref.source
 
-                # Only consider authors with group-type author
-                authors = [c for c in ref.authors if c.get('group-type') == 'author']
+                authors = self.filter_citation_authors(ref)
                 if len(authors) > 0:
                     # Only set the first author surname
                     first_author = authors[0]
@@ -522,6 +521,15 @@ class crossrefXML(object):
                 # unstructured-citation
                 if self.do_unstructured_citation(ref) is True:
                     self.set_unstructured_citation(self.citation, ref)
+
+    def filter_citation_authors(self, ref):
+        "logic for which authors to select for citation records"
+        # First consider authors with group-type author
+        authors = [c for c in ref.authors if c.get('group-type') == 'author']
+        if len(authors) <= 0:
+            # Take editors if there are no authors
+            authors = [c for c in ref.authors if c.get('group-type') == 'editor']
+        return authors
 
     def do_unstructured_citation(self, ref):
         "decide if a citation should have an unstructured_citation tag added"
