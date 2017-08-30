@@ -536,6 +536,8 @@ class crossrefXML(object):
         if ref.publication_type and ref.publication_type in [
             'confproc', 'patent', 'software', 'thesis', 'web']:
             return True
+        if ref.publication_type and ref.publication_type in ['preprint'] and ref.doi is None:
+            return True
         return False
 
     def set_unstructured_citation(self, parent, ref):
@@ -544,7 +546,7 @@ class crossrefXML(object):
         author_line = self.citation_author_line(ref)
         
         if ref.publication_type and ref.publication_type in [
-            'confproc', 'patent', 'software', 'thesis', 'web']:
+            'confproc', 'patent', 'preprint', 'software', 'thesis', 'web']:
             tag_content = '. '.join([item.rstrip('.') for item in [
                 author_line, ref.year, ref.article_title, ref.data_title,
                 self.citation_publisher(ref), ref.source, ref.version,
