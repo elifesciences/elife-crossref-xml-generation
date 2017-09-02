@@ -245,7 +245,8 @@ class crossrefXML(object):
         if isinstance (obj, Article):
             return self.crossref_config.get("doi_pattern").format(
                 doi=obj.doi,
-                manuscript=obj.manuscript)
+                manuscript=obj.manuscript,
+                volume=obj.volume)
         elif isinstance (obj, Component):
             component_id = obj.id
             prefix1 = ''
@@ -254,6 +255,7 @@ class crossrefXML(object):
             return self.crossref_config.get("component_doi_pattern").format(
                 doi=poa_article.doi,
                 manuscript=poa_article.manuscript,
+                volume=poa_article.volume,
                 prefix1=prefix1,
                 id=component_id)
 
