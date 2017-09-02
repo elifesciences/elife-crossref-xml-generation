@@ -205,6 +205,23 @@ class TestGenerateCrossrefUnstructuredCitation(unittest.TestCase):
         raw_config['face_markup'] = original_face_markup
 
 
+class TestGenerateCrossrefCitationId(unittest.TestCase):
+
+    def setUp(self):
+        pass
+
+    def test_ref_list_citation_with_no_id(self):
+        "for test coverage an article with a ref_list with a citation that has no id attribute"
+        doi = "10.7554/eLife.00666"
+        title = "Test article"
+        article = Article(doi, title)
+        citation = Citation()
+        citation.article_title = "An article title"
+        article.ref_list = [citation]
+        cXML = generate.build_crossref_xml([article])
+        crossref_xml_string = cXML.output_XML()
+        self.assertTrue('<citation key="1">' in crossref_xml_string)
+
 
 if __name__ == '__main__':
     unittest.main()
