@@ -459,7 +459,11 @@ class crossrefXML(object):
                 # Increment
                 ref_index = ref_index + 1
                 self.citation = SubElement(self.citation_list, 'citation')
-                self.citation.set("key", str(ref_index))
+
+                if ref.id:
+                    self.citation.set("key", ref.id)
+                else:
+                    self.citation.set("key", str(ref_index))
 
                 if ref.source:
                     if ref.publication_type == "journal":
