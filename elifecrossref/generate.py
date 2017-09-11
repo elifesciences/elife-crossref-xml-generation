@@ -206,6 +206,8 @@ class crossrefXML(object):
 
         self.set_access_indicators(self.journal_article, poa_article)
 
+        self.set_datasets(self.journal_article, poa_article)
+
         self.set_archive_locations(self.journal_article, poa_article,
                                    self.crossref_config.get("archive_locations"))
 
@@ -602,6 +604,80 @@ class crossrefXML(object):
             uri_content += ' [Accessed ' + ref.date_in_citation + ']'
         return uri_content if uri_content != '' else None
 
+    def set_relations_program(self, parent):
+        "set the relations program parent tag only once"
+        if not(hasattr(self, "relations_program")):
+            self.relations_program = SubElement(parent, 'rel:program')
+
+    def set_datasets(self, parent, poa_article):
+        """
+        Add related_item tags for each dataset
+        """
+        if poa_article.datasets and len(poa_article.datasets) > 0:
+            for dataset in poa_article.datasets:
+                # Check for at least one identifier before adding the related_item
+                if not(dataset.accession_id or dataset.doi or dataset.uri):
+                    continue
+                # first set the parent tag if it does not yet exist
+                self.set_relations_program(parent)
+                # add related_item tag
+                self.related_item = SubElement(self.relations_program, 'rel:related_item')
+                related_item_type = "inter_work_relation"
+                description = None
+                relationship_type = self.dataset_relationship_type(dataset)
+                # set the description
+                if dataset.title:
+                    description = dataset.title
+                if description:
+                    self.set_related_item_description(self.related_item, description)
+                # Now add one inter_work_relation tag in order ot priority
+                if dataset.doi:
+                    identifier_type = "doi"
+                    related_item_text = dataset.doi
+                    self.set_related_item_work_relation(
+                        self.related_item, related_item_type, relationship_type,
+                        identifier_type, related_item_text)
+                elif dataset.accession_id:
+                    identifier_type = "accession"
+                    related_item_text = dataset.accession_id
+                    self.set_related_item_work_relation(
+                        self.related_item, related_item_type, relationship_type,
+                        identifier_type, related_item_text)
+                elif dataset.uri:
+                    identifier_type = "uri"
+                    related_item_text = dataset.uri
+                    self.set_related_item_work_relation(
+                        self.related_item, related_item_type, relationship_type,
+                        identifier_type, related_item_text)
+
+    def dataset_relationship_type(self, dataset):
+        "relationship_type for the related_item depending on the dataset_type"
+        if dataset.dataset_type:
+            if dataset.dataset_type == "prev_published_datasets":
+                return "references"
+            elif dataset.dataset_type == "datasets":
+                return "isSupplementedBy"
+            else:
+                # default
+                return "isSupplementedBy"
+        else:
+            # default if not specified
+            return "isSupplementedBy"
+
+    def set_related_item_description(self, parent, description):
+        if description:
+            self.description = SubElement(parent, 'rel:description')
+            self.description.text = description
+
+    def set_related_item_work_relation(self, parent, related_item_type, relationship_type,
+                                       identifier_type, related_item_text):
+        # only supporting inter_work_relation for now
+        if related_item_type == "inter_work_relation":
+            self.work_relation = SubElement(parent, 'rel:inter_work_relation')
+        self.work_relation.set("relationship-type", relationship_type)
+        self.work_relation.set("identifier-type", identifier_type)
+        self.work_relation.text = related_item_text
+
     def set_component_list(self, parent, poa_article):
         """
         Set the component_list from the article object component_list objects
@@ -797,7 +873,7 @@ def build_articles_for_crossref(article_xmls, detail='brief', build_parts=[]):
     "specify some detail and build_parts specific to generating crossref output"
     detail = 'brief'
     build_parts = [
-        'abstract', 'basic', 'components', 'contributors', 'funding',
+        'abstract', 'basic', 'components', 'contributors', 'funding', 'datasets',
         'license', 'pub_dates', 'references', 'volume']
     return build_articles(article_xmls, detail, build_parts)
 
