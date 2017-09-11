@@ -624,14 +624,7 @@ class crossrefXML(object):
                 self.related_item = SubElement(self.relations_program, 'rel:related_item')
                 related_item_type = "inter_work_relation"
                 description = None
-                if dataset.dataset_type:
-                    if dataset.dataset_type == "prev_published_datasets":
-                        relationship_type = "references"
-                    elif dataset.dataset_type == "datasets":
-                        relationship_type = "isSupplementedBy"
-                    else:
-                        # default
-                        relationship_type = "isSupplementedBy"
+                relationship_type = self.dataset_relationship_type(dataset)
                 # set the description
                 if dataset.title:
                     description = dataset.title
@@ -656,6 +649,20 @@ class crossrefXML(object):
                     self.set_related_item_work_relation(
                         self.related_item, related_item_type, relationship_type,
                         identifier_type, related_item_text)
+
+    def dataset_relationship_type(self, dataset):
+        "relationship_type for the related_item depending on the dataset_type"
+        if dataset.dataset_type:
+            if dataset.dataset_type == "prev_published_datasets":
+                return "references"
+            elif dataset.dataset_type == "datasets":
+                return "isSupplementedBy"
+            else:
+                # default
+                return "isSupplementedBy"
+        else:
+            # default if not specified
+            return "isSupplementedBy"
 
     def set_related_item_description(self, parent, description):
         if description:

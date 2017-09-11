@@ -4,7 +4,7 @@ import os
 import re
 from elifecrossref import generate
 from elifecrossref.conf import config, parse_raw_config
-from elifearticle.article import Article, Component, Citation
+from elifearticle.article import Article, Component, Citation, Dataset
 from xml.etree import ElementTree
 from xml.etree.ElementTree import Element
 
@@ -62,9 +62,7 @@ class TestGenerateContributors(unittest.TestCase):
         pass
 
     def test_generate_no_contributors(self):
-        """
-        Test when an article has no contributors
-        """
+        "Test when an article has no contributors"
         "build an article object and component, generate Crossref XML"
         doi = "10.7554/eLife.00666"
         title = "Test article"
@@ -101,9 +99,7 @@ class TestGenerateCrossrefSchemaVersion(unittest.TestCase):
         )
 
     def generate_crossref_schema_version(self, crossref_schema_version, expected_snippet):
-        """
-        Test non-default crossref schema version
-        """
+        "Test non-default crossref schema version"
         "build an article object and component, generate Crossref XML"
         doi = "10.7554/eLife.00666"
         title = "Test article"
@@ -221,6 +217,68 @@ class TestGenerateCrossrefCitationId(unittest.TestCase):
         cXML = generate.build_crossref_xml([article])
         crossref_xml_string = cXML.output_XML()
         self.assertTrue('<citation key="1">' in crossref_xml_string)
+
+
+class TestGenerateCrossrefDatasets(unittest.TestCase):
+
+    def setUp(self):
+        pass
+
+    def test_set_datasets(self):
+        "a basic non-XML example for set_datasets"
+        doi = "10.7554/eLife.00666"
+        title = "Test article"
+        article = Article(doi, title)
+        # dataset_1 example with a uri
+        dataset_1 = Dataset()
+        dataset_1.dataset_type = "datasets"
+        dataset_1.uri = "https://github.com/elifesciences/XML-mapping/blob/master/elife-00666.xml"
+        dataset_1.title = "Kitchen sink"
+        # dataset_2 example with accession_id
+        dataset_2 = Dataset()
+        dataset_2.dataset_type = "prev_published_datasets"
+        dataset_2.accession_id = "EGAS00001000968"
+        # dataset_3 example with doi
+        dataset_3 = Dataset()
+        dataset_3.dataset_type = "prev_published_datasets"
+        dataset_3.doi = "10.5061/dryad.cv323"
+        # dataset_4 example with no dataset_type will be treated as a generated dataset by default
+        dataset_4 = Dataset()
+        dataset_4.uri = "http://cghub.ucsc.edu"
+        # dataset_5 example with an unsupported dataset_type
+        dataset_5 = Dataset()
+        dataset_5.dataset_type = "foo"
+        dataset_5.uri = "https://elifesciences.org"
+        # dataset_6 example with no identifier, not get added to the XML output, for test coverage
+        dataset_6 = Dataset()
+        dataset_6.dataset_type = "prev_published_datasets"
+        # add the datasets to the article object
+        article.add_dataset(dataset_1)
+        article.add_dataset(dataset_2)
+        article.add_dataset(dataset_3)
+        article.add_dataset(dataset_4)
+        article.add_dataset(dataset_5)
+        article.add_dataset(dataset_6)
+        # expected values
+        expected_xml_snippet_1 = '<rel:program><rel:related_item><rel:description>Kitchen sink</rel:description><rel:inter_work_relation identifier-type="uri" relationship-type="isSupplementedBy">https://github.com/elifesciences/XML-mapping/blob/master/elife-00666.xml</rel:inter_work_relation></rel:related_item>'
+        expected_xml_snippet_2 = '<rel:related_item><rel:inter_work_relation identifier-type="accession" relationship-type="references">EGAS00001000968</rel:inter_work_relation></rel:related_item>'
+        expected_xml_snippet_3 = '<rel:related_item><rel:inter_work_relation identifier-type="doi" relationship-type="references">10.5061/dryad.cv323</rel:inter_work_relation></rel:related_item>'
+        expected_xml_snippet_4 = '<rel:related_item><rel:inter_work_relation identifier-type="uri" relationship-type="isSupplementedBy">http://cghub.ucsc.edu</rel:inter_work_relation></rel:related_item>'
+        expected_xml_snippet_5 = '<rel:related_item><rel:inter_work_relation identifier-type="uri" relationship-type="isSupplementedBy">https://elifesciences.org</rel:inter_work_relation></rel:related_item>'
+        # generate output
+        cXML = generate.build_crossref_xml([article])
+        crossref_xml_string = cXML.output_XML()
+        self.assertIsNotNone(crossref_xml_string)
+        # Test for expected strings in the XML output
+        self.assertTrue(expected_xml_snippet_1 in crossref_xml_string)
+        self.assertTrue(expected_xml_snippet_2 in crossref_xml_string)
+        self.assertTrue(expected_xml_snippet_3 in crossref_xml_string)
+        self.assertTrue(expected_xml_snippet_4 in crossref_xml_string)
+        self.assertTrue(expected_xml_snippet_5 in crossref_xml_string)
+
+
+
+
 
 
 if __name__ == '__main__':
