@@ -416,10 +416,10 @@ class crossrefXML(object):
                     self.fr_funder_name.set("name", "funder_name")
                     self.fr_funder_name.text = award.get_funder_name()
 
-                if award.get_funder_name() and award.get_funder_identifier():
+                if award.get_funder_name() and award.institution_id:
                     self.fr_funder_identifier = SubElement(self.fr_funder_name, 'fr:assertion')
                     self.fr_funder_identifier.set("name", "funder_identifier")
-                    self.fr_funder_identifier.text = award.get_funder_identifier()
+                    self.fr_funder_identifier.text = award.institution_id
 
                 if len(award.award_ids) > 0:
                     for award_id in award.award_ids:
