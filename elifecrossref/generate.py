@@ -206,6 +206,10 @@ class crossrefXML(object):
 
         self.set_access_indicators(self.journal_article, poa_article)
 
+        # this is the spot to add the relations program tag if it is required
+        if self.do_relations_program(poa_article) is True:
+            self.set_relations_program(self.journal_article)
+
         self.set_datasets(self.journal_article, poa_article)
 
         self.set_archive_locations(self.journal_article, poa_article,
@@ -462,6 +466,11 @@ class crossrefXML(object):
             for ref in poa_article.ref_list:
                 # Increment
                 ref_index = ref_index + 1
+                # decide whether to create a related_item for the citation
+                if self.do_citation_related_item(ref):
+                    self.set_citation_related_item(ref)
+                    continue
+                # continue with creating a citation tag
                 self.citation = SubElement(self.citation_list, 'citation')
 
                 if ref.id:
@@ -604,10 +613,68 @@ class crossrefXML(object):
             uri_content += ' [Accessed ' + ref.date_in_citation + ']'
         return uri_content if uri_content != '' else None
 
+    def do_citation_related_item(self, ref):
+        "decide whether to create a related_item for a citation"
+        if ref.publication_type and ref.publication_type == "data":
+            if ref.doi or ref.accession or ref.pmid or ref.uri:
+                return True
+            else:
+                return False
+        else:
+            return False
+
+    def set_citation_related_item(self, ref):
+        "depends on the relations_program tag existing already"
+        self.related_item = SubElement(self.relations_program, 'rel:related_item')
+        if ref.data_title:
+            self.set_related_item_description(self.related_item, ref.data_title)
+        identifier_type = None
+        related_item_text = None
+        related_item_type = "inter_work_relation"
+        relationship_type = "references"
+        if ref.doi:
+            identifier_type = "doi"
+            related_item_text = ref.doi
+        elif ref.accession:
+            identifier_type = "accession"
+            related_item_text = ref.accession
+        elif ref.pmid:
+            identifier_type = "pmid"
+            related_item_text = ref.pmid
+        elif ref.uri:
+            identifier_type = "uri"
+            related_item_text = ref.uri
+        if identifier_type and related_item_text:
+            self.set_related_item_work_relation(
+                self.related_item, related_item_type, relationship_type,
+                identifier_type, related_item_text)
+
+    def do_relations_program(self, poa_article):
+        "call at a specific moment during generation to set this tag if required"
+        do_relations = None
+        if poa_article.datasets:
+            for dataset in poa_article.datasets:
+                if self.do_dataset_related_item(dataset) is True:
+                    do_relations = True
+                    break
+        if do_relations is not True and poa_article.ref_list:
+            for ref in poa_article.ref_list:
+                if self.do_citation_related_item(ref) is True:
+                    do_relations = True
+                    break
+        return do_relations
+
     def set_relations_program(self, parent):
         "set the relations program parent tag only once"
         if not(hasattr(self, "relations_program")):
             self.relations_program = SubElement(parent, 'rel:program')
+
+    def do_dataset_related_item(self, dataset):
+        "decide whether to create a related_item for a dataset"
+        if dataset.accession_id or dataset.doi or dataset.uri:
+            return True
+        else:
+            return False
 
     def set_datasets(self, parent, poa_article):
         """
@@ -616,7 +683,7 @@ class crossrefXML(object):
         if poa_article.datasets and len(poa_article.datasets) > 0:
             for dataset in poa_article.datasets:
                 # Check for at least one identifier before adding the related_item
-                if not(dataset.accession_id or dataset.doi or dataset.uri):
+                if not(self.do_dataset_related_item(dataset)):
                     continue
                 # first set the parent tag if it does not yet exist
                 self.set_relations_program(parent)
