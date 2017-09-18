@@ -277,8 +277,27 @@ class TestGenerateCrossrefDatasets(unittest.TestCase):
         self.assertTrue(expected_xml_snippet_5 in crossref_xml_string)
 
 
+class TestGenerateCrossrefDataCitation(unittest.TestCase):
 
+    def setUp(self):
+        pass
 
+    def test_ref_list_data_citation_with_pmid(self):
+        "for test coverage an article with a ref_list with a data citation that has a pmid attribute"
+        doi = "10.7554/eLife.00666"
+        title = "Test article"
+        article = Article(doi, title)
+        citation = Citation()
+        citation.article_title = "An article title"
+        citation.publication_type = "data"
+        citation.pmid = "pmid"
+        article.ref_list = [citation]
+        expected_contains = '<rel:program><rel:related_item><rel:inter_work_relation identifier-type="pmid" relationship-type="references">pmid</rel:inter_work_relation></rel:related_item></rel:program>'
+        # generate
+        cXML = generate.build_crossref_xml([article])
+        crossref_xml_string = cXML.output_XML()
+        # test assertion
+        self.assertTrue(expected_contains in crossref_xml_string)
 
 
 if __name__ == '__main__':
