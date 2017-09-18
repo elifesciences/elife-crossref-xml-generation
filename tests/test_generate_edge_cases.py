@@ -288,11 +288,11 @@ class TestGenerateCrossrefDataCitation(unittest.TestCase):
         title = "Test article"
         article = Article(doi, title)
         citation = Citation()
-        citation.article_title = "An article title"
+        citation.data_title = "An data title"
         citation.publication_type = "data"
         citation.pmid = "pmid"
         article.ref_list = [citation]
-        expected_contains = '<rel:program><rel:related_item><rel:inter_work_relation identifier-type="pmid" relationship-type="references">pmid</rel:inter_work_relation></rel:related_item></rel:program>'
+        expected_contains = '<rel:program><rel:related_item><rel:description>An data title</rel:description><rel:inter_work_relation identifier-type="pmid" relationship-type="references">pmid</rel:inter_work_relation></rel:related_item></rel:program>'
         # generate
         cXML = generate.build_crossref_xml([article])
         crossref_xml_string = cXML.output_XML()
