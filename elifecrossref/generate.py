@@ -469,7 +469,7 @@ class crossrefXML(object):
                 # decide whether to create a related_item for the citation
                 if self.do_citation_related_item(ref):
                     self.set_citation_related_item(ref)
-                    continue
+
                 # continue with creating a citation tag
                 self.citation = SubElement(self.citation_list, 'citation')
 
