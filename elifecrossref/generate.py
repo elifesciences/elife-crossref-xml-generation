@@ -246,13 +246,63 @@ class crossrefXML(object):
         resource = self.generate_resource_url(poa_article, poa_article)
         self.resource.text = resource
 
-    def generate_resource_url(self, obj, poa_article):
+        self.set_collection(self.doi_data, poa_article, "text-mining")
+
+
+    def set_collection(self, parent, poa_article, collection_property):
+        if self.do_set_collection(poa_article, collection_property):
+            if collection_property == "text-mining":
+                self.collection = SubElement(parent, 'collection')
+                self.collection.set("property",  collection_property)
+                if self.do_set_collection_text_mining_pdf(poa_article) is True:
+                    self.item = SubElement(self.collection, 'item')
+                    self.resource = SubElement(self.item, 'resource')
+                    self.resource.set("mime_type", "application/pdf")
+                    self.resource.text = self.generate_resource_url(poa_article, poa_article, "text_mining_pdf_pattern")
+                if self.do_set_collection_text_mining_xml(poa_article) is True:
+                    self.item = SubElement(self.collection, 'item')
+                    self.resource = SubElement(self.item, 'resource')
+                    self.resource.set("mime_type", "application/xml")
+                    self.resource.text = self.generate_resource_url(poa_article, poa_article, "text_mining_xml_pattern")
+
+
+    def do_set_collection_text_mining_xml(self, poa_article):
+        "decide whether to text mining xml resource"
+        if (self.crossref_config.get("text_mining_xml_pattern")
+            and self.crossref_config.get("text_mining_pdf_pattern") != ''):
+            return True
+        return False
+
+
+    def do_set_collection_text_mining_pdf(self, poa_article):
+        "decide whether to text mining pdf resource"
+        if (self.crossref_config.get("text_mining_pdf_pattern")
+            and self.crossref_config.get("text_mining_pdf_pattern") != ''
+            and poa_article.get_self_uri("pdf") is not None):
+            return True
+        return False
+
+
+    def do_set_collection(self, poa_article, collection_property):
+        "decide whether to set collection tags"
+        if collection_property == "text-mining":
+            if (self.do_set_collection_text_mining_xml(poa_article) is True
+                or self.do_set_collection_text_mining_pdf(poa_article) is True):
+                return True
+        return False
+
+
+    def generate_resource_url(self, obj, poa_article, pattern_type=None):
         # Generate a resource value for doi_data based on the object provided
         if isinstance (obj, Article):
-            return self.crossref_config.get("doi_pattern").format(
+            if not pattern_type:
+                pattern_type = "doi_pattern"
+            version = self.elife_style_article_attributes(obj)
+            return self.crossref_config.get(pattern_type).format(
                 doi=obj.doi,
                 manuscript=obj.manuscript,
-                volume=obj.volume)
+                volume=obj.volume,
+                version=version)
         elif isinstance (obj, Component):
             component_id = obj.id
             prefix1 = ''
@@ -264,6 +314,13 @@ class crossrefXML(object):
                 volume=poa_article.volume,
                 prefix1=prefix1,
                 id=component_id)
+
+    def elife_style_article_attributes(self, obj):
+        # Special logic for elife article style
+        version = ''
+        if obj.version:
+            version = '-v' + str(obj.version)
+        return version
 
     def elife_style_component_attributes(self, obj):
         # Some special additional logic for elife style
