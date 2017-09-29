@@ -388,6 +388,10 @@ class crossrefXML(object):
                 self.surname = SubElement(self.person_name, "surname")
                 self.surname.text = contributor.surname
 
+                if contributor.suffix:
+                    self.suffix = SubElement(self.person_name, "suffix")
+                    self.suffix.text = contributor.suffix
+
                 if contributor.orcid:
                     self.orcid = SubElement(self.person_name, "ORCID")
                     self.orcid.set("authenticated", "true")
