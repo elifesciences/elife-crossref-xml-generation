@@ -388,6 +388,16 @@ class crossrefXML(object):
                 self.surname = SubElement(self.person_name, "surname")
                 self.surname.text = contributor.surname
 
+                if contributor.suffix:
+                    self.suffix = SubElement(self.person_name, "suffix")
+                    self.suffix.text = contributor.suffix
+
+                if contributor.affiliations:
+                    for aff in contributor.affiliations:
+                        self.affiliation = SubElement(self.person_name, "affiliation")
+                        if aff.text:
+                            self.affiliation.text = aff.text
+
                 if contributor.orcid:
                     self.orcid = SubElement(self.person_name, "ORCID")
                     self.orcid.set("authenticated", "true")
@@ -993,9 +1003,8 @@ def crossref_xml_to_disk(poa_articles, config_section="elife", pub_date=None, ad
     with open(filename, "wb") as fp:
         fp.write(XML_string)
 
-def build_articles_for_crossref(article_xmls, detail='brief', build_parts=[]):
+def build_articles_for_crossref(article_xmls, detail='full', build_parts=[]):
     "specify some detail and build_parts specific to generating crossref output"
-    detail = 'brief'
     build_parts = [
         'abstract', 'basic', 'components', 'contributors', 'funding', 'datasets',
         'license', 'pub_dates', 'references', 'volume']
