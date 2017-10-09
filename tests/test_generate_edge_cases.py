@@ -47,7 +47,7 @@ class TestGenerateComponentList(unittest.TestCase):
         raw_config['face_markup'] = 'true'
         crossref_config = parse_raw_config(raw_config)
         # generate the crossrefXML
-        cXML = generate.crossrefXML([article], crossref_config, None, True)
+        cXML = generate.CrossrefXML([article], crossref_config, None, True)
         crossref_xml_string = cXML.output_XML()
         self.assertIsNotNone(crossref_xml_string)
         # A quick test just look for the expected string to test for tags and escape characters
@@ -128,14 +128,14 @@ class TestGenerateCrossrefCitationPublisher(unittest.TestCase):
     def test_generate_citation_publisher_none(self):
         "no publisher name concatenation"
         citation = Citation()
-        cXML = generate.crossrefXML([], {})
+        cXML = generate.CrossrefXML([], {})
         self.assertIsNone(cXML.citation_publisher(citation))
 
     def test_generate_citation_publisher_loc_only(self):
         "no publisher name concatenation"
         citation = Citation()
         citation.publisher_loc = self.publisher_loc
-        cXML = generate.crossrefXML([], {})
+        cXML = generate.CrossrefXML([], {})
         self.assertEqual(
             cXML.citation_publisher(citation),
             "Nijmegen, The Netherlands")
@@ -144,7 +144,7 @@ class TestGenerateCrossrefCitationPublisher(unittest.TestCase):
         "no publisher name concatenation"
         citation = Citation()
         citation.publisher_name = self.publisher_name
-        cXML = generate.crossrefXML([], {})
+        cXML = generate.CrossrefXML([], {})
         self.assertEqual(
             cXML.citation_publisher(citation),
             "Radboud University Nijmegen Medical Centre")
@@ -154,7 +154,7 @@ class TestGenerateCrossrefCitationPublisher(unittest.TestCase):
         citation = Citation()
         citation.publisher_loc = self.publisher_loc
         citation.publisher_name = self.publisher_name
-        cXML = generate.crossrefXML([], {})
+        cXML = generate.CrossrefXML([], {})
         self.assertEqual(
             cXML.citation_publisher(citation),
             "Nijmegen, The Netherlands: Radboud University Nijmegen Medical Centre")
@@ -173,7 +173,7 @@ class TestGenerateCrossrefUnstructuredCitation(unittest.TestCase):
         citation = Citation()
         citation.article_title = article_title
         citation.publication_type = 'patent'
-        cXML = generate.crossrefXML([], crossref_config)
+        cXML = generate.CrossrefXML([], crossref_config)
         parent = Element('citation')
         citation_element = cXML.set_unstructured_citation(parent, citation)
         rough_string = ElementTree.tostring(citation_element)
@@ -192,7 +192,7 @@ class TestGenerateCrossrefUnstructuredCitation(unittest.TestCase):
         citation = Citation()
         citation.article_title = article_title
         citation.publication_type = 'patent'
-        cXML = generate.crossrefXML([], crossref_config)
+        cXML = generate.CrossrefXML([], crossref_config)
         parent = Element('citation')
         citation_element = cXML.set_unstructured_citation(parent, citation)
         rough_string = ElementTree.tostring(citation_element)

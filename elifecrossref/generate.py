@@ -13,7 +13,7 @@ from conf import config, parse_raw_config
 
 TMP_DIR = 'tmp'
 
-class crossrefXML(object):
+class CrossrefXML(object):
 
     def __init__(self, poa_articles, crossref_config, pub_date=None, add_comment=True):
         """
@@ -986,7 +986,7 @@ def build_crossref_xml(poa_articles, config_section="elife", pub_date=None, add_
     """
     raw_config = config[config_section]
     crossref_config = parse_raw_config(raw_config)
-    return crossrefXML(poa_articles, crossref_config, pub_date, add_comment)
+    return CrossrefXML(poa_articles, crossref_config, pub_date, add_comment)
 
 
 def crossref_xml(poa_articles, config_section="elife", pub_date=None, add_comment=True):
