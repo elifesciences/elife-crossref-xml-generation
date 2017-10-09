@@ -1,15 +1,15 @@
+import time
+import os
+from xml.etree import ElementTree
+from xml.etree.ElementTree import Element, SubElement, Comment
+from xml.dom import minidom
+import utils
+from conf import config, parse_raw_config
 from elifearticle import utils as eautils
 from elifearticle.article import Article, Component
 from elifearticle import parse
 from elifetools import utils as etoolsutils
 from elifetools import xmlio
-import utils
-from xml.etree import ElementTree
-from xml.etree.ElementTree import Element, SubElement, Comment
-from xml.dom import minidom
-import time
-import os
-from conf import config, parse_raw_config
 
 TMP_DIR = 'tmp'
 
