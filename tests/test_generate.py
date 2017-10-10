@@ -58,7 +58,7 @@ class TestGenerate(unittest.TestCase):
         self.assertIsNotNone(crossref_object.generated)
         self.assertIsNotNone(crossref_object.last_commit)
         self.assertIsNotNone(crossref_object.comment)
-        self.assertIsNotNone(crossref_object.output_XML(pretty=True, indent='\t'))
+        self.assertIsNotNone(crossref_object.output_xml(pretty=True, indent='\t'))
 
 
     def test_generate_jats_abstract_face_markup(self):
@@ -79,8 +79,8 @@ class TestGenerate(unittest.TestCase):
         # create the Crossref XML
         crossref_object = generate.CrossrefXML(articles, crossref_config, None, True)
         # Check for some tags we expect to find in the output
-        self.assertTrue('<jats:italic>' in crossref_object.output_XML())
-        self.assertTrue('</b>' in crossref_object.output_XML())
+        self.assertTrue('<jats:italic>' in crossref_object.output_xml())
+        self.assertTrue('</b>' in crossref_object.output_xml())
         # now set the config back to normal
         raw_config['jats_abstract'] = jats_abstract
         raw_config['face_markup'] = face_markup

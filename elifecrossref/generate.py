@@ -981,7 +981,7 @@ class CrossrefXML(object):
 
         return mime_types.get(jats_mime_type.lower())
 
-    def output_XML(self, pretty=False, indent=""):
+    def output_xml(self, pretty=False, indent=""):
         encoding = 'utf-8'
 
         rough_string = ElementTree.tostring(self.root, encoding)
@@ -1005,18 +1005,18 @@ def build_crossref_xml(poa_articles, config_section="elife", pub_date=None, add_
 
 def crossref_xml(poa_articles, config_section="elife", pub_date=None, add_comment=True):
     "build crossref xml and return output as a string"
-    cXML = build_crossref_xml(poa_articles, config_section, pub_date, add_comment)
-    return cXML.output_XML()
+    c_xml = build_crossref_xml(poa_articles, config_section, pub_date, add_comment)
+    return c_xml.output_xml()
 
 
 def crossref_xml_to_disk(poa_articles, config_section="elife", pub_date=None, add_comment=True):
     "build crossref xml and write the output to disk"
-    cXML = build_crossref_xml(poa_articles, config_section, pub_date, add_comment)
-    XML_string = cXML.output_XML()
+    c_xml = build_crossref_xml(poa_articles, config_section, pub_date, add_comment)
+    xml_string = c_xml.output_xml()
     # Write to file
-    filename = TMP_DIR + os.sep + cXML.batch_id + '.xml'
+    filename = TMP_DIR + os.sep + c_xml.batch_id + '.xml'
     with open(filename, "wb") as fp:
-        fp.write(XML_string)
+        fp.write(xml_string)
 
 def build_articles_for_crossref(article_xmls, detail='full', build_parts=[]):
     "specify some detail and build_parts specific to generating crossref output"
