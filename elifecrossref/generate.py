@@ -1,19 +1,19 @@
+import time
+import os
+from xml.etree import ElementTree
+from xml.etree.ElementTree import Element, SubElement, Comment
+from xml.dom import minidom
+import utils
+from conf import config, parse_raw_config
 from elifearticle import utils as eautils
 from elifearticle.article import Article, Component
 from elifearticle import parse
 from elifetools import utils as etoolsutils
 from elifetools import xmlio
-import utils
-from xml.etree import ElementTree
-from xml.etree.ElementTree import Element, SubElement, Comment
-from xml.dom import minidom
-import time
-import os
-from conf import config, parse_raw_config
 
 TMP_DIR = 'tmp'
 
-class crossrefXML(object):
+class CrossrefXML(object):
 
     def __init__(self, poa_articles, crossref_config, pub_date=None, add_comment=True):
         """
@@ -24,7 +24,7 @@ class crossrefXML(object):
         # Set the config
         self.crossref_config = crossref_config
         # Create the root XML node
-        self.set_root(self.crossref_config.get('crossref_schema_version')) 
+        self.set_root(self.crossref_config.get('crossref_schema_version'))
 
         # Publication date
         if pub_date is None:
@@ -38,7 +38,7 @@ class crossrefXML(object):
             # If only one article is supplied, then add the doi to the batch file name
             batch_doi = str(poa_articles[0].manuscript) + '-'
         self.batch_id = (str(self.crossref_config.get('batch_file_prefix')) + batch_doi +
-                                   time.strftime("%Y%m%d%H%M%S", self.pub_date))
+                         time.strftime("%Y%m%d%H%M%S", self.pub_date))
 
         # set comment
         if add_comment:
@@ -50,7 +50,7 @@ class crossrefXML(object):
             self.root.append(self.comment)
 
         # Build out the Crossref XML
-        self.build(self.root, poa_articles)
+        self.build(poa_articles)
 
     def set_root(self, schema_version):
         self.root = Element('doi_batch')
@@ -61,8 +61,9 @@ class crossrefXML(object):
             self.root.set('xmlns:xsi', 'http://www.w3.org/2001/XMLSchema-instance')
             self.root.set('xmlns:fr', 'http://www.crossref.org/fundref.xsd')
             self.root.set('xmlns:ai', 'http://www.crossref.org/AccessIndicators.xsd')
-            self.root.set('xsi:schemaLocation', ('http://www.crossref.org/schema/4.3.5 ' +
-                                                 'http://www.crossref.org/schemas/crossref4.3.5.xsd'))
+            self.root.set('xsi:schemaLocation', (
+                'http://www.crossref.org/schema/4.3.5 ' +
+                'http://www.crossref.org/schemas/crossref4.3.5.xsd'))
             self.root.set('xmlns:mml', 'http://www.w3.org/1998/Math/MathML')
             self.root.set('xmlns:jats', 'http://www.ncbi.nlm.nih.gov/JATS1')
         elif schema_version == "4.3.7":
@@ -73,8 +74,9 @@ class crossrefXML(object):
             self.root.set('xmlns:ai', 'http://www.crossref.org/AccessIndicators.xsd')
             self.root.set('xmlns:ct', 'http://www.crossref.org/clinicaltrials.xsd')
             self.root.set('xmlns:rel', 'http://www.crossref.org/relations.xsd')
-            self.root.set('xsi:schemaLocation', ('http://www.crossref.org/schema/4.3.7 ' +
-                                                 'http://www.crossref.org/schemas/crossref4.3.7.xsd'))
+            self.root.set('xsi:schemaLocation', (
+                'http://www.crossref.org/schema/4.3.7 ' +
+                'http://www.crossref.org/schemas/crossref4.3.7.xsd'))
             self.root.set('xmlns:mml', 'http://www.w3.org/1998/Math/MathML')
             self.root.set('xmlns:jats', 'http://www.ncbi.nlm.nih.gov/JATS1')
         elif schema_version == "4.4.0":
@@ -85,12 +87,13 @@ class crossrefXML(object):
             self.root.set('xmlns:ai', 'http://www.crossref.org/AccessIndicators.xsd')
             self.root.set('xmlns:ct', 'http://www.crossref.org/clinicaltrials.xsd')
             self.root.set('xmlns:rel', 'http://www.crossref.org/relations.xsd')
-            self.root.set('xsi:schemaLocation', ('http://www.crossref.org/schema/4.4.0 ' +
-                                                 'http://www.crossref.org/schemas/crossref4.4.0.xsd'))
+            self.root.set('xsi:schemaLocation', (
+                'http://www.crossref.org/schema/4.4.0 ' +
+                'http://www.crossref.org/schemas/crossref4.4.0.xsd'))
             self.root.set('xmlns:mml', 'http://www.w3.org/1998/Math/MathML')
             self.root.set('xmlns:jats', 'http://www.ncbi.nlm.nih.gov/JATS1')
 
-    def build(self, root, poa_articles):
+    def build(self, poa_articles):
         self.set_head(self.root)
         self.set_body(self.root, poa_articles)
 
@@ -174,9 +177,10 @@ class crossrefXML(object):
         self.journal_article = SubElement(parent, 'journal_article')
         self.journal_article.set("publication_type", "full_text")
         if (self.crossref_config.get("reference_distribution_opts")
-            and self.crossref_config.get("reference_distribution_opts") != ''):
-            self.journal_article.set("reference_distribution_opts",
-                                     self.crossref_config.get("reference_distribution_opts"))
+                and self.crossref_config.get("reference_distribution_opts") != ''):
+            self.journal_article.set(
+                "reference_distribution_opts",
+                self.crossref_config.get("reference_distribution_opts"))
 
         # Set the title with italic tag support
         self.set_titles(self.journal_article, poa_article)
@@ -229,7 +233,6 @@ class crossrefXML(object):
         root_tag_name = 'titles'
         tag_name = 'title'
         root_xml_element = Element(root_tag_name)
-        title = poa_article.title
         if self.crossref_config.get('face_markup') is True:
             self.add_inline_tag(root_xml_element, tag_name, poa_article.title)
         else:
@@ -254,23 +257,25 @@ class crossrefXML(object):
         if self.do_set_collection(poa_article, collection_property):
             if collection_property == "text-mining":
                 self.collection = SubElement(parent, 'collection')
-                self.collection.set("property",  collection_property)
+                self.collection.set("property", collection_property)
                 if self.do_set_collection_text_mining_pdf(poa_article) is True:
                     self.item = SubElement(self.collection, 'item')
                     self.resource = SubElement(self.item, 'resource')
                     self.resource.set("mime_type", "application/pdf")
-                    self.resource.text = self.generate_resource_url(poa_article, poa_article, "text_mining_pdf_pattern")
+                    self.resource.text = self.generate_resource_url(
+                        poa_article, poa_article, "text_mining_pdf_pattern")
                 if self.do_set_collection_text_mining_xml(poa_article) is True:
                     self.item = SubElement(self.collection, 'item')
                     self.resource = SubElement(self.item, 'resource')
                     self.resource.set("mime_type", "application/xml")
-                    self.resource.text = self.generate_resource_url(poa_article, poa_article, "text_mining_xml_pattern")
+                    self.resource.text = self.generate_resource_url(
+                        poa_article, poa_article, "text_mining_xml_pattern")
 
 
     def do_set_collection_text_mining_xml(self, poa_article):
         "decide whether to text mining xml resource"
         if (self.crossref_config.get("text_mining_xml_pattern")
-            and self.crossref_config.get("text_mining_pdf_pattern") != ''):
+                and self.crossref_config.get("text_mining_pdf_pattern") != ''):
             return True
         return False
 
@@ -278,8 +283,8 @@ class crossrefXML(object):
     def do_set_collection_text_mining_pdf(self, poa_article):
         "decide whether to text mining pdf resource"
         if (self.crossref_config.get("text_mining_pdf_pattern")
-            and self.crossref_config.get("text_mining_pdf_pattern") != ''
-            and poa_article.get_self_uri("pdf") is not None):
+                and self.crossref_config.get("text_mining_pdf_pattern") != ''
+                and poa_article.get_self_uri("pdf") is not None):
             return True
         return False
 
@@ -288,14 +293,14 @@ class crossrefXML(object):
         "decide whether to set collection tags"
         if collection_property == "text-mining":
             if (self.do_set_collection_text_mining_xml(poa_article) is True
-                or self.do_set_collection_text_mining_pdf(poa_article) is True):
+                    or self.do_set_collection_text_mining_pdf(poa_article) is True):
                 return True
         return False
 
 
     def generate_resource_url(self, obj, poa_article, pattern_type=None):
         # Generate a resource value for doi_data based on the object provided
-        if isinstance (obj, Article):
+        if isinstance(obj, Article):
             if not pattern_type:
                 pattern_type = "doi_pattern"
             version = self.elife_style_article_attributes(obj)
@@ -304,7 +309,7 @@ class crossrefXML(object):
                 manuscript=obj.manuscript,
                 volume=obj.volume,
                 version=version)
-        elif isinstance (obj, Component):
+        elif isinstance(obj, Component):
             component_id = obj.id
             prefix1 = ''
             if self.crossref_config.get('elife_style_component_doi') is True:
@@ -339,7 +344,7 @@ class crossrefXML(object):
         # Set the URL prefix for some types
         prefix1 = ''
         if (obj.asset and obj.asset in ['figsupp', 'data']
-            or obj.type and obj.type in ['supplementary-material']):
+                or obj.type and obj.type in ['supplementary-material']):
             prefix1 = '/figures'
         return component_id, prefix1
 
@@ -378,7 +383,7 @@ class crossrefXML(object):
 
                 self.person_name.set("contributor_role", contributor_role)
 
-                if contributor.corresp == True or contributor.equal_contrib == True:
+                if contributor.corresp is True or contributor.equal_contrib is True:
                     self.person_name.set("sequence", sequence)
                 else:
                     self.person_name.set("sequence", sequence)
@@ -410,20 +415,20 @@ class crossrefXML(object):
     def set_abstract(self, parent, poa_article):
         if poa_article.abstract:
             abstract = poa_article.abstract
-            self.set_abstract_tag(parent, abstract, type="abstract")
+            self.set_abstract_tag(parent, abstract, abstract_type="abstract")
 
     def set_digest(self, parent, poa_article):
         if hasattr(poa_article, 'digest') and poa_article.digest:
-            self.set_abstract_tag(parent, poa_article.digest, type="executive-summary")
+            self.set_abstract_tag(parent, poa_article.digest, abstract_type="executive-summary")
 
-    def set_abstract_tag(self, parent, abstract, type):
+    def set_abstract_tag(self, parent, abstract, abstract_type):
 
         tag_name = 'jats:abstract'
         namespaces = ' xmlns:jats="http://www.ncbi.nlm.nih.gov/JATS1" '
 
         attributes = []
         attributes_text = ''
-        if type == 'executive-summary':
+        if abstract_type == 'executive-summary':
             attributes = ['abstract-type']
             attributes_text = ' abstract-type="executive-summary" '
 
@@ -433,20 +438,28 @@ class crossrefXML(object):
             tag_converted_abstract = etoolsutils.escape_ampersand(tag_converted_abstract)
             tag_converted_abstract = etoolsutils.escape_unmatched_angle_brackets(
                 tag_converted_abstract, utils.allowed_tags())
-            tag_converted_abstract = eautils.replace_tags(tag_converted_abstract, 'p', 'jats:p')
-            tag_converted_abstract = eautils.replace_tags(tag_converted_abstract, 'italic', 'jats:italic')
-            tag_converted_abstract = eautils.replace_tags(tag_converted_abstract, 'bold', 'jats:bold')
-            tag_converted_abstract = eautils.replace_tags(tag_converted_abstract, 'underline', 'jats:underline')
-            tag_converted_abstract = eautils.replace_tags(tag_converted_abstract, 'sub', 'jats:sub')
-            tag_converted_abstract = eautils.replace_tags(tag_converted_abstract, 'sup', 'jats:sup')
-            tag_converted_abstract = eautils.replace_tags(tag_converted_abstract, 'sc', 'jats:sc')
+            tag_converted_abstract = eautils.replace_tags(
+                tag_converted_abstract, 'p', 'jats:p')
+            tag_converted_abstract = eautils.replace_tags(
+                tag_converted_abstract, 'italic', 'jats:italic')
+            tag_converted_abstract = eautils.replace_tags(
+                tag_converted_abstract, 'bold', 'jats:bold')
+            tag_converted_abstract = eautils.replace_tags(
+                tag_converted_abstract, 'underline', 'jats:underline')
+            tag_converted_abstract = eautils.replace_tags(
+                tag_converted_abstract, 'sub', 'jats:sub')
+            tag_converted_abstract = eautils.replace_tags(
+                tag_converted_abstract, 'sup', 'jats:sup')
+            tag_converted_abstract = eautils.replace_tags(
+                tag_converted_abstract, 'sc', 'jats:sc')
         else:
             # Strip inline tags, keep the p tags
             tag_converted_abstract = abstract
             tag_converted_abstract = etoolsutils.escape_ampersand(tag_converted_abstract)
             tag_converted_abstract = etoolsutils.escape_unmatched_angle_brackets(
                 tag_converted_abstract, utils.allowed_tags())
-            tag_converted_abstract = self.clean_tags(tag_converted_abstract, do_not_clean=['<p>', '</p>'])
+            tag_converted_abstract = self.clean_tags(
+                tag_converted_abstract, do_not_clean=['<p>', '</p>'])
             tag_converted_abstract = eautils.replace_tags(tag_converted_abstract, 'p', 'jats:p')
             tag_converted_abstract = tag_converted_abstract
 
@@ -507,7 +520,7 @@ class crossrefXML(object):
         applies_to = self.crossref_config.get("access_indicators_applies_to")
 
         if (len(applies_to) > 0 and hasattr(poa_article, 'license')
-            and poa_article.license and poa_article.license.href):
+                and poa_article.license and poa_article.license.href):
 
             self.ai_program = SubElement(parent, 'ai:program')
             self.ai_program.set('name', 'AccessIndicators')
@@ -619,7 +632,7 @@ class crossrefXML(object):
     def do_unstructured_citation(self, ref):
         "decide if a citation should have an unstructured_citation tag added"
         if ref.publication_type and ref.publication_type in [
-            'confproc', 'patent', 'software', 'thesis', 'web']:
+                'confproc', 'patent', 'software', 'thesis', 'web']:
             return True
         if ref.publication_type and ref.publication_type in ['preprint'] and ref.doi is None:
             return True
@@ -631,9 +644,9 @@ class crossrefXML(object):
         # tag_content
         tag_content = ''
         author_line = self.citation_author_line(ref)
-        
+
         if ref.publication_type and ref.publication_type in [
-            'confproc', 'patent', 'preprint', 'report', 'software', 'thesis', 'web']:
+                'confproc', 'patent', 'preprint', 'report', 'software', 'thesis', 'web']:
             tag_content = '. '.join([item.rstrip('.') for item in [
                 author_line, ref.year, ref.article_title, ref.data_title,
                 self.citation_publisher(ref), ref.source, ref.version,
@@ -734,7 +747,7 @@ class crossrefXML(object):
 
     def set_relations_program(self, parent):
         "set the relations program parent tag only once"
-        if not(hasattr(self, "relations_program")):
+        if not hasattr(self, "relations_program"):
             self.relations_program = SubElement(parent, 'rel:program')
 
     def do_dataset_related_item(self, dataset):
@@ -751,7 +764,7 @@ class crossrefXML(object):
         if poa_article.datasets and len(poa_article.datasets) > 0:
             for dataset in poa_article.datasets:
                 # Check for at least one identifier before adding the related_item
-                if not(self.do_dataset_related_item(dataset)):
+                if not self.do_dataset_related_item(dataset):
                     continue
                 # first set the parent tag if it does not yet exist
                 self.set_relations_program(parent)
@@ -897,8 +910,9 @@ class crossrefXML(object):
         tag_converted_string = self.clean_tags(original_string)
         tag_converted_string = etoolsutils.escape_ampersand(tag_converted_string)
         tag_converted_string = etoolsutils.escape_unmatched_angle_brackets(
-                tag_converted_string, utils.allowed_tags())
-        tagged_string = '<' + tag_name + namespaces + '>' + tag_converted_string + '</' + tag_name + '>'
+            tag_converted_string, utils.allowed_tags())
+        tagged_string = ('<' + tag_name + namespaces + '>' +
+                         tag_converted_string + '</' + tag_name + '>')
         reparsed = minidom.parseString(tagged_string.encode('utf-8'))
         root_xml_element = xmlio.append_minidom_xml_to_elementtree_xml(
             parent, reparsed
@@ -916,7 +930,7 @@ class crossrefXML(object):
     def convert_inline_tags(self, original_string):
         tag_converted_string = etoolsutils.escape_ampersand(original_string)
         tag_converted_string = etoolsutils.escape_unmatched_angle_brackets(
-                tag_converted_string, utils.allowed_tags())
+            tag_converted_string, utils.allowed_tags())
         tag_converted_string = eautils.replace_tags(tag_converted_string, 'italic', 'i')
         tag_converted_string = eautils.replace_tags(tag_converted_string, 'bold', 'b')
         tag_converted_string = eautils.replace_tags(tag_converted_string, 'underline', 'u')
@@ -967,7 +981,7 @@ class crossrefXML(object):
 
         return mime_types.get(jats_mime_type.lower())
 
-    def output_XML(self, pretty=False, indent=""):
+    def output_xml(self, pretty=False, indent=""):
         encoding = 'utf-8'
 
         rough_string = ElementTree.tostring(self.root, encoding)
@@ -986,23 +1000,23 @@ def build_crossref_xml(poa_articles, config_section="elife", pub_date=None, add_
     """
     raw_config = config[config_section]
     crossref_config = parse_raw_config(raw_config)
-    return crossrefXML(poa_articles, crossref_config, pub_date, add_comment)
+    return CrossrefXML(poa_articles, crossref_config, pub_date, add_comment)
 
 
 def crossref_xml(poa_articles, config_section="elife", pub_date=None, add_comment=True):
     "build crossref xml and return output as a string"
-    cXML = build_crossref_xml(poa_articles, config_section, pub_date, add_comment)
-    return cXML.output_XML()
+    c_xml = build_crossref_xml(poa_articles, config_section, pub_date, add_comment)
+    return c_xml.output_xml()
 
 
 def crossref_xml_to_disk(poa_articles, config_section="elife", pub_date=None, add_comment=True):
     "build crossref xml and write the output to disk"
-    cXML = build_crossref_xml(poa_articles, config_section, pub_date, add_comment)
-    XML_string = cXML.output_XML()
+    c_xml = build_crossref_xml(poa_articles, config_section, pub_date, add_comment)
+    xml_string = c_xml.output_xml()
     # Write to file
-    filename = TMP_DIR + os.sep + cXML.batch_id + '.xml'
+    filename = TMP_DIR + os.sep + c_xml.batch_id + '.xml'
     with open(filename, "wb") as fp:
-        fp.write(XML_string)
+        fp.write(xml_string)
 
 def build_articles_for_crossref(article_xmls, detail='full', build_parts=[]):
     "specify some detail and build_parts specific to generating crossref output"

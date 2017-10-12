@@ -15,7 +15,7 @@ if __name__ == '__main__':
     xml_files.append(['tests/test_data/elife-15743-v1.xml', 'elife', default_pub_date, False])
     xml_files.append(['tests/test_data/elife-16988-v1.xml', 'elife', default_pub_date, False])
     xml_files.append(['tests/test_data/elife-11134-v2.xml', 'elife', default_pub_date, False])
-    xml_files.append(['_xml_samples/cstp77-jats.xml', 'cstp', default_pub_date, False])
+    xml_files.append(['tests/test_data/cstp77-jats.xml', 'cstp', default_pub_date, False])
     xml_files.append(['tests/test_data/bmjopen-4-e003269.xml', 'bmjopen', default_pub_date, False])
     for xml_file, config_section, pub_date, add_comment in xml_files:
         generate.TMP_DIR = 'tests/test_data'
