@@ -866,22 +866,19 @@ class CrossrefXML(object):
                     self.resource.text = resource_url
 
     def set_component_permissions(self, parent, permissions):
-        # Specific license to the component
-
-        # TODO !!!
-        #self.component_ai_program = SubElement(parent, 'ai:program')
-
-        for permission in permissions:
-            text_parts = []
-
-            if permission.get('copyright_statement'):
-                text_parts.append(permission.get('copyright_statement'))
-            if permission.get('license'):
-                text_parts.append(permission.get('license'))
-
-            if len(text_parts) > 0:
-                # TODO !!! Add this text somewhere. Issue #53
-                text = " ".join(text_parts)
+        "Specific license for the component"
+        # First check if a license ref is in the config
+        if self.crossref_config.get('component_license_ref') != '':
+            # set the component permissions if it has any copyright statement or license value
+            set_permissions = False
+            for permission in permissions:
+                if permission.get('copyright_statement') or permission.get('license'):
+                    set_permissions = True
+            if set_permissions is True:
+                component_ai_program = SubElement(parent, 'ai:program')
+                component_ai_program.set('name', 'AccessIndicators')
+                license_ref = SubElement(component_ai_program, 'ai:license_ref')
+                license_ref.text = self.crossref_config.get('component_license_ref')
 
     def set_subtitle(self, parent, component):
         tag_name = 'subtitle'
