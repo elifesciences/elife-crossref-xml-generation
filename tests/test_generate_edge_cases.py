@@ -4,7 +4,7 @@ import os
 import re
 from elifecrossref import generate
 from elifecrossref.conf import config, parse_raw_config
-from elifearticle.article import Article, Component, Citation, Dataset
+from elifearticle.article import Article, Component, Citation, Dataset, Contributor, Affiliation
 from xml.etree import ElementTree
 from xml.etree.ElementTree import Element
 
@@ -74,6 +74,21 @@ class TestGenerateContributors(unittest.TestCase):
         # A quick test just look for a string value to test
         self.assertTrue('<contributors' not in crossref_xml_string)
 
+    def test_generate_blank_affiliation(self):
+        "Test when a contributor has a blank affiliation"
+        doi = "10.7554/eLife.00666"
+        title = "Test article"
+        article = Article(doi, title)
+        author = Contributor('author', 'Surname', 'Given names')
+        aff = Affiliation()
+        aff.text = ''
+        author.set_affiliation(aff)
+        # generate the crossrefXML
+        c_xml = generate.build_crossref_xml([article])
+        crossref_xml_string = c_xml.output_xml()
+        self.assertIsNotNone(crossref_xml_string)
+        # A quick test just look for a string value to test
+        self.assertTrue('<affiliation>' not in crossref_xml_string)
 
 class TestGenerateCrossrefSchemaVersion(unittest.TestCase):
 

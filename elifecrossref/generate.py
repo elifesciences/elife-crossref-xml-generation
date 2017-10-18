@@ -400,8 +400,8 @@ class CrossrefXML(object):
 
                 if contributor.affiliations:
                     for aff in contributor.affiliations:
-                        self.affiliation = SubElement(self.person_name, "affiliation")
-                        if aff.text:
+                        if aff.text and aff.text != '':
+                            self.affiliation = SubElement(self.person_name, "affiliation")
                             self.affiliation.text = aff.text
 
                 if contributor.orcid:
