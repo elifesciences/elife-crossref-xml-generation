@@ -401,7 +401,7 @@ class CrossrefXML(object):
                 if contributor.affiliations:
                     # Crossref schema limits the number of affilations an author can have
                     max_affiliations = 5
-                    for aff in contributor.affiliations[0:max_affiliations-1]:
+                    for aff in contributor.affiliations[0:max_affiliations]:
                         if aff.text and aff.text != '':
                             self.affiliation = SubElement(self.person_name, "affiliation")
                             self.affiliation.text = aff.text
