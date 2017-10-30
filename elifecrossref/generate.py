@@ -383,10 +383,7 @@ class CrossrefXML(object):
 
                 self.person_name.set("contributor_role", contributor_role)
 
-                if contributor.corresp is True or contributor.equal_contrib is True:
-                    self.person_name.set("sequence", sequence)
-                else:
-                    self.person_name.set("sequence", sequence)
+                self.person_name.set("sequence", sequence)
 
                 self.given_name = SubElement(self.person_name, "given_name")
                 self.given_name.text = contributor.given_name
