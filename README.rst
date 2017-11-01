@@ -28,6 +28,7 @@ Supported features
 * abstract
 * Fundref
 * AccessIndicators
+* relations (inter_work_relation)
 * text and data mining (TDM) links
 * citation_list
 * components (if you have component DOI values)
