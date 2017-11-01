@@ -76,9 +76,11 @@ b) Or, integrate it into your project
 
 Add to your requirements.txt file of your project a particular commit of this library, for example:
 
-git+https://github.com/elifesciences/elife-crossref-xml-generation.git@288f0bc8d1148eb1795c8ae18a3985d30ba38cd5#egg=elifecrossref
+.. code-block:: bash
 
-Then you should be able to import the library as elifecrossref.
+  git+https://github.com/elifesciences/elife-crossref-xml-generation.git@288f0bc8d1148eb1795c8ae18a3985d30ba38cd5#egg=elifecrossref
+
+Then you should be able to import the library as `elifecrossref`.
 
 Configuration
 =============
@@ -88,12 +90,16 @@ The crossref.cfg file can edited to include your particular values and options. 
 Example usage
 =============
 
+In interactive Python, below is an example.
+
 .. code-block:: python
 
     >>> from elifecrossref import generate
     >>> articles = generate.build_articles_for_crossref(["tests/test_data/elife-00666.xml"])
     >>> articles[0].version = 1
     >>> print generate.crossref_xml(articles, "elife")
+
+There are other options in the `generate.py` file to return the CrossrefXML object created, or to write the output to disk using a single function call.
 
 Contributing to the project
 ======
