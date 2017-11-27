@@ -1,3 +1,4 @@
+import re
 
 def allowed_tags():
     "tuple of whitelisted tags"
@@ -10,3 +11,9 @@ def allowed_tags():
         '<sup>', '</sup>',
         '<sc>', '</sc>',
     )
+
+def clean_string(string):
+    "remove unwanted characters when concatenating the batch_id"
+    if string:
+        return re.sub(r'[^a-zA-Z0-9_\-]', '', str(string))
+    return None
