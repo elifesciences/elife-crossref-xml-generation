@@ -906,7 +906,7 @@ class CrossrefXML(object):
         tag_converted_string = self.clean_tags(original_string)
         tag_converted_string = etoolsutils.escape_ampersand(tag_converted_string)
         tag_converted_string = etoolsutils.escape_unmatched_angle_brackets(
-            tag_converted_string, utils.allowed_tags())
+            tag_converted_string)
         tagged_string = ('<' + tag_name + namespaces + '>' +
                          tag_converted_string + '</' + tag_name + '>')
         reparsed = minidom.parseString(tagged_string.encode('utf-8'))
