@@ -2,25 +2,25 @@
                     An abstract can contain any formatting, such as italics,
                         bold, superscript, subscript or small caps. MathML is
                     also allowed: 
-                    
-
-
-
-m
-
-
-
-
-p
-
-
-m
-
-=
-0
-
-
-
+                    <mml:math>
+<mml:mrow>
+<mml:munder>
+<mml:mo/>
+<mml:mi>m</mml:mi>
+</mml:munder>
+<mml:mrow>
+<mml:msub>
+<mml:mover>
+<mml:mi>p</mml:mi>
+<mml:mo/>
+</mml:mover>
+<mml:mi>m</mml:mi>
+</mml:msub>
+<mml:mo>=</mml:mo>
+<mml:mn>0</mml:mn>
+</mml:mrow>
+</mml:mrow>
+</mml:math>
 
                 .</jats:p><jats:p>eLife does not structure abstracts into sub headings expect in a clinical trial article, but the abstract can have
                     multiple paragarahs. The sub DOI is always .001 as it is the first asset in any

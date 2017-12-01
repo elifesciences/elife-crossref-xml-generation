@@ -423,7 +423,8 @@ class CrossrefXML(object):
     def set_abstract_tag(self, parent, abstract, abstract_type):
 
         tag_name = 'jats:abstract'
-        namespaces = ' xmlns:jats="http://www.ncbi.nlm.nih.gov/JATS1" '
+        namespaces = (''' xmlns:jats="http://www.ncbi.nlm.nih.gov/JATS1"
+                      xmlns:mml="http://www.w3.org/1998/Math/MathML" ''')
 
         attributes = []
         attributes_text = ''
@@ -451,6 +452,7 @@ class CrossrefXML(object):
                 tag_converted_abstract, 'sup', 'jats:sup')
             tag_converted_abstract = eautils.replace_tags(
                 tag_converted_abstract, 'sc', 'jats:sc')
+            tag_converted_abstract = eautils.remove_tag('inline-formula', tag_converted_abstract)
         else:
             # Strip inline tags, keep the p tags
             tag_converted_abstract = abstract
@@ -458,7 +460,7 @@ class CrossrefXML(object):
             tag_converted_abstract = etoolsutils.escape_unmatched_angle_brackets(
                 tag_converted_abstract, utils.allowed_tags())
             tag_converted_abstract = self.clean_tags(
-                tag_converted_abstract, do_not_clean=['<p>', '</p>'])
+                tag_converted_abstract, do_not_clean=['<p>', '</p>', '<mml:', '</mml:'])
             tag_converted_abstract = eautils.replace_tags(tag_converted_abstract, 'p', 'jats:p')
             tag_converted_abstract = tag_converted_abstract
 
@@ -893,8 +895,14 @@ class CrossrefXML(object):
         tag_converted_string = original_string
         for tag in utils.allowed_tags():
             if tag not in do_not_clean:
-                tag_converted_string = tag_converted_string.replace(tag, '')
-        remove_tags = ['inline-formula', 'mml:*']
+                # first do exact tag replacements
+                if tag.startswith('<') and tag.endswith('>'):
+                    tag_converted_string = tag_converted_string.replace(tag, '')
+                # then replace by fragments for mml tags if present
+                if tag.startswith('<') and not tag.endswith('>'):
+                    tag_fragment = tag.lstrip('</')
+                    tag_converted_string = eautils.remove_tag(tag_fragment, tag_converted_string)
+        remove_tags = ['inline-formula']
         for tag in remove_tags:
             if tag not in do_not_clean:
                 tag_converted_string = eautils.remove_tag(tag, tag_converted_string)
