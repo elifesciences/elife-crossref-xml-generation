@@ -3,13 +3,16 @@ import os
 from xml.etree import ElementTree
 from xml.etree.ElementTree import Element, SubElement, Comment
 from xml.dom import minidom
-import utils
-from conf import config, parse_raw_config
+
 from elifearticle import utils as eautils
 from elifearticle.article import Article, Component
 from elifearticle import parse
 from elifetools import utils as etoolsutils
 from elifetools import xmlio
+
+from elifecrossref import utils
+from elifecrossref.conf import config, parse_raw_config
+
 
 TMP_DIR = 'tmp'
 
@@ -992,9 +995,9 @@ class CrossrefXML(object):
         reparsed = minidom.parseString(rough_string)
 
         if pretty is True:
-            return reparsed.toprettyxml(indent, encoding=encoding)
+            return reparsed.toprettyxml(indent, encoding=encoding).decode(encoding)
         else:
-            return reparsed.toxml(encoding=encoding)
+            return reparsed.toxml(encoding=encoding).decode(encoding)
 
 
 def build_crossref_xml(poa_articles, config_section="elife", pub_date=None, add_comment=True):
@@ -1020,7 +1023,11 @@ def crossref_xml_to_disk(poa_articles, config_section="elife", pub_date=None, ad
     # Write to file
     filename = TMP_DIR + os.sep + c_xml.batch_id + '.xml'
     with open(filename, "wb") as fp:
-        fp.write(xml_string)
+        try:
+            fp.write(xml_string.encode('utf-8'))
+        except UnicodeDecodeError:
+            fp.write(xml_string)
+
 
 def build_articles_for_crossref(article_xmls, detail='full', build_parts=[]):
     "specify some detail and build_parts specific to generating crossref output"

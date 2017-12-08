@@ -1,12 +1,12 @@
 import unittest
-import time
-import os
-import re
-from elifecrossref import generate
-from elifecrossref.conf import config, parse_raw_config
-from elifearticle.article import Article, Component, Citation, Dataset, Contributor, Affiliation
 from xml.etree import ElementTree
 from xml.etree.ElementTree import Element
+
+from elifearticle.article import Article, Component, Citation, Dataset, Contributor, Affiliation
+
+from elifecrossref import generate
+from elifecrossref.conf import config, parse_raw_config
+
 
 class TestGenerateComponentList(unittest.TestCase):
 
@@ -191,7 +191,7 @@ class TestGenerateCrossrefUnstructuredCitation(unittest.TestCase):
         c_xml = generate.CrossrefXML([], crossref_config)
         parent = Element('citation')
         citation_element = c_xml.set_unstructured_citation(parent, citation)
-        rough_string = ElementTree.tostring(citation_element)
+        rough_string = ElementTree.tostring(citation_element).decode('utf-8')
         self.assertEqual(rough_string, expected)
 
     def test_set_unstructured_citation_face_markup(self):
@@ -210,7 +210,7 @@ class TestGenerateCrossrefUnstructuredCitation(unittest.TestCase):
         c_xml = generate.CrossrefXML([], crossref_config)
         parent = Element('citation')
         citation_element = c_xml.set_unstructured_citation(parent, citation)
-        rough_string = ElementTree.tostring(citation_element)
+        rough_string = ElementTree.tostring(citation_element).decode('utf-8')
         self.assertEqual(rough_string, expected)
         # now set the config back to normal
         raw_config['face_markup'] = original_face_markup
@@ -330,11 +330,11 @@ class TestAddCleanTag(unittest.TestCase):
         root = Element('root')
         # add the element
         c_xml.add_clean_tag(root, 'p', '<test>')
-        self.assertEqual(ElementTree.tostring(root), '<root><p>&lt;test&gt;</p></root>')
+        self.assertEqual(ElementTree.tostring(root).decode('utf-8'), '<root><p>&lt;test&gt;</p></root>')
         # strange example based on eLife 28716 v2 Figure 2 caption
         root = Element('root')
         c_xml.add_clean_tag(root, 'subtitle', '...polarization, <<italic>p</italic>>, and its variance...')
-        self.assertEqual(ElementTree.tostring(root), '<root><subtitle>...polarization, &lt;p&gt;, and its variance...</subtitle></root>')
+        self.assertEqual(ElementTree.tostring(root).decode('utf-8'), '<root><subtitle>...polarization, &lt;p&gt;, and its variance...</subtitle></root>')
 
 
 if __name__ == '__main__':
