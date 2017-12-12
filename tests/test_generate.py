@@ -42,7 +42,7 @@ class TestGenerate(unittest.TestCase):
             articles = generate.build_articles_for_crossref([file_path])
             crossref_xml = generate.crossref_xml(articles, config_section, pub_date, False)
             model_crossref_xml = self.read_file_content(TEST_DATA_PATH + crossref_xml_file)
-            self.assertEqual(crossref_xml, model_crossref_xml)
+            self.assertEqual(crossref_xml, model_crossref_xml.decode('utf-8'))
 
     def test_parse_do_no_pass_pub_date(self):
         """
