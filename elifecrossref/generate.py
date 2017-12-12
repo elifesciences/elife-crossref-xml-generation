@@ -1025,7 +1025,7 @@ def crossref_xml_to_disk(poa_articles, config_section="elife", pub_date=None, ad
     with open(filename, "wb") as fp:
         try:
             fp.write(xml_string.encode('utf-8'))
-        except UnicodeDecodeError:
+        except UnicodeDecodeError:  # pragma: no cover
             fp.write(xml_string)
 
 
