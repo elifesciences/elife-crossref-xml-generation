@@ -12,6 +12,7 @@ def allowed_tags():
         '<sc>', '</sc>',
         '<inline-formula>', '</inline-formula>',
         '<mml:', '</mml:',
+        '<ext-link', '</ext-link>',
     )
 
 def clean_string(string):

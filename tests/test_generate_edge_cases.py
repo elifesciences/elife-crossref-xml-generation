@@ -315,6 +315,47 @@ class TestGenerateCrossrefDataCitation(unittest.TestCase):
         self.assertTrue(expected_contains in crossref_xml_string)
 
 
+class TestGenerateAbstract(unittest.TestCase):
+
+    def setUp(self):
+        self.abstract = '<p><bold><italic><underline><sub><sup>An abstract. <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1601/nm.3602">Desulfocapsa sulfexigens</ext-link>.</sup></sub></underline></italic></bold></p>'
+
+    def test_set_abstract(self):
+        "test stripping unwanted tags from abstract"
+        doi = "10.7554/eLife.00666"
+        title = "Test article"
+        article = Article(doi, title)
+        article.abstract = self.abstract
+        expected_contains = '<jats:abstract><jats:p>An abstract. Desulfocapsa sulfexigens.</jats:p></jats:abstract>'
+        # generate
+        crossref_object = generate.build_crossref_xml([article])
+        crossref_xml_string = crossref_object.output_xml()
+        # test assertion
+        self.assertTrue(expected_contains in crossref_xml_string)
+
+    def test_set_abstract_jats_abstract_format(self):
+        "test the abstract using jats abstract format set to true"
+        doi = "10.7554/eLife.00666"
+        title = "Test article"
+        article = Article(doi, title)
+        article.abstract = self.abstract
+        expected_contains = '<jats:abstract><jats:p><jats:bold><jats:italic><jats:underline><jats:sub><jats:sup>An abstract. Desulfocapsa sulfexigens.</jats:sup></jats:sub></jats:underline></jats:italic></jats:bold></jats:p></jats:abstract>'
+        # generate
+        raw_config = config['elife']
+        jats_abstract = raw_config.get('jats_abstract')
+        face_markup = raw_config.get('face_markup')
+        raw_config['jats_abstract'] = 'true'
+        raw_config['face_markup'] = 'true'
+        crossref_config = parse_raw_config(raw_config)
+        crossref_object = generate.CrossrefXML([article], crossref_config, None, True)
+        crossref_xml_string = crossref_object.output_xml()
+        # test assertion
+        self.assertTrue(expected_contains in crossref_xml_string)
+        # now set the config back to normal
+        raw_config['jats_abstract'] = jats_abstract
+        raw_config['face_markup'] = face_markup
+
+
 class TestAddCleanTag(unittest.TestCase):
 
     def setUp(self):

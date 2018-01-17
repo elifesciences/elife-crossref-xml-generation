@@ -427,7 +427,8 @@ class CrossrefXML(object):
 
         tag_name = 'jats:abstract'
         namespaces = (''' xmlns:jats="http://www.ncbi.nlm.nih.gov/JATS1"
-                      xmlns:mml="http://www.w3.org/1998/Math/MathML" ''')
+                      xmlns:mml="http://www.w3.org/1998/Math/MathML"
+                      xmlns:xlink="http://www.w3.org/1999/xlink" ''')
 
         attributes = []
         attributes_text = ''
@@ -456,6 +457,7 @@ class CrossrefXML(object):
             tag_converted_abstract = eautils.replace_tags(
                 tag_converted_abstract, 'sc', 'jats:sc')
             tag_converted_abstract = eautils.remove_tag('inline-formula', tag_converted_abstract)
+            tag_converted_abstract = eautils.remove_tag('ext-link', tag_converted_abstract)
         else:
             # Strip inline tags, keep the p tags
             tag_converted_abstract = abstract
