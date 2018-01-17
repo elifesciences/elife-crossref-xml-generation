@@ -262,7 +262,7 @@ class CrossrefXML(object):
 
         # only add text and data mining details if the article has a license
         if (hasattr(poa_article, 'license')
-            and poa_article.license.href):
+            and poa_article.license and poa_article.license.href):
             self.set_collection(self.doi_data, poa_article, "text-mining")
 
 
