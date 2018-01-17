@@ -52,6 +52,11 @@ class CrossrefXML(object):
                                    ' from version ' + self.last_commit)
             self.root.append(self.comment)
 
+        # namespaces for when reparsing XML strings
+        self.reparsing_namespaces = (''' xmlns:jats="http://www.ncbi.nlm.nih.gov/JATS1"
+                                     xmlns:mml="http://www.w3.org/1998/Math/MathML"
+                                     xmlns:xlink="http://www.w3.org/1999/xlink" ''')
+
         # Build out the Crossref XML
         self.build(poa_articles)
 
@@ -236,10 +241,12 @@ class CrossrefXML(object):
         root_tag_name = 'titles'
         tag_name = 'title'
         root_xml_element = Element(root_tag_name)
+        # remove unwanted tags
+        tag_converted_title = eautils.remove_tag('ext-link', poa_article.title)
         if self.crossref_config.get('face_markup') is True:
-            self.add_inline_tag(root_xml_element, tag_name, poa_article.title)
+            self.add_inline_tag(root_xml_element, tag_name, tag_converted_title)
         else:
-            self.add_clean_tag(root_xml_element, tag_name, poa_article.title)
+            self.add_clean_tag(root_xml_element, tag_name, tag_converted_title)
         parent.append(root_xml_element)
 
     def set_doi_data(self, parent, poa_article):
@@ -426,8 +433,6 @@ class CrossrefXML(object):
     def set_abstract_tag(self, parent, abstract, abstract_type):
 
         tag_name = 'jats:abstract'
-        namespaces = (''' xmlns:jats="http://www.ncbi.nlm.nih.gov/JATS1"
-                      xmlns:mml="http://www.w3.org/1998/Math/MathML" ''')
 
         attributes = []
         attributes_text = ''
@@ -456,6 +461,7 @@ class CrossrefXML(object):
             tag_converted_abstract = eautils.replace_tags(
                 tag_converted_abstract, 'sc', 'jats:sc')
             tag_converted_abstract = eautils.remove_tag('inline-formula', tag_converted_abstract)
+            tag_converted_abstract = eautils.remove_tag('ext-link', tag_converted_abstract)
         else:
             # Strip inline tags, keep the p tags
             tag_converted_abstract = abstract
@@ -467,7 +473,7 @@ class CrossrefXML(object):
             tag_converted_abstract = eautils.replace_tags(tag_converted_abstract, 'p', 'jats:p')
             tag_converted_abstract = tag_converted_abstract
 
-        tagged_string = '<' + tag_name + namespaces + attributes_text + '>'
+        tagged_string = '<' + tag_name + self.reparsing_namespaces + attributes_text + '>'
         tagged_string += tag_converted_abstract
         tagged_string += '</' + tag_name + '>'
         reparsed = minidom.parseString(tagged_string.encode('utf-8'))
@@ -913,12 +919,11 @@ class CrossrefXML(object):
 
     def add_clean_tag(self, parent, tag_name, original_string):
         "remove allowed tags and then add a tag the parent"
-        namespaces = ' xmlns:mml="http://www.w3.org/1998/Math/MathML" '
         tag_converted_string = self.clean_tags(original_string)
         tag_converted_string = etoolsutils.escape_ampersand(tag_converted_string)
         tag_converted_string = etoolsutils.escape_unmatched_angle_brackets(
             tag_converted_string)
-        tagged_string = ('<' + tag_name + namespaces + '>' +
+        tagged_string = ('<' + tag_name + self.reparsing_namespaces + '>' +
                          tag_converted_string + '</' + tag_name + '>')
         reparsed = minidom.parseString(tagged_string.encode('utf-8'))
         root_xml_element = xmlio.append_minidom_xml_to_elementtree_xml(
@@ -928,7 +933,7 @@ class CrossrefXML(object):
     def add_inline_tag(self, parent, tag_name, original_string):
         "replace inline tags found in the original_string and then add a tag the parent"
         tag_converted_string = self.convert_inline_tags(original_string)
-        tagged_string = '<' + tag_name + '>' + tag_converted_string + '</' + tag_name + '>'
+        tagged_string = '<' + tag_name + self.reparsing_namespaces + '>' + tag_converted_string + '</' + tag_name + '>'
         reparsed = minidom.parseString(tagged_string.encode('utf-8'))
         root_xml_element = xmlio.append_minidom_xml_to_elementtree_xml(
             parent, reparsed
