@@ -301,12 +301,22 @@ class CrossrefXML(object):
 
     def do_set_collection(self, poa_article, collection_property):
         "decide whether to set collection tags"
+        # only add text and data mining details if the article has a license
+        if not self.has_license(poa_article):
+            return False
         if collection_property == "text-mining":
             if (self.do_set_collection_text_mining_xml(poa_article) is True
                     or self.do_set_collection_text_mining_pdf(poa_article) is True):
                 return True
         return False
 
+    def has_license(self, poa_article):
+        "check if the article has the minimum requirements of a license"
+        if not poa_article.license:
+            return False
+        if not poa_article.license.href:
+            return False
+        return True
 
     def generate_resource_url(self, obj, poa_article, pattern_type=None):
         # Generate a resource value for doi_data based on the object provided
@@ -529,8 +539,7 @@ class CrossrefXML(object):
 
         applies_to = self.crossref_config.get("access_indicators_applies_to")
 
-        if (len(applies_to) > 0 and hasattr(poa_article, 'license')
-                and poa_article.license and poa_article.license.href):
+        if (len(applies_to) > 0 and self.has_license(poa_article) is True):
 
             self.ai_program = SubElement(parent, 'ai:program')
             self.ai_program.set('name', 'AccessIndicators')
