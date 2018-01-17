@@ -260,7 +260,10 @@ class CrossrefXML(object):
         resource = self.generate_resource_url(poa_article, poa_article)
         self.resource.text = resource
 
-        self.set_collection(self.doi_data, poa_article, "text-mining")
+        # only add text and data mining details if the article has a license
+        if (hasattr(poa_article, 'license')
+            and poa_article.license.href):
+            self.set_collection(self.doi_data, poa_article, "text-mining")
 
 
     def set_collection(self, parent, poa_article, collection_property):
