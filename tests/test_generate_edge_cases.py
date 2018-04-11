@@ -5,7 +5,7 @@ from xml.etree.ElementTree import Element
 from elifearticle.article import Article, Component, Citation, Dataset, Contributor, Affiliation, License
 
 from elifecrossref import generate
-from elifecrossref.conf import config, parse_raw_config
+from elifecrossref.conf import raw_config, parse_raw_config
 
 
 class TestGenerateComponentList(unittest.TestCase):
@@ -42,10 +42,10 @@ class TestGenerateComponentList(unittest.TestCase):
         expected_subtitle = "A <sc>STRANGE</sc> <i>subtitle</i>, and this tag is &lt;not_allowed&gt;!&lt;/not_allowed&gt;"
         article.component_list = [component]
         # load a config and override the value
-        raw_config = config['elife']
-        face_markup = raw_config.get('face_markup')
-        raw_config['face_markup'] = 'true'
-        crossref_config = parse_raw_config(raw_config)
+        raw_config_object = raw_config('elife')
+        face_markup = raw_config_object.get('face_markup')
+        raw_config_object['face_markup'] = 'true'
+        crossref_config = parse_raw_config(raw_config_object)
         # generate the crossrefXML
         c_xml = generate.CrossrefXML([article], crossref_config, None, True)
         crossref_xml_string = c_xml.output_xml()
@@ -53,7 +53,7 @@ class TestGenerateComponentList(unittest.TestCase):
         # A quick test just look for the expected string to test for tags and escape characters
         self.assertTrue(expected_subtitle in crossref_xml_string)
         # now set the config back to normal
-        raw_config['face_markup'] = face_markup
+        raw_config_object['face_markup'] = face_markup
 
 
 class TestGenerateContributors(unittest.TestCase):
@@ -120,18 +120,18 @@ class TestGenerateCrossrefSchemaVersion(unittest.TestCase):
         title = "Test article"
         article = Article(doi, title)
         # load a config and override the value
-        raw_config = config['elife']
-        original_crossref_schema_version = raw_config.get('crossref_schema_version')
-        raw_config['crossref_schema_version'] = crossref_schema_version
-        crossref_config = parse_raw_config(raw_config)
+        raw_config_object = raw_config('elife')
+        original_crossref_schema_version = raw_config_object.get('crossref_schema_version')
+        raw_config_object['crossref_schema_version'] = crossref_schema_version
+        crossref_config = parse_raw_config(raw_config_object)
         # generate the crossrefXML
-        c_xml = generate.build_crossref_xml([article])
+        c_xml = generate.CrossrefXML([article], crossref_config, None, True)
         crossref_xml_string = c_xml.output_xml()
         self.assertIsNotNone(crossref_xml_string)
         # A quick test just look for a string value to test
         self.assertTrue(expected_snippet in crossref_xml_string)
         # now set the config back to normal
-        raw_config['crossref_schema_version'] = original_crossref_schema_version
+        raw_config_object['crossref_schema_version'] = original_crossref_schema_version
 
 
 class TestGenerateCrossrefCitationPublisher(unittest.TestCase):
@@ -199,10 +199,10 @@ class TestGenerateCrossrefUnstructuredCitation(unittest.TestCase):
         article_title = 'PhD thesis: Submicroscopic <italic>Plasmodium falciparum</italic> gametocytaemia and the contribution to malaria transmission'
         expected = '<citation><unstructured_citation>PhD thesis: Submicroscopic <i>Plasmodium falciparum</i> gametocytaemia and the contribution to malaria transmission.</unstructured_citation></citation>'
         # load a config and override the value
-        raw_config = config['elife']
-        original_face_markup = raw_config.get('face_markup')
-        raw_config['face_markup'] = 'true'
-        crossref_config = parse_raw_config(raw_config)
+        raw_config_object = raw_config('elife')
+        original_face_markup = raw_config_object.get('face_markup')
+        raw_config_object['face_markup'] = 'true'
+        crossref_config = parse_raw_config(raw_config_object)
         # continue
         citation = Citation()
         citation.article_title = article_title
@@ -213,7 +213,7 @@ class TestGenerateCrossrefUnstructuredCitation(unittest.TestCase):
         rough_string = ElementTree.tostring(citation_element).decode('utf-8')
         self.assertEqual(rough_string, expected)
         # now set the config back to normal
-        raw_config['face_markup'] = original_face_markup
+        raw_config_object['face_markup'] = original_face_markup
 
 
 class TestGenerateCrossrefCitationId(unittest.TestCase):
@@ -341,19 +341,19 @@ class TestGenerateAbstract(unittest.TestCase):
         article.abstract = self.abstract
         expected_contains = '<jats:abstract><jats:p><jats:bold><jats:italic><jats:underline><jats:sub><jats:sup>An abstract. Desulfocapsa sulfexigens.</jats:sup></jats:sub></jats:underline></jats:italic></jats:bold></jats:p></jats:abstract>'
         # generate
-        raw_config = config['elife']
-        jats_abstract = raw_config.get('jats_abstract')
-        face_markup = raw_config.get('face_markup')
-        raw_config['jats_abstract'] = 'true'
-        raw_config['face_markup'] = 'true'
-        crossref_config = parse_raw_config(raw_config)
+        raw_config_object = raw_config('elife')
+        jats_abstract = raw_config_object.get('jats_abstract')
+        face_markup = raw_config_object.get('face_markup')
+        raw_config_object['jats_abstract'] = 'true'
+        raw_config_object['face_markup'] = 'true'
+        crossref_config = parse_raw_config(raw_config_object)
         crossref_object = generate.CrossrefXML([article], crossref_config, None, True)
         crossref_xml_string = crossref_object.output_xml()
         # test assertion
         self.assertTrue(expected_contains in crossref_xml_string)
         # now set the config back to normal
-        raw_config['jats_abstract'] = jats_abstract
-        raw_config['face_markup'] = face_markup
+        raw_config_object['jats_abstract'] = jats_abstract
+        raw_config_object['face_markup'] = face_markup
 
 
 class TestGenerateTitles(unittest.TestCase):
@@ -378,16 +378,16 @@ class TestGenerateTitles(unittest.TestCase):
         article = Article(doi, self.title)
         expected_contains = '<titles><title><b>Test article</b> for Desulfocapsa sulfexigens</title></titles>'
         # generate
-        raw_config = config['elife']
-        face_markup = raw_config.get('face_markup')
-        raw_config['face_markup'] = 'true'
-        crossref_config = parse_raw_config(raw_config)
+        raw_config_object = raw_config('elife')
+        face_markup = raw_config_object.get('face_markup')
+        raw_config_object['face_markup'] = 'true'
+        crossref_config = parse_raw_config(raw_config_object)
         crossref_object = generate.CrossrefXML([article], crossref_config, None, True)
         crossref_xml_string = crossref_object.output_xml()
         # test assertion
         self.assertTrue(expected_contains in crossref_xml_string)
         # now set the config back to normal
-        raw_config['face_markup'] = face_markup
+        raw_config_object['face_markup'] = face_markup
 
 
 class TestSetCollection(unittest.TestCase):
@@ -404,8 +404,8 @@ class TestSetCollection(unittest.TestCase):
 
     def create_crossref_object(self, article):
         "utility to create the crossref object"
-        raw_config = config['elife']
-        crossref_config = parse_raw_config(raw_config)
+        raw_config_object = raw_config('elife')
+        crossref_config = parse_raw_config(raw_config_object)
         crossref_object = generate.CrossrefXML([article], crossref_config, None, True)
         return crossref_object
 

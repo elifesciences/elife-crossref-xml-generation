@@ -1,10 +1,23 @@
 import configparser as configparser
 import json
 
-config = configparser.ConfigParser(interpolation=None)
-config.read('crossref.cfg')
+CONFIG_FILE = 'crossref.cfg'
 
-def parse_raw_config(raw_config):
+
+def load_config(config_file=CONFIG_FILE):
+    config = configparser.ConfigParser(interpolation=None)
+    config.read(config_file)
+    return config
+
+def raw_config(config_section, config_file=CONFIG_FILE):
+    "try to load the config section"
+    config = load_config(config_file)
+    if config.has_section(config_section):
+        return config[config_section]
+    # default
+    return config['DEFAULT']
+
+def parse_raw_config(raw_config_object):
     "parse the raw config to something good"
     crossref_config = {}
     boolean_values = []
@@ -22,14 +35,14 @@ def parse_raw_config(raw_config):
     list_values.append("access_indicators_applies_to")
     list_values.append("pub_date_types")
 
-    for value_name in raw_config:
+    for value_name in raw_config_object:
         if value_name in boolean_values:
-            crossref_config[value_name] = raw_config.getboolean(value_name)
+            crossref_config[value_name] = raw_config_object.getboolean(value_name)
         elif value_name in int_values:
-            crossref_config[value_name] = raw_config.getint(value_name)
+            crossref_config[value_name] = raw_config_object.getint(value_name)
         elif value_name in list_values:
-            crossref_config[value_name] = json.loads(raw_config.get(value_name))
+            crossref_config[value_name] = json.loads(raw_config_object.get(value_name))
         else:
             # default
-            crossref_config[value_name] = raw_config.get(value_name)
+            crossref_config[value_name] = raw_config_object.get(value_name)
     return crossref_config

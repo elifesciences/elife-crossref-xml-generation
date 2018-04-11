@@ -11,7 +11,7 @@ from elifetools import utils as etoolsutils
 from elifetools import xmlio
 
 from elifecrossref import utils
-from elifecrossref.conf import config, parse_raw_config
+from elifecrossref.conf import raw_config, parse_raw_config
 
 
 TMP_DIR = 'tmp'
@@ -324,11 +324,20 @@ class CrossrefXML(object):
             if not pattern_type:
                 pattern_type = "doi_pattern"
             version = self.elife_style_article_attributes(obj)
-            return self.crossref_config.get(pattern_type).format(
-                doi=obj.doi,
-                manuscript=obj.manuscript,
-                volume=obj.volume,
-                version=version)
+            doi_pattern = self.crossref_config.get(pattern_type)
+            if doi_pattern != '':
+                return self.crossref_config.get(pattern_type).format(
+                    doi=obj.doi,
+                    manuscript=obj.manuscript,
+                    volume=obj.volume,
+                    version=version)
+            else:
+                # if no doi_pattern is specified, try to get it from the self-uri value
+                #  that has no content_type
+                for self_uri in obj.self_uri_list:
+                    if self_uri.content_type is None:
+                        return self_uri.xlink_href
+
         elif isinstance(obj, Component):
             component_id = obj.id
             prefix1 = ''
@@ -1019,8 +1028,7 @@ def build_crossref_xml(poa_articles, config_section="elife", pub_date=None, add_
     Given a list of article article objects
     generate crossref XML from them
     """
-    raw_config = config[config_section]
-    crossref_config = parse_raw_config(raw_config)
+    crossref_config = parse_raw_config(raw_config(config_section))
     return CrossrefXML(poa_articles, crossref_config, pub_date, add_comment)
 
 

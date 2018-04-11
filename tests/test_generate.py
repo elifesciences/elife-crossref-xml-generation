@@ -4,7 +4,7 @@ import os
 import re
 from elifecrossref import generate
 from elifearticle.article import Article
-from elifecrossref.conf import config, parse_raw_config
+from elifecrossref.conf import raw_config, parse_raw_config
 
 TEST_BASE_PATH = os.path.dirname(os.path.abspath(__file__)) + os.sep
 TEST_DATA_PATH = TEST_BASE_PATH + "test_data" + os.sep
@@ -29,6 +29,7 @@ class TestGenerate(unittest.TestCase):
         self.passes.append(('elife-00508-v1.xml', 'elife-crossref-00508-20170717071707.xml', 'elife', self.default_pub_date))
         self.passes.append(('cstp77-jats.xml', 'cstp-crossref-77-20170717071707.xml', 'cstp', self.default_pub_date))
         self.passes.append(('bmjopen-4-e003269.xml', 'crossref-bmjopen-2013-003269-20170717071707.xml', 'bmjopen', self.default_pub_date))
+        self.passes.append(('up-sta-example.xml', 'crossref-606-20170717071707.xml', None, self.default_pub_date))
 
     def read_file_content(self, file_name):
         fp = open(file_name, 'rb')
@@ -52,8 +53,8 @@ class TestGenerate(unittest.TestCase):
         article_xml_file = 'elife_poa_e02725.xml'
         file_path = TEST_DATA_PATH + article_xml_file
         articles = generate.build_articles_for_crossref([file_path])
-        raw_config = config['elife']
-        crossref_config = parse_raw_config(raw_config)
+        raw_config_object = raw_config('elife')
+        crossref_config = parse_raw_config(raw_config_object)
         crossref_object = generate.CrossrefXML(articles, crossref_config, None, True)
         self.assertIsNotNone(crossref_object.pub_date)
         self.assertIsNotNone(crossref_object.generated)
@@ -69,22 +70,22 @@ class TestGenerate(unittest.TestCase):
         article_xml_file = 'elife-16988-v1.xml'
         file_path = TEST_DATA_PATH + article_xml_file
         articles = generate.build_articles_for_crossref([file_path])
-        raw_config = config['elife']
+        raw_config_object = raw_config('elife')
         # override config values - need to save the originals first then set them back
         #  so that other tests will pass
-        jats_abstract = raw_config.get('jats_abstract')
-        face_markup = raw_config.get('face_markup')
-        raw_config['jats_abstract'] = 'true'
-        raw_config['face_markup'] = 'true'
-        crossref_config = parse_raw_config(raw_config)
+        jats_abstract = raw_config_object.get('jats_abstract')
+        face_markup = raw_config_object.get('face_markup')
+        raw_config_object['jats_abstract'] = 'true'
+        raw_config_object['face_markup'] = 'true'
+        crossref_config = parse_raw_config(raw_config_object)
         # create the Crossref XML
         crossref_object = generate.CrossrefXML(articles, crossref_config, None, True)
         # Check for some tags we expect to find in the output
         self.assertTrue('<jats:italic>' in crossref_object.output_xml())
         self.assertTrue('</b>' in crossref_object.output_xml())
         # now set the config back to normal
-        raw_config['jats_abstract'] = jats_abstract
-        raw_config['face_markup'] = face_markup
+        raw_config_object['jats_abstract'] = jats_abstract
+        raw_config_object['face_markup'] = face_markup
 
 
     def test_crossref_xml_to_disk(self):
