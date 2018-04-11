@@ -324,11 +324,20 @@ class CrossrefXML(object):
             if not pattern_type:
                 pattern_type = "doi_pattern"
             version = self.elife_style_article_attributes(obj)
-            return self.crossref_config.get(pattern_type).format(
-                doi=obj.doi,
-                manuscript=obj.manuscript,
-                volume=obj.volume,
-                version=version)
+            doi_pattern = self.crossref_config.get(pattern_type)
+            if doi_pattern != '':
+                return self.crossref_config.get(pattern_type).format(
+                    doi=obj.doi,
+                    manuscript=obj.manuscript,
+                    volume=obj.volume,
+                    version=version)
+            else:
+                # if no doi_pattern is specified, try to get it from the self-uri value
+                #  that has no content_type
+                for self_uri in obj.self_uri_list:
+                    if self_uri.content_type is None:
+                        return self_uri.xlink_href
+
         elif isinstance(obj, Component):
             component_id = obj.id
             prefix1 = ''
