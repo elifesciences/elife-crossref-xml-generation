@@ -18,6 +18,7 @@ if __name__ == '__main__':
     xml_files.append(['tests/test_data/elife-00508-v1.xml', 'elife', default_pub_date, False])
     xml_files.append(['tests/test_data/cstp77-jats.xml', 'cstp', default_pub_date, False])
     xml_files.append(['tests/test_data/bmjopen-4-e003269.xml', 'bmjopen', default_pub_date, False])
+    xml_files.append(['tests/test_data/up-sta-example.xml', None, default_pub_date, False])
     for xml_file, config_section, pub_date, add_comment in xml_files:
         generate.TMP_DIR = 'tests/test_data'
         articles = generate.build_articles_for_crossref([xml_file])
