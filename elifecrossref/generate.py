@@ -11,7 +11,7 @@ from elifetools import utils as etoolsutils
 from elifetools import xmlio
 
 from elifecrossref import utils
-from elifecrossref.conf import config, parse_raw_config
+from elifecrossref.conf import raw_config, parse_raw_config
 
 
 TMP_DIR = 'tmp'
@@ -1028,8 +1028,7 @@ def build_crossref_xml(poa_articles, config_section="elife", pub_date=None, add_
     Given a list of article article objects
     generate crossref XML from them
     """
-    raw_config = config[config_section]
-    crossref_config = parse_raw_config(raw_config)
+    crossref_config = parse_raw_config(raw_config(config_section))
     return CrossrefXML(poa_articles, crossref_config, pub_date, add_comment)
 
 
