@@ -1,4 +1,5 @@
 from elifecrossref import generate
+from elifecrossref.conf import raw_config, parse_raw_config
 import time
 
 if __name__ == '__main__':
@@ -22,4 +23,5 @@ if __name__ == '__main__':
     for xml_file, config_section, pub_date, add_comment in xml_files:
         generate.TMP_DIR = 'tests/test_data'
         articles = generate.build_articles_for_crossref([xml_file])
-        generate.crossref_xml_to_disk(articles, config_section, pub_date, add_comment)
+        crossref_config = parse_raw_config(raw_config(config_section))
+        generate.crossref_xml_to_disk(articles, crossref_config, pub_date, add_comment)
