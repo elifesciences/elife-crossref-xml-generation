@@ -4,13 +4,17 @@ import json
 CONFIG_FILE = 'crossref.cfg'
 
 
-def load_config(config_file=CONFIG_FILE):
+def load_config(config_file=None):
+    if not config_file:
+        config_file=CONFIG_FILE
     config = configparser.ConfigParser(interpolation=None)
     config.read(config_file)
     return config
 
-def raw_config(config_section, config_file=CONFIG_FILE):
+def raw_config(config_section, config_file=None):
     "try to load the config section"
+    if not config_file:
+        config_file=CONFIG_FILE
     config = load_config(config_file)
     if config.has_section(config_section):
         return config[config_section]

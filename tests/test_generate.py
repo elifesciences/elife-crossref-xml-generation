@@ -41,7 +41,10 @@ class TestGenerate(unittest.TestCase):
         for (article_xml_file, crossref_xml_file, config_section, pub_date) in self.passes:
             file_path = TEST_DATA_PATH + article_xml_file
             articles = generate.build_articles_for_crossref([file_path])
-            crossref_xml = generate.crossref_xml(articles, config_section, pub_date, False)
+            crossref_config = None
+            if config_section:
+                crossref_config = parse_raw_config(raw_config(config_section))
+            crossref_xml = generate.crossref_xml(articles, crossref_config, pub_date, False)
             model_crossref_xml = self.read_file_content(TEST_DATA_PATH + crossref_xml_file)
             self.assertEqual(crossref_xml, model_crossref_xml.decode('utf-8'))
 
@@ -89,16 +92,16 @@ class TestGenerate(unittest.TestCase):
 
 
     def test_crossref_xml_to_disk(self):
-        "test writing to disk for test coverage"
-        article_xml_file = 'elife_poa_e02725.xml'
-        crossref_xml_file = 'elife-crossref-02725-20170717071707.xml'
-        config_section = 'elife'
+        "test writing to disk for test coverage and also not pass crossref_config"
+        article_xml_file = 'up-sta-example.xml'
+        crossref_xml_file = 'crossref-606-20170717071707.xml'
+        crossref_config = None
         pub_date = self.default_pub_date
         file_path = TEST_DATA_PATH + article_xml_file
         # build the article object
         articles = generate.build_articles_for_crossref([file_path])
         # generate and write to disk
-        generate.crossref_xml_to_disk(articles, config_section, pub_date, False)
+        generate.crossref_xml_to_disk(articles, crossref_config, pub_date, False)
         # check the output matches
         with open(TEST_DATA_PATH + crossref_xml_file, 'rb') as fp:
             expected_output = fp.read()

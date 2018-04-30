@@ -1023,24 +1023,29 @@ class CrossrefXML(object):
             return reparsed.toxml(encoding=encoding).decode(encoding)
 
 
-def build_crossref_xml(poa_articles, config_section="elife", pub_date=None, add_comment=True):
+def build_crossref_xml(poa_articles, crossref_config=None, pub_date=None, add_comment=True):
     """
     Given a list of article article objects
     generate crossref XML from them
     """
-    crossref_config = parse_raw_config(raw_config(config_section))
+    if not crossref_config:
+        crossref_config = parse_raw_config(raw_config(None))
     return CrossrefXML(poa_articles, crossref_config, pub_date, add_comment)
 
 
-def crossref_xml(poa_articles, config_section="elife", pub_date=None, add_comment=True):
+def crossref_xml(poa_articles, crossref_config=None, pub_date=None, add_comment=True):
     "build crossref xml and return output as a string"
-    c_xml = build_crossref_xml(poa_articles, config_section, pub_date, add_comment)
+    if not crossref_config:
+        crossref_config = parse_raw_config(raw_config(None))
+    c_xml = build_crossref_xml(poa_articles, crossref_config, pub_date, add_comment)
     return c_xml.output_xml()
 
 
-def crossref_xml_to_disk(poa_articles, config_section="elife", pub_date=None, add_comment=True):
+def crossref_xml_to_disk(poa_articles, crossref_config=None, pub_date=None, add_comment=True):
     "build crossref xml and write the output to disk"
-    c_xml = build_crossref_xml(poa_articles, config_section, pub_date, add_comment)
+    if not crossref_config:
+        crossref_config = parse_raw_config(raw_config(None))
+    c_xml = build_crossref_xml(poa_articles, crossref_config, pub_date, add_comment)
     xml_string = c_xml.output_xml()
     # Write to file
     filename = TMP_DIR + os.sep + c_xml.batch_id + '.xml'
