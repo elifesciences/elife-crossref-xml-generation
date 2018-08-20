@@ -365,11 +365,6 @@ class CrossrefXML(object):
                 component_id = 'digest'
             else:
                 component_id = 'abstract'
-        elif obj.type and obj.type == 'sub-article':
-            if obj.asset and obj.asset == 'dec':
-                component_id = 'decision-letter'
-            elif obj.asset and  obj.asset == 'resp':
-                component_id = 'author-response'
         # Set the URL prefix for some types
         prefix1 = ''
         if (obj.asset and obj.asset in ['figsupp', 'data']
