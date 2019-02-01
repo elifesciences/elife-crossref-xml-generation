@@ -651,7 +651,7 @@ class CrossrefXML(object):
                     if (self.crossref_config.get('crossref_schema_version') 
                             in ['4.3.5', '4.3.7', '4.4.0']):
                         # Until alternate tag is available, elocation-id goes into first_page tag
-                        self.first_page = SubElement(self.citation, 'elocation_id')
+                        self.first_page = SubElement(self.citation, 'first_page')
                         self.first_page.text = ref.elocation_id
                     else:
                         # schema greater than 4.4.0 supports elocation_id
