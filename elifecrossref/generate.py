@@ -100,6 +100,19 @@ class CrossrefXML(object):
                 'http://www.crossref.org/schemas/crossref4.4.0.xsd'))
             self.root.set('xmlns:mml', 'http://www.w3.org/1998/Math/MathML')
             self.root.set('xmlns:jats', 'http://www.ncbi.nlm.nih.gov/JATS1')
+        elif schema_version == "4.4.1":
+            self.root.set('version', "4.4.1")
+            self.root.set('xmlns', 'http://www.crossref.org/schema/4.4.1')
+            self.root.set('xmlns:xsi', 'http://www.w3.org/2001/XMLSchema-instance')
+            self.root.set('xmlns:fr', 'http://www.crossref.org/fundref.xsd')
+            self.root.set('xmlns:ai', 'http://www.crossref.org/AccessIndicators.xsd')
+            self.root.set('xmlns:ct', 'http://www.crossref.org/clinicaltrials.xsd')
+            self.root.set('xmlns:rel', 'http://www.crossref.org/relations.xsd')
+            self.root.set('xsi:schemaLocation', (
+                'http://www.crossref.org/schema/4.4.1 ' +
+                'http://www.crossref.org/schemas/crossref4.4.1.xsd'))
+            self.root.set('xmlns:mml', 'http://www.w3.org/1998/Math/MathML')
+            self.root.set('xmlns:jats', 'http://www.ncbi.nlm.nih.gov/JATS1')
 
     def build(self, poa_articles):
         self.set_head(self.root)
@@ -635,9 +648,15 @@ class CrossrefXML(object):
                     self.isbn.text = ref.isbn
 
                 if ref.elocation_id:
-                    # Until an alternate tag is available, elocation-id goes into the first_page tag
-                    self.first_page = SubElement(self.citation, 'first_page')
-                    self.first_page.text = ref.elocation_id
+                    if (self.crossref_config.get('crossref_schema_version') 
+                            in ['4.3.5', '4.3.7', '4.4.0']):
+                        # Until alternate tag is available, elocation-id goes into first_page tag
+                        self.first_page = SubElement(self.citation, 'elocation_id')
+                        self.first_page.text = ref.elocation_id
+                    else:
+                        # schema greater than 4.4.0 supports elocation_id
+                        self.elocation_id = SubElement(self.citation, 'elocation_id')
+                        self.elocation_id.text = ref.elocation_id
 
                 # unstructured-citation
                 if self.do_unstructured_citation(ref) is True:
