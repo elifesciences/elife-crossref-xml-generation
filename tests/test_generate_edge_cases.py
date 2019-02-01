@@ -113,6 +113,12 @@ class TestGenerateCrossrefSchemaVersion(unittest.TestCase):
             'xmlns="http://www.crossref.org/schema/4.4.0"'
         )
 
+    def test_generate_crossref_schema_version_4_4_1(self):
+        self.generate_crossref_schema_version(
+            '4.4.1',
+            'xmlns="http://www.crossref.org/schema/4.4.1"'
+        )
+
     def generate_crossref_schema_version(self, crossref_schema_version, expected_snippet):
         "Test non-default crossref schema version"
         "build an article object and component, generate Crossref XML"
