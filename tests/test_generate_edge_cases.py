@@ -113,6 +113,12 @@ class TestGenerateCrossrefSchemaVersion(unittest.TestCase):
             'xmlns="http://www.crossref.org/schema/4.4.0"'
         )
 
+    def test_generate_crossref_schema_version_4_4_1(self):
+        self.generate_crossref_schema_version(
+            '4.4.1',
+            'xmlns="http://www.crossref.org/schema/4.4.1"'
+        )
+
     def generate_crossref_schema_version(self, crossref_schema_version, expected_snippet):
         "Test non-default crossref schema version"
         "build an article object and component, generate Crossref XML"
@@ -232,6 +238,28 @@ class TestGenerateCrossrefCitationId(unittest.TestCase):
         c_xml = generate.build_crossref_xml([article])
         crossref_xml_string = c_xml.output_xml()
         self.assertTrue('<citation key="1">' in crossref_xml_string)
+
+
+class TestGenerateCrossrefCitationElocationId(unittest.TestCase):
+
+    def test_ref_list_citation_elocation_id(self):
+        "for test coverage for schema where elocation_id goes into first_page element"
+        # load a config and override the value
+        raw_config_object = raw_config('elife')
+        original_crossref_schema_version = raw_config_object.get('crossref_schema_version')
+        raw_config_object['crossref_schema_version'] = '4.4.0'
+        crossref_config = parse_raw_config(raw_config_object)
+        doi = "10.7554/eLife.00666"
+        title = "Test article"
+        article = Article(doi, title)
+        citation = Citation()
+        citation.elocation_id = "e00003"
+        article.ref_list = [citation]
+        c_xml = generate.CrossrefXML([article], crossref_config, None, True)
+        crossref_xml_string = c_xml.output_xml()
+        self.assertTrue('<first_page>e00003</first_page>' in crossref_xml_string)
+        # now set the config back to normal
+        raw_config_object['crossref_schema_version'] = original_crossref_schema_version
 
 
 class TestGenerateCrossrefDatasets(unittest.TestCase):

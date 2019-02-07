@@ -27,7 +27,8 @@ class CrossrefXML(object):
         # Set the config
         self.crossref_config = crossref_config
         # Create the root XML node
-        self.set_root(self.crossref_config.get('crossref_schema_version'))
+        self.root = Element('doi_batch')
+        set_root(self.root, self.crossref_config.get('crossref_schema_version'))
 
         # Publication date
         if pub_date is None:
@@ -59,47 +60,6 @@ class CrossrefXML(object):
 
         # Build out the Crossref XML
         self.build(poa_articles)
-
-    def set_root(self, schema_version):
-        self.root = Element('doi_batch')
-        # set the boiler plate values
-        if schema_version == "4.3.5":
-            self.root.set('version', "4.3.5")
-            self.root.set('xmlns', 'http://www.crossref.org/schema/4.3.5')
-            self.root.set('xmlns:xsi', 'http://www.w3.org/2001/XMLSchema-instance')
-            self.root.set('xmlns:fr', 'http://www.crossref.org/fundref.xsd')
-            self.root.set('xmlns:ai', 'http://www.crossref.org/AccessIndicators.xsd')
-            self.root.set('xsi:schemaLocation', (
-                'http://www.crossref.org/schema/4.3.5 ' +
-                'http://www.crossref.org/schemas/crossref4.3.5.xsd'))
-            self.root.set('xmlns:mml', 'http://www.w3.org/1998/Math/MathML')
-            self.root.set('xmlns:jats', 'http://www.ncbi.nlm.nih.gov/JATS1')
-        elif schema_version == "4.3.7":
-            self.root.set('version', "4.3.7")
-            self.root.set('xmlns', 'http://www.crossref.org/schema/4.3.7')
-            self.root.set('xmlns:xsi', 'http://www.w3.org/2001/XMLSchema-instance')
-            self.root.set('xmlns:fr', 'http://www.crossref.org/fundref.xsd')
-            self.root.set('xmlns:ai', 'http://www.crossref.org/AccessIndicators.xsd')
-            self.root.set('xmlns:ct', 'http://www.crossref.org/clinicaltrials.xsd')
-            self.root.set('xmlns:rel', 'http://www.crossref.org/relations.xsd')
-            self.root.set('xsi:schemaLocation', (
-                'http://www.crossref.org/schema/4.3.7 ' +
-                'http://www.crossref.org/schemas/crossref4.3.7.xsd'))
-            self.root.set('xmlns:mml', 'http://www.w3.org/1998/Math/MathML')
-            self.root.set('xmlns:jats', 'http://www.ncbi.nlm.nih.gov/JATS1')
-        elif schema_version == "4.4.0":
-            self.root.set('version', "4.4.0")
-            self.root.set('xmlns', 'http://www.crossref.org/schema/4.4.0')
-            self.root.set('xmlns:xsi', 'http://www.w3.org/2001/XMLSchema-instance')
-            self.root.set('xmlns:fr', 'http://www.crossref.org/fundref.xsd')
-            self.root.set('xmlns:ai', 'http://www.crossref.org/AccessIndicators.xsd')
-            self.root.set('xmlns:ct', 'http://www.crossref.org/clinicaltrials.xsd')
-            self.root.set('xmlns:rel', 'http://www.crossref.org/relations.xsd')
-            self.root.set('xsi:schemaLocation', (
-                'http://www.crossref.org/schema/4.4.0 ' +
-                'http://www.crossref.org/schemas/crossref4.4.0.xsd'))
-            self.root.set('xmlns:mml', 'http://www.w3.org/1998/Math/MathML')
-            self.root.set('xmlns:jats', 'http://www.ncbi.nlm.nih.gov/JATS1')
 
     def build(self, poa_articles):
         self.set_head(self.root)
@@ -635,9 +595,15 @@ class CrossrefXML(object):
                     self.isbn.text = ref.isbn
 
                 if ref.elocation_id:
-                    # Until an alternate tag is available, elocation-id goes into the first_page tag
-                    self.first_page = SubElement(self.citation, 'first_page')
-                    self.first_page.text = ref.elocation_id
+                    if (self.crossref_config.get('crossref_schema_version') 
+                            in ['4.3.5', '4.3.7', '4.4.0']):
+                        # Until alternate tag is available, elocation-id goes into first_page tag
+                        self.first_page = SubElement(self.citation, 'first_page')
+                        self.first_page.text = ref.elocation_id
+                    else:
+                        # schema greater than 4.4.0 supports elocation_id
+                        self.elocation_id = SubElement(self.citation, 'elocation_id')
+                        self.elocation_id.text = ref.elocation_id
 
                 # unstructured-citation
                 if self.do_unstructured_citation(ref) is True:
@@ -1016,6 +982,27 @@ class CrossrefXML(object):
             return reparsed.toprettyxml(indent, encoding=encoding).decode(encoding)
         else:
             return reparsed.toxml(encoding=encoding).decode(encoding)
+
+
+def set_root(root, schema_version):
+    """Set the root tag namespaces and schema details
+    
+    :param root: ElementTree.Element tag
+    :param schema_version: version of the Crossref schema as a string, e.g. 4.4.1
+    """
+    root.set('version', schema_version)
+    root.set('xmlns', 'http://www.crossref.org/schema/%s' % schema_version)
+    root.set('xmlns:xsi', 'http://www.w3.org/2001/XMLSchema-instance')
+    root.set('xmlns:fr', 'http://www.crossref.org/fundref.xsd')
+    root.set('xmlns:ai', 'http://www.crossref.org/AccessIndicators.xsd')
+    if schema_version != "4.3.5":
+        root.set('xmlns:ct', 'http://www.crossref.org/clinicaltrials.xsd')
+        root.set('xmlns:rel', 'http://www.crossref.org/relations.xsd')
+    schema_location_name = 'http://www.crossref.org/schema/%s' % schema_version
+    schema_location_uri = 'http://www.crossref.org/schemas/crossref%s.xsd' % schema_version
+    root.set('xsi:schemaLocation', '%s %s' % (schema_location_name, schema_location_uri))
+    root.set('xmlns:mml', 'http://www.w3.org/1998/Math/MathML')
+    root.set('xmlns:jats', 'http://www.ncbi.nlm.nih.gov/JATS1')
 
 
 def build_crossref_xml(poa_articles, crossref_config=None, pub_date=None, add_comment=True):
