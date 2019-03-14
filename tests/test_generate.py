@@ -2,6 +2,7 @@ import unittest
 import time
 import os
 import re
+from xml.etree.ElementTree import Comment
 from elifecrossref import generate
 from elifearticle.article import Article
 from elifecrossref.conf import raw_config, parse_raw_config
@@ -61,8 +62,7 @@ class TestGenerate(unittest.TestCase):
         crossref_object = generate.CrossrefXML(articles, crossref_config, None, True)
         self.assertIsNotNone(crossref_object.pub_date)
         self.assertIsNotNone(crossref_object.generated)
-        self.assertIsNotNone(crossref_object.last_commit)
-        self.assertIsNotNone(crossref_object.comment)
+        self.assertIsNotNone([tag for tag in crossref_object.root.iter() if tag is Comment])
         self.assertIsNotNone(crossref_object.output_xml(pretty=True, indent='\t'))
 
 
