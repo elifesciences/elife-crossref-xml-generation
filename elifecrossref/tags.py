@@ -5,6 +5,11 @@ from elifearticle import utils as eautils
 from elifecrossref import utils
 
 
+# namespaces for when reparsing XML strings
+REPARSING_NAMESPACES = (''' xmlns:jats="http://www.ncbi.nlm.nih.gov/JATS1"
+ xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" ''')
+
+
 def clean_tags(original_string, do_not_clean=None):
     """remove all unwanted inline tags from the string"""
     do_not_clean_tags = do_not_clean if do_not_clean else []
@@ -25,22 +30,22 @@ def clean_tags(original_string, do_not_clean=None):
     return tag_converted_string
 
 
-def add_clean_tag(parent, tag_name, original_string, reparsing_namespaces=''):
+def add_clean_tag(parent, tag_name, original_string, namespaces=REPARSING_NAMESPACES):
     """remove allowed tags and then add a tag the parent"""
     tag_converted_string = clean_tags(original_string)
     tag_converted_string = etoolsutils.escape_ampersand(tag_converted_string)
     tag_converted_string = etoolsutils.escape_unmatched_angle_brackets(
         tag_converted_string)
-    tagged_string = ('<' + tag_name + reparsing_namespaces + '>' +
+    tagged_string = ('<' + tag_name + namespaces + '>' +
                      tag_converted_string + '</' + tag_name + '>')
     reparsed = minidom.parseString(tagged_string.encode('utf-8'))
     xmlio.append_minidom_xml_to_elementtree_xml(parent, reparsed)
 
 
-def add_inline_tag(parent, tag_name, original_string, reparsing_namespaces=''):
+def add_inline_tag(parent, tag_name, original_string, namespaces=REPARSING_NAMESPACES):
     """replace inline tags found in the original_string and then add a tag the parent"""
     tag_converted_string = convert_inline_tags(original_string)
-    tagged_string = ('<' + tag_name + reparsing_namespaces + '>' +
+    tagged_string = ('<' + tag_name + namespaces + '>' +
                      tag_converted_string + '</' + tag_name + '>')
     reparsed = minidom.parseString(tagged_string.encode('utf-8'))
     xmlio.append_minidom_xml_to_elementtree_xml(parent, reparsed)

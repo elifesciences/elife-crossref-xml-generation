@@ -193,8 +193,7 @@ class TestGenerateCrossrefUnstructuredCitation(unittest.TestCase):
         parent = Element('citation')
         c_xml = generate.CrossrefXML([], crossref_config)
         face_markup = False
-        citation_element = generate.set_unstructured_citation(
-            parent, citation, c_xml.reparsing_namespaces, face_markup)
+        citation_element = generate.set_unstructured_citation(parent, citation, face_markup)
         rough_string = ElementTree.tostring(citation_element).decode('utf-8')
         self.assertEqual(rough_string, expected)
 
@@ -214,8 +213,7 @@ class TestGenerateCrossrefUnstructuredCitation(unittest.TestCase):
         parent = Element('citation')
         c_xml = generate.CrossrefXML([], crossref_config)
         face_markup = True
-        citation_element = generate.set_unstructured_citation(
-            parent, citation, c_xml.reparsing_namespaces, face_markup)
+        citation_element = generate.set_unstructured_citation(parent, citation, face_markup)
         rough_string = ElementTree.tostring(citation_element).decode('utf-8')
         self.assertEqual(rough_string, expected)
         # now set the config back to normal

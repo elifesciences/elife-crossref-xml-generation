@@ -13,7 +13,7 @@ from elifetools import xmlio
 from elifecrossref import utils, elife, contributor, funding
 from elifecrossref.conf import raw_config, parse_raw_config
 from elifecrossref.mime_type import crossref_mime_type
-from elifecrossref.tags import add_clean_tag, add_inline_tag, clean_tags
+from elifecrossref.tags import REPARSING_NAMESPACES, add_clean_tag, add_inline_tag, clean_tags
 
 
 TMP_DIR = 'tmp'
@@ -55,11 +55,6 @@ class CrossrefXML(object):
                               ' at ' + self.generated +
                               ' from version ' + last_commit)
             self.root.append(comment)
-
-        # namespaces for when reparsing XML strings
-        self.reparsing_namespaces = (''' xmlns:jats="http://www.ncbi.nlm.nih.gov/JATS1"
-                                     xmlns:mml="http://www.w3.org/1998/Math/MathML"
-                                     xmlns:xlink="http://www.w3.org/1999/xlink" ''')
 
         # to keep track of the rel:program tag, if used
         self.relations_program_tag = None
@@ -200,11 +195,9 @@ class CrossrefXML(object):
         # remove unwanted tags
         tag_converted_title = eautils.remove_tag('ext-link', poa_article.title)
         if self.crossref_config.get('face_markup') is True:
-            add_inline_tag(root_xml_element, tag_name, tag_converted_title,
-                           self.reparsing_namespaces)
+            add_inline_tag(root_xml_element, tag_name, tag_converted_title)
         else:
-            add_clean_tag(root_xml_element, tag_name, tag_converted_title,
-                          self.reparsing_namespaces)
+            add_clean_tag(root_xml_element, tag_name, tag_converted_title)
         parent.append(root_xml_element)
 
     def set_doi_data(self, parent, poa_article):
@@ -349,7 +342,7 @@ class CrossrefXML(object):
             tag_converted_abstract = eautils.replace_tags(tag_converted_abstract, 'p', 'jats:p')
             tag_converted_abstract = tag_converted_abstract
 
-        tagged_string = '<' + tag_name + self.reparsing_namespaces + attributes_text + '>'
+        tagged_string = '<' + tag_name + REPARSING_NAMESPACES + attributes_text + '>'
         tagged_string += tag_converted_abstract
         tagged_string += '</' + tag_name + '>'
         reparsed = minidom.parseString(tagged_string.encode('utf-8'))
@@ -390,7 +383,7 @@ class CrossrefXML(object):
                 self.set_citation_related_item(parent, ref)
 
             # continue with creating a citation tag
-            set_citation(citation_list_tag, ref, ref_index, self.reparsing_namespaces,
+            set_citation(citation_list_tag, ref, ref_index,
                          self.crossref_config.get('face_markup'),
                          self.crossref_config.get('crossref_schema_version'))
 
@@ -526,10 +519,9 @@ class CrossrefXML(object):
         # Use <i> tags, not <italic> tags, <b> tags not <bold>
         if component.subtitle:
             if self.crossref_config.get('face_markup') is True:
-                add_inline_tag(parent, tag_name, component.subtitle,
-                               self.reparsing_namespaces)
+                add_inline_tag(parent, tag_name, component.subtitle)
             else:
-                add_clean_tag(parent, tag_name, component.subtitle, self.reparsing_namespaces)
+                add_clean_tag(parent, tag_name, component.subtitle)
 
     def output_xml(self, pretty=False, indent=""):
         encoding = 'utf-8'
@@ -563,7 +555,7 @@ def set_root(root, schema_version):
     root.set('xmlns:jats', 'http://www.ncbi.nlm.nih.gov/JATS1')
 
 
-def set_citation(parent, ref, ref_index, reparsing_namespaces, face_markup,
+def set_citation(parent, ref, ref_index, face_markup,
                  crossref_schema_version):
     # continue with creating a citation tag
     citation_tag = SubElement(parent, 'citation')
@@ -589,8 +581,7 @@ def set_citation(parent, ref, ref_index, reparsing_namespaces, face_markup,
             author_tag = SubElement(citation_tag, 'author')
             author_tag.text = first_author.get("surname")
         elif first_author.get("collab"):
-            add_clean_tag(citation_tag, 'author', first_author.get("collab"),
-                          reparsing_namespaces)
+            add_clean_tag(citation_tag, 'author', first_author.get("collab"))
 
     if ref.volume:
         volume_tag = SubElement(citation_tag, 'volume')
@@ -614,11 +605,9 @@ def set_citation(parent, ref, ref_index, reparsing_namespaces, face_markup,
 
     if ref.article_title or ref.data_title:
         if ref.article_title:
-            add_clean_tag(citation_tag, 'article_title', ref.article_title,
-                          reparsing_namespaces)
+            add_clean_tag(citation_tag, 'article_title', ref.article_title)
         elif ref.data_title:
-            add_clean_tag(citation_tag, 'article_title', ref.data_title,
-                          reparsing_namespaces)
+            add_clean_tag(citation_tag, 'article_title', ref.data_title)
 
     if ref.doi:
         doi_tag = SubElement(citation_tag, 'doi')
@@ -640,10 +629,10 @@ def set_citation(parent, ref, ref_index, reparsing_namespaces, face_markup,
 
     # unstructured-citation
     if do_unstructured_citation(ref) is True:
-        set_unstructured_citation(citation_tag, ref, reparsing_namespaces, face_markup)
+        set_unstructured_citation(citation_tag, ref, face_markup)
 
 
-def set_unstructured_citation(parent, ref, reparsing_namespaces, face_markup):
+def set_unstructured_citation(parent, ref, face_markup):
     # tag_content
     tag_content = ''
     author_line = citation_author_line(ref)
@@ -659,11 +648,9 @@ def set_unstructured_citation(parent, ref, reparsing_namespaces, face_markup):
     if tag_content != '':
         # handle inline tagging
         if face_markup is True:
-            add_inline_tag(parent, 'unstructured_citation', tag_content,
-                           reparsing_namespaces)
+            add_inline_tag(parent, 'unstructured_citation', tag_content)
         else:
-            add_clean_tag(parent, 'unstructured_citation', tag_content,
-                          reparsing_namespaces)
+            add_clean_tag(parent, 'unstructured_citation', tag_content)
     return parent
 
 
