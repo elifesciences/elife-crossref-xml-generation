@@ -684,12 +684,8 @@ class CrossrefXML(object):
     def do_citation_related_item(self, ref):
         "decide whether to create a related_item for a citation"
         if ref.publication_type and ref.publication_type == "data":
-            if ref.doi or ref.accession or ref.pmid or ref.uri:
-                return True
-            else:
-                return False
-        else:
-            return False
+            return bool(ref.doi or ref.accession or ref.pmid or ref.uri)
+        return False
 
     def set_citation_related_item(self, parent, ref):
         "depends on the relations_program tag existing already"
@@ -740,10 +736,7 @@ class CrossrefXML(object):
 
     def do_dataset_related_item(self, dataset):
         "decide whether to create a related_item for a dataset"
-        if dataset.accession_id or dataset.doi or dataset.uri:
-            return True
-        else:
-            return False
+        return bool(dataset.accession_id or dataset.doi or dataset.uri)
 
     def set_datasets(self, parent, poa_article):
         """
