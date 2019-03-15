@@ -702,7 +702,7 @@ class CrossrefXML(object):
         self.set_relations_program(parent)
         related_item_tag = SubElement(self.relations_program_tag, 'rel:related_item')
         if ref.data_title:
-            self.set_related_item_description(related_item_tag, ref.data_title)
+            set_related_item_description(related_item_tag, ref.data_title)
         identifier_type = None
         related_item_text = None
         related_item_type = "inter_work_relation"
@@ -720,7 +720,7 @@ class CrossrefXML(object):
             identifier_type = "uri"
             related_item_text = ref.uri
         if identifier_type and related_item_text:
-            self.set_related_item_work_relation(
+            set_related_item_work_relation(
                 related_item_tag, related_item_type, relationship_type,
                 identifier_type, related_item_text)
 
@@ -761,55 +761,31 @@ class CrossrefXML(object):
             related_item_tag = SubElement(self.relations_program_tag, 'rel:related_item')
             related_item_type = "inter_work_relation"
             description = None
-            relationship_type = self.dataset_relationship_type(dataset)
+            relationship_type = dataset_relationship_type(dataset)
             # set the description
             if dataset.title:
                 description = dataset.title
             if description:
-                self.set_related_item_description(related_item_tag, description)
+                set_related_item_description(related_item_tag, description)
             # Now add one inter_work_relation tag in order ot priority
             if dataset.doi:
                 identifier_type = "doi"
                 related_item_text = dataset.doi
-                self.set_related_item_work_relation(
+                set_related_item_work_relation(
                     related_item_tag, related_item_type, relationship_type,
                     identifier_type, related_item_text)
             elif dataset.accession_id:
                 identifier_type = "accession"
                 related_item_text = dataset.accession_id
-                self.set_related_item_work_relation(
+                set_related_item_work_relation(
                     related_item_tag, related_item_type, relationship_type,
                     identifier_type, related_item_text)
             elif dataset.uri:
                 identifier_type = "uri"
                 related_item_text = dataset.uri
-                self.set_related_item_work_relation(
+                set_related_item_work_relation(
                     related_item_tag, related_item_type, relationship_type,
                     identifier_type, related_item_text)
-
-    def dataset_relationship_type(self, dataset):
-        "relationship_type for the related_item depending on the dataset_type"
-        if dataset.dataset_type:
-            if dataset.dataset_type == "prev_published_datasets":
-                return "references"
-            elif dataset.dataset_type == "datasets":
-                return "isSupplementedBy"
-        # default if not specified
-        return "isSupplementedBy"
-
-    def set_related_item_description(self, parent, description):
-        if description:
-            description_tag = SubElement(parent, 'rel:description')
-            description_tag.text = description
-
-    def set_related_item_work_relation(self, parent, related_item_type, relationship_type,
-                                       identifier_type, related_item_text):
-        # only supporting inter_work_relation for now
-        if related_item_type == "inter_work_relation":
-            work_relation_tag = SubElement(parent, 'rel:inter_work_relation')
-            work_relation_tag.set("relationship-type", relationship_type)
-            work_relation_tag.set("identifier-type", identifier_type)
-            work_relation_tag.text = related_item_text
 
     def set_component_list(self, parent, poa_article):
         """
@@ -905,6 +881,33 @@ def set_root(root, schema_version):
     root.set('xsi:schemaLocation', '%s %s' % (schema_location_name, schema_location_uri))
     root.set('xmlns:mml', 'http://www.w3.org/1998/Math/MathML')
     root.set('xmlns:jats', 'http://www.ncbi.nlm.nih.gov/JATS1')
+
+
+def dataset_relationship_type(dataset):
+    "relationship_type for the related_item depending on the dataset_type"
+    if dataset.dataset_type:
+        if dataset.dataset_type == "prev_published_datasets":
+            return "references"
+        elif dataset.dataset_type == "datasets":
+            return "isSupplementedBy"
+    # default if not specified
+    return "isSupplementedBy"
+
+
+def set_related_item_description(parent, description):
+    if description:
+        description_tag = SubElement(parent, 'rel:description')
+        description_tag.text = description
+
+
+def set_related_item_work_relation(parent, related_item_type, relationship_type,
+                                   identifier_type, related_item_text):
+    # only supporting inter_work_relation for now
+    if related_item_type == "inter_work_relation":
+        work_relation_tag = SubElement(parent, 'rel:inter_work_relation')
+        work_relation_tag.set("relationship-type", relationship_type)
+        work_relation_tag.set("identifier-type", identifier_type)
+        work_relation_tag.text = related_item_text
 
 
 def build_crossref_xml(poa_articles, crossref_config=None, pub_date=None, add_comment=True):
