@@ -176,7 +176,7 @@ class CrossrefXML(object):
         self.set_access_indicators(journal_article_tag, poa_article)
 
         # this is the spot to add the relations program tag if it is required
-        if self.do_relations_program(poa_article) is True:
+        if do_relations_program(poa_article) is True:
             self.set_relations_program(journal_article_tag)
 
         self.set_datasets(journal_article_tag, poa_article)
@@ -518,20 +518,6 @@ class CrossrefXML(object):
                 related_item_tag, related_item_type, relationship_type,
                 identifier_type, related_item_text)
 
-    def do_relations_program(self, poa_article):
-        """call at a specific moment during generation to set this tag if required"""
-        do_relations = None
-        for dataset in poa_article.datasets:
-            if do_dataset_related_item(dataset) is True:
-                do_relations = True
-                break
-        if do_relations is not True and poa_article.ref_list:
-            for ref in poa_article.ref_list:
-                if do_citation_related_item(ref) is True:
-                    do_relations = True
-                    break
-        return do_relations
-
     def set_relations_program(self, parent):
         """set the relations program parent tag only once"""
         if self.relations_program_tag is None:
@@ -808,6 +794,21 @@ def do_citation_related_item(ref):
 def do_dataset_related_item(dataset):
     """decide whether to create a related_item for a dataset"""
     return bool(dataset.accession_id or dataset.doi or dataset.uri)
+
+
+def do_relations_program(poa_article):
+    """call at a specific moment during generation to set this tag if required"""
+    do_relations = None
+    for dataset in poa_article.datasets:
+        if do_dataset_related_item(dataset) is True:
+            do_relations = True
+            break
+    if do_relations is not True and poa_article.ref_list:
+        for ref in poa_article.ref_list:
+            if do_citation_related_item(ref) is True:
+                do_relations = True
+                break
+    return do_relations
 
 
 def dataset_relationship_type(dataset):
