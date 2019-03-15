@@ -722,11 +722,10 @@ class CrossrefXML(object):
     def do_relations_program(self, poa_article):
         "call at a specific moment during generation to set this tag if required"
         do_relations = None
-        if poa_article.datasets:
-            for dataset in poa_article.datasets:
-                if self.do_dataset_related_item(dataset) is True:
-                    do_relations = True
-                    break
+        for dataset in poa_article.datasets:
+            if self.do_dataset_related_item(dataset) is True:
+                do_relations = True
+                break
         if do_relations is not True and poa_article.ref_list:
             for ref in poa_article.ref_list:
                 if self.do_citation_related_item(ref) is True:
@@ -750,42 +749,41 @@ class CrossrefXML(object):
         """
         Add related_item tags for each dataset
         """
-        if poa_article.datasets:
-            for dataset in poa_article.datasets:
-                # Check for at least one identifier before adding the related_item
-                if not self.do_dataset_related_item(dataset):
-                    continue
-                # first set the parent tag if it does not yet exist
-                self.set_relations_program(parent)
-                # add related_item tag
-                related_item_tag = SubElement(self.relations_program_tag, 'rel:related_item')
-                related_item_type = "inter_work_relation"
-                description = None
-                relationship_type = self.dataset_relationship_type(dataset)
-                # set the description
-                if dataset.title:
-                    description = dataset.title
-                if description:
-                    self.set_related_item_description(related_item_tag, description)
-                # Now add one inter_work_relation tag in order ot priority
-                if dataset.doi:
-                    identifier_type = "doi"
-                    related_item_text = dataset.doi
-                    self.set_related_item_work_relation(
-                        related_item_tag, related_item_type, relationship_type,
-                        identifier_type, related_item_text)
-                elif dataset.accession_id:
-                    identifier_type = "accession"
-                    related_item_text = dataset.accession_id
-                    self.set_related_item_work_relation(
-                        related_item_tag, related_item_type, relationship_type,
-                        identifier_type, related_item_text)
-                elif dataset.uri:
-                    identifier_type = "uri"
-                    related_item_text = dataset.uri
-                    self.set_related_item_work_relation(
-                        related_item_tag, related_item_type, relationship_type,
-                        identifier_type, related_item_text)
+        for dataset in poa_article.datasets:
+            # Check for at least one identifier before adding the related_item
+            if not self.do_dataset_related_item(dataset):
+                continue
+            # first set the parent tag if it does not yet exist
+            self.set_relations_program(parent)
+            # add related_item tag
+            related_item_tag = SubElement(self.relations_program_tag, 'rel:related_item')
+            related_item_type = "inter_work_relation"
+            description = None
+            relationship_type = self.dataset_relationship_type(dataset)
+            # set the description
+            if dataset.title:
+                description = dataset.title
+            if description:
+                self.set_related_item_description(related_item_tag, description)
+            # Now add one inter_work_relation tag in order ot priority
+            if dataset.doi:
+                identifier_type = "doi"
+                related_item_text = dataset.doi
+                self.set_related_item_work_relation(
+                    related_item_tag, related_item_type, relationship_type,
+                    identifier_type, related_item_text)
+            elif dataset.accession_id:
+                identifier_type = "accession"
+                related_item_text = dataset.accession_id
+                self.set_related_item_work_relation(
+                    related_item_tag, related_item_type, relationship_type,
+                    identifier_type, related_item_text)
+            elif dataset.uri:
+                identifier_type = "uri"
+                related_item_text = dataset.uri
+                self.set_related_item_work_relation(
+                    related_item_tag, related_item_type, relationship_type,
+                    identifier_type, related_item_text)
 
     def dataset_relationship_type(self, dataset):
         "relationship_type for the related_item depending on the dataset_type"
