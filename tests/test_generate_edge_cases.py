@@ -149,25 +149,22 @@ class TestGenerateCrossrefCitationPublisher(unittest.TestCase):
     def test_generate_citation_publisher_none(self):
         """no publisher name concatenation"""
         citation = Citation()
-        c_xml = generate.CrossrefXML([], {})
-        self.assertIsNone(c_xml.citation_publisher(citation))
+        self.assertIsNone(generate.citation_publisher(citation))
 
     def test_generate_citation_publisher_loc_only(self):
         """no publisher name concatenation"""
         citation = Citation()
         citation.publisher_loc = self.publisher_loc
-        c_xml = generate.CrossrefXML([], {})
         self.assertEqual(
-            c_xml.citation_publisher(citation),
+            generate.citation_publisher(citation),
             "Nijmegen, The Netherlands")
 
     def test_generate_citation_publisher_name_only(self):
         """no publisher name concatenation"""
         citation = Citation()
         citation.publisher_name = self.publisher_name
-        c_xml = generate.CrossrefXML([], {})
         self.assertEqual(
-            c_xml.citation_publisher(citation),
+            generate.citation_publisher(citation),
             "Radboud University Nijmegen Medical Centre")
 
     def test_generate_citation_publisher_all(self):
@@ -175,9 +172,8 @@ class TestGenerateCrossrefCitationPublisher(unittest.TestCase):
         citation = Citation()
         citation.publisher_loc = self.publisher_loc
         citation.publisher_name = self.publisher_name
-        c_xml = generate.CrossrefXML([], {})
         self.assertEqual(
-            c_xml.citation_publisher(citation),
+            generate.citation_publisher(citation),
             "Nijmegen, The Netherlands: Radboud University Nijmegen Medical Centre")
 
 

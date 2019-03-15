@@ -117,12 +117,12 @@ class CrossrefXML(object):
     def set_journal(self, parent, poa_article):
         # Add journal for each article
         journal_tag = SubElement(parent, 'journal')
-        self.set_journal_metadata(journal_tag, poa_article)
+        set_journal_metadata(journal_tag, poa_article)
 
         journal_issue_tag = SubElement(journal_tag, 'journal_issue')
 
         pub_date = self.get_pub_date(poa_article)
-        self.set_publication_date(journal_issue_tag, pub_date)
+        set_publication_date(journal_issue_tag, pub_date)
 
         journal_volume_tag = SubElement(journal_issue_tag, 'journal_volume')
         volume_tag = SubElement(journal_volume_tag, 'volume')
@@ -137,16 +137,6 @@ class CrossrefXML(object):
         # Add journal article
         self.set_journal_article(journal_tag, poa_article)
 
-    def set_journal_metadata(self, parent, poa_article):
-        # journal_metadata
-        journal_metadata_tag = SubElement(parent, 'journal_metadata')
-        journal_metadata_tag.set("language", "en")
-        full_title_tag = SubElement(journal_metadata_tag, 'full_title')
-        full_title_tag.text = poa_article.journal_title
-        issn_tag = SubElement(journal_metadata_tag, 'issn')
-        issn_tag.set("media_type", "electronic")
-        issn_tag.text = poa_article.journal_issn
-
     def set_journal_article(self, parent, poa_article):
         journal_article_tag = SubElement(parent, 'journal_article')
         journal_article_tag.set("publication_type", "full_text")
@@ -159,15 +149,15 @@ class CrossrefXML(object):
         # Set the title with italic tag support
         self.set_titles(journal_article_tag, poa_article)
 
-        self.set_contributors(journal_article_tag, poa_article,
-                              self.crossref_config.get("contrib_types"))
+        set_contributors(journal_article_tag, poa_article,
+                         self.crossref_config.get("contrib_types"))
 
         self.set_abstract(journal_article_tag, poa_article)
         self.set_digest(journal_article_tag, poa_article)
 
         # Journal publication date
         pub_date = self.get_pub_date(poa_article)
-        self.set_publication_date(journal_article_tag, pub_date)
+        set_publication_date(journal_article_tag, pub_date)
 
         publisher_item_tag = SubElement(journal_article_tag, 'publisher_item')
         if self.crossref_config.get("elocation_id") and poa_article.elocation_id:
@@ -181,7 +171,7 @@ class CrossrefXML(object):
         # Disable crossmark for now
         # self.set_crossmark(self.journal_article, poa_article)
 
-        self.set_fundref(journal_article_tag, poa_article)
+        set_fundref(journal_article_tag, poa_article)
 
         self.set_access_indicators(journal_article_tag, poa_article)
 
@@ -191,8 +181,8 @@ class CrossrefXML(object):
 
         self.set_datasets(journal_article_tag, poa_article)
 
-        self.set_archive_locations(journal_article_tag,
-                                   self.crossref_config.get("archive_locations"))
+        set_archive_locations(journal_article_tag,
+                              self.crossref_config.get("archive_locations"))
 
         self.set_doi_data(journal_article_tag, poa_article)
 
@@ -266,7 +256,7 @@ class CrossrefXML(object):
     def do_set_collection(self, poa_article, collection_property):
         """decide whether to set collection tags"""
         # only add text and data mining details if the article has a license
-        if not self.has_license(poa_article):
+        if not has_license(poa_article):
             return False
         if collection_property == "text-mining":
             if (self.do_set_collection_text_mining_xml() is True
@@ -274,20 +264,14 @@ class CrossrefXML(object):
                 return True
         return False
 
-    def has_license(self, poa_article):
-        """check if the article has the minimum requirements of a license"""
-        if not poa_article.license:
-            return False
-        if not poa_article.license.href:
-            return False
-        return True
+
 
     def generate_resource_url(self, obj, poa_article, pattern_type=None):
         # Generate a resource value for doi_data based on the object provided
         if isinstance(obj, Article):
             if not pattern_type:
                 pattern_type = "doi_pattern"
-            version = self.elife_style_article_attributes(obj)
+            version = elife_style_article_attributes(obj)
             doi_pattern = self.crossref_config.get(pattern_type)
             if doi_pattern != '':
                 return self.crossref_config.get(pattern_type).format(
@@ -306,7 +290,7 @@ class CrossrefXML(object):
             component_id = obj.id
             prefix1 = ''
             if self.crossref_config.get('elife_style_component_doi') is True:
-                component_id, prefix1 = self.elife_style_component_attributes(obj)
+                component_id, prefix1 = elife_style_component_attributes(obj)
             return self.crossref_config.get("component_doi_pattern").format(
                 doi=poa_article.doi,
                 manuscript=poa_article.manuscript,
@@ -314,91 +298,6 @@ class CrossrefXML(object):
                 prefix1=prefix1,
                 id=component_id)
         return None
-
-    def elife_style_article_attributes(self, obj):
-        # Special logic for elife article style
-        version = ''
-        if obj.version:
-            version = '-v' + str(obj.version)
-        return version
-
-    def elife_style_component_attributes(self, obj):
-        # Some special additional logic for elife style
-        component_id = obj.id
-        if obj.type and obj.type == 'abstract':
-            if obj.title and 'digest' in obj.title.lower():
-                component_id = 'digest'
-            else:
-                component_id = 'abstract'
-        # Set the URL prefix for some types
-        prefix1 = ''
-        if (obj.asset and obj.asset in ['figsupp', 'data']
-                or obj.type and obj.type in ['supplementary-material']):
-            prefix1 = '/figures'
-        return component_id, prefix1
-
-    def set_contributors(self, parent, poa_article, contrib_types=None):
-        # First check for any contributors
-        if not poa_article.contributors:
-            return
-        # If contrib_type is None, all contributors will be added regardless of their type
-        contributors_tag = SubElement(parent, "contributors")
-
-        # Ready to add to XML
-        # Use the natural list order of contributors when setting the first author
-        sequence = "first"
-        for contributor in poa_article.contributors:
-            if contrib_types:
-                # Filter by contrib_type if supplied
-                if contributor.contrib_type not in contrib_types:
-                    continue
-
-            if contributor.contrib_type == "on-behalf-of":
-                contributor_role = "author"
-            else:
-                contributor_role = contributor.contrib_type
-
-            # Skip contributors with no surname
-            if contributor.surname == "" or contributor.surname is None:
-                # Most likely a group author
-                if contributor.collab:
-                    organization_tag = SubElement(contributors_tag, "organization")
-                    organization_tag.text = contributor.collab
-                    organization_tag.set("contributor_role", contributor_role)
-                    organization_tag.set("sequence", sequence)
-
-            else:
-                person_name_tag = SubElement(contributors_tag, "person_name")
-
-                person_name_tag.set("contributor_role", contributor_role)
-
-                person_name_tag.set("sequence", sequence)
-
-                given_name_tag = SubElement(person_name_tag, "given_name")
-                given_name_tag.text = contributor.given_name
-
-                surname_tag = SubElement(person_name_tag, "surname")
-                surname_tag.text = contributor.surname
-
-                if contributor.suffix:
-                    suffix_tag = SubElement(person_name_tag, "suffix")
-                    suffix_tag.text = contributor.suffix
-
-                if contributor.affiliations:
-                    # Crossref schema limits the number of affilations an author can have
-                    max_affiliations = 5
-                    for aff in contributor.affiliations[0:max_affiliations]:
-                        if aff.text and aff.text != '':
-                            affiliation_tag = SubElement(person_name_tag, "affiliation")
-                            affiliation_tag.text = aff.text
-
-                if contributor.orcid:
-                    orcid_tag = SubElement(person_name_tag, "ORCID")
-                    orcid_tag.set("authenticated", "true")
-                    orcid_tag.text = contributor.orcid
-
-            # Reset sequence value after the first sucessful loop
-            sequence = "additional"
 
     def set_abstract(self, parent, poa_article):
         if poa_article.abstract:
@@ -460,44 +359,6 @@ class CrossrefXML(object):
         recursive = False
         xmlio.append_minidom_xml_to_elementtree_xml(parent, reparsed, recursive, attributes)
 
-    def set_publication_date(self, parent, pub_date):
-        # pub_date is a python time object
-        if pub_date:
-            publication_date_tag = SubElement(parent, 'publication_date')
-            publication_date_tag.set("media_type", "online")
-            month_tag = SubElement(publication_date_tag, "month")
-            month_tag.text = str(pub_date.tm_mon).zfill(2)
-            day_tag = SubElement(publication_date_tag, "day")
-            day_tag.text = str(pub_date.tm_mday).zfill(2)
-            year_tag = SubElement(publication_date_tag, "year")
-            year_tag.text = str(pub_date.tm_year)
-
-    def set_fundref(self, parent, poa_article):
-        """
-        Set the fundref data from the article funding_awards list
-        """
-        if poa_article.funding_awards:
-            fr_program_tag = SubElement(parent, 'fr:program')
-            fr_program_tag.set("name", "fundref")
-            for award in poa_article.funding_awards:
-                fr_fundgroup_tag = SubElement(fr_program_tag, 'fr:assertion')
-                fr_fundgroup_tag.set("name", "fundgroup")
-
-                if award.get_funder_name():
-                    fr_funder_name_tag = SubElement(fr_fundgroup_tag, 'fr:assertion')
-                    fr_funder_name_tag.set("name", "funder_name")
-                    fr_funder_name_tag.text = award.get_funder_name()
-
-                if award.get_funder_name() and award.institution_id:
-                    fr_funder_identifier_tag = SubElement(fr_funder_name_tag, 'fr:assertion')
-                    fr_funder_identifier_tag.set("name", "funder_identifier")
-                    fr_funder_identifier_tag.text = award.institution_id
-
-                for award_id in award.award_ids:
-                    fr_award_number_tag = SubElement(fr_fundgroup_tag, 'fr:assertion')
-                    fr_award_number_tag.set("name", "award_number")
-                    fr_award_number_tag.text = award_id
-
     def set_access_indicators(self, parent, poa_article):
         """
         Set the AccessIndicators
@@ -505,7 +366,7 @@ class CrossrefXML(object):
 
         applies_to = self.crossref_config.get("access_indicators_applies_to")
 
-        if applies_to and self.has_license(poa_article) is True:
+        if applies_to and has_license(poa_article) is True:
 
             ai_program_tag = SubElement(parent, 'ai:program')
             ai_program_tag.set('name', 'AccessIndicators')
@@ -514,13 +375,6 @@ class CrossrefXML(object):
                 ai_program_ref_tag = SubElement(ai_program_tag, 'ai:license_ref')
                 ai_program_ref_tag.set('applies_to', applies_to)
                 ai_program_ref_tag.text = poa_article.license.href
-
-    def set_archive_locations(self, parent, archive_locations):
-        if archive_locations:
-            archive_locations_tag = SubElement(parent, 'archive_locations')
-            for archive_location in archive_locations:
-                archive_tag = SubElement(archive_locations_tag, 'archive')
-                archive_tag.set('name', archive_location)
 
     def set_citation_list(self, parent, poa_article):
         """
@@ -533,7 +387,7 @@ class CrossrefXML(object):
                 # Increment
                 ref_index = ref_index + 1
                 # decide whether to create a related_item for the citation
-                if self.do_citation_related_item(ref):
+                if do_citation_related_item(ref):
                     # first set the parent tag if it does not yet exist
                     self.set_citation_related_item(parent, ref)
 
@@ -553,7 +407,7 @@ class CrossrefXML(object):
                         volume_title_tag = SubElement(citation_tag, 'volume_title')
                         volume_title_tag.text = ref.source
 
-                authors = self.filter_citation_authors(ref)
+                authors = filter_citation_authors(ref)
                 if authors:
                     # Only set the first author surname
                     first_author = authors[0]
@@ -612,40 +466,20 @@ class CrossrefXML(object):
                         elocation_id_tag.text = ref.elocation_id
 
                 # unstructured-citation
-                if self.do_unstructured_citation(ref) is True:
+                if do_unstructured_citation(ref) is True:
                     self.set_unstructured_citation(citation_tag, ref)
-
-    def filter_citation_authors(self, ref):
-        """logic for which authors to select for citation records"""
-        # First consider authors with group-type author
-        authors = [c for c in ref.authors if c.get('group-type') == 'author']
-        if not authors:
-            # Take editors if there are no authors
-            authors = [c for c in ref.authors if c.get('group-type') == 'editor']
-        return authors
-
-    def do_unstructured_citation(self, ref):
-        """decide if a citation should have an unstructured_citation tag added"""
-        if ref.publication_type and ref.publication_type in [
-                'confproc', 'patent', 'software', 'thesis', 'web', 'webpage']:
-            return True
-        if ref.publication_type and ref.publication_type in ['preprint'] and ref.doi is None:
-            return True
-        if ref.publication_type and ref.publication_type in ['report'] and ref.isbn is None:
-            return True
-        return False
 
     def set_unstructured_citation(self, parent, ref):
         # tag_content
         tag_content = ''
-        author_line = self.citation_author_line(ref)
+        author_line = citation_author_line(ref)
 
         if ref.publication_type and ref.publication_type in [
                 'confproc', 'patent', 'preprint', 'report', 'software', 'thesis', 'web', 'webpage']:
             tag_content = '. '.join([item.rstrip('.') for item in [
                 author_line, ref.year, ref.article_title, ref.data_title,
-                self.citation_publisher(ref), ref.source, ref.version,
-                ref.patent, ref.conf_name, self.citation_uri(ref)] if item is not None])
+                citation_publisher(ref), ref.source, ref.version,
+                ref.patent, ref.conf_name, citation_uri(ref)] if item is not None])
             tag_content += '.'
         # add the tag if there is tag_content
         if tag_content != '':
@@ -657,44 +491,6 @@ class CrossrefXML(object):
                 add_clean_tag(parent, 'unstructured_citation', tag_content,
                               self.reparsing_namespaces)
         return parent
-
-    def citation_author_line(self, ref):
-        author_line = None
-        author_names = []
-        # extract all authors regardless of their group-type
-        for author in ref.authors:
-            author_name = ''
-            if author.get('surname'):
-                author_name = author.get('surname')
-                if author.get('given-names'):
-                    author_name += ' ' + author.get('given-names')
-            elif author.get('collab'):
-                author_name = author.get('collab')
-            if author_name != '':
-                author_names.append(author_name)
-        if author_names:
-            author_line = ', '.join(author_names)
-        return author_line
-
-    def citation_publisher(self, ref):
-        if ref.publisher_loc or ref.publisher_name:
-            return ': '.join([item for item in [
-                ref.publisher_loc, ref.publisher_name] if item is not None])
-        return None
-
-    def citation_uri(self, ref):
-        uri_content = ''
-        if ref.uri:
-            uri_content = ref.uri
-        if ref.date_in_citation:
-            uri_content += ' [Accessed ' + ref.date_in_citation + ']'
-        return uri_content if uri_content != '' else None
-
-    def do_citation_related_item(self, ref):
-        """decide whether to create a related_item for a citation"""
-        if ref.publication_type and ref.publication_type == "data":
-            return bool(ref.doi or ref.accession or ref.pmid or ref.uri)
-        return False
 
     def set_citation_related_item(self, parent, ref):
         """depends on the relations_program tag existing already"""
@@ -728,12 +524,12 @@ class CrossrefXML(object):
         """call at a specific moment during generation to set this tag if required"""
         do_relations = None
         for dataset in poa_article.datasets:
-            if self.do_dataset_related_item(dataset) is True:
+            if do_dataset_related_item(dataset) is True:
                 do_relations = True
                 break
         if do_relations is not True and poa_article.ref_list:
             for ref in poa_article.ref_list:
-                if self.do_citation_related_item(ref) is True:
+                if do_citation_related_item(ref) is True:
                     do_relations = True
                     break
         return do_relations
@@ -743,17 +539,13 @@ class CrossrefXML(object):
         if self.relations_program_tag is None:
             self.relations_program_tag = SubElement(parent, 'rel:program')
 
-    def do_dataset_related_item(self, dataset):
-        """decide whether to create a related_item for a dataset"""
-        return bool(dataset.accession_id or dataset.doi or dataset.uri)
-
     def set_datasets(self, parent, poa_article):
         """
         Add related_item tags for each dataset
         """
         for dataset in poa_article.datasets:
             # Check for at least one identifier before adding the related_item
-            if not self.do_dataset_related_item(dataset):
+            if not do_dataset_related_item(dataset):
                 continue
             # first set the parent tag if it does not yet exist
             self.set_relations_program(parent)
@@ -881,6 +673,231 @@ def set_root(root, schema_version):
     root.set('xsi:schemaLocation', '%s %s' % (schema_location_name, schema_location_uri))
     root.set('xmlns:mml', 'http://www.w3.org/1998/Math/MathML')
     root.set('xmlns:jats', 'http://www.ncbi.nlm.nih.gov/JATS1')
+
+
+def set_journal_metadata(parent, poa_article):
+    # journal_metadata
+    journal_metadata_tag = SubElement(parent, 'journal_metadata')
+    journal_metadata_tag.set("language", "en")
+    full_title_tag = SubElement(journal_metadata_tag, 'full_title')
+    full_title_tag.text = poa_article.journal_title
+    issn_tag = SubElement(journal_metadata_tag, 'issn')
+    issn_tag.set("media_type", "electronic")
+    issn_tag.text = poa_article.journal_issn
+
+
+def has_license(poa_article):
+    """check if the article has the minimum requirements of a license"""
+    if not poa_article.license:
+        return False
+    if not poa_article.license.href:
+        return False
+    return True
+
+
+def elife_style_article_attributes(obj):
+    # Special logic for elife article style
+    version = ''
+    if obj.version:
+        version = '-v' + str(obj.version)
+    return version
+
+
+def elife_style_component_attributes(obj):
+    # Some special additional logic for elife style
+    component_id = obj.id
+    if obj.type and obj.type == 'abstract':
+        if obj.title and 'digest' in obj.title.lower():
+            component_id = 'digest'
+        else:
+            component_id = 'abstract'
+    # Set the URL prefix for some types
+    prefix1 = ''
+    if (obj.asset and obj.asset in ['figsupp', 'data']
+            or obj.type and obj.type in ['supplementary-material']):
+        prefix1 = '/figures'
+    return component_id, prefix1
+
+
+def set_contributors(parent, poa_article, contrib_types=None):
+    # First check for any contributors
+    if not poa_article.contributors:
+        return
+    # If contrib_type is None, all contributors will be added regardless of their type
+    contributors_tag = SubElement(parent, "contributors")
+
+    # Ready to add to XML
+    # Use the natural list order of contributors when setting the first author
+    sequence = "first"
+    for contributor in poa_article.contributors:
+        if contrib_types:
+            # Filter by contrib_type if supplied
+            if contributor.contrib_type not in contrib_types:
+                continue
+
+        if contributor.contrib_type == "on-behalf-of":
+            contributor_role = "author"
+        else:
+            contributor_role = contributor.contrib_type
+
+        # Skip contributors with no surname
+        if contributor.surname == "" or contributor.surname is None:
+            # Most likely a group author
+            if contributor.collab:
+                organization_tag = SubElement(contributors_tag, "organization")
+                organization_tag.text = contributor.collab
+                organization_tag.set("contributor_role", contributor_role)
+                organization_tag.set("sequence", sequence)
+
+        else:
+            person_name_tag = SubElement(contributors_tag, "person_name")
+
+            person_name_tag.set("contributor_role", contributor_role)
+
+            person_name_tag.set("sequence", sequence)
+
+            given_name_tag = SubElement(person_name_tag, "given_name")
+            given_name_tag.text = contributor.given_name
+
+            surname_tag = SubElement(person_name_tag, "surname")
+            surname_tag.text = contributor.surname
+
+            if contributor.suffix:
+                suffix_tag = SubElement(person_name_tag, "suffix")
+                suffix_tag.text = contributor.suffix
+
+            if contributor.affiliations:
+                # Crossref schema limits the number of affilations an author can have
+                max_affiliations = 5
+                for aff in contributor.affiliations[0:max_affiliations]:
+                    if aff.text and aff.text != '':
+                        affiliation_tag = SubElement(person_name_tag, "affiliation")
+                        affiliation_tag.text = aff.text
+
+            if contributor.orcid:
+                orcid_tag = SubElement(person_name_tag, "ORCID")
+                orcid_tag.set("authenticated", "true")
+                orcid_tag.text = contributor.orcid
+
+        # Reset sequence value after the first sucessful loop
+        sequence = "additional"
+
+
+def set_publication_date(parent, pub_date):
+    # pub_date is a python time object
+    if pub_date:
+        publication_date_tag = SubElement(parent, 'publication_date')
+        publication_date_tag.set("media_type", "online")
+        month_tag = SubElement(publication_date_tag, "month")
+        month_tag.text = str(pub_date.tm_mon).zfill(2)
+        day_tag = SubElement(publication_date_tag, "day")
+        day_tag.text = str(pub_date.tm_mday).zfill(2)
+        year_tag = SubElement(publication_date_tag, "year")
+        year_tag.text = str(pub_date.tm_year)
+
+
+def set_fundref(parent, poa_article):
+    """
+    Set the fundref data from the article funding_awards list
+    """
+    if poa_article.funding_awards:
+        fr_program_tag = SubElement(parent, 'fr:program')
+        fr_program_tag.set("name", "fundref")
+        for award in poa_article.funding_awards:
+            fr_fundgroup_tag = SubElement(fr_program_tag, 'fr:assertion')
+            fr_fundgroup_tag.set("name", "fundgroup")
+
+            if award.get_funder_name():
+                fr_funder_name_tag = SubElement(fr_fundgroup_tag, 'fr:assertion')
+                fr_funder_name_tag.set("name", "funder_name")
+                fr_funder_name_tag.text = award.get_funder_name()
+
+            if award.get_funder_name() and award.institution_id:
+                fr_funder_identifier_tag = SubElement(fr_funder_name_tag, 'fr:assertion')
+                fr_funder_identifier_tag.set("name", "funder_identifier")
+                fr_funder_identifier_tag.text = award.institution_id
+
+            for award_id in award.award_ids:
+                fr_award_number_tag = SubElement(fr_fundgroup_tag, 'fr:assertion')
+                fr_award_number_tag.set("name", "award_number")
+                fr_award_number_tag.text = award_id
+
+
+def set_archive_locations(parent, archive_locations):
+    if archive_locations:
+        archive_locations_tag = SubElement(parent, 'archive_locations')
+        for archive_location in archive_locations:
+            archive_tag = SubElement(archive_locations_tag, 'archive')
+            archive_tag.set('name', archive_location)
+
+
+def filter_citation_authors(ref):
+    """logic for which authors to select for citation records"""
+    # First consider authors with group-type author
+    authors = [c for c in ref.authors if c.get('group-type') == 'author']
+    if not authors:
+        # Take editors if there are no authors
+        authors = [c for c in ref.authors if c.get('group-type') == 'editor']
+    return authors
+
+
+def do_unstructured_citation(ref):
+    """decide if a citation should have an unstructured_citation tag added"""
+    if ref.publication_type and ref.publication_type in [
+            'confproc', 'patent', 'software', 'thesis', 'web', 'webpage']:
+        return True
+    if ref.publication_type and ref.publication_type in ['preprint'] and ref.doi is None:
+        return True
+    if ref.publication_type and ref.publication_type in ['report'] and ref.isbn is None:
+        return True
+    return False
+
+
+def citation_author_line(ref):
+    author_line = None
+    author_names = []
+    # extract all authors regardless of their group-type
+    for author in ref.authors:
+        author_name = ''
+        if author.get('surname'):
+            author_name = author.get('surname')
+            if author.get('given-names'):
+                author_name += ' ' + author.get('given-names')
+        elif author.get('collab'):
+            author_name = author.get('collab')
+        if author_name != '':
+            author_names.append(author_name)
+    if author_names:
+        author_line = ', '.join(author_names)
+    return author_line
+
+
+def citation_publisher(ref):
+    if ref.publisher_loc or ref.publisher_name:
+        return ': '.join([item for item in [
+            ref.publisher_loc, ref.publisher_name] if item is not None])
+    return None
+
+
+def citation_uri(ref):
+    uri_content = ''
+    if ref.uri:
+        uri_content = ref.uri
+    if ref.date_in_citation:
+        uri_content += ' [Accessed ' + ref.date_in_citation + ']'
+    return uri_content if uri_content != '' else None
+
+
+def do_citation_related_item(ref):
+    """decide whether to create a related_item for a citation"""
+    if ref.publication_type and ref.publication_type == "data":
+        return bool(ref.doi or ref.accession or ref.pmid or ref.uri)
+    return False
+
+
+def do_dataset_related_item(dataset):
+    """decide whether to create a related_item for a dataset"""
+    return bool(dataset.accession_id or dataset.doi or dataset.uri)
 
 
 def dataset_relationship_type(dataset):
