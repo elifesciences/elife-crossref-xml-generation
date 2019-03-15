@@ -309,6 +309,7 @@ class CrossrefXML(object):
                 volume=poa_article.volume,
                 prefix1=prefix1,
                 id=component_id)
+        return None
 
     def elife_style_article_attributes(self, obj):
         # Special logic for elife article style
@@ -670,6 +671,7 @@ class CrossrefXML(object):
         if ref.publisher_loc or ref.publisher_name:
             return ': '.join([item for item in [
                 ref.publisher_loc, ref.publisher_name] if item is not None])
+        return None
 
     def citation_uri(self, ref):
         uri_content = ''
