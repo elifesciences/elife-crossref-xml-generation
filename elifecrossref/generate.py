@@ -1026,11 +1026,11 @@ def crossref_xml_to_disk(poa_articles, crossref_config=None, pub_date=None, add_
     xml_string = c_xml.output_xml()
     # Write to file
     filename = TMP_DIR + os.sep + c_xml.batch_id + '.xml'
-    with open(filename, "wb") as fp:
+    with open(filename, "wb") as open_file:
         try:
-            fp.write(xml_string.encode('utf-8'))
+            open_file.write(xml_string.encode('utf-8'))
         except UnicodeDecodeError:  # pragma: no cover
-            fp.write(xml_string)
+            open_file.write(xml_string)
 
 
 def build_articles_for_crossref(article_xmls, detail='full', build_parts=None):
