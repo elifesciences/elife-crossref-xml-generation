@@ -189,7 +189,7 @@ class CrossrefXML(object):
 
         self.set_datasets(journal_article_tag, poa_article)
 
-        self.set_archive_locations(journal_article_tag, poa_article,
+        self.set_archive_locations(journal_article_tag,
                                    self.crossref_config.get("archive_locations"))
 
         self.set_doi_data(journal_article_tag, poa_article)
@@ -511,7 +511,7 @@ class CrossrefXML(object):
                 ai_program_ref_tag.set('applies_to', applies_to)
                 ai_program_ref_tag.text = poa_article.license.href
 
-    def set_archive_locations(self, parent, poa_article, archive_locations):
+    def set_archive_locations(self, parent, archive_locations):
         if archive_locations:
             archive_locations_tag = SubElement(parent, 'archive_locations')
             for archive_location in archive_locations:
