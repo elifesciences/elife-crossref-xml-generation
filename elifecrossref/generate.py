@@ -10,7 +10,7 @@ from elifearticle import parse
 from elifetools import utils as etoolsutils
 from elifetools import xmlio
 
-from elifecrossref import utils
+from elifecrossref import utils, elife
 from elifecrossref.conf import raw_config, parse_raw_config
 from elifecrossref.mime_type import crossref_mime_type
 from elifecrossref.tags import add_clean_tag, add_inline_tag, clean_tags
@@ -269,7 +269,7 @@ class CrossrefXML(object):
         if isinstance(obj, Article):
             if not pattern_type:
                 pattern_type = "doi_pattern"
-            version = elife_style_article_attributes(obj)
+            version = elife.elife_style_article_attributes(obj)
             doi_pattern = self.crossref_config.get(pattern_type)
             if doi_pattern != '':
                 return self.crossref_config.get(pattern_type).format(
@@ -288,7 +288,7 @@ class CrossrefXML(object):
             component_id = obj.id
             prefix1 = ''
             if self.crossref_config.get('elife_style_component_doi') is True:
-                component_id, prefix1 = elife_style_component_attributes(obj)
+                component_id, prefix1 = elife.elife_style_component_attributes(obj)
             return self.crossref_config.get("component_doi_pattern").format(
                 doi=poa_article.doi,
                 manuscript=poa_article.manuscript,
@@ -691,30 +691,6 @@ def has_license(poa_article):
     if not poa_article.license.href:
         return False
     return True
-
-
-def elife_style_article_attributes(obj):
-    # Special logic for elife article style
-    version = ''
-    if obj.version:
-        version = '-v' + str(obj.version)
-    return version
-
-
-def elife_style_component_attributes(obj):
-    # Some special additional logic for elife style
-    component_id = obj.id
-    if obj.type and obj.type == 'abstract':
-        if obj.title and 'digest' in obj.title.lower():
-            component_id = 'digest'
-        else:
-            component_id = 'abstract'
-    # Set the URL prefix for some types
-    prefix1 = ''
-    if (obj.asset and obj.asset in ['figsupp', 'data']
-            or obj.type and obj.type in ['supplementary-material']):
-        prefix1 = '/figures'
-    return component_id, prefix1
 
 
 def set_contributors(parent, poa_article, contrib_types=None):
