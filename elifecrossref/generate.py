@@ -670,8 +670,6 @@ class CrossrefXML(object):
         if ref.publisher_loc or ref.publisher_name:
             return ': '.join([item for item in [
                 ref.publisher_loc, ref.publisher_name] if item is not None])
-        else:
-            return None
 
     def citation_uri(self, ref):
         uri_content = ''
@@ -785,12 +783,8 @@ class CrossrefXML(object):
                 return "references"
             elif dataset.dataset_type == "datasets":
                 return "isSupplementedBy"
-            else:
-                # default
-                return "isSupplementedBy"
-        else:
-            # default if not specified
-            return "isSupplementedBy"
+        # default if not specified
+        return "isSupplementedBy"
 
     def set_related_item_description(self, parent, description):
         if description:
@@ -968,8 +962,7 @@ class CrossrefXML(object):
 
         if pretty is True:
             return reparsed.toprettyxml(indent, encoding=encoding).decode(encoding)
-        else:
-            return reparsed.toxml(encoding=encoding).decode(encoding)
+        return reparsed.toxml(encoding=encoding).decode(encoding)
 
 
 def set_root(root, schema_version):
