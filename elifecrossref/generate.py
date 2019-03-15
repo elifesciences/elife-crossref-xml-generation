@@ -453,9 +453,7 @@ class CrossrefXML(object):
         reparsed = minidom.parseString(tagged_string.encode('utf-8'))
 
         recursive = False
-        root_xml_element = xmlio.append_minidom_xml_to_elementtree_xml(
-            parent, reparsed, recursive, attributes
-        )
+        xmlio.append_minidom_xml_to_elementtree_xml(parent, reparsed, recursive, attributes)
 
     def set_publication_date(self, parent, pub_date):
         # pub_date is a python time object
@@ -908,18 +906,14 @@ class CrossrefXML(object):
         tagged_string = ('<' + tag_name + self.reparsing_namespaces + '>' +
                          tag_converted_string + '</' + tag_name + '>')
         reparsed = minidom.parseString(tagged_string.encode('utf-8'))
-        root_xml_element = xmlio.append_minidom_xml_to_elementtree_xml(
-            parent, reparsed
-        )
+        xmlio.append_minidom_xml_to_elementtree_xml(parent, reparsed)
 
     def add_inline_tag(self, parent, tag_name, original_string):
         "replace inline tags found in the original_string and then add a tag the parent"
         tag_converted_string = self.convert_inline_tags(original_string)
         tagged_string = '<' + tag_name + self.reparsing_namespaces + '>' + tag_converted_string + '</' + tag_name + '>'
         reparsed = minidom.parseString(tagged_string.encode('utf-8'))
-        root_xml_element = xmlio.append_minidom_xml_to_elementtree_xml(
-            parent, reparsed
-        )
+        xmlio.append_minidom_xml_to_elementtree_xml(parent, reparsed)
 
     def convert_inline_tags(self, original_string):
         tag_converted_string = etoolsutils.escape_ampersand(original_string)
