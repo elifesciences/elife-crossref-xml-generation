@@ -13,6 +13,7 @@ from elifetools import xmlio
 from elifecrossref import utils
 from elifecrossref.conf import raw_config, parse_raw_config
 from elifecrossref.mime_type import crossref_mime_type
+from elifecrossref.tags import add_clean_tag, add_inline_tag, clean_tags
 
 
 TMP_DIR = 'tmp'
@@ -209,9 +210,11 @@ class CrossrefXML(object):
         # remove unwanted tags
         tag_converted_title = eautils.remove_tag('ext-link', poa_article.title)
         if self.crossref_config.get('face_markup') is True:
-            self.add_inline_tag(root_xml_element, tag_name, tag_converted_title)
+            add_inline_tag(root_xml_element, tag_name, tag_converted_title,
+                           self.reparsing_namespaces)
         else:
-            self.add_clean_tag(root_xml_element, tag_name, tag_converted_title)
+            add_clean_tag(root_xml_element, tag_name, tag_converted_title,
+                          self.reparsing_namespaces)
         parent.append(root_xml_element)
 
     def set_doi_data(self, parent, poa_article):
@@ -444,7 +447,7 @@ class CrossrefXML(object):
             tag_converted_abstract = etoolsutils.escape_ampersand(tag_converted_abstract)
             tag_converted_abstract = etoolsutils.escape_unmatched_angle_brackets(
                 tag_converted_abstract, utils.allowed_tags())
-            tag_converted_abstract = self.clean_tags(
+            tag_converted_abstract = clean_tags(
                 tag_converted_abstract, do_not_clean=['<p>', '</p>', '<mml:', '</mml:'])
             tag_converted_abstract = eautils.replace_tags(tag_converted_abstract, 'p', 'jats:p')
             tag_converted_abstract = tag_converted_abstract
@@ -558,7 +561,8 @@ class CrossrefXML(object):
                         author_tag = SubElement(citation_tag, 'author')
                         author_tag.text = first_author.get("surname")
                     elif first_author.get("collab"):
-                        self.add_clean_tag(citation_tag, 'author', first_author.get("collab"))
+                        add_clean_tag(citation_tag, 'author', first_author.get("collab"),
+                                      self.reparsing_namespaces)
 
                 if ref.volume:
                     volume_tag = SubElement(citation_tag, 'volume')
@@ -582,9 +586,11 @@ class CrossrefXML(object):
 
                 if ref.article_title or ref.data_title:
                     if ref.article_title:
-                        self.add_clean_tag(citation_tag, 'article_title', ref.article_title)
+                        add_clean_tag(citation_tag, 'article_title', ref.article_title,
+                                      self.reparsing_namespaces)
                     elif ref.data_title:
-                        self.add_clean_tag(citation_tag, 'article_title', ref.data_title)
+                        add_clean_tag(citation_tag, 'article_title', ref.data_title,
+                                      self.reparsing_namespaces)
 
                 if ref.doi:
                     doi_tag = SubElement(citation_tag, 'doi')
@@ -645,9 +651,11 @@ class CrossrefXML(object):
         if tag_content != '':
             # handle inline tagging
             if self.crossref_config.get('face_markup') is True:
-                self.add_inline_tag(parent, 'unstructured_citation', tag_content)
+                add_inline_tag(parent, 'unstructured_citation', tag_content,
+                               self.reparsing_namespaces)
             else:
-                self.add_clean_tag(parent, 'unstructured_citation', tag_content)
+                add_clean_tag(parent, 'unstructured_citation', tag_content,
+                              self.reparsing_namespaces)
         return parent
 
     def citation_author_line(self, ref):
@@ -862,56 +870,10 @@ class CrossrefXML(object):
         # Use <i> tags, not <italic> tags, <b> tags not <bold>
         if component.subtitle:
             if self.crossref_config.get('face_markup') is True:
-                self.add_inline_tag(parent, tag_name, component.subtitle)
+                add_inline_tag(parent, tag_name, component.subtitle,
+                               self.reparsing_namespaces)
             else:
-                self.add_clean_tag(parent, tag_name, component.subtitle)
-
-    def clean_tags(self, original_string, do_not_clean=None):
-        "remove all unwanted inline tags from the string"
-        do_not_clean_tags = do_not_clean if do_not_clean else []
-        tag_converted_string = original_string
-        for tag in utils.allowed_tags():
-            if tag not in do_not_clean_tags:
-                # first do exact tag replacements
-                if tag.startswith('<') and tag.endswith('>'):
-                    tag_converted_string = tag_converted_string.replace(tag, '')
-                # then replace by fragments for mml tags if present
-                if tag.startswith('<') and not tag.endswith('>'):
-                    tag_fragment = tag.lstrip('</')
-                    tag_converted_string = eautils.remove_tag(tag_fragment, tag_converted_string)
-        remove_tags = ['inline-formula']
-        for tag in remove_tags:
-            if tag not in do_not_clean_tags:
-                tag_converted_string = eautils.remove_tag(tag, tag_converted_string)
-        return tag_converted_string
-
-    def add_clean_tag(self, parent, tag_name, original_string):
-        "remove allowed tags and then add a tag the parent"
-        tag_converted_string = self.clean_tags(original_string)
-        tag_converted_string = etoolsutils.escape_ampersand(tag_converted_string)
-        tag_converted_string = etoolsutils.escape_unmatched_angle_brackets(
-            tag_converted_string)
-        tagged_string = ('<' + tag_name + self.reparsing_namespaces + '>' +
-                         tag_converted_string + '</' + tag_name + '>')
-        reparsed = minidom.parseString(tagged_string.encode('utf-8'))
-        xmlio.append_minidom_xml_to_elementtree_xml(parent, reparsed)
-
-    def add_inline_tag(self, parent, tag_name, original_string):
-        "replace inline tags found in the original_string and then add a tag the parent"
-        tag_converted_string = self.convert_inline_tags(original_string)
-        tagged_string = ('<' + tag_name + self.reparsing_namespaces + '>' +
-                         tag_converted_string + '</' + tag_name + '>')
-        reparsed = minidom.parseString(tagged_string.encode('utf-8'))
-        xmlio.append_minidom_xml_to_elementtree_xml(parent, reparsed)
-
-    def convert_inline_tags(self, original_string):
-        tag_converted_string = etoolsutils.escape_ampersand(original_string)
-        tag_converted_string = etoolsutils.escape_unmatched_angle_brackets(
-            tag_converted_string, utils.allowed_tags())
-        tag_converted_string = eautils.replace_tags(tag_converted_string, 'italic', 'i')
-        tag_converted_string = eautils.replace_tags(tag_converted_string, 'bold', 'b')
-        tag_converted_string = eautils.replace_tags(tag_converted_string, 'underline', 'u')
-        return tag_converted_string
+                add_clean_tag(parent, tag_name, component.subtitle, self.reparsing_namespaces)
 
     def output_xml(self, pretty=False, indent=""):
         encoding = 'utf-8'

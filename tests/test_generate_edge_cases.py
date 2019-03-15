@@ -472,27 +472,5 @@ class TestSetCollection(unittest.TestCase):
         self.assertTrue(crossref_object.do_set_collection(article, collection_property))
 
 
-class TestAddCleanTag(unittest.TestCase):
-
-    def setUp(self):
-        pass
-
-    def test_add_clean_tag(self):
-        "test add_clean_tag to check edge cases"
-        # start with creating a Crossref object with a basic article object
-        doi = "10.7554/eLife.00666"
-        title = "Test article"
-        article = Article(doi, title)
-        c_xml = generate.build_crossref_xml([article])
-        root = Element('root')
-        # add the element
-        c_xml.add_clean_tag(root, 'p', '<test>')
-        self.assertEqual(ElementTree.tostring(root).decode('utf-8'), '<root><p>&lt;test&gt;</p></root>')
-        # strange example based on eLife 28716 v2 Figure 2 caption
-        root = Element('root')
-        c_xml.add_clean_tag(root, 'subtitle', '...polarization, <<italic>p</italic>>, and its variance...')
-        self.assertEqual(ElementTree.tostring(root).decode('utf-8'), '<root><subtitle>...polarization, &lt;p&gt;, and its variance...</subtitle></root>')
-
-
 if __name__ == '__main__':
     unittest.main()
