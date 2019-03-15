@@ -264,8 +264,6 @@ class CrossrefXML(object):
                 return True
         return False
 
-
-
     def generate_resource_url(self, obj, poa_article, pattern_type=None):
         # Generate a resource value for doi_data based on the object provided
         if isinstance(obj, Article):
