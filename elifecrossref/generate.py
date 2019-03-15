@@ -908,7 +908,8 @@ class CrossrefXML(object):
     def add_inline_tag(self, parent, tag_name, original_string):
         "replace inline tags found in the original_string and then add a tag the parent"
         tag_converted_string = self.convert_inline_tags(original_string)
-        tagged_string = '<' + tag_name + self.reparsing_namespaces + '>' + tag_converted_string + '</' + tag_name + '>'
+        tagged_string = ('<' + tag_name + self.reparsing_namespaces + '>' +
+                         tag_converted_string + '</' + tag_name + '>')
         reparsed = minidom.parseString(tagged_string.encode('utf-8'))
         xmlio.append_minidom_xml_to_elementtree_xml(parent, reparsed)
 
