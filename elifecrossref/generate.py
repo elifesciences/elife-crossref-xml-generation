@@ -1033,7 +1033,7 @@ def crossref_xml_to_disk(poa_articles, crossref_config=None, pub_date=None, add_
             fp.write(xml_string)
 
 
-def build_articles_for_crossref(article_xmls, detail='full', build_parts=[]):
+def build_articles_for_crossref(article_xmls, detail='full', build_parts=None):
     "specify some detail and build_parts specific to generating crossref output"
     build_parts = [
         'abstract', 'basic', 'components', 'contributors', 'funding', 'datasets',
@@ -1041,5 +1041,5 @@ def build_articles_for_crossref(article_xmls, detail='full', build_parts=[]):
     return build_articles(article_xmls, detail, build_parts)
 
 
-def build_articles(article_xmls, detail='full', build_parts=[]):
+def build_articles(article_xmls, detail='full', build_parts=None):
     return parse.build_articles_from_article_xmls(article_xmls, detail, build_parts)
