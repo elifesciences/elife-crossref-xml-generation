@@ -36,17 +36,19 @@ def add_clean_tag(parent, tag_name, original_string, namespaces=REPARSING_NAMESP
     tag_converted_string = etoolsutils.escape_ampersand(tag_converted_string)
     tag_converted_string = etoolsutils.escape_unmatched_angle_brackets(
         tag_converted_string)
-    tagged_string = ('<' + tag_name + namespaces + '>' +
-                     tag_converted_string + '</' + tag_name + '>')
-    reparsed = minidom.parseString(tagged_string.encode('utf-8'))
-    xmlio.append_minidom_xml_to_elementtree_xml(parent, reparsed)
+    append_tag(parent, tag_name, tag_converted_string, namespaces)
 
 
 def add_inline_tag(parent, tag_name, original_string, namespaces=REPARSING_NAMESPACES):
     """replace inline tags found in the original_string and then add a tag the parent"""
     tag_converted_string = convert_inline_tags(original_string)
-    tagged_string = ('<' + tag_name + namespaces + '>' +
-                     tag_converted_string + '</' + tag_name + '>')
+    append_tag(parent, tag_name, tag_converted_string, namespaces)
+
+
+def append_tag(parent, tag_name, tag_string, attributes):
+    """given final tag content and attributes, append a tag to the parent tag"""
+    tagged_string = ('<' + tag_name + attributes + '>' +
+                     tag_string + '</' + tag_name + '>')
     reparsed = minidom.parseString(tagged_string.encode('utf-8'))
     xmlio.append_minidom_xml_to_elementtree_xml(parent, reparsed)
 
