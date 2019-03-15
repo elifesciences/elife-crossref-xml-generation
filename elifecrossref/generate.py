@@ -39,7 +39,7 @@ class CrossrefXML(object):
 
         # Generate batch id
         batch_doi = ''
-        if len(poa_articles) == 1:
+        if poa_articles:
             # If only one article is supplied, then add the doi to the batch file name
             batch_doi = str(utils.clean_string(poa_articles[0].manuscript)) + '-'
         self.batch_id = (str(self.crossref_config.get('batch_file_prefix')) + batch_doi +
@@ -334,7 +334,7 @@ class CrossrefXML(object):
 
     def set_contributors(self, parent, poa_article, contrib_types=None):
         # First check for any contributors
-        if len(poa_article.contributors) < 1:
+        if not poa_article.contributors:
             return
         # If contrib_type is None, all contributors will be added regardless of their type
         contributors_tag = SubElement(parent, "contributors")
@@ -471,7 +471,7 @@ class CrossrefXML(object):
         """
         Set the fundref data from the article funding_awards list
         """
-        if len(poa_article.funding_awards) > 0:
+        if poa_article.funding_awards:
             fr_program_tag = SubElement(parent, 'fr:program')
             fr_program_tag.set("name", "fundref")
             for award in poa_article.funding_awards:
@@ -488,11 +488,10 @@ class CrossrefXML(object):
                     fr_funder_identifier_tag.set("name", "funder_identifier")
                     fr_funder_identifier_tag.text = award.institution_id
 
-                if len(award.award_ids) > 0:
-                    for award_id in award.award_ids:
-                        fr_award_number_tag = SubElement(fr_fundgroup_tag, 'fr:assertion')
-                        fr_award_number_tag.set("name", "award_number")
-                        fr_award_number_tag.text = award_id
+                for award_id in award.award_ids:
+                    fr_award_number_tag = SubElement(fr_fundgroup_tag, 'fr:assertion')
+                    fr_award_number_tag.set("name", "award_number")
+                    fr_award_number_tag.text = award_id
 
     def set_access_indicators(self, parent, poa_article):
         """
@@ -501,7 +500,7 @@ class CrossrefXML(object):
 
         applies_to = self.crossref_config.get("access_indicators_applies_to")
 
-        if (len(applies_to) > 0 and self.has_license(poa_article) is True):
+        if applies_to and self.has_license(poa_article) is True:
 
             ai_program_tag = SubElement(parent, 'ai:program')
             ai_program_tag.set('name', 'AccessIndicators')
@@ -512,7 +511,7 @@ class CrossrefXML(object):
                 ai_program_ref_tag.text = poa_article.license.href
 
     def set_archive_locations(self, parent, poa_article, archive_locations):
-        if archive_locations and len(archive_locations) > 0:
+        if archive_locations:
             archive_locations_tag = SubElement(parent, 'archive_locations')
             for archive_location in archive_locations:
                 archive_tag = SubElement(archive_locations_tag, 'archive')
@@ -522,7 +521,7 @@ class CrossrefXML(object):
         """
         Set the citation_list from the article object ref_list objects
         """
-        if len(poa_article.ref_list) > 0:
+        if poa_article.ref_list:
             citation_list_tag = SubElement(parent, 'citation_list')
             ref_index = 0
             for ref in poa_article.ref_list:
@@ -550,7 +549,7 @@ class CrossrefXML(object):
                         volume_title_tag.text = ref.source
 
                 authors = self.filter_citation_authors(ref)
-                if len(authors) > 0:
+                if authors:
                     # Only set the first author surname
                     first_author = authors[0]
                     if first_author.get("surname"):
@@ -612,7 +611,7 @@ class CrossrefXML(object):
         "logic for which authors to select for citation records"
         # First consider authors with group-type author
         authors = [c for c in ref.authors if c.get('group-type') == 'author']
-        if len(authors) <= 0:
+        if not authors:
             # Take editors if there are no authors
             authors = [c for c in ref.authors if c.get('group-type') == 'editor']
         return authors
@@ -663,7 +662,7 @@ class CrossrefXML(object):
                 author_name = author.get('collab')
             if author_name != '':
                 author_names.append(author_name)
-        if len(author_names) > 0:
+        if author_names:
             author_line = ', '.join(author_names)
         return author_line
 
@@ -751,7 +750,7 @@ class CrossrefXML(object):
         """
         Add related_item tags for each dataset
         """
-        if poa_article.datasets and len(poa_article.datasets) > 0:
+        if poa_article.datasets:
             for dataset in poa_article.datasets:
                 # Check for at least one identifier before adding the related_item
                 if not self.do_dataset_related_item(dataset):
@@ -820,7 +819,7 @@ class CrossrefXML(object):
         """
         Set the component_list from the article object component_list objects
         """
-        if len(poa_article.component_list) <= 0:
+        if not poa_article.component_list:
             return
 
         component_list_tag = SubElement(parent, 'component_list')
