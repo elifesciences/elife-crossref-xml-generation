@@ -16,6 +16,7 @@ from elifecrossref.conf import raw_config, parse_raw_config
 
 TMP_DIR = 'tmp'
 
+
 class CrossrefXML(object):
 
     def __init__(self, poa_articles, crossref_config, pub_date=None, add_comment=True):
@@ -176,7 +177,7 @@ class CrossrefXML(object):
         identifier_tag.text = poa_article.doi
 
         # Disable crossmark for now
-        #self.set_crossmark(self.journal_article, poa_article)
+        # self.set_crossmark(self.journal_article, poa_article)
 
         self.set_fundref(journal_article_tag, poa_article)
 
@@ -225,7 +226,6 @@ class CrossrefXML(object):
 
         self.set_collection(doi_data_tag, poa_article, "text-mining")
 
-
     def set_collection(self, parent, poa_article, collection_property):
         if self.do_set_collection(poa_article, collection_property):
             if collection_property == "text-mining":
@@ -244,14 +244,12 @@ class CrossrefXML(object):
                     resource_tag.text = self.generate_resource_url(
                         poa_article, poa_article, "text_mining_xml_pattern")
 
-
     def do_set_collection_text_mining_xml(self, poa_article):
         "decide whether to text mining xml resource"
         if (self.crossref_config.get("text_mining_xml_pattern")
                 and self.crossref_config.get("text_mining_pdf_pattern") != ''):
             return True
         return False
-
 
     def do_set_collection_text_mining_pdf(self, poa_article):
         "decide whether to text mining pdf resource"
@@ -260,7 +258,6 @@ class CrossrefXML(object):
                 and poa_article.get_self_uri("pdf") is not None):
             return True
         return False
-
 
     def do_set_collection(self, poa_article, collection_property):
         "decide whether to set collection tags"
@@ -599,7 +596,7 @@ class CrossrefXML(object):
                     isbn_tag.text = ref.isbn
 
                 if ref.elocation_id:
-                    if (self.crossref_config.get('crossref_schema_version') 
+                    if (self.crossref_config.get('crossref_schema_version')
                             in ['4.3.5', '4.3.7', '4.4.0']):
                         # Until alternate tag is available, elocation-id goes into first_page tag
                         first_page_tag = SubElement(citation_tag, 'first_page')
@@ -992,7 +989,7 @@ class CrossrefXML(object):
 
 def set_root(root, schema_version):
     """Set the root tag namespaces and schema details
-    
+
     :param root: ElementTree.Element tag
     :param schema_version: version of the Crossref schema as a string, e.g. 4.4.1
     """
@@ -1050,6 +1047,7 @@ def build_articles_for_crossref(article_xmls, detail='full', build_parts=[]):
         'abstract', 'basic', 'components', 'contributors', 'funding', 'datasets',
         'license', 'pub_dates', 'references', 'volume']
     return build_articles(article_xmls, detail, build_parts)
+
 
 def build_articles(article_xmls, detail='full', build_parts=[]):
     return parse.build_articles_from_article_xmls(article_xmls, detail, build_parts)
