@@ -863,11 +863,12 @@ class CrossrefXML(object):
             else:
                 self.add_clean_tag(parent, tag_name, component.subtitle)
 
-    def clean_tags(self, original_string, do_not_clean=[]):
+    def clean_tags(self, original_string, do_not_clean=None):
         "remove all unwanted inline tags from the string"
+        do_not_clean_tags = do_not_clean if do_not_clean else []
         tag_converted_string = original_string
         for tag in utils.allowed_tags():
-            if tag not in do_not_clean:
+            if tag not in do_not_clean_tags:
                 # first do exact tag replacements
                 if tag.startswith('<') and tag.endswith('>'):
                     tag_converted_string = tag_converted_string.replace(tag, '')
@@ -877,7 +878,7 @@ class CrossrefXML(object):
                     tag_converted_string = eautils.remove_tag(tag_fragment, tag_converted_string)
         remove_tags = ['inline-formula']
         for tag in remove_tags:
-            if tag not in do_not_clean:
+            if tag not in do_not_clean_tags:
                 tag_converted_string = eautils.remove_tag(tag, tag_converted_string)
         return tag_converted_string
 
