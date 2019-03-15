@@ -378,117 +378,21 @@ class CrossrefXML(object):
         """
         Set the citation_list from the article object ref_list objects
         """
+        ref_index = 0
         if poa_article.ref_list:
             citation_list_tag = SubElement(parent, 'citation_list')
-            ref_index = 0
-            for ref in poa_article.ref_list:
-                # Increment
-                ref_index = ref_index + 1
-                # decide whether to create a related_item for the citation
-                if do_citation_related_item(ref):
-                    # first set the parent tag if it does not yet exist
-                    self.set_citation_related_item(parent, ref)
+        for ref in poa_article.ref_list:
+            # Increment
+            ref_index = ref_index + 1
+            # decide whether to create a related_item for the citation
+            if do_citation_related_item(ref):
+                # first set the parent tag if it does not yet exist
+                self.set_citation_related_item(parent, ref)
 
-                # continue with creating a citation tag
-                citation_tag = SubElement(citation_list_tag, 'citation')
-
-                if ref.id:
-                    citation_tag.set("key", ref.id)
-                else:
-                    citation_tag.set("key", str(ref_index))
-
-                if ref.source:
-                    if ref.publication_type == "journal":
-                        journal_title_tag = SubElement(citation_tag, 'journal_title')
-                        journal_title_tag.text = ref.source
-                    else:
-                        volume_title_tag = SubElement(citation_tag, 'volume_title')
-                        volume_title_tag.text = ref.source
-
-                authors = filter_citation_authors(ref)
-                if authors:
-                    # Only set the first author surname
-                    first_author = authors[0]
-                    if first_author.get("surname"):
-                        author_tag = SubElement(citation_tag, 'author')
-                        author_tag.text = first_author.get("surname")
-                    elif first_author.get("collab"):
-                        add_clean_tag(citation_tag, 'author', first_author.get("collab"),
-                                      self.reparsing_namespaces)
-
-                if ref.volume:
-                    volume_tag = SubElement(citation_tag, 'volume')
-                    volume_tag.text = ref.volume[0:31]
-
-                if ref.issue:
-                    issue_tag = SubElement(citation_tag, 'issue')
-                    issue_tag.text = ref.issue
-
-                if ref.fpage:
-                    first_page_tag = SubElement(citation_tag, 'first_page')
-                    first_page_tag.text = ref.fpage
-
-                if ref.year or ref.year_numeric:
-                    cyear_tag = SubElement(citation_tag, 'cYear')
-                    # Prefer the numeric year value if available
-                    if ref.year_numeric:
-                        cyear_tag.text = str(ref.year_numeric)
-                    else:
-                        cyear_tag.text = ref.year
-
-                if ref.article_title or ref.data_title:
-                    if ref.article_title:
-                        add_clean_tag(citation_tag, 'article_title', ref.article_title,
-                                      self.reparsing_namespaces)
-                    elif ref.data_title:
-                        add_clean_tag(citation_tag, 'article_title', ref.data_title,
-                                      self.reparsing_namespaces)
-
-                if ref.doi:
-                    doi_tag = SubElement(citation_tag, 'doi')
-                    doi_tag.text = ref.doi
-
-                if ref.isbn:
-                    isbn_tag = SubElement(citation_tag, 'isbn')
-                    isbn_tag.text = ref.isbn
-
-                if ref.elocation_id:
-                    if (self.crossref_config.get('crossref_schema_version')
-                            in ['4.3.5', '4.3.7', '4.4.0']):
-                        # Until alternate tag is available, elocation-id goes into first_page tag
-                        first_page_tag = SubElement(citation_tag, 'first_page')
-                        first_page_tag.text = ref.elocation_id
-                    else:
-                        # schema greater than 4.4.0 supports elocation_id
-                        elocation_id_tag = SubElement(citation_tag, 'elocation_id')
-                        elocation_id_tag.text = ref.elocation_id
-
-                # unstructured-citation
-                if do_unstructured_citation(ref) is True:
-                    self.set_unstructured_citation(citation_tag, ref)
-
-    def set_unstructured_citation(self, parent, ref):
-        # tag_content
-        tag_content = ''
-        author_line = citation_author_line(ref)
-
-        if ref.publication_type and ref.publication_type in [
-                'confproc', 'patent', 'preprint', 'report', 'software', 'thesis', 'web', 'webpage']:
-            tag_content = '. '.join([item.rstrip('.') for item in [
-                author_line, ref.year, ref.article_title, ref.data_title,
-                citation_publisher(ref), ref.source, ref.version,
-                ref.patent, ref.conf_name, citation_uri(ref)] if item is not None])
-            tag_content += '.'
-        # add the tag if there is tag_content
-        if tag_content != '':
-            # handle inline tagging
-            if self.crossref_config.get('face_markup') is True:
-                add_inline_tag(parent, 'unstructured_citation', tag_content,
-                               self.reparsing_namespaces)
-            else:
-                add_clean_tag(parent, 'unstructured_citation', tag_content,
-                              self.reparsing_namespaces)
-        return parent
+            # continue with creating a citation tag
+            set_citation(citation_list_tag, ref, ref_index, self.reparsing_namespaces,
+                         self.crossref_config.get('face_markup'),
+                         self.crossref_config.get('crossref_schema_version'))
 
     def set_citation_related_item(self, parent, ref):
         """depends on the relations_program tag existing already"""
@@ -657,6 +561,110 @@ def set_root(root, schema_version):
     root.set('xsi:schemaLocation', '%s %s' % (schema_location_name, schema_location_uri))
     root.set('xmlns:mml', 'http://www.w3.org/1998/Math/MathML')
     root.set('xmlns:jats', 'http://www.ncbi.nlm.nih.gov/JATS1')
+
+
+def set_citation(parent, ref, ref_index, reparsing_namespaces, face_markup,
+                 crossref_schema_version):
+    # continue with creating a citation tag
+    citation_tag = SubElement(parent, 'citation')
+
+    if ref.id:
+        citation_tag.set("key", ref.id)
+    else:
+        citation_tag.set("key", str(ref_index))
+
+    if ref.source:
+        if ref.publication_type == "journal":
+            journal_title_tag = SubElement(citation_tag, 'journal_title')
+            journal_title_tag.text = ref.source
+        else:
+            volume_title_tag = SubElement(citation_tag, 'volume_title')
+            volume_title_tag.text = ref.source
+
+    authors = filter_citation_authors(ref)
+    if authors:
+        # Only set the first author surname
+        first_author = authors[0]
+        if first_author.get("surname"):
+            author_tag = SubElement(citation_tag, 'author')
+            author_tag.text = first_author.get("surname")
+        elif first_author.get("collab"):
+            add_clean_tag(citation_tag, 'author', first_author.get("collab"),
+                          reparsing_namespaces)
+
+    if ref.volume:
+        volume_tag = SubElement(citation_tag, 'volume')
+        volume_tag.text = ref.volume[0:31]
+
+    if ref.issue:
+        issue_tag = SubElement(citation_tag, 'issue')
+        issue_tag.text = ref.issue
+
+    if ref.fpage:
+        first_page_tag = SubElement(citation_tag, 'first_page')
+        first_page_tag.text = ref.fpage
+
+    if ref.year or ref.year_numeric:
+        cyear_tag = SubElement(citation_tag, 'cYear')
+        # Prefer the numeric year value if available
+        if ref.year_numeric:
+            cyear_tag.text = str(ref.year_numeric)
+        else:
+            cyear_tag.text = ref.year
+
+    if ref.article_title or ref.data_title:
+        if ref.article_title:
+            add_clean_tag(citation_tag, 'article_title', ref.article_title,
+                          reparsing_namespaces)
+        elif ref.data_title:
+            add_clean_tag(citation_tag, 'article_title', ref.data_title,
+                          reparsing_namespaces)
+
+    if ref.doi:
+        doi_tag = SubElement(citation_tag, 'doi')
+        doi_tag.text = ref.doi
+
+    if ref.isbn:
+        isbn_tag = SubElement(citation_tag, 'isbn')
+        isbn_tag.text = ref.isbn
+
+    if ref.elocation_id:
+        if crossref_schema_version in ['4.3.5', '4.3.7', '4.4.0']:
+            # Until alternate tag is available, elocation-id goes into first_page tag
+            first_page_tag = SubElement(citation_tag, 'first_page')
+            first_page_tag.text = ref.elocation_id
+        else:
+            # schema greater than 4.4.0 supports elocation_id
+            elocation_id_tag = SubElement(citation_tag, 'elocation_id')
+            elocation_id_tag.text = ref.elocation_id
+
+    # unstructured-citation
+    if do_unstructured_citation(ref) is True:
+        set_unstructured_citation(citation_tag, ref, reparsing_namespaces, face_markup)
+
+
+def set_unstructured_citation(parent, ref, reparsing_namespaces, face_markup):
+    # tag_content
+    tag_content = ''
+    author_line = citation_author_line(ref)
+
+    if ref.publication_type and ref.publication_type in [
+            'confproc', 'patent', 'preprint', 'report', 'software', 'thesis', 'web', 'webpage']:
+        tag_content = '. '.join([item.rstrip('.') for item in [
+            author_line, ref.year, ref.article_title, ref.data_title,
+            citation_publisher(ref), ref.source, ref.version,
+            ref.patent, ref.conf_name, citation_uri(ref)] if item is not None])
+        tag_content += '.'
+    # add the tag if there is tag_content
+    if tag_content != '':
+        # handle inline tagging
+        if face_markup is True:
+            add_inline_tag(parent, 'unstructured_citation', tag_content,
+                           reparsing_namespaces)
+        else:
+            add_clean_tag(parent, 'unstructured_citation', tag_content,
+                          reparsing_namespaces)
+    return parent
 
 
 def set_journal_metadata(parent, poa_article):
