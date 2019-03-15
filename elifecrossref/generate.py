@@ -10,7 +10,7 @@ from elifearticle import parse
 from elifetools import utils as etoolsutils
 from elifetools import xmlio
 
-from elifecrossref import utils, elife, contributor
+from elifecrossref import utils, elife, contributor, funding
 from elifecrossref.conf import raw_config, parse_raw_config
 from elifecrossref.mime_type import crossref_mime_type
 from elifecrossref.tags import add_clean_tag, add_inline_tag, clean_tags
@@ -171,7 +171,7 @@ class CrossrefXML(object):
         # Disable crossmark for now
         # self.set_crossmark(self.journal_article, poa_article)
 
-        set_fundref(journal_article_tag, poa_article)
+        funding.set_fundref(journal_article_tag, poa_article)
 
         self.set_access_indicators(journal_article_tag, poa_article)
 
@@ -690,33 +690,6 @@ def set_publication_date(parent, pub_date):
         day_tag.text = str(pub_date.tm_mday).zfill(2)
         year_tag = SubElement(publication_date_tag, "year")
         year_tag.text = str(pub_date.tm_year)
-
-
-def set_fundref(parent, poa_article):
-    """
-    Set the fundref data from the article funding_awards list
-    """
-    if poa_article.funding_awards:
-        fr_program_tag = SubElement(parent, 'fr:program')
-        fr_program_tag.set("name", "fundref")
-        for award in poa_article.funding_awards:
-            fr_fundgroup_tag = SubElement(fr_program_tag, 'fr:assertion')
-            fr_fundgroup_tag.set("name", "fundgroup")
-
-            if award.get_funder_name():
-                fr_funder_name_tag = SubElement(fr_fundgroup_tag, 'fr:assertion')
-                fr_funder_name_tag.set("name", "funder_name")
-                fr_funder_name_tag.text = award.get_funder_name()
-
-            if award.get_funder_name() and award.institution_id:
-                fr_funder_identifier_tag = SubElement(fr_funder_name_tag, 'fr:assertion')
-                fr_funder_identifier_tag.set("name", "funder_identifier")
-                fr_funder_identifier_tag.text = award.institution_id
-
-            for award_id in award.award_ids:
-                fr_award_number_tag = SubElement(fr_fundgroup_tag, 'fr:assertion')
-                fr_award_number_tag.set("name", "award_number")
-                fr_award_number_tag.text = award_id
 
 
 def set_archive_locations(parent, archive_locations):
