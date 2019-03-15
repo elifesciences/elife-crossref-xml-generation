@@ -249,14 +249,14 @@ class CrossrefXML(object):
                         poa_article, poa_article, "text_mining_xml_pattern")
 
     def do_set_collection_text_mining_xml(self):
-        "decide whether to text mining xml resource"
+        """decide whether to text mining xml resource"""
         if (self.crossref_config.get("text_mining_xml_pattern")
                 and self.crossref_config.get("text_mining_pdf_pattern") != ''):
             return True
         return False
 
     def do_set_collection_text_mining_pdf(self, poa_article):
-        "decide whether to text mining pdf resource"
+        """decide whether to text mining pdf resource"""
         if (self.crossref_config.get("text_mining_pdf_pattern")
                 and self.crossref_config.get("text_mining_pdf_pattern") != ''
                 and poa_article.get_self_uri("pdf") is not None):
@@ -264,7 +264,7 @@ class CrossrefXML(object):
         return False
 
     def do_set_collection(self, poa_article, collection_property):
-        "decide whether to set collection tags"
+        """decide whether to set collection tags"""
         # only add text and data mining details if the article has a license
         if not self.has_license(poa_article):
             return False
@@ -275,7 +275,7 @@ class CrossrefXML(object):
         return False
 
     def has_license(self, poa_article):
-        "check if the article has the minimum requirements of a license"
+        """check if the article has the minimum requirements of a license"""
         if not poa_article.license:
             return False
         if not poa_article.license.href:
@@ -616,7 +616,7 @@ class CrossrefXML(object):
                     self.set_unstructured_citation(citation_tag, ref)
 
     def filter_citation_authors(self, ref):
-        "logic for which authors to select for citation records"
+        """logic for which authors to select for citation records"""
         # First consider authors with group-type author
         authors = [c for c in ref.authors if c.get('group-type') == 'author']
         if not authors:
@@ -625,7 +625,7 @@ class CrossrefXML(object):
         return authors
 
     def do_unstructured_citation(self, ref):
-        "decide if a citation should have an unstructured_citation tag added"
+        """decide if a citation should have an unstructured_citation tag added"""
         if ref.publication_type and ref.publication_type in [
                 'confproc', 'patent', 'software', 'thesis', 'web', 'webpage']:
             return True
@@ -691,13 +691,13 @@ class CrossrefXML(object):
         return uri_content if uri_content != '' else None
 
     def do_citation_related_item(self, ref):
-        "decide whether to create a related_item for a citation"
+        """decide whether to create a related_item for a citation"""
         if ref.publication_type and ref.publication_type == "data":
             return bool(ref.doi or ref.accession or ref.pmid or ref.uri)
         return False
 
     def set_citation_related_item(self, parent, ref):
-        "depends on the relations_program tag existing already"
+        """depends on the relations_program tag existing already"""
         # first set the parent tag if it does not yet exist
         self.set_relations_program(parent)
         related_item_tag = SubElement(self.relations_program_tag, 'rel:related_item')
@@ -725,7 +725,7 @@ class CrossrefXML(object):
                 identifier_type, related_item_text)
 
     def do_relations_program(self, poa_article):
-        "call at a specific moment during generation to set this tag if required"
+        """call at a specific moment during generation to set this tag if required"""
         do_relations = None
         for dataset in poa_article.datasets:
             if self.do_dataset_related_item(dataset) is True:
@@ -739,12 +739,12 @@ class CrossrefXML(object):
         return do_relations
 
     def set_relations_program(self, parent):
-        "set the relations program parent tag only once"
+        """set the relations program parent tag only once"""
         if self.relations_program_tag is None:
             self.relations_program_tag = SubElement(parent, 'rel:program')
 
     def do_dataset_related_item(self, dataset):
-        "decide whether to create a related_item for a dataset"
+        """decide whether to create a related_item for a dataset"""
         return bool(dataset.accession_id or dataset.doi or dataset.uri)
 
     def set_datasets(self, parent, poa_article):
@@ -827,7 +827,7 @@ class CrossrefXML(object):
                     resource_tag.text = resource_url
 
     def set_component_permissions(self, parent, permissions):
-        "Specific license for the component"
+        """Specific license for the component"""
         # First check if a license ref is in the config
         if self.crossref_config.get('component_license_ref') != '':
             # set the component permissions if it has any copyright statement or license value
@@ -884,7 +884,7 @@ def set_root(root, schema_version):
 
 
 def dataset_relationship_type(dataset):
-    "relationship_type for the related_item depending on the dataset_type"
+    """relationship_type for the related_item depending on the dataset_type"""
     if dataset.dataset_type:
         if dataset.dataset_type == "prev_published_datasets":
             return "references"
@@ -921,7 +921,7 @@ def build_crossref_xml(poa_articles, crossref_config=None, pub_date=None, add_co
 
 
 def crossref_xml(poa_articles, crossref_config=None, pub_date=None, add_comment=True):
-    "build crossref xml and return output as a string"
+    """build crossref xml and return output as a string"""
     if not crossref_config:
         crossref_config = parse_raw_config(raw_config(None))
     c_xml = build_crossref_xml(poa_articles, crossref_config, pub_date, add_comment)
@@ -929,7 +929,7 @@ def crossref_xml(poa_articles, crossref_config=None, pub_date=None, add_comment=
 
 
 def crossref_xml_to_disk(poa_articles, crossref_config=None, pub_date=None, add_comment=True):
-    "build crossref xml and write the output to disk"
+    """build crossref xml and write the output to disk"""
     if not crossref_config:
         crossref_config = parse_raw_config(raw_config(None))
     c_xml = build_crossref_xml(poa_articles, crossref_config, pub_date, add_comment)
@@ -944,7 +944,7 @@ def crossref_xml_to_disk(poa_articles, crossref_config=None, pub_date=None, add_
 
 
 def build_articles_for_crossref(article_xmls, detail='full', build_parts=None):
-    "specify some detail and build_parts specific to generating crossref output"
+    """specify some detail and build_parts specific to generating crossref output"""
     build_parts = [
         'abstract', 'basic', 'components', 'contributors', 'funding', 'datasets',
         'license', 'pub_dates', 'references', 'volume']

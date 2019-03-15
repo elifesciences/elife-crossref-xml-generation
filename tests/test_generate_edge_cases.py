@@ -14,7 +14,7 @@ class TestGenerateComponentList(unittest.TestCase):
         pass
 
     def test_component_subtitle_no_face_markup(self):
-        "build an article object and component, generate Crossref XML"
+        """build an article object and component, generate Crossref XML"""
         doi = "10.7554/eLife.00666"
         title = "Test article"
         article = Article(doi, title)
@@ -32,7 +32,7 @@ class TestGenerateComponentList(unittest.TestCase):
 
 
     def test_component_subtitle_with_face_markup(self):
-        "build an article object and component, generate Crossref XML"
+        """build an article object and component, generate Crossref XML"""
         doi = "10.7554/eLife.00666"
         title = "Test article"
         article = Article(doi, title)
@@ -62,8 +62,8 @@ class TestGenerateContributors(unittest.TestCase):
         pass
 
     def test_generate_no_contributors(self):
-        "Test when an article has no contributors"
-        "build an article object and component, generate Crossref XML"
+        """Test when an article has no contributors"""
+        # build an article object and component, generate Crossref XML
         doi = "10.7554/eLife.00666"
         title = "Test article"
         article = Article(doi, title)
@@ -75,7 +75,7 @@ class TestGenerateContributors(unittest.TestCase):
         self.assertTrue('<contributors' not in crossref_xml_string)
 
     def test_generate_blank_affiliation(self):
-        "Test when a contributor has a blank affiliation"
+        """Test when a contributor has a blank affiliation"""
         doi = "10.7554/eLife.00666"
         title = "Test article"
         article = Article(doi, title)
@@ -120,8 +120,8 @@ class TestGenerateCrossrefSchemaVersion(unittest.TestCase):
         )
 
     def generate_crossref_schema_version(self, crossref_schema_version, expected_snippet):
-        "Test non-default crossref schema version"
-        "build an article object and component, generate Crossref XML"
+        """Test non-default crossref schema version"""
+        # build an article object and component, generate Crossref XML
         doi = "10.7554/eLife.00666"
         title = "Test article"
         article = Article(doi, title)
@@ -147,13 +147,13 @@ class TestGenerateCrossrefCitationPublisher(unittest.TestCase):
         self.publisher_name = "Radboud University Nijmegen Medical Centre"
 
     def test_generate_citation_publisher_none(self):
-        "no publisher name concatenation"
+        """no publisher name concatenation"""
         citation = Citation()
         c_xml = generate.CrossrefXML([], {})
         self.assertIsNone(c_xml.citation_publisher(citation))
 
     def test_generate_citation_publisher_loc_only(self):
-        "no publisher name concatenation"
+        """no publisher name concatenation"""
         citation = Citation()
         citation.publisher_loc = self.publisher_loc
         c_xml = generate.CrossrefXML([], {})
@@ -162,7 +162,7 @@ class TestGenerateCrossrefCitationPublisher(unittest.TestCase):
             "Nijmegen, The Netherlands")
 
     def test_generate_citation_publisher_name_only(self):
-        "no publisher name concatenation"
+        """no publisher name concatenation"""
         citation = Citation()
         citation.publisher_name = self.publisher_name
         c_xml = generate.CrossrefXML([], {})
@@ -171,7 +171,7 @@ class TestGenerateCrossrefCitationPublisher(unittest.TestCase):
             "Radboud University Nijmegen Medical Centre")
 
     def test_generate_citation_publisher_all(self):
-        "no publisher name concatenation"
+        """no publisher name concatenation"""
         citation = Citation()
         citation.publisher_loc = self.publisher_loc
         citation.publisher_name = self.publisher_name
@@ -187,7 +187,7 @@ class TestGenerateCrossrefUnstructuredCitation(unittest.TestCase):
         pass
 
     def test_set_unstructured_citation_no_face_markup(self):
-        "unstructured citation example with no face markup"
+        """unstructured citation example with no face markup"""
         article_title = 'PhD thesis: Submicroscopic <italic>Plasmodium falciparum</italic> gametocytaemia and the contribution to malaria transmission'
         expected = '<citation><unstructured_citation>PhD thesis: Submicroscopic Plasmodium falciparum gametocytaemia and the contribution to malaria transmission.</unstructured_citation></citation>'
         crossref_config = {}
@@ -201,7 +201,7 @@ class TestGenerateCrossrefUnstructuredCitation(unittest.TestCase):
         self.assertEqual(rough_string, expected)
 
     def test_set_unstructured_citation_face_markup(self):
-        "unstructured citation example which does include face markup"
+        """unstructured citation example which does include face markup"""
         article_title = 'PhD thesis: Submicroscopic <italic>Plasmodium falciparum</italic> gametocytaemia and the contribution to malaria transmission'
         expected = '<citation><unstructured_citation>PhD thesis: Submicroscopic <i>Plasmodium falciparum</i> gametocytaemia and the contribution to malaria transmission.</unstructured_citation></citation>'
         # load a config and override the value
@@ -228,7 +228,7 @@ class TestGenerateCrossrefCitationId(unittest.TestCase):
         pass
 
     def test_ref_list_citation_with_no_id(self):
-        "for test coverage an article with a ref_list with a citation that has no id attribute"
+        """for test coverage an article with a ref_list with a citation that has no id attribute"""
         doi = "10.7554/eLife.00666"
         title = "Test article"
         article = Article(doi, title)
@@ -243,7 +243,7 @@ class TestGenerateCrossrefCitationId(unittest.TestCase):
 class TestGenerateCrossrefCitationElocationId(unittest.TestCase):
 
     def test_ref_list_citation_elocation_id(self):
-        "for test coverage for schema where elocation_id goes into first_page element"
+        """for test coverage for schema where elocation_id goes into first_page element"""
         # load a config and override the value
         raw_config_object = raw_config('elife')
         original_crossref_schema_version = raw_config_object.get('crossref_schema_version')
@@ -268,7 +268,7 @@ class TestGenerateCrossrefDatasets(unittest.TestCase):
         pass
 
     def test_set_datasets(self):
-        "a basic non-XML example for set_datasets"
+        """a basic non-XML example for set_datasets"""
         doi = "10.7554/eLife.00666"
         title = "Test article"
         article = Article(doi, title)
@@ -326,7 +326,7 @@ class TestGenerateCrossrefDataCitation(unittest.TestCase):
         pass
 
     def test_ref_list_data_citation_with_pmid(self):
-        "for test coverage an article with a ref_list with a data citation that has a pmid attribute"
+        """for test coverage an article with a ref_list with a data citation that has a pmid attribute"""
         doi = "10.7554/eLife.00666"
         title = "Test article"
         article = Article(doi, title)
@@ -349,7 +349,7 @@ class TestGenerateAbstract(unittest.TestCase):
         self.abstract = '<p><bold><italic><underline><sub><sup>An abstract. <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1601/nm.3602">Desulfocapsa sulfexigens</ext-link>.</sup></sub></underline></italic></bold></p>'
 
     def test_set_abstract(self):
-        "test stripping unwanted tags from abstract"
+        """test stripping unwanted tags from abstract"""
         doi = "10.7554/eLife.00666"
         title = "Test article"
         article = Article(doi, title)
@@ -362,7 +362,7 @@ class TestGenerateAbstract(unittest.TestCase):
         self.assertTrue(expected_contains in crossref_xml_string)
 
     def test_set_abstract_jats_abstract_format(self):
-        "test the abstract using jats abstract format set to true"
+        """test the abstract using jats abstract format set to true"""
         doi = "10.7554/eLife.00666"
         title = "Test article"
         article = Article(doi, title)
@@ -390,7 +390,7 @@ class TestGenerateTitles(unittest.TestCase):
         self.title = '<bold>Test article</bold> for <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1601/nm.3602">Desulfocapsa sulfexigens</ext-link>'
 
     def test_set_titles(self):
-        "test stripping unwanted tags from title"
+        """test stripping unwanted tags from title"""
         doi = "10.7554/eLife.00666"
         article = Article(doi, self.title)
         expected_contains = '<titles><title>Test article for Desulfocapsa sulfexigens</title></titles>'
@@ -401,7 +401,7 @@ class TestGenerateTitles(unittest.TestCase):
         self.assertTrue(expected_contains in crossref_xml_string)
 
     def test_set_titles_face_markup_format(self):
-        "test the title using face markup set to true"
+        """test the title using face markup set to true"""
         doi = "10.7554/eLife.00666"
         article = Article(doi, self.title)
         expected_contains = '<titles><title><b>Test article</b> for Desulfocapsa sulfexigens</title></titles>'
@@ -424,21 +424,21 @@ class TestSetCollection(unittest.TestCase):
         pass
 
     def create_aricle_object(self):
-        "create a basic article object"
+        """create a basic article object"""
         doi = "10.7554/eLife.00666"
         title = "Test article"
         article = Article(doi, title)
         return article
 
     def create_crossref_object(self, article):
-        "utility to create the crossref object"
+        """utility to create the crossref object"""
         raw_config_object = raw_config('elife')
         crossref_config = parse_raw_config(raw_config_object)
         crossref_object = generate.CrossrefXML([article], crossref_config, None, True)
         return crossref_object
 
     def test_do_set_collection_no_license(self):
-        "test when an article has no license"
+        """test when an article has no license"""
         # create CrossrefXML object to test
         article = self.create_aricle_object()
         crossref_object = self.create_crossref_object(article)
@@ -447,7 +447,7 @@ class TestSetCollection(unittest.TestCase):
         self.assertFalse(crossref_object.do_set_collection(article, collection_property))
 
     def test_do_set_collection_empty_license(self):
-        "test when an article has no license"
+        """test when an article has no license"""
         article = self.create_aricle_object()
         # create an empty license
         license_object = License()
@@ -459,7 +459,7 @@ class TestSetCollection(unittest.TestCase):
         self.assertFalse(crossref_object.do_set_collection(article, collection_property))
 
     def test_do_set_collection_with_license(self):
-        "test when an article has no license"
+        """test when an article has no license"""
         article = self.create_aricle_object()
         # create a license with a href value
         license_object = License()

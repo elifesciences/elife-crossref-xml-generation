@@ -12,7 +12,7 @@ def load_config(config_file=None):
     return config
 
 def raw_config(config_section, config_file=None):
-    "try to load the config section"
+    """try to load the config section"""
     if not config_file:
         config_file=CONFIG_FILE
     config = load_config(config_file)
@@ -22,7 +22,7 @@ def raw_config(config_section, config_file=None):
     return config['DEFAULT']
 
 def parse_raw_config(raw_config_object):
-    "parse the raw config to something good"
+    """parse the raw config to something good"""
     crossref_config = {}
     boolean_values = []
     int_values = []

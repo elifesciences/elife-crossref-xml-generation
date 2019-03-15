@@ -92,7 +92,7 @@ class TestGenerate(unittest.TestCase):
 
 
     def test_crossref_xml_to_disk(self):
-        "test writing to disk for test coverage and also not pass crossref_config"
+        """test writing to disk for test coverage and also not pass crossref_config"""
         article_xml_file = 'up-sta-example.xml'
         crossref_xml_file = 'crossref-606-20170717071707.xml'
         crossref_config = None
