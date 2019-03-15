@@ -237,14 +237,14 @@ class CrossrefXML(object):
                     resource_tag.set("mime_type", "application/pdf")
                     resource_tag.text = self.generate_resource_url(
                         poa_article, poa_article, "text_mining_pdf_pattern")
-                if self.do_set_collection_text_mining_xml(poa_article) is True:
+                if self.do_set_collection_text_mining_xml() is True:
                     item_tag = SubElement(collection_tag, 'item')
                     resource_tag = SubElement(item_tag, 'resource')
                     resource_tag.set("mime_type", "application/xml")
                     resource_tag.text = self.generate_resource_url(
                         poa_article, poa_article, "text_mining_xml_pattern")
 
-    def do_set_collection_text_mining_xml(self, poa_article):
+    def do_set_collection_text_mining_xml(self):
         "decide whether to text mining xml resource"
         if (self.crossref_config.get("text_mining_xml_pattern")
                 and self.crossref_config.get("text_mining_pdf_pattern") != ''):
@@ -265,7 +265,7 @@ class CrossrefXML(object):
         if not self.has_license(poa_article):
             return False
         if collection_property == "text-mining":
-            if (self.do_set_collection_text_mining_xml(poa_article) is True
+            if (self.do_set_collection_text_mining_xml() is True
                     or self.do_set_collection_text_mining_pdf(poa_article) is True):
                 return True
         return False
