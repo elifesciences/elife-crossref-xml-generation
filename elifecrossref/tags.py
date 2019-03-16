@@ -30,27 +30,35 @@ def clean_tags(original_string, do_not_clean=None):
     return tag_converted_string
 
 
-def add_clean_tag(parent, tag_name, original_string, namespaces=REPARSING_NAMESPACES):
+def add_clean_tag(parent, tag_name, original_string, 
+                  namespaces=REPARSING_NAMESPACES, attributes=None, attributes_text=''):
     """remove allowed tags and then add a tag the parent"""
     tag_converted_string = clean_tags(original_string)
     tag_converted_string = etoolsutils.escape_ampersand(tag_converted_string)
     tag_converted_string = etoolsutils.escape_unmatched_angle_brackets(
         tag_converted_string)
-    append_tag(parent, tag_name, tag_converted_string, namespaces)
+    minidom_tag = reparsed_tag(tag_name, tag_converted_string, namespaces, attributes_text)
+    append_tag(parent, minidom_tag, attributes=attributes)
 
 
-def add_inline_tag(parent, tag_name, original_string, namespaces=REPARSING_NAMESPACES):
+def add_inline_tag(parent, tag_name, original_string, 
+                   namespaces=REPARSING_NAMESPACES, attributes=None, attributes_text=''):
     """replace inline tags found in the original_string and then add a tag the parent"""
     tag_converted_string = convert_inline_tags(original_string)
-    append_tag(parent, tag_name, tag_converted_string, namespaces)
+    minidom_tag = reparsed_tag(tag_name, tag_converted_string, namespaces, attributes_text)
+    append_tag(parent, minidom_tag, attributes=attributes)
 
 
-def append_tag(parent, tag_name, tag_string, attributes):
-    """given final tag content and attributes, append a tag to the parent tag"""
-    tagged_string = ('<' + tag_name + attributes + '>' +
+def reparsed_tag(tag_name, tag_string, namespaces=REPARSING_NAMESPACES, attributes_text=''):
+    """given final tag content and attributes, reparse to a minidom tag"""
+    tagged_string = ('<' + tag_name + namespaces + attributes_text + '>' +
                      tag_string + '</' + tag_name + '>')
-    reparsed = minidom.parseString(tagged_string.encode('utf-8'))
-    xmlio.append_minidom_xml_to_elementtree_xml(parent, reparsed)
+    return minidom.parseString(tagged_string.encode('utf-8'))
+
+
+def append_tag(parent, minidom_tag, attributes=None):
+    """given final minidom tag and details, append a tag to the parent tag"""
+    xmlio.append_minidom_xml_to_elementtree_xml(parent, minidom_tag, attributes=attributes)
 
 
 def convert_inline_tags(original_string):

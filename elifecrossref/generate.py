@@ -8,12 +8,10 @@ from elifearticle import utils as eautils
 from elifearticle.article import Article, Component
 from elifearticle import parse
 from elifetools import utils as etoolsutils
-from elifetools import xmlio
 
-from elifecrossref import utils, elife, contributor, funding
+from elifecrossref import utils, elife, contributor, funding, tags
 from elifecrossref.conf import raw_config, parse_raw_config
 from elifecrossref.mime_type import crossref_mime_type
-from elifecrossref.tags import REPARSING_NAMESPACES, add_clean_tag, add_inline_tag, clean_tags
 
 
 TMP_DIR = 'tmp'
@@ -195,9 +193,9 @@ class CrossrefXML(object):
         # remove unwanted tags
         tag_converted_title = eautils.remove_tag('ext-link', poa_article.title)
         if self.crossref_config.get('face_markup') is True:
-            add_inline_tag(root_xml_element, tag_name, tag_converted_title)
+            tags.add_inline_tag(root_xml_element, tag_name, tag_converted_title)
         else:
-            add_clean_tag(root_xml_element, tag_name, tag_converted_title)
+            tags.add_clean_tag(root_xml_element, tag_name, tag_converted_title)
         parent.append(root_xml_element)
 
     def set_doi_data(self, parent, poa_article):
@@ -337,18 +335,14 @@ class CrossrefXML(object):
             tag_converted_abstract = etoolsutils.escape_ampersand(tag_converted_abstract)
             tag_converted_abstract = etoolsutils.escape_unmatched_angle_brackets(
                 tag_converted_abstract, utils.allowed_tags())
-            tag_converted_abstract = clean_tags(
+            tag_converted_abstract = tags.clean_tags(
                 tag_converted_abstract, do_not_clean=['<p>', '</p>', '<mml:', '</mml:'])
             tag_converted_abstract = eautils.replace_tags(tag_converted_abstract, 'p', 'jats:p')
             tag_converted_abstract = tag_converted_abstract
 
-        tagged_string = '<' + tag_name + REPARSING_NAMESPACES + attributes_text + '>'
-        tagged_string += tag_converted_abstract
-        tagged_string += '</' + tag_name + '>'
-        reparsed = minidom.parseString(tagged_string.encode('utf-8'))
-
-        recursive = False
-        xmlio.append_minidom_xml_to_elementtree_xml(parent, reparsed, recursive, attributes)
+        minidom_tag = tags.reparsed_tag(tag_name, tag_converted_abstract,
+                                        attributes_text=attributes_text)
+        tags.append_tag(parent, minidom_tag, attributes=attributes)
 
     def set_access_indicators(self, parent, poa_article):
         """
@@ -519,9 +513,9 @@ class CrossrefXML(object):
         # Use <i> tags, not <italic> tags, <b> tags not <bold>
         if component.subtitle:
             if self.crossref_config.get('face_markup') is True:
-                add_inline_tag(parent, tag_name, component.subtitle)
+                tags.add_inline_tag(parent, tag_name, component.subtitle)
             else:
-                add_clean_tag(parent, tag_name, component.subtitle)
+                tags.add_clean_tag(parent, tag_name, component.subtitle)
 
     def output_xml(self, pretty=False, indent=""):
         encoding = 'utf-8'
@@ -581,7 +575,7 @@ def set_citation(parent, ref, ref_index, face_markup,
             author_tag = SubElement(citation_tag, 'author')
             author_tag.text = first_author.get("surname")
         elif first_author.get("collab"):
-            add_clean_tag(citation_tag, 'author', first_author.get("collab"))
+            tags.add_clean_tag(citation_tag, 'author', first_author.get("collab"))
 
     if ref.volume:
         volume_tag = SubElement(citation_tag, 'volume')
@@ -605,9 +599,9 @@ def set_citation(parent, ref, ref_index, face_markup,
 
     if ref.article_title or ref.data_title:
         if ref.article_title:
-            add_clean_tag(citation_tag, 'article_title', ref.article_title)
+            tags.add_clean_tag(citation_tag, 'article_title', ref.article_title)
         elif ref.data_title:
-            add_clean_tag(citation_tag, 'article_title', ref.data_title)
+            tags.add_clean_tag(citation_tag, 'article_title', ref.data_title)
 
     if ref.doi:
         doi_tag = SubElement(citation_tag, 'doi')
@@ -648,9 +642,9 @@ def set_unstructured_citation(parent, ref, face_markup):
     if tag_content != '':
         # handle inline tagging
         if face_markup is True:
-            add_inline_tag(parent, 'unstructured_citation', tag_content)
+            tags.add_inline_tag(parent, 'unstructured_citation', tag_content)
         else:
-            add_clean_tag(parent, 'unstructured_citation', tag_content)
+            tags.add_clean_tag(parent, 'unstructured_citation', tag_content)
     return parent
 
 
