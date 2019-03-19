@@ -1,5 +1,5 @@
 from xml.etree.ElementTree import SubElement
-from elifecrossref import tags
+from elifecrossref import related, tags
 
 
 def set_citation(parent, ref, ref_index, face_markup,
@@ -109,6 +109,32 @@ def set_elocation_id(parent, ref, crossref_schema_version):
             # schema greater than 4.4.0 supports elocation_id
             elocation_id_tag = SubElement(parent, 'elocation_id')
             elocation_id_tag.text = ref.elocation_id
+
+
+def set_citation_related_item(parent, ref):
+    related_item_tag = SubElement(parent, 'rel:related_item')
+    if ref.data_title:
+        related.set_related_item_description(related_item_tag, ref.data_title)
+    identifier_type = None
+    related_item_text = None
+    related_item_type = "inter_work_relation"
+    relationship_type = "references"
+    if ref.doi:
+        identifier_type = "doi"
+        related_item_text = ref.doi
+    elif ref.accession:
+        identifier_type = "accession"
+        related_item_text = ref.accession
+    elif ref.pmid:
+        identifier_type = "pmid"
+        related_item_text = ref.pmid
+    elif ref.uri:
+        identifier_type = "uri"
+        related_item_text = ref.uri
+    if identifier_type and related_item_text:
+        related.set_related_item_work_relation(
+            related_item_tag, related_item_type, relationship_type,
+            identifier_type, related_item_text)
 
 
 def set_unstructured_citation(parent, ref, face_markup):

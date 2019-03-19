@@ -9,7 +9,7 @@ from elifearticle.article import Article, Component
 from elifearticle import parse
 from elifetools import utils as etoolsutils
 
-from elifecrossref import utils, elife, contributor, funding, tags, citation
+from elifecrossref import utils, elife, contributor, funding, tags, citation, related
 from elifecrossref.conf import raw_config, parse_raw_config
 from elifecrossref.mime_type import crossref_mime_type
 
@@ -169,7 +169,7 @@ class CrossrefXML(object):
         self.set_access_indicators(journal_article_tag, poa_article)
 
         # this is the spot to add the relations program tag if it is required
-        if do_relations_program(poa_article) is True:
+        if related.do_relations_program(poa_article) is True:
             self.set_relations_program(journal_article_tag)
 
         self.set_datasets(journal_article_tag, poa_article)
@@ -372,7 +372,7 @@ class CrossrefXML(object):
             # Increment
             ref_index = ref_index + 1
             # decide whether to create a related_item for the citation
-            if do_citation_related_item(ref):
+            if related.do_citation_related_item(ref):
                 # first set the parent tag if it does not yet exist
                 self.set_citation_related_item(parent, ref)
 
@@ -385,29 +385,7 @@ class CrossrefXML(object):
         """depends on the relations_program tag existing already"""
         # first set the parent tag if it does not yet exist
         self.set_relations_program(parent)
-        related_item_tag = SubElement(self.relations_program_tag, 'rel:related_item')
-        if ref.data_title:
-            set_related_item_description(related_item_tag, ref.data_title)
-        identifier_type = None
-        related_item_text = None
-        related_item_type = "inter_work_relation"
-        relationship_type = "references"
-        if ref.doi:
-            identifier_type = "doi"
-            related_item_text = ref.doi
-        elif ref.accession:
-            identifier_type = "accession"
-            related_item_text = ref.accession
-        elif ref.pmid:
-            identifier_type = "pmid"
-            related_item_text = ref.pmid
-        elif ref.uri:
-            identifier_type = "uri"
-            related_item_text = ref.uri
-        if identifier_type and related_item_text:
-            set_related_item_work_relation(
-                related_item_tag, related_item_type, relationship_type,
-                identifier_type, related_item_text)
+        citation.set_citation_related_item(self.relations_program_tag, ref)
 
     def set_relations_program(self, parent):
         """set the relations program parent tag only once"""
@@ -420,7 +398,7 @@ class CrossrefXML(object):
         """
         for dataset in poa_article.datasets:
             # Check for at least one identifier before adding the related_item
-            if not do_dataset_related_item(dataset):
+            if not related.do_dataset_related_item(dataset):
                 continue
             # first set the parent tag if it does not yet exist
             self.set_relations_program(parent)
@@ -433,24 +411,24 @@ class CrossrefXML(object):
             if dataset.title:
                 description = dataset.title
             if description:
-                set_related_item_description(related_item_tag, description)
+                related.set_related_item_description(related_item_tag, description)
             # Now add one inter_work_relation tag in order ot priority
             if dataset.doi:
                 identifier_type = "doi"
                 related_item_text = dataset.doi
-                set_related_item_work_relation(
+                related.set_related_item_work_relation(
                     related_item_tag, related_item_type, relationship_type,
                     identifier_type, related_item_text)
             elif dataset.accession_id:
                 identifier_type = "accession"
                 related_item_text = dataset.accession_id
-                set_related_item_work_relation(
+                related.set_related_item_work_relation(
                     related_item_tag, related_item_type, relationship_type,
                     identifier_type, related_item_text)
             elif dataset.uri:
                 identifier_type = "uri"
                 related_item_text = dataset.uri
-                set_related_item_work_relation(
+                related.set_related_item_work_relation(
                     related_item_tag, related_item_type, relationship_type,
                     identifier_type, related_item_text)
 
@@ -590,33 +568,6 @@ def set_archive_locations(parent, archive_locations):
             archive_tag.set('name', archive_location)
 
 
-def do_citation_related_item(ref):
-    """decide whether to create a related_item for a citation"""
-    if ref.publication_type and ref.publication_type == "data":
-        return bool(ref.doi or ref.accession or ref.pmid or ref.uri)
-    return False
-
-
-def do_dataset_related_item(dataset):
-    """decide whether to create a related_item for a dataset"""
-    return bool(dataset.accession_id or dataset.doi or dataset.uri)
-
-
-def do_relations_program(poa_article):
-    """call at a specific moment during generation to set this tag if required"""
-    do_relations = None
-    for dataset in poa_article.datasets:
-        if do_dataset_related_item(dataset) is True:
-            do_relations = True
-            break
-    if do_relations is not True and poa_article.ref_list:
-        for ref in poa_article.ref_list:
-            if do_citation_related_item(ref) is True:
-                do_relations = True
-                break
-    return do_relations
-
-
 def dataset_relationship_type(dataset):
     """relationship_type for the related_item depending on the dataset_type"""
     if dataset.dataset_type:
@@ -628,20 +579,6 @@ def dataset_relationship_type(dataset):
     return "isSupplementedBy"
 
 
-def set_related_item_description(parent, description):
-    if description:
-        description_tag = SubElement(parent, 'rel:description')
-        description_tag.text = description
-
-
-def set_related_item_work_relation(parent, related_item_type, relationship_type,
-                                   identifier_type, related_item_text):
-    # only supporting inter_work_relation for now
-    if related_item_type == "inter_work_relation":
-        work_relation_tag = SubElement(parent, 'rel:inter_work_relation')
-        work_relation_tag.set("relationship-type", relationship_type)
-        work_relation_tag.set("identifier-type", identifier_type)
-        work_relation_tag.text = related_item_text
 
 
 def build_crossref_xml(poa_articles, crossref_config=None, pub_date=None, add_comment=True):
