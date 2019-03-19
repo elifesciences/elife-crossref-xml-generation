@@ -6,77 +6,109 @@ def set_citation(parent, ref, ref_index, face_markup,
                  crossref_schema_version):
     # continue with creating a citation tag
     citation_tag = SubElement(parent, 'citation')
+    set_citation_key(citation_tag, ref, ref_index)
+    set_citation_title(citation_tag, ref)
+    set_citation_authors(citation_tag, ref)
+    set_citation_volume(citation_tag, ref)
+    set_citation_issue(citation_tag, ref)
+    set_citation_first_page(citation_tag, ref)
+    set_citation_year(citation_tag, ref)
+    set_citation_article_title(citation_tag, ref)
+    set_citation_doi(citation_tag, ref)
+    set_citation_isbn(citation_tag, ref)
+    set_elocation_id(citation_tag, ref, crossref_schema_version)
+    # unstructured-citation
+    if do_unstructured_citation(ref) is True:
+        set_unstructured_citation(citation_tag, ref, face_markup)
 
+
+def set_citation_key(citation_tag, ref, ref_index):
     if ref.id:
         citation_tag.set("key", ref.id)
     else:
         citation_tag.set("key", str(ref_index))
 
+
+def set_citation_title(parent, ref):
     if ref.source:
         if ref.publication_type == "journal":
-            journal_title_tag = SubElement(citation_tag, 'journal_title')
+            journal_title_tag = SubElement(parent, 'journal_title')
             journal_title_tag.text = ref.source
         else:
-            volume_title_tag = SubElement(citation_tag, 'volume_title')
+            volume_title_tag = SubElement(parent, 'volume_title')
             volume_title_tag.text = ref.source
 
+
+def set_citation_authors(parent, ref):
     authors = filter_citation_authors(ref)
     if authors:
         # Only set the first author surname
         first_author = authors[0]
         if first_author.get("surname"):
-            author_tag = SubElement(citation_tag, 'author')
+            author_tag = SubElement(parent, 'author')
             author_tag.text = first_author.get("surname")
         elif first_author.get("collab"):
-            tags.add_clean_tag(citation_tag, 'author', first_author.get("collab"))
+            tags.add_clean_tag(parent, 'author', first_author.get("collab"))
 
+
+def set_citation_volume(parent, ref):
     if ref.volume:
-        volume_tag = SubElement(citation_tag, 'volume')
+        volume_tag = SubElement(parent, 'volume')
         volume_tag.text = ref.volume[0:31]
 
+
+def set_citation_issue(parent, ref):
     if ref.issue:
-        issue_tag = SubElement(citation_tag, 'issue')
+        issue_tag = SubElement(parent, 'issue')
         issue_tag.text = ref.issue
 
+
+def set_citation_first_page(parent, ref):
     if ref.fpage:
-        first_page_tag = SubElement(citation_tag, 'first_page')
+        first_page_tag = SubElement(parent, 'first_page')
         first_page_tag.text = ref.fpage
 
+
+def set_citation_year(parent, ref):
     if ref.year or ref.year_numeric:
-        cyear_tag = SubElement(citation_tag, 'cYear')
+        cyear_tag = SubElement(parent, 'cYear')
         # Prefer the numeric year value if available
         if ref.year_numeric:
             cyear_tag.text = str(ref.year_numeric)
         else:
             cyear_tag.text = ref.year
 
+
+def set_citation_article_title(parent, ref):
     if ref.article_title or ref.data_title:
         if ref.article_title:
-            tags.add_clean_tag(citation_tag, 'article_title', ref.article_title)
+            tags.add_clean_tag(parent, 'article_title', ref.article_title)
         elif ref.data_title:
-            tags.add_clean_tag(citation_tag, 'article_title', ref.data_title)
+            tags.add_clean_tag(parent, 'article_title', ref.data_title)
 
+
+def set_citation_doi(parent, ref):
     if ref.doi:
-        doi_tag = SubElement(citation_tag, 'doi')
+        doi_tag = SubElement(parent, 'doi')
         doi_tag.text = ref.doi
 
+
+def set_citation_isbn(parent, ref):
     if ref.isbn:
-        isbn_tag = SubElement(citation_tag, 'isbn')
+        isbn_tag = SubElement(parent, 'isbn')
         isbn_tag.text = ref.isbn
 
+
+def set_elocation_id(parent, ref, crossref_schema_version):
     if ref.elocation_id:
         if crossref_schema_version in ['4.3.5', '4.3.7', '4.4.0']:
             # Until alternate tag is available, elocation-id goes into first_page tag
-            first_page_tag = SubElement(citation_tag, 'first_page')
+            first_page_tag = SubElement(parent, 'first_page')
             first_page_tag.text = ref.elocation_id
         else:
             # schema greater than 4.4.0 supports elocation_id
-            elocation_id_tag = SubElement(citation_tag, 'elocation_id')
+            elocation_id_tag = SubElement(parent, 'elocation_id')
             elocation_id_tag.text = ref.elocation_id
-
-    # unstructured-citation
-    if do_unstructured_citation(ref) is True:
-        set_unstructured_citation(citation_tag, ref, face_markup)
 
 
 def set_unstructured_citation(parent, ref, face_markup):
