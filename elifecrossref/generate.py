@@ -9,7 +9,7 @@ from elifearticle.article import Article, Component
 from elifearticle import parse
 from elifetools import utils as etoolsutils
 
-from elifecrossref import utils, elife, contributor, funding, tags, citation, related
+from elifecrossref import utils, elife, contributor, funding, tags, citation, related, dataset
 from elifecrossref.conf import raw_config, parse_raw_config
 from elifecrossref.mime_type import crossref_mime_type
 
@@ -396,41 +396,13 @@ class CrossrefXML(object):
         """
         Add related_item tags for each dataset
         """
-        for dataset in poa_article.datasets:
+        for dataset_object in poa_article.datasets:
             # Check for at least one identifier before adding the related_item
-            if not related.do_dataset_related_item(dataset):
+            if not related.do_dataset_related_item(dataset_object):
                 continue
             # first set the parent tag if it does not yet exist
             self.set_relations_program(parent)
-            # add related_item tag
-            related_item_tag = SubElement(self.relations_program_tag, 'rel:related_item')
-            related_item_type = "inter_work_relation"
-            description = None
-            relationship_type = dataset_relationship_type(dataset)
-            # set the description
-            if dataset.title:
-                description = dataset.title
-            if description:
-                related.set_related_item_description(related_item_tag, description)
-            # Now add one inter_work_relation tag in order ot priority
-            if dataset.doi:
-                identifier_type = "doi"
-                related_item_text = dataset.doi
-                related.set_related_item_work_relation(
-                    related_item_tag, related_item_type, relationship_type,
-                    identifier_type, related_item_text)
-            elif dataset.accession_id:
-                identifier_type = "accession"
-                related_item_text = dataset.accession_id
-                related.set_related_item_work_relation(
-                    related_item_tag, related_item_type, relationship_type,
-                    identifier_type, related_item_text)
-            elif dataset.uri:
-                identifier_type = "uri"
-                related_item_text = dataset.uri
-                related.set_related_item_work_relation(
-                    related_item_tag, related_item_type, relationship_type,
-                    identifier_type, related_item_text)
+            dataset.set_dataset_related_item(self.relations_program_tag, dataset_object)
 
     def set_component_list(self, parent, poa_article):
         """
@@ -566,19 +538,6 @@ def set_archive_locations(parent, archive_locations):
         for archive_location in archive_locations:
             archive_tag = SubElement(archive_locations_tag, 'archive')
             archive_tag.set('name', archive_location)
-
-
-def dataset_relationship_type(dataset):
-    """relationship_type for the related_item depending on the dataset_type"""
-    if dataset.dataset_type:
-        if dataset.dataset_type == "prev_published_datasets":
-            return "references"
-        elif dataset.dataset_type == "datasets":
-            return "isSupplementedBy"
-    # default if not specified
-    return "isSupplementedBy"
-
-
 
 
 def build_crossref_xml(poa_articles, crossref_config=None, pub_date=None, add_comment=True):
