@@ -20,7 +20,7 @@ def set_component_list(parent, poa_article, crossref_config):
         title_tag.text = comp.title
 
         if comp.subtitle:
-            set_subtitle(titles_tag, comp, crossref_config)
+            set_subtitle(titles_tag, comp, crossref_config.get('face_markup'))
 
         if comp.mime_type:
             # Convert to allowed mime types for Crossref, if found
@@ -29,7 +29,8 @@ def set_component_list(parent, poa_article, crossref_config):
                 format_tag.set("mime_type", mime_type.crossref_mime_type(comp.mime_type))
 
         if comp.permissions:
-            set_component_permissions(component_tag, comp.permissions, crossref_config)
+            set_component_permissions(component_tag, comp.permissions,
+                                      crossref_config.get('component_license_ref'))
 
         if comp.doi:
             # Try generating a resource value then continue
@@ -42,26 +43,29 @@ def set_component_list(parent, poa_article, crossref_config):
                 resource_tag = SubElement(doi_data_tag, 'resource')
                 resource_tag.text = resource
 
-def set_component_permissions(parent, permissions, crossref_config):
+
+def set_component_permissions(parent, permissions, license_href):
     """Specific license for the component"""
     # First check if a license ref is in the config
-    if crossref_config.get('component_license_ref') != '':
-        # set the component permissions if it has any copyright statement or license value
-        set_permissions = False
-        for permission in permissions:
-            if permission.get('copyright_statement') or permission.get('license'):
-                set_permissions = True
-        if set_permissions is True:
-            component_ai_program_tag = SubElement(parent, 'ai:program')
-            component_ai_program_tag.set('name', 'AccessIndicators')
-            license_ref_tag = SubElement(component_ai_program_tag, 'ai:license_ref')
-            license_ref_tag.text = crossref_config.get('component_license_ref')
+    if not license_href:
+        return
+    # set the component permissions if it has any copyright statement or license value
+    set_permissions = False
+    for permission in permissions:
+        if permission.get('copyright_statement') or permission.get('license'):
+            set_permissions = True
+    if set_permissions:
+        component_ai_program_tag = SubElement(parent, 'ai:program')
+        component_ai_program_tag.set('name', 'AccessIndicators')
+        license_ref_tag = SubElement(component_ai_program_tag, 'ai:license_ref')
+        license_ref_tag.text = license_href
 
-def set_subtitle(parent, component, crossref_config):
+
+def set_subtitle(parent, component, face_markup=None):
     tag_name = 'subtitle'
     # Use <i> tags, not <italic> tags, <b> tags not <bold>
     if component.subtitle:
-        if crossref_config.get('face_markup') is True:
+        if face_markup is True:
             tags.add_inline_tag(parent, tag_name, component.subtitle)
         else:
             tags.add_clean_tag(parent, tag_name, component.subtitle)
