@@ -336,59 +336,5 @@ class TestGenerateTitles(unittest.TestCase):
         raw_config_object['face_markup'] = face_markup
 
 
-class TestSetCollection(unittest.TestCase):
-
-    def setUp(self):
-        pass
-
-    def create_aricle_object(self):
-        """create a basic article object"""
-        doi = "10.7554/eLife.00666"
-        title = "Test article"
-        article = Article(doi, title)
-        return article
-
-    def create_crossref_object(self, article):
-        """utility to create the crossref object"""
-        raw_config_object = raw_config('elife')
-        crossref_config = parse_raw_config(raw_config_object)
-        crossref_object = generate.CrossrefXML([article], crossref_config, None, True)
-        return crossref_object
-
-    def test_do_set_collection_no_license(self):
-        """test when an article has no license"""
-        # create CrossrefXML object to test
-        article = self.create_aricle_object()
-        crossref_object = self.create_crossref_object(article)
-        # test assertion
-        collection_property = "text-mining"
-        self.assertFalse(crossref_object.do_set_collection(article, collection_property))
-
-    def test_do_set_collection_empty_license(self):
-        """test when an article has no license"""
-        article = self.create_aricle_object()
-        # create an empty license
-        license_object = License()
-        article.license = license_object
-        # create CrossrefXML object to test
-        crossref_object = self.create_crossref_object(article)
-        # test assertion
-        collection_property = "text-mining"
-        self.assertFalse(crossref_object.do_set_collection(article, collection_property))
-
-    def test_do_set_collection_with_license(self):
-        """test when an article has no license"""
-        article = self.create_aricle_object()
-        # create a license with a href value
-        license_object = License()
-        license_object.href = "http://example.org/license.txt"
-        article.license = license_object
-        # create CrossrefXML object to test
-        crossref_object = self.create_crossref_object(article)
-        # test assertion
-        collection_property = "text-mining"
-        self.assertTrue(crossref_object.do_set_collection(article, collection_property))
-
-
 if __name__ == '__main__':
     unittest.main()

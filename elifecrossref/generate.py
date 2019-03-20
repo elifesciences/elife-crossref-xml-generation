@@ -5,11 +5,12 @@ from xml.etree.ElementTree import Element, SubElement, Comment
 from xml.dom import minidom
 
 from elifearticle import utils as eautils
-from elifearticle.article import Article, Component
 from elifearticle import parse
 from elifetools import utils as etoolsutils
 
-from elifecrossref import utils, elife, contributor, funding, tags, citation, related, dataset
+from elifecrossref import (
+    utils, contributor, funding, tags, citation, related, dataset, collection,
+    access_indicators, resource_url)
 from elifecrossref.conf import raw_config, parse_raw_config
 from elifecrossref.mime_type import crossref_mime_type
 
@@ -206,87 +207,11 @@ class CrossrefXML(object):
 
         resource_tag = SubElement(doi_data_tag, 'resource')
 
-        resource = self.generate_resource_url(poa_article, poa_article)
+        resource = resource_url.generate_resource_url(
+            poa_article, poa_article, self.crossref_config)
         resource_tag.text = resource
 
-        self.set_collection(doi_data_tag, poa_article, "text-mining")
-
-    def set_collection(self, parent, poa_article, collection_property):
-        if self.do_set_collection(poa_article, collection_property):
-            if collection_property == "text-mining":
-                collection_tag = SubElement(parent, 'collection')
-                collection_tag.set("property", collection_property)
-                if self.do_set_collection_text_mining_pdf(poa_article) is True:
-                    item_tag = SubElement(collection_tag, 'item')
-                    resource_tag = SubElement(item_tag, 'resource')
-                    resource_tag.set("mime_type", "application/pdf")
-                    resource_tag.text = self.generate_resource_url(
-                        poa_article, poa_article, "text_mining_pdf_pattern")
-                if self.do_set_collection_text_mining_xml() is True:
-                    item_tag = SubElement(collection_tag, 'item')
-                    resource_tag = SubElement(item_tag, 'resource')
-                    resource_tag.set("mime_type", "application/xml")
-                    resource_tag.text = self.generate_resource_url(
-                        poa_article, poa_article, "text_mining_xml_pattern")
-
-    def do_set_collection_text_mining_xml(self):
-        """decide whether to text mining xml resource"""
-        if (self.crossref_config.get("text_mining_xml_pattern")
-                and self.crossref_config.get("text_mining_pdf_pattern") != ''):
-            return True
-        return False
-
-    def do_set_collection_text_mining_pdf(self, poa_article):
-        """decide whether to text mining pdf resource"""
-        if (self.crossref_config.get("text_mining_pdf_pattern")
-                and self.crossref_config.get("text_mining_pdf_pattern") != ''
-                and poa_article.get_self_uri("pdf") is not None):
-            return True
-        return False
-
-    def do_set_collection(self, poa_article, collection_property):
-        """decide whether to set collection tags"""
-        # only add text and data mining details if the article has a license
-        if not has_license(poa_article):
-            return False
-        if collection_property == "text-mining":
-            if (self.do_set_collection_text_mining_xml() is True
-                    or self.do_set_collection_text_mining_pdf(poa_article) is True):
-                return True
-        return False
-
-    def generate_resource_url(self, obj, poa_article, pattern_type=None):
-        # Generate a resource value for doi_data based on the object provided
-        if isinstance(obj, Article):
-            if not pattern_type:
-                pattern_type = "doi_pattern"
-            version = elife.elife_style_article_attributes(obj)
-            doi_pattern = self.crossref_config.get(pattern_type)
-            if doi_pattern != '':
-                return self.crossref_config.get(pattern_type).format(
-                    doi=obj.doi,
-                    manuscript=obj.manuscript,
-                    volume=obj.volume,
-                    version=version)
-            else:
-                # if no doi_pattern is specified, try to get it from the self-uri value
-                #  that has no content_type
-                for self_uri in obj.self_uri_list:
-                    if self_uri.content_type is None:
-                        return self_uri.xlink_href
-
-        elif isinstance(obj, Component):
-            component_id = obj.id
-            prefix1 = ''
-            if self.crossref_config.get('elife_style_component_doi') is True:
-                component_id, prefix1 = elife.elife_style_component_attributes(obj)
-            return self.crossref_config.get("component_doi_pattern").format(
-                doi=poa_article.doi,
-                manuscript=poa_article.manuscript,
-                volume=poa_article.volume,
-                prefix1=prefix1,
-                id=component_id)
-        return None
+        collection.set_collection(doi_data_tag, poa_article, "text-mining", self.crossref_config)
 
     def set_abstract(self, parent, poa_article):
         if poa_article.abstract:
@@ -351,7 +276,7 @@ class CrossrefXML(object):
 
         applies_to = self.crossref_config.get("access_indicators_applies_to")
 
-        if applies_to and has_license(poa_article) is True:
+        if applies_to and access_indicators.has_license(poa_article) is True:
 
             ai_program_tag = SubElement(parent, 'ai:program')
             ai_program_tag.set('name', 'AccessIndicators')
@@ -435,13 +360,14 @@ class CrossrefXML(object):
 
             if comp.doi:
                 # Try generating a resource value then continue
-                resource_url = self.generate_resource_url(comp, poa_article)
-                if resource_url and resource_url != '':
+                resource = resource_url.generate_resource_url(
+                    comp, poa_article, self.crossref_config)
+                if resource and resource != '':
                     doi_data_tag = SubElement(component_tag, 'doi_data')
                     doi_tag_tag = SubElement(doi_data_tag, 'doi')
                     doi_tag_tag.text = comp.doi
                     resource_tag = SubElement(doi_data_tag, 'resource')
-                    resource_tag.text = resource_url
+                    resource_tag.text = resource
 
     def set_component_permissions(self, parent, permissions):
         """Specific license for the component"""
@@ -508,15 +434,6 @@ def set_journal_metadata(parent, poa_article):
     issn_tag = SubElement(journal_metadata_tag, 'issn')
     issn_tag.set("media_type", "electronic")
     issn_tag.text = poa_article.journal_issn
-
-
-def has_license(poa_article):
-    """check if the article has the minimum requirements of a license"""
-    if not poa_article.license:
-        return False
-    if not poa_article.license.href:
-        return False
-    return True
 
 
 def set_publication_date(parent, pub_date):
