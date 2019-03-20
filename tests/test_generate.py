@@ -47,7 +47,8 @@ class TestGenerate(unittest.TestCase):
                 crossref_config = parse_raw_config(raw_config(config_section))
             crossref_xml = generate.crossref_xml(articles, crossref_config, pub_date, False)
             model_crossref_xml = self.read_file_content(TEST_DATA_PATH + crossref_xml_file)
-            self.assertEqual(crossref_xml, model_crossref_xml.decode('utf-8'))
+            self.assertEqual(crossref_xml, model_crossref_xml.decode('utf-8'),
+                            'Failed parse test on file %s' % article_xml_file)
 
     def test_parse_do_no_pass_pub_date(self):
         """
