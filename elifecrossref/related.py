@@ -28,6 +28,13 @@ def do_relations_program(poa_article):
     return do_relations
 
 
+def set_relations_program(parent, relations_program_tag):
+    """set the relations program parent tag only once"""
+    if relations_program_tag is None:
+        relations_program_tag = SubElement(parent, 'rel:program')
+    return relations_program_tag
+
+
 def set_related_item_description(parent, description):
     if description:
         description_tag = SubElement(parent, 'rel:description')

@@ -2,6 +2,25 @@ from xml.etree.ElementTree import SubElement
 from elifecrossref import related, tags
 
 
+def set_citation_list(parent, poa_article, relations_program_tag, crossref_config):
+    """
+    Set the citation_list from the article object ref_list objects
+    """
+    ref_index = 0
+    if poa_article.ref_list:
+        citation_list_tag = SubElement(parent, 'citation_list')
+    for ref in poa_article.ref_list:
+        # Increment
+        ref_index = ref_index + 1
+        # decide whether to create a related_item for the citation
+        if related.do_citation_related_item(ref):
+            set_citation_related_item(relations_program_tag, ref)
+
+        # continue with creating a citation tag
+        set_citation(citation_list_tag, ref, ref_index, crossref_config.get('face_markup'),
+                     crossref_config.get('crossref_schema_version'))
+
+
 def set_citation(parent, ref, ref_index, face_markup,
                  crossref_schema_version):
     # continue with creating a citation tag

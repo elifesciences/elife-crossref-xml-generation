@@ -170,16 +170,18 @@ class CrossrefXML(object):
 
         # this is the spot to add the relations program tag if it is required
         if related.do_relations_program(poa_article) is True:
-            self.set_relations_program(journal_article_tag)
+            self.relations_program_tag = related.set_relations_program(
+                journal_article_tag, self.relations_program_tag)
 
-        self.set_datasets(journal_article_tag, poa_article)
+        dataset.set_datasets(self.relations_program_tag, poa_article)
 
         set_archive_locations(journal_article_tag,
                               self.crossref_config.get("archive_locations"))
 
         self.set_doi_data(journal_article_tag, poa_article)
 
-        self.set_citation_list(journal_article_tag, poa_article)
+        citation.set_citation_list(
+            journal_article_tag, poa_article, self.relations_program_tag, self.crossref_config)
 
         component.set_component_list(journal_article_tag, poa_article, self.crossref_config)
 
@@ -284,49 +286,6 @@ class CrossrefXML(object):
                 ai_program_ref_tag = SubElement(ai_program_tag, 'ai:license_ref')
                 ai_program_ref_tag.set('applies_to', applies_to)
                 ai_program_ref_tag.text = poa_article.license.href
-
-    def set_citation_list(self, parent, poa_article):
-        """
-        Set the citation_list from the article object ref_list objects
-        """
-        ref_index = 0
-        if poa_article.ref_list:
-            citation_list_tag = SubElement(parent, 'citation_list')
-        for ref in poa_article.ref_list:
-            # Increment
-            ref_index = ref_index + 1
-            # decide whether to create a related_item for the citation
-            if related.do_citation_related_item(ref):
-                # first set the parent tag if it does not yet exist
-                self.set_citation_related_item(parent, ref)
-
-            # continue with creating a citation tag
-            citation.set_citation(citation_list_tag, ref, ref_index,
-                                  self.crossref_config.get('face_markup'),
-                                  self.crossref_config.get('crossref_schema_version'))
-
-    def set_citation_related_item(self, parent, ref):
-        """depends on the relations_program tag existing already"""
-        # first set the parent tag if it does not yet exist
-        self.set_relations_program(parent)
-        citation.set_citation_related_item(self.relations_program_tag, ref)
-
-    def set_relations_program(self, parent):
-        """set the relations program parent tag only once"""
-        if self.relations_program_tag is None:
-            self.relations_program_tag = SubElement(parent, 'rel:program')
-
-    def set_datasets(self, parent, poa_article):
-        """
-        Add related_item tags for each dataset
-        """
-        for dataset_object in poa_article.datasets:
-            # Check for at least one identifier before adding the related_item
-            if not related.do_dataset_related_item(dataset_object):
-                continue
-            # first set the parent tag if it does not yet exist
-            self.set_relations_program(parent)
-            dataset.set_dataset_related_item(self.relations_program_tag, dataset_object)
 
     def output_xml(self, pretty=False, indent=""):
         encoding = 'utf-8'

@@ -11,6 +11,17 @@ IDENTIFIER_MAP = {
 }
 
 
+def set_datasets(relations_program_tag, poa_article):
+    """
+    Add related_item tags for each dataset
+    """
+    for dataset_object in poa_article.datasets:
+        # Check for at least one identifier before adding the related_item
+        if not related.do_dataset_related_item(dataset_object):
+            continue
+        set_dataset_related_item(relations_program_tag, dataset_object)
+
+
 def set_dataset_related_item(parent, dataset_object):
     # add related_item tag
     related_item_tag = SubElement(parent, 'rel:related_item')
