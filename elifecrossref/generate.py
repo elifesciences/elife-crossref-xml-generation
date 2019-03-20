@@ -10,9 +10,8 @@ from elifetools import utils as etoolsutils
 
 from elifecrossref import (
     utils, contributor, funding, tags, citation, related, dataset, collection,
-    access_indicators, resource_url)
+    access_indicators, resource_url, component)
 from elifecrossref.conf import raw_config, parse_raw_config
-from elifecrossref.mime_type import crossref_mime_type
 
 
 TMP_DIR = 'tmp'
@@ -182,7 +181,7 @@ class CrossrefXML(object):
 
         self.set_citation_list(journal_article_tag, poa_article)
 
-        self.set_component_list(journal_article_tag, poa_article)
+        component.set_component_list(journal_article_tag, poa_article, self.crossref_config)
 
     def set_titles(self, parent, poa_article):
         """
@@ -328,70 +327,6 @@ class CrossrefXML(object):
             # first set the parent tag if it does not yet exist
             self.set_relations_program(parent)
             dataset.set_dataset_related_item(self.relations_program_tag, dataset_object)
-
-    def set_component_list(self, parent, poa_article):
-        """
-        Set the component_list from the article object component_list objects
-        """
-        if not poa_article.component_list:
-            return
-
-        component_list_tag = SubElement(parent, 'component_list')
-        for comp in poa_article.component_list:
-            component_tag = SubElement(component_list_tag, 'component')
-            component_tag.set("parent_relation", "isPartOf")
-
-            titles_tag = SubElement(component_tag, 'titles')
-
-            title_tag = SubElement(titles_tag, 'title')
-            title_tag.text = comp.title
-
-            if comp.subtitle:
-                self.set_subtitle(titles_tag, comp)
-
-            if comp.mime_type:
-                # Convert to allowed mime types for Crossref, if found
-                if crossref_mime_type(comp.mime_type):
-                    format_tag = SubElement(component_tag, 'format')
-                    format_tag.set("mime_type", crossref_mime_type(comp.mime_type))
-
-            if comp.permissions:
-                self.set_component_permissions(component_tag, comp.permissions)
-
-            if comp.doi:
-                # Try generating a resource value then continue
-                resource = resource_url.generate_resource_url(
-                    comp, poa_article, self.crossref_config)
-                if resource and resource != '':
-                    doi_data_tag = SubElement(component_tag, 'doi_data')
-                    doi_tag_tag = SubElement(doi_data_tag, 'doi')
-                    doi_tag_tag.text = comp.doi
-                    resource_tag = SubElement(doi_data_tag, 'resource')
-                    resource_tag.text = resource
-
-    def set_component_permissions(self, parent, permissions):
-        """Specific license for the component"""
-        # First check if a license ref is in the config
-        if self.crossref_config.get('component_license_ref') != '':
-            # set the component permissions if it has any copyright statement or license value
-            set_permissions = False
-            for permission in permissions:
-                if permission.get('copyright_statement') or permission.get('license'):
-                    set_permissions = True
-            if set_permissions is True:
-                component_ai_program_tag = SubElement(parent, 'ai:program')
-                component_ai_program_tag.set('name', 'AccessIndicators')
-                license_ref_tag = SubElement(component_ai_program_tag, 'ai:license_ref')
-                license_ref_tag.text = self.crossref_config.get('component_license_ref')
-
-    def set_subtitle(self, parent, component):
-        tag_name = 'subtitle'
-        # Use <i> tags, not <italic> tags, <b> tags not <bold>
-        if component.subtitle:
-            if self.crossref_config.get('face_markup') is True:
-                tags.add_inline_tag(parent, tag_name, component.subtitle)
-            else:
-                tags.add_clean_tag(parent, tag_name, component.subtitle)
 
     def output_xml(self, pretty=False, indent=""):
         encoding = 'utf-8'
