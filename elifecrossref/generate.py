@@ -6,11 +6,10 @@ from xml.dom import minidom
 
 from elifearticle import utils as eautils
 from elifearticle import parse
-from elifetools import utils as etoolsutils
 
 from elifecrossref import (
     utils, contributor, funding, tags, citation, related, dataset, collection,
-    access_indicators, resource_url, component)
+    access_indicators, resource_url, component, abstract)
 from elifecrossref.conf import raw_config, parse_raw_config
 
 
@@ -145,8 +144,8 @@ class CrossrefXML(object):
         contributor.set_contributors(journal_article_tag, poa_article,
                                      self.crossref_config.get("contrib_types"))
 
-        self.set_abstract(journal_article_tag, poa_article)
-        self.set_digest(journal_article_tag, poa_article)
+        abstract.set_abstract(journal_article_tag, poa_article, self.crossref_config)
+        abstract.set_digest(journal_article_tag, poa_article, self.crossref_config)
 
         # Journal publication date
         pub_date = self.get_pub_date(poa_article)
@@ -213,62 +212,6 @@ class CrossrefXML(object):
         resource_tag.text = resource
 
         collection.set_collection(doi_data_tag, poa_article, "text-mining", self.crossref_config)
-
-    def set_abstract(self, parent, poa_article):
-        if poa_article.abstract:
-            abstract = poa_article.abstract
-            self.set_abstract_tag(parent, abstract, abstract_type="abstract")
-
-    def set_digest(self, parent, poa_article):
-        if hasattr(poa_article, 'digest') and poa_article.digest:
-            self.set_abstract_tag(parent, poa_article.digest, abstract_type="executive-summary")
-
-    def set_abstract_tag(self, parent, abstract, abstract_type):
-
-        tag_name = 'jats:abstract'
-
-        attributes = []
-        attributes_text = ''
-        if abstract_type == 'executive-summary':
-            attributes = ['abstract-type']
-            attributes_text = ' abstract-type="executive-summary" '
-
-        # Convert the abstract to jats abstract tags, or strip all the inline tags
-        if self.crossref_config.get('jats_abstract') is True:
-            tag_converted_abstract = abstract
-            tag_converted_abstract = etoolsutils.escape_ampersand(tag_converted_abstract)
-            tag_converted_abstract = etoolsutils.escape_unmatched_angle_brackets(
-                tag_converted_abstract, utils.allowed_tags())
-            tag_converted_abstract = eautils.replace_tags(
-                tag_converted_abstract, 'p', 'jats:p')
-            tag_converted_abstract = eautils.replace_tags(
-                tag_converted_abstract, 'italic', 'jats:italic')
-            tag_converted_abstract = eautils.replace_tags(
-                tag_converted_abstract, 'bold', 'jats:bold')
-            tag_converted_abstract = eautils.replace_tags(
-                tag_converted_abstract, 'underline', 'jats:underline')
-            tag_converted_abstract = eautils.replace_tags(
-                tag_converted_abstract, 'sub', 'jats:sub')
-            tag_converted_abstract = eautils.replace_tags(
-                tag_converted_abstract, 'sup', 'jats:sup')
-            tag_converted_abstract = eautils.replace_tags(
-                tag_converted_abstract, 'sc', 'jats:sc')
-            tag_converted_abstract = eautils.remove_tag('inline-formula', tag_converted_abstract)
-            tag_converted_abstract = eautils.remove_tag('ext-link', tag_converted_abstract)
-        else:
-            # Strip inline tags, keep the p tags
-            tag_converted_abstract = abstract
-            tag_converted_abstract = etoolsutils.escape_ampersand(tag_converted_abstract)
-            tag_converted_abstract = etoolsutils.escape_unmatched_angle_brackets(
-                tag_converted_abstract, utils.allowed_tags())
-            tag_converted_abstract = tags.clean_tags(
-                tag_converted_abstract, do_not_clean=['<p>', '</p>', '<mml:', '</mml:'])
-            tag_converted_abstract = eautils.replace_tags(tag_converted_abstract, 'p', 'jats:p')
-            tag_converted_abstract = tag_converted_abstract
-
-        minidom_tag = tags.reparsed_tag(tag_name, tag_converted_abstract,
-                                        attributes_text=attributes_text)
-        tags.append_tag(parent, minidom_tag, attributes=attributes)
 
     def set_access_indicators(self, parent, poa_article):
         """
