@@ -1,6 +1,15 @@
 from xml.etree.ElementTree import SubElement
 from elifecrossref import related
 
+# order matters when choosing the identifier
+IDENTIFIER_NAMES = ["doi", "accession_id", "uri"]
+
+IDENTIFIER_MAP = {
+    "doi": "doi",
+    "accession_id": "accession",
+    "uri": "uri"
+}
+
 
 def set_dataset_related_item(parent, dataset_object):
     # add related_item tag
@@ -13,25 +22,22 @@ def set_dataset_related_item(parent, dataset_object):
         description = dataset_object.title
     if description:
         related.set_related_item_description(related_item_tag, description)
-    # Now add one inter_work_relation tag in order ot priority
-    if dataset_object.doi:
-        identifier_type = "doi"
-        related_item_text = dataset_object.doi
+    # Now add one inter_work_relation tag in order of priority
+    identifier_attr_name = choose_dataset_identifier(dataset_object)
+    if identifier_attr_name:
+        identifier_type = IDENTIFIER_MAP.get(identifier_attr_name)
+        related_item_text = getattr(dataset_object, identifier_attr_name)
         related.set_related_item_work_relation(
             related_item_tag, related_item_type, relationship_type,
             identifier_type, related_item_text)
-    elif dataset_object.accession_id:
-        identifier_type = "accession"
-        related_item_text = dataset_object.accession_id
-        related.set_related_item_work_relation(
-            related_item_tag, related_item_type, relationship_type,
-            identifier_type, related_item_text)
-    elif dataset_object.uri:
-        identifier_type = "uri"
-        related_item_text = dataset_object.uri
-        related.set_related_item_work_relation(
-            related_item_tag, related_item_type, relationship_type,
-            identifier_type, related_item_text)
+
+
+def choose_dataset_identifier(d_obj):
+    """return the name of the first non blank attribute"""
+    for attr_name in IDENTIFIER_NAMES:
+        if hasattr(d_obj, attr_name) and getattr(d_obj, attr_name):
+            return attr_name
+    return None
 
 
 def dataset_relationship_type(dataset_object):
