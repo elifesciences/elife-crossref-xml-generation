@@ -30,7 +30,7 @@ def clean_tags(original_string, do_not_clean=None):
     return tag_converted_string
 
 
-def add_clean_tag(parent, tag_name, original_string, 
+def add_clean_tag(parent, tag_name, original_string,
                   namespaces=REPARSING_NAMESPACES, attributes=None, attributes_text=''):
     """remove allowed tags and then add a tag the parent"""
     tag_converted_string = clean_tags(original_string)
@@ -41,7 +41,7 @@ def add_clean_tag(parent, tag_name, original_string,
     append_tag(parent, minidom_tag, attributes=attributes)
 
 
-def add_inline_tag(parent, tag_name, original_string, 
+def add_inline_tag(parent, tag_name, original_string,
                    namespaces=REPARSING_NAMESPACES, attributes=None, attributes_text=''):
     """replace inline tags found in the original_string and then add a tag the parent"""
     tag_converted_string = convert_inline_tags(original_string)

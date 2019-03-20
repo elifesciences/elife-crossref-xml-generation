@@ -1,5 +1,6 @@
 import re
 
+
 def allowed_tags():
     """tuple of whitelisted tags"""
     return (
@@ -14,6 +15,7 @@ def allowed_tags():
         '<mml:', '</mml:',
         '<ext-link', '</ext-link>',
     )
+
 
 def clean_string(string):
     """remove unwanted characters when concatenating the batch_id"""
