@@ -9,7 +9,7 @@ from elifearticle import parse
 
 from elifecrossref import (
     utils, contributor, funding, tags, citation, related, dataset, collection,
-    access_indicators, resource_url, component, abstract)
+    access_indicators, resource_url, component, abstract, head)
 from elifecrossref.conf import raw_config, parse_raw_config
 
 
@@ -60,25 +60,8 @@ class CrossrefXML(object):
         self.build(poa_articles)
 
     def build(self, poa_articles):
-        self.set_head(self.root)
+        head.set_head(self.root, self.batch_id, self.pub_date, self.crossref_config)
         self.set_body(self.root, poa_articles)
-
-    def set_head(self, parent):
-        head_tag = SubElement(parent, 'head')
-        doi_batch_id_tag = SubElement(head_tag, 'doi_batch_id')
-        doi_batch_id_tag.text = self.batch_id
-        timestamp_tag = SubElement(head_tag, 'timestamp')
-        timestamp_tag.text = time.strftime("%Y%m%d%H%M%S", self.pub_date)
-        self.set_depositor(head_tag)
-        registrant_tag = SubElement(head_tag, 'registrant')
-        registrant_tag.text = self.crossref_config.get("registrant")
-
-    def set_depositor(self, parent):
-        depositor_tag = SubElement(parent, 'depositor')
-        name_tag = SubElement(depositor_tag, 'depositor_name')
-        name_tag.text = self.crossref_config.get("depositor_name")
-        email_address_tag = SubElement(depositor_tag, 'email_address')
-        email_address_tag.text = self.crossref_config.get("email_address")
 
     def set_body(self, parent, poa_articles):
         body_tag = SubElement(parent, 'body')
