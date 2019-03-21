@@ -1,8 +1,6 @@
 import unittest
-from xml.etree import ElementTree
-from xml.etree.ElementTree import Element
 
-from elifearticle.article import Article, Component, Citation, Dataset, Contributor, Affiliation, License
+from elifearticle.article import Article, Component, Citation, Dataset, Contributor, Affiliation
 
 from elifecrossref import generate
 from elifecrossref.conf import raw_config, parse_raw_config
@@ -20,8 +18,11 @@ class TestGenerateComponentList(unittest.TestCase):
         article = Article(doi, title)
         component = Component()
         component.title = "A component"
-        component.subtitle = "A <sc>STRANGE</sc> <italic>subtitle</italic>, and this tag is <not_allowed>!</not_allowed>"
-        expected_subtitle = "A STRANGE subtitle, and this tag is &lt;not_allowed&gt;!&lt;/not_allowed&gt;"
+        component.subtitle = (
+            "A <sc>STRANGE</sc> <italic>subtitle</italic>, " +
+            "and this tag is <not_allowed>!</not_allowed>")
+        expected_subtitle = (
+            "A STRANGE subtitle, and this tag is &lt;not_allowed&gt;!&lt;/not_allowed&gt;")
         article.component_list = [component]
         # generate the crossrefXML
         c_xml = generate.build_crossref_xml([article])
@@ -30,7 +31,6 @@ class TestGenerateComponentList(unittest.TestCase):
         # A quick test just look for the expected string to test for tags and escape characters
         self.assertTrue(expected_subtitle in crossref_xml_string)
 
-
     def test_component_subtitle_with_face_markup(self):
         """build an article object and component, generate Crossref XML"""
         doi = "10.7554/eLife.00666"
@@ -38,8 +38,12 @@ class TestGenerateComponentList(unittest.TestCase):
         article = Article(doi, title)
         component = Component()
         component.title = "A component"
-        component.subtitle = "A <sc>STRANGE</sc> <italic>subtitle</italic>, and this tag is <not_allowed>!</not_allowed>"
-        expected_subtitle = "A <sc>STRANGE</sc> <i>subtitle</i>, and this tag is &lt;not_allowed&gt;!&lt;/not_allowed&gt;"
+        component.subtitle = (
+            "A <sc>STRANGE</sc> <italic>subtitle</italic>, " +
+            "and this tag is <not_allowed>!</not_allowed>")
+        expected_subtitle = (
+            "A <sc>STRANGE</sc> <i>subtitle</i>, and this tag " +
+            "is &lt;not_allowed&gt;!&lt;/not_allowed&gt;")
         article.component_list = [component]
         # load a config and override the value
         raw_config_object = raw_config('elife')
@@ -127,7 +131,7 @@ class TestGenerateCrossrefSchemaVersion(unittest.TestCase):
         article = Article(doi, title)
         # load a config and override the value
         raw_config_object = raw_config('elife')
-        original_crossref_schema_version = raw_config_object.get('crossref_schema_version')
+        original_schema_version = raw_config_object.get('crossref_schema_version')
         raw_config_object['crossref_schema_version'] = crossref_schema_version
         crossref_config = parse_raw_config(raw_config_object)
         # generate the crossrefXML
@@ -137,7 +141,7 @@ class TestGenerateCrossrefSchemaVersion(unittest.TestCase):
         # A quick test just look for a string value to test
         self.assertTrue(expected_snippet in crossref_xml_string)
         # now set the config back to normal
-        raw_config_object['crossref_schema_version'] = original_crossref_schema_version
+        raw_config_object['crossref_schema_version'] = original_schema_version
 
 
 class TestGenerateCrossrefCitationId(unittest.TestCase):
@@ -164,7 +168,7 @@ class TestGenerateCrossrefCitationElocationId(unittest.TestCase):
         """for test coverage for schema where elocation_id goes into first_page element"""
         # load a config and override the value
         raw_config_object = raw_config('elife')
-        original_crossref_schema_version = raw_config_object.get('crossref_schema_version')
+        original_schema_version = raw_config_object.get('crossref_schema_version')
         raw_config_object['crossref_schema_version'] = '4.4.0'
         crossref_config = parse_raw_config(raw_config_object)
         doi = "10.7554/eLife.00666"
@@ -177,7 +181,7 @@ class TestGenerateCrossrefCitationElocationId(unittest.TestCase):
         crossref_xml_string = c_xml.output_xml()
         self.assertTrue('<first_page>e00003</first_page>' in crossref_xml_string)
         # now set the config back to normal
-        raw_config_object['crossref_schema_version'] = original_crossref_schema_version
+        raw_config_object['crossref_schema_version'] = original_schema_version
 
 
 class TestGenerateCrossrefDatasets(unittest.TestCase):
@@ -221,11 +225,28 @@ class TestGenerateCrossrefDatasets(unittest.TestCase):
         article.add_dataset(dataset_5)
         article.add_dataset(dataset_6)
         # expected values
-        expected_xml_snippet_1 = '<rel:program><rel:related_item><rel:description>Kitchen sink</rel:description><rel:inter_work_relation identifier-type="uri" relationship-type="isSupplementedBy">https://github.com/elifesciences/XML-mapping/blob/master/elife-00666.xml</rel:inter_work_relation></rel:related_item>'
-        expected_xml_snippet_2 = '<rel:related_item><rel:inter_work_relation identifier-type="accession" relationship-type="references">EGAS00001000968</rel:inter_work_relation></rel:related_item>'
-        expected_xml_snippet_3 = '<rel:related_item><rel:inter_work_relation identifier-type="doi" relationship-type="references">10.5061/dryad.cv323</rel:inter_work_relation></rel:related_item>'
-        expected_xml_snippet_4 = '<rel:related_item><rel:inter_work_relation identifier-type="uri" relationship-type="isSupplementedBy">http://cghub.ucsc.edu</rel:inter_work_relation></rel:related_item>'
-        expected_xml_snippet_5 = '<rel:related_item><rel:inter_work_relation identifier-type="uri" relationship-type="isSupplementedBy">https://elifesciences.org</rel:inter_work_relation></rel:related_item>'
+        expected_xml_snippet_1 = (
+            '<rel:program><rel:related_item><rel:description>Kitchen sink</rel:description>' +
+            '<rel:inter_work_relation identifier-type="uri" ' +
+            'relationship-type="isSupplementedBy">' +
+            'https://github.com/elifesciences/XML-mapping/blob/master/elife-00666.xml' +
+            '</rel:inter_work_relation></rel:related_item>')
+        expected_xml_snippet_2 = (
+            '<rel:related_item><rel:inter_work_relation identifier-type="accession" ' +
+            'relationship-type="references">EGAS00001000968</rel:inter_work_relation>' +
+            '</rel:related_item>')
+        expected_xml_snippet_3 = (
+            '<rel:related_item><rel:inter_work_relation identifier-type="doi" ' +
+            'relationship-type="references">10.5061/dryad.cv323</rel:inter_work_relation>' +
+            '</rel:related_item>')
+        expected_xml_snippet_4 = (
+            '<rel:related_item><rel:inter_work_relation identifier-type="uri" ' +
+            'relationship-type="isSupplementedBy">http://cghub.ucsc.edu' +
+            '</rel:inter_work_relation></rel:related_item>')
+        expected_xml_snippet_5 = (
+            '<rel:related_item><rel:inter_work_relation identifier-type="uri" ' +
+            'relationship-type="isSupplementedBy">https://elifesciences.org' +
+            '</rel:inter_work_relation></rel:related_item>')
         # generate output
         c_xml = generate.build_crossref_xml([article])
         crossref_xml_string = c_xml.output_xml()
@@ -244,7 +265,10 @@ class TestGenerateCrossrefDataCitation(unittest.TestCase):
         pass
 
     def test_ref_list_data_citation_with_pmid(self):
-        """for test coverage an article with a ref_list with a data citation that has a pmid attribute"""
+        """
+        for test coverage an article with a ref_list with a
+        data citation that has a pmid attribute
+        """
         doi = "10.7554/eLife.00666"
         title = "Test article"
         article = Article(doi, title)
@@ -253,7 +277,10 @@ class TestGenerateCrossrefDataCitation(unittest.TestCase):
         citation.publication_type = "data"
         citation.pmid = "pmid"
         article.ref_list = [citation]
-        expected_contains = '<rel:program><rel:related_item><rel:description>An data title</rel:description><rel:inter_work_relation identifier-type="pmid" relationship-type="references">pmid</rel:inter_work_relation></rel:related_item></rel:program>'
+        expected_contains = (
+            '<rel:program><rel:related_item><rel:description>An data title</rel:description>' +
+            '<rel:inter_work_relation identifier-type="pmid" relationship-type="references">' +
+            'pmid</rel:inter_work_relation></rel:related_item></rel:program>')
         # generate
         c_xml = generate.build_crossref_xml([article])
         crossref_xml_string = c_xml.output_xml()
@@ -264,7 +291,10 @@ class TestGenerateCrossrefDataCitation(unittest.TestCase):
 class TestGenerateAbstract(unittest.TestCase):
 
     def setUp(self):
-        self.abstract = '<p><bold><italic><underline><sub><sup>An abstract. <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1601/nm.3602">Desulfocapsa sulfexigens</ext-link>.</sup></sub></underline></italic></bold></p>'
+        self.abstract = (
+            '<p><bold><italic><underline><sub><sup>An abstract. <ext-link ext-link-type="uri" ' +
+            'xlink:href="http://dx.doi.org/10.1601/nm.3602">Desulfocapsa sulfexigens</ext-link>.' +
+            '</sup></sub></underline></italic></bold></p>')
 
     def test_set_abstract(self):
         """test stripping unwanted tags from abstract"""
@@ -272,7 +302,9 @@ class TestGenerateAbstract(unittest.TestCase):
         title = "Test article"
         article = Article(doi, title)
         article.abstract = self.abstract
-        expected_contains = '<jats:abstract><jats:p>An abstract. Desulfocapsa sulfexigens.</jats:p></jats:abstract>'
+        expected_contains = (
+            '<jats:abstract><jats:p>An abstract. Desulfocapsa sulfexigens.' +
+            '</jats:p></jats:abstract>')
         # generate
         crossref_object = generate.build_crossref_xml([article])
         crossref_xml_string = crossref_object.output_xml()
@@ -285,7 +317,10 @@ class TestGenerateAbstract(unittest.TestCase):
         title = "Test article"
         article = Article(doi, title)
         article.abstract = self.abstract
-        expected_contains = '<jats:abstract><jats:p><jats:bold><jats:italic><jats:underline><jats:sub><jats:sup>An abstract. Desulfocapsa sulfexigens.</jats:sup></jats:sub></jats:underline></jats:italic></jats:bold></jats:p></jats:abstract>'
+        expected_contains = (
+            '<jats:abstract><jats:p><jats:bold><jats:italic><jats:underline><jats:sub><jats:sup>' +
+            'An abstract. Desulfocapsa sulfexigens.</jats:sup></jats:sub></jats:underline>' +
+            '</jats:italic></jats:bold></jats:p></jats:abstract>')
         # generate
         raw_config_object = raw_config('elife')
         jats_abstract = raw_config_object.get('jats_abstract')
@@ -305,13 +340,16 @@ class TestGenerateAbstract(unittest.TestCase):
 class TestGenerateTitles(unittest.TestCase):
 
     def setUp(self):
-        self.title = '<bold>Test article</bold> for <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1601/nm.3602">Desulfocapsa sulfexigens</ext-link>'
+        self.title = (
+            '<bold>Test article</bold> for <ext-link ext-link-type="uri" ' +
+            'xlink:href="http://dx.doi.org/10.1601/nm.3602">Desulfocapsa sulfexigens</ext-link>')
 
     def test_set_titles(self):
         """test stripping unwanted tags from title"""
         doi = "10.7554/eLife.00666"
         article = Article(doi, self.title)
-        expected_contains = '<titles><title>Test article for Desulfocapsa sulfexigens</title></titles>'
+        expected_contains = (
+            '<titles><title>Test article for Desulfocapsa sulfexigens</title></titles>')
         # generate
         crossref_object = generate.build_crossref_xml([article])
         crossref_xml_string = crossref_object.output_xml()
@@ -322,7 +360,8 @@ class TestGenerateTitles(unittest.TestCase):
         """test the title using face markup set to true"""
         doi = "10.7554/eLife.00666"
         article = Article(doi, self.title)
-        expected_contains = '<titles><title><b>Test article</b> for Desulfocapsa sulfexigens</title></titles>'
+        expected_contains = (
+            '<titles><title><b>Test article</b> for Desulfocapsa sulfexigens</title></titles>')
         # generate
         raw_config_object = raw_config('elife')
         face_markup = raw_config_object.get('face_markup')
