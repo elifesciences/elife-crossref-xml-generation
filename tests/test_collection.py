@@ -48,8 +48,3 @@ def create_crossref_config():
     """utility to create the crossref object"""
     raw_config_object = raw_config('elife')
     return parse_raw_config(raw_config_object)
-
-
-
-if __name__ == '__main__':
-    unittest.main()

@@ -94,6 +94,7 @@ class TestGenerateContributors(unittest.TestCase):
         # A quick test just look for a string value to test
         self.assertTrue('<affiliation>' not in crossref_xml_string)
 
+
 class TestGenerateCrossrefSchemaVersion(unittest.TestCase):
 
     def setUp(self):
