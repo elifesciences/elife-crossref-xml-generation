@@ -56,7 +56,7 @@ def set_component_permissions(parent, comp, crossref_config):
 def do_set_component_permissions(comp):
     """decide whether to set a component permissions"""
     if not comp.permissions:
-        return
+        return None
     for permission in comp.permissions:
         # set the component permissions if it has any copyright statement or license value
         if permission.get('copyright_statement') or permission.get('license'):
