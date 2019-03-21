@@ -1,15 +1,14 @@
 import time
 import os
 from xml.etree import ElementTree
-from xml.etree.ElementTree import Element, SubElement, Comment
+from xml.etree.ElementTree import Element, Comment
 from xml.dom import minidom
 
 from elifearticle import utils as eautils
 from elifearticle import parse
 
-from elifecrossref import (
-    utils, contributor, funding, tags, citation, related, dataset, collection,
-    access_indicators, resource_url, component, abstract, head)
+from elifecrossref import body, head, utils
+
 from elifecrossref.conf import raw_config, parse_raw_config
 
 
@@ -20,15 +19,13 @@ class CrossrefXML(object):
 
     def __init__(self, poa_articles, crossref_config, pub_date=None, add_comment=True):
         """
-        Initialise the configuration, set the root node
+        Set the root node
         set default values for dates and batch id
         then build out the XML using the article objects
         """
-        # Set the config
-        self.crossref_config = crossref_config
         # Create the root XML node
         self.root = Element('doi_batch')
-        set_root(self.root, self.crossref_config.get('crossref_schema_version'))
+        set_root(self.root, crossref_config.get('crossref_schema_version'))
 
         # Publication date
         if pub_date is None:
@@ -41,7 +38,7 @@ class CrossrefXML(object):
         if poa_articles:
             # If only one article is supplied, then add the doi to the batch file name
             batch_doi = str(utils.clean_string(poa_articles[0].manuscript)) + '-'
-        self.batch_id = (str(self.crossref_config.get('batch_file_prefix')) + batch_doi +
+        self.batch_id = (str(crossref_config.get('batch_file_prefix')) + batch_doi +
                          time.strftime("%Y%m%d%H%M%S", self.pub_date))
 
         # set comment
@@ -53,165 +50,12 @@ class CrossrefXML(object):
                               ' from version ' + last_commit)
             self.root.append(comment)
 
-        # to keep track of the rel:program tag, if used
-        self.relations_program_tag = None
-
         # Build out the Crossref XML
-        self.build(poa_articles)
+        self.build(poa_articles, crossref_config)
 
-    def build(self, poa_articles):
-        head.set_head(self.root, self.batch_id, self.pub_date, self.crossref_config)
-        self.set_body(self.root, poa_articles)
-
-    def set_body(self, parent, poa_articles):
-        body_tag = SubElement(parent, 'body')
-
-        for poa_article in poa_articles:
-            # Create a new journal record for each article
-            self.set_journal(body_tag, poa_article)
-
-    def get_pub_date(self, poa_article):
-        """
-        For using in XML generation, use the article pub date
-        or by default use the run time pub date
-        """
-        pub_date = None
-
-        for date_type in self.crossref_config.get('pub_date_types'):
-            pub_date_obj = poa_article.get_date(date_type)
-            if pub_date_obj:
-                break
-
-        if pub_date_obj:
-            pub_date = pub_date_obj.date
-        else:
-            # Default use the run time date
-            pub_date = self.pub_date
-        return pub_date
-
-    def set_journal(self, parent, poa_article):
-        # Add journal for each article
-        journal_tag = SubElement(parent, 'journal')
-        set_journal_metadata(journal_tag, poa_article)
-
-        journal_issue_tag = SubElement(journal_tag, 'journal_issue')
-
-        pub_date = self.get_pub_date(poa_article)
-        set_publication_date(journal_issue_tag, pub_date)
-
-        journal_volume_tag = SubElement(journal_issue_tag, 'journal_volume')
-        volume_tag = SubElement(journal_volume_tag, 'volume')
-        # Use volume from the article unless not present then use the default
-        if poa_article.volume:
-            volume_tag.text = poa_article.volume
-        else:
-            if self.crossref_config.get("year_of_first_volume"):
-                volume_tag.text = eautils.calculate_journal_volume(
-                    pub_date, self.crossref_config.get("year_of_first_volume"))
-
-        # Add journal article
-        self.set_journal_article(journal_tag, poa_article)
-
-    def set_journal_article(self, parent, poa_article):
-        journal_article_tag = SubElement(parent, 'journal_article')
-        journal_article_tag.set("publication_type", "full_text")
-        if (self.crossref_config.get("reference_distribution_opts")
-                and self.crossref_config.get("reference_distribution_opts") != ''):
-            journal_article_tag.set(
-                "reference_distribution_opts",
-                self.crossref_config.get("reference_distribution_opts"))
-
-        # Set the title with italic tag support
-        self.set_titles(journal_article_tag, poa_article)
-
-        contributor.set_contributors(journal_article_tag, poa_article,
-                                     self.crossref_config.get("contrib_types"))
-
-        abstract.set_abstract(journal_article_tag, poa_article, self.crossref_config)
-        abstract.set_digest(journal_article_tag, poa_article, self.crossref_config)
-
-        # Journal publication date
-        pub_date = self.get_pub_date(poa_article)
-        set_publication_date(journal_article_tag, pub_date)
-
-        publisher_item_tag = SubElement(journal_article_tag, 'publisher_item')
-        if self.crossref_config.get("elocation_id") and poa_article.elocation_id:
-            item_number_tag = SubElement(publisher_item_tag, 'item_number')
-            item_number_tag.set("item_number_type", "article_number")
-            item_number_tag.text = poa_article.elocation_id
-        identifier_tag = SubElement(publisher_item_tag, 'identifier')
-        identifier_tag.set("id_type", "doi")
-        identifier_tag.text = poa_article.doi
-
-        # Disable crossmark for now
-        # self.set_crossmark(self.journal_article, poa_article)
-
-        funding.set_fundref(journal_article_tag, poa_article)
-
-        self.set_access_indicators(journal_article_tag, poa_article)
-
-        # this is the spot to add the relations program tag if it is required
-        if related.do_relations_program(poa_article) is True:
-            self.relations_program_tag = related.set_relations_program(
-                journal_article_tag, self.relations_program_tag)
-
-        dataset.set_datasets(self.relations_program_tag, poa_article)
-
-        set_archive_locations(journal_article_tag,
-                              self.crossref_config.get("archive_locations"))
-
-        self.set_doi_data(journal_article_tag, poa_article)
-
-        citation.set_citation_list(
-            journal_article_tag, poa_article, self.relations_program_tag, self.crossref_config)
-
-        component.set_component_list(journal_article_tag, poa_article, self.crossref_config)
-
-    def set_titles(self, parent, poa_article):
-        """
-        Set the titles and title tags allowing sub tags within title
-        """
-        root_tag_name = 'titles'
-        tag_name = 'title'
-        root_xml_element = Element(root_tag_name)
-        # remove unwanted tags
-        tag_converted_title = eautils.remove_tag('ext-link', poa_article.title)
-        if self.crossref_config.get('face_markup') is True:
-            tags.add_inline_tag(root_xml_element, tag_name, tag_converted_title)
-        else:
-            tags.add_clean_tag(root_xml_element, tag_name, tag_converted_title)
-        parent.append(root_xml_element)
-
-    def set_doi_data(self, parent, poa_article):
-        doi_data_tag = SubElement(parent, 'doi_data')
-
-        doi_tag = SubElement(doi_data_tag, 'doi')
-        doi_tag.text = poa_article.doi
-
-        resource_tag = SubElement(doi_data_tag, 'resource')
-
-        resource = resource_url.generate_resource_url(
-            poa_article, poa_article, self.crossref_config)
-        resource_tag.text = resource
-
-        collection.set_collection(doi_data_tag, poa_article, "text-mining", self.crossref_config)
-
-    def set_access_indicators(self, parent, poa_article):
-        """
-        Set the AccessIndicators
-        """
-
-        applies_to = self.crossref_config.get("access_indicators_applies_to")
-
-        if applies_to and access_indicators.has_license(poa_article) is True:
-
-            ai_program_tag = SubElement(parent, 'ai:program')
-            ai_program_tag.set('name', 'AccessIndicators')
-
-            for applies_to in applies_to:
-                ai_program_ref_tag = SubElement(ai_program_tag, 'ai:license_ref')
-                ai_program_ref_tag.set('applies_to', applies_to)
-                ai_program_ref_tag.text = poa_article.license.href
+    def build(self, poa_articles, crossref_config):
+        head.set_head(self.root, self.batch_id, self.pub_date, crossref_config)
+        body.set_body(self.root, poa_articles, crossref_config, self.pub_date)
 
     def output_xml(self, pretty=False, indent=""):
         encoding = 'utf-8'
@@ -243,38 +87,6 @@ def set_root(root, schema_version):
     root.set('xsi:schemaLocation', '%s %s' % (schema_location_name, schema_location_uri))
     root.set('xmlns:mml', 'http://www.w3.org/1998/Math/MathML')
     root.set('xmlns:jats', 'http://www.ncbi.nlm.nih.gov/JATS1')
-
-
-def set_journal_metadata(parent, poa_article):
-    # journal_metadata
-    journal_metadata_tag = SubElement(parent, 'journal_metadata')
-    journal_metadata_tag.set("language", "en")
-    full_title_tag = SubElement(journal_metadata_tag, 'full_title')
-    full_title_tag.text = poa_article.journal_title
-    issn_tag = SubElement(journal_metadata_tag, 'issn')
-    issn_tag.set("media_type", "electronic")
-    issn_tag.text = poa_article.journal_issn
-
-
-def set_publication_date(parent, pub_date):
-    # pub_date is a python time object
-    if pub_date:
-        publication_date_tag = SubElement(parent, 'publication_date')
-        publication_date_tag.set("media_type", "online")
-        month_tag = SubElement(publication_date_tag, "month")
-        month_tag.text = str(pub_date.tm_mon).zfill(2)
-        day_tag = SubElement(publication_date_tag, "day")
-        day_tag.text = str(pub_date.tm_mday).zfill(2)
-        year_tag = SubElement(publication_date_tag, "year")
-        year_tag.text = str(pub_date.tm_year)
-
-
-def set_archive_locations(parent, archive_locations):
-    if archive_locations:
-        archive_locations_tag = SubElement(parent, 'archive_locations')
-        for archive_location in archive_locations:
-            archive_tag = SubElement(archive_locations_tag, 'archive')
-            archive_tag.set('name', archive_location)
 
 
 def build_crossref_xml(poa_articles, crossref_config=None, pub_date=None, add_comment=True):
