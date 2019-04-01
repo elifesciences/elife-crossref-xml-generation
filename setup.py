@@ -3,14 +3,15 @@ from setuptools import setup
 import elifecrossref
 
 with open('README.rst') as fp:
-    readme = fp.read()
+    README = fp.read()
 
-setup(name='elifecrossref',
+setup(
+    name='elifecrossref',
     version=elifecrossref.__version__,
     description='eLife Crossref deposit of journal articles.',
-    long_description=readme,
+    long_description=README,
     packages=['elifecrossref'],
-    license = 'MIT',
+    license='MIT',
     install_requires=[
         "elifetools",
         "elifearticle",

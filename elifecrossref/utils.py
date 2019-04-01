@@ -1,7 +1,8 @@
 import re
 
+
 def allowed_tags():
-    "tuple of whitelisted tags"
+    """tuple of whitelisted tags"""
     return (
         '<p>', '</p>',
         '<italic>', '</italic>',
@@ -15,8 +16,9 @@ def allowed_tags():
         '<ext-link', '</ext-link>',
     )
 
+
 def clean_string(string):
-    "remove unwanted characters when concatenating the batch_id"
+    """remove unwanted characters when concatenating the batch_id"""
     if string:
         return re.sub(r'[^a-zA-Z0-9_\-]', '', str(string))
     return None
