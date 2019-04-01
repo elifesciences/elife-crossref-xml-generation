@@ -3,8 +3,8 @@ import time
 import os
 from xml.etree.ElementTree import Comment
 from elifecrossref import generate
-from tests import TEST_BASE_PATH, TEST_DATA_PATH, read_file_content
 from elifecrossref.conf import raw_config, parse_raw_config
+from tests import TEST_BASE_PATH, TEST_DATA_PATH, read_file_content
 
 
 generate.TMP_DIR = TEST_BASE_PATH + "tmp" + os.sep
