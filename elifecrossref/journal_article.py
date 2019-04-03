@@ -17,8 +17,8 @@ def set_journal_article(parent, poa_article, pub_date, crossref_config):
     # Set the title with italic tag support
     set_titles(journal_article_tag, poa_article, crossref_config)
 
-    contributor.set_contributors(journal_article_tag, poa_article,
-                                 crossref_config.get("contrib_types"))
+    contributor.set_article_contributors(
+        journal_article_tag, poa_article, crossref_config.get("contrib_types"))
 
     abstract.set_abstract(journal_article_tag, poa_article, crossref_config)
     abstract.set_digest(journal_article_tag, poa_article, crossref_config)
