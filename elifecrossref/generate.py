@@ -113,13 +113,13 @@ def build_crossref_xml(poa_articles, crossref_config=None, pub_date=None, add_co
 
 
 def crossref_xml(poa_articles, crossref_config=None, pub_date=None, add_comment=True,
-                 submission_type='journal'):
+                 submission_type='journal', pretty=False, indent=""):
     """build crossref xml and return output as a string"""
     if not crossref_config:
         crossref_config = parse_raw_config(raw_config(None))
     c_xml = build_crossref_xml(poa_articles, crossref_config, pub_date, add_comment,
                                submission_type)
-    return c_xml.output_xml()
+    return c_xml.output_xml(pretty=pretty, indent=indent)
 
 
 def crossref_xml_to_disk(poa_articles, crossref_config=None, pub_date=None, add_comment=True):
