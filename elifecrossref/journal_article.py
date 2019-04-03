@@ -2,7 +2,7 @@ from xml.etree.ElementTree import Element, SubElement
 from elifearticle import utils as eautils
 from elifecrossref import (
     abstract, access_indicators, citation, collection, component, contributor,
-    dataset, funding, related, resource_url, tags)
+    dataset, funding, related, resource_url, title)
 
 
 def set_journal_article(parent, poa_article, pub_date, crossref_config):
@@ -15,7 +15,7 @@ def set_journal_article(parent, poa_article, pub_date, crossref_config):
             crossref_config.get("reference_distribution_opts"))
 
     # Set the title with italic tag support
-    set_titles(journal_article_tag, poa_article, crossref_config)
+    title.set_titles(journal_article_tag, poa_article, crossref_config)
 
     contributor.set_article_contributors(
         journal_article_tag, poa_article, crossref_config.get("contrib_types"))
@@ -59,22 +59,6 @@ def set_journal_article(parent, poa_article, pub_date, crossref_config):
         journal_article_tag, poa_article, relations_program_tag, crossref_config)
 
     component.set_component_list(journal_article_tag, poa_article, crossref_config)
-
-
-def set_titles(parent, poa_article, crossref_config):
-    """
-    Set the titles and title tags allowing sub tags within title
-    """
-    root_tag_name = 'titles'
-    tag_name = 'title'
-    root_xml_element = Element(root_tag_name)
-    # remove unwanted tags
-    tag_converted_title = eautils.remove_tag('ext-link', poa_article.title)
-    if crossref_config.get('face_markup') is True:
-        tags.add_inline_tag(root_xml_element, tag_name, tag_converted_title)
-    else:
-        tags.add_clean_tag(root_xml_element, tag_name, tag_converted_title)
-    parent.append(root_xml_element)
 
 
 def set_publication_date(parent, pub_date):
