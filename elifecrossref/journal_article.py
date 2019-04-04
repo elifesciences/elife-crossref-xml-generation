@@ -2,7 +2,7 @@ from xml.etree.ElementTree import Element, SubElement
 from elifearticle import utils as eautils
 from elifecrossref import (
     abstract, access_indicators, citation, collection, component, contributor,
-    dataset, funding, related, resource_url, title)
+    dataset, dates, funding, related, resource_url, title)
 
 
 def set_journal_article(parent, poa_article, pub_date, crossref_config):
@@ -24,7 +24,7 @@ def set_journal_article(parent, poa_article, pub_date, crossref_config):
     abstract.set_digest(journal_article_tag, poa_article, crossref_config)
 
     # Journal publication date
-    set_publication_date(journal_article_tag, pub_date)
+    dates.set_publication_date(journal_article_tag, pub_date)
 
     publisher_item_tag = SubElement(journal_article_tag, 'publisher_item')
     if crossref_config.get("elocation_id") and poa_article.elocation_id:
@@ -59,19 +59,6 @@ def set_journal_article(parent, poa_article, pub_date, crossref_config):
         journal_article_tag, poa_article, relations_program_tag, crossref_config)
 
     component.set_component_list(journal_article_tag, poa_article, crossref_config)
-
-
-def set_publication_date(parent, pub_date):
-    # pub_date is a python time object
-    if pub_date:
-        publication_date_tag = SubElement(parent, 'publication_date')
-        publication_date_tag.set("media_type", "online")
-        month_tag = SubElement(publication_date_tag, "month")
-        month_tag.text = str(pub_date.tm_mon).zfill(2)
-        day_tag = SubElement(publication_date_tag, "day")
-        day_tag.text = str(pub_date.tm_mday).zfill(2)
-        year_tag = SubElement(publication_date_tag, "year")
-        year_tag.text = str(pub_date.tm_year)
 
 
 def set_doi_data(parent, poa_article, crossref_config):
