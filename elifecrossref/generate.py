@@ -17,7 +17,8 @@ TMP_DIR = 'tmp'
 
 class CrossrefXML(object):
 
-    def __init__(self, poa_articles, crossref_config, pub_date=None, add_comment=True):
+    def __init__(self, poa_articles, crossref_config, pub_date=None, add_comment=True,
+                 submission_type='journal'):
         """
         Set the root node
         set default values for dates and batch id
@@ -33,13 +34,8 @@ class CrossrefXML(object):
         else:
             self.pub_date = pub_date
 
-        # Generate batch id
-        batch_doi = ''
-        if poa_articles:
-            # If only one article is supplied, then add the doi to the batch file name
-            batch_doi = str(utils.clean_string(poa_articles[0].manuscript)) + '-'
-        self.batch_id = (str(crossref_config.get('batch_file_prefix')) + batch_doi +
-                         time.strftime("%Y%m%d%H%M%S", self.pub_date))
+        self.batch_id = get_batch_id(
+            crossref_config.get('batch_file_prefix'), self.pub_date, poa_articles, submission_type)
 
         # set comment
         if add_comment:
@@ -51,11 +47,11 @@ class CrossrefXML(object):
             self.root.append(comment)
 
         # Build out the Crossref XML
-        self.build(poa_articles, crossref_config)
+        self.build(poa_articles, crossref_config, submission_type)
 
-    def build(self, poa_articles, crossref_config):
+    def build(self, poa_articles, crossref_config, submission_type):
         head.set_head(self.root, self.batch_id, self.pub_date, crossref_config)
-        body.set_body(self.root, poa_articles, crossref_config, self.pub_date)
+        body.set_body(self.root, poa_articles, crossref_config, self.pub_date, submission_type)
 
     def output_xml(self, pretty=False, indent=""):
         encoding = 'utf-8'
@@ -89,22 +85,41 @@ def set_root(root, schema_version):
     root.set('xmlns:jats', 'http://www.ncbi.nlm.nih.gov/JATS1')
 
 
-def build_crossref_xml(poa_articles, crossref_config=None, pub_date=None, add_comment=True):
+def get_batch_id(batch_file_prefix, pub_date, poa_articles, submission_type):
+    """generate a doi_batch_id value for the Crossref deposit"""
+    batch_id_parts = []
+    # add detail about submission type
+    if submission_type != 'journal':
+        batch_id_parts.append(submission_type)
+    # add detail about articles
+    if poa_articles:
+        # If only one article is supplied, then add the doi to the batch file name
+        batch_id_parts.append(str(utils.clean_string(poa_articles[0].manuscript)))
+    # add detail about the date
+    batch_id_parts.append(time.strftime("%Y%m%d%H%M%S", pub_date))
+    # concatenate and return the final batch id
+    return str(batch_file_prefix) + '-'.join([part for part in batch_id_parts if part])
+
+
+def build_crossref_xml(poa_articles, crossref_config=None, pub_date=None, add_comment=True,
+                       submission_type='journal'):
     """
     Given a list of article article objects
     generate crossref XML from them
     """
     if not crossref_config:
         crossref_config = parse_raw_config(raw_config(None))
-    return CrossrefXML(poa_articles, crossref_config, pub_date, add_comment)
+    return CrossrefXML(poa_articles, crossref_config, pub_date, add_comment, submission_type)
 
 
-def crossref_xml(poa_articles, crossref_config=None, pub_date=None, add_comment=True):
+def crossref_xml(poa_articles, crossref_config=None, pub_date=None, add_comment=True,
+                 submission_type='journal', pretty=False, indent=""):
     """build crossref xml and return output as a string"""
     if not crossref_config:
         crossref_config = parse_raw_config(raw_config(None))
-    c_xml = build_crossref_xml(poa_articles, crossref_config, pub_date, add_comment)
-    return c_xml.output_xml()
+    c_xml = build_crossref_xml(poa_articles, crossref_config, pub_date, add_comment,
+                               submission_type)
+    return c_xml.output_xml(pretty=pretty, indent=indent)
 
 
 def crossref_xml_to_disk(poa_articles, crossref_config=None, pub_date=None, add_comment=True):

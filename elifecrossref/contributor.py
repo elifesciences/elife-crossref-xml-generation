@@ -1,22 +1,28 @@
 from xml.etree.ElementTree import SubElement
 
 
-def set_contributors(parent, poa_article, contrib_types=None):
+def set_article_contributors(parent, poa_article, contrib_types=None):
     # First check for any contributors
     if not poa_article.contributors:
         return
+    article_contributors = []
+    for contributor in poa_article.contributors:
+        if contrib_types:
+            # Filter by contrib_type if supplied
+            if contributor.contrib_type not in contrib_types:
+                continue
+        article_contributors.append(contributor)
+    set_contributors(parent, article_contributors)
+
+
+def set_contributors(parent, contributors):
     # If contrib_type is None, all contributors will be added regardless of their type
     contributors_tag = SubElement(parent, "contributors")
 
     # Ready to add to XML
     # Use the natural list order of contributors when setting the first author
     sequence = "first"
-    for contributor in poa_article.contributors:
-        if contrib_types:
-            # Filter by contrib_type if supplied
-            if contributor.contrib_type not in contrib_types:
-                continue
-
+    for contributor in contributors:
         set_contributor(contributors_tag, contributor, sequence)
 
         # Reset sequence value after the first sucessful loop

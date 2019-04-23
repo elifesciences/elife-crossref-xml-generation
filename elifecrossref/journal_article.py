@@ -1,8 +1,7 @@
-from xml.etree.ElementTree import Element, SubElement
-from elifearticle import utils as eautils
+from xml.etree.ElementTree import SubElement
 from elifecrossref import (
-    abstract, access_indicators, citation, collection, component, contributor,
-    dataset, funding, related, resource_url, tags)
+    abstract, access_indicators, citation, component, contributor,
+    dataset, dates, doi, funding, related, title)
 
 
 def set_journal_article(parent, poa_article, pub_date, crossref_config):
@@ -15,16 +14,16 @@ def set_journal_article(parent, poa_article, pub_date, crossref_config):
             crossref_config.get("reference_distribution_opts"))
 
     # Set the title with italic tag support
-    set_titles(journal_article_tag, poa_article, crossref_config)
+    title.set_titles(journal_article_tag, poa_article, crossref_config)
 
-    contributor.set_contributors(journal_article_tag, poa_article,
-                                 crossref_config.get("contrib_types"))
+    contributor.set_article_contributors(
+        journal_article_tag, poa_article, crossref_config.get("contrib_types"))
 
     abstract.set_abstract(journal_article_tag, poa_article, crossref_config)
     abstract.set_digest(journal_article_tag, poa_article, crossref_config)
 
     # Journal publication date
-    set_publication_date(journal_article_tag, pub_date)
+    dates.set_publication_date(journal_article_tag, pub_date)
 
     publisher_item_tag = SubElement(journal_article_tag, 'publisher_item')
     if crossref_config.get("elocation_id") and poa_article.elocation_id:
@@ -53,56 +52,12 @@ def set_journal_article(parent, poa_article, pub_date, crossref_config):
     set_archive_locations(journal_article_tag,
                           crossref_config.get("archive_locations"))
 
-    set_doi_data(journal_article_tag, poa_article, crossref_config)
+    doi.set_article_doi_data(journal_article_tag, poa_article, crossref_config)
 
     citation.set_citation_list(
         journal_article_tag, poa_article, relations_program_tag, crossref_config)
 
     component.set_component_list(journal_article_tag, poa_article, crossref_config)
-
-
-def set_titles(parent, poa_article, crossref_config):
-    """
-    Set the titles and title tags allowing sub tags within title
-    """
-    root_tag_name = 'titles'
-    tag_name = 'title'
-    root_xml_element = Element(root_tag_name)
-    # remove unwanted tags
-    tag_converted_title = eautils.remove_tag('ext-link', poa_article.title)
-    if crossref_config.get('face_markup') is True:
-        tags.add_inline_tag(root_xml_element, tag_name, tag_converted_title)
-    else:
-        tags.add_clean_tag(root_xml_element, tag_name, tag_converted_title)
-    parent.append(root_xml_element)
-
-
-def set_publication_date(parent, pub_date):
-    # pub_date is a python time object
-    if pub_date:
-        publication_date_tag = SubElement(parent, 'publication_date')
-        publication_date_tag.set("media_type", "online")
-        month_tag = SubElement(publication_date_tag, "month")
-        month_tag.text = str(pub_date.tm_mon).zfill(2)
-        day_tag = SubElement(publication_date_tag, "day")
-        day_tag.text = str(pub_date.tm_mday).zfill(2)
-        year_tag = SubElement(publication_date_tag, "year")
-        year_tag.text = str(pub_date.tm_year)
-
-
-def set_doi_data(parent, poa_article, crossref_config):
-    doi_data_tag = SubElement(parent, 'doi_data')
-
-    doi_tag = SubElement(doi_data_tag, 'doi')
-    doi_tag.text = poa_article.doi
-
-    resource_tag = SubElement(doi_data_tag, 'resource')
-
-    resource = resource_url.generate_resource_url(
-        poa_article, poa_article, crossref_config)
-    resource_tag.text = resource
-
-    collection.set_collection(doi_data_tag, poa_article, "text-mining", crossref_config)
 
 
 def set_access_indicators(parent, poa_article, crossref_config):

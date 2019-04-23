@@ -1,6 +1,6 @@
 from xml.etree.ElementTree import SubElement
 from elifearticle import utils as eautils
-from elifecrossref import journal_article
+from elifecrossref import dates, journal_article
 
 
 def set_journal(parent, poa_article, crossref_config, default_pub_date):
@@ -11,7 +11,7 @@ def set_journal(parent, poa_article, crossref_config, default_pub_date):
     journal_issue_tag = SubElement(journal_tag, 'journal_issue')
 
     pub_date = get_pub_date(poa_article, crossref_config, default_pub_date)
-    journal_article.set_publication_date(journal_issue_tag, pub_date)
+    dates.set_publication_date(journal_issue_tag, pub_date)
 
     journal_volume_tag = SubElement(journal_issue_tag, 'journal_volume')
     volume_tag = SubElement(journal_volume_tag, 'volume')
