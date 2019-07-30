@@ -68,7 +68,9 @@ class TestGenerate(unittest.TestCase):
             crossref_config = None
             if config_section:
                 crossref_config = parse_raw_config(raw_config(config_section))
-            crossref_xml = generate.crossref_xml(articles, crossref_config, pub_date, False)
+            # generate pretty XML
+            crossref_xml = generate.crossref_xml(
+                articles, crossref_config, pub_date, False, pretty=True, indent="\t")
             model_crossref_xml = read_file_content(TEST_DATA_PATH + crossref_xml_file)
             self.assertEqual(crossref_xml, model_crossref_xml.decode('utf-8'),
                              'Failed parse test on file %s' % article_xml_file)
@@ -76,7 +78,6 @@ class TestGenerate(unittest.TestCase):
     def test_parse_do_no_pass_pub_date(self):
         """
         For test coverage build a crossrefXML object without passing in a pub_date
-        and also test pretty output too for coverage
         """
         article_xml_file = 'elife_poa_e02725.xml'
         file_path = TEST_DATA_PATH + article_xml_file
@@ -87,7 +88,7 @@ class TestGenerate(unittest.TestCase):
         self.assertIsNotNone(crossref_object.pub_date)
         self.assertIsNotNone(crossref_object.generated)
         self.assertIsNotNone([tag for tag in crossref_object.root.iter() if tag is Comment])
-        self.assertIsNotNone(crossref_object.output_xml(pretty=True, indent='\t'))
+        self.assertIsNotNone(crossref_object.output_xml())
 
     def test_generate_jats_abstract_face_markup(self):
         """
@@ -123,7 +124,8 @@ class TestGenerate(unittest.TestCase):
         # build the article object
         articles = generate.build_articles_for_crossref([file_path])
         # generate and write to disk
-        generate.crossref_xml_to_disk(articles, crossref_config, pub_date, False)
+        generate.crossref_xml_to_disk(
+            articles, crossref_config, pub_date, False, "journal", pretty=True, indent="\t")
         # check the output matches
         expected_output = read_file_content(TEST_DATA_PATH + crossref_xml_file)
         generated_output = read_file_content(generate.TMP_DIR + crossref_xml_file)
