@@ -25,4 +25,5 @@ if __name__ == '__main__':
         generate.TMP_DIR = 'tests/test_data'
         articles = generate.build_articles_for_crossref([xml_file])
         crossref_config = parse_raw_config(raw_config(config_section))
-        generate.crossref_xml_to_disk(articles, crossref_config, pub_date, add_comment)
+        generate.crossref_xml_to_disk(
+            articles, crossref_config, pub_date, add_comment, "journal", pretty=True, indent="\t")

@@ -40,6 +40,7 @@ def parse_raw_config(raw_config_object):
     list_values.append("archive_locations")
     list_values.append("access_indicators_applies_to")
     list_values.append("pub_date_types")
+    list_values.append("component_exclude_types")
 
     for value_name in raw_config_object:
         if value_name in boolean_values:

@@ -1,69 +1,1018 @@
-<?xml version="1.0" encoding="utf-8"?><doi_batch version="4.4.1" xmlns="http://www.crossref.org/schema/4.4.1" xmlns:ai="http://www.crossref.org/AccessIndicators.xsd" xmlns:ct="http://www.crossref.org/clinicaltrials.xsd" xmlns:fr="http://www.crossref.org/fundref.xsd" xmlns:jats="http://www.ncbi.nlm.nih.gov/JATS1" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:rel="http://www.crossref.org/relations.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.crossref.org/schema/4.4.1 http://www.crossref.org/schemas/crossref4.4.1.xsd"><head><doi_batch_id>elife-crossref-00666-20170717071707</doi_batch_id><timestamp>20170717071707</timestamp><depositor><depositor_name>eLife</depositor_name><email_address>production@elifesciences.org</email_address></depositor><registrant>eLife</registrant></head><body><journal><journal_metadata language="en"><full_title>eLife</full_title><issn media_type="electronic">2050-084X</issn></journal_metadata><journal_issue><publication_date media_type="online"><month>04</month><day>25</day><year>2016</year></publication_date><journal_volume><volume>5</volume></journal_volume></journal_issue><journal_article publication_type="full_text" reference_distribution_opts="any"><titles><title>The eLife research article</title></titles><contributors><person_name contributor_role="author" sequence="first"><given_name>Melissa</given_name><surname>Harrison</surname><suffix>Jnr</suffix><affiliation>Department of Production, eLife, Cambridge, United Kingdom</affiliation><ORCID authenticated="true">http://orcid.org/0000-0003-3523-4408</ORCID></person_name><person_name contributor_role="author" sequence="additional"><given_name>James F</given_name><surname>Gilbert</surname><affiliation>Department of Production, eLife, Cambridge, United Kingdom</affiliation></person_name><organization contributor_role="author" sequence="additional">eLife Editorial Production Group</organization><organization contributor_role="author" sequence="additional">eLife Technology Group</organization><organization contributor_role="author" sequence="additional">for the eLife Staff Team</organization></contributors><jats:abstract><jats:p>This is the abstract. This article will describe the eLife article and the process.
+<?xml version="1.0" encoding="utf-8"?>
+<doi_batch version="4.4.1" xmlns="http://www.crossref.org/schema/4.4.1" xmlns:ai="http://www.crossref.org/AccessIndicators.xsd" xmlns:ct="http://www.crossref.org/clinicaltrials.xsd" xmlns:fr="http://www.crossref.org/fundref.xsd" xmlns:jats="http://www.ncbi.nlm.nih.gov/JATS1" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:rel="http://www.crossref.org/relations.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.crossref.org/schema/4.4.1 http://www.crossref.org/schemas/crossref4.4.1.xsd">
+	<head>
+		<doi_batch_id>elife-crossref-00666-20170717071707</doi_batch_id>
+		<timestamp>20170717071707</timestamp>
+		<depositor>
+			<depositor_name>eLife</depositor_name>
+			<email_address>production@elifesciences.org</email_address>
+		</depositor>
+		<registrant>eLife</registrant>
+	</head>
+	<body>
+		<journal>
+			<journal_metadata language="en">
+				<full_title>eLife</full_title>
+				<issn media_type="electronic">2050-084X</issn>
+			</journal_metadata>
+			<journal_issue>
+				<publication_date media_type="online">
+					<month>04</month>
+					<day>25</day>
+					<year>2016</year>
+				</publication_date>
+				<journal_volume>
+					<volume>5</volume>
+				</journal_volume>
+			</journal_issue>
+			<journal_article publication_type="full_text" reference_distribution_opts="any">
+				<titles>
+					<title>The eLife research article</title>
+				</titles>
+				<contributors>
+					<person_name contributor_role="author" sequence="first">
+						<given_name>Melissa</given_name>
+						<surname>Harrison</surname>
+						<suffix>Jnr</suffix>
+						<affiliation>Department of Production, eLife, Cambridge, United Kingdom</affiliation>
+						<ORCID authenticated="true">http://orcid.org/0000-0003-3523-4408</ORCID>
+					</person_name>
+					<person_name contributor_role="author" sequence="additional">
+						<given_name>James F</given_name>
+						<surname>Gilbert</surname>
+						<affiliation>Department of Production, eLife, Cambridge, United Kingdom</affiliation>
+					</person_name>
+					<organization contributor_role="author" sequence="additional">eLife Editorial Production Group</organization>
+					<organization contributor_role="author" sequence="additional">eLife Technology Group</organization>
+					<organization contributor_role="author" sequence="additional">for the eLife Staff Team</organization>
+				</contributors>
+				<jats:abstract>
+					<jats:p>
+						This is the abstract. This article will describe the eLife article and the process.
                     An abstract can contain any formatting, such as italics,
                         bold, superscript, subscript or small caps. MathML is
                     also allowed: 
-                    <mml:math>
-<mml:mrow>
-<mml:munder>
-<mml:mo/>
-<mml:mi>m</mml:mi>
-</mml:munder>
-<mml:mrow>
-<mml:msub>
-<mml:mover>
-<mml:mi>p</mml:mi>
-<mml:mo/>
-</mml:mover>
-<mml:mi>m</mml:mi>
-</mml:msub>
-<mml:mo>=</mml:mo>
-<mml:mn>0</mml:mn>
-</mml:mrow>
-</mml:mrow>
-</mml:math>
+                    
+						<mml:math>
+							
 
-                .</jats:p><jats:p>eLife does not structure abstracts into sub headings expect in a clinical trial article, but the abstract can have
+							<mml:mrow>
+								
+
+								<mml:munder>
+									
+
+									<mml:mo/>
+									
+
+									<mml:mi>m</mml:mi>
+									
+
+								</mml:munder>
+								
+
+								<mml:mrow>
+									
+
+									<mml:msub>
+										
+
+										<mml:mover>
+											
+
+											<mml:mi>p</mml:mi>
+											
+
+											<mml:mo/>
+											
+
+										</mml:mover>
+										
+
+										<mml:mi>m</mml:mi>
+										
+
+									</mml:msub>
+									
+
+									<mml:mo>=</mml:mo>
+									
+
+									<mml:mn>0</mml:mn>
+									
+
+								</mml:mrow>
+								
+
+							</mml:mrow>
+							
+
+						</mml:math>
+						
+
+                .
+					</jats:p>
+					<jats:p>eLife does not structure abstracts into sub headings expect in a clinical trial article, but the abstract can have
                     multiple paragarahs. The sub DOI is always .001 as it is the first asset in any
-                    article. I have added an unmatched &gt; bracket as this has been an issue for PubMed deposits in the past.</jats:p><jats:p>If this was a clinical trial the clinical trial details would be listed at the end of the abstract:</jats:p><jats:p>Clinical trial Registration: EudraCT2004-000446-20.</jats:p></jats:abstract><jats:abstract abstract-type="executive-summary"><jats:p>eLife digest are now optional and not every research article will contain one.
+                    article. I have added an unmatched &gt; bracket as this has been an issue for PubMed deposits in the past.</jats:p>
+					<jats:p>If this was a clinical trial the clinical trial details would be listed at the end of the abstract:</jats:p>
+					<jats:p>Clinical trial Registration: EudraCT2004-000446-20.</jats:p>
+				</jats:abstract>
+				<jats:abstract abstract-type="executive-summary">
+					<jats:p>eLife digest are now optional and not every research article will contain one.
                     These are layman abstracts, designed for non-specialists in this field to be
-                    able to understand this article, as well as the general public.</jats:p><jats:p>Here is paragraph 2 of the digest.</jats:p></jats:abstract><publication_date media_type="online"><month>04</month><day>25</day><year>2016</year></publication_date><publisher_item><item_number item_number_type="article_number">e00666</item_number><identifier id_type="doi">10.7554/eLife.00666</identifier></publisher_item><fr:program name="fundref"><fr:assertion name="fundgroup"><fr:assertion name="funder_name">Howard Hughes Medical Institute<fr:assertion name="funder_identifier">https://dx.doi.org/10.13039/100000011</fr:assertion></fr:assertion><fr:assertion name="award_number">F32 GM089018</fr:assertion></fr:assertion><fr:assertion name="fundgroup"><fr:assertion name="funder_name">Laura and John Arnold Foundation</fr:assertion></fr:assertion></fr:program><ai:program name="AccessIndicators"><ai:license_ref applies_to="vor">http://creativecommons.org/licenses/by/4.0/</ai:license_ref><ai:license_ref applies_to="am">http://creativecommons.org/licenses/by/4.0/</ai:license_ref><ai:license_ref applies_to="tdm">http://creativecommons.org/licenses/by/4.0/</ai:license_ref></ai:program><rel:program><rel:related_item><rel:description>xml-mapping</rel:description><rel:inter_work_relation identifier-type="uri" relationship-type="isSupplementedBy">https://github.com/elifesciences/XML-mapping/blob/master/elife-00666.xml</rel:inter_work_relation></rel:related_item><rel:related_item><rel:description>elife-vendor-workflow-config</rel:description><rel:inter_work_relation identifier-type="uri" relationship-type="references">https://github.com/elifesciences/elife-vendor-workflow-config</rel:inter_work_relation></rel:related_item><rel:related_item><rel:description>Dryad Digital Repository</rel:description><rel:inter_work_relation identifier-type="doi" relationship-type="references">10.5061/dryad.cv323</rel:inter_work_relation></rel:related_item><rel:related_item><rel:description>NKX2-5 mutations causative for congenital heart disease retain
-                functionality and are directed to hundreds of targets</rel:description><rel:inter_work_relation identifier-type="accession" relationship-type="references">GSE44902</rel:inter_work_relation></rel:related_item><rel:related_item><rel:description>Crystal structure of KRYPTONITE in complex with mCHH DNA and
-                SAH</rel:description><rel:inter_work_relation identifier-type="doi" relationship-type="references">10.2210/pdb4qen/pdb</rel:inter_work_relation></rel:related_item><rel:related_item><rel:description>Diagnostically relevant facial gestalt information from ordinary photos database</rel:description><rel:inter_work_relation identifier-type="uri" relationship-type="references">https://github.com/ChristofferNellaker/Clinical_Face_Phenotype_Space_Pipeline</rel:inter_work_relation></rel:related_item><rel:related_item><rel:description>Mus musculus T-box 2 (Tbx2), mRNA</rel:description><rel:inter_work_relation identifier-type="accession" relationship-type="references">NM_009324</rel:inter_work_relation></rel:related_item><rel:related_item><rel:description>Effects on the transcriptome of adult mouse pancreas (principally
-                acinar cells) by the inactivation of the Ptf1a gene in vivo</rel:description><rel:inter_work_relation identifier-type="accession" relationship-type="references">GSE70542</rel:inter_work_relation></rel:related_item><rel:related_item><rel:description>Data from: Genome-wide errant targeting by Hairy</rel:description><rel:inter_work_relation identifier-type="doi" relationship-type="references">10.5061/dryad.cv323</rel:inter_work_relation></rel:related_item><rel:related_item><rel:description>ISG15 counteracts &lt;italic&gt;Listeria monocytogenes&lt;/italic&gt;
-                infection</rel:description><rel:inter_work_relation identifier-type="accession" relationship-type="references">PXD001805</rel:inter_work_relation></rel:related_item><rel:related_item><rel:description>Transcription profiling by high throughput sequencing of LoVo
+                    able to understand this article, as well as the general public.</jats:p>
+					<jats:p>Here is paragraph 2 of the digest.</jats:p>
+				</jats:abstract>
+				<publication_date media_type="online">
+					<month>04</month>
+					<day>25</day>
+					<year>2016</year>
+				</publication_date>
+				<publisher_item>
+					<item_number item_number_type="article_number">e00666</item_number>
+					<identifier id_type="doi">10.7554/eLife.00666</identifier>
+				</publisher_item>
+				<fr:program name="fundref">
+					<fr:assertion name="fundgroup">
+						<fr:assertion name="funder_name">
+							Howard Hughes Medical Institute
+							<fr:assertion name="funder_identifier">https://dx.doi.org/10.13039/100000011</fr:assertion>
+						</fr:assertion>
+						<fr:assertion name="award_number">F32 GM089018</fr:assertion>
+					</fr:assertion>
+					<fr:assertion name="fundgroup">
+						<fr:assertion name="funder_name">Laura and John Arnold Foundation</fr:assertion>
+					</fr:assertion>
+				</fr:program>
+				<ai:program name="AccessIndicators">
+					<ai:license_ref applies_to="vor">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+					<ai:license_ref applies_to="am">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+					<ai:license_ref applies_to="tdm">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+				</ai:program>
+				<rel:program>
+					<rel:related_item>
+						<rel:description>xml-mapping</rel:description>
+						<rel:inter_work_relation identifier-type="uri" relationship-type="isSupplementedBy">https://github.com/elifesciences/XML-mapping/blob/master/elife-00666.xml</rel:inter_work_relation>
+					</rel:related_item>
+					<rel:related_item>
+						<rel:description>elife-vendor-workflow-config</rel:description>
+						<rel:inter_work_relation identifier-type="uri" relationship-type="references">https://github.com/elifesciences/elife-vendor-workflow-config</rel:inter_work_relation>
+					</rel:related_item>
+					<rel:related_item>
+						<rel:description>Dryad Digital Repository</rel:description>
+						<rel:inter_work_relation identifier-type="doi" relationship-type="references">10.5061/dryad.cv323</rel:inter_work_relation>
+					</rel:related_item>
+					<rel:related_item>
+						<rel:description>NKX2-5 mutations causative for congenital heart disease retain
+                functionality and are directed to hundreds of targets</rel:description>
+						<rel:inter_work_relation identifier-type="accession" relationship-type="references">GSE44902</rel:inter_work_relation>
+					</rel:related_item>
+					<rel:related_item>
+						<rel:description>Crystal structure of KRYPTONITE in complex with mCHH DNA and
+                SAH</rel:description>
+						<rel:inter_work_relation identifier-type="doi" relationship-type="references">10.2210/pdb4qen/pdb</rel:inter_work_relation>
+					</rel:related_item>
+					<rel:related_item>
+						<rel:description>Diagnostically relevant facial gestalt information from ordinary photos database</rel:description>
+						<rel:inter_work_relation identifier-type="uri" relationship-type="references">https://github.com/ChristofferNellaker/Clinical_Face_Phenotype_Space_Pipeline</rel:inter_work_relation>
+					</rel:related_item>
+					<rel:related_item>
+						<rel:description>Mus musculus T-box 2 (Tbx2), mRNA</rel:description>
+						<rel:inter_work_relation identifier-type="accession" relationship-type="references">NM_009324</rel:inter_work_relation>
+					</rel:related_item>
+					<rel:related_item>
+						<rel:description>Effects on the transcriptome of adult mouse pancreas (principally
+                acinar cells) by the inactivation of the Ptf1a gene in vivo</rel:description>
+						<rel:inter_work_relation identifier-type="accession" relationship-type="references">GSE70542</rel:inter_work_relation>
+					</rel:related_item>
+					<rel:related_item>
+						<rel:description>Data from: Genome-wide errant targeting by Hairy</rel:description>
+						<rel:inter_work_relation identifier-type="doi" relationship-type="references">10.5061/dryad.cv323</rel:inter_work_relation>
+					</rel:related_item>
+					<rel:related_item>
+						<rel:description>ISG15 counteracts &lt;italic&gt;Listeria monocytogenes&lt;/italic&gt;
+                infection</rel:description>
+						<rel:inter_work_relation identifier-type="accession" relationship-type="references">PXD001805</rel:inter_work_relation>
+					</rel:related_item>
+					<rel:related_item>
+						<rel:description>Transcription profiling by high throughput sequencing of LoVo
                 cells infected with Listeria for 24 hr compared to uninfected
-                cells</rel:description><rel:inter_work_relation identifier-type="accession" relationship-type="references">E-MTAB-3649</rel:inter_work_relation></rel:related_item><rel:related_item><rel:description>SKN-1 from the JASPAR CORE database</rel:description><rel:inter_work_relation identifier-type="accession" relationship-type="references">MA0547.1</rel:inter_work_relation></rel:related_item><rel:related_item><rel:description>Global Diversity of Shigella Species</rel:description><rel:inter_work_relation identifier-type="accession" relationship-type="references">PRJEB2846</rel:inter_work_relation></rel:related_item><rel:related_item><rel:description>Shigella sonnei and flexneri from around the world</rel:description><rel:inter_work_relation identifier-type="accession" relationship-type="references">PRJEB2460</rel:inter_work_relation></rel:related_item><rel:related_item><rel:description>Shigella flexneri from around the world</rel:description><rel:inter_work_relation identifier-type="accession" relationship-type="references">PRJEB2542</rel:inter_work_relation></rel:related_item><rel:related_item><rel:description>Polymeric immunoglobulin receptor [Oncorhynchus mykiss]</rel:description><rel:inter_work_relation identifier-type="accession" relationship-type="references">GenBank: ADB81776.1</rel:inter_work_relation></rel:related_item><rel:related_item><rel:description>ChIP-Seq Identification of C. elegans TF Binding Sites</rel:description><rel:inter_work_relation identifier-type="accession" relationship-type="references">modENCODE_3369</rel:inter_work_relation></rel:related_item></rel:program><archive_locations><archive name="CLOCKSS"/></archive_locations><doi_data><doi>10.7554/eLife.00666</doi><resource>https://elifesciences.org/articles/00666</resource><collection property="text-mining"><item><resource mime_type="application/pdf">https://cdn.elifesciences.org/articles/00666/elife-00666.pdf</resource></item><item><resource mime_type="application/xml">https://cdn.elifesciences.org/articles/00666/elife-00666.xml</resource></item></collection></doi_data><citation_list><citation key="bib1"><journal_title>The Journal of Cell Biology</journal_title><author>Aivazian</author><volume>173</volume><first_page>917</first_page><cYear>2006</cYear><article_title>TIP47 is a key effector for Rab9 localization</article_title><doi>10.1083/jcb.200510010</doi></citation><citation key="bib2"><volume_title>CRAN</volume_title><author>Bates</author><cYear>2016</cYear><article_title>Lme4: Linear Mixed-Effects Models Using Eigen and S4</article_title><unstructured_citation>Bates D, Maechler M, Bolker B, Walker S, Haubo Bojesen Christensen R, Singmann H, Dai B, Grothendieck G, Green P, Bolker B. 2016. Lme4: Linear Mixed-Effects Models Using Eigen and S4. CRAN. 1.1-12. https://cran.r-project.org/web/packages/lme4/index.html.</unstructured_citation></citation><citation key="bib3"><volume_title>bioRxiv</volume_title><author>Bloss</author><cYear>2016</cYear><article_title>A prospective randomized trial examining health care utilization in individuals using multiple 
-                smartphone-enabled biosensors</article_title><doi>10.1101/029983</doi></citation><citation key="bib4"><volume_title>NCBI Gene Expression Omnibus</volume_title><author>Bouveret</author><cYear>2015</cYear><article_title>NKX2-5 mutations causative for congenital heart disease retain
-                functionality and are directed to hundreds of targets</article_title></citation><citation key="bib5"><journal_title>International journal of systematic and evolutionary
-                microbiology</journal_title><author>Brettar</author><volume>54</volume><first_page>2335</first_page><cYear>2004</cYear><article_title>Aquiflexum balticum gen. nov., sp nov., a novel marine bacterium
+                cells</rel:description>
+						<rel:inter_work_relation identifier-type="accession" relationship-type="references">E-MTAB-3649</rel:inter_work_relation>
+					</rel:related_item>
+					<rel:related_item>
+						<rel:description>SKN-1 from the JASPAR CORE database</rel:description>
+						<rel:inter_work_relation identifier-type="accession" relationship-type="references">MA0547.1</rel:inter_work_relation>
+					</rel:related_item>
+					<rel:related_item>
+						<rel:description>Global Diversity of Shigella Species</rel:description>
+						<rel:inter_work_relation identifier-type="accession" relationship-type="references">PRJEB2846</rel:inter_work_relation>
+					</rel:related_item>
+					<rel:related_item>
+						<rel:description>Shigella sonnei and flexneri from around the world</rel:description>
+						<rel:inter_work_relation identifier-type="accession" relationship-type="references">PRJEB2460</rel:inter_work_relation>
+					</rel:related_item>
+					<rel:related_item>
+						<rel:description>Shigella flexneri from around the world</rel:description>
+						<rel:inter_work_relation identifier-type="accession" relationship-type="references">PRJEB2542</rel:inter_work_relation>
+					</rel:related_item>
+					<rel:related_item>
+						<rel:description>Polymeric immunoglobulin receptor [Oncorhynchus mykiss]</rel:description>
+						<rel:inter_work_relation identifier-type="accession" relationship-type="references">GenBank: ADB81776.1</rel:inter_work_relation>
+					</rel:related_item>
+					<rel:related_item>
+						<rel:description>ChIP-Seq Identification of C. elegans TF Binding Sites</rel:description>
+						<rel:inter_work_relation identifier-type="accession" relationship-type="references">modENCODE_3369</rel:inter_work_relation>
+					</rel:related_item>
+				</rel:program>
+				<archive_locations>
+					<archive name="CLOCKSS"/>
+				</archive_locations>
+				<doi_data>
+					<doi>10.7554/eLife.00666</doi>
+					<resource>https://elifesciences.org/articles/00666</resource>
+					<collection property="text-mining">
+						<item>
+							<resource mime_type="application/pdf">https://cdn.elifesciences.org/articles/00666/elife-00666.pdf</resource>
+						</item>
+						<item>
+							<resource mime_type="application/xml">https://cdn.elifesciences.org/articles/00666/elife-00666.xml</resource>
+						</item>
+					</collection>
+				</doi_data>
+				<citation_list>
+					<citation key="bib1">
+						<journal_title>The Journal of Cell Biology</journal_title>
+						<author>Aivazian</author>
+						<volume>173</volume>
+						<first_page>917</first_page>
+						<cYear>2006</cYear>
+						<article_title>TIP47 is a key effector for Rab9 localization</article_title>
+						<doi>10.1083/jcb.200510010</doi>
+					</citation>
+					<citation key="bib2">
+						<volume_title>CRAN</volume_title>
+						<author>Bates</author>
+						<cYear>2016</cYear>
+						<article_title>Lme4: Linear Mixed-Effects Models Using Eigen and S4</article_title>
+						<unstructured_citation>Bates D, Maechler M, Bolker B, Walker S, Haubo Bojesen Christensen R, Singmann H, Dai B, Grothendieck G, Green P, Bolker B. 2016. Lme4: Linear Mixed-Effects Models Using Eigen and S4. CRAN. 1.1-12. https://cran.r-project.org/web/packages/lme4/index.html.</unstructured_citation>
+					</citation>
+					<citation key="bib3">
+						<volume_title>bioRxiv</volume_title>
+						<author>Bloss</author>
+						<cYear>2016</cYear>
+						<article_title>A prospective randomized trial examining health care utilization in individuals using multiple 
+                smartphone-enabled biosensors</article_title>
+						<doi>10.1101/029983</doi>
+					</citation>
+					<citation key="bib4">
+						<volume_title>NCBI Gene Expression Omnibus</volume_title>
+						<author>Bouveret</author>
+						<cYear>2015</cYear>
+						<article_title>NKX2-5 mutations causative for congenital heart disease retain
+                functionality and are directed to hundreds of targets</article_title>
+					</citation>
+					<citation key="bib5">
+						<journal_title>International journal of systematic and evolutionary
+                microbiology</journal_title>
+						<author>Brettar</author>
+						<volume>54</volume>
+						<first_page>2335</first_page>
+						<cYear>2004</cYear>
+						<article_title>Aquiflexum balticum gen. nov., sp nov., a novel marine bacterium
                 of the Cytophaga-Flavobacterium-Bacteroides group isolated from surface
-                water of the central Baltic Sea</article_title><doi>10.1099/ijs.0.63255-0</doi></citation><citation key="bib6"><journal_title>International journal of systematic and evolutionary
-                microbiology</journal_title><author>Brettar</author><volume>54</volume><first_page>65</first_page><cYear>2004</cYear><article_title>Belliella baltica gen. nov., sp. nov., a novel marine bacterium
+                water of the central Baltic Sea</article_title>
+						<doi>10.1099/ijs.0.63255-0</doi>
+					</citation>
+					<citation key="bib6">
+						<journal_title>International journal of systematic and evolutionary
+                microbiology</journal_title>
+						<author>Brettar</author>
+						<volume>54</volume>
+						<first_page>65</first_page>
+						<cYear>2004</cYear>
+						<article_title>Belliella baltica gen. nov., sp. nov., a novel marine bacterium
                 of the Cytophaga-Flavobacterium-Bacteroides group isolated from surface
-                water of the central Baltic Sea</article_title><doi>10.1099/ijs.0.02752-0</doi></citation><citation key="bib7"><author>Bricogne</author><cYear>2011</cYear><article_title>BUSTER</article_title><unstructured_citation>Bricogne G, Blanc E, Brandl M, Flensburg C, Keller P, Paciorek W, Roversi P, Sharff A, Smart OS, Vonrhein C, Womack TO. 2011. BUSTER. Cambridge, UK: Global Phasing Ltd. 2.10.0. https://www.globalphasing.com/buster/.</unstructured_citation></citation><citation key="bib8"><volume_title>Advances in insect chemical ecology</volume_title><author>Cardé</author><cYear>2004</cYear></citation><citation key="bib9"><volume_title>arXiv.org</volume_title><author>Cartwright</author><cYear>2016</cYear><article_title>The Venus Hypothesis</article_title><unstructured_citation>Cartwright A. 2016. The Venus Hypothesis. arXiv.org. https://arxiv.org/abs/1608.03074.</unstructured_citation></citation><citation key="bib10"><volume_title>An Introduction to Work and Organizational Psychology: A European
-                Perspective</volume_title><author>Chmeil</author><cYear>2008</cYear></citation><citation key="bib11"><volume_title>Speciation and its consequences</volume_title><author>Coyne</author><first_page>1</first_page><cYear>1989</cYear></citation><citation key="bib12"><volume_title>PyMol</volume_title><author>DeLano</author><cYear>2002</cYear><article_title>The PyMol Molecular Graphics System</article_title><unstructured_citation>DeLano W. 2002. The PyMol Molecular Graphics System. Schrödinger LLC. PyMol. Version 1.7.4. https://www.pymol.org/.</unstructured_citation></citation><citation key="bib13"><volume_title>Educational excellence everywhere</volume_title><author>Department of Education</author><cYear>2016</cYear><isbn>9781474130158</isbn></citation><citation key="bib14"><volume_title>RCSB Protein Data Bank</volume_title><author>Du</author><cYear>2014</cYear><article_title>Crystal structure of KRYPTONITE in complex with mCHH DNA and
-                SAH</article_title><doi>10.2210/pdb4qen/pdb</doi></citation><citation key="bib15"><volume_title>it is NOT junk</volume_title><author>Eisen</author><cYear>2016</cYear><article_title>The Imprinter of All Maladies</article_title><unstructured_citation>Eisen M. 2016. The Imprinter of All Maladies. it is NOT junk. http://www.michaeleisen.org/blog/?p=1894 [Accessed August 19, 2016].</unstructured_citation></citation><citation key="bib16"><volume_title>Division of Clinical Neurology, University of Oxford</volume_title><author>Ferry</author><cYear>2014</cYear><article_title>Diagnostically relevant facial gestalt information from ordinary photos database</article_title></citation><citation key="bib17"><journal_title>Immunity</journal_title><author>Gall</author><volume>36</volume><first_page>120</first_page><cYear>2012</cYear><article_title>Autoimmunity initiates in nonhematopoietic cells and progresses
+                water of the central Baltic Sea</article_title>
+						<doi>10.1099/ijs.0.02752-0</doi>
+					</citation>
+					<citation key="bib7">
+						<author>Bricogne</author>
+						<cYear>2011</cYear>
+						<article_title>BUSTER</article_title>
+						<unstructured_citation>Bricogne G, Blanc E, Brandl M, Flensburg C, Keller P, Paciorek W, Roversi P, Sharff A, Smart OS, Vonrhein C, Womack TO. 2011. BUSTER. Cambridge, UK: Global Phasing Ltd. 2.10.0. https://www.globalphasing.com/buster/.</unstructured_citation>
+					</citation>
+					<citation key="bib8">
+						<volume_title>Advances in insect chemical ecology</volume_title>
+						<author>Cardé</author>
+						<cYear>2004</cYear>
+					</citation>
+					<citation key="bib9">
+						<volume_title>arXiv.org</volume_title>
+						<author>Cartwright</author>
+						<cYear>2016</cYear>
+						<article_title>The Venus Hypothesis</article_title>
+						<unstructured_citation>Cartwright A. 2016. The Venus Hypothesis. arXiv.org. https://arxiv.org/abs/1608.03074.</unstructured_citation>
+					</citation>
+					<citation key="bib10">
+						<volume_title>An Introduction to Work and Organizational Psychology: A European
+                Perspective</volume_title>
+						<author>Chmeil</author>
+						<cYear>2008</cYear>
+					</citation>
+					<citation key="bib11">
+						<volume_title>Speciation and its consequences</volume_title>
+						<author>Coyne</author>
+						<first_page>1</first_page>
+						<cYear>1989</cYear>
+					</citation>
+					<citation key="bib12">
+						<volume_title>PyMol</volume_title>
+						<author>DeLano</author>
+						<cYear>2002</cYear>
+						<article_title>The PyMol Molecular Graphics System</article_title>
+						<unstructured_citation>DeLano W. 2002. The PyMol Molecular Graphics System. Schrödinger LLC. PyMol. Version 1.7.4. https://www.pymol.org/.</unstructured_citation>
+					</citation>
+					<citation key="bib13">
+						<volume_title>Educational excellence everywhere</volume_title>
+						<author>Department of Education</author>
+						<cYear>2016</cYear>
+						<isbn>9781474130158</isbn>
+					</citation>
+					<citation key="bib14">
+						<volume_title>RCSB Protein Data Bank</volume_title>
+						<author>Du</author>
+						<cYear>2014</cYear>
+						<article_title>Crystal structure of KRYPTONITE in complex with mCHH DNA and
+                SAH</article_title>
+						<doi>10.2210/pdb4qen/pdb</doi>
+					</citation>
+					<citation key="bib15">
+						<volume_title>it is NOT junk</volume_title>
+						<author>Eisen</author>
+						<cYear>2016</cYear>
+						<article_title>The Imprinter of All Maladies</article_title>
+						<unstructured_citation>Eisen M. 2016. The Imprinter of All Maladies. it is NOT junk. http://www.michaeleisen.org/blog/?p=1894 [Accessed August 19, 2016].</unstructured_citation>
+					</citation>
+					<citation key="bib16">
+						<volume_title>Division of Clinical Neurology, University of Oxford</volume_title>
+						<author>Ferry</author>
+						<cYear>2014</cYear>
+						<article_title>Diagnostically relevant facial gestalt information from ordinary photos database</article_title>
+					</citation>
+					<citation key="bib17">
+						<journal_title>Immunity</journal_title>
+						<author>Gall</author>
+						<volume>36</volume>
+						<first_page>120</first_page>
+						<cYear>2012</cYear>
+						<article_title>Autoimmunity initiates in nonhematopoietic cells and progresses
                 via lymphocytes in an interferon-dependent autoimmune
-                disease</article_title><doi>10.1016/j.immuni.2011.11.018</doi></citation><citation key="bib18"><volume_title>NCBI Nucleotide</volume_title><author>Gavrilov</author><cYear>2014</cYear><article_title>Mus musculus T-box 2 (Tbx2), mRNA</article_title></citation><citation key="bib19"><volume_title>Augmentin 250/62 SF Suspension</volume_title><author>GlaxoSmithKline UK</author><cYear>2016</cYear><unstructured_citation>GlaxoSmithKline UK. 2016. United Kingdom: GlaxoSmithKline UK. Augmentin 250/62 SF Suspension. https://www.medicines.org.uk/emc/medicine/19188.</unstructured_citation></citation><citation key="bib20"><journal_title>Bioinformatics</journal_title><author>Goodstadt</author><volume>26</volume><first_page>2778</first_page><cYear>2010</cYear><article_title>
+                disease</article_title>
+						<doi>10.1016/j.immuni.2011.11.018</doi>
+					</citation>
+					<citation key="bib18">
+						<volume_title>NCBI Nucleotide</volume_title>
+						<author>Gavrilov</author>
+						<cYear>2014</cYear>
+						<article_title>Mus musculus T-box 2 (Tbx2), mRNA</article_title>
+					</citation>
+					<citation key="bib19">
+						<volume_title>Augmentin 250/62 SF Suspension</volume_title>
+						<author>GlaxoSmithKline UK</author>
+						<cYear>2016</cYear>
+						<unstructured_citation>GlaxoSmithKline UK. 2016. United Kingdom: GlaxoSmithKline UK. Augmentin 250/62 SF Suspension. https://www.medicines.org.uk/emc/medicine/19188.</unstructured_citation>
+					</citation>
+					<citation key="bib20">
+						<journal_title>Bioinformatics</journal_title>
+						<author>Goodstadt</author>
+						<volume>26</volume>
+						<first_page>2778</first_page>
+						<cYear>2010</cYear>
+						<article_title>
                 Ruffus: a lightweight Python library for computational pipelines
-            </article_title><doi>10.1093/bioinformatics/btq524</doi></citation><citation key="bib21"><volume_title>NCBI Gene Expression Omnibus</volume_title><author>Hoang</author><cYear>2015</cYear><article_title>Effects on the transcriptome of adult mouse pancreas (principally
-                acinar cells) by the inactivation of the Ptf1a gene in vivo</article_title></citation><citation key="bib22"><volume_title>Integrated pest management for crops and pastures</volume_title><author>Horne</author><cYear>2008</cYear><isbn>9780643092570</isbn></citation><citation key="bib23"><volume_title>Naccess</volume_title><author>Hubbard</author><cYear>1993</cYear><unstructured_citation>Hubbard S, Thornton J. 1993. Department of Biochemistry Molecular Biology, University College London. Naccess. V2.1.1. http://www.bioinf.manchester.ac.uk/naccess.</unstructured_citation></citation><citation key="bib24"><author>Jain</author><cYear>2010</cYear><article_title>Boundary learning by optimization with topological
-                constraints</article_title><unstructured_citation>Jain BV, Bollman B, Richardson M, Berger DR, Helmstaedter MN, Briggman KL, Denk W, Bowden JB, Mendenhall JM, Abraham WC, Harris KM, Kasthuri N, Hayworth KJ, Schalek R, Tapia JC, Lichtman JW, Seung HS. 2010. Boundary learning by optimization with topological
-                constraints. IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2010.</unstructured_citation></citation><citation key="bib25"><volume_title>Psychology A Study Of A Science</volume_title><author>Koch</author><volume>3: Formulations of the Person a</volume><cYear>1959</cYear></citation><citation key="bib26"><volume_title>Dryad Digital Repository</volume_title><author>Kok</author><cYear>2015</cYear><article_title>Data from: Genome-wide errant targeting by Hairy</article_title><doi>10.5061/dryad.cv323</doi></citation><citation key="bib27"><journal_title>Nucleic Acids Res</journal_title><author>McQuilton</author><volume>40</volume><first_page>D706</first_page><cYear>2012</cYear><article_title>FlyBase 101—the basics of navigating FlyBase</article_title><doi>10.1093/nar/gkr1030</doi></citation><citation key="bib28"><volume_title>Clinical training in serious mental illness (DHHS Publication No. ADM 90-1679)</volume_title><author>National Institute of Mental Health</author><cYear>1990</cYear><unstructured_citation>National Institute of Mental Health. 1990. Washington, DC, United States: Government Printing Office. Clinical training in serious mental illness (DHHS Publication No. ADM 90-1679).</unstructured_citation></citation><citation key="bib29"><volume_title>Github</volume_title><author>Nellåker</author><cYear>2014</cYear><article_title>Clinical_Face_Phenotype_Space_Pipeline</article_title><unstructured_citation>Nellåker C. 2014. Clinical_Face_Phenotype_Space_Pipeline. Github. v1.2. https://github.com/ChristofferNellaker/Clinical_Face_Phenotype_Space_Pipeline.</unstructured_citation></citation><citation key="bib30"><volume_title>Bioconductor</volume_title><author>Pages</author><cYear>2014</cYear><article_title>String objects representing biological sequences, and matching algorithms</article_title><unstructured_citation>Pages H, Gentleman R, Aboyoun P, Biostrings DS. 2014. String objects representing biological sequences, and matching algorithms. Bioconductor. R Package Version 2.30.1. https://bioconductor.org/packages/release/bioc/html/Biostrings.html.</unstructured_citation></citation><citation key="bib31"><volume_title>Independent component analysis and signal separation</volume_title><author>Palmer</author><first_page>90</first_page><cYear>2007</cYear><article_title>Probabilistic Formulation of Independent Vector Analysis Using Complex Gaussian Scale Mixtures</article_title><unstructured_citation>Palmer JA, Kreutz-Delgado K, Rao BD, Makeig S. 2007. Probabilistic Formulation of Independent Vector Analysis Using Complex Gaussian Scale Mixtures. Independent component analysis and signal separation.  8th International Conference, ICA 2009, Paraty, Brazil, March 15-18, 2009.</unstructured_citation></citation><citation key="bib32"><volume_title>United States patent</volume_title><cYear>2011</cYear><article_title>IRE-1alpha inhibitors</article_title><unstructured_citation>Patterson JB, Lonergan DG, Flynn GA, Qingpeng Z, Pallai PV, Mankind Corp. 2011. IRE-1alpha inhibitors. United States patent. US20100941530. http://europepmc.org/patents/PAT/US2011065162.</unstructured_citation></citation><citation key="bib33"><author>R Development Core Team</author><cYear>2015</cYear><article_title>R: a language and environment for statistical computing</article_title><unstructured_citation>R Development Core Team. 2015. R: a language and environment for statistical computing. Vienna, Austria: R Foundation for Statistical Computing. 3.2.2. http://www.r-project.org/.</unstructured_citation></citation><citation key="bib34"><volume_title>ProteomeXchange</volume_title><author>Radoshevich</author><cYear>2015</cYear><article_title>ISG15 counteracts Listeria monocytogenes
-                infection</article_title></citation><citation key="bib35"><volume_title>ArrayExpress</volume_title><author>Radoshevich</author><cYear>2015</cYear><article_title>Transcription profiling by high throughput sequencing of LoVo
+            </article_title>
+						<doi>10.1093/bioinformatics/btq524</doi>
+					</citation>
+					<citation key="bib21">
+						<volume_title>NCBI Gene Expression Omnibus</volume_title>
+						<author>Hoang</author>
+						<cYear>2015</cYear>
+						<article_title>Effects on the transcriptome of adult mouse pancreas (principally
+                acinar cells) by the inactivation of the Ptf1a gene in vivo</article_title>
+					</citation>
+					<citation key="bib22">
+						<volume_title>Integrated pest management for crops and pastures</volume_title>
+						<author>Horne</author>
+						<cYear>2008</cYear>
+						<isbn>9780643092570</isbn>
+					</citation>
+					<citation key="bib23">
+						<volume_title>Naccess</volume_title>
+						<author>Hubbard</author>
+						<cYear>1993</cYear>
+						<unstructured_citation>Hubbard S, Thornton J. 1993. Department of Biochemistry Molecular Biology, University College London. Naccess. V2.1.1. http://www.bioinf.manchester.ac.uk/naccess.</unstructured_citation>
+					</citation>
+					<citation key="bib24">
+						<author>Jain</author>
+						<cYear>2010</cYear>
+						<article_title>Boundary learning by optimization with topological
+                constraints</article_title>
+						<unstructured_citation>Jain BV, Bollman B, Richardson M, Berger DR, Helmstaedter MN, Briggman KL, Denk W, Bowden JB, Mendenhall JM, Abraham WC, Harris KM, Kasthuri N, Hayworth KJ, Schalek R, Tapia JC, Lichtman JW, Seung HS. 2010. Boundary learning by optimization with topological
+                constraints. IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2010.</unstructured_citation>
+					</citation>
+					<citation key="bib25">
+						<volume_title>Psychology A Study Of A Science</volume_title>
+						<author>Koch</author>
+						<volume>3: Formulations of the Person a</volume>
+						<cYear>1959</cYear>
+					</citation>
+					<citation key="bib26">
+						<volume_title>Dryad Digital Repository</volume_title>
+						<author>Kok</author>
+						<cYear>2015</cYear>
+						<article_title>Data from: Genome-wide errant targeting by Hairy</article_title>
+						<doi>10.5061/dryad.cv323</doi>
+					</citation>
+					<citation key="bib27">
+						<journal_title>Nucleic Acids Res</journal_title>
+						<author>McQuilton</author>
+						<volume>40</volume>
+						<first_page>D706</first_page>
+						<cYear>2012</cYear>
+						<article_title>FlyBase 101—the basics of navigating FlyBase</article_title>
+						<doi>10.1093/nar/gkr1030</doi>
+					</citation>
+					<citation key="bib28">
+						<volume_title>Clinical training in serious mental illness (DHHS Publication No. ADM 90-1679)</volume_title>
+						<author>National Institute of Mental Health</author>
+						<cYear>1990</cYear>
+						<unstructured_citation>National Institute of Mental Health. 1990. Washington, DC, United States: Government Printing Office. Clinical training in serious mental illness (DHHS Publication No. ADM 90-1679).</unstructured_citation>
+					</citation>
+					<citation key="bib29">
+						<volume_title>Github</volume_title>
+						<author>Nellåker</author>
+						<cYear>2014</cYear>
+						<article_title>Clinical_Face_Phenotype_Space_Pipeline</article_title>
+						<unstructured_citation>Nellåker C. 2014. Clinical_Face_Phenotype_Space_Pipeline. Github. v1.2. https://github.com/ChristofferNellaker/Clinical_Face_Phenotype_Space_Pipeline.</unstructured_citation>
+					</citation>
+					<citation key="bib30">
+						<volume_title>Bioconductor</volume_title>
+						<author>Pages</author>
+						<cYear>2014</cYear>
+						<article_title>String objects representing biological sequences, and matching algorithms</article_title>
+						<unstructured_citation>Pages H, Gentleman R, Aboyoun P, Biostrings DS. 2014. String objects representing biological sequences, and matching algorithms. Bioconductor. R Package Version 2.30.1. https://bioconductor.org/packages/release/bioc/html/Biostrings.html.</unstructured_citation>
+					</citation>
+					<citation key="bib31">
+						<volume_title>Independent component analysis and signal separation</volume_title>
+						<author>Palmer</author>
+						<first_page>90</first_page>
+						<cYear>2007</cYear>
+						<article_title>Probabilistic Formulation of Independent Vector Analysis Using Complex Gaussian Scale Mixtures</article_title>
+						<unstructured_citation>Palmer JA, Kreutz-Delgado K, Rao BD, Makeig S. 2007. Probabilistic Formulation of Independent Vector Analysis Using Complex Gaussian Scale Mixtures. Independent component analysis and signal separation.  8th International Conference, ICA 2009, Paraty, Brazil, March 15-18, 2009.</unstructured_citation>
+					</citation>
+					<citation key="bib32">
+						<volume_title>United States patent</volume_title>
+						<cYear>2011</cYear>
+						<article_title>IRE-1alpha inhibitors</article_title>
+						<unstructured_citation>Patterson JB, Lonergan DG, Flynn GA, Qingpeng Z, Pallai PV, Mankind Corp. 2011. IRE-1alpha inhibitors. United States patent. US20100941530. http://europepmc.org/patents/PAT/US2011065162.</unstructured_citation>
+					</citation>
+					<citation key="bib33">
+						<author>R Development Core Team</author>
+						<cYear>2015</cYear>
+						<article_title>R: a language and environment for statistical computing</article_title>
+						<unstructured_citation>R Development Core Team. 2015. R: a language and environment for statistical computing. Vienna, Austria: R Foundation for Statistical Computing. 3.2.2. http://www.r-project.org/.</unstructured_citation>
+					</citation>
+					<citation key="bib34">
+						<volume_title>ProteomeXchange</volume_title>
+						<author>Radoshevich</author>
+						<cYear>2015</cYear>
+						<article_title>ISG15 counteracts Listeria monocytogenes
+                infection</article_title>
+					</citation>
+					<citation key="bib35">
+						<volume_title>ArrayExpress</volume_title>
+						<author>Radoshevich</author>
+						<cYear>2015</cYear>
+						<article_title>Transcription profiling by high throughput sequencing of LoVo
                 cells infected with Listeria for 24 hr compared to uninfected
-                cells</article_title></citation><citation key="bib36"><author>Rasband</author><cYear>1997</cYear><article_title>Image J</article_title><unstructured_citation>Rasband WS. 1997. Image J. Bethesda, MA: US National Institutes of Health. http://imagej.nih.gov/ij/.</unstructured_citation></citation><citation key="bib37"><journal_title>Genome Res</journal_title><author>Roy</author><cYear>2013</cYear><article_title>Arboretum: reconstruction and analysis of the evolutionary
-                history of condition-specific transcriptional programs</article_title></citation><citation key="bib38"><author>Schneider</author><cYear>2006</cYear><article_title>PhD thesis: Submicroscopic Plasmodium falciparum gametocytaemia and the contribution to malaria transmission</article_title><unstructured_citation>Schneider P. 2006. PhD thesis: Submicroscopic Plasmodium falciparum gametocytaemia and the contribution to malaria transmission. Nijmegen, The Netherlands: Radboud University Nijmegen Medical Centre.</unstructured_citation></citation><citation key="bib39"><volume_title>The PyMOL Molecular Graphics System</volume_title><author>Schrödinger</author><cYear>2011</cYear><unstructured_citation>Schrödinger LLC. 2011. Schrödinger LLC. The PyMOL Molecular Graphics System. 1.2r3pre. https://www.pymol.org/.</unstructured_citation></citation><citation key="bib40"><volume_title>The Washington Post</volume_title><author>Schwartz</author><first_page>A1</first_page><cYear>1993</cYear><article_title>Obesity affects economic, social status</article_title></citation><citation key="bib41"><cYear>2015</cYear><article_title>Scripps Wired for Health Study</article_title></citation><citation key="bib42"><author>Smit</author><cYear>2010</cYear><article_title>RepeatModeler</article_title><unstructured_citation>Smit A, Hubley R. 2010. RepeatModeler. Seattle, USA: Institute for Systems Biology. open-1.0. http://www.repeatmasker.org/RepeatModeler.html.</unstructured_citation></citation><citation key="bib43"><volume_title>JASPAR</volume_title><author>Staab</author><cYear>2013</cYear><article_title>SKN-1 from the JASPAR CORE database</article_title></citation><citation key="bib44"><volume_title>preprints</volume_title><author>Tanaka</author><cYear>2016</cYear><article_title>Hypoxic Preconditioning of Human Cardiosphere-derived Cell Sheets Enhances Cellular Functions via 
-                Activation of the PI3K/Akt/mTOR/HIF-1a Pathway</article_title><doi>10.20944/preprints201608.0124.v1</doi></citation><citation key="bib45"><volume_title>NCBI BioProject</volume_title><author>The Shigella Genome Sequencing Consortium</author><cYear>2015</cYear><article_title>Global Diversity of Shigella Species</article_title></citation><citation key="bib46"><volume_title>NCBI BioProject</volume_title><author>The Shigella Genome Sequencing Consortium</author><cYear>2015</cYear><article_title>Shigella sonnei and flexneri from around the world</article_title></citation><citation key="bib47"><volume_title>NCBI BioProject </volume_title><author>The Shigella Genome Sequencing Consortium</author><cYear>2015</cYear><article_title>Shigella flexneri from around the world</article_title></citation><citation key="bib48"><volume_title>Advances in insect chemical ecology</volume_title><author>Turlings</author><first_page>21</first_page><cYear>2004</cYear></citation><citation key="bib49"><volume_title>Advances in insect chemical ecology</volume_title><author>Turlings</author><cYear>2004</cYear></citation><citation key="bib50"><author>Walker</author><article_title>Solar System Live</article_title><unstructured_citation>Walker J. Solar System Live. https://www.fourmilab.ch/solar/ [Accessed September 10, 1995].</unstructured_citation></citation><citation key="bib51"><journal_title>PLoS Biol</journal_title><author>Wolski</author><volume>6</volume><cYear>2008</cYear><article_title>Crystal structure of the FeS cluster-containing nucleotide
-                        excision repair helicase XPD</article_title><doi>10.1371/journal.pbio.0060149</doi><elocation_id>e149</elocation_id></citation><citation key="bib52"><volume_title> Growing up unequal: gender and socioeconomic differences in young
+                cells</article_title>
+					</citation>
+					<citation key="bib36">
+						<author>Rasband</author>
+						<cYear>1997</cYear>
+						<article_title>Image J</article_title>
+						<unstructured_citation>Rasband WS. 1997. Image J. Bethesda, MA: US National Institutes of Health. http://imagej.nih.gov/ij/.</unstructured_citation>
+					</citation>
+					<citation key="bib37">
+						<journal_title>Genome Res</journal_title>
+						<author>Roy</author>
+						<cYear>2013</cYear>
+						<article_title>Arboretum: reconstruction and analysis of the evolutionary
+                history of condition-specific transcriptional programs</article_title>
+					</citation>
+					<citation key="bib38">
+						<author>Schneider</author>
+						<cYear>2006</cYear>
+						<article_title>PhD thesis: Submicroscopic Plasmodium falciparum gametocytaemia and the contribution to malaria transmission</article_title>
+						<unstructured_citation>Schneider P. 2006. PhD thesis: Submicroscopic Plasmodium falciparum gametocytaemia and the contribution to malaria transmission. Nijmegen, The Netherlands: Radboud University Nijmegen Medical Centre.</unstructured_citation>
+					</citation>
+					<citation key="bib39">
+						<volume_title>The PyMOL Molecular Graphics System</volume_title>
+						<author>Schrödinger</author>
+						<cYear>2011</cYear>
+						<unstructured_citation>Schrödinger LLC. 2011. Schrödinger LLC. The PyMOL Molecular Graphics System. 1.2r3pre. https://www.pymol.org/.</unstructured_citation>
+					</citation>
+					<citation key="bib40">
+						<volume_title>The Washington Post</volume_title>
+						<author>Schwartz</author>
+						<first_page>A1</first_page>
+						<cYear>1993</cYear>
+						<article_title>Obesity affects economic, social status</article_title>
+					</citation>
+					<citation key="bib41">
+						<cYear>2015</cYear>
+						<article_title>Scripps Wired for Health Study</article_title>
+					</citation>
+					<citation key="bib42">
+						<author>Smit</author>
+						<cYear>2010</cYear>
+						<article_title>RepeatModeler</article_title>
+						<unstructured_citation>Smit A, Hubley R. 2010. RepeatModeler. Seattle, USA: Institute for Systems Biology. open-1.0. http://www.repeatmasker.org/RepeatModeler.html.</unstructured_citation>
+					</citation>
+					<citation key="bib43">
+						<volume_title>JASPAR</volume_title>
+						<author>Staab</author>
+						<cYear>2013</cYear>
+						<article_title>SKN-1 from the JASPAR CORE database</article_title>
+					</citation>
+					<citation key="bib44">
+						<volume_title>preprints</volume_title>
+						<author>Tanaka</author>
+						<cYear>2016</cYear>
+						<article_title>Hypoxic Preconditioning of Human Cardiosphere-derived Cell Sheets Enhances Cellular Functions via 
+                Activation of the PI3K/Akt/mTOR/HIF-1a Pathway</article_title>
+						<doi>10.20944/preprints201608.0124.v1</doi>
+					</citation>
+					<citation key="bib45">
+						<volume_title>NCBI BioProject</volume_title>
+						<author>The Shigella Genome Sequencing Consortium</author>
+						<cYear>2015</cYear>
+						<article_title>Global Diversity of Shigella Species</article_title>
+					</citation>
+					<citation key="bib46">
+						<volume_title>NCBI BioProject</volume_title>
+						<author>The Shigella Genome Sequencing Consortium</author>
+						<cYear>2015</cYear>
+						<article_title>Shigella sonnei and flexneri from around the world</article_title>
+					</citation>
+					<citation key="bib47">
+						<volume_title>NCBI BioProject </volume_title>
+						<author>The Shigella Genome Sequencing Consortium</author>
+						<cYear>2015</cYear>
+						<article_title>Shigella flexneri from around the world</article_title>
+					</citation>
+					<citation key="bib48">
+						<volume_title>Advances in insect chemical ecology</volume_title>
+						<author>Turlings</author>
+						<first_page>21</first_page>
+						<cYear>2004</cYear>
+					</citation>
+					<citation key="bib49">
+						<volume_title>Advances in insect chemical ecology</volume_title>
+						<author>Turlings</author>
+						<cYear>2004</cYear>
+					</citation>
+					<citation key="bib50">
+						<author>Walker</author>
+						<article_title>Solar System Live</article_title>
+						<unstructured_citation>Walker J. Solar System Live. https://www.fourmilab.ch/solar/ [Accessed September 10, 1995].</unstructured_citation>
+					</citation>
+					<citation key="bib51">
+						<journal_title>PLoS Biol</journal_title>
+						<author>Wolski</author>
+						<volume>6</volume>
+						<cYear>2008</cYear>
+						<article_title>Crystal structure of the FeS cluster-containing nucleotide
+                        excision repair helicase XPD</article_title>
+						<doi>10.1371/journal.pbio.0060149</doi>
+						<elocation_id>e149</elocation_id>
+					</citation>
+					<citation key="bib52">
+						<volume_title> Growing up unequal: gender and socioeconomic differences in young
                 people's health and well-being. Health Behaviour in School-aged Children
-                (HBSC) study</volume_title><author>World Health Organization</author><cYear>2016</cYear></citation><citation key="bib53"><volume_title>NCBI</volume_title><author>Zhang</author><cYear>2010</cYear><article_title>Polymeric immunoglobulin receptor [Oncorhynchus mykiss]</article_title></citation><citation key="bib54"><volume_title>modMine</volume_title><author>Zhong</author><cYear>2013</cYear><article_title>ChIP-Seq Identification of C. elegans TF Binding Sites</article_title></citation></citation_list><component_list><component parent_relation="isPartOf"><titles><title>Abstract</title></titles><format mime_type="text/plain"/><doi_data><doi>10.7554/eLife.00666.001</doi><resource>https://elifesciences.org/articles/00666#abstract</resource></doi_data></component><component parent_relation="isPartOf"><titles><title>eLife digest</title></titles><format mime_type="text/plain"/><doi_data><doi>10.7554/eLife.00666.002</doi><resource>https://elifesciences.org/articles/00666#digest</resource></doi_data></component><component parent_relation="isPartOf"><titles><title>Table 1. This is the title.</title></titles><format mime_type="text/plain"/><doi_data><doi>10.7554/eLife.00666.003</doi><resource>https://elifesciences.org/articles/00666#table1</resource></doi_data></component><component parent_relation="isPartOf"><titles><title>Table 2.</title></titles><format mime_type="text/plain"/><doi_data><doi>10.7554/eLife.00666.004</doi><resource>https://elifesciences.org/articles/00666#table2</resource></doi_data></component><component parent_relation="isPartOf"><titles><title>Table 3. Representative curves of steady-state kinetic analyses for each IGF1R protein characterized.</title></titles><format mime_type="text/plain"/><doi_data><doi>10.7554/eLife.00666.005</doi><resource>https://elifesciences.org/articles/00666#table3</resource></doi_data></component><component parent_relation="isPartOf"><titles><title>Table 3—source data 1. Representative curves of steady-state kinetic analyses for each IGF1R protein characterized.</title><subtitle>Each data point was performed in duplicate and is shown separately.</subtitle></titles><format mime_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"/><doi_data><doi>10.7554/eLife.00666.006</doi><resource>https://elifesciences.org/articles/00666/figures#table3sdata1</resource></doi_data></component><component parent_relation="isPartOf"><titles><title>Figure 1. Single figure: The header of an eLife article example on the HTML page. In the PDf this is represented as a single column.</title></titles><format mime_type="image/tiff"/><ai:program name="AccessIndicators"><ai:license_ref>https://submit.elifesciences.org/html/elife_author_instructions.html#policies</ai:license_ref></ai:program><doi_data><doi>10.7554/eLife.00666.007</doi><resource>https://elifesciences.org/articles/00666#fig1</resource></doi_data></component><component parent_relation="isPartOf"><titles><title>Figure 2. Figure with figure supplements. In the PDF this asset box will take full column width.</title><subtitle>This is the basic information provided about an article. Figure 1
+                (HBSC) study</volume_title>
+						<author>World Health Organization</author>
+						<cYear>2016</cYear>
+					</citation>
+					<citation key="bib53">
+						<volume_title>NCBI</volume_title>
+						<author>Zhang</author>
+						<cYear>2010</cYear>
+						<article_title>Polymeric immunoglobulin receptor [Oncorhynchus mykiss]</article_title>
+					</citation>
+					<citation key="bib54">
+						<volume_title>modMine</volume_title>
+						<author>Zhong</author>
+						<cYear>2013</cYear>
+						<article_title>ChIP-Seq Identification of C. elegans TF Binding Sites</article_title>
+					</citation>
+				</citation_list>
+				<component_list>
+					<component parent_relation="isPartOf">
+						<titles>
+							<title>Abstract</title>
+						</titles>
+						<format mime_type="text/plain"/>
+						<doi_data>
+							<doi>10.7554/eLife.00666.001</doi>
+							<resource>https://elifesciences.org/articles/00666#abstract</resource>
+						</doi_data>
+					</component>
+					<component parent_relation="isPartOf">
+						<titles>
+							<title>eLife digest</title>
+						</titles>
+						<format mime_type="text/plain"/>
+						<doi_data>
+							<doi>10.7554/eLife.00666.002</doi>
+							<resource>https://elifesciences.org/articles/00666#digest</resource>
+						</doi_data>
+					</component>
+					<component parent_relation="isPartOf">
+						<titles>
+							<title>Table 1. This is the title.</title>
+						</titles>
+						<format mime_type="text/plain"/>
+						<doi_data>
+							<doi>10.7554/eLife.00666.003</doi>
+							<resource>https://elifesciences.org/articles/00666#table1</resource>
+						</doi_data>
+					</component>
+					<component parent_relation="isPartOf">
+						<titles>
+							<title>Table 2.</title>
+						</titles>
+						<format mime_type="text/plain"/>
+						<doi_data>
+							<doi>10.7554/eLife.00666.004</doi>
+							<resource>https://elifesciences.org/articles/00666#table2</resource>
+						</doi_data>
+					</component>
+					<component parent_relation="isPartOf">
+						<titles>
+							<title>Table 3. Representative curves of steady-state kinetic analyses for each IGF1R protein characterized.</title>
+						</titles>
+						<format mime_type="text/plain"/>
+						<doi_data>
+							<doi>10.7554/eLife.00666.005</doi>
+							<resource>https://elifesciences.org/articles/00666#table3</resource>
+						</doi_data>
+					</component>
+					<component parent_relation="isPartOf">
+						<titles>
+							<title>Table 3—source data 1. Representative curves of steady-state kinetic analyses for each IGF1R protein characterized.</title>
+							<subtitle>Each data point was performed in duplicate and is shown separately.</subtitle>
+						</titles>
+						<format mime_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"/>
+						<doi_data>
+							<doi>10.7554/eLife.00666.006</doi>
+							<resource>https://elifesciences.org/articles/00666/figures#table3sdata1</resource>
+						</doi_data>
+					</component>
+					<component parent_relation="isPartOf">
+						<titles>
+							<title>Figure 1. Single figure: The header of an eLife article example on the HTML page. In the PDf this is represented as a single column.</title>
+						</titles>
+						<format mime_type="image/tiff"/>
+						<ai:program name="AccessIndicators">
+							<ai:license_ref>https://submit.elifesciences.org/html/elife_author_instructions.html#policies</ai:license_ref>
+						</ai:program>
+						<doi_data>
+							<doi>10.7554/eLife.00666.007</doi>
+							<resource>https://elifesciences.org/articles/00666#fig1</resource>
+						</doi_data>
+					</component>
+					<component parent_relation="isPartOf">
+						<titles>
+							<title>Figure 2. Figure with figure supplements. In the PDF this asset box will take full column width.</title>
+							<subtitle>This is the basic information provided about an article. Figure 1
                              shows an expanded view (Kok et al., 2015; National Institute of Mental 
-                                Health, 1990).</subtitle></titles><format mime_type="image/tiff"/><doi_data><doi>10.7554/eLife.00666.008</doi><resource>https://elifesciences.org/articles/00666#fig2</resource></doi_data></component><component parent_relation="isPartOf"><titles><title>Figure 2—figure supplement 1. The representation of the Major Subject Areas, Research Organisms and author keywords on the eLife HTML page</title></titles><format mime_type="image/tiff"/><doi_data><doi>10.7554/eLife.00666.009</doi><resource>https://elifesciences.org/articles/00666/figures#fig2s1</resource></doi_data></component><component parent_relation="isPartOf"><titles><title>Figure 2—figure supplement 2. Representation of figure with figure supplements on the HTML view.</title></titles><format mime_type="image/tiff"/><doi_data><doi>10.7554/eLife.00666.010</doi><resource>https://elifesciences.org/articles/00666/figures#fig2s2</resource></doi_data></component><component parent_relation="isPartOf"><titles><title>Figure 3. Figure with figure supplements and figure supplement with source data and a video (see Koch, 1959) .</title></titles><format mime_type="image/tiff"/><doi_data><doi>10.7554/eLife.00666.011</doi><resource>https://elifesciences.org/articles/00666#fig3</resource></doi_data></component><component parent_relation="isPartOf"><titles><title>Figure 3—figure supplement 1. Title of the figure supplement</title></titles><format mime_type="image/tiff"/><doi_data><doi>10.7554/eLife.00666.012</doi><resource>https://elifesciences.org/articles/00666/figures#fig3s1</resource></doi_data></component><component parent_relation="isPartOf"><titles><title>Figure 3—figure supplement 1—Source data 1. Title of the figure supplement source data.</title><subtitle>Legend of the figure supplement source data.</subtitle></titles><format mime_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"/><doi_data><doi>10.7554/eLife.00666.013</doi><resource>https://elifesciences.org/articles/00666/figures#fig3sdata1</resource></doi_data></component><component parent_relation="isPartOf"><titles><title>Figure 3—Video 1. 
+                                Health, 1990).</subtitle>
+						</titles>
+						<format mime_type="image/tiff"/>
+						<doi_data>
+							<doi>10.7554/eLife.00666.008</doi>
+							<resource>https://elifesciences.org/articles/00666#fig2</resource>
+						</doi_data>
+					</component>
+					<component parent_relation="isPartOf">
+						<titles>
+							<title>Figure 2—figure supplement 1. The representation of the Major Subject Areas, Research Organisms and author keywords on the eLife HTML page</title>
+						</titles>
+						<format mime_type="image/tiff"/>
+						<doi_data>
+							<doi>10.7554/eLife.00666.009</doi>
+							<resource>https://elifesciences.org/articles/00666/figures#fig2s1</resource>
+						</doi_data>
+					</component>
+					<component parent_relation="isPartOf">
+						<titles>
+							<title>Figure 2—figure supplement 2. Representation of figure with figure supplements on the HTML view.</title>
+						</titles>
+						<format mime_type="image/tiff"/>
+						<doi_data>
+							<doi>10.7554/eLife.00666.010</doi>
+							<resource>https://elifesciences.org/articles/00666/figures#fig2s2</resource>
+						</doi_data>
+					</component>
+					<component parent_relation="isPartOf">
+						<titles>
+							<title>Figure 3. Figure with figure supplements and figure supplement with source data and a video (see Koch, 1959) .</title>
+						</titles>
+						<format mime_type="image/tiff"/>
+						<doi_data>
+							<doi>10.7554/eLife.00666.011</doi>
+							<resource>https://elifesciences.org/articles/00666#fig3</resource>
+						</doi_data>
+					</component>
+					<component parent_relation="isPartOf">
+						<titles>
+							<title>Figure 3—figure supplement 1. Title of the figure supplement</title>
+						</titles>
+						<format mime_type="image/tiff"/>
+						<doi_data>
+							<doi>10.7554/eLife.00666.012</doi>
+							<resource>https://elifesciences.org/articles/00666/figures#fig3s1</resource>
+						</doi_data>
+					</component>
+					<component parent_relation="isPartOf">
+						<titles>
+							<title>Figure 3—figure supplement 1—Source data 1. Title of the figure supplement source data.</title>
+							<subtitle>Legend of the figure supplement source data.</subtitle>
+						</titles>
+						<format mime_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"/>
+						<doi_data>
+							<doi>10.7554/eLife.00666.013</doi>
+							<resource>https://elifesciences.org/articles/00666/figures#fig3sdata1</resource>
+						</doi_data>
+					</component>
+					<component parent_relation="isPartOf">
+						<titles>
+							<title>Figure 3—Video 1. 
                                     A description of the eLife editorial process.
-                                </title></titles><format mime_type="video/mp4"/><doi_data><doi>10.7554/eLife.00666.035</doi><resource>https://elifesciences.org/articles/00666#fig3video1</resource></doi_data></component><component parent_relation="isPartOf"><titles><title>Figure 4. Single figure with source code.</title></titles><format mime_type="image/tiff"/><doi_data><doi>10.7554/eLife.00666.014</doi><resource>https://elifesciences.org/articles/00666#fig4</resource></doi_data></component><component parent_relation="isPartOf"><titles><title>Figure 4—Source code 1. Title of the source code.</title><subtitle>Legend of the source code.</subtitle></titles><format mime_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"/><doi_data><doi>10.7554/eLife.00666.015</doi><resource>https://elifesciences.org/articles/00666/figures#fig4scode1</resource></doi_data></component><component parent_relation="isPartOf"><titles><title>Video 1. 
+                                </title>
+						</titles>
+						<format mime_type="video/mp4"/>
+						<doi_data>
+							<doi>10.7554/eLife.00666.035</doi>
+							<resource>https://elifesciences.org/articles/00666#fig3video1</resource>
+						</doi_data>
+					</component>
+					<component parent_relation="isPartOf">
+						<titles>
+							<title>Figure 4. Single figure with source code.</title>
+						</titles>
+						<format mime_type="image/tiff"/>
+						<doi_data>
+							<doi>10.7554/eLife.00666.014</doi>
+							<resource>https://elifesciences.org/articles/00666#fig4</resource>
+						</doi_data>
+					</component>
+					<component parent_relation="isPartOf">
+						<titles>
+							<title>Figure 4—Source code 1. Title of the source code.</title>
+							<subtitle>Legend of the source code.</subtitle>
+						</titles>
+						<format mime_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"/>
+						<doi_data>
+							<doi>10.7554/eLife.00666.015</doi>
+							<resource>https://elifesciences.org/articles/00666/figures#fig4scode1</resource>
+						</doi_data>
+					</component>
+					<component parent_relation="isPartOf">
+						<titles>
+							<title>Video 1. 
                                 A description of the eLife editorial process.
-                            </title></titles><format mime_type="video/mp4"/><doi_data><doi>10.7554/eLife.00666.016</doi><resource>https://elifesciences.org/articles/00666#video1</resource></doi_data></component><component parent_relation="isPartOf"><titles><title>Video 1—Source data 1. Title of the source code.</title><subtitle>Legend of the source code.</subtitle></titles><format mime_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"/><doi_data><doi>10.7554/eLife.00666.037</doi><resource>https://elifesciences.org/articles/00666/figures#video1sdata1</resource></doi_data></component><component parent_relation="isPartOf"><titles><title>Animation 1. A demonstration of how to tag an animated gif file to ensure it is autolooped when on the eLife website.</title></titles><format mime_type="image/gif"/><doi_data><doi>10.7554/eLife.00666.038</doi><resource>https://elifesciences.org/articles/00666#video2</resource></doi_data></component><component parent_relation="isPartOf"><titles><title>Box 1.</title></titles><format mime_type="text/plain"/><doi_data><doi>10.7554/eLife.00666.017</doi><resource>https://elifesciences.org/articles/00666#box1</resource></doi_data></component><component parent_relation="isPartOf"><titles><title>Box 2.</title></titles><format mime_type="text/plain"/><doi_data><doi>10.7554/eLife.00666.018</doi><resource>https://elifesciences.org/articles/00666#box2</resource></doi_data></component><component parent_relation="isPartOf"><titles><title>Box 2—Figure 1. Box figure</title></titles><format mime_type="image/tiff"/><doi_data><doi>10.7554/eLife.00666.036</doi><resource>https://elifesciences.org/articles/00666#box2fig1</resource></doi_data></component><component parent_relation="isPartOf"><titles><title>Supplementary file 1. This is the title of the supplementary file 1.</title><subtitle>A file containing underlying data.</subtitle></titles><format mime_type="text/plain"/><doi_data><doi>10.7554/eLife.00666.019</doi><resource>https://elifesciences.org/articles/00666/figures#supp1</resource></doi_data></component><component parent_relation="isPartOf"><titles><title>Source data 1. This is the title of the source data that is not attached to a specific figure, but to the article as a whole.</title></titles><format mime_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"/><doi_data><doi>10.7554/eLife.00666.020</doi><resource>https://elifesciences.org/articles/00666/figures#sdata1</resource></doi_data></component><component parent_relation="isPartOf"><titles><title>Source code 1. This is the title of the source code that is not attached to a specific figure, but to the article as a whole.</title></titles><format mime_type="application/xml"/><doi_data><doi>10.7554/eLife.00666.021</doi><resource>https://elifesciences.org/articles/00666/figures#scode1</resource></doi_data></component><component parent_relation="isPartOf"><titles><title>Reporting Standard 1. CONSORT flow diagram.</title></titles><format mime_type="application/pdf"/><doi_data><doi>10.7554/eLife.00666.022</doi><resource>https://elifesciences.org/articles/00666/figures#repstand1</resource></doi_data></component><component parent_relation="isPartOf"><titles><title>Preparation</title></titles><format mime_type="text/plain"/><doi_data><doi>10.7554/eLife.00666.023</doi><resource>https://elifesciences.org/articles/00666#None</resource></doi_data></component><component parent_relation="isPartOf"><titles><title>Appendix 1—Figure 1. Appendix figure title.
-                        </title><subtitle>If there is a caption to accompany the title it would display here (Koch, 1959).</subtitle></titles><format mime_type="image/tiff"/><doi_data><doi>10.7554/eLife.00666.024</doi><resource>https://elifesciences.org/articles/00666#app1fig1</resource></doi_data></component><component parent_relation="isPartOf"><titles><title>Appendix 1—Figure 1—Figure Supplement 1. Appendix figure supplement title.</title><subtitle>If there is a caption to accompany the title it would display here.</subtitle></titles><format mime_type="image/tiff"/><doi_data><doi>10.7554/eLife.00666.025</doi><resource>https://elifesciences.org/articles/00666/figures#app1fig1s1</resource></doi_data></component><component parent_relation="isPartOf"><titles><title>Apendix 1—Table 1. This is the title.</title></titles><format mime_type="text/plain"/><doi_data><doi>10.7554/eLife.00666.039</doi><resource>https://elifesciences.org/articles/00666#app1table1</resource></doi_data></component><component parent_relation="isPartOf"><titles><title>Negotaition</title></titles><format mime_type="text/plain"/><doi_data><doi>10.7554/eLife.00666.026</doi><resource>https://elifesciences.org/articles/00666#None</resource></doi_data></component><component parent_relation="isPartOf"><titles><title>Appendix 2—Video 1. 
+                            </title>
+						</titles>
+						<format mime_type="video/mp4"/>
+						<doi_data>
+							<doi>10.7554/eLife.00666.016</doi>
+							<resource>https://elifesciences.org/articles/00666#video1</resource>
+						</doi_data>
+					</component>
+					<component parent_relation="isPartOf">
+						<titles>
+							<title>Video 1—Source data 1. Title of the source code.</title>
+							<subtitle>Legend of the source code.</subtitle>
+						</titles>
+						<format mime_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"/>
+						<doi_data>
+							<doi>10.7554/eLife.00666.037</doi>
+							<resource>https://elifesciences.org/articles/00666/figures#video1sdata1</resource>
+						</doi_data>
+					</component>
+					<component parent_relation="isPartOf">
+						<titles>
+							<title>Animation 1. A demonstration of how to tag an animated gif file to ensure it is autolooped when on the eLife website.</title>
+						</titles>
+						<format mime_type="image/gif"/>
+						<doi_data>
+							<doi>10.7554/eLife.00666.038</doi>
+							<resource>https://elifesciences.org/articles/00666#video2</resource>
+						</doi_data>
+					</component>
+					<component parent_relation="isPartOf">
+						<titles>
+							<title>Box 1.</title>
+						</titles>
+						<format mime_type="text/plain"/>
+						<doi_data>
+							<doi>10.7554/eLife.00666.017</doi>
+							<resource>https://elifesciences.org/articles/00666#box1</resource>
+						</doi_data>
+					</component>
+					<component parent_relation="isPartOf">
+						<titles>
+							<title>Box 2.</title>
+						</titles>
+						<format mime_type="text/plain"/>
+						<doi_data>
+							<doi>10.7554/eLife.00666.018</doi>
+							<resource>https://elifesciences.org/articles/00666#box2</resource>
+						</doi_data>
+					</component>
+					<component parent_relation="isPartOf">
+						<titles>
+							<title>Box 2—Figure 1. Box figure</title>
+						</titles>
+						<format mime_type="image/tiff"/>
+						<doi_data>
+							<doi>10.7554/eLife.00666.036</doi>
+							<resource>https://elifesciences.org/articles/00666#box2fig1</resource>
+						</doi_data>
+					</component>
+					<component parent_relation="isPartOf">
+						<titles>
+							<title>Supplementary file 1. This is the title of the supplementary file 1.</title>
+							<subtitle>A file containing underlying data.</subtitle>
+						</titles>
+						<format mime_type="text/plain"/>
+						<doi_data>
+							<doi>10.7554/eLife.00666.019</doi>
+							<resource>https://elifesciences.org/articles/00666/figures#supp1</resource>
+						</doi_data>
+					</component>
+					<component parent_relation="isPartOf">
+						<titles>
+							<title>Source data 1. This is the title of the source data that is not attached to a specific figure, but to the article as a whole.</title>
+						</titles>
+						<format mime_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"/>
+						<doi_data>
+							<doi>10.7554/eLife.00666.020</doi>
+							<resource>https://elifesciences.org/articles/00666/figures#sdata1</resource>
+						</doi_data>
+					</component>
+					<component parent_relation="isPartOf">
+						<titles>
+							<title>Source code 1. This is the title of the source code that is not attached to a specific figure, but to the article as a whole.</title>
+						</titles>
+						<format mime_type="application/xml"/>
+						<doi_data>
+							<doi>10.7554/eLife.00666.021</doi>
+							<resource>https://elifesciences.org/articles/00666/figures#scode1</resource>
+						</doi_data>
+					</component>
+					<component parent_relation="isPartOf">
+						<titles>
+							<title>Reporting Standard 1. CONSORT flow diagram.</title>
+						</titles>
+						<format mime_type="application/pdf"/>
+						<doi_data>
+							<doi>10.7554/eLife.00666.022</doi>
+							<resource>https://elifesciences.org/articles/00666/figures#repstand1</resource>
+						</doi_data>
+					</component>
+					<component parent_relation="isPartOf">
+						<titles>
+							<title>Preparation</title>
+						</titles>
+						<format mime_type="text/plain"/>
+						<doi_data>
+							<doi>10.7554/eLife.00666.023</doi>
+							<resource>https://elifesciences.org/articles/00666#None</resource>
+						</doi_data>
+					</component>
+					<component parent_relation="isPartOf">
+						<titles>
+							<title>Appendix 1—Figure 1. Appendix figure title.
+                        </title>
+							<subtitle>If there is a caption to accompany the title it would display here (Koch, 1959).</subtitle>
+						</titles>
+						<format mime_type="image/tiff"/>
+						<doi_data>
+							<doi>10.7554/eLife.00666.024</doi>
+							<resource>https://elifesciences.org/articles/00666#app1fig1</resource>
+						</doi_data>
+					</component>
+					<component parent_relation="isPartOf">
+						<titles>
+							<title>Appendix 1—Figure 1—Figure Supplement 1. Appendix figure supplement title.</title>
+							<subtitle>If there is a caption to accompany the title it would display here.</subtitle>
+						</titles>
+						<format mime_type="image/tiff"/>
+						<doi_data>
+							<doi>10.7554/eLife.00666.025</doi>
+							<resource>https://elifesciences.org/articles/00666/figures#app1fig1s1</resource>
+						</doi_data>
+					</component>
+					<component parent_relation="isPartOf">
+						<titles>
+							<title>Apendix 1—Table 1. This is the title.</title>
+						</titles>
+						<format mime_type="text/plain"/>
+						<doi_data>
+							<doi>10.7554/eLife.00666.039</doi>
+							<resource>https://elifesciences.org/articles/00666#app1table1</resource>
+						</doi_data>
+					</component>
+					<component parent_relation="isPartOf">
+						<titles>
+							<title>Negotaition</title>
+						</titles>
+						<format mime_type="text/plain"/>
+						<doi_data>
+							<doi>10.7554/eLife.00666.026</doi>
+							<resource>https://elifesciences.org/articles/00666#None</resource>
+						</doi_data>
+					</component>
+					<component parent_relation="isPartOf">
+						<titles>
+							<title>Appendix 2—Video 1. 
                                 A descirption of the eLife editorial process.
-                            </title></titles><format mime_type="video/mp4"/><doi_data><doi>10.7554/eLife.00666.027</doi><resource>https://elifesciences.org/articles/00666#app2video1</resource></doi_data></component><component parent_relation="isPartOf"><titles><title>Apendix 2—Table 1.</title></titles><format mime_type="text/plain"/><doi_data><doi>10.7554/eLife.00666.028</doi><resource>https://elifesciences.org/articles/00666#app2table1</resource></doi_data></component><component parent_relation="isPartOf"><titles><title>Appendix 3</title></titles><format mime_type="text/plain"/><doi_data><doi>10.7554/eLife.00666.034</doi><resource>https://elifesciences.org/articles/00666#None</resource></doi_data></component><component parent_relation="isPartOf"><titles><title>Decision letter</title></titles><format mime_type="text/plain"/><doi_data><doi>10.7554/eLife.00666.029</doi><resource>https://elifesciences.org/articles/00666#SA1</resource></doi_data></component><component parent_relation="isPartOf"><titles><title>Author response image 1. Author response</title></titles><format mime_type="text/plain"/><doi_data><doi>10.7554/eLife.00666.030</doi><resource>https://elifesciences.org/articles/00666#SA2</resource></doi_data></component><component parent_relation="isPartOf"><titles><title>Author response image 1.</title><subtitle>Single figure: The header of an eLife article example on the HTML page.</subtitle></titles><format mime_type="image/tiff"/><doi_data><doi>10.7554/eLife.00666.031</doi><resource>https://elifesciences.org/articles/00666#respfig1</resource></doi_data></component><component parent_relation="isPartOf"><titles><title>Author response Table 1.</title></titles><format mime_type="text/plain"/><doi_data><doi>10.7554/eLife.00666.032</doi><resource>https://elifesciences.org/articles/00666#resptable1</resource></doi_data></component><component parent_relation="isPartOf"><titles><title>Author response video 1.</title></titles><format mime_type="video/mp4"/><doi_data><doi>10.7554/eLife.00666.033</doi><resource>https://elifesciences.org/articles/00666#respvideo1</resource></doi_data></component></component_list></journal_article></journal></body></doi_batch>
+                            </title>
+						</titles>
+						<format mime_type="video/mp4"/>
+						<doi_data>
+							<doi>10.7554/eLife.00666.027</doi>
+							<resource>https://elifesciences.org/articles/00666#app2video1</resource>
+						</doi_data>
+					</component>
+					<component parent_relation="isPartOf">
+						<titles>
+							<title>Apendix 2—Table 1.</title>
+						</titles>
+						<format mime_type="text/plain"/>
+						<doi_data>
+							<doi>10.7554/eLife.00666.028</doi>
+							<resource>https://elifesciences.org/articles/00666#app2table1</resource>
+						</doi_data>
+					</component>
+					<component parent_relation="isPartOf">
+						<titles>
+							<title>Appendix 3</title>
+						</titles>
+						<format mime_type="text/plain"/>
+						<doi_data>
+							<doi>10.7554/eLife.00666.034</doi>
+							<resource>https://elifesciences.org/articles/00666#None</resource>
+						</doi_data>
+					</component>
+					<component parent_relation="isPartOf">
+						<titles>
+							<title>Author response image 1.</title>
+							<subtitle>Single figure: The header of an eLife article example on the HTML page.</subtitle>
+						</titles>
+						<format mime_type="image/tiff"/>
+						<doi_data>
+							<doi>10.7554/eLife.00666.031</doi>
+							<resource>https://elifesciences.org/articles/00666#respfig1</resource>
+						</doi_data>
+					</component>
+					<component parent_relation="isPartOf">
+						<titles>
+							<title>Author response Table 1.</title>
+						</titles>
+						<format mime_type="text/plain"/>
+						<doi_data>
+							<doi>10.7554/eLife.00666.032</doi>
+							<resource>https://elifesciences.org/articles/00666#resptable1</resource>
+						</doi_data>
+					</component>
+					<component parent_relation="isPartOf">
+						<titles>
+							<title>Author response video 1.</title>
+						</titles>
+						<format mime_type="video/mp4"/>
+						<doi_data>
+							<doi>10.7554/eLife.00666.033</doi>
+							<resource>https://elifesciences.org/articles/00666#respvideo1</resource>
+						</doi_data>
+					</component>
+				</component_list>
+			</journal_article>
+		</journal>
+	</body>
+</doi_batch>

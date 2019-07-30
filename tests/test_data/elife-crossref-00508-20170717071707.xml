@@ -1,1 +1,877 @@
-<?xml version="1.0" encoding="utf-8"?><doi_batch version="4.4.1" xmlns="http://www.crossref.org/schema/4.4.1" xmlns:ai="http://www.crossref.org/AccessIndicators.xsd" xmlns:ct="http://www.crossref.org/clinicaltrials.xsd" xmlns:fr="http://www.crossref.org/fundref.xsd" xmlns:jats="http://www.ncbi.nlm.nih.gov/JATS1" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:rel="http://www.crossref.org/relations.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.crossref.org/schema/4.4.1 http://www.crossref.org/schemas/crossref4.4.1.xsd"><head><doi_batch_id>elife-crossref-00508-20170717071707</doi_batch_id><timestamp>20170717071707</timestamp><depositor><depositor_name>eLife</depositor_name><email_address>production@elifesciences.org</email_address></depositor><registrant>eLife</registrant></head><body><journal><journal_metadata language="en"><full_title>eLife</full_title><issn media_type="electronic">2050-084X</issn></journal_metadata><journal_issue><publication_date media_type="online"><month>09</month><day>10</day><year>2013</year></publication_date><journal_volume><volume>2</volume></journal_volume></journal_issue><journal_article publication_type="full_text" reference_distribution_opts="any"><titles><title>Imaging-based chemical screening reveals activity-dependent neural differentiation of pluripotent stem cells</title></titles><contributors><person_name contributor_role="author" sequence="first"><given_name>Yaping</given_name><surname>Sun</surname><affiliation>Department of Bioengineering and Therapeutic Science, University of California, San Francisco, San Francisco, United States</affiliation><affiliation>Eli and Edythe Broad Center of Regeneration Medicine and Stem Cell Research, University of California, San Francisco, San Francisco, United States</affiliation><affiliation>Programs in Human Genetics and Biological Sciences, University of California, San Francisco, San Francisco, United States</affiliation></person_name><person_name contributor_role="author" sequence="additional"><given_name>Zhiqiang</given_name><surname>Dong</surname><affiliation>Department of Bioengineering and Therapeutic Science, University of California, San Francisco, San Francisco, United States</affiliation><affiliation>Eli and Edythe Broad Center of Regeneration Medicine and Stem Cell Research, University of California, San Francisco, San Francisco, United States</affiliation><affiliation>Programs in Human Genetics and Biological Sciences, University of California, San Francisco, San Francisco, United States</affiliation></person_name><person_name contributor_role="author" sequence="additional"><given_name>Taihao</given_name><surname>Jin</surname><affiliation>Department of Physiology, University of California, San Francisco, San Francisco, United States</affiliation><affiliation>Department of Biochemistry, University of California, San Francisco, San Francisco, United States</affiliation><affiliation>Howard Hughes Medical Institute, University of California, San Francisco, San Francisco, United States</affiliation></person_name><person_name contributor_role="author" sequence="additional"><given_name>Kean-Hooi</given_name><surname>Ang</surname><affiliation>Department of Pharmaceutical Chemistry, University of California, San Francisco, San Francisco, United States</affiliation><affiliation>Small Molecule Discovery Center, University of California, San Francisco, San Francisco, United States</affiliation></person_name><person_name contributor_role="author" sequence="additional"><given_name>Miller</given_name><surname>Huang</surname><affiliation>Department of Neurology, University of California, San Francisco, San Francisco, United States</affiliation><affiliation>Department of Neurological Surgery, University of California, San Francisco, San Francisco, United States</affiliation><affiliation>Department of Pediatrics, University of California, San Francisco, San Francisco, United States</affiliation></person_name><person_name contributor_role="author" sequence="additional"><given_name>Kelly M</given_name><surname>Haston</surname><affiliation>Department of Physiology, University of California, San Francisco, San Francisco, United States</affiliation><affiliation>Department of Neurology, University of California, San Francisco, San Francisco, United States</affiliation></person_name><person_name contributor_role="author" sequence="additional"><given_name>Jisong</given_name><surname>Peng</surname><affiliation>Department of Bioengineering and Therapeutic Science, University of California, San Francisco, San Francisco, United States</affiliation><affiliation>Eli and Edythe Broad Center of Regeneration Medicine and Stem Cell Research, University of California, San Francisco, San Francisco, United States</affiliation><affiliation>Programs in Human Genetics and Biological Sciences, University of California, San Francisco, San Francisco, United States</affiliation></person_name><person_name contributor_role="author" sequence="additional"><given_name>Tao P</given_name><surname>Zhong</surname><affiliation>State Key Laboratory of Genetic Engineering, Department of Genetics, Fudan University School of Life Sciences, Shanghai, China</affiliation></person_name><person_name contributor_role="author" sequence="additional"><given_name>Steven</given_name><surname>Finkbeiner</surname><affiliation>Department of Physiology, University of California, San Francisco, San Francisco, United States</affiliation><affiliation>Department of Biochemistry, University of California, San Francisco, San Francisco, United States</affiliation><affiliation>Department of Pharmaceutical Chemistry, University of California, San Francisco, San Francisco, United States</affiliation><affiliation>Department of Neurology, University of California, San Francisco, San Francisco, United States</affiliation><affiliation>Keck Foundation Program in Brain Cell Engineering, Roddenberry Center for Stem Cell Biology and Medicine, Gladstone Institutes of Neurological Disease, San Francisco, United States</affiliation></person_name><person_name contributor_role="author" sequence="additional"><given_name>William A</given_name><surname>Weiss</surname><affiliation>Department of Neurology, University of California, San Francisco, San Francisco, United States</affiliation><affiliation>Department of Neurological Surgery, University of California, San Francisco, San Francisco, United States</affiliation><affiliation>Department of Pediatrics, University of California, San Francisco, San Francisco, United States</affiliation></person_name><person_name contributor_role="author" sequence="additional"><given_name>Michelle R</given_name><surname>Arkin</surname><affiliation>Department of Pharmaceutical Chemistry, University of California, San Francisco, San Francisco, United States</affiliation><affiliation>Small Molecule Discovery Center, University of California, San Francisco, San Francisco, United States</affiliation></person_name><person_name contributor_role="author" sequence="additional"><given_name>Lily Y</given_name><surname>Jan</surname><affiliation>Department of Physiology, University of California, San Francisco, San Francisco, United States</affiliation><affiliation>Department of Biochemistry, University of California, San Francisco, San Francisco, United States</affiliation><affiliation>Howard Hughes Medical Institute, University of California, San Francisco, San Francisco, United States</affiliation></person_name><person_name contributor_role="author" sequence="additional"><given_name>Su</given_name><surname>Guo</surname><affiliation>Department of Bioengineering and Therapeutic Science, University of California, San Francisco, San Francisco, United States</affiliation><affiliation>Eli and Edythe Broad Center of Regeneration Medicine and Stem Cell Research, University of California, San Francisco, San Francisco, United States</affiliation><affiliation>Programs in Human Genetics and Biological Sciences, University of California, San Francisco, San Francisco, United States</affiliation><affiliation>State Key Laboratory of Genetic Engineering, Department of Genetics, Fudan University School of Life Sciences, Shanghai, China</affiliation></person_name></contributors><jats:abstract><jats:p>Mammalian pluripotent stem cells (PSCs) represent an important venue for understanding basic principles regulating tissue-specific differentiation and discovering new tools that may facilitate clinical applications. Mechanisms that direct neural differentiation of PSCs involve growth factor signaling and transcription regulation. However, it is unknown whether and how electrical activity influences this process. Here we report a high throughput imaging-based screen, which uncovers that selamectin, an anti-helminthic therapeutic compound with reported activity on invertebrate glutamate-gated chloride channels, promotes neural differentiation of PSCs. We show that selamectin’s pro-neurogenic activity is mediated by γ2-containing GABAA receptors in subsets of neural rosette progenitors, accompanied by increased proneural and lineage-specific transcription factor expression and cell cycle exit. In vivo, selamectin promotes neurogenesis in developing zebrafish. Our results establish a chemical screening platform that reveals activity-dependent neural differentiation from PSCs. Compounds identified in this and future screening might prove therapeutically beneficial for treating neurodevelopmental or neurodegenerative disorders.</jats:p></jats:abstract><jats:abstract abstract-type="executive-summary"><jats:p>Pluripotent stem cells have the potential to become most of the cell types that make up an organism. However, the signals that trigger these cells to turn into neurons rather than lung cells or muscle cells, for example, are not fully understood. Proteins called growth factors are known to have a role in this process, as are transcription factors, but it is not clear if other factors are also involved.</jats:p><jats:p>In an attempt to identify additional mechanisms that could contribute to the formation of neurons, Sun et al. screened more than 2,000 small molecules for their ability to transform mouse pluripotent stem cells into neurons in cell culture. Surprisingly, they found that a compound called selamectin, which is used to treat parasitic flatworm infections, also triggered stem cells to turn into neurons.</jats:p><jats:p>Selamectin works by blocking a particular type of ion channel in flatworms, but this ion channel is not found in vertebrates, which means that selamectin must be promoting the formation of neurons in mice via a different mechanism. Given that a drug related to selamectin is known to act on a subtype of receptors for the neurotransmitter GABA, Sun et al. wondered whether these receptors—known as GABAA receptors—might also underlie the effects of selamectin. Consistent with this idea, drugs that increased GABAA activity stimulated the formation of neurons, whereas drugs that reduced GABAA function blocked the effects of selamectin.</jats:p><jats:p>In addition, Sun et al. showed that selamectin triggers human embryonic stem cells to become neurons, and that it also promotes the formation of new neurons in developing zebrafish in vivo. As well as revealing an additional mechanism for the formation of neurons from stem cells, the screening technique introduced by Sun et al. could help to identify further pro-neuronal molecules, which could aid the treatment of neurodevelopmental and neurodegenerative disorders.</jats:p></jats:abstract><publication_date media_type="online"><month>09</month><day>10</day><year>2013</year></publication_date><publisher_item><item_number item_number_type="article_number">e00508</item_number><identifier id_type="doi">10.7554/eLife.00508</identifier></publisher_item><fr:program name="fundref"><fr:assertion name="fundgroup"><fr:assertion name="funder_name">National Institutes of Health</fr:assertion><fr:assertion name="award_number">DA023904</fr:assertion></fr:assertion><fr:assertion name="fundgroup"><fr:assertion name="funder_name">CIRM</fr:assertion><fr:assertion name="award_number">GUO-RS1-00215-1</fr:assertion></fr:assertion><fr:assertion name="fundgroup"><fr:assertion name="funder_name">Howard Hughes Medical Institute</fr:assertion></fr:assertion><fr:assertion name="fundgroup"><fr:assertion name="funder_name">National Institutes of Health</fr:assertion><fr:assertion name="award_number">MH065334</fr:assertion></fr:assertion><fr:assertion name="fundgroup"><fr:assertion name="funder_name">UCSF QB3-Malaysia Program</fr:assertion></fr:assertion><fr:assertion name="fundgroup"><fr:assertion name="funder_name">National Institutes of Health</fr:assertion><fr:assertion name="award_number">R01CA102321, P01CA081403</fr:assertion></fr:assertion><fr:assertion name="fundgroup"><fr:assertion name="funder_name">American Cancer Society</fr:assertion><fr:assertion name="award_number">PF-13-295-01-TBG</fr:assertion></fr:assertion><fr:assertion name="fundgroup"><fr:assertion name="funder_name">National Institutes of Health</fr:assertion><fr:assertion name="award_number">U24 NS078370</fr:assertion></fr:assertion><fr:assertion name="fundgroup"><fr:assertion name="funder_name">CIRM</fr:assertion><fr:assertion name="award_number">RB4-06079</fr:assertion></fr:assertion><fr:assertion name="fundgroup"><fr:assertion name="funder_name">Chinese Ministry of Science and Technology</fr:assertion><fr:assertion name="award_number">2013CB945301</fr:assertion></fr:assertion></fr:program><ai:program name="AccessIndicators"><ai:license_ref applies_to="vor">http://creativecommons.org/licenses/by/3.0/</ai:license_ref><ai:license_ref applies_to="am">http://creativecommons.org/licenses/by/3.0/</ai:license_ref><ai:license_ref applies_to="tdm">http://creativecommons.org/licenses/by/3.0/</ai:license_ref></ai:program><archive_locations><archive name="CLOCKSS"/></archive_locations><doi_data><doi>10.7554/eLife.00508</doi><resource>https://elifesciences.org/articles/00508</resource><collection property="text-mining"><item><resource mime_type="application/pdf">https://cdn.elifesciences.org/articles/00508/elife-00508-v1.pdf</resource></item><item><resource mime_type="application/xml">https://cdn.elifesciences.org/articles/00508/elife-00508-v1.xml</resource></item></collection></doi_data><citation_list><citation key="bib1"><journal_title>Biochem J</journal_title><author>Agrawal</author><volume>122</volume><first_page>759</first_page><cYear>1971</cYear><article_title>Subcellular distribution of taurine and cysteinesulphinate decarboxylase in developing rat brain</article_title></citation><citation key="bib2"><journal_title>Nat Rev Neurosci</journal_title><author>Alvarez-Buylla</author><volume>2</volume><first_page>287</first_page><cYear>2001</cYear><article_title>A unified hypothesis on the lineage of neural stem cells</article_title><doi>10.1038/35067582</doi></citation><citation key="bib3"><journal_title>Cell</journal_title><author>Andersson</author><volume>124</volume><first_page>393</first_page><cYear>2006</cYear><article_title>Identification of intrinsic determinants of midbrain dopamine neurons</article_title><doi>10.1016/j.cell.2005.10.037</doi></citation><citation key="bib4"><journal_title>Proc Natl Acad Sci USA</journal_title><author>Arrasate</author><volume>102</volume><first_page>3840</first_page><cYear>2005</cYear><article_title>Automated microscope system for determining factors that predict neuronal fate</article_title><doi>10.1073/pnas.0409777102</doi></citation><citation key="bib5"><journal_title>Nature</journal_title><author>Arrasate</author><volume>431</volume><first_page>805</first_page><cYear>2004</cYear><article_title>Inclusion body formation reduces levels of mutant huntingtin and the risk of neuronal death</article_title><doi>10.1038/nature02998</doi></citation><citation key="bib6"><journal_title>Physiol Rev</journal_title><author>Ben-Ari</author><volume>87</volume><first_page>1215</first_page><cYear>2007</cYear><article_title>GABA: a pioneer transmitter that excites immature neurons and generates primitive oscillations</article_title><doi>10.1152/physrev.00017.2006</doi></citation><citation key="bib7"><journal_title>Nat Rev Neurosci</journal_title><author>Bertrand</author><volume>3</volume><first_page>517</first_page><cYear>2002</cYear><article_title>Proneural genes and the specification of neural cell types</article_title><doi>10.1038/nrn874</doi></citation><citation key="bib8"><journal_title>Vet Parasitol</journal_title><author>Bishop</author><volume>91</volume><first_page>163</first_page><cYear>2000</cYear><article_title>Selamectin: a novel broad-spectrum endectocide for dogs and cats</article_title><doi>10.1016/S0304-4017(00)00289-2</doi></citation><citation key="bib9"><journal_title>Arch Insect Biochem Physiol</journal_title><author>Bloomquist</author><volume>54</volume><first_page>145</first_page><cYear>2003</cYear><article_title>Chloride channels as tools for developing selective insecticides</article_title><doi>10.1002/arch.10112</doi></citation><citation key="bib10"><journal_title>Cell Stem Cell</journal_title><author>Borowiak</author><volume>4</volume><first_page>348</first_page><cYear>2009</cYear><article_title>Small molecules efficiently direct endodermal differentiation of mouse and human embryonic stem cells</article_title><doi>10.1016/j.stem.2009.01.014</doi></citation><citation key="bib11"><journal_title>Nat Biotechnol</journal_title><author>Chambers</author><volume>27</volume><first_page>275</first_page><cYear>2009</cYear><article_title>Highly efficient neural conversion of human ES and iPS cells by dual inhibition of SMAD signaling</article_title><doi>10.1038/nbt.1529</doi></citation><citation key="bib12"><journal_title>J Pharmacol Exp Ther</journal_title><author>Dawson</author><volume>295</volume><first_page>1051</first_page><cYear>2000</cYear><article_title>Anticonvulsant and adverse effects of avermectin analogs in mice are mediated through the gamma-aminobutyric acid(A) receptor</article_title></citation><citation key="bib13"><journal_title>Neuron</journal_title><author>Demarque</author><volume>67</volume><first_page>321</first_page><cYear>2010</cYear><article_title>Activity-dependent expression of Lmx1b regulates specification of serotonergic neurons modulating swimming behavior</article_title><doi>10.1016/j.neuron.2010.06.006</doi></citation><citation key="bib14"><journal_title>Cell Stem Cell</journal_title><author>Desbordes</author><volume>2</volume><first_page>602</first_page><cYear>2008</cYear><article_title>High-throughput screening assay for the identification of compounds regulating self-renewal and differentiation in human embryonic stem cells</article_title><doi>10.1016/j.stem.2008.05.010</doi></citation><citation key="bib15"><journal_title>Proc Natl Acad Sci USA</journal_title><author>Ding</author><volume>100</volume><first_page>7632</first_page><cYear>2003</cYear><article_title>Synthetic small molecules that control stem cell fate</article_title><doi>10.1073/pnas.0732087100</doi></citation><citation key="bib16"><journal_title>Genes Dev</journal_title><author>Elkabetz</author><volume>22</volume><first_page>152</first_page><cYear>2008</cYear><article_title>Human ES cell-derived neural rosettes reveal a functionally distinct early neural stem cell stage</article_title><doi>10.1101/gad.1616208</doi></citation><citation key="bib17"><journal_title>Nat Rev Neurosci</journal_title><author>Farrant</author><volume>6</volume><first_page>215</first_page><cYear>2005</cYear><article_title>Variations on an inhibitory theme: phasic and tonic activation of GABAA receptors</article_title><doi>10.1038/nrn1625</doi></citation><citation key="bib18"><journal_title>Neuron</journal_title><author>Flint</author><volume>20</volume><first_page>43</first_page><cYear>1998</cYear><article_title>Nonsynaptic glycine receptor activation during early neocortical development</article_title><doi>10.1016/S0896-6273(00)80433-X</doi></citation><citation key="bib19"><journal_title>Curr Opin Neurobiol</journal_title><author>Gaspard</author><volume>20</volume><first_page>37</first_page><cYear>2010</cYear><article_title>Mechanisms of neural specification from embryonic stem cells</article_title><doi>10.1016/j.conb.2009.12.001</doi></citation><citation key="bib20"><journal_title>Trends Neurosci</journal_title><author>Ge</author><volume>30</volume><first_page>1</first_page><cYear>2007</cYear><article_title>GABA sets the tempo for activity-dependent adult neurogenesis</article_title><doi>10.1016/j.tins.2006.11.001</doi></citation><citation key="bib21"><journal_title>Drugs</journal_title><author>Goa</author><volume>42</volume><first_page>640</first_page><cYear>1991</cYear><article_title>Ivermectin. A review of its antifilarial activity, pharmacokinetic properties and clinical efficacy in onchocerciasis</article_title><doi>10.2165/00003495-199142040-00007</doi></citation><citation key="bib22"><journal_title>J Pharmacol Exp Ther</journal_title><author>Huang</author><volume>281</volume><first_page>261</first_page><cYear>1997</cYear><article_title>Avermectin B1a binds to high- and low-affinity sites with dual effects on the gamma-aminobutyric acid-gated chloride channel of cultured cerebellar granule neurons</article_title></citation><citation key="bib23"><journal_title>PLOS ONE</journal_title><author>Jang</author><volume>5</volume><first_page>e11528</first_page><cYear>2010a</cYear><article_title>Deoxygedunin, a natural product with potent neurotrophic activity in mice</article_title><doi>10.1371/journal.pone.0011528</doi></citation><citation key="bib24"><journal_title>Proc Natl Acad Sci USA</journal_title><author>Jang</author><volume>107</volume><first_page>2687</first_page><cYear>2010b</cYear><article_title>A selective TrkB agonist with potent neurotrophic activities by 7,8-dihydroxyflavone</article_title><doi>10.1073/pnas.0913572107</doi></citation><citation key="bib25"><journal_title>Am J Stem Cells</journal_title><author>Kreitzer</author><volume>2</volume><first_page>119</first_page><cYear>2013</cYear><article_title>A robust method to derive functional neural crest cells from human pluripotent stem cells</article_title></citation><citation key="bib26"><journal_title>Nat Biotech</journal_title><author>Lee</author><volume>18</volume><first_page>675</first_page><cYear>2000</cYear><article_title>Efficient generation of midbrain and hindbrain neurons from mouse embryonic stem cells</article_title><doi>10.1038/76536</doi></citation><citation key="bib27"><journal_title>Nat Neurosci</journal_title><author>Liu</author><volume>8</volume><first_page>1179</first_page><cYear>2005</cYear><article_title>Nonsynaptic GABA signaling in postnatal subventricular zone controls proliferation of GFAP-expressing progenitors</article_title><doi>10.1038/nn1522</doi></citation><citation key="bib28"><journal_title>Neuron</journal_title><author>LoTurco</author><volume>15</volume><first_page>1287</first_page><cYear>1995</cYear><article_title>GABA and glutamate depolarize cortical progenitor cells and inhibit DNA synthesis</article_title><doi>10.1016/0896-6273(95)90008-X</doi></citation><citation key="bib29"><journal_title>Nat Neurosci</journal_title><author>Marek</author><volume>13</volume><first_page>944</first_page><cYear>2010</cYear><article_title>cJun integrates calcium activity and tlx3 expression to regulate neurotransmitter specification</article_title><doi>10.1038/nn.2582</doi></citation><citation key="bib30"><journal_title>Proc Natl Acad Sci USA</journal_title><author>Martinat</author><volume>103</volume><first_page>2874</first_page><cYear>2006</cYear><article_title>Cooperative transcription activation by Nurr1 and Pitx3 induces embryonic stem cell maturation to the midbrain dopamine neuron phenotype</article_title><doi>10.1073/pnas.0511153103</doi></citation><citation key="bib31"><journal_title>Results Probl Cell Differ</journal_title><author>Mehler</author><volume>39</volume><first_page>27</first_page><cYear>2002</cYear><article_title>Mechanisms regulating lineage diversity during mammalian cerebral cortical neurogenesis and gliogenesis</article_title><doi>10.1007/978-3-540-46006-0_2</doi></citation><citation key="bib32"><journal_title>Curr Opin Neurobiol</journal_title><author>Okano</author><volume>19</volume><first_page>112</first_page><cYear>2009</cYear><article_title>Cell types to order: temporal specification of CNS stem cells</article_title><doi>10.1016/j.conb.2009.04.003</doi></citation><citation key="bib33"><journal_title>Nat Rev Neurosci</journal_title><author>Owens</author><volume>3</volume><first_page>715</first_page><cYear>2002</cYear><article_title>Is there more to GABA than synaptic inhibition?</article_title><doi>10.1038/nrn919</doi></citation><citation key="bib34"><journal_title>J Neurosci Res</journal_title><author>Palackal</author><volume>15</volume><first_page>223</first_page><cYear>1986</cYear><article_title>Abnormal visual cortex development in the kitten associated with maternal dietary taurine deprivation</article_title><doi>10.1002/jnr.490150212</doi></citation><citation key="bib35"><journal_title>Dev Biol</journal_title><author>Park</author><volume>227</volume><first_page>279</first_page><cYear>2000</cYear><article_title>Analysis of upstream elements in the HuC promoter leads to the establishment of transgenic zebrafish with fluorescent neurons</article_title><doi>10.1006/dbio.2000.9898</doi></citation><citation key="bib36"><journal_title>J Neurosci</journal_title><author>Pong</author><volume>2</volume><first_page>966</first_page><cYear>1982</cYear><article_title>A comparative study of avermectin B1a and other modulators of the gamma-aminobutyric acid receptor. chloride ion channel complex</article_title></citation><citation key="bib37"><journal_title>Chem Biol</journal_title><author>Saxe</author><volume>14</volume><first_page>1019</first_page><cYear>2007</cYear><article_title>A phenotypic small-molecule screen identifies an orphan ligand-receptor pair that regulates neural stem cell differentiation</article_title><doi>10.1016/j.chembiol.2007.07.016</doi></citation><citation key="bib38"><journal_title>Nat Methods</journal_title><author>Schindelin</author><volume>9</volume><first_page>676</first_page><cYear>2012</cYear><article_title>Fiji: an open-source platform for biological-image analysis</article_title><doi>10.1038/nmeth.2019</doi></citation><citation key="bib39"><journal_title>FASEB J</journal_title><author>Schwirtlich</author><volume>24</volume><first_page>1218</first_page><cYear>2010</cYear><article_title>GABAA and GABAB receptors of distinct properties affect oppositely the proliferation of mouse embryonic stem cells through synergistic elevation of intracellular Ca2+</article_title><doi>10.1096/fj.09-143586</doi></citation><citation key="bib40"><journal_title>J Biol Chem</journal_title><author>Shan</author><volume>276</volume><first_page>12556</first_page><cYear>2001</cYear><article_title>Ivermectin, an unconventional agonist of the glycine receptor chloride channel</article_title><doi>10.1074/jbc.M011264200</doi></citation><citation key="bib41"><journal_title>Methods Enzymol</journal_title><author>Sharma</author><volume>506</volume><first_page>331</first_page><cYear>2012</cYear><article_title>High-throughput screening in primary neurons</article_title><doi>10.1016/B978-0-12-391856-7.00041-X</doi></citation><citation key="bib42"><journal_title>Annu Rev Cell Dev Biol</journal_title><author>Smith</author><volume>17</volume><first_page>435</first_page><cYear>2001</cYear><article_title>Embryo-derived stem cells: of mice and men</article_title><doi>10.1146/annurev.cellbio.17.1.435</doi></citation><citation key="bib43"><journal_title>Nature</journal_title><author>Song</author><volume>489</volume><first_page>150</first_page><cYear>2012</cYear><article_title>Neuronal circuitry mechanism regulating adult quiescent neural stem-cell fate decision</article_title><doi>10.1038/nature11306</doi></citation><citation key="bib44"><journal_title>Nature</journal_title><author>Spitzer</author><volume>444</volume><first_page>707</first_page><cYear>2006</cYear><article_title>Electrical activity in early neuronal development</article_title><doi>10.1038/nature05300</doi></citation><citation key="bib45"><journal_title>Nat Rev Neurosci</journal_title><author>Spitzer</author><volume>13</volume><first_page>94</first_page><cYear>2012</cYear><article_title>Activity-dependent neurotransmitter respecification</article_title><doi>10.1038/nrn3154</doi></citation><citation key="bib46"><journal_title>J Neurobiol</journal_title><author>Stewart</author><volume>50</volume><first_page>305</first_page><cYear>2002</cYear><article_title>Neural progenitor cells of the neonatal rat anterior subventricular zone express functional GABA(A) receptors</article_title><doi>10.1002/neu.10038</doi></citation><citation key="bib47"><journal_title>Nature</journal_title><author>Stockwell</author><volume>432</volume><first_page>846</first_page><cYear>2004</cYear><article_title>Exploring biology with small organic molecules</article_title><doi>10.1038/nature03196</doi></citation><citation key="bib48"><journal_title>Science</journal_title><author>Thomson</author><volume>282</volume><first_page>1145</first_page><cYear>1998</cYear><article_title>Embryonic stem cell lines derived from human blastocysts</article_title><doi>10.1126/science.282.5391.1145</doi></citation><citation key="bib49"><journal_title>Neuron</journal_title><author>Tozuka</author><volume>47</volume><first_page>803</first_page><cYear>2005</cYear><article_title>GABAergic excitation promotes neuronal differentiation in adult hippocampal progenitor cells</article_title><doi>10.1016/j.neuron.2005.08.023</doi></citation><citation key="bib50"><journal_title>J Mol Evol</journal_title><author>Vassilatis</author><volume>44</volume><first_page>501</first_page><cYear>1997</cYear><article_title>Evolutionary relationship of the ligand-gated ion channels and the avermectin-sensitive, glutamate-gated chloride channels</article_title><doi>10.1007/PL00006174</doi></citation><citation key="bib51"><journal_title>J Physiol</journal_title><author>Wang</author><volume>550</volume><first_page>785</first_page><cYear>2003</cYear><article_title>GABA depolarizes neuronal progenitors of the postnatal subventricular zone via GABAA receptor activation</article_title><doi>10.1113/jphysiol.2003.042572</doi></citation><citation key="bib52"><journal_title>Cell</journal_title><author>Wichterle</author><volume>10</volume><first_page>385</first_page><cYear>2002</cYear><article_title>Directed differentiation of embryonic stem cells into motor neurons</article_title><doi>10.1016/S0092-8674(02)00835-8</doi></citation><citation key="bib53"><journal_title>Stem Cells</journal_title><author>Yamada</author><volume>25</volume><first_page>562</first_page><cYear>2007</cYear><article_title>Electrical stimulation modulates fate determination of differentiating embryonic stem cells</article_title><doi>10.1634/stemcells.2006-0011</doi></citation><citation key="bib54"><journal_title>Methods Enzymol</journal_title><author>Ying</author><volume>365</volume><first_page>327</first_page><cYear>2003</cYear><article_title>Defined conditions for neural commitment and differentiation</article_title><doi>10.1016/S0076-6879(03)65023-8</doi></citation><citation key="bib55"><journal_title>Nat Biotechnol</journal_title><author>Ying</author><volume>21</volume><first_page>183</first_page><cYear>2003</cYear><article_title>Conversion of embryonic stem cells into neuroectodermal precursors in adherent monoculture</article_title><doi>10.1038/nbt780</doi></citation><citation key="bib56"><journal_title>Stem Cells</journal_title><author>Zhou</author><volume>28</volume><first_page>1741</first_page><cYear>2010</cYear><article_title>High-efficiency induction of neural conversion in human ESCs and human induced pluripotent stem cells with a single chemical inhibitor of transforming growth factor beta superfamily receptors</article_title><doi>10.1002/stem.504</doi></citation><citation key="bib57"><journal_title>Nat Rev Drug Discovery</journal_title><author>Zon</author><volume>4</volume><first_page>35</first_page><cYear>2005</cYear><article_title>In vivo drug discovery in zebrafish</article_title><doi>10.1038/nrd1606</doi></citation></citation_list><component_list><component parent_relation="isPartOf"><titles><title>Abstract</title></titles><format mime_type="text/plain"/><doi_data><doi>10.7554/eLife.00508.001</doi><resource>https://elifesciences.org/articles/00508#abstract</resource></doi_data></component><component parent_relation="isPartOf"><titles><title>eLife digest</title></titles><format mime_type="text/plain"/><doi_data><doi>10.7554/eLife.00508.002</doi><resource>https://elifesciences.org/articles/00508#digest</resource></doi_data></component><component parent_relation="isPartOf"><titles><title>Figure 1. High-throughput screening.</title><subtitle>(A) Scheme of the three-stage mESC neuronal differentiation-based chemical screening. (B) E14 mESC cultures express neural progenitor makers (Sox2, Lmx1A, and Nestin) after 7-day stage one culture. 46C mESC cultures, in which GFP is driven by the sox1 promoter, are GFP positive after 7-day stage one culture. (C) The quantification analysis of TH+ neurons among total cells using the INCell Developer software. (D) Summary of coefficient of variation (C.V.) of the DMSO control. (E) Representative images of immunostaining in control (left, treated with DMSO) and a hit compound (right). (F) A schematic summary of the chemical screen. Scale bar, 10 μm.</subtitle></titles><format mime_type="image/tiff"/><doi_data><doi>10.7554/eLife.00508.003</doi><resource>https://elifesciences.org/articles/00508#fig1</resource></doi_data></component><component parent_relation="isPartOf"><titles><title>Figure 2. The neurotrophin receptor TrkB agonists [Dihydrodeoxygedunin (DOG) and 7,8-dihydroxyflavone (DHF)] increases TH+ cells in mESC cultures.</title><subtitle>(A) Structure of DHF and DOG. (B) DHF and DOG increase TH% in mESCs (t test, p&lt;0.05, n = 4).</subtitle></titles><format mime_type="image/tiff"/><doi_data><doi>10.7554/eLife.00508.004</doi><resource>https://elifesciences.org/articles/00508#fig2</resource></doi_data></component><component parent_relation="isPartOf"><titles><title>Figure 3. Selamectin increases mESC differentiation into multiple neural lineages.</title><subtitle>(A) Representative images of TH and NeuN staining in control (DMSO) and selamectin-treated cultures. (B) Quantification shows increased production of both TH+ and total neurons by selamectin (t-test, n = 4, p&lt;0.001). (C–F) Selamectin treatment also increases the production of 5-HT neurons (C), GABAergic neurons (D), islet+ motor neurons (E), and Olig2+ oligodendocyte precursors (F) (t-test, n = 4, *p&lt;0.05, **p&lt;0.01, ***p&lt;0.001).</subtitle></titles><format mime_type="image/tiff"/><doi_data><doi>10.7554/eLife.00508.005</doi><resource>https://elifesciences.org/articles/00508#fig3</resource></doi_data></component><component parent_relation="isPartOf"><titles><title>Figure 4. Dose response and time course of selamectin’s action in mESC cultures.</title><subtitle>(A) Dose response curve of selamectin (based on TH immunostaining). Cells were treated from Day 8 to Day 11. Selamectin is toxic above 500 nM. The EC50 value and curve fitting were performed with GraphPad Prism using a Sigmoidal dose-response (variable slope). Data are presented as mean ± S.D., n = 4. (B) Time course of selamectin’s action. Only cells treated with selamectin from Day 7 to Day 10 show significant increase of TH+ neurons (t-test, n = 4).</subtitle></titles><format mime_type="image/tiff"/><doi_data><doi>10.7554/eLife.00508.006</doi><resource>https://elifesciences.org/articles/00508#fig4</resource></doi_data></component><component parent_relation="isPartOf"><titles><title>Figure 5. Pharmacological evidence indicates that selamectin’s proneurogenic activity is mediated by GABAA receptors.</title><subtitle>(A) Selamectin and avermectin belong to a chemical family of macrocyclic lactones and have the same structural backbone. (B) Avermectin has less potent proneurogenic activity than selamectin. Only 250 nM avermectin shows a significant effect, which was much less potent compared to that of 250 nM selamectin (t-test, n = 4, p=0.034 for Avermetin vs p=0.002 for selamectin). (C) Taurine, the most abundant endogenous ligand for glycine receptors during neocortical development has no proneurogenic activity in mESC cultures. (D) Muscimol, a GABAA receptor agonist, has a significant proneurogenic activity (t-test, n = 4, p&lt;0.001). (E) Chlordiazepoxide (CDZ), a positive allosteric modulator of GABAA receptor, also has a significant proneurogenic activity (t-test, p&lt;0.05), but there was no obvious additive effect when cells were treated with both selamectin and CDZ (t-test, p=0.480). (F) The GABAA receptor antagonist bicucullin and non-competitive blockers picrotoxin and pentylenetetrazol alone had no effect on neuronal production (white columns, control group were normalized to fold change = 1, displayed as the red dot line). However, when tested together with selamectin, the effect of selamectin was blocked (gray columns). In contrast, the glycine receptor inhibitor strychnine does not block the effect of selamectin. Final concentration: Bicuculline (Bicu) = 100 μM; Picrotoxin (PTX) = 500 μM; Pentylenetetrazol (PTZ) = 5 mM; Strychnine (STY) = 100 μM; Selamectin (Sela) = 0.3 μM; Muscimol (Musci) = 10 μM (t-test, n = 4).</subtitle></titles><format mime_type="image/tiff"/><doi_data><doi>10.7554/eLife.00508.007</doi><resource>https://elifesciences.org/articles/00508#fig5</resource></doi_data></component><component parent_relation="isPartOf"><titles><title>Figure 6. Genetic evidence indicates that selamectin’s proneurogenic activity is mediated by the γ2 subunit-containing GABAA receptor.</title><subtitle>(A) Scheme of the EsiRNA transfection and cell harvest for qRT-PCR. (B) qRT-PCR shows fold change of the expression of different GABAA receptor subunits after EsiRNA transfection. ***p&lt;0.001 vs non-transfection control, $$$p&lt;0.001 vs GFP RNA transfection control. (C) Scheme of the EsiRNA knockdown experiment to identify the GABAA receptor subunit that mediates selamectin’s activity. (D–F) Representative images of NeuN and TH staining in DMSO and selamectin-treated cultures of non-transfected (D), α1 EsiRNA transfected (E), and γ2 EsiRNA transfected (F). (G) Quantification shows knockdown of γ2 subunit but not α1β1 and π subunits abolishes the effect of selamectin in increasing neurons (n = 4, **p&lt;0.01, ***p&lt;0.001 vs DMSO). (H) Quantification shows knockdown of γ2 subunit but not α1β1 and π subunits abolishes the effect of selamectin in increasing TH+ neurons neurons (n = 4, **p&lt;0.01, ***p&lt;0.001 vs DMSO). Scale bar, 100 μm.</subtitle></titles><format mime_type="image/tiff"/><doi_data><doi>10.7554/eLife.00508.008</doi><resource>https://elifesciences.org/articles/00508#fig6</resource></doi_data></component><component parent_relation="isPartOf"><titles><title>Figure 7. GABA and selamectin (Sela)-induced currents in neural rosettes and non-rosette cells.</title><subtitle>(A) Bright field (BF) image (left) and green fluorescent protein (GFP) signal (right) of neural rosette cells. Majority of the cells in the view are neural rosette cells, and one of them with typical morphology is indicated by a red arrow. (B) An example of reduction of GABA (500 μM) induced currents by bicuculline (BICC, 200 μM). (C) Upper trace, an example of neural rosette cell displaying GABA (100 μM) induced currents that also displayed selamectin induced current. Lower trace, an example of neural rosette cell displaying GABA (100 μM) induced currents that did not display selamectin induced current. 16 μM Selamectin solution contains 0.4% DMSO, therefore 0.4% DMSO containing bath solution was used as the control solution as indicated in the figure. (D) A pie chart of the numbers of the four groups of neural rosette cell based on whether they displayed GABA and selamectin induced currents. The four groups are: 1) GABA+; Sela+, 2) GABA+; Sela−, 3) GABA−; Sela+, 4) GABA−; Sela−. The number of the cells in each group is indicated in the figure, except the group GABA−; Sela+, which is zero. (E) Bright field (BF) image (left) and green fluorescent protein (GFP) signal (right) of non-rosette cells. One cell with typical young neuron morphology is indicated by a red arrow. (F) Example of the inhibition of GABA (100 μM) induced currents by bicuculline (BICC, 100 μM). (G) Upper trace, an example of non-rosette cell displaying GABA (4 mM) induced current that also displayed salemectin (8 μM) induced current. Lower trace, an example of non-rosette cell displaying GABA (400 μM) responsive induced current that did not display salemectin (16 μM) induced current. (H) A pie chart of the numbers of four groups of non-rosette cells based on whether they displayed GABA and selamectin induced currents. The four groups are: 1) GABA+; Sela+, 2) GABA+; Sela−, 3) GABA−; Sela+, 4) GABA−; Sela−. The number of the cells in each group is indicated in the figure, except the group GABA−; Sela+, which is zero. The application time courses of the control solution (BATH), GABA, bicuculline (BICC) and selamectin (Sela) are indicated by horizontal bars in the figure. The membrane potential was holding at −70 mV in all recordings. The scales for time (horizontal) and currents (vertical) are indicated for each recording in the figure.</subtitle></titles><format mime_type="image/tiff"/><doi_data><doi>10.7554/eLife.00508.009</doi><resource>https://elifesciences.org/articles/00508#fig7</resource></doi_data></component><component parent_relation="isPartOf"><titles><title>Figure 8. Selamectin decreases proliferation and increases the expression of proneural and lineage-associated transcription factors.</title><subtitle>(A) Representative fields show the BrdU incorporation on Day 11 after cells were treated with selamectin (right panel) or DMSO (left panel) for 4 days. Significantly fewer BrdU+ cells were detected in the selamectin-treated group. (B) Quantification as the percentage of BrdU+ cells among total cells (t-test, n = 4, p=0.008). (C) qRT-PCR detects increased expression of proneural (Ascl1, NeurD) and lineage-associated transcription factors (Lmx1a, Lmx1b and Nurr1) in selamectin-treated group. β-actin was used as an input control and data was normalized to expression level on Day 8. (D) Representative fields show the TUNEL staining on Day 14 in cell cultures treated with DMSO or selamectin, with NeuN staining as a control to confirm selamectin efficacy in this experiment. (E) Quantification shows significant difference in NeuN% (p&lt;0.001) and no significant difference in TUNEL% (p=0.058) (t-test, n = 4). Scale bar, 10 μm.</subtitle></titles><format mime_type="image/tiff"/><doi_data><doi>10.7554/eLife.00508.010</doi><resource>https://elifesciences.org/articles/00508#fig8</resource></doi_data></component><component parent_relation="isPartOf"><titles><title>Figure 9. Clonal analysis reveals that selamectin promotes progenitor cell cycle exit toward terminal differentiation.</title><subtitle>(A) Scheme of clonal culture analyses. (B) Quantification of cell cycle length and number of cells within single clones. (C–E) Representative images of double immunostaining of GFP with NeuN (C), TH (D), or the proliferation marker Ki67 (E) within single clones. (F) Quantification of the percentage of NeuN+ (left, DMSO n = 49, selamectin n = 51), TH+ (middle, DMSO n = 6, selamectin n = 7), and Ki67+ cells (right, DMSO n = 46, selamectin n = 41) within single clones. ***p&lt;0.001 vs DMSO). Scale bar, 100 μm.</subtitle></titles><format mime_type="image/tiff"/><doi_data><doi>10.7554/eLife.00508.011</doi><resource>https://elifesciences.org/articles/00508#fig9</resource></doi_data></component><component parent_relation="isPartOf"><titles><title>Video 1.</title></titles><format mime_type="video/avi"/><doi_data><doi>10.7554/eLife.00508.012</doi><resource>https://elifesciences.org/articles/00508#media1</resource></doi_data></component><component parent_relation="isPartOf"><titles><title>Video 2.</title></titles><format mime_type="video/avi"/><doi_data><doi>10.7554/eLife.00508.013</doi><resource>https://elifesciences.org/articles/00508#media2</resource></doi_data></component><component parent_relation="isPartOf"><titles><title>Figure 10. Selamectin increases the differentiation of multiple neuronal lineages from human pluripotent stem cells.</title><subtitle>(A) Scheme of the three-stage neuronal differentiation protocol for H9 hESCs and hiPSCs. (B) Representative images of NeuN and TH staining in control (DMSO) and selamectin-treated cultures of H9 hESCs. (C) Quantification shows increased production of both TH+ and total neurons by selamectin in H9 hESCs. (n = 4, *p&lt;0.05, **p&lt;0.01, ***p&lt;0.001 vs DMSO). (D) Representative images of NeuN and TH staining in control (DMSO) and selamectin-treated cultures of hiPSCs. (E) Quantification shows increased production of both TH+ and total neurons by selamectin in hiPSCs. (n = 4, *p&lt;0.05, **p&lt;0.01, ***p&lt;0.001 vs DMSO). Scale bar, 100 μm.</subtitle></titles><format mime_type="image/tiff"/><doi_data><doi>10.7554/eLife.00508.014</doi><resource>https://elifesciences.org/articles/00508#fig10</resource></doi_data></component><component parent_relation="isPartOf"><titles><title>Figure 11. Selamectin promotes neurogenesis in vivo in the developing zebrafish brain.</title><subtitle>(A) Scheme of the selamectin treatment on HuC:GFP transgenic zebrafish embryos. (B) Representative images show that selamectin (2 μM, 14 hr from 8 hpf to 22 hpf) increases Huc-GFP signal. (C) Quantification of the midbrain cluster (boxed) shows a significant difference between two groups (t-test, n = 20, p&lt;0.001). (D) Representative images show increased DA neurons in selamectin-treated embryos (2 μM for 40 hr from 8 hpf to 48 hpf). (E) Quantification of the ventral forebrain DA neurons shows a significant difference between two groups (t-test, n = 10, p&lt;0.001). (F) A schematic model shows the effect of selamectin on neuronal differentiation from mESCs.</subtitle></titles><format mime_type="image/tiff"/><doi_data><doi>10.7554/eLife.00508.015</doi><resource>https://elifesciences.org/articles/00508#fig11</resource></doi_data></component><component parent_relation="isPartOf"><titles><title>Decision letter</title></titles><format mime_type="text/plain"/><doi_data><doi>10.7554/eLife.00508.016</doi><resource>https://elifesciences.org/articles/00508#SA1</resource></doi_data></component><component parent_relation="isPartOf"><titles><title>Author response</title></titles><format mime_type="text/plain"/><doi_data><doi>10.7554/eLife.00508.017</doi><resource>https://elifesciences.org/articles/00508#SA2</resource></doi_data></component></component_list></journal_article></journal></body></doi_batch>
+<?xml version="1.0" encoding="utf-8"?>
+<doi_batch version="4.4.1" xmlns="http://www.crossref.org/schema/4.4.1" xmlns:ai="http://www.crossref.org/AccessIndicators.xsd" xmlns:ct="http://www.crossref.org/clinicaltrials.xsd" xmlns:fr="http://www.crossref.org/fundref.xsd" xmlns:jats="http://www.ncbi.nlm.nih.gov/JATS1" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:rel="http://www.crossref.org/relations.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.crossref.org/schema/4.4.1 http://www.crossref.org/schemas/crossref4.4.1.xsd">
+	<head>
+		<doi_batch_id>elife-crossref-00508-20170717071707</doi_batch_id>
+		<timestamp>20170717071707</timestamp>
+		<depositor>
+			<depositor_name>eLife</depositor_name>
+			<email_address>production@elifesciences.org</email_address>
+		</depositor>
+		<registrant>eLife</registrant>
+	</head>
+	<body>
+		<journal>
+			<journal_metadata language="en">
+				<full_title>eLife</full_title>
+				<issn media_type="electronic">2050-084X</issn>
+			</journal_metadata>
+			<journal_issue>
+				<publication_date media_type="online">
+					<month>09</month>
+					<day>10</day>
+					<year>2013</year>
+				</publication_date>
+				<journal_volume>
+					<volume>2</volume>
+				</journal_volume>
+			</journal_issue>
+			<journal_article publication_type="full_text" reference_distribution_opts="any">
+				<titles>
+					<title>Imaging-based chemical screening reveals activity-dependent neural differentiation of pluripotent stem cells</title>
+				</titles>
+				<contributors>
+					<person_name contributor_role="author" sequence="first">
+						<given_name>Yaping</given_name>
+						<surname>Sun</surname>
+						<affiliation>Department of Bioengineering and Therapeutic Science, University of California, San Francisco, San Francisco, United States</affiliation>
+						<affiliation>Eli and Edythe Broad Center of Regeneration Medicine and Stem Cell Research, University of California, San Francisco, San Francisco, United States</affiliation>
+						<affiliation>Programs in Human Genetics and Biological Sciences, University of California, San Francisco, San Francisco, United States</affiliation>
+					</person_name>
+					<person_name contributor_role="author" sequence="additional">
+						<given_name>Zhiqiang</given_name>
+						<surname>Dong</surname>
+						<affiliation>Department of Bioengineering and Therapeutic Science, University of California, San Francisco, San Francisco, United States</affiliation>
+						<affiliation>Eli and Edythe Broad Center of Regeneration Medicine and Stem Cell Research, University of California, San Francisco, San Francisco, United States</affiliation>
+						<affiliation>Programs in Human Genetics and Biological Sciences, University of California, San Francisco, San Francisco, United States</affiliation>
+					</person_name>
+					<person_name contributor_role="author" sequence="additional">
+						<given_name>Taihao</given_name>
+						<surname>Jin</surname>
+						<affiliation>Department of Physiology, University of California, San Francisco, San Francisco, United States</affiliation>
+						<affiliation>Department of Biochemistry, University of California, San Francisco, San Francisco, United States</affiliation>
+						<affiliation>Howard Hughes Medical Institute, University of California, San Francisco, San Francisco, United States</affiliation>
+					</person_name>
+					<person_name contributor_role="author" sequence="additional">
+						<given_name>Kean-Hooi</given_name>
+						<surname>Ang</surname>
+						<affiliation>Department of Pharmaceutical Chemistry, University of California, San Francisco, San Francisco, United States</affiliation>
+						<affiliation>Small Molecule Discovery Center, University of California, San Francisco, San Francisco, United States</affiliation>
+					</person_name>
+					<person_name contributor_role="author" sequence="additional">
+						<given_name>Miller</given_name>
+						<surname>Huang</surname>
+						<affiliation>Department of Neurology, University of California, San Francisco, San Francisco, United States</affiliation>
+						<affiliation>Department of Neurological Surgery, University of California, San Francisco, San Francisco, United States</affiliation>
+						<affiliation>Department of Pediatrics, University of California, San Francisco, San Francisco, United States</affiliation>
+					</person_name>
+					<person_name contributor_role="author" sequence="additional">
+						<given_name>Kelly M</given_name>
+						<surname>Haston</surname>
+						<affiliation>Department of Physiology, University of California, San Francisco, San Francisco, United States</affiliation>
+						<affiliation>Department of Neurology, University of California, San Francisco, San Francisco, United States</affiliation>
+					</person_name>
+					<person_name contributor_role="author" sequence="additional">
+						<given_name>Jisong</given_name>
+						<surname>Peng</surname>
+						<affiliation>Department of Bioengineering and Therapeutic Science, University of California, San Francisco, San Francisco, United States</affiliation>
+						<affiliation>Eli and Edythe Broad Center of Regeneration Medicine and Stem Cell Research, University of California, San Francisco, San Francisco, United States</affiliation>
+						<affiliation>Programs in Human Genetics and Biological Sciences, University of California, San Francisco, San Francisco, United States</affiliation>
+					</person_name>
+					<person_name contributor_role="author" sequence="additional">
+						<given_name>Tao P</given_name>
+						<surname>Zhong</surname>
+						<affiliation>State Key Laboratory of Genetic Engineering, Department of Genetics, Fudan University School of Life Sciences, Shanghai, China</affiliation>
+					</person_name>
+					<person_name contributor_role="author" sequence="additional">
+						<given_name>Steven</given_name>
+						<surname>Finkbeiner</surname>
+						<affiliation>Department of Physiology, University of California, San Francisco, San Francisco, United States</affiliation>
+						<affiliation>Department of Biochemistry, University of California, San Francisco, San Francisco, United States</affiliation>
+						<affiliation>Department of Pharmaceutical Chemistry, University of California, San Francisco, San Francisco, United States</affiliation>
+						<affiliation>Department of Neurology, University of California, San Francisco, San Francisco, United States</affiliation>
+						<affiliation>Keck Foundation Program in Brain Cell Engineering, Roddenberry Center for Stem Cell Biology and Medicine, Gladstone Institutes of Neurological Disease, San Francisco, United States</affiliation>
+					</person_name>
+					<person_name contributor_role="author" sequence="additional">
+						<given_name>William A</given_name>
+						<surname>Weiss</surname>
+						<affiliation>Department of Neurology, University of California, San Francisco, San Francisco, United States</affiliation>
+						<affiliation>Department of Neurological Surgery, University of California, San Francisco, San Francisco, United States</affiliation>
+						<affiliation>Department of Pediatrics, University of California, San Francisco, San Francisco, United States</affiliation>
+					</person_name>
+					<person_name contributor_role="author" sequence="additional">
+						<given_name>Michelle R</given_name>
+						<surname>Arkin</surname>
+						<affiliation>Department of Pharmaceutical Chemistry, University of California, San Francisco, San Francisco, United States</affiliation>
+						<affiliation>Small Molecule Discovery Center, University of California, San Francisco, San Francisco, United States</affiliation>
+					</person_name>
+					<person_name contributor_role="author" sequence="additional">
+						<given_name>Lily Y</given_name>
+						<surname>Jan</surname>
+						<affiliation>Department of Physiology, University of California, San Francisco, San Francisco, United States</affiliation>
+						<affiliation>Department of Biochemistry, University of California, San Francisco, San Francisco, United States</affiliation>
+						<affiliation>Howard Hughes Medical Institute, University of California, San Francisco, San Francisco, United States</affiliation>
+					</person_name>
+					<person_name contributor_role="author" sequence="additional">
+						<given_name>Su</given_name>
+						<surname>Guo</surname>
+						<affiliation>Department of Bioengineering and Therapeutic Science, University of California, San Francisco, San Francisco, United States</affiliation>
+						<affiliation>Eli and Edythe Broad Center of Regeneration Medicine and Stem Cell Research, University of California, San Francisco, San Francisco, United States</affiliation>
+						<affiliation>Programs in Human Genetics and Biological Sciences, University of California, San Francisco, San Francisco, United States</affiliation>
+						<affiliation>State Key Laboratory of Genetic Engineering, Department of Genetics, Fudan University School of Life Sciences, Shanghai, China</affiliation>
+					</person_name>
+				</contributors>
+				<jats:abstract>
+					<jats:p>Mammalian pluripotent stem cells (PSCs) represent an important venue for understanding basic principles regulating tissue-specific differentiation and discovering new tools that may facilitate clinical applications. Mechanisms that direct neural differentiation of PSCs involve growth factor signaling and transcription regulation. However, it is unknown whether and how electrical activity influences this process. Here we report a high throughput imaging-based screen, which uncovers that selamectin, an anti-helminthic therapeutic compound with reported activity on invertebrate glutamate-gated chloride channels, promotes neural differentiation of PSCs. We show that selamectin’s pro-neurogenic activity is mediated by γ2-containing GABAA receptors in subsets of neural rosette progenitors, accompanied by increased proneural and lineage-specific transcription factor expression and cell cycle exit. In vivo, selamectin promotes neurogenesis in developing zebrafish. Our results establish a chemical screening platform that reveals activity-dependent neural differentiation from PSCs. Compounds identified in this and future screening might prove therapeutically beneficial for treating neurodevelopmental or neurodegenerative disorders.</jats:p>
+				</jats:abstract>
+				<jats:abstract abstract-type="executive-summary">
+					<jats:p>Pluripotent stem cells have the potential to become most of the cell types that make up an organism. However, the signals that trigger these cells to turn into neurons rather than lung cells or muscle cells, for example, are not fully understood. Proteins called growth factors are known to have a role in this process, as are transcription factors, but it is not clear if other factors are also involved.</jats:p>
+					<jats:p>In an attempt to identify additional mechanisms that could contribute to the formation of neurons, Sun et al. screened more than 2,000 small molecules for their ability to transform mouse pluripotent stem cells into neurons in cell culture. Surprisingly, they found that a compound called selamectin, which is used to treat parasitic flatworm infections, also triggered stem cells to turn into neurons.</jats:p>
+					<jats:p>Selamectin works by blocking a particular type of ion channel in flatworms, but this ion channel is not found in vertebrates, which means that selamectin must be promoting the formation of neurons in mice via a different mechanism. Given that a drug related to selamectin is known to act on a subtype of receptors for the neurotransmitter GABA, Sun et al. wondered whether these receptors—known as GABAA receptors—might also underlie the effects of selamectin. Consistent with this idea, drugs that increased GABAA activity stimulated the formation of neurons, whereas drugs that reduced GABAA function blocked the effects of selamectin.</jats:p>
+					<jats:p>In addition, Sun et al. showed that selamectin triggers human embryonic stem cells to become neurons, and that it also promotes the formation of new neurons in developing zebrafish in vivo. As well as revealing an additional mechanism for the formation of neurons from stem cells, the screening technique introduced by Sun et al. could help to identify further pro-neuronal molecules, which could aid the treatment of neurodevelopmental and neurodegenerative disorders.</jats:p>
+				</jats:abstract>
+				<publication_date media_type="online">
+					<month>09</month>
+					<day>10</day>
+					<year>2013</year>
+				</publication_date>
+				<publisher_item>
+					<item_number item_number_type="article_number">e00508</item_number>
+					<identifier id_type="doi">10.7554/eLife.00508</identifier>
+				</publisher_item>
+				<fr:program name="fundref">
+					<fr:assertion name="fundgroup">
+						<fr:assertion name="funder_name">National Institutes of Health</fr:assertion>
+						<fr:assertion name="award_number">DA023904</fr:assertion>
+					</fr:assertion>
+					<fr:assertion name="fundgroup">
+						<fr:assertion name="funder_name">CIRM</fr:assertion>
+						<fr:assertion name="award_number">GUO-RS1-00215-1</fr:assertion>
+					</fr:assertion>
+					<fr:assertion name="fundgroup">
+						<fr:assertion name="funder_name">Howard Hughes Medical Institute</fr:assertion>
+					</fr:assertion>
+					<fr:assertion name="fundgroup">
+						<fr:assertion name="funder_name">National Institutes of Health</fr:assertion>
+						<fr:assertion name="award_number">MH065334</fr:assertion>
+					</fr:assertion>
+					<fr:assertion name="fundgroup">
+						<fr:assertion name="funder_name">UCSF QB3-Malaysia Program</fr:assertion>
+					</fr:assertion>
+					<fr:assertion name="fundgroup">
+						<fr:assertion name="funder_name">National Institutes of Health</fr:assertion>
+						<fr:assertion name="award_number">R01CA102321, P01CA081403</fr:assertion>
+					</fr:assertion>
+					<fr:assertion name="fundgroup">
+						<fr:assertion name="funder_name">American Cancer Society</fr:assertion>
+						<fr:assertion name="award_number">PF-13-295-01-TBG</fr:assertion>
+					</fr:assertion>
+					<fr:assertion name="fundgroup">
+						<fr:assertion name="funder_name">National Institutes of Health</fr:assertion>
+						<fr:assertion name="award_number">U24 NS078370</fr:assertion>
+					</fr:assertion>
+					<fr:assertion name="fundgroup">
+						<fr:assertion name="funder_name">CIRM</fr:assertion>
+						<fr:assertion name="award_number">RB4-06079</fr:assertion>
+					</fr:assertion>
+					<fr:assertion name="fundgroup">
+						<fr:assertion name="funder_name">Chinese Ministry of Science and Technology</fr:assertion>
+						<fr:assertion name="award_number">2013CB945301</fr:assertion>
+					</fr:assertion>
+				</fr:program>
+				<ai:program name="AccessIndicators">
+					<ai:license_ref applies_to="vor">http://creativecommons.org/licenses/by/3.0/</ai:license_ref>
+					<ai:license_ref applies_to="am">http://creativecommons.org/licenses/by/3.0/</ai:license_ref>
+					<ai:license_ref applies_to="tdm">http://creativecommons.org/licenses/by/3.0/</ai:license_ref>
+				</ai:program>
+				<archive_locations>
+					<archive name="CLOCKSS"/>
+				</archive_locations>
+				<doi_data>
+					<doi>10.7554/eLife.00508</doi>
+					<resource>https://elifesciences.org/articles/00508</resource>
+					<collection property="text-mining">
+						<item>
+							<resource mime_type="application/pdf">https://cdn.elifesciences.org/articles/00508/elife-00508-v1.pdf</resource>
+						</item>
+						<item>
+							<resource mime_type="application/xml">https://cdn.elifesciences.org/articles/00508/elife-00508-v1.xml</resource>
+						</item>
+					</collection>
+				</doi_data>
+				<citation_list>
+					<citation key="bib1">
+						<journal_title>Biochem J</journal_title>
+						<author>Agrawal</author>
+						<volume>122</volume>
+						<first_page>759</first_page>
+						<cYear>1971</cYear>
+						<article_title>Subcellular distribution of taurine and cysteinesulphinate decarboxylase in developing rat brain</article_title>
+					</citation>
+					<citation key="bib2">
+						<journal_title>Nat Rev Neurosci</journal_title>
+						<author>Alvarez-Buylla</author>
+						<volume>2</volume>
+						<first_page>287</first_page>
+						<cYear>2001</cYear>
+						<article_title>A unified hypothesis on the lineage of neural stem cells</article_title>
+						<doi>10.1038/35067582</doi>
+					</citation>
+					<citation key="bib3">
+						<journal_title>Cell</journal_title>
+						<author>Andersson</author>
+						<volume>124</volume>
+						<first_page>393</first_page>
+						<cYear>2006</cYear>
+						<article_title>Identification of intrinsic determinants of midbrain dopamine neurons</article_title>
+						<doi>10.1016/j.cell.2005.10.037</doi>
+					</citation>
+					<citation key="bib4">
+						<journal_title>Proc Natl Acad Sci USA</journal_title>
+						<author>Arrasate</author>
+						<volume>102</volume>
+						<first_page>3840</first_page>
+						<cYear>2005</cYear>
+						<article_title>Automated microscope system for determining factors that predict neuronal fate</article_title>
+						<doi>10.1073/pnas.0409777102</doi>
+					</citation>
+					<citation key="bib5">
+						<journal_title>Nature</journal_title>
+						<author>Arrasate</author>
+						<volume>431</volume>
+						<first_page>805</first_page>
+						<cYear>2004</cYear>
+						<article_title>Inclusion body formation reduces levels of mutant huntingtin and the risk of neuronal death</article_title>
+						<doi>10.1038/nature02998</doi>
+					</citation>
+					<citation key="bib6">
+						<journal_title>Physiol Rev</journal_title>
+						<author>Ben-Ari</author>
+						<volume>87</volume>
+						<first_page>1215</first_page>
+						<cYear>2007</cYear>
+						<article_title>GABA: a pioneer transmitter that excites immature neurons and generates primitive oscillations</article_title>
+						<doi>10.1152/physrev.00017.2006</doi>
+					</citation>
+					<citation key="bib7">
+						<journal_title>Nat Rev Neurosci</journal_title>
+						<author>Bertrand</author>
+						<volume>3</volume>
+						<first_page>517</first_page>
+						<cYear>2002</cYear>
+						<article_title>Proneural genes and the specification of neural cell types</article_title>
+						<doi>10.1038/nrn874</doi>
+					</citation>
+					<citation key="bib8">
+						<journal_title>Vet Parasitol</journal_title>
+						<author>Bishop</author>
+						<volume>91</volume>
+						<first_page>163</first_page>
+						<cYear>2000</cYear>
+						<article_title>Selamectin: a novel broad-spectrum endectocide for dogs and cats</article_title>
+						<doi>10.1016/S0304-4017(00)00289-2</doi>
+					</citation>
+					<citation key="bib9">
+						<journal_title>Arch Insect Biochem Physiol</journal_title>
+						<author>Bloomquist</author>
+						<volume>54</volume>
+						<first_page>145</first_page>
+						<cYear>2003</cYear>
+						<article_title>Chloride channels as tools for developing selective insecticides</article_title>
+						<doi>10.1002/arch.10112</doi>
+					</citation>
+					<citation key="bib10">
+						<journal_title>Cell Stem Cell</journal_title>
+						<author>Borowiak</author>
+						<volume>4</volume>
+						<first_page>348</first_page>
+						<cYear>2009</cYear>
+						<article_title>Small molecules efficiently direct endodermal differentiation of mouse and human embryonic stem cells</article_title>
+						<doi>10.1016/j.stem.2009.01.014</doi>
+					</citation>
+					<citation key="bib11">
+						<journal_title>Nat Biotechnol</journal_title>
+						<author>Chambers</author>
+						<volume>27</volume>
+						<first_page>275</first_page>
+						<cYear>2009</cYear>
+						<article_title>Highly efficient neural conversion of human ES and iPS cells by dual inhibition of SMAD signaling</article_title>
+						<doi>10.1038/nbt.1529</doi>
+					</citation>
+					<citation key="bib12">
+						<journal_title>J Pharmacol Exp Ther</journal_title>
+						<author>Dawson</author>
+						<volume>295</volume>
+						<first_page>1051</first_page>
+						<cYear>2000</cYear>
+						<article_title>Anticonvulsant and adverse effects of avermectin analogs in mice are mediated through the gamma-aminobutyric acid(A) receptor</article_title>
+					</citation>
+					<citation key="bib13">
+						<journal_title>Neuron</journal_title>
+						<author>Demarque</author>
+						<volume>67</volume>
+						<first_page>321</first_page>
+						<cYear>2010</cYear>
+						<article_title>Activity-dependent expression of Lmx1b regulates specification of serotonergic neurons modulating swimming behavior</article_title>
+						<doi>10.1016/j.neuron.2010.06.006</doi>
+					</citation>
+					<citation key="bib14">
+						<journal_title>Cell Stem Cell</journal_title>
+						<author>Desbordes</author>
+						<volume>2</volume>
+						<first_page>602</first_page>
+						<cYear>2008</cYear>
+						<article_title>High-throughput screening assay for the identification of compounds regulating self-renewal and differentiation in human embryonic stem cells</article_title>
+						<doi>10.1016/j.stem.2008.05.010</doi>
+					</citation>
+					<citation key="bib15">
+						<journal_title>Proc Natl Acad Sci USA</journal_title>
+						<author>Ding</author>
+						<volume>100</volume>
+						<first_page>7632</first_page>
+						<cYear>2003</cYear>
+						<article_title>Synthetic small molecules that control stem cell fate</article_title>
+						<doi>10.1073/pnas.0732087100</doi>
+					</citation>
+					<citation key="bib16">
+						<journal_title>Genes Dev</journal_title>
+						<author>Elkabetz</author>
+						<volume>22</volume>
+						<first_page>152</first_page>
+						<cYear>2008</cYear>
+						<article_title>Human ES cell-derived neural rosettes reveal a functionally distinct early neural stem cell stage</article_title>
+						<doi>10.1101/gad.1616208</doi>
+					</citation>
+					<citation key="bib17">
+						<journal_title>Nat Rev Neurosci</journal_title>
+						<author>Farrant</author>
+						<volume>6</volume>
+						<first_page>215</first_page>
+						<cYear>2005</cYear>
+						<article_title>Variations on an inhibitory theme: phasic and tonic activation of GABAA receptors</article_title>
+						<doi>10.1038/nrn1625</doi>
+					</citation>
+					<citation key="bib18">
+						<journal_title>Neuron</journal_title>
+						<author>Flint</author>
+						<volume>20</volume>
+						<first_page>43</first_page>
+						<cYear>1998</cYear>
+						<article_title>Nonsynaptic glycine receptor activation during early neocortical development</article_title>
+						<doi>10.1016/S0896-6273(00)80433-X</doi>
+					</citation>
+					<citation key="bib19">
+						<journal_title>Curr Opin Neurobiol</journal_title>
+						<author>Gaspard</author>
+						<volume>20</volume>
+						<first_page>37</first_page>
+						<cYear>2010</cYear>
+						<article_title>Mechanisms of neural specification from embryonic stem cells</article_title>
+						<doi>10.1016/j.conb.2009.12.001</doi>
+					</citation>
+					<citation key="bib20">
+						<journal_title>Trends Neurosci</journal_title>
+						<author>Ge</author>
+						<volume>30</volume>
+						<first_page>1</first_page>
+						<cYear>2007</cYear>
+						<article_title>GABA sets the tempo for activity-dependent adult neurogenesis</article_title>
+						<doi>10.1016/j.tins.2006.11.001</doi>
+					</citation>
+					<citation key="bib21">
+						<journal_title>Drugs</journal_title>
+						<author>Goa</author>
+						<volume>42</volume>
+						<first_page>640</first_page>
+						<cYear>1991</cYear>
+						<article_title>Ivermectin. A review of its antifilarial activity, pharmacokinetic properties and clinical efficacy in onchocerciasis</article_title>
+						<doi>10.2165/00003495-199142040-00007</doi>
+					</citation>
+					<citation key="bib22">
+						<journal_title>J Pharmacol Exp Ther</journal_title>
+						<author>Huang</author>
+						<volume>281</volume>
+						<first_page>261</first_page>
+						<cYear>1997</cYear>
+						<article_title>Avermectin B1a binds to high- and low-affinity sites with dual effects on the gamma-aminobutyric acid-gated chloride channel of cultured cerebellar granule neurons</article_title>
+					</citation>
+					<citation key="bib23">
+						<journal_title>PLOS ONE</journal_title>
+						<author>Jang</author>
+						<volume>5</volume>
+						<first_page>e11528</first_page>
+						<cYear>2010a</cYear>
+						<article_title>Deoxygedunin, a natural product with potent neurotrophic activity in mice</article_title>
+						<doi>10.1371/journal.pone.0011528</doi>
+					</citation>
+					<citation key="bib24">
+						<journal_title>Proc Natl Acad Sci USA</journal_title>
+						<author>Jang</author>
+						<volume>107</volume>
+						<first_page>2687</first_page>
+						<cYear>2010b</cYear>
+						<article_title>A selective TrkB agonist with potent neurotrophic activities by 7,8-dihydroxyflavone</article_title>
+						<doi>10.1073/pnas.0913572107</doi>
+					</citation>
+					<citation key="bib25">
+						<journal_title>Am J Stem Cells</journal_title>
+						<author>Kreitzer</author>
+						<volume>2</volume>
+						<first_page>119</first_page>
+						<cYear>2013</cYear>
+						<article_title>A robust method to derive functional neural crest cells from human pluripotent stem cells</article_title>
+					</citation>
+					<citation key="bib26">
+						<journal_title>Nat Biotech</journal_title>
+						<author>Lee</author>
+						<volume>18</volume>
+						<first_page>675</first_page>
+						<cYear>2000</cYear>
+						<article_title>Efficient generation of midbrain and hindbrain neurons from mouse embryonic stem cells</article_title>
+						<doi>10.1038/76536</doi>
+					</citation>
+					<citation key="bib27">
+						<journal_title>Nat Neurosci</journal_title>
+						<author>Liu</author>
+						<volume>8</volume>
+						<first_page>1179</first_page>
+						<cYear>2005</cYear>
+						<article_title>Nonsynaptic GABA signaling in postnatal subventricular zone controls proliferation of GFAP-expressing progenitors</article_title>
+						<doi>10.1038/nn1522</doi>
+					</citation>
+					<citation key="bib28">
+						<journal_title>Neuron</journal_title>
+						<author>LoTurco</author>
+						<volume>15</volume>
+						<first_page>1287</first_page>
+						<cYear>1995</cYear>
+						<article_title>GABA and glutamate depolarize cortical progenitor cells and inhibit DNA synthesis</article_title>
+						<doi>10.1016/0896-6273(95)90008-X</doi>
+					</citation>
+					<citation key="bib29">
+						<journal_title>Nat Neurosci</journal_title>
+						<author>Marek</author>
+						<volume>13</volume>
+						<first_page>944</first_page>
+						<cYear>2010</cYear>
+						<article_title>cJun integrates calcium activity and tlx3 expression to regulate neurotransmitter specification</article_title>
+						<doi>10.1038/nn.2582</doi>
+					</citation>
+					<citation key="bib30">
+						<journal_title>Proc Natl Acad Sci USA</journal_title>
+						<author>Martinat</author>
+						<volume>103</volume>
+						<first_page>2874</first_page>
+						<cYear>2006</cYear>
+						<article_title>Cooperative transcription activation by Nurr1 and Pitx3 induces embryonic stem cell maturation to the midbrain dopamine neuron phenotype</article_title>
+						<doi>10.1073/pnas.0511153103</doi>
+					</citation>
+					<citation key="bib31">
+						<journal_title>Results Probl Cell Differ</journal_title>
+						<author>Mehler</author>
+						<volume>39</volume>
+						<first_page>27</first_page>
+						<cYear>2002</cYear>
+						<article_title>Mechanisms regulating lineage diversity during mammalian cerebral cortical neurogenesis and gliogenesis</article_title>
+						<doi>10.1007/978-3-540-46006-0_2</doi>
+					</citation>
+					<citation key="bib32">
+						<journal_title>Curr Opin Neurobiol</journal_title>
+						<author>Okano</author>
+						<volume>19</volume>
+						<first_page>112</first_page>
+						<cYear>2009</cYear>
+						<article_title>Cell types to order: temporal specification of CNS stem cells</article_title>
+						<doi>10.1016/j.conb.2009.04.003</doi>
+					</citation>
+					<citation key="bib33">
+						<journal_title>Nat Rev Neurosci</journal_title>
+						<author>Owens</author>
+						<volume>3</volume>
+						<first_page>715</first_page>
+						<cYear>2002</cYear>
+						<article_title>Is there more to GABA than synaptic inhibition?</article_title>
+						<doi>10.1038/nrn919</doi>
+					</citation>
+					<citation key="bib34">
+						<journal_title>J Neurosci Res</journal_title>
+						<author>Palackal</author>
+						<volume>15</volume>
+						<first_page>223</first_page>
+						<cYear>1986</cYear>
+						<article_title>Abnormal visual cortex development in the kitten associated with maternal dietary taurine deprivation</article_title>
+						<doi>10.1002/jnr.490150212</doi>
+					</citation>
+					<citation key="bib35">
+						<journal_title>Dev Biol</journal_title>
+						<author>Park</author>
+						<volume>227</volume>
+						<first_page>279</first_page>
+						<cYear>2000</cYear>
+						<article_title>Analysis of upstream elements in the HuC promoter leads to the establishment of transgenic zebrafish with fluorescent neurons</article_title>
+						<doi>10.1006/dbio.2000.9898</doi>
+					</citation>
+					<citation key="bib36">
+						<journal_title>J Neurosci</journal_title>
+						<author>Pong</author>
+						<volume>2</volume>
+						<first_page>966</first_page>
+						<cYear>1982</cYear>
+						<article_title>A comparative study of avermectin B1a and other modulators of the gamma-aminobutyric acid receptor. chloride ion channel complex</article_title>
+					</citation>
+					<citation key="bib37">
+						<journal_title>Chem Biol</journal_title>
+						<author>Saxe</author>
+						<volume>14</volume>
+						<first_page>1019</first_page>
+						<cYear>2007</cYear>
+						<article_title>A phenotypic small-molecule screen identifies an orphan ligand-receptor pair that regulates neural stem cell differentiation</article_title>
+						<doi>10.1016/j.chembiol.2007.07.016</doi>
+					</citation>
+					<citation key="bib38">
+						<journal_title>Nat Methods</journal_title>
+						<author>Schindelin</author>
+						<volume>9</volume>
+						<first_page>676</first_page>
+						<cYear>2012</cYear>
+						<article_title>Fiji: an open-source platform for biological-image analysis</article_title>
+						<doi>10.1038/nmeth.2019</doi>
+					</citation>
+					<citation key="bib39">
+						<journal_title>FASEB J</journal_title>
+						<author>Schwirtlich</author>
+						<volume>24</volume>
+						<first_page>1218</first_page>
+						<cYear>2010</cYear>
+						<article_title>GABAA and GABAB receptors of distinct properties affect oppositely the proliferation of mouse embryonic stem cells through synergistic elevation of intracellular Ca2+</article_title>
+						<doi>10.1096/fj.09-143586</doi>
+					</citation>
+					<citation key="bib40">
+						<journal_title>J Biol Chem</journal_title>
+						<author>Shan</author>
+						<volume>276</volume>
+						<first_page>12556</first_page>
+						<cYear>2001</cYear>
+						<article_title>Ivermectin, an unconventional agonist of the glycine receptor chloride channel</article_title>
+						<doi>10.1074/jbc.M011264200</doi>
+					</citation>
+					<citation key="bib41">
+						<journal_title>Methods Enzymol</journal_title>
+						<author>Sharma</author>
+						<volume>506</volume>
+						<first_page>331</first_page>
+						<cYear>2012</cYear>
+						<article_title>High-throughput screening in primary neurons</article_title>
+						<doi>10.1016/B978-0-12-391856-7.00041-X</doi>
+					</citation>
+					<citation key="bib42">
+						<journal_title>Annu Rev Cell Dev Biol</journal_title>
+						<author>Smith</author>
+						<volume>17</volume>
+						<first_page>435</first_page>
+						<cYear>2001</cYear>
+						<article_title>Embryo-derived stem cells: of mice and men</article_title>
+						<doi>10.1146/annurev.cellbio.17.1.435</doi>
+					</citation>
+					<citation key="bib43">
+						<journal_title>Nature</journal_title>
+						<author>Song</author>
+						<volume>489</volume>
+						<first_page>150</first_page>
+						<cYear>2012</cYear>
+						<article_title>Neuronal circuitry mechanism regulating adult quiescent neural stem-cell fate decision</article_title>
+						<doi>10.1038/nature11306</doi>
+					</citation>
+					<citation key="bib44">
+						<journal_title>Nature</journal_title>
+						<author>Spitzer</author>
+						<volume>444</volume>
+						<first_page>707</first_page>
+						<cYear>2006</cYear>
+						<article_title>Electrical activity in early neuronal development</article_title>
+						<doi>10.1038/nature05300</doi>
+					</citation>
+					<citation key="bib45">
+						<journal_title>Nat Rev Neurosci</journal_title>
+						<author>Spitzer</author>
+						<volume>13</volume>
+						<first_page>94</first_page>
+						<cYear>2012</cYear>
+						<article_title>Activity-dependent neurotransmitter respecification</article_title>
+						<doi>10.1038/nrn3154</doi>
+					</citation>
+					<citation key="bib46">
+						<journal_title>J Neurobiol</journal_title>
+						<author>Stewart</author>
+						<volume>50</volume>
+						<first_page>305</first_page>
+						<cYear>2002</cYear>
+						<article_title>Neural progenitor cells of the neonatal rat anterior subventricular zone express functional GABA(A) receptors</article_title>
+						<doi>10.1002/neu.10038</doi>
+					</citation>
+					<citation key="bib47">
+						<journal_title>Nature</journal_title>
+						<author>Stockwell</author>
+						<volume>432</volume>
+						<first_page>846</first_page>
+						<cYear>2004</cYear>
+						<article_title>Exploring biology with small organic molecules</article_title>
+						<doi>10.1038/nature03196</doi>
+					</citation>
+					<citation key="bib48">
+						<journal_title>Science</journal_title>
+						<author>Thomson</author>
+						<volume>282</volume>
+						<first_page>1145</first_page>
+						<cYear>1998</cYear>
+						<article_title>Embryonic stem cell lines derived from human blastocysts</article_title>
+						<doi>10.1126/science.282.5391.1145</doi>
+					</citation>
+					<citation key="bib49">
+						<journal_title>Neuron</journal_title>
+						<author>Tozuka</author>
+						<volume>47</volume>
+						<first_page>803</first_page>
+						<cYear>2005</cYear>
+						<article_title>GABAergic excitation promotes neuronal differentiation in adult hippocampal progenitor cells</article_title>
+						<doi>10.1016/j.neuron.2005.08.023</doi>
+					</citation>
+					<citation key="bib50">
+						<journal_title>J Mol Evol</journal_title>
+						<author>Vassilatis</author>
+						<volume>44</volume>
+						<first_page>501</first_page>
+						<cYear>1997</cYear>
+						<article_title>Evolutionary relationship of the ligand-gated ion channels and the avermectin-sensitive, glutamate-gated chloride channels</article_title>
+						<doi>10.1007/PL00006174</doi>
+					</citation>
+					<citation key="bib51">
+						<journal_title>J Physiol</journal_title>
+						<author>Wang</author>
+						<volume>550</volume>
+						<first_page>785</first_page>
+						<cYear>2003</cYear>
+						<article_title>GABA depolarizes neuronal progenitors of the postnatal subventricular zone via GABAA receptor activation</article_title>
+						<doi>10.1113/jphysiol.2003.042572</doi>
+					</citation>
+					<citation key="bib52">
+						<journal_title>Cell</journal_title>
+						<author>Wichterle</author>
+						<volume>10</volume>
+						<first_page>385</first_page>
+						<cYear>2002</cYear>
+						<article_title>Directed differentiation of embryonic stem cells into motor neurons</article_title>
+						<doi>10.1016/S0092-8674(02)00835-8</doi>
+					</citation>
+					<citation key="bib53">
+						<journal_title>Stem Cells</journal_title>
+						<author>Yamada</author>
+						<volume>25</volume>
+						<first_page>562</first_page>
+						<cYear>2007</cYear>
+						<article_title>Electrical stimulation modulates fate determination of differentiating embryonic stem cells</article_title>
+						<doi>10.1634/stemcells.2006-0011</doi>
+					</citation>
+					<citation key="bib54">
+						<journal_title>Methods Enzymol</journal_title>
+						<author>Ying</author>
+						<volume>365</volume>
+						<first_page>327</first_page>
+						<cYear>2003</cYear>
+						<article_title>Defined conditions for neural commitment and differentiation</article_title>
+						<doi>10.1016/S0076-6879(03)65023-8</doi>
+					</citation>
+					<citation key="bib55">
+						<journal_title>Nat Biotechnol</journal_title>
+						<author>Ying</author>
+						<volume>21</volume>
+						<first_page>183</first_page>
+						<cYear>2003</cYear>
+						<article_title>Conversion of embryonic stem cells into neuroectodermal precursors in adherent monoculture</article_title>
+						<doi>10.1038/nbt780</doi>
+					</citation>
+					<citation key="bib56">
+						<journal_title>Stem Cells</journal_title>
+						<author>Zhou</author>
+						<volume>28</volume>
+						<first_page>1741</first_page>
+						<cYear>2010</cYear>
+						<article_title>High-efficiency induction of neural conversion in human ESCs and human induced pluripotent stem cells with a single chemical inhibitor of transforming growth factor beta superfamily receptors</article_title>
+						<doi>10.1002/stem.504</doi>
+					</citation>
+					<citation key="bib57">
+						<journal_title>Nat Rev Drug Discovery</journal_title>
+						<author>Zon</author>
+						<volume>4</volume>
+						<first_page>35</first_page>
+						<cYear>2005</cYear>
+						<article_title>In vivo drug discovery in zebrafish</article_title>
+						<doi>10.1038/nrd1606</doi>
+					</citation>
+				</citation_list>
+				<component_list>
+					<component parent_relation="isPartOf">
+						<titles>
+							<title>Abstract</title>
+						</titles>
+						<format mime_type="text/plain"/>
+						<doi_data>
+							<doi>10.7554/eLife.00508.001</doi>
+							<resource>https://elifesciences.org/articles/00508#abstract</resource>
+						</doi_data>
+					</component>
+					<component parent_relation="isPartOf">
+						<titles>
+							<title>eLife digest</title>
+						</titles>
+						<format mime_type="text/plain"/>
+						<doi_data>
+							<doi>10.7554/eLife.00508.002</doi>
+							<resource>https://elifesciences.org/articles/00508#digest</resource>
+						</doi_data>
+					</component>
+					<component parent_relation="isPartOf">
+						<titles>
+							<title>Figure 1. High-throughput screening.</title>
+							<subtitle>(A) Scheme of the three-stage mESC neuronal differentiation-based chemical screening. (B) E14 mESC cultures express neural progenitor makers (Sox2, Lmx1A, and Nestin) after 7-day stage one culture. 46C mESC cultures, in which GFP is driven by the sox1 promoter, are GFP positive after 7-day stage one culture. (C) The quantification analysis of TH+ neurons among total cells using the INCell Developer software. (D) Summary of coefficient of variation (C.V.) of the DMSO control. (E) Representative images of immunostaining in control (left, treated with DMSO) and a hit compound (right). (F) A schematic summary of the chemical screen. Scale bar, 10 μm.</subtitle>
+						</titles>
+						<format mime_type="image/tiff"/>
+						<doi_data>
+							<doi>10.7554/eLife.00508.003</doi>
+							<resource>https://elifesciences.org/articles/00508#fig1</resource>
+						</doi_data>
+					</component>
+					<component parent_relation="isPartOf">
+						<titles>
+							<title>Figure 2. The neurotrophin receptor TrkB agonists [Dihydrodeoxygedunin (DOG) and 7,8-dihydroxyflavone (DHF)] increases TH+ cells in mESC cultures.</title>
+							<subtitle>(A) Structure of DHF and DOG. (B) DHF and DOG increase TH% in mESCs (t test, p&lt;0.05, n = 4).</subtitle>
+						</titles>
+						<format mime_type="image/tiff"/>
+						<doi_data>
+							<doi>10.7554/eLife.00508.004</doi>
+							<resource>https://elifesciences.org/articles/00508#fig2</resource>
+						</doi_data>
+					</component>
+					<component parent_relation="isPartOf">
+						<titles>
+							<title>Figure 3. Selamectin increases mESC differentiation into multiple neural lineages.</title>
+							<subtitle>(A) Representative images of TH and NeuN staining in control (DMSO) and selamectin-treated cultures. (B) Quantification shows increased production of both TH+ and total neurons by selamectin (t-test, n = 4, p&lt;0.001). (C–F) Selamectin treatment also increases the production of 5-HT neurons (C), GABAergic neurons (D), islet+ motor neurons (E), and Olig2+ oligodendocyte precursors (F) (t-test, n = 4, *p&lt;0.05, **p&lt;0.01, ***p&lt;0.001).</subtitle>
+						</titles>
+						<format mime_type="image/tiff"/>
+						<doi_data>
+							<doi>10.7554/eLife.00508.005</doi>
+							<resource>https://elifesciences.org/articles/00508#fig3</resource>
+						</doi_data>
+					</component>
+					<component parent_relation="isPartOf">
+						<titles>
+							<title>Figure 4. Dose response and time course of selamectin’s action in mESC cultures.</title>
+							<subtitle>(A) Dose response curve of selamectin (based on TH immunostaining). Cells were treated from Day 8 to Day 11. Selamectin is toxic above 500 nM. The EC50 value and curve fitting were performed with GraphPad Prism using a Sigmoidal dose-response (variable slope). Data are presented as mean ± S.D., n = 4. (B) Time course of selamectin’s action. Only cells treated with selamectin from Day 7 to Day 10 show significant increase of TH+ neurons (t-test, n = 4).</subtitle>
+						</titles>
+						<format mime_type="image/tiff"/>
+						<doi_data>
+							<doi>10.7554/eLife.00508.006</doi>
+							<resource>https://elifesciences.org/articles/00508#fig4</resource>
+						</doi_data>
+					</component>
+					<component parent_relation="isPartOf">
+						<titles>
+							<title>Figure 5. Pharmacological evidence indicates that selamectin’s proneurogenic activity is mediated by GABAA receptors.</title>
+							<subtitle>(A) Selamectin and avermectin belong to a chemical family of macrocyclic lactones and have the same structural backbone. (B) Avermectin has less potent proneurogenic activity than selamectin. Only 250 nM avermectin shows a significant effect, which was much less potent compared to that of 250 nM selamectin (t-test, n = 4, p=0.034 for Avermetin vs p=0.002 for selamectin). (C) Taurine, the most abundant endogenous ligand for glycine receptors during neocortical development has no proneurogenic activity in mESC cultures. (D) Muscimol, a GABAA receptor agonist, has a significant proneurogenic activity (t-test, n = 4, p&lt;0.001). (E) Chlordiazepoxide (CDZ), a positive allosteric modulator of GABAA receptor, also has a significant proneurogenic activity (t-test, p&lt;0.05), but there was no obvious additive effect when cells were treated with both selamectin and CDZ (t-test, p=0.480). (F) The GABAA receptor antagonist bicucullin and non-competitive blockers picrotoxin and pentylenetetrazol alone had no effect on neuronal production (white columns, control group were normalized to fold change = 1, displayed as the red dot line). However, when tested together with selamectin, the effect of selamectin was blocked (gray columns). In contrast, the glycine receptor inhibitor strychnine does not block the effect of selamectin. Final concentration: Bicuculline (Bicu) = 100 μM; Picrotoxin (PTX) = 500 μM; Pentylenetetrazol (PTZ) = 5 mM; Strychnine (STY) = 100 μM; Selamectin (Sela) = 0.3 μM; Muscimol (Musci) = 10 μM (t-test, n = 4).</subtitle>
+						</titles>
+						<format mime_type="image/tiff"/>
+						<doi_data>
+							<doi>10.7554/eLife.00508.007</doi>
+							<resource>https://elifesciences.org/articles/00508#fig5</resource>
+						</doi_data>
+					</component>
+					<component parent_relation="isPartOf">
+						<titles>
+							<title>Figure 6. Genetic evidence indicates that selamectin’s proneurogenic activity is mediated by the γ2 subunit-containing GABAA receptor.</title>
+							<subtitle>(A) Scheme of the EsiRNA transfection and cell harvest for qRT-PCR. (B) qRT-PCR shows fold change of the expression of different GABAA receptor subunits after EsiRNA transfection. ***p&lt;0.001 vs non-transfection control, $$$p&lt;0.001 vs GFP RNA transfection control. (C) Scheme of the EsiRNA knockdown experiment to identify the GABAA receptor subunit that mediates selamectin’s activity. (D–F) Representative images of NeuN and TH staining in DMSO and selamectin-treated cultures of non-transfected (D), α1 EsiRNA transfected (E), and γ2 EsiRNA transfected (F). (G) Quantification shows knockdown of γ2 subunit but not α1β1 and π subunits abolishes the effect of selamectin in increasing neurons (n = 4, **p&lt;0.01, ***p&lt;0.001 vs DMSO). (H) Quantification shows knockdown of γ2 subunit but not α1β1 and π subunits abolishes the effect of selamectin in increasing TH+ neurons neurons (n = 4, **p&lt;0.01, ***p&lt;0.001 vs DMSO). Scale bar, 100 μm.</subtitle>
+						</titles>
+						<format mime_type="image/tiff"/>
+						<doi_data>
+							<doi>10.7554/eLife.00508.008</doi>
+							<resource>https://elifesciences.org/articles/00508#fig6</resource>
+						</doi_data>
+					</component>
+					<component parent_relation="isPartOf">
+						<titles>
+							<title>Figure 7. GABA and selamectin (Sela)-induced currents in neural rosettes and non-rosette cells.</title>
+							<subtitle>(A) Bright field (BF) image (left) and green fluorescent protein (GFP) signal (right) of neural rosette cells. Majority of the cells in the view are neural rosette cells, and one of them with typical morphology is indicated by a red arrow. (B) An example of reduction of GABA (500 μM) induced currents by bicuculline (BICC, 200 μM). (C) Upper trace, an example of neural rosette cell displaying GABA (100 μM) induced currents that also displayed selamectin induced current. Lower trace, an example of neural rosette cell displaying GABA (100 μM) induced currents that did not display selamectin induced current. 16 μM Selamectin solution contains 0.4% DMSO, therefore 0.4% DMSO containing bath solution was used as the control solution as indicated in the figure. (D) A pie chart of the numbers of the four groups of neural rosette cell based on whether they displayed GABA and selamectin induced currents. The four groups are: 1) GABA+; Sela+, 2) GABA+; Sela−, 3) GABA−; Sela+, 4) GABA−; Sela−. The number of the cells in each group is indicated in the figure, except the group GABA−; Sela+, which is zero. (E) Bright field (BF) image (left) and green fluorescent protein (GFP) signal (right) of non-rosette cells. One cell with typical young neuron morphology is indicated by a red arrow. (F) Example of the inhibition of GABA (100 μM) induced currents by bicuculline (BICC, 100 μM). (G) Upper trace, an example of non-rosette cell displaying GABA (4 mM) induced current that also displayed salemectin (8 μM) induced current. Lower trace, an example of non-rosette cell displaying GABA (400 μM) responsive induced current that did not display salemectin (16 μM) induced current. (H) A pie chart of the numbers of four groups of non-rosette cells based on whether they displayed GABA and selamectin induced currents. The four groups are: 1) GABA+; Sela+, 2) GABA+; Sela−, 3) GABA−; Sela+, 4) GABA−; Sela−. The number of the cells in each group is indicated in the figure, except the group GABA−; Sela+, which is zero. The application time courses of the control solution (BATH), GABA, bicuculline (BICC) and selamectin (Sela) are indicated by horizontal bars in the figure. The membrane potential was holding at −70 mV in all recordings. The scales for time (horizontal) and currents (vertical) are indicated for each recording in the figure.</subtitle>
+						</titles>
+						<format mime_type="image/tiff"/>
+						<doi_data>
+							<doi>10.7554/eLife.00508.009</doi>
+							<resource>https://elifesciences.org/articles/00508#fig7</resource>
+						</doi_data>
+					</component>
+					<component parent_relation="isPartOf">
+						<titles>
+							<title>Figure 8. Selamectin decreases proliferation and increases the expression of proneural and lineage-associated transcription factors.</title>
+							<subtitle>(A) Representative fields show the BrdU incorporation on Day 11 after cells were treated with selamectin (right panel) or DMSO (left panel) for 4 days. Significantly fewer BrdU+ cells were detected in the selamectin-treated group. (B) Quantification as the percentage of BrdU+ cells among total cells (t-test, n = 4, p=0.008). (C) qRT-PCR detects increased expression of proneural (Ascl1, NeurD) and lineage-associated transcription factors (Lmx1a, Lmx1b and Nurr1) in selamectin-treated group. β-actin was used as an input control and data was normalized to expression level on Day 8. (D) Representative fields show the TUNEL staining on Day 14 in cell cultures treated with DMSO or selamectin, with NeuN staining as a control to confirm selamectin efficacy in this experiment. (E) Quantification shows significant difference in NeuN% (p&lt;0.001) and no significant difference in TUNEL% (p=0.058) (t-test, n = 4). Scale bar, 10 μm.</subtitle>
+						</titles>
+						<format mime_type="image/tiff"/>
+						<doi_data>
+							<doi>10.7554/eLife.00508.010</doi>
+							<resource>https://elifesciences.org/articles/00508#fig8</resource>
+						</doi_data>
+					</component>
+					<component parent_relation="isPartOf">
+						<titles>
+							<title>Figure 9. Clonal analysis reveals that selamectin promotes progenitor cell cycle exit toward terminal differentiation.</title>
+							<subtitle>(A) Scheme of clonal culture analyses. (B) Quantification of cell cycle length and number of cells within single clones. (C–E) Representative images of double immunostaining of GFP with NeuN (C), TH (D), or the proliferation marker Ki67 (E) within single clones. (F) Quantification of the percentage of NeuN+ (left, DMSO n = 49, selamectin n = 51), TH+ (middle, DMSO n = 6, selamectin n = 7), and Ki67+ cells (right, DMSO n = 46, selamectin n = 41) within single clones. ***p&lt;0.001 vs DMSO). Scale bar, 100 μm.</subtitle>
+						</titles>
+						<format mime_type="image/tiff"/>
+						<doi_data>
+							<doi>10.7554/eLife.00508.011</doi>
+							<resource>https://elifesciences.org/articles/00508#fig9</resource>
+						</doi_data>
+					</component>
+					<component parent_relation="isPartOf">
+						<titles>
+							<title>Video 1.</title>
+						</titles>
+						<format mime_type="video/avi"/>
+						<doi_data>
+							<doi>10.7554/eLife.00508.012</doi>
+							<resource>https://elifesciences.org/articles/00508#media1</resource>
+						</doi_data>
+					</component>
+					<component parent_relation="isPartOf">
+						<titles>
+							<title>Video 2.</title>
+						</titles>
+						<format mime_type="video/avi"/>
+						<doi_data>
+							<doi>10.7554/eLife.00508.013</doi>
+							<resource>https://elifesciences.org/articles/00508#media2</resource>
+						</doi_data>
+					</component>
+					<component parent_relation="isPartOf">
+						<titles>
+							<title>Figure 10. Selamectin increases the differentiation of multiple neuronal lineages from human pluripotent stem cells.</title>
+							<subtitle>(A) Scheme of the three-stage neuronal differentiation protocol for H9 hESCs and hiPSCs. (B) Representative images of NeuN and TH staining in control (DMSO) and selamectin-treated cultures of H9 hESCs. (C) Quantification shows increased production of both TH+ and total neurons by selamectin in H9 hESCs. (n = 4, *p&lt;0.05, **p&lt;0.01, ***p&lt;0.001 vs DMSO). (D) Representative images of NeuN and TH staining in control (DMSO) and selamectin-treated cultures of hiPSCs. (E) Quantification shows increased production of both TH+ and total neurons by selamectin in hiPSCs. (n = 4, *p&lt;0.05, **p&lt;0.01, ***p&lt;0.001 vs DMSO). Scale bar, 100 μm.</subtitle>
+						</titles>
+						<format mime_type="image/tiff"/>
+						<doi_data>
+							<doi>10.7554/eLife.00508.014</doi>
+							<resource>https://elifesciences.org/articles/00508#fig10</resource>
+						</doi_data>
+					</component>
+					<component parent_relation="isPartOf">
+						<titles>
+							<title>Figure 11. Selamectin promotes neurogenesis in vivo in the developing zebrafish brain.</title>
+							<subtitle>(A) Scheme of the selamectin treatment on HuC:GFP transgenic zebrafish embryos. (B) Representative images show that selamectin (2 μM, 14 hr from 8 hpf to 22 hpf) increases Huc-GFP signal. (C) Quantification of the midbrain cluster (boxed) shows a significant difference between two groups (t-test, n = 20, p&lt;0.001). (D) Representative images show increased DA neurons in selamectin-treated embryos (2 μM for 40 hr from 8 hpf to 48 hpf). (E) Quantification of the ventral forebrain DA neurons shows a significant difference between two groups (t-test, n = 10, p&lt;0.001). (F) A schematic model shows the effect of selamectin on neuronal differentiation from mESCs.</subtitle>
+						</titles>
+						<format mime_type="image/tiff"/>
+						<doi_data>
+							<doi>10.7554/eLife.00508.015</doi>
+							<resource>https://elifesciences.org/articles/00508#fig11</resource>
+						</doi_data>
+					</component>
+				</component_list>
+			</journal_article>
+		</journal>
+	</body>
+</doi_batch>

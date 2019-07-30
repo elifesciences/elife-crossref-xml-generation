@@ -122,12 +122,14 @@ def crossref_xml(poa_articles, crossref_config=None, pub_date=None, add_comment=
     return c_xml.output_xml(pretty=pretty, indent=indent)
 
 
-def crossref_xml_to_disk(poa_articles, crossref_config=None, pub_date=None, add_comment=True):
+def crossref_xml_to_disk(poa_articles, crossref_config=None, pub_date=None, add_comment=True,
+                         submission_type='journal', pretty=False, indent=""):
     """build crossref xml and write the output to disk"""
     if not crossref_config:
         crossref_config = parse_raw_config(raw_config(None))
-    c_xml = build_crossref_xml(poa_articles, crossref_config, pub_date, add_comment)
-    xml_string = c_xml.output_xml()
+    c_xml = build_crossref_xml(
+        poa_articles, crossref_config, pub_date, add_comment, submission_type)
+    xml_string = c_xml.output_xml(pretty=pretty, indent=indent)
     # Write to file
     filename = TMP_DIR + os.sep + c_xml.batch_id + '.xml'
     with open(filename, "wb") as open_file:
