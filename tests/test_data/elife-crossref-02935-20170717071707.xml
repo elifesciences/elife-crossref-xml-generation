@@ -1251,26 +1251,6 @@
 							<resource>https://elifesciences.org/articles/02935/figures#SD6-data</resource>
 						</doi_data>
 					</component>
-					<component parent_relation="isPartOf">
-						<titles>
-							<title>Decision letter</title>
-						</titles>
-						<format mime_type="text/plain"/>
-						<doi_data>
-							<doi>10.7554/eLife.02935.027</doi>
-							<resource>https://elifesciences.org/articles/02935#SA1</resource>
-						</doi_data>
-					</component>
-					<component parent_relation="isPartOf">
-						<titles>
-							<title>Author response image 1. Author response</title>
-						</titles>
-						<format mime_type="text/plain"/>
-						<doi_data>
-							<doi>10.7554/eLife.02935.028</doi>
-							<resource>https://elifesciences.org/articles/02935#SA2</resource>
-						</doi_data>
-					</component>
 				</component_list>
 			</journal_article>
 		</journal>

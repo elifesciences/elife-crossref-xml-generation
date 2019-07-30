@@ -10,7 +10,10 @@ def set_component_list(parent, poa_article, crossref_config):
         return
 
     component_list_tag = SubElement(parent, 'component_list')
-    for comp in poa_article.component_list:
+    # ignore excluded components based on the configuration settings
+    component_list = [comp for comp in poa_article.component_list
+                      if comp.type not in crossref_config.get('component_exclude_types', [])]
+    for comp in component_list:
         set_component(component_list_tag, poa_article, comp, crossref_config)
 
 

@@ -982,26 +982,6 @@
 					</component>
 					<component parent_relation="isPartOf">
 						<titles>
-							<title>Decision letter</title>
-						</titles>
-						<format mime_type="text/plain"/>
-						<doi_data>
-							<doi>10.7554/eLife.00666.029</doi>
-							<resource>https://elifesciences.org/articles/00666#SA1</resource>
-						</doi_data>
-					</component>
-					<component parent_relation="isPartOf">
-						<titles>
-							<title>Author response image 1. Author response</title>
-						</titles>
-						<format mime_type="text/plain"/>
-						<doi_data>
-							<doi>10.7554/eLife.00666.030</doi>
-							<resource>https://elifesciences.org/articles/00666#SA2</resource>
-						</doi_data>
-					</component>
-					<component parent_relation="isPartOf">
-						<titles>
 							<title>Author response image 1.</title>
 							<subtitle>Single figure: The header of an eLife article example on the HTML page.</subtitle>
 						</titles>

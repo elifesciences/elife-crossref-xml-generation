@@ -1084,26 +1084,6 @@
 					</component>
 					<component parent_relation="isPartOf">
 						<titles>
-							<title>Decision letter</title>
-						</titles>
-						<format mime_type="text/plain"/>
-						<doi_data>
-							<doi>10.7554/eLife.12444.024</doi>
-							<resource>https://elifesciences.org/articles/12444#SA1</resource>
-						</doi_data>
-					</component>
-					<component parent_relation="isPartOf">
-						<titles>
-							<title>Author response image 1. Author response</title>
-						</titles>
-						<format mime_type="text/plain"/>
-						<doi_data>
-							<doi>10.7554/eLife.12444.025</doi>
-							<resource>https://elifesciences.org/articles/12444#SA2</resource>
-						</doi_data>
-					</component>
-					<component parent_relation="isPartOf">
-						<titles>
 							<title>Author response image 1. Autophagy deficiency does not influence expression of IL-2 receptor on TH2 cells (A) Expression of IL-2Ra (CD25) by TH2cells in the cLP of young Atg16l1ΔCD4 and Atg16l1fl/fl littermates (gated on CD4+ TCRβ+ Foxp3- Gata3+ T cells), data are representative of two independent experiments.</title>
 							<subtitle>(B) Expression of CD25 was measured in naïve Atg16l1ΔCD4 or Atg16l1fl/fl CD4+ T cells cultured with anti-CD3 (5μg/ml) and anti-CD28 (1μg/ml) in TH2 polarizing conditions for 2 or 5 days, data are from one experiment.</subtitle>
 						</titles>

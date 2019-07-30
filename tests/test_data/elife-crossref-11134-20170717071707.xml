@@ -792,26 +792,6 @@
 							<resource>https://elifesciences.org/articles/11134#fig5</resource>
 						</doi_data>
 					</component>
-					<component parent_relation="isPartOf">
-						<titles>
-							<title>Decision letter</title>
-						</titles>
-						<format mime_type="text/plain"/>
-						<doi_data>
-							<doi>10.7554/eLife.11134.019</doi>
-							<resource>https://elifesciences.org/articles/11134#SA1</resource>
-						</doi_data>
-					</component>
-					<component parent_relation="isPartOf">
-						<titles>
-							<title>Author response</title>
-						</titles>
-						<format mime_type="text/plain"/>
-						<doi_data>
-							<doi>10.7554/eLife.11134.020</doi>
-							<resource>https://elifesciences.org/articles/11134#SA2</resource>
-						</doi_data>
-					</component>
 				</component_list>
 			</journal_article>
 		</journal>
