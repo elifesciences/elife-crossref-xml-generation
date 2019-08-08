@@ -16,6 +16,7 @@ def sample_data():
     # decision letter
     decision_letter = Article()
     decision_letter.article_type = 'editor-report'
+    decision_letter.id = 'SA1'
     dec_author = Contributor('editor', 'Christian', 'Rutz')
     decision_letter.contributors.append(dec_author)
     decision_letter.title = (
@@ -39,6 +40,7 @@ def sample_data():
     # author response
     author_response = Article()
     author_response.article_type = 'author-comment'
+    author_response.id = 'SA2'
     article_author = Contributor('author', 'Harrison', 'Melissa')
     author_response.contributors.append(article_author)
     author_response.title = (

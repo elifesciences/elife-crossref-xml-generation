@@ -11,7 +11,7 @@ def set_doi_data(parent, obj, poa_article, crossref_config, pattern_type=None):
     doi_data_tag = SubElement(parent, 'doi_data')
 
     doi_tag = SubElement(doi_data_tag, 'doi')
-    doi_tag.text = poa_article.doi
+    doi_tag.text = obj.doi
 
     resource_tag = SubElement(doi_data_tag, 'resource')
 

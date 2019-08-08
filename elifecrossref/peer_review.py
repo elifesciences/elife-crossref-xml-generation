@@ -6,8 +6,8 @@ def set_peer_review(parent, poa_article, crossref_config):
     for review_article in poa_article.review_articles:
         # Add peer_review for each review
         peer_review_tag = SubElement(parent, 'peer_review')
-        peer_review_tag.set('stage', 'pre-publication')
-        peer_review_tag.set('type', review_article.article_type)
+        set_stage(peer_review_tag)
+        set_type(peer_review_tag, review_article)
 
         if review_article.contributors:
             contributor.set_contributors(peer_review_tag, review_article.contributors)
@@ -25,7 +25,20 @@ def set_peer_review(parent, poa_article, crossref_config):
             related.set_related_item_work_relation(
                 related_item_tag, 'inter_work_relation', 'isReviewOf', 'doi', related_article_doi)
 
-        doi.set_doi_data(peer_review_tag, review_article, crossref_config)
+        doi.set_doi_data(
+            peer_review_tag, review_article, poa_article,
+            crossref_config, 'peer_review_doi_pattern')
+
+
+def set_stage(parent):
+    parent.set('stage', 'pre-publication')
+
+
+def set_type(parent, review_article):
+    if review_article.article_type in ['article-commentary', 'editor-report', 'decision-letter']:
+        parent.set('type', 'editor-report')
+    elif review_article.article_type in ['author-comment', 'reply']:
+        parent.set('type', 'author-comment')
 
 
 def set_review_date(parent, article_date):
