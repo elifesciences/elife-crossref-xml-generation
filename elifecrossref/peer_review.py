@@ -12,8 +12,7 @@ def set_peer_review(parent, poa_article, crossref_config):
         if review_article.contributors:
             contributor.set_contributors(peer_review_tag, review_article.contributors)
 
-        if review_article.title:
-            title.set_titles(peer_review_tag, review_article, crossref_config)
+        set_title(peer_review_tag, review_article, poa_article, crossref_config)
 
         set_review_date(peer_review_tag, review_article.get_date('review_date'))
 
@@ -39,6 +38,13 @@ def set_type(parent, review_article):
         parent.set('type', 'editor-report')
     elif review_article.article_type in ['author-comment', 'reply']:
         parent.set('type', 'author-comment')
+
+
+def set_title(parent, review_article, poa_article, crossref_config):
+    """concatenate the review and parent article titles"""
+    title_value = ': '.join(
+        [value for value in [review_article.title, poa_article.title] if value])
+    title.set_titles(parent, title_value, crossref_config)
 
 
 def set_review_date(parent, article_date):
