@@ -46,6 +46,8 @@ def sample_data():
     author_response.id = 'SA2'
     article_author = Contributor('author', 'Harrison', 'Melissa')
     author_response.contributors.append(article_author)
+    article_collab_author = Contributor('author', None, None, 'eLife Editorial Production Group')
+    author_response.contributors.append(article_collab_author)
     author_response.title = ('Author response')
     # review date
     review_date = ArticleDate(
