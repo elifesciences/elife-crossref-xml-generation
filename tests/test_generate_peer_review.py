@@ -1,7 +1,7 @@
 import unittest
 import time
 import os
-from elifearticle.article import Article, ArticleDate, Contributor
+from elifearticle.article import Article, ArticleDate, Contributor, License
 from elifecrossref import generate
 from elifecrossref.conf import raw_config, parse_raw_config
 from tests import TEST_BASE_PATH, TEST_DATA_PATH, read_file_content
@@ -19,16 +19,19 @@ def sample_data():
     decision_letter.id = 'SA1'
     dec_author = Contributor('editor', 'Christian', 'Rutz')
     decision_letter.contributors.append(dec_author)
-    decision_letter.title = (
-        'Decision letter: Immune mediated hookworm clearance and survival of a marine mammal ' +
-        'decreases with warmer ocean temperatures')
+    decision_letter.title = ('Decision letter')
     # review date
     review_date = ArticleDate(
         'review_date', time.strptime("2018-01-12 00:00:00", "%Y-%m-%d %H:%M:%S"))
     decision_letter.add_date(review_date)
+    # license
+    license_object = License()
+    license_object.href = 'http://creativecommons.org/licenses/by/4.0/'
+    decision_letter.license = license_object
     # related article doi
     related_article = Article()
     related_article.doi = '10.7554/eLife.00666'
+    related_article.title = 'The eLife research article'
     decision_letter.related_articles = [related_article]
     # review article doi
     decision_letter.doi = '10.7554/eLife.00666.029'
@@ -43,16 +46,19 @@ def sample_data():
     author_response.id = 'SA2'
     article_author = Contributor('author', 'Harrison', 'Melissa')
     author_response.contributors.append(article_author)
-    author_response.title = (
-        'Author response: Immune mediated hookworm clearance and survival of a marine mammal ' +
-        'decreases with warmer ocean temperatures')
+    author_response.title = ('Author response')
     # review date
     review_date = ArticleDate(
         'review_date', time.strptime("2018-01-12 00:00:00", "%Y-%m-%d %H:%M:%S"))
     author_response.add_date(review_date)
+    # license
+    license_object = License()
+    license_object.href = 'http://creativecommons.org/licenses/by/4.0/'
+    author_response.license = license_object
     # related article doi
     related_article = Article()
     related_article.doi = '10.7554/eLife.00666'
+    related_article.title = 'The eLife research article'
     author_response.related_articles = [related_article]
     # review article doi
     author_response.doi = '10.7554/eLife.00666.030'

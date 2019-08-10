@@ -65,17 +65,15 @@ def set_access_indicators(parent, poa_article, crossref_config):
     Set the AccessIndicators
     """
 
-    applies_to = crossref_config.get("access_indicators_applies_to")
+    applies_to_list = crossref_config.get("access_indicators_applies_to")
 
-    if applies_to and access_indicators.has_license(poa_article) is True:
+    if applies_to_list and access_indicators.has_license(poa_article) is True:
 
-        ai_program_tag = SubElement(parent, 'ai:program')
-        ai_program_tag.set('name', 'AccessIndicators')
+        ai_program_tag = access_indicators.set_ai_program(parent)
 
-        for applies_to in applies_to:
-            ai_program_ref_tag = SubElement(ai_program_tag, 'ai:license_ref')
-            ai_program_ref_tag.set('applies_to', applies_to)
-            ai_program_ref_tag.text = poa_article.license.href
+        for applies_to in applies_to_list:
+            access_indicators.set_ai_license_ref(
+                ai_program_tag, poa_article.license.href, applies_to)
 
 
 def set_archive_locations(parent, archive_locations):

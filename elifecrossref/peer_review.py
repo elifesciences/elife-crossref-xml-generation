@@ -1,5 +1,5 @@
 from xml.etree.ElementTree import SubElement
-from elifecrossref import contributor, dates, doi, related, title
+from elifecrossref import contributor, dates, doi, related, title, access_indicators
 
 
 def set_peer_review(parent, poa_article, crossref_config):
@@ -15,6 +15,11 @@ def set_peer_review(parent, poa_article, crossref_config):
         set_title(peer_review_tag, review_article, poa_article, crossref_config)
 
         set_review_date(peer_review_tag, review_article.get_date('review_date'))
+
+        # set access indicators
+        if review_article.license and review_article.license.href:
+            ai_program_tag = access_indicators.set_ai_program(peer_review_tag)
+            access_indicators.set_ai_license_ref(ai_program_tag, review_article.license.href)
 
         if review_article.related_articles:
             # set the related article DOI to the first of the related_articles doi

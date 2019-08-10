@@ -25,6 +25,9 @@
                 <day>12</day>
                 <year>2018</year>
             </review_date>
+            <ai:program name="AccessIndicators">
+                <ai:license_ref>http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+            </ai:program>
             <rel:program>
                 <rel:related_item>
                     <rel:inter_work_relation identifier-type="doi" relationship-type="isReviewOf">10.7554/eLife.00666</rel:inter_work_relation>
@@ -50,6 +53,9 @@
                 <day>12</day>
                 <year>2018</year>
             </review_date>
+            <ai:program name="AccessIndicators">
+                <ai:license_ref>http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+            </ai:program>
             <rel:program>
                 <rel:related_item>
                     <rel:inter_work_relation identifier-type="doi" relationship-type="isReviewOf">10.7554/eLife.00666</rel:inter_work_relation>
