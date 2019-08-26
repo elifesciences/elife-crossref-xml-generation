@@ -3,7 +3,7 @@ from elifearticle import utils as eautils
 from elifecrossref import tags
 
 
-def set_titles(parent, poa_article, crossref_config):
+def set_titles(parent, title, crossref_config):
     """
     Set the titles and title tags allowing sub tags within title
     """
@@ -11,7 +11,7 @@ def set_titles(parent, poa_article, crossref_config):
     tag_name = 'title'
     root_xml_element = Element(root_tag_name)
     # remove unwanted tags
-    tag_converted_title = eautils.remove_tag('ext-link', poa_article.title)
+    tag_converted_title = eautils.remove_tag('ext-link', title)
     if crossref_config.get('face_markup') is True:
         tags.add_inline_tag(root_xml_element, tag_name, tag_converted_title)
     else:
