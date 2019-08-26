@@ -1,12 +1,12 @@
 elife-crossref-xml-generation
 =============================
 
-.. image:: https://travis-ci.org/elifesciences/elife-crossref-xml-generation.svg?branch=master
+.. image:: https://travis-ci.org/elifesciences/elife-crossref-xml-generation.svg?branch=develop
    :target: https://travis-ci.org/elifesciences/elife-crossref-xml-generation
    :alt: Latest Version
    
-.. image:: https://coveralls.io/repos/elifesciences/elife-crossref-xml-generation/badge.svg?branch=master&service=github
-   :target: https://coveralls.io/github/elifesciences/elife-crossref-xml-generation?branch=master
+.. image:: https://coveralls.io/repos/github/elifesciences/elife-crossref-xml-generation/badge.svg?branch=develop
+   :target: https://coveralls.io/github/elifesciences/elife-crossref-xml-generation?branch=develop
 
 
 Crossref deposit of journal articles
