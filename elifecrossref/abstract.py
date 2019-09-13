@@ -1,4 +1,5 @@
 from elifearticle import utils as eautils
+from elifetools import xmlio
 from elifetools import utils as etoolsutils
 from elifecrossref import tags, utils
 
@@ -65,6 +66,6 @@ def set_abstract_tag(parent, abstract, abstract_type=None, jats_abstract=False):
     else:
         tag_converted_abstract = get_basic_abstract(abstract)
 
-    minidom_tag = tags.reparsed_tag(tag_name, tag_converted_abstract,
+    minidom_tag = xmlio.reparsed_tag(tag_name, tag_converted_abstract,
                                     attributes_text=attributes_text)
     tags.append_tag(parent, minidom_tag, attributes=attributes)

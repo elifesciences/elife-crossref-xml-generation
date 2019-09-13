@@ -37,7 +37,7 @@ def add_clean_tag(parent, tag_name, original_string,
     tag_converted_string = etoolsutils.escape_ampersand(tag_converted_string)
     tag_converted_string = etoolsutils.escape_unmatched_angle_brackets(
         tag_converted_string)
-    minidom_tag = reparsed_tag(tag_name, tag_converted_string, namespaces, attributes_text)
+    minidom_tag = xmlio.reparsed_tag(tag_name, tag_converted_string, namespaces, attributes_text)
     append_tag(parent, minidom_tag, attributes=attributes)
 
 
@@ -45,15 +45,8 @@ def add_inline_tag(parent, tag_name, original_string,
                    namespaces=REPARSING_NAMESPACES, attributes=None, attributes_text=''):
     """replace inline tags found in the original_string and then add a tag the parent"""
     tag_converted_string = convert_inline_tags(original_string)
-    minidom_tag = reparsed_tag(tag_name, tag_converted_string, namespaces, attributes_text)
+    minidom_tag = xmlio.reparsed_tag(tag_name, tag_converted_string, namespaces, attributes_text)
     append_tag(parent, minidom_tag, attributes=attributes)
-
-
-def reparsed_tag(tag_name, tag_string, namespaces=REPARSING_NAMESPACES, attributes_text=''):
-    """given final tag content and attributes, reparse to a minidom tag"""
-    tagged_string = ('<' + tag_name + namespaces + attributes_text + '>' +
-                     tag_string + '</' + tag_name + '>')
-    return minidom.parseString(tagged_string.encode('utf-8'))
 
 
 def append_tag(parent, minidom_tag, attributes=None):
