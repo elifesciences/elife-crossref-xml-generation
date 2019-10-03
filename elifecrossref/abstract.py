@@ -51,6 +51,7 @@ def get_jats_abstract(abstract):
     abstract = eautils.replace_tags(abstract, 'sc', 'jats:sc')
     abstract = eautils.remove_tag('inline-formula', abstract)
     abstract = eautils.remove_tag('ext-link', abstract)
+    abstract = eautils.remove_tag('xref', abstract)
     return abstract
 
 

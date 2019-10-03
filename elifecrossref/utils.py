@@ -14,6 +14,7 @@ def allowed_tags():
         '<inline-formula>', '</inline-formula>',
         '<mml:', '</mml:',
         '<ext-link', '</ext-link>',
+        '<xref', '</xref>',
     )
 
 

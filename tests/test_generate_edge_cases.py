@@ -295,7 +295,8 @@ class TestGenerateAbstract(unittest.TestCase):
         self.abstract = (
             '<p><bold><italic><underline><sub><sup>An abstract. <ext-link ext-link-type="uri" ' +
             'xlink:href="http://dx.doi.org/10.1601/nm.3602">Desulfocapsa sulfexigens</ext-link>.' +
-            '</sup></sub></underline></italic></bold></p>')
+            '</sup></sub></underline></italic></bold>' +
+            ' <xref ref-type="bibr" rid="bib18">Stock and Wise (1990)</xref>.</p>')
 
     def test_set_abstract(self):
         """test stripping unwanted tags from abstract"""
@@ -305,7 +306,7 @@ class TestGenerateAbstract(unittest.TestCase):
         article.abstract = self.abstract
         expected_contains = (
             '<jats:abstract><jats:p>An abstract. Desulfocapsa sulfexigens.' +
-            '</jats:p></jats:abstract>')
+            ' Stock and Wise (1990).</jats:p></jats:abstract>')
         # generate
         crossref_object = generate.build_crossref_xml([article])
         crossref_xml_string = crossref_object.output_xml()
@@ -321,7 +322,7 @@ class TestGenerateAbstract(unittest.TestCase):
         expected_contains = (
             '<jats:abstract><jats:p><jats:bold><jats:italic><jats:underline><jats:sub><jats:sup>' +
             'An abstract. Desulfocapsa sulfexigens.</jats:sup></jats:sub></jats:underline>' +
-            '</jats:italic></jats:bold></jats:p></jats:abstract>')
+            '</jats:italic></jats:bold> Stock and Wise (1990).</jats:p></jats:abstract>')
         # generate
         raw_config_object = raw_config('elife')
         jats_abstract = raw_config_object.get('jats_abstract')
