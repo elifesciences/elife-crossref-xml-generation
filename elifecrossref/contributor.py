@@ -64,8 +64,9 @@ def set_person_name(parent, contributor, contributor_role, sequence):
     person_name_tag.set("contributor_role", contributor_role)
     person_name_tag.set("sequence", sequence)
 
-    given_name_tag = SubElement(person_name_tag, "given_name")
-    given_name_tag.text = contributor.given_name
+    if contributor.given_name:
+        given_name_tag = SubElement(person_name_tag, "given_name")
+        given_name_tag.text = contributor.given_name
 
     surname_tag = SubElement(person_name_tag, "surname")
     surname_tag.text = contributor.surname
