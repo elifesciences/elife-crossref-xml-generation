@@ -1,11 +1,15 @@
 from xml.etree.ElementTree import SubElement
 
 
+def do_funding(poa_article):
+    return bool(poa_article.funding_awards)
+
+
 def set_fundref(parent, poa_article):
     """
     Set the fundref data from the article funding_awards list
     """
-    if poa_article.funding_awards:
+    if do_funding(poa_article):
         fr_program_tag = SubElement(parent, 'fr:program')
         fr_program_tag.set("name", "fundref")
     for award in poa_article.funding_awards:
