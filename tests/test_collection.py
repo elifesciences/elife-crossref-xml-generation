@@ -1,7 +1,7 @@
 import unittest
 from elifearticle.article import Article, License
 from elifecrossref import collection
-from elifecrossref.conf import raw_config, parse_raw_config
+from tests import create_crossref_config
 
 
 class TestSetCollection(unittest.TestCase):
@@ -42,9 +42,3 @@ def create_aricle_object():
     title = "Test article"
     article = Article(doi, title)
     return article
-
-
-def create_crossref_config():
-    """utility to create the crossref object"""
-    raw_config_object = raw_config('elife')
-    return parse_raw_config(raw_config_object)
