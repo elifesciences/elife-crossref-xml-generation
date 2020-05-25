@@ -96,7 +96,7 @@ class TestGenerate(unittest.TestCase):
         file_path = TEST_DATA_PATH + article_xml_file
         articles = generate.build_articles_for_crossref([file_path])
         crossref_config = create_crossref_config('elife')
-         # override config values
+        # override config values
         crossref_config['jats_abstract'] = True
         crossref_config['face_markup'] = True
         # create the Crossref XML
