@@ -1,4 +1,5 @@
 import os
+from elifearticle.article import Article
 from elifecrossref.conf import raw_config, parse_raw_config
 
 
@@ -15,3 +16,9 @@ def create_crossref_config(config_section='elife'):
     """utility to create the crossref object"""
     raw_config_object = raw_config(config_section)
     return parse_raw_config(raw_config_object)
+
+
+def create_article_object(doi='10.7554/eLife.00666', title='Test article'):
+    """create a basic article object"""
+    article = Article(doi, title)
+    return article

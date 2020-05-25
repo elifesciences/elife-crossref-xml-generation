@@ -1,7 +1,7 @@
 import unittest
-from elifearticle.article import Article, License
+from elifearticle.article import License
 from elifecrossref import collection
-from tests import create_crossref_config
+from tests import create_article_object, create_crossref_config
 
 
 class TestSetCollection(unittest.TestCase):
@@ -12,13 +12,13 @@ class TestSetCollection(unittest.TestCase):
     def test_do_set_collection_no_license(self):
         """test when an article has no license"""
         # create CrossrefXML object to test
-        article = create_aricle_object()
+        article = create_article_object()
         # test assertion
         self.assertFalse(collection.do_set_collection(article, "text-mining", self.crossref_config))
 
     def test_do_set_collection_empty_license(self):
         """test when an article has no license"""
-        article = create_aricle_object()
+        article = create_article_object()
         # create an empty license
         license_object = License()
         article.license = license_object
@@ -27,18 +27,10 @@ class TestSetCollection(unittest.TestCase):
 
     def test_do_set_collection_with_license(self):
         """test when an article has no license"""
-        article = create_aricle_object()
+        article = create_article_object()
         # create a license with a href value
         license_object = License()
         license_object.href = "http://example.org/license.txt"
         article.license = license_object
         # test assertion
         self.assertTrue(collection.do_set_collection(article, "text-mining", self.crossref_config))
-
-
-def create_aricle_object():
-    """create a basic article object"""
-    doi = "10.7554/eLife.00666"
-    title = "Test article"
-    article = Article(doi, title)
-    return article
