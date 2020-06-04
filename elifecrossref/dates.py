@@ -1,3 +1,4 @@
+import time
 from xml.etree.ElementTree import SubElement
 
 
@@ -16,3 +17,8 @@ def set_date_detail(parent, pub_date):
     day_tag.text = str(pub_date.tm_mday).zfill(2)
     year_tag = SubElement(parent, "year")
     year_tag.text = str(pub_date.tm_year)
+
+
+def iso_date_string(pub_date):
+    """format a date object into an iso format date string e.g. 2019-12-31"""
+    return time.strftime('%Y-%m-%d', pub_date) if pub_date else None
