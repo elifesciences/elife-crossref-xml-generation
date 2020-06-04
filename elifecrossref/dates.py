@@ -2,6 +2,26 @@ import time
 from xml.etree.ElementTree import SubElement
 
 
+def get_pub_date(poa_article, crossref_config, default_pub_date):
+    """
+    For using in XML generation, use the article pub date
+    or by default use the run time pub date
+    """
+    pub_date = None
+
+    for date_type in crossref_config.get('pub_date_types'):
+        pub_date_obj = poa_article.get_date(date_type)
+        if pub_date_obj:
+            break
+
+    if pub_date_obj:
+        pub_date = pub_date_obj.date
+    else:
+        # Default use the run time date
+        pub_date = default_pub_date
+    return pub_date
+
+
 def set_publication_date(parent, pub_date):
     # pub_date is a python time object
     if pub_date:

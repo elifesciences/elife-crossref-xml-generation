@@ -1,5 +1,5 @@
 from xml.etree.ElementTree import SubElement
-from elifecrossref import access_indicators, dates, funding, journal
+from elifecrossref import access_indicators, dates, funding
 
 
 # article types currently supported for depositing simple updates via Crossmark
@@ -73,5 +73,5 @@ def set_updates(parent, poa_article, crossref_config):
     update = SubElement(updates, 'update')
     update.set('type', poa_article.article_type)
     update.set('date', dates.iso_date_string(
-        journal.get_pub_date(poa_article, crossref_config, default_pub_date)))
+        dates.get_pub_date(poa_article, crossref_config, default_pub_date)))
     update.text = poa_article.related_articles[0].xlink_href
