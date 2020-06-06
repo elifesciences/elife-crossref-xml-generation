@@ -166,5 +166,4 @@ class TestSetCustomMetadata(unittest.TestCase):
             '</crossmark>')
         crossmark.set_custom_metadata(self.parent, self.article, self.crossref_config)
         rough_string = ElementTree.tostring(self.parent).decode('utf-8')
-        print(rough_string)
         self.assertEqual(rough_string, expected)
