@@ -1,10 +1,9 @@
 import unittest
 
-from elifearticle.article import Component, Citation, Dataset, Contributor, Affiliation
+from elifearticle.article import Article, Component, Citation, Dataset, Contributor, Affiliation
 
 from elifecrossref import generate
 from elifecrossref.conf import raw_config, parse_raw_config
-from tests import create_article_object
 
 
 class TestGenerateComponentList(unittest.TestCase):
@@ -14,7 +13,9 @@ class TestGenerateComponentList(unittest.TestCase):
 
     def test_component_subtitle_no_face_markup(self):
         """build an article object and component, generate Crossref XML"""
-        article = create_article_object()
+        doi = "10.7554/eLife.00666"
+        title = "Test article"
+        article = Article(doi, title)
         component = Component()
         component.title = "A component"
         component.subtitle = (
@@ -32,7 +33,9 @@ class TestGenerateComponentList(unittest.TestCase):
 
     def test_component_subtitle_with_face_markup(self):
         """build an article object and component, generate Crossref XML"""
-        article = create_article_object()
+        doi = "10.7554/eLife.00666"
+        title = "Test article"
+        article = Article(doi, title)
         component = Component()
         component.title = "A component"
         component.subtitle = (
@@ -65,7 +68,9 @@ class TestGenerateContributors(unittest.TestCase):
     def test_generate_no_contributors(self):
         """Test when an article has no contributors"""
         # build an article object and component, generate Crossref XML
-        article = create_article_object()
+        doi = "10.7554/eLife.00666"
+        title = "Test article"
+        article = Article(doi, title)
         # generate the crossrefXML
         c_xml = generate.build_crossref_xml([article])
         crossref_xml_string = c_xml.output_xml()
@@ -75,7 +80,9 @@ class TestGenerateContributors(unittest.TestCase):
 
     def test_generate_blank_affiliation(self):
         """Test when a contributor has a blank affiliation"""
-        article = create_article_object()
+        doi = "10.7554/eLife.00666"
+        title = "Test article"
+        article = Article(doi, title)
         author = Contributor('author', 'Surname', 'Given names')
         aff = Affiliation()
         aff.text = ''
@@ -120,7 +127,9 @@ class TestGenerateCrossrefSchemaVersion(unittest.TestCase):
     def generate_crossref_schema_version(self, crossref_schema_version, expected_snippet):
         """Test non-default crossref schema version"""
         # build an article object and component, generate Crossref XML
-        article = create_article_object()
+        doi = "10.7554/eLife.00666"
+        title = "Test article"
+        article = Article(doi, title)
         # load a config and override the value
         raw_config_object = raw_config('elife')
         original_schema_version = raw_config_object.get('crossref_schema_version')
@@ -143,7 +152,9 @@ class TestGenerateCrossrefCitationId(unittest.TestCase):
 
     def test_ref_list_citation_with_no_id(self):
         """for test coverage an article with a ref_list with a citation that has no id attribute"""
-        article = create_article_object()
+        doi = "10.7554/eLife.00666"
+        title = "Test article"
+        article = Article(doi, title)
         citation = Citation()
         citation.article_title = "An article title"
         article.ref_list = [citation]
@@ -161,7 +172,9 @@ class TestGenerateCrossrefCitationElocationId(unittest.TestCase):
         original_schema_version = raw_config_object.get('crossref_schema_version')
         raw_config_object['crossref_schema_version'] = '4.4.0'
         crossref_config = parse_raw_config(raw_config_object)
-        article = create_article_object()
+        doi = "10.7554/eLife.00666"
+        title = "Test article"
+        article = Article(doi, title)
         citation = Citation()
         citation.elocation_id = "e00003"
         article.ref_list = [citation]
@@ -179,7 +192,9 @@ class TestGenerateCrossrefDatasets(unittest.TestCase):
 
     def test_set_datasets(self):
         """a basic non-XML example for set_datasets"""
-        article = create_article_object()
+        doi = "10.7554/eLife.00666"
+        title = "Test article"
+        article = Article(doi, title)
         # dataset_1 example with a uri
         dataset_1 = Dataset()
         dataset_1.dataset_type = "datasets"
@@ -255,7 +270,9 @@ class TestGenerateCrossrefDataCitation(unittest.TestCase):
         for test coverage an article with a ref_list with a
         data citation that has a pmid attribute
         """
-        article = create_article_object()
+        doi = "10.7554/eLife.00666"
+        title = "Test article"
+        article = Article(doi, title)
         citation = Citation()
         citation.data_title = "An data title"
         citation.publication_type = "data"
@@ -283,7 +300,9 @@ class TestGenerateAbstract(unittest.TestCase):
 
     def test_set_abstract(self):
         """test stripping unwanted tags from abstract"""
-        article = create_article_object()
+        doi = "10.7554/eLife.00666"
+        title = "Test article"
+        article = Article(doi, title)
         article.abstract = self.abstract
         expected_contains = (
             '<jats:abstract><jats:p>An abstract. Desulfocapsa sulfexigens.' +
@@ -296,7 +315,9 @@ class TestGenerateAbstract(unittest.TestCase):
 
     def test_set_abstract_jats_abstract_format(self):
         """test the abstract using jats abstract format set to true"""
-        article = create_article_object()
+        doi = "10.7554/eLife.00666"
+        title = "Test article"
+        article = Article(doi, title)
         article.abstract = self.abstract
         expected_contains = (
             '<jats:abstract><jats:p><jats:bold><jats:italic><jats:underline><jats:sub><jats:sup>' +
@@ -327,7 +348,8 @@ class TestGenerateTitles(unittest.TestCase):
 
     def test_set_titles(self):
         """test stripping unwanted tags from title"""
-        article = create_article_object(title=self.title)
+        doi = "10.7554/eLife.00666"
+        article = Article(doi, self.title)
         expected_contains = (
             '<titles><title>Test article for Desulfocapsa sulfexigens</title></titles>')
         # generate
@@ -338,7 +360,8 @@ class TestGenerateTitles(unittest.TestCase):
 
     def test_set_titles_face_markup_format(self):
         """test the title using face markup set to true"""
-        article = create_article_object(title=self.title)
+        doi = "10.7554/eLife.00666"
+        article = Article(doi, self.title)
         expected_contains = (
             '<titles><title><b>Test article</b> for Desulfocapsa sulfexigens</title></titles>')
         # generate
