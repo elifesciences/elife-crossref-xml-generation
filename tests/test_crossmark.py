@@ -1,9 +1,9 @@
 import unittest
 from xml.etree import ElementTree
 from xml.etree.ElementTree import Element
-from elifearticle.article import FundingAward, License
+from elifearticle.article import Article, FundingAward, License
 from elifecrossref import crossmark
-from tests import create_article_object, create_crossref_config
+from tests import create_crossref_config
 
 
 class TestDoCrossmark(unittest.TestCase):
@@ -12,19 +12,18 @@ class TestDoCrossmark(unittest.TestCase):
         self.crossref_config = create_crossref_config()
 
     def test_do_crossref(self):
-        article = create_article_object()
+        article = Article('10.7554/eLife.00666')
         do_result = crossmark.do_crossmark(article, self.crossref_config)
         self.assertTrue(do_result)
 
     def test_do_crossref_false(self):
-        article = create_article_object()
+        article = Article('10.7554/eLife.00666')
         self.crossref_config['crossmark'] = False
         do_result = crossmark.do_crossmark(article, self.crossref_config)
         self.assertFalse(do_result)
 
     def test_do_crossref_no_doi(self):
-        article = create_article_object()
-        article.doi = None
+        article = Article()
         do_result = crossmark.do_crossmark(article, self.crossref_config)
         self.assertFalse(do_result)
 
@@ -33,7 +32,7 @@ class TestSetCrossmark(unittest.TestCase):
 
     def setUp(self):
         self.crossref_config = create_crossref_config()
-        self.article = create_article_object()
+        self.article = Article('10.7554/eLife.00666')
         self.parent = Element('journal_article')
 
     def test_set_crossmark(self):
@@ -97,7 +96,7 @@ class TestDoCustomMetadata(unittest.TestCase):
 
     def setUp(self):
         self.crossref_config = create_crossref_config()
-        self.article = create_article_object()
+        self.article = Article()
 
     def test_do_custom_metadata(self):
         self.assertFalse(crossmark.do_custom_metadata(self.article, self.crossref_config))
@@ -117,7 +116,7 @@ class TestSetCustomMetadata(unittest.TestCase):
 
     def setUp(self):
         self.crossref_config = create_crossref_config()
-        self.article = create_article_object()
+        self.article = Article()
         article_license = License()
         article_license.href = 'https://example.org'
         self.article.license = article_license
