@@ -138,51 +138,62 @@
 					<item_number item_number_type="article_number">e00508</item_number>
 					<identifier id_type="doi">10.7554/eLife.00508</identifier>
 				</publisher_item>
-				<fr:program name="fundref">
-					<fr:assertion name="fundgroup">
-						<fr:assertion name="funder_name">National Institutes of Health</fr:assertion>
-						<fr:assertion name="award_number">DA023904</fr:assertion>
-					</fr:assertion>
-					<fr:assertion name="fundgroup">
-						<fr:assertion name="funder_name">CIRM</fr:assertion>
-						<fr:assertion name="award_number">GUO-RS1-00215-1</fr:assertion>
-					</fr:assertion>
-					<fr:assertion name="fundgroup">
-						<fr:assertion name="funder_name">Howard Hughes Medical Institute</fr:assertion>
-					</fr:assertion>
-					<fr:assertion name="fundgroup">
-						<fr:assertion name="funder_name">National Institutes of Health</fr:assertion>
-						<fr:assertion name="award_number">MH065334</fr:assertion>
-					</fr:assertion>
-					<fr:assertion name="fundgroup">
-						<fr:assertion name="funder_name">UCSF QB3-Malaysia Program</fr:assertion>
-					</fr:assertion>
-					<fr:assertion name="fundgroup">
-						<fr:assertion name="funder_name">National Institutes of Health</fr:assertion>
-						<fr:assertion name="award_number">R01CA102321, P01CA081403</fr:assertion>
-					</fr:assertion>
-					<fr:assertion name="fundgroup">
-						<fr:assertion name="funder_name">American Cancer Society</fr:assertion>
-						<fr:assertion name="award_number">PF-13-295-01-TBG</fr:assertion>
-					</fr:assertion>
-					<fr:assertion name="fundgroup">
-						<fr:assertion name="funder_name">National Institutes of Health</fr:assertion>
-						<fr:assertion name="award_number">U24 NS078370</fr:assertion>
-					</fr:assertion>
-					<fr:assertion name="fundgroup">
-						<fr:assertion name="funder_name">CIRM</fr:assertion>
-						<fr:assertion name="award_number">RB4-06079</fr:assertion>
-					</fr:assertion>
-					<fr:assertion name="fundgroup">
-						<fr:assertion name="funder_name">Chinese Ministry of Science and Technology</fr:assertion>
-						<fr:assertion name="award_number">2013CB945301</fr:assertion>
-					</fr:assertion>
-				</fr:program>
-				<ai:program name="AccessIndicators">
-					<ai:license_ref applies_to="vor">http://creativecommons.org/licenses/by/3.0/</ai:license_ref>
-					<ai:license_ref applies_to="am">http://creativecommons.org/licenses/by/3.0/</ai:license_ref>
-					<ai:license_ref applies_to="tdm">http://creativecommons.org/licenses/by/3.0/</ai:license_ref>
-				</ai:program>
+				<crossmark>
+					<crossmark_policy>10.7554/eLife.00508</crossmark_policy>
+					<crossmark_domains>
+						<crossmark_domain>
+							<domain>elifesciences.org</domain>
+						</crossmark_domain>
+					</crossmark_domains>
+					<crossmark_domain_exclusive>false</crossmark_domain_exclusive>
+					<custom_metadata>
+						<fr:program name="fundref">
+							<fr:assertion name="fundgroup">
+								<fr:assertion name="funder_name">National Institutes of Health</fr:assertion>
+								<fr:assertion name="award_number">DA023904</fr:assertion>
+							</fr:assertion>
+							<fr:assertion name="fundgroup">
+								<fr:assertion name="funder_name">CIRM</fr:assertion>
+								<fr:assertion name="award_number">GUO-RS1-00215-1</fr:assertion>
+							</fr:assertion>
+							<fr:assertion name="fundgroup">
+								<fr:assertion name="funder_name">Howard Hughes Medical Institute</fr:assertion>
+							</fr:assertion>
+							<fr:assertion name="fundgroup">
+								<fr:assertion name="funder_name">National Institutes of Health</fr:assertion>
+								<fr:assertion name="award_number">MH065334</fr:assertion>
+							</fr:assertion>
+							<fr:assertion name="fundgroup">
+								<fr:assertion name="funder_name">UCSF QB3-Malaysia Program</fr:assertion>
+							</fr:assertion>
+							<fr:assertion name="fundgroup">
+								<fr:assertion name="funder_name">National Institutes of Health</fr:assertion>
+								<fr:assertion name="award_number">R01CA102321, P01CA081403</fr:assertion>
+							</fr:assertion>
+							<fr:assertion name="fundgroup">
+								<fr:assertion name="funder_name">American Cancer Society</fr:assertion>
+								<fr:assertion name="award_number">PF-13-295-01-TBG</fr:assertion>
+							</fr:assertion>
+							<fr:assertion name="fundgroup">
+								<fr:assertion name="funder_name">National Institutes of Health</fr:assertion>
+								<fr:assertion name="award_number">U24 NS078370</fr:assertion>
+							</fr:assertion>
+							<fr:assertion name="fundgroup">
+								<fr:assertion name="funder_name">CIRM</fr:assertion>
+								<fr:assertion name="award_number">RB4-06079</fr:assertion>
+							</fr:assertion>
+							<fr:assertion name="fundgroup">
+								<fr:assertion name="funder_name">Chinese Ministry of Science and Technology</fr:assertion>
+								<fr:assertion name="award_number">2013CB945301</fr:assertion>
+							</fr:assertion>
+						</fr:program>
+						<ai:program name="AccessIndicators">
+							<ai:license_ref applies_to="vor">http://creativecommons.org/licenses/by/3.0/</ai:license_ref>
+							<ai:license_ref applies_to="am">http://creativecommons.org/licenses/by/3.0/</ai:license_ref>
+							<ai:license_ref applies_to="tdm">http://creativecommons.org/licenses/by/3.0/</ai:license_ref>
+						</ai:program>
+					</custom_metadata>
+				</crossmark>
 				<archive_locations>
 					<archive name="CLOCKSS"/>
 				</archive_locations>

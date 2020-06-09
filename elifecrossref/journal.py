@@ -10,7 +10,7 @@ def set_journal(parent, poa_article, crossref_config, default_pub_date):
 
     journal_issue_tag = SubElement(journal_tag, 'journal_issue')
 
-    pub_date = get_pub_date(poa_article, crossref_config, default_pub_date)
+    pub_date = dates.get_pub_date(poa_article, crossref_config, default_pub_date)
     dates.set_publication_date(journal_issue_tag, pub_date)
 
     journal_volume_tag = SubElement(journal_issue_tag, 'journal_volume')
@@ -36,23 +36,3 @@ def set_journal_metadata(parent, poa_article):
     issn_tag = SubElement(journal_metadata_tag, 'issn')
     issn_tag.set("media_type", "electronic")
     issn_tag.text = poa_article.journal_issn
-
-
-def get_pub_date(poa_article, crossref_config, default_pub_date):
-    """
-    For using in XML generation, use the article pub date
-    or by default use the run time pub date
-    """
-    pub_date = None
-
-    for date_type in crossref_config.get('pub_date_types'):
-        pub_date_obj = poa_article.get_date(date_type)
-        if pub_date_obj:
-            break
-
-    if pub_date_obj:
-        pub_date = pub_date_obj.date
-    else:
-        # Default use the run time date
-        pub_date = default_pub_date
-    return pub_date

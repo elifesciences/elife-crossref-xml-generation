@@ -70,24 +70,35 @@
 					<item_number item_number_type="article_number">e11134</item_number>
 					<identifier id_type="doi">10.7554/eLife.11134</identifier>
 				</publisher_item>
-				<fr:program name="fundref">
-					<fr:assertion name="fundgroup">
-						<fr:assertion name="funder_name">Medical Research Counc</fr:assertion>
-						<fr:assertion name="award_number">U105197143</fr:assertion>
-					</fr:assertion>
-					<fr:assertion name="fundgroup">
-						<fr:assertion name="funder_name">
-							Medical Research Council
-							<fr:assertion name="funder_identifier">http://dx.doi.org/10.13039/501100000265</fr:assertion>
-						</fr:assertion>
-						<fr:assertion name="award_number">MC_UP_A025_1013</fr:assertion>
-					</fr:assertion>
-				</fr:program>
-				<ai:program name="AccessIndicators">
-					<ai:license_ref applies_to="vor">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
-					<ai:license_ref applies_to="am">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
-					<ai:license_ref applies_to="tdm">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
-				</ai:program>
+				<crossmark>
+					<crossmark_policy>10.7554/eLife.11134</crossmark_policy>
+					<crossmark_domains>
+						<crossmark_domain>
+							<domain>elifesciences.org</domain>
+						</crossmark_domain>
+					</crossmark_domains>
+					<crossmark_domain_exclusive>false</crossmark_domain_exclusive>
+					<custom_metadata>
+						<fr:program name="fundref">
+							<fr:assertion name="fundgroup">
+								<fr:assertion name="funder_name">Medical Research Counc</fr:assertion>
+								<fr:assertion name="award_number">U105197143</fr:assertion>
+							</fr:assertion>
+							<fr:assertion name="fundgroup">
+								<fr:assertion name="funder_name">
+									Medical Research Council
+									<fr:assertion name="funder_identifier">http://dx.doi.org/10.13039/501100000265</fr:assertion>
+								</fr:assertion>
+								<fr:assertion name="award_number">MC_UP_A025_1013</fr:assertion>
+							</fr:assertion>
+						</fr:program>
+						<ai:program name="AccessIndicators">
+							<ai:license_ref applies_to="vor">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+							<ai:license_ref applies_to="am">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+							<ai:license_ref applies_to="tdm">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+						</ai:program>
+					</custom_metadata>
+				</crossmark>
 				<archive_locations>
 					<archive name="CLOCKSS"/>
 				</archive_locations>

@@ -1,7 +1,7 @@
 from xml.etree.ElementTree import SubElement
 from elifecrossref import (
     abstract, access_indicators, citation, component, contributor,
-    dataset, dates, doi, funding, related, title)
+    crossmark, dataset, dates, doi, funding, related, title)
 
 
 def set_journal_article(parent, poa_article, pub_date, crossref_config):
@@ -34,12 +34,12 @@ def set_journal_article(parent, poa_article, pub_date, crossref_config):
     identifier_tag.set("id_type", "doi")
     identifier_tag.text = poa_article.doi
 
-    # Disable crossmark for now
-    # self.set_crossmark(self.journal_article, poa_article)
-
-    funding.set_fundref(journal_article_tag, poa_article)
-
-    set_access_indicators(journal_article_tag, poa_article, crossref_config)
+    # Crossmark data includes funding and access indicators, otherwise add them separately
+    if crossmark.do_crossmark(poa_article, crossref_config):
+        crossmark.set_crossmark(journal_article_tag, poa_article, crossref_config)
+    else:
+        funding.set_fundref(journal_article_tag, poa_article)
+        access_indicators.set_access_indicators(journal_article_tag, poa_article, crossref_config)
 
     # this is the spot to add the relations program tag if it is required
     relations_program_tag = None
@@ -58,22 +58,6 @@ def set_journal_article(parent, poa_article, pub_date, crossref_config):
         journal_article_tag, poa_article, relations_program_tag, crossref_config)
 
     component.set_component_list(journal_article_tag, poa_article, crossref_config)
-
-
-def set_access_indicators(parent, poa_article, crossref_config):
-    """
-    Set the AccessIndicators
-    """
-
-    applies_to_list = crossref_config.get("access_indicators_applies_to")
-
-    if applies_to_list and access_indicators.has_license(poa_article) is True:
-
-        ai_program_tag = access_indicators.set_ai_program(parent)
-
-        for applies_to in applies_to_list:
-            access_indicators.set_ai_license_ref(
-                ai_program_tag, poa_article.license.href, applies_to)
 
 
 def set_archive_locations(parent, archive_locations):

@@ -3,8 +3,7 @@ import time
 import os
 from elifearticle.article import Article, ArticleDate, Contributor, License
 from elifecrossref import generate
-from elifecrossref.conf import raw_config, parse_raw_config
-from tests import TEST_BASE_PATH, TEST_DATA_PATH, read_file_content
+from tests import TEST_BASE_PATH, TEST_DATA_PATH, read_file_content, create_crossref_config
 
 
 generate.TMP_DIR = TEST_BASE_PATH + "tmp" + os.sep
@@ -89,7 +88,7 @@ class TestGeneratePeerReview(unittest.TestCase):
             articles[0].review_articles = sample_data()
             crossref_config = None
             if config_section:
-                crossref_config = parse_raw_config(raw_config(config_section))
+                crossref_config = create_crossref_config(config_section)
             crossref_xml = generate.crossref_xml(articles, crossref_config, pub_date, False,
                                                  'peer_review', pretty=True, indent="    ")
             model_crossref_xml = read_file_content(TEST_DATA_PATH + crossref_xml_file)

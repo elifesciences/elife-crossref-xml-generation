@@ -75,40 +75,51 @@
 					<item_number item_number_type="article_number">e08206</item_number>
 					<identifier id_type="doi">10.7554/eLife.08206</identifier>
 				</publisher_item>
-				<fr:program name="fundref">
-					<fr:assertion name="fundgroup">
-						<fr:assertion name="funder_name">
-							National Institute of Neurological Disorders and Stroke
-							<fr:assertion name="funder_identifier">http://dx.doi.org/10.13039/100000065</fr:assertion>
-						</fr:assertion>
-						<fr:assertion name="award_number">Intramural Research Program (NS003133)</fr:assertion>
-					</fr:assertion>
-					<fr:assertion name="fundgroup">
-						<fr:assertion name="funder_name">
-							National Eye Institute
-							<fr:assertion name="funder_identifier">http://dx.doi.org/10.13039/100000053</fr:assertion>
-						</fr:assertion>
-						<fr:assertion name="award_number">EY017836</fr:assertion>
-					</fr:assertion>
-					<fr:assertion name="fundgroup">
-						<fr:assertion name="funder_name">
-							Pew Charitable Trusts
-							<fr:assertion name="funder_identifier">http://dx.doi.org/10.13039/100000875</fr:assertion>
-						</fr:assertion>
-						<fr:assertion name="award_number">Pew Scholars Program in the Biomedical Sciences</fr:assertion>
-					</fr:assertion>
-					<fr:assertion name="fundgroup">
-						<fr:assertion name="funder_name">
-							Max-Planck-Gesellschaft
-							<fr:assertion name="funder_identifier">http://dx.doi.org/10.13039/501100004189</fr:assertion>
-						</fr:assertion>
-					</fr:assertion>
-				</fr:program>
-				<ai:program name="AccessIndicators">
-					<ai:license_ref applies_to="vor">http://creativecommons.org/publicdomain/zero/1.0/</ai:license_ref>
-					<ai:license_ref applies_to="am">http://creativecommons.org/publicdomain/zero/1.0/</ai:license_ref>
-					<ai:license_ref applies_to="tdm">http://creativecommons.org/publicdomain/zero/1.0/</ai:license_ref>
-				</ai:program>
+				<crossmark>
+					<crossmark_policy>10.7554/eLife.08206</crossmark_policy>
+					<crossmark_domains>
+						<crossmark_domain>
+							<domain>elifesciences.org</domain>
+						</crossmark_domain>
+					</crossmark_domains>
+					<crossmark_domain_exclusive>false</crossmark_domain_exclusive>
+					<custom_metadata>
+						<fr:program name="fundref">
+							<fr:assertion name="fundgroup">
+								<fr:assertion name="funder_name">
+									National Institute of Neurological Disorders and Stroke
+									<fr:assertion name="funder_identifier">http://dx.doi.org/10.13039/100000065</fr:assertion>
+								</fr:assertion>
+								<fr:assertion name="award_number">Intramural Research Program (NS003133)</fr:assertion>
+							</fr:assertion>
+							<fr:assertion name="fundgroup">
+								<fr:assertion name="funder_name">
+									National Eye Institute
+									<fr:assertion name="funder_identifier">http://dx.doi.org/10.13039/100000053</fr:assertion>
+								</fr:assertion>
+								<fr:assertion name="award_number">EY017836</fr:assertion>
+							</fr:assertion>
+							<fr:assertion name="fundgroup">
+								<fr:assertion name="funder_name">
+									Pew Charitable Trusts
+									<fr:assertion name="funder_identifier">http://dx.doi.org/10.13039/100000875</fr:assertion>
+								</fr:assertion>
+								<fr:assertion name="award_number">Pew Scholars Program in the Biomedical Sciences</fr:assertion>
+							</fr:assertion>
+							<fr:assertion name="fundgroup">
+								<fr:assertion name="funder_name">
+									Max-Planck-Gesellschaft
+									<fr:assertion name="funder_identifier">http://dx.doi.org/10.13039/501100004189</fr:assertion>
+								</fr:assertion>
+							</fr:assertion>
+						</fr:program>
+						<ai:program name="AccessIndicators">
+							<ai:license_ref applies_to="vor">http://creativecommons.org/publicdomain/zero/1.0/</ai:license_ref>
+							<ai:license_ref applies_to="am">http://creativecommons.org/publicdomain/zero/1.0/</ai:license_ref>
+							<ai:license_ref applies_to="tdm">http://creativecommons.org/publicdomain/zero/1.0/</ai:license_ref>
+						</ai:program>
+					</custom_metadata>
+				</crossmark>
 				<rel:program>
 					<rel:related_item>
 						<rel:description>Extracellular space preservation aids the connectomic analysis of neural circuits</rel:description>

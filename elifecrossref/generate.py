@@ -140,7 +140,7 @@ def build_articles_for_crossref(article_xmls, detail='full', build_parts=None):
     """specify some detail and build_parts specific to generating crossref output"""
     build_parts = [
         'abstract', 'basic', 'components', 'contributors', 'funding', 'datasets',
-        'license', 'pub_dates', 'references', 'volume', 'sub_articles']
+        'license', 'pub_dates', 'references', 'related_articles', 'volume', 'sub_articles']
     return build_articles(article_xmls, detail, build_parts)
 
 
