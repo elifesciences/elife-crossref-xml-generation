@@ -70,8 +70,17 @@ def set_updates(parent, poa_article, crossref_config):
     default_pub_date = None
 
     updates = SubElement(parent, 'updates')
-    update = SubElement(updates, 'update')
-    update.set('type', poa_article.article_type)
-    update.set('date', dates.iso_date_string(
-        dates.get_pub_date(poa_article, crossref_config, default_pub_date)))
-    update.text = poa_article.related_articles[0].xlink_href
+    if poa_article.article_type in UPDATES_ARTICLE_TYPES:
+        set_update(
+            updates,
+            poa_article.article_type,
+            dates.iso_date_string(
+                dates.get_pub_date(poa_article, crossref_config, default_pub_date)),
+            poa_article.related_articles[0].xlink_href)
+
+
+def set_update(parent, article_type, date, doi):
+    update = SubElement(parent, 'update')
+    update.set('type', article_type)
+    update.set('date', date)
+    update.text = doi
