@@ -16,7 +16,8 @@ setup(
         "elifetools",
         "elifearticle",
         "GitPython",
-        "configparser"
+        "configparser",
+        "requests"
     ],
     url='https://github.com/elifesciences/elife-crossref-xml-generation',
     maintainer='eLife Sciences Publications Ltd.',
