@@ -4,6 +4,16 @@ from xml.etree.ElementTree import SubElement
 import requests
 
 
+# to convert to Crossref type values they accept
+CONTENT_TYPE_MAP = {
+    'pre-results': 'preResults',
+    'preResults': 'preResults',
+    'results': 'results',
+    'post-results': 'postResults',
+    'postResults': 'postResults',
+}
+
+
 def do_clinical_trials(poa_article):
     return bool(
         hasattr(poa_article, 'clinical_trials')
@@ -40,8 +50,9 @@ def set_clinical_trials(parent, poa_article, crossref_config):
             clinical_trial_number = SubElement(ai_program_tag, 'ct:clinical-trial-number')
             clinical_trial_number.set(
                 'registry', clinical_trial.get_registry_doi(name_to_doi_map))
-            if clinical_trial.content_type:
-                clinical_trial_number.set('type', clinical_trial.content_type)
+            if clinical_trial.content_type and clinical_trial.content_type in CONTENT_TYPE_MAP:
+                clinical_trial_number.set(
+                    'type', CONTENT_TYPE_MAP.get(clinical_trial.content_type))
             clinical_trial_number.text = clinical_trial.document_id
 
 

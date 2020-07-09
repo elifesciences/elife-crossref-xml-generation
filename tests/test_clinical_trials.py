@@ -53,6 +53,33 @@ class TestSetClinicalTrials(unittest.TestCase):
         rough_string = ElementTree.tostring(parent).decode('utf-8')
         self.assertEqual(rough_string, expected)
 
+    @patch.object(clinical_trials, 'registry_name_to_doi_map')
+    def test_set_clinical_trials_edge_case(self, fake_name_map):
+        """test edge case of crossref-doi type and alternate content-type value"""
+        fake_name_map.return_value = OrderedDict([
+            ('ClinicalTrials.gov', '10.18810/clinical-trials-gov')
+        ])
+        parent = Element('custom_metadata')
+        article = Article('10.7554/eLife.00666')
+        clinical_trial = ClinicalTrial()
+        clinical_trial.source_id = '10.18810/clinical-trials-gov'
+        clinical_trial.source_id_type = 'crossref-doi'
+        clinical_trial.document_id = 'TEST999'
+        clinical_trial.content_type = 'post-results'
+        article.clinical_trials = [clinical_trial]
+        expected = (
+            '<custom_metadata>'
+            '<ct:program>'
+            '<ct:clinical-trial-number registry="10.18810/clinical-trials-gov" type="postResults">'
+            'TEST999'
+            '</ct:clinical-trial-number>'
+            '</ct:program>'
+            '</custom_metadata>')
+        clinical_trials.set_clinical_trials(
+            parent, article, {'clinical_trials_registries': 'https://doi.org/10.18810/registries'})
+        rough_string = ElementTree.tostring(parent).decode('utf-8')
+        self.assertEqual(rough_string, expected)
+
 
 class TestRegistryNameMap(unittest.TestCase):
 
