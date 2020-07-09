@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<crossref_result xmlns="http://www.crossref.org/qrschema/3.0" version="3.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.crossref.org/qrschema/3.0 http://www.crossref.org/schemas/crossref_query_output3.0.xsd">
+  <query_result>
+    <head>
+      <doi_batch_id>none</doi_batch_id>
+    </head>
+    <body>
+      <query status="resolved">
+        <doi type="database_title">10.18810/registries</doi>
+        <crm-item name="citation-id" type="number">79733956</crm-item>
+        <crm-item name="book-id" type="number">2072611</crm-item>
+        <crm-item name="deposit-timestamp" type="number">202001710801</crm-item>
+        <crm-item name="owner-prefix" type="string">10.18810</crm-item>
+        <crm-item name="last-update" type="date">2020-04-07T11:31:23Z</crm-item>
+        <crm-item name="created" type="date">2016-01-04T18:36:51Z</crm-item>
+        <crm-item name="citedby-count" type="number">0</crm-item>
+        <doi_record>
+          <crossref xmlns="http://www.crossref.org/xschema/1.1" xsi:schemaLocation="http://www.crossref.org/xschema/1.1 http://doi.crossref.org/schemas/unixref1.1.xsd">
+            <database>
+              <database_metadata language="en">
+                <titles>
+                  <title>CrossRef clinical trials registries</title>
+                </titles>
+                <doi_data>
+                  <doi>10.18810/registries</doi>
+                  <resource>http://api.crossref.org/works/10.18810/registries.xml</resource>
+                </doi_data>
+              </database_metadata>
+              <component_list>
+                <component parent_relation="isPartOf">
+                  <titles>
+                    <title>Uniform Trial Number</title>
+                    <subtitle>UTN</subtitle>
+                  </titles>
+                  <publication_date>
+                    <month>10</month>
+                    <day>13</day>
+                    <year>2015</year>
+                  </publication_date>
+                  <description>Uniform Trial Number</description>
+                  <format mime_type="application/regex.clinical-trial-number">u[\d-]+</format>
+                  <doi_data>
+                    <doi>10.18810/utn</doi>
+                    <resource>http://api.crossref.org/works/10.18810/utn.xml</resource>
+                    <collection property="unspecified">
+                      <item>
+                        <resource>http://www.who.int/ictrp/unambiguous_identification/en/</resource>
+                      </item>
+                    </collection>
+                  </doi_data>
+                </component>
+                <component parent_relation="isPartOf">
+                  <titles>
+                    <title>ClinicalTrials.gov</title>
+                    <subtitle>ClinicalTrials.gov</subtitle>
+                    <!--  ??? same name and short???  -->
+                  </titles>
+                  <publication_date>
+                    <month>10</month>
+                    <day>13</day>
+                    <year>2015</year>
+                  </publication_date>
+                  <description>ClinicalTrials.gov</description>
+                  <format mime_type="application/regex.clinical-trial-number">nct\d+</format>
+                  <doi_data>
+                    <doi>10.18810/clinical-trials-gov</doi>
+                    <resource>http://api.crossref.org/works/10.18810/clinical-trials-gov.xml</resource>
+                    <collection property="unspecified">
+                      <item>
+                        <resource>http://www.clinicaltrials.gov/</resource>
+                      </item>
+                    </collection>
+                  </doi_data>
+                </component>
+                <component parent_relation="isPartOf">
+                  <titles>
+                    <title>ISRCTN.org</title>
+                    <subtitle>ISRCTN</subtitle>
+                  </titles>
+                  <publication_date>
+                    <month>10</month>
+                    <day>13</day>
+                    <year>2015</year>
+                  </publication_date>
+                  <description>ISRCTN.org</description>
+                  <format mime_type="application/regex.clinical-trial-number">isrctn\d+</format>
+                  <doi_data>
+                    <doi>10.18810/isrctn</doi>
+                    <resource>http://api.crossref.org/works/10.18810/isrctn.xml</resource>
+                    <collection property="unspecified">
+                      <item>
+                        <resource>http://www.isrctn.com/</resource>
+                      </item>
+                    </collection>
+                  </doi_data>
+                </component>
+                <component parent_relation="isPartOf">
+                  <titles>
+                    <title>Australian New Zealand Clinical Trials Registry</title>
+                    <subtitle>ANZCTR</subtitle>
+                  </titles>
+                  <publication_date>
+                    <month>10</month>
+                    <day>13</day>
+                    <year>2015</year>
+                  </publication_date>
+                  <description>Australian New Zealand Clinical Trials Registry</description>
+                  <format mime_type="application/regex.clinical-trial-number">actrn\d+</format>
+                  <doi_data>
+                    <doi>10.18810/anzctr</doi>
+                    <resource>http://api.crossref.org/works/10.18810/anzctr.xml</resource>
+                    <collection property="unspecified">
+                      <item>
+                        <resource>http://www.anzctr.org.au/</resource>
+                      </item>
+                    </collection>
+                  </doi_data>
+                </component>
+                <component parent_relation="isPartOf">
+                  <titles>
+                    <title>German Clinical Trials Register</title>
+                    <subtitle>DRKS</subtitle>
+                  </titles>
+                  <publication_date>
+                    <month>10</month>
+                    <day>13</day>
+                    <year>2015</year>
+                  </publication_date>
+                  <description>German Clinical Trials Register</description>
+                  <format mime_type="application/regex.clinical-trial-number">drks\d+</format>
+                  <doi_data>
+                    <doi>10.18810/drks</doi>
+                    <resource>http://api.crossref.org/works/10.18810/drks.xml</resource>
+                    <collection property="unspecified">
+                      <item>
+                        <resource>https://drks-neu.uniklinik-freiburg.de/</resource>
+                      </item>
+                    </collection>
+                  </doi_data>
+                </component>
+                <component parent_relation="isPartOf">
+                  <titles>
+                    <title>Chinese Clinical Trial Registry</title>
+                    <subtitle>ChiCTR</subtitle>
+                  </titles>
+                  <publication_date>
+                    <month>10</month>
+                    <day>13</day>
+                    <year>2015</year>
+                  </publication_date>
+                  <description>Chinese Clinical Trial Registry</description>
+                  <format mime_type="application/regex.clinical-trial-number">(?i)chictr[-a-z]*\d+</format>
+                  <doi_data>
+                    <doi>10.18810/chictr</doi>
+                    <resource>http://api.crossref.org/works/10.18810/chictr.xml</resource>
+                    <collection property="unspecified">
+                      <item>
+                        <resource>http://www.chictr.org/</resource>
+                      </item>
+                    </collection>
+                  </doi_data>
+                </component>
+                <component parent_relation="isPartOf">
+                  <titles>
+                    <title>Brazilian Clinical Trials Registry / Registro Brasileiro de Ensaios Clínicos</title>
+                    <subtitle>ReBec</subtitle>
+                  </titles>
+                  <publication_date>
+                    <month>10</month>
+                    <day>13</day>
+                    <year>2015</year>
+                  </publication_date>
+                  <description>Brazilian Clinical Trials Registry</description>
+                  <format mime_type="application/regex.clinical-trial-number">rbr\d+</format>
+                  <doi_data>
+                    <doi>10.18810/rebec</doi>
+                    <resource>http://api.crossref.org/works/10.18810/rebec.xml</resource>
+                    <collection property="unspecified">
+                      <item>
+                        <resource>http://www.ensaiosclinicos.gov.br/</resource>
+                      </item>
+                    </collection>
+                  </doi_data>
+                </component>
+                <component parent_relation="isPartOf">
+                  <titles>
+                    <title>Netherlands National Trial Register</title>
+                    <subtitle>NTR</subtitle>
+                  </titles>
+                  <publication_date>
+                    <month>10</month>
+                    <day>13</day>
+                    <year>2015</year>
+                  </publication_date>
+                  <description>etherlands National Trial Register</description>
+                  <format mime_type="application/regex.clinical-trial-number">ntr[-0-9]+</format>
+                  <doi_data>
+                    <doi>10.18810/dutch-trial-register</doi>
+                    <resource>http://api.crossref.org/works/10.18810/dutch-trial-register.xml</resource>
+                    <collection property="unspecified">
+                      <item>
+                        <resource>http://www.trialregister.nl</resource>
+                      </item>
+                    </collection>
+                  </doi_data>
+                </component>
+                <component parent_relation="isPartOf">
+                  <titles>
+                    <title>Clinical Trials Registry India</title>
+                    <subtitle>CTRI</subtitle>
+                  </titles>
+                  <publication_date>
+                    <month>10</month>
+                    <day>13</day>
+                    <year>2015</year>
+                  </publication_date>
+                  <description>Clinical Trials Registry India</description>
+                  <format mime_type="application/regex.clinical-trial-number">ctri[\d/]+</format>
+                  <doi_data>
+                    <doi>10.18810/clinical-trial-registry-india</doi>
+                    <resource>http://api.crossref.org/works/10.18810/clinical-trial-registry-india.xml</resource>
+                    <collection property="unspecified">
+                      <item>
+                        <resource>http://www.ctri.nic.in/Clinicaltrials</resource>
+                      </item>
+                    </collection>
+                  </doi_data>
+                </component>
+                <component parent_relation="isPartOf">
+                  <titles>
+                    <title>UMIN Japan</title>
+                    <subtitle>UMIN</subtitle>
+                  </titles>
+                  <publication_date>
+                    <month>10</month>
+                    <day>13</day>
+                    <year>2015</year>
+                  </publication_date>
+                  <description>UMIN Japan</description>
+                  <format mime_type="application/regex.clinical-trial-number">umin\d+</format>
+                  <doi_data>
+                    <doi>10.18810/umin-japan</doi>
+                    <resource>http://api.crossref.org/works/10.18810/umin-japan.xml</resource>
+                    <collection property="unspecified">
+                      <item>
+                        <resource>http://www.umin.ac.jp/english/</resource>
+                      </item>
+                    </collection>
+                  </doi_data>
+                </component>
+                <component parent_relation="isPartOf">
+                  <titles>
+                    <title>Pan African Clinical Trial Registry</title>
+                    <subtitle>PACTR</subtitle>
+                  </titles>
+                  <publication_date>
+                    <month>10</month>
+                    <day>13</day>
+                    <year>2015</year>
+                  </publication_date>
+                  <description>Pan African Clinical Trial Registry</description>
+                  <format mime_type="application/regex.clinical-trial-number">pactr\d+</format>
+                  <doi_data>
+                    <doi>10.18810/pactr</doi>
+                    <resource>http://api.crossref.org/works/10.18810/pactr.xml</resource>
+                    <collection property="unspecified">
+                      <item>
+                        <resource>http://www.pactr.org/</resource>
+                      </item>
+                    </collection>
+                  </doi_data>
+                </component>
+                <component parent_relation="isPartOf">
+                  <titles>
+                    <title>Sri Lanka Clinical Trials Registry</title>
+                    <subtitle>SLCTR</subtitle>
+                  </titles>
+                  <publication_date>
+                    <month>10</month>
+                    <day>13</day>
+                    <year>2015</year>
+                  </publication_date>
+                  <description>Sri Lanka Clinical Trials Registry</description>
+                  <format mime_type="application/regex.clinical-trial-number">slctr[\d/]+</format>
+                  <doi_data>
+                    <doi>10.18810/slctr</doi>
+                    <resource>http://api.crossref.org/works/10.18810/slctr.xml</resource>
+                    <collection property="unspecified">
+                      <item>
+                        <resource>http://slctr.lk/</resource>
+                      </item>
+                    </collection>
+                  </doi_data>
+                </component>
+                <component parent_relation="isPartOf">
+                  <titles>
+                    <title>Japan Medical Association Clinical Trial Registry</title>
+                    <subtitle>JMACCT</subtitle>
+                  </titles>
+                  <publication_date>
+                    <month>10</month>
+                    <day>13</day>
+                    <year>2015</year>
+                  </publication_date>
+                  <description>Japan Medical Association Clinical Trial Registry</description>
+                  <format mime_type="application/regex.clinical-trial-number" />
+                  <doi_data>
+                    <doi>10.18810/jma</doi>
+                    <resource>http://api.crossref.org/works/10.18810/jma.xml</resource>
+                    <collection property="unspecified">
+                      <item>
+                        <resource>http://www.jmacct.med.or.jp/</resource>
+                      </item>
+                    </collection>
+                  </doi_data>
+                </component>
+                <component parent_relation="isPartOf">
+                  <titles>
+                    <title>Iranian Registry of Clinical Trials</title>
+                    <subtitle>IRCT</subtitle>
+                  </titles>
+                  <publication_date>
+                    <month>10</month>
+                    <day>13</day>
+                    <year>2015</year>
+                  </publication_date>
+                  <description>Iranian Registry of Clinical Trials</description>
+                  <format mime_type="application/regex.clinical-trial-number">irct[0-9a-z]+</format>
+                  <doi_data>
+                    <doi>10.18810/irct</doi>
+                    <resource>http://api.crossref.org/works/10.18810/irct.xml</resource>
+                    <collection property="unspecified">
+                      <item>
+                        <resource>http://irct.ir/</resource>
+                      </item>
+                    </collection>
+                  </doi_data>
+                </component>
+                <component parent_relation="isPartOf">
+                  <titles>
+                    <title>Clinical Research Information Service, Republic of Korea</title>
+                    <subtitle>CRiS</subtitle>
+                  </titles>
+                  <publication_date>
+                    <month>10</month>
+                    <day>13</day>
+                    <year>2015</year>
+                  </publication_date>
+                  <description>Clinical Research Information Service, Republic of Korea</description>
+                  <format mime_type="application/regex.clinical-trial-number">kct\d+</format>
+                  <doi_data>
+                    <doi>10.18810/cris</doi>
+                    <resource>http://api.crossref.org/works/10.18810/cris.xml</resource>
+                    <collection property="unspecified">
+                      <item>
+                        <resource>https://cris.nih.go.kr</resource>
+                      </item>
+                    </collection>
+                  </doi_data>
+                </component>
+                <component parent_relation="isPartOf">
+                  <titles>
+                    <title>Cuban Public Registry of Clinical Trials</title>
+                    <subtitle>RPCEC</subtitle>
+                  </titles>
+                  <publication_date>
+                    <month>10</month>
+                    <day>13</day>
+                    <year>2015</year>
+                  </publication_date>
+                  <description>Cuban Public Registry of Clinical Trials</description>
+                  <format mime_type="application/regex.clinical-trial-number">rpcec\d+</format>
+                  <doi_data>
+                    <doi>10.18810/rpec</doi>
+                    <resource>http://api.crossref.org/works/10.18810/rpec.xml</resource>
+                    <collection property="unspecified">
+                      <item>
+                        <resource>http://registroclinico.sld.cu</resource>
+                      </item>
+                    </collection>
+                  </doi_data>
+                </component>
+                <component parent_relation="isPartOf">
+                  <titles>
+                    <title>EU Clinical Trials Register</title>
+                    <subtitle>EU-CTR</subtitle>
+                  </titles>
+                  <publication_date>
+                    <month>10</month>
+                    <day>13</day>
+                    <year>2015</year>
+                  </publication_date>
+                  <description>EU Clinical Trials Register</description>
+                  <format mime_type="application/regex.clinical-trial-number">\d{4}-\d+-\d+</format>
+                  <doi_data>
+                    <doi>10.18810/euctr</doi>
+                    <resource>http://api.crossref.org/works/10.18810/euctr.xml</resource>
+                    <collection property="unspecified">
+                      <item>
+                        <resource>https://www.clinicaltrialsregister.eu</resource>
+                      </item>
+                    </collection>
+                  </doi_data>
+                </component>
+                <component parent_relation="isPartOf">
+                  <titles>
+                    <title>Japan Primary Registries Network</title>
+                    <subtitle>JPRN</subtitle>
+                  </titles>
+                  <publication_date>
+                    <month>10</month>
+                    <day>13</day>
+                    <year>2015</year>
+                  </publication_date>
+                  <description>Japan Primary Registries Network</description>
+                  <format mime_type="application/regex.clinical-trial-number" />
+                  <doi_data>
+                    <doi>10.18810/jprn</doi>
+                    <resource>http://api.crossref.org/works/10.18810/jprn.xml</resource>
+                    <collection property="unspecified">
+                      <item>
+                        <resource>http://rctportal.niph.go.jp</resource>
+                      </item>
+                    </collection>
+                  </doi_data>
+                </component>
+                <component parent_relation="isPartOf">
+                  <titles>
+                    <title>Thai Clinical Trials Registry</title>
+                    <subtitle>TCTR</subtitle>
+                  </titles>
+                  <publication_date>
+                    <month>10</month>
+                    <day>13</day>
+                    <year>2015</year>
+                  </publication_date>
+                  <description>Thai Clinical Trials Registry</description>
+                  <format mime_type="application/regex.clinical-trial-number">tctr\d+</format>
+                  <doi_data>
+                    <doi>10.18810/tctr</doi>
+                    <resource>http://api.crossref.org/works/10.18810/tctr.xml</resource>
+                  </doi_data>
+                </component>
+              </component_list>
+            </database>
+          </crossref>
+        </doi_record>
+      </query>
+    </body>
+  </query_result>
+</crossref_result>

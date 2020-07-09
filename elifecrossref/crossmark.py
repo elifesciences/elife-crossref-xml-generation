@@ -1,5 +1,5 @@
 from xml.etree.ElementTree import SubElement
-from elifecrossref import access_indicators, dates, funding
+from elifecrossref import access_indicators, clinical_trials, dates, funding
 
 
 # article types currently supported for depositing simple updates via Crossmark
@@ -48,7 +48,8 @@ def set_crossmark(parent, poa_article, crossref_config):
 def do_custom_metadata(poa_article, crossref_config):
     return bool(
         access_indicators.do_access_indicators(poa_article, crossref_config)
-        or funding.do_funding(poa_article))
+        or funding.do_funding(poa_article)
+        or clinical_trials.do_clinical_trials(poa_article))
 
 
 def set_custom_metadata(parent, poa_article, crossref_config):
@@ -56,6 +57,7 @@ def set_custom_metadata(parent, poa_article, crossref_config):
         custom_metadata = SubElement(parent, 'custom_metadata')
         funding.set_fundref(custom_metadata, poa_article)
         access_indicators.set_access_indicators(custom_metadata, poa_article, crossref_config)
+        clinical_trials.set_clinical_trials(custom_metadata, poa_article, crossref_config)
 
 
 def do_updates(poa_article):

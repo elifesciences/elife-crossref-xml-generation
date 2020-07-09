@@ -4,6 +4,7 @@ from elifecrossref.conf import raw_config, parse_raw_config
 
 TEST_BASE_PATH = os.path.dirname(os.path.abspath(__file__)) + os.sep
 TEST_DATA_PATH = TEST_BASE_PATH + "test_data" + os.sep
+FIXTURES_PATH = TEST_BASE_PATH + "fixtures" + os.sep
 
 
 def read_file_content(file_name):
