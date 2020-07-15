@@ -1,18 +1,23 @@
+import re
 from elifearticle import utils as eautils
+from elifetools import utils_html
 from elifetools import xmlio
 from elifetools import utils as etoolsutils
 from elifecrossref import tags, utils
 
 
 def set_abstract(parent, poa_article, crossref_config):
-    if poa_article.abstract:
-        set_abstract_tag(parent, poa_article.abstract, abstract_type="abstract",
+    if hasattr(poa_article, 'abstract_xml') and poa_article.abstract_xml:
+        set_abstract_tag(parent, abstract=poa_article.abstract_xml, abstract_type="abstract",
+                         jats_abstract=crossref_config.get('jats_abstract'))
+    elif poa_article.abstract:
+        set_abstract_tag(parent, abstract=poa_article.abstract, abstract_type="abstract",
                          jats_abstract=crossref_config.get('jats_abstract'))
 
 
 def set_digest(parent, poa_article, crossref_config):
     if hasattr(poa_article, 'digest') and poa_article.digest:
-        set_abstract_tag(parent, poa_article.digest, abstract_type="executive-summary",
+        set_abstract_tag(parent, abstract=poa_article.digest, abstract_type="executive-summary",
                          jats_abstract=crossref_config.get('jats_abstract'))
 
 
@@ -28,20 +33,41 @@ def get_abstract_attributes_text(abstract_type):
     return ''
 
 
+def convert_sec_tags(string):
+    # convert section title tags to paragraphs
+    string = eautils.replace_tags(string, 'title', 'jats:p')
+    return utils.remove_tag('sec', string)
+
+
 def get_basic_abstract(abstract):
     # Strip inline tags, keep the p tags
+    abstract = utils.remove_tag_and_text('object-id', abstract)
+    abstract = utils.remove_tag('related-object', abstract)
+    abstract = utils.remove_tag('abstract', abstract)
+    abstract = utils_html.remove_comment_tags(abstract)
     abstract = etoolsutils.escape_ampersand(abstract)
     abstract = etoolsutils.escape_unmatched_angle_brackets(abstract, utils.allowed_tags())
+    abstract = convert_sec_tags(abstract)
     abstract = tags.clean_tags(abstract, do_not_clean=['<p>', '</p>', '<mml:', '</mml:'])
     abstract = eautils.replace_tags(abstract, 'p', 'jats:p')
-    abstract = abstract
     return abstract
 
 
 def get_jats_abstract(abstract):
     # Convert the abstract to jats abstract tags
+    abstract = utils.remove_tag_and_text('object-id', abstract)
+    abstract = utils.remove_tag('abstract', abstract)
+    abstract = utils_html.remove_comment_tags(abstract)
     abstract = etoolsutils.escape_ampersand(abstract)
     abstract = etoolsutils.escape_unmatched_angle_brackets(abstract, utils.allowed_tags())
+    # sec tag may have attributes
+    abstract = re.sub(r'(<sec)(.*?)>', r'<jats:sec\g<2>>', abstract)
+    abstract = eautils.replace_tags(abstract, 'sec', 'jats:sec')
+    # related-object tag may have attributes
+    abstract = re.sub(r'(<related-object)(.*?)>', r'<jats:related-object\g<2>>', abstract)
+    abstract = eautils.replace_tags(abstract, 'related-object', 'jats:related-object')
+    abstract = eautils.replace_tags(abstract, 'sec', 'jats:sec')
+    abstract = eautils.replace_tags(abstract, 'title', 'jats:title')
     abstract = eautils.replace_tags(abstract, 'p', 'jats:p')
     abstract = eautils.replace_tags(abstract, 'italic', 'jats:italic')
     abstract = eautils.replace_tags(abstract, 'bold', 'jats:bold')
@@ -67,6 +93,8 @@ def set_abstract_tag(parent, abstract, abstract_type=None, jats_abstract=False):
     else:
         tag_converted_abstract = get_basic_abstract(abstract)
 
-    minidom_tag = xmlio.reparsed_tag(tag_name, tag_converted_abstract,
-                                    attributes_text=attributes_text)
+    tag_converted_abstract = re.sub('>\n', '>', tag_converted_abstract)
+
+    minidom_tag = xmlio.reparsed_tag(
+        tag_name, tag_converted_abstract, attributes_text=attributes_text)
     tags.append_tag(parent, minidom_tag, attributes=attributes)
