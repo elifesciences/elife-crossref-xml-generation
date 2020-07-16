@@ -33,9 +33,17 @@ def get_abstract_attributes_text(abstract_type):
     return ''
 
 
+def replace_jats_tag(from_tag_name, to_tag_name, string):
+    pattern_from = r'(<%s)(.*?)>' % from_tag_name
+    pattern_to = r'<%s\g<2>>' % to_tag_name
+    string = re.sub(pattern_from, pattern_to, string)
+    string = eautils.replace_tags(string, from_tag_name, to_tag_name)
+    return string
+
+
 def convert_sec_tags(string):
     # convert section title tags to paragraphs
-    string = eautils.replace_tags(string, 'title', 'jats:p')
+    string = replace_jats_tag('title', 'jats:p', string)
     return utils.remove_tag('sec', string)
 
 
@@ -60,14 +68,11 @@ def get_jats_abstract(abstract):
     abstract = utils_html.remove_comment_tags(abstract)
     abstract = etoolsutils.escape_ampersand(abstract)
     abstract = etoolsutils.escape_unmatched_angle_brackets(abstract, utils.allowed_tags())
-    # sec tag may have attributes
-    abstract = re.sub(r'(<sec)(.*?)>', r'<jats:sec\g<2>>', abstract)
-    abstract = eautils.replace_tags(abstract, 'sec', 'jats:sec')
-    # related-object tag may have attributes
-    abstract = re.sub(r'(<related-object)(.*?)>', r'<jats:related-object\g<2>>', abstract)
-    abstract = eautils.replace_tags(abstract, 'related-object', 'jats:related-object')
-    abstract = eautils.replace_tags(abstract, 'sec', 'jats:sec')
-    abstract = eautils.replace_tags(abstract, 'title', 'jats:title')
+
+    abstract = replace_jats_tag('sec', 'jats:sec', abstract)
+    abstract = replace_jats_tag('related-object', 'jats:related-object', abstract)
+    abstract = replace_jats_tag('title', 'jats:title', abstract)
+
     abstract = eautils.replace_tags(abstract, 'p', 'jats:p')
     abstract = eautils.replace_tags(abstract, 'italic', 'jats:italic')
     abstract = eautils.replace_tags(abstract, 'bold', 'jats:bold')
