@@ -3,6 +3,7 @@ from elifearticle import utils as eautils
 from elifetools import utils_html
 from elifetools import xmlio
 from elifetools import utils as etoolsutils
+from elifetools.parseJATS import XML_NAMESPACES
 from elifecrossref import tags, utils
 
 
@@ -24,7 +25,7 @@ def set_digest(parent, poa_article, crossref_config):
 def get_abstract_attributes(abstract_type):
     if abstract_type == 'executive-summary':
         return ['abstract-type']
-    return None
+    return []
 
 
 def get_abstract_attributes_text(abstract_type):
@@ -80,9 +81,11 @@ def get_jats_abstract(abstract):
     abstract = eautils.replace_tags(abstract, 'sub', 'jats:sub')
     abstract = eautils.replace_tags(abstract, 'sup', 'jats:sup')
     abstract = eautils.replace_tags(abstract, 'sc', 'jats:sc')
-    abstract = eautils.remove_tag('inline-formula', abstract)
-    abstract = eautils.remove_tag('ext-link', abstract)
-    abstract = eautils.remove_tag('xref', abstract)
+
+    abstract = replace_jats_tag('inline-formula', 'jats:inline-formula', abstract)
+    abstract = replace_jats_tag('ext-link', 'jats:ext-link', abstract)
+    abstract = replace_jats_tag('xref', 'jats:xref', abstract)
+
     return abstract
 
 
@@ -99,6 +102,14 @@ def set_abstract_tag(parent, abstract, abstract_type=None, jats_abstract=False):
         tag_converted_abstract = get_basic_abstract(abstract)
 
     tag_converted_abstract = re.sub('>\n', '>', tag_converted_abstract)
+
+    # add extra namespace attributes if applicable
+    for namespace in XML_NAMESPACES:
+        tag_match = '<%s' % namespace.get('prefix')
+        attribute_match = ' %s' % namespace.get('prefix')
+        if (tag_match not in attributes and
+                (tag_match in tag_converted_abstract or attribute_match in tag_converted_abstract)):
+            attributes.append(namespace.get('attribute'))
 
     minidom_tag = xmlio.reparsed_tag(
         tag_name, tag_converted_abstract, attributes_text=attributes_text)

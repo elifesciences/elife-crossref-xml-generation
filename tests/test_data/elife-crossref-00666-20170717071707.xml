@@ -46,7 +46,7 @@
 					<organization contributor_role="author" sequence="additional">eLife Technology Group</organization>
 					<organization contributor_role="author" sequence="additional">for the eLife Staff Team</organization>
 				</contributors>
-				<jats:abstract>
+				<jats:abstract xmlns:mml="http://www.w3.org/1998/Math/MathML">
 					<jats:p>
 						This is the abstract. This article will describe the eLife article and the process.
                     An abstract can contain any formatting, such as italics,
@@ -61,7 +61,7 @@
 								</mml:munder>
 								<mml:mrow>
 									<mml:msub>
-										<mml:mover>
+										<mml:mover accent="true">
 											<mml:mi>p</mml:mi>
 											<mml:mo/>
 										</mml:mover>

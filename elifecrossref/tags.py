@@ -51,7 +51,8 @@ def add_inline_tag(parent, tag_name, original_string,
 
 def append_tag(parent, minidom_tag, attributes=None):
     """given final minidom tag and details, append a tag to the parent tag"""
-    xmlio.append_minidom_xml_to_elementtree_xml(parent, minidom_tag, attributes=attributes)
+    xmlio.append_minidom_xml_to_elementtree_xml(
+        parent, minidom_tag, attributes=attributes, child_attributes=True)
 
 
 def convert_inline_tags(original_string):
