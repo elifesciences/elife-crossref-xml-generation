@@ -15,6 +15,9 @@ def allowed_tags():
         '<mml:', '</mml:',
         '<ext-link', '</ext-link>',
         '<xref', '</xref>',
+        '<sec', '</sec>',
+        '<title', '</title>',
+        '<related-object', '</related-object>',
     )
 
 
@@ -23,3 +26,13 @@ def clean_string(string):
     if string:
         return re.sub(r'[^a-zA-Z0-9_\-]', '', str(string))
     return None
+
+
+def remove_tag(tag_name, string):
+    pattern = r'\s*</?%s.*?>\s*' % tag_name
+    return re.sub(pattern, '', string)
+
+
+def remove_tag_and_text(tag_name, string):
+    pattern = r'\s*<%s.*?>.*?</%s>\s*' % (tag_name, tag_name)
+    return re.sub(pattern, '', string)

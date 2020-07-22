@@ -41,10 +41,10 @@
 						<affiliation>School of Engineering and Applied Sciences and Kavli Institute for Bionano Science and Technology, Harvard University, Cambridge, United States</affiliation>
 					</person_name>
 				</contributors>
-				<jats:abstract>
+				<jats:abstract xmlns:mml="http://www.w3.org/1998/Math/MathML">
 					<jats:p>
 						Cyanobacteria are photosynthetic bacteria with a unique CO2 concentrating mechanism (CCM), enhancing carbon fixation. Understanding the CCM requires a systems level perspective of how molecular components work together to enhance CO2 fixation. We present a mathematical model of the cyanobacterial CCM, giving the parameter regime (expression levels, catalytic rates, permeability of carboxysome shell) for efficient carbon fixation. Efficiency requires saturating the RuBisCO reaction, staying below saturation for carbonic anhydrase, and avoiding wasteful oxygenation reactions. We find selectivity at the carboxysome shell is not necessary; there is an optimal non-specific carboxysome shell permeability. We compare the efficacy of facilitated CO2 uptake, CO2 scavenging, and 
-						<mml:math>
+						<mml:math id="inf1">
 							<mml:mrow>
 								<mml:msubsup>
 									<mml:mrow>
