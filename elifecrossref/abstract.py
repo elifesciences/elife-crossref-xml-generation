@@ -45,14 +45,14 @@ def replace_jats_tag(from_tag_name, to_tag_name, string):
 def convert_sec_tags(string):
     # convert section title tags to paragraphs
     string = replace_jats_tag('title', 'jats:p', string)
-    return utils.remove_tag('sec', string)
+    return etoolsutils.remove_tag('sec', string)
 
 
 def get_basic_abstract(abstract):
     # Strip inline tags, keep the p tags
-    abstract = utils.remove_tag_and_text('object-id', abstract)
-    abstract = utils.remove_tag('related-object', abstract)
-    abstract = utils.remove_tag('abstract', abstract)
+    abstract = etoolsutils.remove_tag_and_text('object-id', abstract)
+    abstract = etoolsutils.remove_tag('related-object', abstract)
+    abstract = etoolsutils.remove_tag('abstract', abstract)
     abstract = utils_html.remove_comment_tags(abstract)
     abstract = etoolsutils.escape_ampersand(abstract)
     abstract = etoolsutils.escape_unmatched_angle_brackets(abstract, utils.allowed_tags())
@@ -64,8 +64,8 @@ def get_basic_abstract(abstract):
 
 def get_jats_abstract(abstract):
     # Convert the abstract to jats abstract tags
-    abstract = utils.remove_tag_and_text('object-id', abstract)
-    abstract = utils.remove_tag('abstract', abstract)
+    abstract = etoolsutils.remove_tag_and_text('object-id', abstract)
+    abstract = etoolsutils.remove_tag('abstract', abstract)
     abstract = utils_html.remove_comment_tags(abstract)
     abstract = etoolsutils.escape_ampersand(abstract)
     abstract = etoolsutils.escape_unmatched_angle_brackets(abstract, utils.allowed_tags())
