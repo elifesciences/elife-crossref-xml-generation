@@ -1,4 +1,5 @@
 import re
+from xml.dom import minidom
 from elifearticle import utils as eautils
 from elifetools import utils_html
 from elifetools import xmlio
@@ -40,6 +41,11 @@ def replace_jats_tag(from_tag_name, to_tag_name, string):
     string = re.sub(pattern_from, pattern_to, string)
     string = eautils.replace_tags(string, from_tag_name, to_tag_name)
     return string
+
+
+def remove_tag_attr(attr_name, string):
+    pattern_from = r'\s+%s=".*?"' % attr_name
+    return re.sub(pattern_from, '', string)
 
 
 def convert_sec_tags(string):
@@ -86,6 +92,9 @@ def get_jats_abstract(abstract):
     abstract = replace_jats_tag('ext-link', 'jats:ext-link', abstract)
     abstract = replace_jats_tag('xref', 'jats:xref', abstract)
 
+    # remove rid attributes
+    abstract = remove_tag_attr('rid', abstract)
+
     return abstract
 
 
@@ -103,14 +112,52 @@ def set_abstract_tag(parent, abstract, abstract_type=None, jats_abstract=False):
 
     tag_converted_abstract = re.sub('>\n', '>', tag_converted_abstract)
 
-    # add extra namespace attributes if applicable
-    for namespace in XML_NAMESPACES:
-        tag_match = '<%s' % namespace.get('prefix')
-        attribute_match = ' %s' % namespace.get('prefix')
-        if (tag_match not in attributes and
-                (tag_match in tag_converted_abstract or attribute_match in tag_converted_abstract)):
-            attributes.append(namespace.get('attribute'))
-
     minidom_tag = xmlio.reparsed_tag(
         tag_name, tag_converted_abstract, attributes_text=attributes_text)
+
+    # add extra namespace attributes to jats:p tags if applicable
+    for p_tag in minidom_tag.getElementsByTagName('jats:p'):
+        if p_tag.hasChildNodes():
+            attributes_added = add_namespace_attributes(p_tag)
+            for attribute in attributes_added:
+                if attribute not in attributes:
+                    attributes.append(attribute)
+
     tags.append_tag(parent, minidom_tag, attributes=attributes)
+
+
+def add_namespace_attributes(minidom_element):
+    "add namespace attributes to the minidom Element if it contains namespaced tags or attributes"
+    attributes = []
+    tag_names, attribute_names = child_element_value_names(minidom_element)
+    for namespace in XML_NAMESPACES:
+        for tag_name in set.union(tag_names, attribute_names):
+            if tag_name.startswith(namespace.get('prefix')):
+                minidom_element.setAttributeNS(
+                    namespace.get('uri'), namespace.get('attribute'), namespace.get('uri'))
+                attributes.append(namespace.get('attribute'))
+    return attributes
+
+
+def child_element_value_names(minidom_tag, tag_names=None, attribute_names=None):
+    "recursively get a list of all child element tag names and attribute names"
+
+    if tag_names is None:
+        tag_names = set()
+
+    if attribute_names is None:
+        attribute_names = set()
+
+    # process the Element nodes only
+    for child_element in [child for child in minidom_tag.childNodes
+                          if isinstance(child, minidom.Element)]:
+        tag_names.add(child_element.tagName)
+        for i in range(0, child_element.attributes.length):
+            attribute_names.add(child_element.attributes.item(i).name)
+
+        if child_element.hasChildNodes():
+            # call again recursively for all other child nodes
+            tag_names, attribute_names = child_element_value_names(
+                child_element, tag_names, attribute_names)
+
+    return tag_names, attribute_names

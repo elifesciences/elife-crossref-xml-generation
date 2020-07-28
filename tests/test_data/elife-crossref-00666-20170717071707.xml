@@ -47,7 +47,7 @@
 					<organization contributor_role="author" sequence="additional">for the eLife Staff Team</organization>
 				</contributors>
 				<jats:abstract xmlns:mml="http://www.w3.org/1998/Math/MathML">
-					<jats:p>
+					<jats:p xmlns:mml="http://www.w3.org/1998/Math/MathML">
 						This is the abstract. This article will describe the eLife article and the process.
                     An abstract can contain any formatting, such as italics,
                         bold, superscript, subscript or small caps. MathML is
