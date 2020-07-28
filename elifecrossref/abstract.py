@@ -43,6 +43,11 @@ def replace_jats_tag(from_tag_name, to_tag_name, string):
     return string
 
 
+def remove_tag_attr(attr_name, string):
+    pattern_from = r'\s+%s=".*?"' % attr_name
+    return re.sub(pattern_from, '', string)
+
+
 def convert_sec_tags(string):
     # convert section title tags to paragraphs
     string = replace_jats_tag('title', 'jats:p', string)
@@ -86,6 +91,9 @@ def get_jats_abstract(abstract):
     abstract = replace_jats_tag('inline-formula', 'jats:inline-formula', abstract)
     abstract = replace_jats_tag('ext-link', 'jats:ext-link', abstract)
     abstract = replace_jats_tag('xref', 'jats:xref', abstract)
+
+    # remove rid attributes
+    abstract = remove_tag_attr('rid', abstract)
 
     return abstract
 

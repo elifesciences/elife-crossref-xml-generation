@@ -51,7 +51,7 @@ class TestGenerateAbstract(unittest.TestCase):
             '<jats:ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1601/nm.3602">'
             'Desulfocapsa sulfexigens</jats:ext-link>.'
             '</jats:sup></jats:sub></jats:underline></jats:italic></jats:bold> '
-            '<jats:xref ref-type="bibr" rid="bib18">Stock and Wise (1990)</jats:xref>.'
+            '<jats:xref ref-type="bibr">Stock and Wise (1990)</jats:xref>.'
             '</jats:p></jats:abstract>')
         # generate
         raw_config_object = raw_config('elife')
