@@ -56,9 +56,7 @@ class TestGenerateAbstract(unittest.TestCase):
         # generate
         raw_config_object = raw_config('elife')
         jats_abstract = raw_config_object.get('jats_abstract')
-        face_markup = raw_config_object.get('face_markup')
         raw_config_object['jats_abstract'] = 'true'
-        raw_config_object['face_markup'] = 'true'
         crossref_config = parse_raw_config(raw_config_object)
         crossref_object = generate.CrossrefXML([article], crossref_config, None, True)
         crossref_xml_string = crossref_object.output_xml()
@@ -66,4 +64,3 @@ class TestGenerateAbstract(unittest.TestCase):
         self.assertTrue(expected_contains in crossref_xml_string)
         # now set the config back to normal
         raw_config_object['jats_abstract'] = jats_abstract
-        raw_config_object['face_markup'] = face_markup

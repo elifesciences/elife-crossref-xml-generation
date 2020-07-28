@@ -313,37 +313,6 @@ class TestGenerateAbstract(unittest.TestCase):
         # test assertion
         self.assertTrue(expected_contains in crossref_xml_string)
 
-    def test_set_abstract_jats_abstract_format(self):
-        """test the abstract using jats abstract format set to true"""
-        doi = "10.7554/eLife.00666"
-        title = "Test article"
-        article = Article(doi, title)
-        article.abstract = self.abstract
-        expected_contains = (
-            '<jats:abstract xmlns:xlink="http://www.w3.org/1999/xlink">'
-            '<jats:p xmlns:xlink="http://www.w3.org/1999/xlink">'
-            '<jats:bold><jats:italic><jats:underline><jats:sub><jats:sup>'
-            'An abstract. '
-            '<jats:ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1601/nm.3602">'
-            'Desulfocapsa sulfexigens</jats:ext-link>.'
-            '</jats:sup></jats:sub></jats:underline></jats:italic></jats:bold> '
-            '<jats:xref ref-type="bibr" rid="bib18">Stock and Wise (1990)</jats:xref>.'
-            '</jats:p></jats:abstract>')
-        # generate
-        raw_config_object = raw_config('elife')
-        jats_abstract = raw_config_object.get('jats_abstract')
-        face_markup = raw_config_object.get('face_markup')
-        raw_config_object['jats_abstract'] = 'true'
-        raw_config_object['face_markup'] = 'true'
-        crossref_config = parse_raw_config(raw_config_object)
-        crossref_object = generate.CrossrefXML([article], crossref_config, None, True)
-        crossref_xml_string = crossref_object.output_xml()
-        # test assertion
-        self.assertTrue(expected_contains in crossref_xml_string)
-        # now set the config back to normal
-        raw_config_object['jats_abstract'] = jats_abstract
-        raw_config_object['face_markup'] = face_markup
-
 
 class TestGenerateTitles(unittest.TestCase):
 
