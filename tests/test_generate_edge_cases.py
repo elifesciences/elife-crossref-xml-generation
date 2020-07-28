@@ -321,11 +321,14 @@ class TestGenerateAbstract(unittest.TestCase):
         article.abstract = self.abstract
         expected_contains = (
             '<jats:abstract xmlns:xlink="http://www.w3.org/1999/xlink">'
-            '<jats:p><jats:bold><jats:italic><jats:underline><jats:sub><jats:sup>An abstract. '
+            '<jats:p xmlns:xlink="http://www.w3.org/1999/xlink">'
+            '<jats:bold><jats:italic><jats:underline><jats:sub><jats:sup>'
+            'An abstract. '
             '<jats:ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1601/nm.3602">'
-            'Desulfocapsa sulfexigens</jats:ext-link>.</jats:sup></jats:sub></jats:underline>'
-            '</jats:italic></jats:bold> <jats:xref ref-type="bibr" rid="bib18">'
-            'Stock and Wise (1990)</jats:xref>.</jats:p></jats:abstract>')
+            'Desulfocapsa sulfexigens</jats:ext-link>.'
+            '</jats:sup></jats:sub></jats:underline></jats:italic></jats:bold> '
+            '<jats:xref ref-type="bibr" rid="bib18">Stock and Wise (1990)</jats:xref>.'
+            '</jats:p></jats:abstract>')
         # generate
         raw_config_object = raw_config('elife')
         jats_abstract = raw_config_object.get('jats_abstract')
