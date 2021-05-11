@@ -42,6 +42,7 @@ def parse_raw_config(raw_config_object):
     list_values.append("pub_date_types")
     list_values.append("component_exclude_types")
     list_values.append("crossmark_domains")
+    list_values.append("assertion_display_channel_types")
 
     for value_name in raw_config_object:
         if value_name in boolean_values:
