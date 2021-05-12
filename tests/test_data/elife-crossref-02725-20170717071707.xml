@@ -135,6 +135,10 @@
 					</crossmark_domains>
 					<crossmark_domain_exclusive>false</crossmark_domain_exclusive>
 					<custom_metadata>
+						<assertion group_name="peer_review_taxonomy" label="Peer review transparency" name="peer_review_transparency">single anonymised</assertion>
+						<assertion group_name="peer_review_taxonomy" label="Peer review interaction" name="peer_review_interaction">other reviewer(s), editor</assertion>
+						<assertion group_name="peer_review_taxonomy" label="Peer review published" name="peer_review_published">review summaries, review reports, author/editor communication, reviewer identities reviewer opt in, editor identities</assertion>
+						<assertion group_name="post_publication_commenting" label="Post publication commenting" name="post_publication_commenting">open (sign in with ORCID iD required)</assertion>
 						<ai:program name="AccessIndicators">
 							<ai:license_ref applies_to="vor">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
 							<ai:license_ref applies_to="am">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
