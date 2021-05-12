@@ -99,11 +99,11 @@ In interactive Python, below is an example.
 There are other options in the `generate.py` file to return the CrossrefXML object created, or to write the output to disk using a single function call.
 
 Contributing to the project
-======
+===========================
 
 If you have a contribution you would like us to consider, please send a pull request. Open an issues on Github if you get an error. There may be minor changes required to support alternate JATS XML variations. If your XML is open licensed, we may want to add it specifically to the test cases for the project.
 
 License
-=========
+=======
 
 `The MIT License <http://opensource.org/licenses/mit-license.php>`_
