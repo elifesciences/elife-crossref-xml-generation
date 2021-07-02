@@ -1,4 +1,3 @@
-from xml.dom import minidom
 from elifetools import utils as etoolsutils
 from elifetools import xmlio
 from elifearticle import utils as eautils

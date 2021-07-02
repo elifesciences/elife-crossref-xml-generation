@@ -22,7 +22,7 @@ def generate_resource_url(obj, poa_article, crossref_config, pattern_type=None):
             prefix1=prefix1,
             id=id_value,
         )
-    elif isinstance(obj, Article):
+    if isinstance(obj, Article):
         if not pattern_type:
             pattern_type = "doi_pattern"
         version = elife.elife_style_article_attributes(obj)
@@ -33,10 +33,9 @@ def generate_resource_url(obj, poa_article, crossref_config, pattern_type=None):
                 volume=obj.volume,
                 version=version,
             )
-        else:
-            # if no doi_pattern is specified, try to get it from the self-uri value
-            #  that has no content_type
-            for self_uri in obj.self_uri_list:
-                if self_uri.content_type is None:
-                    return self_uri.xlink_href
+        # if no doi_pattern is specified, try to get it from the self-uri value
+        #  that has no content_type
+        for self_uri in obj.self_uri_list:
+            if self_uri.content_type is None:
+                return self_uri.xlink_href
     return ""

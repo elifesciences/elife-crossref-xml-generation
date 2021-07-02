@@ -1,4 +1,4 @@
-import configparser as configparser
+import configparser
 import json
 
 CONFIG_FILE = "crossref.cfg"

@@ -15,7 +15,7 @@ from elifecrossref.conf import raw_config, parse_raw_config
 TMP_DIR = "tmp"
 
 
-class CrossrefXML(object):
+class CrossrefXML:
     def __init__(
         self,
         poa_articles,

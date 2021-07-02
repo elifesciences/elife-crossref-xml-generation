@@ -56,7 +56,7 @@ def dataset_relationship_type(dataset_object):
     if dataset_object.dataset_type:
         if dataset_object.dataset_type == "prev_published_datasets":
             return "references"
-        elif dataset_object.dataset_type == "datasets":
+        if dataset_object.dataset_type == "datasets":
             return "isSupplementedBy"
     # default if not specified
     return "isSupplementedBy"
