@@ -8,18 +8,20 @@ def generate_resource_url(obj, poa_article, crossref_config, pattern_type=None):
         if not pattern_type:
             pattern_type = "component_doi_pattern"
         if (
-                pattern_type == "component_doi_pattern" and
-                crossref_config.get("elife_style_component_doi") is True):
+            pattern_type == "component_doi_pattern"
+            and crossref_config.get("elife_style_component_doi") is True
+        ):
             id_value, prefix1 = elife.elife_style_component_attributes(obj)
         else:
             id_value = obj.id
-            prefix1 = ''
+            prefix1 = ""
         return crossref_config.get(pattern_type).format(
             doi=poa_article.doi,
             manuscript=poa_article.manuscript,
             volume=poa_article.volume,
             prefix1=prefix1,
-            id=id_value)
+            id=id_value,
+        )
     elif isinstance(obj, Article):
         if not pattern_type:
             pattern_type = "doi_pattern"
@@ -29,7 +31,8 @@ def generate_resource_url(obj, poa_article, crossref_config, pattern_type=None):
                 doi=obj.doi,
                 manuscript=obj.manuscript,
                 volume=obj.volume,
-                version=version)
+                version=version,
+            )
         else:
             # if no doi_pattern is specified, try to get it from the self-uri value
             #  that has no content_type

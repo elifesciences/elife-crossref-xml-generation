@@ -9,7 +9,7 @@ def get_pub_date(poa_article, crossref_config, default_pub_date):
     """
     pub_date = None
 
-    for date_type in crossref_config.get('pub_date_types'):
+    for date_type in crossref_config.get("pub_date_types"):
         pub_date_obj = poa_article.get_date(date_type)
         if pub_date_obj:
             break
@@ -25,7 +25,7 @@ def get_pub_date(poa_article, crossref_config, default_pub_date):
 def set_publication_date(parent, pub_date):
     # pub_date is a python time object
     if pub_date:
-        publication_date_tag = SubElement(parent, 'publication_date')
+        publication_date_tag = SubElement(parent, "publication_date")
         publication_date_tag.set("media_type", "online")
         set_date_detail(publication_date_tag, pub_date)
 
@@ -41,4 +41,4 @@ def set_date_detail(parent, pub_date):
 
 def iso_date_string(pub_date):
     """format a time.struct_time object into an iso format date string e.g. 2019-12-31"""
-    return time.strftime('%Y-%m-%d', pub_date) if pub_date else None
+    return time.strftime("%Y-%m-%d", pub_date) if pub_date else None
