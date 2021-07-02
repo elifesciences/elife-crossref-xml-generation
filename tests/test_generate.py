@@ -1,67 +1,150 @@
 import unittest
-import time
 import os
 from xml.etree.ElementTree import Comment
 from elifecrossref import generate
-from tests import TEST_BASE_PATH, TEST_DATA_PATH, read_file_content, create_crossref_config
+from tests import (
+    DEFAULT_PUB_DATE,
+    TEST_BASE_PATH,
+    TEST_DATA_PATH,
+    read_file_content,
+    create_crossref_config,
+)
 
 
 generate.TMP_DIR = TEST_BASE_PATH + "tmp" + os.sep
 
 
 class TestGenerate(unittest.TestCase):
-
     def setUp(self):
         self.passes = []
-        self.default_pub_date = time.strptime("2017-07-17 07:17:07", "%Y-%m-%d %H:%M:%S")
         self.passes.append(
-            ('elife-02935-v2.xml', 'elife-crossref-02935-20170717071707.xml',
-             'elife', self.default_pub_date))
+            (
+                "elife-02935-v2.xml",
+                "elife-crossref-02935-20170717071707.xml",
+                "elife",
+                DEFAULT_PUB_DATE,
+            )
+        )
         self.passes.append(
-            ('elife_poa_e02725.xml', 'elife-crossref-02725-20170717071707.xml',
-             'elife', self.default_pub_date))
+            (
+                "elife_poa_e02725.xml",
+                "elife-crossref-02725-20170717071707.xml",
+                "elife",
+                DEFAULT_PUB_DATE,
+            )
+        )
         self.passes.append(
-            ('elife-15743-v1.xml', 'elife-crossref-15743-20170717071707.xml',
-             'elife', self.default_pub_date))
+            (
+                "elife-15743-v1.xml",
+                "elife-crossref-15743-20170717071707.xml",
+                "elife",
+                DEFAULT_PUB_DATE,
+            )
+        )
         self.passes.append(
-            ('elife-02020-v1.xml', 'elife-crossref-02020-20170717071707.xml',
-             'elife', self.default_pub_date))
+            (
+                "elife-02020-v1.xml",
+                "elife-crossref-02020-20170717071707.xml",
+                "elife",
+                DEFAULT_PUB_DATE,
+            )
+        )
         self.passes.append(
-            ('elife-08206-v3.xml', 'elife-crossref-08206-20170717071707.xml',
-             'elife', self.default_pub_date))
+            (
+                "elife-08206-v3.xml",
+                "elife-crossref-08206-20170717071707.xml",
+                "elife",
+                DEFAULT_PUB_DATE,
+            )
+        )
         self.passes.append(
-            ('elife-04637-v2.xml', 'elife-crossref-04637-20170717071707.xml',
-             'elife', self.default_pub_date))
+            (
+                "elife-04637-v2.xml",
+                "elife-crossref-04637-20170717071707.xml",
+                "elife",
+                DEFAULT_PUB_DATE,
+            )
+        )
         self.passes.append(
-            ('elife-02043-v2.xml', 'elife-crossref-02043-20170717071707.xml',
-             'elife', self.default_pub_date))
+            (
+                "elife-02043-v2.xml",
+                "elife-crossref-02043-20170717071707.xml",
+                "elife",
+                DEFAULT_PUB_DATE,
+            )
+        )
         self.passes.append(
-            ('elife-16988-v1.xml', 'elife-crossref-16988-20170717071707.xml',
-             'elife', self.default_pub_date))
+            (
+                "elife-16988-v1.xml",
+                "elife-crossref-16988-20170717071707.xml",
+                "elife",
+                DEFAULT_PUB_DATE,
+            )
+        )
         self.passes.append(
-            ('elife-12444-v2.xml', 'elife-crossref-12444-20170717071707.xml',
-             'elife', self.default_pub_date))
+            (
+                "elife-12444-v2.xml",
+                "elife-crossref-12444-20170717071707.xml",
+                "elife",
+                DEFAULT_PUB_DATE,
+            )
+        )
         self.passes.append(
-            ('elife-00666.xml', 'elife-crossref-00666-20170717071707.xml',
-             'elife', self.default_pub_date))
+            (
+                "elife-00666.xml",
+                "elife-crossref-00666-20170717071707.xml",
+                "elife",
+                DEFAULT_PUB_DATE,
+            )
+        )
         self.passes.append(
-            ('elife-11134-v2.xml', 'elife-crossref-11134-20170717071707.xml',
-             'elife', self.default_pub_date))
+            (
+                "elife-11134-v2.xml",
+                "elife-crossref-11134-20170717071707.xml",
+                "elife",
+                DEFAULT_PUB_DATE,
+            )
+        )
         self.passes.append(
-            ('elife-00508-v1.xml', 'elife-crossref-00508-20170717071707.xml',
-             'elife', self.default_pub_date))
+            (
+                "elife-00508-v1.xml",
+                "elife-crossref-00508-20170717071707.xml",
+                "elife",
+                DEFAULT_PUB_DATE,
+            )
+        )
         self.passes.append(
-            ('cstp77-jats.xml', 'cstp-crossref-77-20170717071707.xml',
-             'cstp', self.default_pub_date))
+            (
+                "cstp77-jats.xml",
+                "cstp-crossref-77-20170717071707.xml",
+                "cstp",
+                DEFAULT_PUB_DATE,
+            )
+        )
         self.passes.append(
-            ('bmjopen-4-e003269.xml', 'crossref-bmjopen-2013-003269-20170717071707.xml',
-             'bmjopen', self.default_pub_date))
+            (
+                "bmjopen-4-e003269.xml",
+                "crossref-bmjopen-2013-003269-20170717071707.xml",
+                "bmjopen",
+                DEFAULT_PUB_DATE,
+            )
+        )
         self.passes.append(
-            ('up-sta-example.xml', 'crossref-606-20170717071707.xml',
-             None, self.default_pub_date))
+            (
+                "up-sta-example.xml",
+                "crossref-606-20170717071707.xml",
+                None,
+                DEFAULT_PUB_DATE,
+            )
+        )
 
-    def test_parse(self):
-        for (article_xml_file, crossref_xml_file, config_section, pub_date) in self.passes:
+    def test_generate(self):
+        for (
+            article_xml_file,
+            crossref_xml_file,
+            config_section,
+            pub_date,
+        ) in self.passes:
             file_path = TEST_DATA_PATH + article_xml_file
             articles = generate.build_articles_for_crossref([file_path])
             crossref_config = None
@@ -69,54 +152,67 @@ class TestGenerate(unittest.TestCase):
                 crossref_config = create_crossref_config(config_section)
             # generate pretty XML
             crossref_xml = generate.crossref_xml(
-                articles, crossref_config, pub_date, False, pretty=True, indent="\t")
+                articles, crossref_config, pub_date, False, pretty=True, indent="\t"
+            )
             model_crossref_xml = read_file_content(TEST_DATA_PATH + crossref_xml_file)
-            self.assertEqual(crossref_xml, model_crossref_xml.decode('utf-8'),
-                             'Failed parse test on file %s' % article_xml_file)
+            self.assertEqual(
+                crossref_xml,
+                model_crossref_xml.decode("utf-8"),
+                "Failed parse test on file %s" % article_xml_file,
+            )
 
     def test_parse_do_no_pass_pub_date(self):
         """
         For test coverage build a crossrefXML object without passing in a pub_date
         """
-        article_xml_file = 'elife_poa_e02725.xml'
+        article_xml_file = "elife_poa_e02725.xml"
         file_path = TEST_DATA_PATH + article_xml_file
         articles = generate.build_articles_for_crossref([file_path])
-        crossref_config = create_crossref_config('elife')
+        crossref_config = create_crossref_config("elife")
         crossref_object = generate.CrossrefXML(articles, crossref_config, None, True)
         self.assertIsNotNone(crossref_object.pub_date)
         self.assertIsNotNone(crossref_object.generated)
-        self.assertIsNotNone([tag for tag in crossref_object.root.iter() if tag is Comment])
+        self.assertIsNotNone(
+            [tag for tag in crossref_object.root.iter() if tag is Comment]
+        )
         self.assertIsNotNone(crossref_object.output_xml())
 
     def test_generate_jats_abstract_face_markup(self):
         """
         For coverage test JATS and inline output by overriding the config
         """
-        article_xml_file = 'elife-16988-v1.xml'
+        article_xml_file = "elife-16988-v1.xml"
         file_path = TEST_DATA_PATH + article_xml_file
         articles = generate.build_articles_for_crossref([file_path])
-        crossref_config = create_crossref_config('elife')
+        crossref_config = create_crossref_config("elife")
         # override config values
-        crossref_config['jats_abstract'] = True
-        crossref_config['face_markup'] = True
+        crossref_config["jats_abstract"] = True
+        crossref_config["face_markup"] = True
         # create the Crossref XML
         crossref_object = generate.CrossrefXML(articles, crossref_config, None, True)
         # Check for some tags we expect to find in the output
-        self.assertTrue('<jats:italic>' in crossref_object.output_xml())
-        self.assertTrue('</b>' in crossref_object.output_xml())
+        self.assertTrue("<jats:italic>" in crossref_object.output_xml())
+        self.assertTrue("</b>" in crossref_object.output_xml())
 
     def test_crossref_xml_to_disk(self):
         """test writing to disk for test coverage and also not pass crossref_config"""
-        article_xml_file = 'up-sta-example.xml'
-        crossref_xml_file = 'crossref-606-20170717071707.xml'
+        article_xml_file = "up-sta-example.xml"
+        crossref_xml_file = "crossref-606-20170717071707.xml"
         crossref_config = None
-        pub_date = self.default_pub_date
+        pub_date = DEFAULT_PUB_DATE
         file_path = TEST_DATA_PATH + article_xml_file
         # build the article object
         articles = generate.build_articles_for_crossref([file_path])
         # generate and write to disk
         generate.crossref_xml_to_disk(
-            articles, crossref_config, pub_date, False, "journal", pretty=True, indent="\t")
+            articles,
+            crossref_config,
+            pub_date,
+            False,
+            "journal",
+            pretty=True,
+            indent="\t",
+        )
         # check the output matches
         expected_output = read_file_content(TEST_DATA_PATH + crossref_xml_file)
         generated_output = read_file_content(generate.TMP_DIR + crossref_xml_file)

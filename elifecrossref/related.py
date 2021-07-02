@@ -31,21 +31,22 @@ def do_relations_program(poa_article):
 def set_relations_program(parent, relations_program_tag):
     """set the relations program parent tag only once"""
     if relations_program_tag is None:
-        relations_program_tag = SubElement(parent, 'rel:program')
+        relations_program_tag = SubElement(parent, "rel:program")
     return relations_program_tag
 
 
 def set_related_item_description(parent, description):
     if description:
-        description_tag = SubElement(parent, 'rel:description')
+        description_tag = SubElement(parent, "rel:description")
         description_tag.text = description
 
 
-def set_related_item_work_relation(parent, related_item_type, relationship_type,
-                                   identifier_type, related_item_text):
+def set_related_item_work_relation(
+    parent, related_item_type, relationship_type, identifier_type, related_item_text
+):
     # only supporting inter_work_relation for now
     if related_item_type == "inter_work_relation":
-        work_relation_tag = SubElement(parent, 'rel:inter_work_relation')
+        work_relation_tag = SubElement(parent, "rel:inter_work_relation")
         work_relation_tag.set("relationship-type", relationship_type)
         work_relation_tag.set("identifier-type", identifier_type)
         work_relation_tag.text = related_item_text
