@@ -1,10 +1,12 @@
 import os
+import time
 from elifecrossref.conf import raw_config, parse_raw_config
 
 
 TEST_BASE_PATH = os.path.dirname(os.path.abspath(__file__)) + os.sep
 TEST_DATA_PATH = TEST_BASE_PATH + "test_data" + os.sep
 FIXTURES_PATH = TEST_BASE_PATH + "fixtures" + os.sep
+DEFAULT_PUB_DATE = time.strptime("2017-07-17 07:17:07", "%Y-%m-%d %H:%M:%S")
 
 
 def read_file_content(file_name):

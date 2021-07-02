@@ -1,9 +1,9 @@
 import unittest
-import time
 import os
 from xml.etree.ElementTree import Comment
 from elifecrossref import generate
 from tests import (
+    DEFAULT_PUB_DATE,
     TEST_BASE_PATH,
     TEST_DATA_PATH,
     read_file_content,
@@ -17,15 +17,12 @@ generate.TMP_DIR = TEST_BASE_PATH + "tmp" + os.sep
 class TestGenerate(unittest.TestCase):
     def setUp(self):
         self.passes = []
-        self.default_pub_date = time.strptime(
-            "2017-07-17 07:17:07", "%Y-%m-%d %H:%M:%S"
-        )
         self.passes.append(
             (
                 "elife-02935-v2.xml",
                 "elife-crossref-02935-20170717071707.xml",
                 "elife",
-                self.default_pub_date,
+                DEFAULT_PUB_DATE,
             )
         )
         self.passes.append(
@@ -33,7 +30,7 @@ class TestGenerate(unittest.TestCase):
                 "elife_poa_e02725.xml",
                 "elife-crossref-02725-20170717071707.xml",
                 "elife",
-                self.default_pub_date,
+                DEFAULT_PUB_DATE,
             )
         )
         self.passes.append(
@@ -41,7 +38,7 @@ class TestGenerate(unittest.TestCase):
                 "elife-15743-v1.xml",
                 "elife-crossref-15743-20170717071707.xml",
                 "elife",
-                self.default_pub_date,
+                DEFAULT_PUB_DATE,
             )
         )
         self.passes.append(
@@ -49,7 +46,7 @@ class TestGenerate(unittest.TestCase):
                 "elife-02020-v1.xml",
                 "elife-crossref-02020-20170717071707.xml",
                 "elife",
-                self.default_pub_date,
+                DEFAULT_PUB_DATE,
             )
         )
         self.passes.append(
@@ -57,7 +54,7 @@ class TestGenerate(unittest.TestCase):
                 "elife-08206-v3.xml",
                 "elife-crossref-08206-20170717071707.xml",
                 "elife",
-                self.default_pub_date,
+                DEFAULT_PUB_DATE,
             )
         )
         self.passes.append(
@@ -65,7 +62,7 @@ class TestGenerate(unittest.TestCase):
                 "elife-04637-v2.xml",
                 "elife-crossref-04637-20170717071707.xml",
                 "elife",
-                self.default_pub_date,
+                DEFAULT_PUB_DATE,
             )
         )
         self.passes.append(
@@ -73,7 +70,7 @@ class TestGenerate(unittest.TestCase):
                 "elife-02043-v2.xml",
                 "elife-crossref-02043-20170717071707.xml",
                 "elife",
-                self.default_pub_date,
+                DEFAULT_PUB_DATE,
             )
         )
         self.passes.append(
@@ -81,7 +78,7 @@ class TestGenerate(unittest.TestCase):
                 "elife-16988-v1.xml",
                 "elife-crossref-16988-20170717071707.xml",
                 "elife",
-                self.default_pub_date,
+                DEFAULT_PUB_DATE,
             )
         )
         self.passes.append(
@@ -89,7 +86,7 @@ class TestGenerate(unittest.TestCase):
                 "elife-12444-v2.xml",
                 "elife-crossref-12444-20170717071707.xml",
                 "elife",
-                self.default_pub_date,
+                DEFAULT_PUB_DATE,
             )
         )
         self.passes.append(
@@ -97,7 +94,7 @@ class TestGenerate(unittest.TestCase):
                 "elife-00666.xml",
                 "elife-crossref-00666-20170717071707.xml",
                 "elife",
-                self.default_pub_date,
+                DEFAULT_PUB_DATE,
             )
         )
         self.passes.append(
@@ -105,7 +102,7 @@ class TestGenerate(unittest.TestCase):
                 "elife-11134-v2.xml",
                 "elife-crossref-11134-20170717071707.xml",
                 "elife",
-                self.default_pub_date,
+                DEFAULT_PUB_DATE,
             )
         )
         self.passes.append(
@@ -113,7 +110,7 @@ class TestGenerate(unittest.TestCase):
                 "elife-00508-v1.xml",
                 "elife-crossref-00508-20170717071707.xml",
                 "elife",
-                self.default_pub_date,
+                DEFAULT_PUB_DATE,
             )
         )
         self.passes.append(
@@ -121,7 +118,7 @@ class TestGenerate(unittest.TestCase):
                 "cstp77-jats.xml",
                 "cstp-crossref-77-20170717071707.xml",
                 "cstp",
-                self.default_pub_date,
+                DEFAULT_PUB_DATE,
             )
         )
         self.passes.append(
@@ -129,7 +126,7 @@ class TestGenerate(unittest.TestCase):
                 "bmjopen-4-e003269.xml",
                 "crossref-bmjopen-2013-003269-20170717071707.xml",
                 "bmjopen",
-                self.default_pub_date,
+                DEFAULT_PUB_DATE,
             )
         )
         self.passes.append(
@@ -137,11 +134,11 @@ class TestGenerate(unittest.TestCase):
                 "up-sta-example.xml",
                 "crossref-606-20170717071707.xml",
                 None,
-                self.default_pub_date,
+                DEFAULT_PUB_DATE,
             )
         )
 
-    def test_parse(self):
+    def test_generate(self):
         for (
             article_xml_file,
             crossref_xml_file,
@@ -202,7 +199,7 @@ class TestGenerate(unittest.TestCase):
         article_xml_file = "up-sta-example.xml"
         crossref_xml_file = "crossref-606-20170717071707.xml"
         crossref_config = None
-        pub_date = self.default_pub_date
+        pub_date = DEFAULT_PUB_DATE
         file_path = TEST_DATA_PATH + article_xml_file
         # build the article object
         articles = generate.build_articles_for_crossref([file_path])

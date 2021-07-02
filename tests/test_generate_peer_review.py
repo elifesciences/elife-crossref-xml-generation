@@ -4,6 +4,7 @@ import os
 from elifearticle.article import Article, ArticleDate, Contributor, License
 from elifecrossref import generate
 from tests import (
+    DEFAULT_PUB_DATE,
     TEST_BASE_PATH,
     TEST_DATA_PATH,
     read_file_content,
@@ -83,19 +84,16 @@ def sample_data():
 class TestGeneratePeerReview(unittest.TestCase):
     def setUp(self):
         self.passes = []
-        self.default_pub_date = time.strptime(
-            "2017-07-17 07:17:07", "%Y-%m-%d %H:%M:%S"
-        )
         self.passes.append(
             (
                 "elife-00666.xml",
                 "elife-crossref-peer_review-00666-20170717071707.xml",
                 "elife",
-                self.default_pub_date,
+                DEFAULT_PUB_DATE,
             )
         )
 
-    def test_parse(self):
+    def test_generate_peer_review(self):
         for (
             article_xml_file,
             crossref_xml_file,

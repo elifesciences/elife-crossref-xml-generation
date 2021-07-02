@@ -28,7 +28,10 @@ class TestGenerateComponentList(unittest.TestCase):
             "A <sc>STRANGE</sc> <italic>subtitle</italic>, "
             + "and this tag is <not_allowed>!</not_allowed>"
         )
-        expected_subtitle = "A STRANGE subtitle, and this tag is &lt;not_allowed&gt;!&lt;/not_allowed&gt;"
+        expected_subtitle = (
+            "A STRANGE subtitle, and this tag is"
+            " &lt;not_allowed&gt;!&lt;/not_allowed&gt;"
+        )
         article.component_list = [component]
         # generate the crossrefXML
         c_xml = generate.build_crossref_xml([article])
@@ -347,7 +350,10 @@ class TestGenerateTitles(unittest.TestCase):
         """test the title using face markup set to true"""
         doi = "10.7554/eLife.00666"
         article = Article(doi, self.title)
-        expected_contains = "<titles><title><b>Test article</b> for Desulfocapsa sulfexigens</title></titles>"
+        expected_contains = (
+            "<titles><title><b>Test article</b> for"
+            " Desulfocapsa sulfexigens</title></titles>"
+        )
         # generate
         raw_config_object = raw_config("elife")
         face_markup = raw_config_object.get("face_markup")
