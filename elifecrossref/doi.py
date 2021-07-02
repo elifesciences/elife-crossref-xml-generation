@@ -8,15 +8,16 @@ def set_article_doi_data(parent, poa_article, crossref_config):
 
 
 def set_doi_data(parent, obj, poa_article, crossref_config, pattern_type=None):
-    doi_data_tag = SubElement(parent, 'doi_data')
+    doi_data_tag = SubElement(parent, "doi_data")
 
-    doi_tag = SubElement(doi_data_tag, 'doi')
+    doi_tag = SubElement(doi_data_tag, "doi")
     doi_tag.text = obj.doi
 
-    resource_tag = SubElement(doi_data_tag, 'resource')
+    resource_tag = SubElement(doi_data_tag, "resource")
 
     resource = resource_url.generate_resource_url(
-        obj, poa_article, crossref_config, pattern_type)
+        obj, poa_article, crossref_config, pattern_type
+    )
     resource_tag.text = resource
 
     return doi_data_tag

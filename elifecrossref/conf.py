@@ -1,7 +1,7 @@
-import configparser as configparser
+import configparser
 import json
 
-CONFIG_FILE = 'crossref.cfg'
+CONFIG_FILE = "crossref.cfg"
 
 
 def load_config(config_file=None):
@@ -20,7 +20,7 @@ def raw_config(config_section, config_file=None):
     if config.has_section(config_section):
         return config[config_section]
     # default
-    return config['DEFAULT']
+    return config["DEFAULT"]
 
 
 def parse_raw_config(raw_config_object):
