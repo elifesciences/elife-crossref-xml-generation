@@ -27,6 +27,14 @@ class TestDoDatasetRelatedItem(unittest.TestCase):
         self.assertTrue(do_result)
 
 
+class TestDoPreprintRelatedItem(unittest.TestCase):
+    def test_do_preprint_related_item(self):
+        article = Article()
+        article.preprint = Preprint(uri="https://example.org")
+        do_result = related.do_preprint_related_item(article)
+        self.assertTrue(do_result)
+
+
 class TestDoRelationsProgram(unittest.TestCase):
     def test_do_relations_program_dataset(self):
         article = Article("10.7554/eLife.00666")
