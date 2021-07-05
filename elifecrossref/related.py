@@ -56,8 +56,8 @@ def set_related_item_work_relation(
     parent, related_item_type, relationship_type, identifier_type, related_item_text
 ):
     # only supporting inter_work_relation for now
-    if related_item_type == "inter_work_relation":
-        work_relation_tag = SubElement(parent, "rel:inter_work_relation")
+    if related_item_type in ["intra_work_relation", "inter_work_relation"]:
+        work_relation_tag = SubElement(parent, "rel:%s" % related_item_type)
         work_relation_tag.set("relationship-type", relationship_type)
         work_relation_tag.set("identifier-type", identifier_type)
         work_relation_tag.text = related_item_text
