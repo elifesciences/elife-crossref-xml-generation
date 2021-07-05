@@ -10,6 +10,7 @@ from elifecrossref import (
     dates,
     doi,
     funding,
+    preprint,
     related,
     title,
 )
@@ -76,6 +77,9 @@ def set_journal_article(parent, poa_article, pub_date, crossref_config):
     )
 
     component.set_component_list(journal_article_tag, poa_article, crossref_config)
+
+    if related.do_preprint_related_item(poa_article) is True:
+        preprint.set_preprint(relations_program_tag, poa_article.preprint)
 
 
 def set_archive_locations(parent, archive_locations):
