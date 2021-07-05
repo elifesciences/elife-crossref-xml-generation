@@ -25,6 +25,13 @@ def do_relations_program(poa_article):
             if do_citation_related_item(ref) is True:
                 do_relations = True
                 break
+    if (
+        do_relations is not True
+        and hasattr(poa_article, "preprint")
+        and poa_article.preprint
+        and (poa_article.preprint.uri or poa_article.preprint.doi)
+    ):
+        do_relations = True
     return do_relations
 
 
