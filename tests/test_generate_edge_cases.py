@@ -375,9 +375,13 @@ class TestGeneratePreprint(unittest.TestCase):
         article = Article(doi, title="Sample article")
         article.preprint = Preprint(uri="https://example.org/")
         expected_contains = (
-            '<rel:program><rel:intra_work_relation identifier-type="uri"'
+            "<rel:program>"
+            "<rel:related_item>"
+            '<rel:intra_work_relation identifier-type="uri"'
             ' relationship-type="hasPreprint">https://example.org/'
-            "</rel:intra_work_relation></rel:program>"
+            "</rel:intra_work_relation>"
+            "</rel:related_item>"
+            "</rel:program>"
         )
         # generate
         crossref_object = generate.build_crossref_xml([article])
