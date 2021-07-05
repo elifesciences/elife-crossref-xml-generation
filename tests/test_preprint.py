@@ -15,8 +15,10 @@ class TestSetPreprint(unittest.TestCase):
             b"<?xml version='1.0' encoding='utf8'?>"
             b"\n<root>"
             b"<rel:program>"
+            b"<rel:related_item>"
             b'<rel:intra_work_relation identifier-type="doi" relationship-type="hasPreprint">'
             b"%s</rel:intra_work_relation>"
+            b"</rel:related_item>"
             b"</rel:program>"
             b"</root>" % bytes(doi, "utf8")
         )
@@ -32,8 +34,10 @@ class TestSetPreprint(unittest.TestCase):
             b"<?xml version='1.0' encoding='utf8'?>"
             b"\n<root>"
             b"<rel:program>"
+            b"<rel:related_item>"
             b'<rel:intra_work_relation identifier-type="uri" relationship-type="hasPreprint">'
             b"%s</rel:intra_work_relation>"
+            b"</rel:related_item>"
             b"</rel:program>"
             b"</root>" % bytes(uri, "utf8")
         )
