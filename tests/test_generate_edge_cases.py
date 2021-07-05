@@ -7,6 +7,7 @@ from elifearticle.article import (
     Dataset,
     Contributor,
     Affiliation,
+    Preprint,
 )
 
 from elifecrossref import generate
@@ -365,6 +366,24 @@ class TestGenerateTitles(unittest.TestCase):
         self.assertTrue(expected_contains in crossref_xml_string)
         # now set the config back to normal
         raw_config_object["face_markup"] = face_markup
+
+
+class TestGeneratePreprint(unittest.TestCase):
+    def test_article_preprint(self):
+        """test for an article with preprint data"""
+        doi = "10.7554/eLife.00666"
+        article = Article(doi, title="Sample article")
+        article.preprint = Preprint(uri="https://example.org/")
+        expected_contains = (
+            '<rel:program><rel:intra_work_relation identifier-type="uri"'
+            ' relationship-type="hasPreprint">https://example.org/'
+            "</rel:intra_work_relation></rel:program>"
+        )
+        # generate
+        crossref_object = generate.build_crossref_xml([article])
+        crossref_xml_string = crossref_object.output_xml()
+        # test assertion
+        self.assertTrue(expected_contains in crossref_xml_string)
 
 
 if __name__ == "__main__":
