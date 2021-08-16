@@ -35,6 +35,15 @@ def set_peer_review(parent, poa_article, crossref_config):
                 "doi",
                 related_article_doi,
             )
+            for related_object in review_article.related_objects:
+                related_item_tag = SubElement(relations_program_tag, "rel:related_item")
+                related.set_related_item_work_relation(
+                    related_item_tag,
+                    "inter_work_relation",
+                    related_object.link_type,
+                    "uri",
+                    related_object.xlink_href,
+                )
 
         doi.set_doi_data(
             peer_review_tag,

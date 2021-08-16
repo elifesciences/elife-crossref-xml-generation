@@ -12,6 +12,38 @@
     <body>
         <peer_review stage="pre-publication" type="editor-report">
             <contributors>
+                <person_name contributor_role="author" sequence="first">
+                    <given_name>Melissa</given_name>
+                    <surname>Harrison</surname>
+                </person_name>
+                <organization contributor_role="author" sequence="additional">eLife Editorial Production Group</organization>
+            </contributors>
+            <titles>
+                <title>Editor's evaluation: The eLife research article</title>
+            </titles>
+            <review_date>
+                <month>01</month>
+                <day>12</day>
+                <year>2018</year>
+            </review_date>
+            <ai:program name="AccessIndicators">
+                <ai:license_ref>http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+            </ai:program>
+            <rel:program>
+                <rel:related_item>
+                    <rel:inter_work_relation identifier-type="doi" relationship-type="isReviewOf">10.7554/eLife.00666</rel:inter_work_relation>
+                </rel:related_item>
+                <rel:related_item>
+                    <rel:inter_work_relation identifier-type="uri" relationship-type="hasRelatedMaterial">https://sciety.org/articles/activity/10.1101/2020.11.21.391326</rel:inter_work_relation>
+                </rel:related_item>
+            </rel:program>
+            <doi_data>
+                <doi>10.7554/eLife.00666.sa0</doi>
+                <resource>https://elifesciences.org/articles/00666#sa0</resource>
+            </doi_data>
+        </peer_review>
+        <peer_review stage="pre-publication" type="editor-report">
+            <contributors>
                 <person_name contributor_role="editor" sequence="first">
                     <given_name>Rutz</given_name>
                     <surname>Christian</surname>
