@@ -1,7 +1,13 @@
 import unittest
 import time
 import os
-from elifearticle.article import Article, ArticleDate, Contributor, License
+from elifearticle.article import (
+    Article,
+    ArticleDate,
+    Contributor,
+    License,
+    RelatedObject,
+)
 from elifecrossref import generate
 from tests import (
     DEFAULT_PUB_DATE,
@@ -18,6 +24,45 @@ generate.TMP_DIR = TEST_BASE_PATH + "tmp" + os.sep
 def sample_data():
     """some sample data for development until real object definition is final and XML is parsed"""
     reviews = []
+    # editor's evaluation
+    editor_evaluation = Article()
+    editor_evaluation.article_type = "editor-report"
+    editor_evaluation.id = "sa0"
+    article_author = Contributor("author", "Harrison", "Melissa")
+    editor_evaluation.contributors.append(article_author)
+    article_collab_author = Contributor(
+        "author", None, None, "eLife Editorial Production Group"
+    )
+    editor_evaluation.contributors.append(article_collab_author)
+    editor_evaluation.title = "Editor's evaluation"
+    # review date
+    review_date = ArticleDate(
+        "review_date", time.strptime("2018-01-12 00:00:00", "%Y-%m-%d %H:%M:%S")
+    )
+    editor_evaluation.add_date(review_date)
+    # license
+    license_object = License()
+    license_object.href = "http://creativecommons.org/licenses/by/4.0/"
+    editor_evaluation.license = license_object
+    # related article doi
+    related_article = Article()
+    related_article.doi = "10.7554/eLife.00666"
+    related_article.title = "The eLife research article"
+    editor_evaluation.related_articles = [related_article]
+    # review article doi
+    editor_evaluation.doi = "10.7554/eLife.00666.sa0"
+    # related material with a uri
+    related_object = RelatedObject()
+    related_object.xlink_href = (
+        "https://sciety.org/articles/activity/10.1101/2020.11.21.391326"
+    )
+    related_object.link_type = "hasRelatedMaterial"
+    editor_evaluation.related_objects = [related_object]
+    # a hack to get the resource url right for now
+    editor_evaluation.manuscript = "00666#sa0"
+    # append it
+    reviews.append(editor_evaluation)
+
     # decision letter
     decision_letter = Article()
     decision_letter.article_type = "editor-report"
