@@ -56,7 +56,7 @@ def sample_data():
     related_object.xlink_href = (
         "https://sciety.org/articles/activity/10.1101/2020.11.21.391326"
     )
-    related_object.link_type = "hasRelatedMaterial"
+    related_object.link_type = "continued-by"
     editor_evaluation.related_objects = [related_object]
     # a hack to get the resource url right for now
     editor_evaluation.manuscript = "00666#sa0"

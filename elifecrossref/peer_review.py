@@ -36,11 +36,14 @@ def set_peer_review(parent, poa_article, crossref_config):
                 related_article_doi,
             )
             for related_object in review_article.related_objects:
+                link_type = related_object.link_type
+                if related_object.link_type == "continued-by":
+                    link_type = "hasRelatedMaterial"
                 related_item_tag = SubElement(relations_program_tag, "rel:related_item")
                 related.set_related_item_work_relation(
                     related_item_tag,
                     "inter_work_relation",
-                    related_object.link_type,
+                    link_type,
                     "uri",
                     related_object.xlink_href,
                 )
