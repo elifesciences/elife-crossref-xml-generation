@@ -1,5 +1,5 @@
 from xml.etree.ElementTree import SubElement
-from elifecrossref import journal, peer_review
+from elifecrossref import journal, peer_review, pending_publication
 
 
 def set_body(parent, poa_articles, crossref_config, default_pub_date, submission_type):
@@ -13,3 +13,7 @@ def set_body(parent, poa_articles, crossref_config, default_pub_date, submission
             )
         elif submission_type == "peer_review":
             peer_review.set_peer_review(body_tag, poa_article, crossref_config)
+        elif submission_type == "pending_publication":
+            pending_publication.set_pending_publication(
+                body_tag, poa_article, crossref_config
+            )
