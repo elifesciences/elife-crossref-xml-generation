@@ -36,6 +36,10 @@ def set_journal_metadata(parent, poa_article):
     journal_metadata_tag.set("language", "en")
     full_title_tag = SubElement(journal_metadata_tag, "full_title")
     full_title_tag.text = poa_article.journal_title
-    issn_tag = SubElement(journal_metadata_tag, "issn")
+    set_issn_tag(journal_metadata_tag, poa_article)
+
+
+def set_issn_tag(parent, poa_article):
+    issn_tag = SubElement(parent, "issn")
     issn_tag.set("media_type", "electronic")
     issn_tag.text = poa_article.journal_issn
