@@ -195,6 +195,7 @@ def build_articles_for_crossref(article_xmls, detail="full", build_parts=None):
         "related_articles",
         "volume",
         "sub_articles",
+        "history",
     ]
     return build_articles(article_xmls, detail, build_parts)
 
