@@ -70,6 +70,11 @@
 					<day>29</day>
 					<year>2014</year>
 				</publication_date>
+				<acceptance_date>
+					<month>04</month>
+					<day>12</day>
+					<year>2014</year>
+				</acceptance_date>
 				<publisher_item>
 					<item_number item_number_type="article_number">e02043</item_number>
 					<identifier id_type="doi">10.7554/eLife.02043</identifier>

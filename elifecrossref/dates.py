@@ -22,6 +22,13 @@ def get_pub_date(poa_article, crossref_config, default_pub_date):
     return pub_date
 
 
+def set_acceptance_date(parent, article_date):
+    # article_date is an ArticleDate object
+    if article_date:
+        date_tag = SubElement(parent, "acceptance_date")
+        set_date_detail(date_tag, article_date.date)
+
+
 def set_publication_date(parent, pub_date):
     # pub_date is a python time object
     if pub_date:
