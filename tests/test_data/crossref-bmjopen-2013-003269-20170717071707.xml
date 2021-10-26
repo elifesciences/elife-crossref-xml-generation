@@ -67,6 +67,11 @@
 					<day>31</day>
 					<year>2014</year>
 				</publication_date>
+				<acceptance_date>
+					<month>08</month>
+					<day>20</day>
+					<year>2013</year>
+				</acceptance_date>
 				<publisher_item>
 					<item_number item_number_type="article_number">e003269</item_number>
 					<identifier id_type="doi">10.1136/bmjopen-2013-003269</identifier>
