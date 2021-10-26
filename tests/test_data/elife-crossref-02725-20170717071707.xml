@@ -122,6 +122,11 @@
 					<day>17</day>
 					<year>2017</year>
 				</publication_date>
+				<acceptance_date>
+					<month>09</month>
+					<day>26</day>
+					<year>2014</year>
+				</acceptance_date>
 				<publisher_item>
 					<item_number item_number_type="article_number">e02725</item_number>
 					<identifier id_type="doi">10.7554/eLife.02725</identifier>

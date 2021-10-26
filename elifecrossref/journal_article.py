@@ -41,6 +41,9 @@ def set_journal_article(parent, poa_article, pub_date, crossref_config):
     # Journal publication date
     dates.set_publication_date(journal_article_tag, pub_date)
 
+    # article accepted date
+    dates.set_acceptance_date(journal_article_tag, poa_article.get_date("accepted"))
+
     publisher_item_tag = SubElement(journal_article_tag, "publisher_item")
     if crossref_config.get("elocation_id") and poa_article.elocation_id:
         item_number_tag = SubElement(publisher_item_tag, "item_number")

@@ -44,6 +44,11 @@
 					<day>06</day>
 					<year>2018</year>
 				</publication_date>
+				<acceptance_date>
+					<month>12</month>
+					<day>20</day>
+					<year>2017</year>
+				</acceptance_date>
 				<publisher_item>
 					<item_number item_number_type="article_number">3</item_number>
 					<identifier id_type="doi">10.5334/sta.606</identifier>

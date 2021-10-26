@@ -61,6 +61,11 @@
 					<day>23</day>
 					<year>2016</year>
 				</publication_date>
+				<acceptance_date>
+					<month>03</month>
+					<day>02</day>
+					<year>2016</year>
+				</acceptance_date>
 				<publisher_item>
 					<item_number item_number_type="article_number">e15743</item_number>
 					<identifier id_type="doi">10.7554/eLife.15743</identifier>
