@@ -1,3 +1,5 @@
+def tag;
+
 elifePipeline {
 
     stage 'Checkout', {
@@ -13,5 +15,9 @@ elifePipeline {
         elifeGitTagRevision(tag)
     }
     
+    stage 'Downstream', {
+        elifeMainlineOnly {
+            build job: '/dependencies/elife-bot-elifecrossref', parameters: [tag], wait: false
+        }
+    }
 }
-
