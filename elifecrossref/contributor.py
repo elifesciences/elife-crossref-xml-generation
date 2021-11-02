@@ -22,11 +22,21 @@ def set_contributors(parent, contributors):
     # Ready to add to XML
     # Use the natural list order of contributors when setting the first author
     sequence = "first"
+    prev_equal_contrib = None
     for contributor in contributors:
+        if (sequence == "first" and prev_equal_contrib is False) or (
+            sequence == "first"
+            and prev_equal_contrib is True
+            and not contributor.equal_contrib
+        ):
+            # Reset sequence value unless the first contributor and
+            # next contributor is also equal_contrib
+            sequence = "additional"
+
         set_contributor(contributors_tag, contributor, sequence)
 
-        # Reset sequence value after the first sucessful loop
-        sequence = "additional"
+        # set value for the next loop interation
+        prev_equal_contrib = contributor.equal_contrib
 
 
 def set_contributor(parent, contributor, sequence):

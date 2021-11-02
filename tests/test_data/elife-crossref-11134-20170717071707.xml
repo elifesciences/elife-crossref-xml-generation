@@ -36,7 +36,7 @@
 						<affiliation>MRC Laboratory of Molecular Biology, Cambridge, United Kingdom</affiliation>
 						<ORCID authenticated="true">http://orcid.org/0000-0002-7941-0357</ORCID>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name contributor_role="author" sequence="first">
 						<given_name>Julian</given_name>
 						<surname>Conrad</surname>
 						<affiliation>MRC Laboratory of Molecular Biology, Cambridge, United Kingdom</affiliation>
