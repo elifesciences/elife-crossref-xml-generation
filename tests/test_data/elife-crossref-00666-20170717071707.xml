@@ -37,13 +37,13 @@
 						<affiliation>Department of Production, eLife, Cambridge, United Kingdom</affiliation>
 						<ORCID authenticated="true">http://orcid.org/0000-0003-3523-4408</ORCID>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name contributor_role="author" sequence="first">
 						<given_name>James F</given_name>
 						<surname>Gilbert</surname>
 						<affiliation>Department of Production, eLife, Cambridge, United Kingdom</affiliation>
 					</person_name>
-					<organization contributor_role="author" sequence="additional">eLife Editorial Production Group</organization>
-					<organization contributor_role="author" sequence="additional">eLife Technology Group</organization>
+					<organization contributor_role="author" sequence="first">eLife Editorial Production Group</organization>
+					<organization contributor_role="author" sequence="first">eLife Technology Group</organization>
 					<organization contributor_role="author" sequence="additional">for the eLife Staff Team</organization>
 				</contributors>
 				<jats:abstract xmlns:mml="http://www.w3.org/1998/Math/MathML">
