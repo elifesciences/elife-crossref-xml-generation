@@ -2,4 +2,5 @@ elifetools==0.13.0
 elifearticle==0.7.0
 GitPython==3.1.2
 configparser==3.5.0
+coverage==5.5
 requests==2.24.0
