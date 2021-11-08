@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<doi_batch version="4.4.2" xmlns="http://www.crossref.org/schema/4.4.2" xmlns:ai="http://www.crossref.org/AccessIndicators.xsd" xmlns:ct="http://www.crossref.org/clinicaltrials.xsd" xmlns:fr="http://www.crossref.org/fundref.xsd" xmlns:jats="http://www.ncbi.nlm.nih.gov/JATS1" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:rel="http://www.crossref.org/relations.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.crossref.org/schema/4.4.2 http://www.crossref.org/schemas/crossref4.4.2.xsd">
+<doi_batch version="5.3.1" xmlns="http://www.crossref.org/schema/5.3.1" xmlns:ai="http://www.crossref.org/AccessIndicators.xsd" xmlns:ct="http://www.crossref.org/clinicaltrials.xsd" xmlns:fr="http://www.crossref.org/fundref.xsd" xmlns:jats="http://www.ncbi.nlm.nih.gov/JATS1" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:rel="http://www.crossref.org/relations.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.crossref.org/schema/5.3.1 http://www.crossref.org/schemas/crossref5.3.1.xsd">
 	<head>
 		<doi_batch_id>elife-crossref-12444-20170717071707</doi_batch_id>
 		<timestamp>20170717071707</timestamp>
@@ -33,70 +33,144 @@
 					<person_name contributor_role="author" sequence="first">
 						<given_name>Agnieszka M</given_name>
 						<surname>Kabat</surname>
-						<affiliation>Sir William Dunn School of Pathology, University of Oxford, Oxford, United Kingdom</affiliation>
+						<affiliations>
+							<institution>
+								<institution_name>Sir William Dunn School of Pathology, University of Oxford</institution_name>
+								<institution_place>Oxford, United Kingdom</institution_place>
+							</institution>
+						</affiliations>
 					</person_name>
 					<person_name contributor_role="author" sequence="additional">
 						<given_name>Oliver J</given_name>
 						<surname>Harrison</surname>
-						<affiliation>Sir William Dunn School of Pathology, University of Oxford, Oxford, United Kingdom</affiliation>
-						<affiliation>Immunity at Barrier Sites Initiative, National Institute of Allergy and Infectious Diseases, National Institutes of Health, Bethesda, United States</affiliation>
+						<affiliations>
+							<institution>
+								<institution_name>Sir William Dunn School of Pathology, University of Oxford</institution_name>
+								<institution_place>Oxford, United Kingdom</institution_place>
+							</institution>
+							<institution>
+								<institution_name>Immunity at Barrier Sites Initiative, National Institute of Allergy and Infectious Diseases, National Institutes of Health</institution_name>
+								<institution_place>Bethesda, United States</institution_place>
+							</institution>
+						</affiliations>
 					</person_name>
 					<person_name contributor_role="author" sequence="additional">
 						<given_name>Thomas</given_name>
 						<surname>Riffelmacher</surname>
-						<affiliation>MRC Human Immunology Unit, Weatherall Institute of Molecular Medicine, University of Oxford, Oxford, United Kingdom</affiliation>
-						<affiliation>John Radcliffe Hospital, University of Oxford, Oxford, United Kingdom</affiliation>
+						<affiliations>
+							<institution>
+								<institution_name>MRC Human Immunology Unit, Weatherall Institute of Molecular Medicine, University of Oxford</institution_name>
+								<institution_place>Oxford, United Kingdom</institution_place>
+							</institution>
+							<institution>
+								<institution_name>John Radcliffe Hospital, University of Oxford</institution_name>
+								<institution_place>Oxford, United Kingdom</institution_place>
+							</institution>
+						</affiliations>
 					</person_name>
 					<person_name contributor_role="author" sequence="additional">
 						<given_name>Amin E</given_name>
 						<surname>Moghaddam</surname>
-						<affiliation>Sir William Dunn School of Pathology, University of Oxford, Oxford, United Kingdom</affiliation>
+						<affiliations>
+							<institution>
+								<institution_name>Sir William Dunn School of Pathology, University of Oxford</institution_name>
+								<institution_place>Oxford, United Kingdom</institution_place>
+							</institution>
+						</affiliations>
 					</person_name>
 					<person_name contributor_role="author" sequence="additional">
 						<given_name>Claire F</given_name>
 						<surname>Pearson</surname>
-						<affiliation>Kennedy Institute of Rheumatology, University of Oxford, Oxford, United Kingdom</affiliation>
+						<affiliations>
+							<institution>
+								<institution_name>Kennedy Institute of Rheumatology, University of Oxford</institution_name>
+								<institution_place>Oxford, United Kingdom</institution_place>
+							</institution>
+						</affiliations>
 					</person_name>
 					<person_name contributor_role="author" sequence="additional">
 						<given_name>Adam</given_name>
 						<surname>Laing</surname>
-						<affiliation>Peter Gorer Department of Immunobiology, King's College London, London, United Kingdom</affiliation>
+						<affiliations>
+							<institution>
+								<institution_name>Peter Gorer Department of Immunobiology, King's College London</institution_name>
+								<institution_place>London, United Kingdom</institution_place>
+							</institution>
+						</affiliations>
 					</person_name>
 					<person_name contributor_role="author" sequence="additional">
 						<given_name>Lucie</given_name>
 						<surname>Abeler-Dörner</surname>
-						<affiliation>Peter Gorer Department of Immunobiology, King's College London, London, United Kingdom</affiliation>
+						<affiliations>
+							<institution>
+								<institution_name>Peter Gorer Department of Immunobiology, King's College London</institution_name>
+								<institution_place>London, United Kingdom</institution_place>
+							</institution>
+						</affiliations>
 					</person_name>
 					<person_name contributor_role="author" sequence="additional">
 						<given_name>Simon P</given_name>
 						<surname>Forman</surname>
-						<affiliation>Faculty of Life Sciences, The University of Manchester, Manchester, United Kingdom</affiliation>
+						<affiliations>
+							<institution>
+								<institution_name>Faculty of Life Sciences, The University of Manchester</institution_name>
+								<institution_place>Manchester, United Kingdom</institution_place>
+							</institution>
+						</affiliations>
 					</person_name>
 					<person_name contributor_role="author" sequence="additional">
 						<given_name>Richard K</given_name>
 						<surname>Grencis</surname>
-						<affiliation>Faculty of Life Sciences, The University of Manchester, Manchester, United Kingdom</affiliation>
+						<affiliations>
+							<institution>
+								<institution_name>Faculty of Life Sciences, The University of Manchester</institution_name>
+								<institution_place>Manchester, United Kingdom</institution_place>
+							</institution>
+						</affiliations>
 					</person_name>
 					<person_name contributor_role="author" sequence="additional">
 						<given_name>Quentin</given_name>
 						<surname>Sattentau</surname>
-						<affiliation>Sir William Dunn School of Pathology, University of Oxford, Oxford, United Kingdom</affiliation>
+						<affiliations>
+							<institution>
+								<institution_name>Sir William Dunn School of Pathology, University of Oxford</institution_name>
+								<institution_place>Oxford, United Kingdom</institution_place>
+							</institution>
+						</affiliations>
 					</person_name>
 					<person_name contributor_role="author" sequence="additional">
 						<given_name>Anna Katharina</given_name>
 						<surname>Simon</surname>
-						<affiliation>MRC Human Immunology Unit, Weatherall Institute of Molecular Medicine, University of Oxford, Oxford, United Kingdom</affiliation>
-						<affiliation>John Radcliffe Hospital, University of Oxford, Oxford, United Kingdom</affiliation>
+						<affiliations>
+							<institution>
+								<institution_name>MRC Human Immunology Unit, Weatherall Institute of Molecular Medicine, University of Oxford</institution_name>
+								<institution_place>Oxford, United Kingdom</institution_place>
+							</institution>
+							<institution>
+								<institution_name>John Radcliffe Hospital, University of Oxford</institution_name>
+								<institution_place>Oxford, United Kingdom</institution_place>
+							</institution>
+						</affiliations>
 					</person_name>
 					<person_name contributor_role="author" sequence="additional">
 						<given_name>Johanna</given_name>
 						<surname>Pott</surname>
-						<affiliation>Sir William Dunn School of Pathology, University of Oxford, Oxford, United Kingdom</affiliation>
+						<affiliations>
+							<institution>
+								<institution_name>Sir William Dunn School of Pathology, University of Oxford</institution_name>
+								<institution_place>Oxford, United Kingdom</institution_place>
+							</institution>
+						</affiliations>
 					</person_name>
 					<person_name contributor_role="author" sequence="additional">
 						<given_name>Kevin J</given_name>
 						<surname>Maloy</surname>
-						<affiliation>Sir William Dunn School of Pathology, University of Oxford, Oxford, United Kingdom</affiliation>
+						<affiliations>
+							<institution>
+								<institution_name>Sir William Dunn School of Pathology, University of Oxford</institution_name>
+								<institution_place>Oxford, United Kingdom</institution_place>
+							</institution>
+						</affiliations>
 						<ORCID authenticated="true">http://orcid.org/0000-0001-5795-7688</ORCID>
 					</person_name>
 				</contributors>

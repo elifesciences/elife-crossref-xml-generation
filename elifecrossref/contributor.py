@@ -98,8 +98,34 @@ def set_orcid(parent, contributor):
 def set_affiliations(parent, contributor):
     # Crossref schema limits the number of affilations an author can have
     max_affiliations = 5
-    non_blank_affiliations = [aff for aff in contributor.affiliations if aff.text]
+    non_blank_affiliations = [
+        aff for aff in contributor.affiliations if affiliation_name_place(aff)[0]
+    ]
     affiliations_to_add = non_blank_affiliations[0:max_affiliations]
+    if affiliations_to_add:
+        affiliations_tag = SubElement(parent, "affiliations")
     for aff in affiliations_to_add:
-        affiliation_tag = SubElement(parent, "affiliation")
-        affiliation_tag.text = aff.text
+        # format name and place tag strings
+        text_name, text_place = affiliation_name_place(aff)
+        # add tags
+        institution_tag = SubElement(affiliations_tag, "institution")
+        institution_name_tag = SubElement(institution_tag, "institution_name")
+        institution_name_tag.text = text_name
+        if text_place:
+            institution_place_tag = SubElement(institution_tag, "institution_place")
+            institution_place_tag.text = text_place
+
+
+def affiliation_name_place(aff):
+    "from an Affiliation object, set name and place values to be used in institution tags"
+    text_name = ", ".join(
+        [value for value in [aff.department, aff.institution] if value]
+    )
+    text_place = ", ".join([value for value in [aff.city, aff.country] if value])
+    if not text_name and aff.text:
+        text_name = aff.text
+    elif not text_name and text_place:
+        # use the place value as the name to satisfy fields required in the Crossref schema
+        text_name = text_place
+        text_place = ""
+    return text_name, text_place

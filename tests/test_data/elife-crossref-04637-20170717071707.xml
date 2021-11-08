@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<doi_batch version="4.4.2" xmlns="http://www.crossref.org/schema/4.4.2" xmlns:ai="http://www.crossref.org/AccessIndicators.xsd" xmlns:ct="http://www.crossref.org/clinicaltrials.xsd" xmlns:fr="http://www.crossref.org/fundref.xsd" xmlns:jats="http://www.ncbi.nlm.nih.gov/JATS1" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:rel="http://www.crossref.org/relations.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.crossref.org/schema/4.4.2 http://www.crossref.org/schemas/crossref4.4.2.xsd">
+<doi_batch version="5.3.1" xmlns="http://www.crossref.org/schema/5.3.1" xmlns:ai="http://www.crossref.org/AccessIndicators.xsd" xmlns:ct="http://www.crossref.org/clinicaltrials.xsd" xmlns:fr="http://www.crossref.org/fundref.xsd" xmlns:jats="http://www.ncbi.nlm.nih.gov/JATS1" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:rel="http://www.crossref.org/relations.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.crossref.org/schema/5.3.1 http://www.crossref.org/schemas/crossref5.3.1.xsd">
 	<head>
 		<doi_batch_id>elife-crossref-04637-20170717071707</doi_batch_id>
 		<timestamp>20170717071707</timestamp>
@@ -33,72 +33,152 @@
 					<person_name contributor_role="author" sequence="first">
 						<given_name>Amy L</given_name>
 						<surname>Williams</surname>
-						<affiliation>Department of Biological Sciences, Columbia University, New York, United States</affiliation>
-						<affiliation>Department of Systems Biology, Columbia University, New York, United States</affiliation>
-						<affiliation>Program in Medical and Population Genetics, Broad Institute of Harvard and MIT, Cambridge, United States</affiliation>
+						<affiliations>
+							<institution>
+								<institution_name>Department of Biological Sciences, Columbia University</institution_name>
+								<institution_place>New York, United States</institution_place>
+							</institution>
+							<institution>
+								<institution_name>Department of Systems Biology, Columbia University</institution_name>
+								<institution_place>New York, United States</institution_place>
+							</institution>
+							<institution>
+								<institution_name>Program in Medical and Population Genetics, Broad Institute of Harvard and MIT</institution_name>
+								<institution_place>Cambridge, United States</institution_place>
+							</institution>
+						</affiliations>
 					</person_name>
 					<person_name contributor_role="author" sequence="additional">
 						<given_name>Giulio</given_name>
 						<surname>Genovese</surname>
-						<affiliation>Program in Medical and Population Genetics, Broad Institute of Harvard and MIT, Cambridge, United States</affiliation>
+						<affiliations>
+							<institution>
+								<institution_name>Program in Medical and Population Genetics, Broad Institute of Harvard and MIT</institution_name>
+								<institution_place>Cambridge, United States</institution_place>
+							</institution>
+						</affiliations>
 					</person_name>
 					<person_name contributor_role="author" sequence="additional">
 						<given_name>Thomas</given_name>
 						<surname>Dyer</surname>
-						<affiliation>Department of Genetics, Texas Biomedical Research Institute, San Antonio, United States</affiliation>
+						<affiliations>
+							<institution>
+								<institution_name>Department of Genetics, Texas Biomedical Research Institute</institution_name>
+								<institution_place>San Antonio, United States</institution_place>
+							</institution>
+						</affiliations>
 					</person_name>
 					<person_name contributor_role="author" sequence="additional">
 						<given_name>Nicolas</given_name>
 						<surname>Altemose</surname>
-						<affiliation>Wellcome Trust Centre for Human Genetics, Oxford University, Oxford, United Kingdom</affiliation>
+						<affiliations>
+							<institution>
+								<institution_name>Wellcome Trust Centre for Human Genetics, Oxford University</institution_name>
+								<institution_place>Oxford, United Kingdom</institution_place>
+							</institution>
+						</affiliations>
 					</person_name>
 					<person_name contributor_role="author" sequence="additional">
 						<given_name>Katherine</given_name>
 						<surname>Truax</surname>
-						<affiliation>Department of Genetics, Texas Biomedical Research Institute, San Antonio, United States</affiliation>
+						<affiliations>
+							<institution>
+								<institution_name>Department of Genetics, Texas Biomedical Research Institute</institution_name>
+								<institution_place>San Antonio, United States</institution_place>
+							</institution>
+						</affiliations>
 					</person_name>
 					<person_name contributor_role="author" sequence="additional">
 						<given_name>Goo</given_name>
 						<surname>Jun</surname>
-						<affiliation>Department of Biostatistics, University of Michigan, Ann Arbor, United States</affiliation>
+						<affiliations>
+							<institution>
+								<institution_name>Department of Biostatistics, University of Michigan</institution_name>
+								<institution_place>Ann Arbor, United States</institution_place>
+							</institution>
+						</affiliations>
 					</person_name>
 					<person_name contributor_role="author" sequence="additional">
 						<given_name>Nick</given_name>
 						<surname>Patterson</surname>
-						<affiliation>Program in Medical and Population Genetics, Broad Institute of Harvard and MIT, Cambridge, United States</affiliation>
+						<affiliations>
+							<institution>
+								<institution_name>Program in Medical and Population Genetics, Broad Institute of Harvard and MIT</institution_name>
+								<institution_place>Cambridge, United States</institution_place>
+							</institution>
+						</affiliations>
 					</person_name>
 					<person_name contributor_role="author" sequence="additional">
 						<given_name>Simon R</given_name>
 						<surname>Myers</surname>
-						<affiliation>Wellcome Trust Centre for Human Genetics, Oxford University, Oxford, United Kingdom</affiliation>
+						<affiliations>
+							<institution>
+								<institution_name>Wellcome Trust Centre for Human Genetics, Oxford University</institution_name>
+								<institution_place>Oxford, United Kingdom</institution_place>
+							</institution>
+						</affiliations>
 					</person_name>
 					<person_name contributor_role="author" sequence="additional">
 						<given_name>Joanne E</given_name>
 						<surname>Curran</surname>
-						<affiliation>Department of Genetics, Texas Biomedical Research Institute, San Antonio, United States</affiliation>
+						<affiliations>
+							<institution>
+								<institution_name>Department of Genetics, Texas Biomedical Research Institute</institution_name>
+								<institution_place>San Antonio, United States</institution_place>
+							</institution>
+						</affiliations>
 					</person_name>
 					<person_name contributor_role="author" sequence="additional">
 						<given_name>Ravi</given_name>
 						<surname>Duggirala</surname>
-						<affiliation>Department of Genetics, Texas Biomedical Research Institute, San Antonio, United States</affiliation>
+						<affiliations>
+							<institution>
+								<institution_name>Department of Genetics, Texas Biomedical Research Institute</institution_name>
+								<institution_place>San Antonio, United States</institution_place>
+							</institution>
+						</affiliations>
 					</person_name>
 					<person_name contributor_role="author" sequence="additional">
 						<given_name>John</given_name>
 						<surname>Blangero</surname>
-						<affiliation>Department of Genetics, Texas Biomedical Research Institute, San Antonio, United States</affiliation>
+						<affiliations>
+							<institution>
+								<institution_name>Department of Genetics, Texas Biomedical Research Institute</institution_name>
+								<institution_place>San Antonio, United States</institution_place>
+							</institution>
+						</affiliations>
 					</person_name>
 					<person_name contributor_role="author" sequence="additional">
 						<given_name>David</given_name>
 						<surname>Reich</surname>
-						<affiliation>Program in Medical and Population Genetics, Broad Institute of Harvard and MIT, Cambridge, United States</affiliation>
-						<affiliation>Department of Genetics, Harvard Medical School, Boston, United States</affiliation>
-						<affiliation>Howard Hughes Medical Institute, Harvard Medical School, Boston, United States</affiliation>
+						<affiliations>
+							<institution>
+								<institution_name>Program in Medical and Population Genetics, Broad Institute of Harvard and MIT</institution_name>
+								<institution_place>Cambridge, United States</institution_place>
+							</institution>
+							<institution>
+								<institution_name>Department of Genetics, Harvard Medical School</institution_name>
+								<institution_place>Boston, United States</institution_place>
+							</institution>
+							<institution>
+								<institution_name>Howard Hughes Medical Institute, Harvard Medical School</institution_name>
+								<institution_place>Boston, United States</institution_place>
+							</institution>
+						</affiliations>
 					</person_name>
 					<person_name contributor_role="author" sequence="additional">
 						<given_name>Molly</given_name>
 						<surname>Przeworski</surname>
-						<affiliation>Department of Biological Sciences, Columbia University, New York, United States</affiliation>
-						<affiliation>Department of Systems Biology, Columbia University, New York, United States</affiliation>
+						<affiliations>
+							<institution>
+								<institution_name>Department of Biological Sciences, Columbia University</institution_name>
+								<institution_place>New York, United States</institution_place>
+							</institution>
+							<institution>
+								<institution_name>Department of Systems Biology, Columbia University</institution_name>
+								<institution_place>New York, United States</institution_place>
+							</institution>
+						</affiliations>
 					</person_name>
 					<organization contributor_role="author" sequence="additional">on behalf of the T2D-GENES Consortium</organization>
 				</contributors>
