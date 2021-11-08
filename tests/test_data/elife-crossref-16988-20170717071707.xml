@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<doi_batch version="4.4.2" xmlns="http://www.crossref.org/schema/4.4.2" xmlns:ai="http://www.crossref.org/AccessIndicators.xsd" xmlns:ct="http://www.crossref.org/clinicaltrials.xsd" xmlns:fr="http://www.crossref.org/fundref.xsd" xmlns:jats="http://www.ncbi.nlm.nih.gov/JATS1" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:rel="http://www.crossref.org/relations.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.crossref.org/schema/4.4.2 http://www.crossref.org/schemas/crossref4.4.2.xsd">
+<doi_batch version="5.3.1" xmlns="http://www.crossref.org/schema/5.3.1" xmlns:ai="http://www.crossref.org/AccessIndicators.xsd" xmlns:ct="http://www.crossref.org/clinicaltrials.xsd" xmlns:fr="http://www.crossref.org/fundref.xsd" xmlns:jats="http://www.ncbi.nlm.nih.gov/JATS1" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:rel="http://www.crossref.org/relations.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.crossref.org/schema/5.3.1 http://www.crossref.org/schemas/crossref5.3.1.xsd">
 	<head>
 		<doi_batch_id>elife-crossref-16988-20170717071707</doi_batch_id>
 		<timestamp>20170717071707</timestamp>
@@ -33,33 +33,63 @@
 					<person_name contributor_role="author" sequence="first">
 						<given_name>Maud</given_name>
 						<surname>Magdeleine</surname>
-						<affiliation>CNRS, Institut de Pharmacologie Moléculaire et Cellulaire, Université Côte d'Azur, Valbonne, France</affiliation>
+						<affiliations>
+							<institution>
+								<institution_name>CNRS, Institut de Pharmacologie Moléculaire et Cellulaire, Université Côte d'Azur</institution_name>
+								<institution_place>Valbonne, France</institution_place>
+							</institution>
+						</affiliations>
 					</person_name>
 					<person_name contributor_role="author" sequence="additional">
 						<given_name>Romain</given_name>
 						<surname>Gautier</surname>
-						<affiliation>CNRS, Institut de Pharmacologie Moléculaire et Cellulaire, Université Côte d'Azur, Valbonne, France</affiliation>
+						<affiliations>
+							<institution>
+								<institution_name>CNRS, Institut de Pharmacologie Moléculaire et Cellulaire, Université Côte d'Azur</institution_name>
+								<institution_place>Valbonne, France</institution_place>
+							</institution>
+						</affiliations>
 					</person_name>
 					<person_name contributor_role="author" sequence="additional">
 						<given_name>Pierre</given_name>
 						<surname>Gounon</surname>
-						<affiliation>Centre Commun de Microscopie Appliquée, Université Côte d'Azur, Nice, France</affiliation>
+						<affiliations>
+							<institution>
+								<institution_name>Centre Commun de Microscopie Appliquée, Université Côte d'Azur</institution_name>
+								<institution_place>Nice, France</institution_place>
+							</institution>
+						</affiliations>
 					</person_name>
 					<person_name contributor_role="author" sequence="additional">
 						<given_name>Hélène</given_name>
 						<surname>Barelli</surname>
-						<affiliation>CNRS, Institut de Pharmacologie Moléculaire et Cellulaire, Université Côte d'Azur, Valbonne, France</affiliation>
+						<affiliations>
+							<institution>
+								<institution_name>CNRS, Institut de Pharmacologie Moléculaire et Cellulaire, Université Côte d'Azur</institution_name>
+								<institution_place>Valbonne, France</institution_place>
+							</institution>
+						</affiliations>
 					</person_name>
 					<person_name contributor_role="author" sequence="additional">
 						<given_name>Stefano</given_name>
 						<surname>Vanni</surname>
-						<affiliation>CNRS, Institut de Pharmacologie Moléculaire et Cellulaire, Université Côte d'Azur, Valbonne, France</affiliation>
+						<affiliations>
+							<institution>
+								<institution_name>CNRS, Institut de Pharmacologie Moléculaire et Cellulaire, Université Côte d'Azur</institution_name>
+								<institution_place>Valbonne, France</institution_place>
+							</institution>
+						</affiliations>
 						<ORCID authenticated="true">http://orcid.org/0000-0003-2146-1140</ORCID>
 					</person_name>
 					<person_name contributor_role="author" sequence="additional">
 						<given_name>Bruno</given_name>
 						<surname>Antonny</surname>
-						<affiliation>CNRS, Institut de Pharmacologie Moléculaire et Cellulaire, Université Côte d'Azur, Valbonne, France</affiliation>
+						<affiliations>
+							<institution>
+								<institution_name>CNRS, Institut de Pharmacologie Moléculaire et Cellulaire, Université Côte d'Azur</institution_name>
+								<institution_place>Valbonne, France</institution_place>
+							</institution>
+						</affiliations>
 						<ORCID authenticated="true">http://orcid.org/0000-0002-9166-8668</ORCID>
 					</person_name>
 				</contributors>
