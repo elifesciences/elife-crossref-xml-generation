@@ -1,12 +1,7 @@
 elife-crossref-xml-generation
 =============================
 
-.. image:: https://coveralls.io/repos/github/elifesciences/elife-crossref-xml-generation/badge.svg?branch=develop
-   :target: https://coveralls.io/github/elifesciences/elife-crossref-xml-generation?branch=develop
-
-
 Crossref deposit of journal articles
-
 
 Overview
 ========
