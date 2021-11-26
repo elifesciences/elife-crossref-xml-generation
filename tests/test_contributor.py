@@ -54,12 +54,14 @@ class TestSetAffiliations(unittest.TestCase):
         aff_object.institution = "Institution"
         aff_object.city = "City"
         aff_object.country = "Country"
+        aff_object.ror = "https://ror.org/example"
         contributor_object.set_affiliation(aff_object)
         expected = (
             "<person_name>"
             "<affiliations>"
             "<institution>"
             "<institution_name>Department, Institution</institution_name>"
+            '<institution_id type="ror">https://ror.org/example</institution_id>'
             "<institution_place>City, Country</institution_place>"
             "</institution>"
             "</affiliations>"
