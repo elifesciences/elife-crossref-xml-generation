@@ -111,6 +111,10 @@ def set_affiliations(parent, contributor):
         institution_tag = SubElement(affiliations_tag, "institution")
         institution_name_tag = SubElement(institution_tag, "institution_name")
         institution_name_tag.text = text_name
+        if hasattr(aff, "ror") and aff.ror:
+            institution_id_tag = SubElement(institution_tag, "institution_id")
+            institution_id_tag.set("type", "ror")
+            institution_id_tag.text = aff.ror
         if text_place:
             institution_place_tag = SubElement(institution_tag, "institution_place")
             institution_place_tag.text = text_place
