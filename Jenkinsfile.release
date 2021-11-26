@@ -17,7 +17,7 @@ elifePipeline {
     
     stage 'Downstream', {
         elifeMainlineOnly {
-            build job: '/dependencies/elife-bot-elifecrossref', parameters: [tag], wait: false
+            build job: '/dependencies/elife-bot-elifecrossref', parameters: [string(name: 'tag', value: tag)], wait: false
         }
     }
 }
