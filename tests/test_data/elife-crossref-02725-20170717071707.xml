@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<doi_batch version="4.4.2" xmlns="http://www.crossref.org/schema/4.4.2" xmlns:ai="http://www.crossref.org/AccessIndicators.xsd" xmlns:ct="http://www.crossref.org/clinicaltrials.xsd" xmlns:fr="http://www.crossref.org/fundref.xsd" xmlns:jats="http://www.ncbi.nlm.nih.gov/JATS1" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:rel="http://www.crossref.org/relations.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.crossref.org/schema/4.4.2 http://www.crossref.org/schemas/crossref4.4.2.xsd">
+<doi_batch version="5.3.1" xmlns="http://www.crossref.org/schema/5.3.1" xmlns:ai="http://www.crossref.org/AccessIndicators.xsd" xmlns:ct="http://www.crossref.org/clinicaltrials.xsd" xmlns:fr="http://www.crossref.org/fundref.xsd" xmlns:jats="http://www.ncbi.nlm.nih.gov/JATS1" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:rel="http://www.crossref.org/relations.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.crossref.org/schema/5.3.1 http://www.crossref.org/schemas/crossref5.3.1.xsd">
 	<head>
 		<doi_batch_id>elife-crossref-02725-20170717071707</doi_batch_id>
 		<timestamp>20170717071707</timestamp>
@@ -33,85 +33,165 @@
 					<person_name contributor_role="author" sequence="first">
 						<given_name>Hui</given_name>
 						<surname>Zhao</surname>
-						<affiliation>VIB Vesalius Research Center, KU Leuven, Leuven, Belgium</affiliation>
+						<affiliations>
+							<institution>
+								<institution_name>VIB Vesalius Research Center, KU Leuven</institution_name>
+								<institution_place>Leuven, Belgium</institution_place>
+							</institution>
+						</affiliations>
 					</person_name>
 					<person_name contributor_role="author" sequence="additional">
 						<given_name>Bernard</given_name>
 						<surname>Thienpont</surname>
-						<affiliation>VIB Vesalius Research Center, KU Leuven, Leuven, Belgium</affiliation>
+						<affiliations>
+							<institution>
+								<institution_name>VIB Vesalius Research Center, KU Leuven</institution_name>
+								<institution_place>Leuven, Belgium</institution_place>
+							</institution>
+						</affiliations>
 						<ORCID authenticated="true">http://orcid.org/0000-0002-8772-6845</ORCID>
 					</person_name>
 					<person_name contributor_role="author" sequence="additional">
 						<given_name>Betül Tuba</given_name>
 						<surname>Yesilyurt</surname>
-						<affiliation>VIB Vesalius Research Center, KU Leuven, Leuven, Belgium</affiliation>
+						<affiliations>
+							<institution>
+								<institution_name>VIB Vesalius Research Center, KU Leuven</institution_name>
+								<institution_place>Leuven, Belgium</institution_place>
+							</institution>
+						</affiliations>
 					</person_name>
 					<person_name contributor_role="author" sequence="additional">
 						<given_name>Matthieu</given_name>
 						<surname>Moisse</surname>
-						<affiliation>VIB Vesalius Research Center, KU Leuven, Leuven, Belgium</affiliation>
+						<affiliations>
+							<institution>
+								<institution_name>VIB Vesalius Research Center, KU Leuven</institution_name>
+								<institution_place>Leuven, Belgium</institution_place>
+							</institution>
+						</affiliations>
 						<ORCID authenticated="true">http://orcid.org/0000-0001-8880-9311</ORCID>
 					</person_name>
 					<person_name contributor_role="author" sequence="additional">
 						<given_name>Joke</given_name>
 						<surname>Reumers</surname>
-						<affiliation>VIB Vesalius Research Center, KU Leuven, Leuven, Belgium</affiliation>
+						<affiliations>
+							<institution>
+								<institution_name>VIB Vesalius Research Center, KU Leuven</institution_name>
+								<institution_place>Leuven, Belgium</institution_place>
+							</institution>
+						</affiliations>
 					</person_name>
 					<person_name contributor_role="author" sequence="additional">
 						<given_name>Lieve</given_name>
 						<surname>Coenegrachts</surname>
-						<affiliation>Division of Gynaecologic Oncology, Department of Obstetrics and Gynaecology, University Hospital Gasthuisberg, Leuven, Belgium</affiliation>
+						<affiliations>
+							<institution>
+								<institution_name>Division of Gynaecologic Oncology, Department of Obstetrics and Gynaecology, University Hospital Gasthuisberg</institution_name>
+								<institution_place>Leuven, Belgium</institution_place>
+							</institution>
+						</affiliations>
 					</person_name>
 					<person_name contributor_role="author" sequence="additional">
 						<given_name>Xavier</given_name>
 						<surname>Sagaert</surname>
-						<affiliation>Division of Pathology, University Hospital Gasthuisberg, Leuven, Belgium</affiliation>
+						<affiliations>
+							<institution>
+								<institution_name>Division of Pathology, University Hospital Gasthuisberg</institution_name>
+								<institution_place>Leuven, Belgium</institution_place>
+							</institution>
+						</affiliations>
 					</person_name>
 					<person_name contributor_role="author" sequence="additional">
 						<given_name>Stefanie</given_name>
 						<surname>Schrauwen</surname>
-						<affiliation>Division of Gynaecologic Oncology, Department of Obstetrics and Gynaecology, University Hospital Gasthuisberg, Leuven, Belgium</affiliation>
+						<affiliations>
+							<institution>
+								<institution_name>Division of Gynaecologic Oncology, Department of Obstetrics and Gynaecology, University Hospital Gasthuisberg</institution_name>
+								<institution_place>Leuven, Belgium</institution_place>
+							</institution>
+						</affiliations>
 					</person_name>
 					<person_name contributor_role="author" sequence="additional">
 						<given_name>Dominiek</given_name>
 						<surname>Smeets</surname>
-						<affiliation>VIB Vesalius Research Center, KU Leuven, Leuven, Belgium</affiliation>
+						<affiliations>
+							<institution>
+								<institution_name>VIB Vesalius Research Center, KU Leuven</institution_name>
+								<institution_place>Leuven, Belgium</institution_place>
+							</institution>
+						</affiliations>
 					</person_name>
 					<person_name contributor_role="author" sequence="additional">
 						<given_name>Gert</given_name>
 						<surname>Matthijs</surname>
-						<affiliation>Department of Human Genetics, KU Leuven, Leuven, Belgium</affiliation>
+						<affiliations>
+							<institution>
+								<institution_name>Department of Human Genetics, KU Leuven</institution_name>
+								<institution_place>Leuven, Belgium</institution_place>
+							</institution>
+						</affiliations>
 					</person_name>
 					<person_name contributor_role="author" sequence="additional">
 						<given_name>Stein</given_name>
 						<surname>Aerts</surname>
-						<affiliation>Department of Human Genetics, University of Leuven, Leuven, Belgium</affiliation>
+						<affiliations>
+							<institution>
+								<institution_name>Department of Human Genetics, University of Leuven</institution_name>
+								<institution_place>Leuven, Belgium</institution_place>
+							</institution>
+						</affiliations>
 					</person_name>
 					<person_name contributor_role="author" sequence="additional">
 						<given_name>Jan</given_name>
 						<surname>Cools</surname>
-						<affiliation>Department of Human Genetics, KU Leuven, Leuven, Belgium</affiliation>
+						<affiliations>
+							<institution>
+								<institution_name>Department of Human Genetics, KU Leuven</institution_name>
+								<institution_place>Leuven, Belgium</institution_place>
+							</institution>
+						</affiliations>
 					</person_name>
 					<person_name contributor_role="author" sequence="additional">
 						<given_name>Alex</given_name>
 						<surname>Metcalf</surname>
-						<affiliation>Division of Genetics and Computational Biology, Queensland Institute of Medical Research, Brisbane, Australia</affiliation>
+						<affiliations>
+							<institution>
+								<institution_name>Division of Genetics and Computational Biology, Queensland Institute of Medical Research</institution_name>
+								<institution_place>Brisbane, Australia</institution_place>
+							</institution>
+						</affiliations>
 					</person_name>
 					<person_name contributor_role="author" sequence="additional">
 						<given_name>Amanda</given_name>
 						<surname>Spurdle</surname>
-						<affiliation>Division of Genetics and Computational Biology, Queensland Institute of Medical Research, Brisbane, Australia</affiliation>
+						<affiliations>
+							<institution>
+								<institution_name>Division of Genetics and Computational Biology, Queensland Institute of Medical Research</institution_name>
+								<institution_place>Brisbane, Australia</institution_place>
+							</institution>
+						</affiliations>
 					</person_name>
 					<organization contributor_role="author" sequence="additional">ANECS</organization>
 					<person_name contributor_role="author" sequence="additional">
 						<given_name>Frederic</given_name>
 						<surname>Amant</surname>
-						<affiliation>Division of Gynaecologic Oncology, Department of Obstetrics and Gynaecology, University Hospital Gasthuisberg, Leuven, Belgium</affiliation>
+						<affiliations>
+							<institution>
+								<institution_name>Division of Gynaecologic Oncology, Department of Obstetrics and Gynaecology, University Hospital Gasthuisberg</institution_name>
+								<institution_place>Leuven, Belgium</institution_place>
+							</institution>
+						</affiliations>
 					</person_name>
 					<person_name contributor_role="author" sequence="additional">
 						<given_name>Diether</given_name>
 						<surname>Lambrechts</surname>
-						<affiliation>VIB Vesalius Research Center, KU Leuven, Leuven, Belgium</affiliation>
+						<affiliations>
+							<institution>
+								<institution_name>VIB Vesalius Research Center, KU Leuven</institution_name>
+								<institution_place>Leuven, Belgium</institution_place>
+							</institution>
+						</affiliations>
 					</person_name>
 				</contributors>
 				<jats:abstract>

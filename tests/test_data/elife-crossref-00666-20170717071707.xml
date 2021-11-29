@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<doi_batch version="4.4.2" xmlns="http://www.crossref.org/schema/4.4.2" xmlns:ai="http://www.crossref.org/AccessIndicators.xsd" xmlns:ct="http://www.crossref.org/clinicaltrials.xsd" xmlns:fr="http://www.crossref.org/fundref.xsd" xmlns:jats="http://www.ncbi.nlm.nih.gov/JATS1" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:rel="http://www.crossref.org/relations.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.crossref.org/schema/4.4.2 http://www.crossref.org/schemas/crossref4.4.2.xsd">
+<doi_batch version="5.3.1" xmlns="http://www.crossref.org/schema/5.3.1" xmlns:ai="http://www.crossref.org/AccessIndicators.xsd" xmlns:ct="http://www.crossref.org/clinicaltrials.xsd" xmlns:fr="http://www.crossref.org/fundref.xsd" xmlns:jats="http://www.ncbi.nlm.nih.gov/JATS1" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:rel="http://www.crossref.org/relations.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.crossref.org/schema/5.3.1 http://www.crossref.org/schemas/crossref5.3.1.xsd">
 	<head>
 		<doi_batch_id>elife-crossref-00666-20170717071707</doi_batch_id>
 		<timestamp>20170717071707</timestamp>
@@ -34,16 +34,26 @@
 						<given_name>Melissa</given_name>
 						<surname>Harrison</surname>
 						<suffix>Jnr</suffix>
-						<affiliation>Department of Production, eLife, Cambridge, United Kingdom</affiliation>
+						<affiliations>
+							<institution>
+								<institution_name>Department of Production, eLife</institution_name>
+								<institution_place>Cambridge, United Kingdom</institution_place>
+							</institution>
+						</affiliations>
 						<ORCID authenticated="true">http://orcid.org/0000-0003-3523-4408</ORCID>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name contributor_role="author" sequence="first">
 						<given_name>James F</given_name>
 						<surname>Gilbert</surname>
-						<affiliation>Department of Production, eLife, Cambridge, United Kingdom</affiliation>
+						<affiliations>
+							<institution>
+								<institution_name>Department of Production, eLife</institution_name>
+								<institution_place>Cambridge, United Kingdom</institution_place>
+							</institution>
+						</affiliations>
 					</person_name>
-					<organization contributor_role="author" sequence="additional">eLife Editorial Production Group</organization>
-					<organization contributor_role="author" sequence="additional">eLife Technology Group</organization>
+					<organization contributor_role="author" sequence="first">eLife Editorial Production Group</organization>
+					<organization contributor_role="author" sequence="first">eLife Technology Group</organization>
 					<organization contributor_role="author" sequence="additional">for the eLife Staff Team</organization>
 				</contributors>
 				<jats:abstract xmlns:mml="http://www.w3.org/1998/Math/MathML">

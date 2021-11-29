@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<doi_batch version="4.4.2" xmlns="http://www.crossref.org/schema/4.4.2" xmlns:ai="http://www.crossref.org/AccessIndicators.xsd" xmlns:ct="http://www.crossref.org/clinicaltrials.xsd" xmlns:fr="http://www.crossref.org/fundref.xsd" xmlns:jats="http://www.ncbi.nlm.nih.gov/JATS1" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:rel="http://www.crossref.org/relations.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.crossref.org/schema/4.4.2 http://www.crossref.org/schemas/crossref4.4.2.xsd">
+<doi_batch version="5.3.1" xmlns="http://www.crossref.org/schema/5.3.1" xmlns:ai="http://www.crossref.org/AccessIndicators.xsd" xmlns:ct="http://www.crossref.org/clinicaltrials.xsd" xmlns:fr="http://www.crossref.org/fundref.xsd" xmlns:jats="http://www.ncbi.nlm.nih.gov/JATS1" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:rel="http://www.crossref.org/relations.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.crossref.org/schema/5.3.1 http://www.crossref.org/schemas/crossref5.3.1.xsd">
 	<head>
 		<doi_batch_id>elife-crossref-08206-20170717071707</doi_batch_id>
 		<timestamp>20170717071707</timestamp>
@@ -33,29 +33,57 @@
 					<person_name contributor_role="author" sequence="first">
 						<given_name>Marta</given_name>
 						<surname>Pallotto</surname>
-						<affiliation>Circuit Dynamics and Connectivity Unit, National Institute of Neurological Disorders and Stroke, National Institutes of Health, Bethesda, United States</affiliation>
+						<affiliations>
+							<institution>
+								<institution_name>Circuit Dynamics and Connectivity Unit, National Institute of Neurological Disorders and Stroke, National Institutes of Health</institution_name>
+								<institution_place>Bethesda, United States</institution_place>
+							</institution>
+						</affiliations>
 						<ORCID authenticated="true">http://orcid.org/0000-0001-7694-0398</ORCID>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name contributor_role="author" sequence="first">
 						<given_name>Paul V</given_name>
 						<surname>Watkins</surname>
-						<affiliation>Circuit Dynamics and Connectivity Unit, National Institute of Neurological Disorders and Stroke, National Institutes of Health, Bethesda, United States</affiliation>
+						<affiliations>
+							<institution>
+								<institution_name>Circuit Dynamics and Connectivity Unit, National Institute of Neurological Disorders and Stroke, National Institutes of Health</institution_name>
+								<institution_place>Bethesda, United States</institution_place>
+							</institution>
+						</affiliations>
 					</person_name>
 					<person_name contributor_role="author" sequence="additional">
 						<given_name>Boma</given_name>
 						<surname>Fubara</surname>
-						<affiliation>Circuit Dynamics and Connectivity Unit, National Institute of Neurological Disorders and Stroke, National Institutes of Health, Bethesda, United States</affiliation>
+						<affiliations>
+							<institution>
+								<institution_name>Circuit Dynamics and Connectivity Unit, National Institute of Neurological Disorders and Stroke, National Institutes of Health</institution_name>
+								<institution_place>Bethesda, United States</institution_place>
+							</institution>
+						</affiliations>
 					</person_name>
 					<person_name contributor_role="author" sequence="additional">
 						<given_name>Joshua H</given_name>
 						<surname>Singer</surname>
-						<affiliation>Department of Biology, University of Maryland, College Park, United States</affiliation>
+						<affiliations>
+							<institution>
+								<institution_name>Department of Biology, University of Maryland</institution_name>
+								<institution_place>College Park, United States</institution_place>
+							</institution>
+						</affiliations>
 					</person_name>
 					<person_name contributor_role="author" sequence="additional">
 						<given_name>Kevin L</given_name>
 						<surname>Briggman</surname>
-						<affiliation>Circuit Dynamics and Connectivity Unit, National Institute of Neurological Disorders and Stroke, National Institutes of Health, Bethesda, United States</affiliation>
-						<affiliation>Department of Biomedical Optics, Max Planck Institute for Medical Research, Heidelberg, Germany</affiliation>
+						<affiliations>
+							<institution>
+								<institution_name>Circuit Dynamics and Connectivity Unit, National Institute of Neurological Disorders and Stroke, National Institutes of Health</institution_name>
+								<institution_place>Bethesda, United States</institution_place>
+							</institution>
+							<institution>
+								<institution_name>Department of Biomedical Optics, Max Planck Institute for Medical Research</institution_name>
+								<institution_place>Heidelberg, Germany</institution_place>
+							</institution>
+						</affiliations>
 					</person_name>
 				</contributors>
 				<jats:abstract>

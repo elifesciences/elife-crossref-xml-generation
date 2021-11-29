@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<doi_batch version="4.4.2" xmlns="http://www.crossref.org/schema/4.4.2" xmlns:ai="http://www.crossref.org/AccessIndicators.xsd" xmlns:ct="http://www.crossref.org/clinicaltrials.xsd" xmlns:fr="http://www.crossref.org/fundref.xsd" xmlns:jats="http://www.ncbi.nlm.nih.gov/JATS1" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:rel="http://www.crossref.org/relations.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.crossref.org/schema/4.4.2 http://www.crossref.org/schemas/crossref4.4.2.xsd">
+<doi_batch version="5.3.1" xmlns="http://www.crossref.org/schema/5.3.1" xmlns:ai="http://www.crossref.org/AccessIndicators.xsd" xmlns:ct="http://www.crossref.org/clinicaltrials.xsd" xmlns:fr="http://www.crossref.org/fundref.xsd" xmlns:jats="http://www.ncbi.nlm.nih.gov/JATS1" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:rel="http://www.crossref.org/relations.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.crossref.org/schema/5.3.1 http://www.crossref.org/schemas/crossref5.3.1.xsd">
 	<head>
 		<doi_batch_id>elife-crossref-02020-20170717071707</doi_batch_id>
 		<timestamp>20170717071707</timestamp>
@@ -33,39 +33,80 @@
 					<person_name contributor_role="author" sequence="first">
 						<given_name>Quentin</given_name>
 						<surname>Ferry</surname>
-						<affiliation>Department of Engineering Science, University of Oxford, Oxford, United Kingdom</affiliation>
-						<affiliation>Medical Research Council Functional Genomics Unit, Department of Physiology, Anatomy and Genetics, University of Oxford, Oxford, United Kingdom</affiliation>
+						<affiliations>
+							<institution>
+								<institution_name>Department of Engineering Science, University of Oxford</institution_name>
+								<institution_place>Oxford, United Kingdom</institution_place>
+							</institution>
+							<institution>
+								<institution_name>Medical Research Council Functional Genomics Unit, Department of Physiology, Anatomy and Genetics, University of Oxford</institution_name>
+								<institution_place>Oxford, United Kingdom</institution_place>
+							</institution>
+						</affiliations>
 					</person_name>
 					<person_name contributor_role="author" sequence="additional">
 						<given_name>Julia</given_name>
 						<surname>Steinberg</surname>
-						<affiliation>Medical Research Council Functional Genomics Unit, Department of Physiology, Anatomy and Genetics, University of Oxford, Oxford, United Kingdom</affiliation>
-						<affiliation>The Wellcome Trust Centre for Human Genetics, University of Oxford, Oxford, United Kingdom</affiliation>
+						<affiliations>
+							<institution>
+								<institution_name>Medical Research Council Functional Genomics Unit, Department of Physiology, Anatomy and Genetics, University of Oxford</institution_name>
+								<institution_place>Oxford, United Kingdom</institution_place>
+							</institution>
+							<institution>
+								<institution_name>The Wellcome Trust Centre for Human Genetics, University of Oxford</institution_name>
+								<institution_place>Oxford, United Kingdom</institution_place>
+							</institution>
+						</affiliations>
 					</person_name>
 					<person_name contributor_role="author" sequence="additional">
 						<given_name>Caleb</given_name>
 						<surname>Webber</surname>
-						<affiliation>Medical Research Council Functional Genomics Unit, Department of Physiology, Anatomy and Genetics, University of Oxford, Oxford, United Kingdom</affiliation>
+						<affiliations>
+							<institution>
+								<institution_name>Medical Research Council Functional Genomics Unit, Department of Physiology, Anatomy and Genetics, University of Oxford</institution_name>
+								<institution_place>Oxford, United Kingdom</institution_place>
+							</institution>
+						</affiliations>
 					</person_name>
 					<person_name contributor_role="author" sequence="additional">
 						<given_name>David R</given_name>
 						<surname>FitzPatrick</surname>
-						<affiliation>Medical Research Council Human Genetics Unit, Institute of Genetics and Molecular Medicine, Edinburgh, United Kingdom</affiliation>
+						<affiliations>
+							<institution>
+								<institution_name>Medical Research Council Human Genetics Unit, Institute of Genetics and Molecular Medicine</institution_name>
+								<institution_place>Edinburgh, United Kingdom</institution_place>
+							</institution>
+						</affiliations>
 					</person_name>
 					<person_name contributor_role="author" sequence="additional">
 						<given_name>Chris P</given_name>
 						<surname>Ponting</surname>
-						<affiliation>Medical Research Council Functional Genomics Unit, Department of Physiology, Anatomy and Genetics, University of Oxford, Oxford, United Kingdom</affiliation>
+						<affiliations>
+							<institution>
+								<institution_name>Medical Research Council Functional Genomics Unit, Department of Physiology, Anatomy and Genetics, University of Oxford</institution_name>
+								<institution_place>Oxford, United Kingdom</institution_place>
+							</institution>
+						</affiliations>
 					</person_name>
 					<person_name contributor_role="author" sequence="additional">
 						<given_name>Andrew</given_name>
 						<surname>Zisserman</surname>
-						<affiliation>Department of Engineering Science, University of Oxford, Oxford, United Kingdom</affiliation>
+						<affiliations>
+							<institution>
+								<institution_name>Department of Engineering Science, University of Oxford</institution_name>
+								<institution_place>Oxford, United Kingdom</institution_place>
+							</institution>
+						</affiliations>
 					</person_name>
 					<person_name contributor_role="author" sequence="additional">
 						<given_name>Christoffer</given_name>
 						<surname>Nellåker</surname>
-						<affiliation>Medical Research Council Functional Genomics Unit, Department of Physiology, Anatomy and Genetics, University of Oxford, Oxford, United Kingdom</affiliation>
+						<affiliations>
+							<institution>
+								<institution_name>Medical Research Council Functional Genomics Unit, Department of Physiology, Anatomy and Genetics, University of Oxford</institution_name>
+								<institution_place>Oxford, United Kingdom</institution_place>
+							</institution>
+						</affiliations>
 					</person_name>
 				</contributors>
 				<jats:abstract>

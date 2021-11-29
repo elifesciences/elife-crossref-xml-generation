@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<doi_batch version="4.4.2" xmlns="http://www.crossref.org/schema/4.4.2" xmlns:ai="http://www.crossref.org/AccessIndicators.xsd" xmlns:ct="http://www.crossref.org/clinicaltrials.xsd" xmlns:fr="http://www.crossref.org/fundref.xsd" xmlns:jats="http://www.ncbi.nlm.nih.gov/JATS1" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:rel="http://www.crossref.org/relations.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.crossref.org/schema/4.4.2 http://www.crossref.org/schemas/crossref4.4.2.xsd">
+<doi_batch version="5.3.1" xmlns="http://www.crossref.org/schema/5.3.1" xmlns:ai="http://www.crossref.org/AccessIndicators.xsd" xmlns:ct="http://www.crossref.org/clinicaltrials.xsd" xmlns:fr="http://www.crossref.org/fundref.xsd" xmlns:jats="http://www.ncbi.nlm.nih.gov/JATS1" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:rel="http://www.crossref.org/relations.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.crossref.org/schema/5.3.1 http://www.crossref.org/schemas/crossref5.3.1.xsd">
 	<head>
 		<doi_batch_id>elife-crossref-00508-20170717071707</doi_batch_id>
 		<timestamp>20170717071707</timestamp>
@@ -33,91 +33,228 @@
 					<person_name contributor_role="author" sequence="first">
 						<given_name>Yaping</given_name>
 						<surname>Sun</surname>
-						<affiliation>Department of Bioengineering and Therapeutic Science, University of California, San Francisco, San Francisco, United States</affiliation>
-						<affiliation>Eli and Edythe Broad Center of Regeneration Medicine and Stem Cell Research, University of California, San Francisco, San Francisco, United States</affiliation>
-						<affiliation>Programs in Human Genetics and Biological Sciences, University of California, San Francisco, San Francisco, United States</affiliation>
+						<affiliations>
+							<institution>
+								<institution_name>Department of Bioengineering and Therapeutic Science, University of California, San Francisco</institution_name>
+								<institution_place>San Francisco, United States</institution_place>
+							</institution>
+							<institution>
+								<institution_name>Eli and Edythe Broad Center of Regeneration Medicine and Stem Cell Research, University of California, San Francisco</institution_name>
+								<institution_place>San Francisco, United States</institution_place>
+							</institution>
+							<institution>
+								<institution_name>Programs in Human Genetics and Biological Sciences, University of California, San Francisco</institution_name>
+								<institution_place>San Francisco, United States</institution_place>
+							</institution>
+						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name contributor_role="author" sequence="first">
 						<given_name>Zhiqiang</given_name>
 						<surname>Dong</surname>
-						<affiliation>Department of Bioengineering and Therapeutic Science, University of California, San Francisco, San Francisco, United States</affiliation>
-						<affiliation>Eli and Edythe Broad Center of Regeneration Medicine and Stem Cell Research, University of California, San Francisco, San Francisco, United States</affiliation>
-						<affiliation>Programs in Human Genetics and Biological Sciences, University of California, San Francisco, San Francisco, United States</affiliation>
+						<affiliations>
+							<institution>
+								<institution_name>Department of Bioengineering and Therapeutic Science, University of California, San Francisco</institution_name>
+								<institution_place>San Francisco, United States</institution_place>
+							</institution>
+							<institution>
+								<institution_name>Eli and Edythe Broad Center of Regeneration Medicine and Stem Cell Research, University of California, San Francisco</institution_name>
+								<institution_place>San Francisco, United States</institution_place>
+							</institution>
+							<institution>
+								<institution_name>Programs in Human Genetics and Biological Sciences, University of California, San Francisco</institution_name>
+								<institution_place>San Francisco, United States</institution_place>
+							</institution>
+						</affiliations>
 					</person_name>
 					<person_name contributor_role="author" sequence="additional">
 						<given_name>Taihao</given_name>
 						<surname>Jin</surname>
-						<affiliation>Department of Physiology, University of California, San Francisco, San Francisco, United States</affiliation>
-						<affiliation>Department of Biochemistry, University of California, San Francisco, San Francisco, United States</affiliation>
-						<affiliation>Howard Hughes Medical Institute, University of California, San Francisco, San Francisco, United States</affiliation>
+						<affiliations>
+							<institution>
+								<institution_name>Department of Physiology, University of California, San Francisco</institution_name>
+								<institution_place>San Francisco, United States</institution_place>
+							</institution>
+							<institution>
+								<institution_name>Department of Biochemistry, University of California, San Francisco</institution_name>
+								<institution_place>San Francisco, United States</institution_place>
+							</institution>
+							<institution>
+								<institution_name>Howard Hughes Medical Institute, University of California, San Francisco</institution_name>
+								<institution_place>San Francisco, United States</institution_place>
+							</institution>
+						</affiliations>
 					</person_name>
 					<person_name contributor_role="author" sequence="additional">
 						<given_name>Kean-Hooi</given_name>
 						<surname>Ang</surname>
-						<affiliation>Department of Pharmaceutical Chemistry, University of California, San Francisco, San Francisco, United States</affiliation>
-						<affiliation>Small Molecule Discovery Center, University of California, San Francisco, San Francisco, United States</affiliation>
+						<affiliations>
+							<institution>
+								<institution_name>Department of Pharmaceutical Chemistry, University of California, San Francisco</institution_name>
+								<institution_place>San Francisco, United States</institution_place>
+							</institution>
+							<institution>
+								<institution_name>Small Molecule Discovery Center, University of California, San Francisco</institution_name>
+								<institution_place>San Francisco, United States</institution_place>
+							</institution>
+						</affiliations>
 					</person_name>
 					<person_name contributor_role="author" sequence="additional">
 						<given_name>Miller</given_name>
 						<surname>Huang</surname>
-						<affiliation>Department of Neurology, University of California, San Francisco, San Francisco, United States</affiliation>
-						<affiliation>Department of Neurological Surgery, University of California, San Francisco, San Francisco, United States</affiliation>
-						<affiliation>Department of Pediatrics, University of California, San Francisco, San Francisco, United States</affiliation>
+						<affiliations>
+							<institution>
+								<institution_name>Department of Neurology, University of California, San Francisco</institution_name>
+								<institution_place>San Francisco, United States</institution_place>
+							</institution>
+							<institution>
+								<institution_name>Department of Neurological Surgery, University of California, San Francisco</institution_name>
+								<institution_place>San Francisco, United States</institution_place>
+							</institution>
+							<institution>
+								<institution_name>Department of Pediatrics, University of California, San Francisco</institution_name>
+								<institution_place>San Francisco, United States</institution_place>
+							</institution>
+						</affiliations>
 					</person_name>
 					<person_name contributor_role="author" sequence="additional">
 						<given_name>Kelly M</given_name>
 						<surname>Haston</surname>
-						<affiliation>Department of Physiology, University of California, San Francisco, San Francisco, United States</affiliation>
-						<affiliation>Department of Neurology, University of California, San Francisco, San Francisco, United States</affiliation>
+						<affiliations>
+							<institution>
+								<institution_name>Department of Physiology, University of California, San Francisco</institution_name>
+								<institution_place>San Francisco, United States</institution_place>
+							</institution>
+							<institution>
+								<institution_name>Department of Neurology, University of California, San Francisco</institution_name>
+								<institution_place>San Francisco, United States</institution_place>
+							</institution>
+						</affiliations>
 					</person_name>
 					<person_name contributor_role="author" sequence="additional">
 						<given_name>Jisong</given_name>
 						<surname>Peng</surname>
-						<affiliation>Department of Bioengineering and Therapeutic Science, University of California, San Francisco, San Francisco, United States</affiliation>
-						<affiliation>Eli and Edythe Broad Center of Regeneration Medicine and Stem Cell Research, University of California, San Francisco, San Francisco, United States</affiliation>
-						<affiliation>Programs in Human Genetics and Biological Sciences, University of California, San Francisco, San Francisco, United States</affiliation>
+						<affiliations>
+							<institution>
+								<institution_name>Department of Bioengineering and Therapeutic Science, University of California, San Francisco</institution_name>
+								<institution_place>San Francisco, United States</institution_place>
+							</institution>
+							<institution>
+								<institution_name>Eli and Edythe Broad Center of Regeneration Medicine and Stem Cell Research, University of California, San Francisco</institution_name>
+								<institution_place>San Francisco, United States</institution_place>
+							</institution>
+							<institution>
+								<institution_name>Programs in Human Genetics and Biological Sciences, University of California, San Francisco</institution_name>
+								<institution_place>San Francisco, United States</institution_place>
+							</institution>
+						</affiliations>
 					</person_name>
 					<person_name contributor_role="author" sequence="additional">
 						<given_name>Tao P</given_name>
 						<surname>Zhong</surname>
-						<affiliation>State Key Laboratory of Genetic Engineering, Department of Genetics, Fudan University School of Life Sciences, Shanghai, China</affiliation>
+						<affiliations>
+							<institution>
+								<institution_name>State Key Laboratory of Genetic Engineering, Department of Genetics, Fudan University School of Life Sciences</institution_name>
+								<institution_place>Shanghai, China</institution_place>
+							</institution>
+						</affiliations>
 					</person_name>
 					<person_name contributor_role="author" sequence="additional">
 						<given_name>Steven</given_name>
 						<surname>Finkbeiner</surname>
-						<affiliation>Department of Physiology, University of California, San Francisco, San Francisco, United States</affiliation>
-						<affiliation>Department of Biochemistry, University of California, San Francisco, San Francisco, United States</affiliation>
-						<affiliation>Department of Pharmaceutical Chemistry, University of California, San Francisco, San Francisco, United States</affiliation>
-						<affiliation>Department of Neurology, University of California, San Francisco, San Francisco, United States</affiliation>
-						<affiliation>Keck Foundation Program in Brain Cell Engineering, Roddenberry Center for Stem Cell Biology and Medicine, Gladstone Institutes of Neurological Disease, San Francisco, United States</affiliation>
+						<affiliations>
+							<institution>
+								<institution_name>Department of Physiology, University of California, San Francisco</institution_name>
+								<institution_place>San Francisco, United States</institution_place>
+							</institution>
+							<institution>
+								<institution_name>Department of Biochemistry, University of California, San Francisco</institution_name>
+								<institution_place>San Francisco, United States</institution_place>
+							</institution>
+							<institution>
+								<institution_name>Department of Pharmaceutical Chemistry, University of California, San Francisco</institution_name>
+								<institution_place>San Francisco, United States</institution_place>
+							</institution>
+							<institution>
+								<institution_name>Department of Neurology, University of California, San Francisco</institution_name>
+								<institution_place>San Francisco, United States</institution_place>
+							</institution>
+							<institution>
+								<institution_name>Keck Foundation Program in Brain Cell Engineering, Roddenberry Center for Stem Cell Biology and Medicine, Gladstone Institutes of Neurological Disease</institution_name>
+								<institution_place>San Francisco, United States</institution_place>
+							</institution>
+						</affiliations>
 					</person_name>
 					<person_name contributor_role="author" sequence="additional">
 						<given_name>William A</given_name>
 						<surname>Weiss</surname>
-						<affiliation>Department of Neurology, University of California, San Francisco, San Francisco, United States</affiliation>
-						<affiliation>Department of Neurological Surgery, University of California, San Francisco, San Francisco, United States</affiliation>
-						<affiliation>Department of Pediatrics, University of California, San Francisco, San Francisco, United States</affiliation>
+						<affiliations>
+							<institution>
+								<institution_name>Department of Neurology, University of California, San Francisco</institution_name>
+								<institution_place>San Francisco, United States</institution_place>
+							</institution>
+							<institution>
+								<institution_name>Department of Neurological Surgery, University of California, San Francisco</institution_name>
+								<institution_place>San Francisco, United States</institution_place>
+							</institution>
+							<institution>
+								<institution_name>Department of Pediatrics, University of California, San Francisco</institution_name>
+								<institution_place>San Francisco, United States</institution_place>
+							</institution>
+						</affiliations>
 					</person_name>
 					<person_name contributor_role="author" sequence="additional">
 						<given_name>Michelle R</given_name>
 						<surname>Arkin</surname>
-						<affiliation>Department of Pharmaceutical Chemistry, University of California, San Francisco, San Francisco, United States</affiliation>
-						<affiliation>Small Molecule Discovery Center, University of California, San Francisco, San Francisco, United States</affiliation>
+						<affiliations>
+							<institution>
+								<institution_name>Department of Pharmaceutical Chemistry, University of California, San Francisco</institution_name>
+								<institution_place>San Francisco, United States</institution_place>
+							</institution>
+							<institution>
+								<institution_name>Small Molecule Discovery Center, University of California, San Francisco</institution_name>
+								<institution_place>San Francisco, United States</institution_place>
+							</institution>
+						</affiliations>
 					</person_name>
 					<person_name contributor_role="author" sequence="additional">
 						<given_name>Lily Y</given_name>
 						<surname>Jan</surname>
-						<affiliation>Department of Physiology, University of California, San Francisco, San Francisco, United States</affiliation>
-						<affiliation>Department of Biochemistry, University of California, San Francisco, San Francisco, United States</affiliation>
-						<affiliation>Howard Hughes Medical Institute, University of California, San Francisco, San Francisco, United States</affiliation>
+						<affiliations>
+							<institution>
+								<institution_name>Department of Physiology, University of California, San Francisco</institution_name>
+								<institution_place>San Francisco, United States</institution_place>
+							</institution>
+							<institution>
+								<institution_name>Department of Biochemistry, University of California, San Francisco</institution_name>
+								<institution_place>San Francisco, United States</institution_place>
+							</institution>
+							<institution>
+								<institution_name>Howard Hughes Medical Institute, University of California, San Francisco</institution_name>
+								<institution_place>San Francisco, United States</institution_place>
+							</institution>
+						</affiliations>
 					</person_name>
 					<person_name contributor_role="author" sequence="additional">
 						<given_name>Su</given_name>
 						<surname>Guo</surname>
-						<affiliation>Department of Bioengineering and Therapeutic Science, University of California, San Francisco, San Francisco, United States</affiliation>
-						<affiliation>Eli and Edythe Broad Center of Regeneration Medicine and Stem Cell Research, University of California, San Francisco, San Francisco, United States</affiliation>
-						<affiliation>Programs in Human Genetics and Biological Sciences, University of California, San Francisco, San Francisco, United States</affiliation>
-						<affiliation>State Key Laboratory of Genetic Engineering, Department of Genetics, Fudan University School of Life Sciences, Shanghai, China</affiliation>
+						<affiliations>
+							<institution>
+								<institution_name>Department of Bioengineering and Therapeutic Science, University of California, San Francisco</institution_name>
+								<institution_place>San Francisco, United States</institution_place>
+							</institution>
+							<institution>
+								<institution_name>Eli and Edythe Broad Center of Regeneration Medicine and Stem Cell Research, University of California, San Francisco</institution_name>
+								<institution_place>San Francisco, United States</institution_place>
+							</institution>
+							<institution>
+								<institution_name>Programs in Human Genetics and Biological Sciences, University of California, San Francisco</institution_name>
+								<institution_place>San Francisco, United States</institution_place>
+							</institution>
+							<institution>
+								<institution_name>State Key Laboratory of Genetic Engineering, Department of Genetics, Fudan University School of Life Sciences</institution_name>
+								<institution_place>Shanghai, China</institution_place>
+							</institution>
+						</affiliations>
 					</person_name>
 				</contributors>
 				<jats:abstract>
