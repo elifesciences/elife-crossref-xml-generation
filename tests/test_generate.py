@@ -1,5 +1,6 @@
 import unittest
 import os
+import sys
 from xml.etree.ElementTree import Comment
 from elifecrossref import generate
 from tests import (
@@ -8,6 +9,7 @@ from tests import (
     TEST_DATA_PATH,
     read_file_content,
     create_crossref_config,
+    replace_namespaces,
 )
 
 
@@ -155,6 +157,9 @@ class TestGenerate(unittest.TestCase):
                 articles, crossref_config, pub_date, False, pretty=True, indent="\t"
             )
             model_crossref_xml = read_file_content(TEST_DATA_PATH + crossref_xml_file)
+            if sys.version_info < (3, 8):
+                # pre Python 3.8 tag attributes are in a different order
+                model_crossref_xml = replace_namespaces(model_crossref_xml)
             self.assertEqual(
                 crossref_xml,
                 model_crossref_xml.decode("utf-8"),
@@ -215,5 +220,8 @@ class TestGenerate(unittest.TestCase):
         )
         # check the output matches
         expected_output = read_file_content(TEST_DATA_PATH + crossref_xml_file)
+        if sys.version_info < (3, 8):
+            # pre Python 3.8 tag attributes are in a different order
+            expected_output = replace_namespaces(expected_output)
         generated_output = read_file_content(generate.TMP_DIR + crossref_xml_file)
         self.assertEqual(generated_output, expected_output)

@@ -112,8 +112,8 @@ def set_updates(parent, poa_article, crossref_config):
 
 def set_update(parent, article_type, date, doi):
     update = SubElement(parent, "update")
-    update.set("type", article_type)
     update.set("date", date)
+    update.set("type", article_type)
     update.text = doi
 
 
@@ -157,6 +157,6 @@ def set_assertions(parent, poa_article, crossref_config):
 
     for details in tag_details:
         assertion_tag = SubElement(parent, "assertion")
-        for attribute in ["name", "label", "group_name"]:
+        for attribute in ["group_name", "label", "name"]:
             assertion_tag.set(attribute, details.get(attribute))
         assertion_tag.text = details.get("text")

@@ -1,5 +1,6 @@
 import unittest
 import os
+import sys
 from elifecrossref import generate
 from tests import (
     DEFAULT_PUB_DATE,
@@ -7,6 +8,7 @@ from tests import (
     TEST_DATA_PATH,
     read_file_content,
     create_crossref_config,
+    replace_namespaces,
 )
 
 
@@ -47,6 +49,9 @@ class TestGeneratePeerReview(unittest.TestCase):
                 indent="    ",
             )
             model_crossref_xml = read_file_content(TEST_DATA_PATH + crossref_xml_file)
+            if sys.version_info < (3, 8):
+                # pre Python 3.8 tag attributes are in a different order
+                model_crossref_xml = replace_namespaces(model_crossref_xml)
             self.assertEqual(
                 crossref_xml,
                 model_crossref_xml.decode("utf-8"),
