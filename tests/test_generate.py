@@ -16,6 +16,14 @@ from tests import (
 generate.TMP_DIR = TEST_BASE_PATH + "tmp" + os.sep
 
 
+def contributor_orcid_authenticated(article, orcid_authenticated):
+    "set the orcid_authenticated attribute of contributor objects in the article"
+    for contributor in article.contributors:
+        if hasattr(contributor, "orcid_authenticated"):
+            contributor.orcid_authenticated = orcid_authenticated
+    return article
+
+
 class TestGenerate(unittest.TestCase):
     def setUp(self):
         self.passes = []
@@ -152,6 +160,10 @@ class TestGenerate(unittest.TestCase):
             crossref_config = None
             if config_section:
                 crossref_config = create_crossref_config(config_section)
+                # set orcid_authenticated values for elife articles for this test
+                if config_section == "elife":
+                    for i, article in enumerate(articles):
+                        articles[i] = contributor_orcid_authenticated(article, True)
             # generate pretty XML
             crossref_xml = generate.crossref_xml(
                 articles, crossref_config, pub_date, False, pretty=True, indent="\t"

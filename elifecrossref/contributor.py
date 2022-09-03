@@ -91,7 +91,11 @@ def set_person_name(parent, contributor, contributor_role, sequence):
 def set_orcid(parent, contributor):
     if contributor.orcid:
         orcid_tag = SubElement(parent, "ORCID")
-        orcid_tag.set("authenticated", "true")
+        if hasattr(contributor, "orcid_authenticated"):
+            if contributor.orcid_authenticated is True:
+                orcid_tag.set("authenticated", "true")
+            elif contributor.orcid_authenticated is False:
+                orcid_tag.set("authenticated", "false")
         orcid_tag.text = contributor.orcid
 
 
