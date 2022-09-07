@@ -3,7 +3,9 @@ from elifecrossref import collection, resource_url
 
 
 def set_article_doi_data(parent, poa_article, crossref_config):
-    doi_data_tag = set_doi_data(parent, poa_article, poa_article, crossref_config)
+    doi_data_tag = set_doi_data(
+        parent, poa_article, poa_article, crossref_config, "doi_pattern"
+    )
     collection.set_collection(doi_data_tag, poa_article, "text-mining", crossref_config)
 
 
