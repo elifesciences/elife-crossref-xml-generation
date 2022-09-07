@@ -5,8 +5,6 @@ from elifecrossref import elife
 def generate_resource_url(obj, poa_article, crossref_config, pattern_type=None):
     # Generate a resource value for doi_data based on the object provided
     if isinstance(obj, Component) or pattern_type == "peer_review_doi_pattern":
-        if not pattern_type:
-            pattern_type = "component_doi_pattern"
         if (
             pattern_type == "component_doi_pattern"
             and crossref_config.get("elife_style_component_doi") is True
@@ -23,8 +21,6 @@ def generate_resource_url(obj, poa_article, crossref_config, pattern_type=None):
             id=id_value,
         )
     if isinstance(obj, Article):
-        if not pattern_type:
-            pattern_type = "doi_pattern"
         version = elife.elife_style_article_attributes(obj)
         if crossref_config.get(pattern_type):
             return crossref_config.get(pattern_type).format(

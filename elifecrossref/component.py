@@ -74,7 +74,9 @@ def set_component_doi(parent, poa_article, comp, crossref_config):
     if not comp.doi:
         return
     # Try generating a resource value then continue
-    resource = resource_url.generate_resource_url(comp, poa_article, crossref_config)
+    resource = resource_url.generate_resource_url(
+        comp, poa_article, crossref_config, "component_doi_pattern"
+    )
     if resource:
         doi_data_tag = SubElement(parent, "doi_data")
         doi_tag_tag = SubElement(doi_data_tag, "doi")
