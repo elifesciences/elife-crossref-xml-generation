@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doi_batch xmlns="http://www.crossref.org/schema/5.3.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:fr="http://www.crossref.org/fundref.xsd" xmlns:ai="http://www.crossref.org/AccessIndicators.xsd" xmlns:ct="http://www.crossref.org/clinicaltrials.xsd" xmlns:rel="http://www.crossref.org/relations.xsd" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:jats="http://www.ncbi.nlm.nih.gov/JATS1" version="5.3.1" xsi:schemaLocation="http://www.crossref.org/schema/5.3.1 http://www.crossref.org/schemas/crossref5.3.1.xsd">
+    <head>
+        <doi_batch_id>elife-crossref-posted_content-202200001-20170717071707</doi_batch_id>
+        <timestamp>20170717071707</timestamp>
+        <depositor>
+            <depositor_name>eLife</depositor_name>
+            <email_address>production@elifesciences.org</email_address>
+        </depositor>
+        <registrant>eLife</registrant>
+    </head>
+    <body>
+        <posted_content type="preprint">
+            <group_title>eLife RP</group_title>
+            <contributors>
+                <person_name contributor_role="author" sequence="first">
+                    <given_name>Given names</given_name>
+                    <surname>First</surname>
+                    <affiliations>
+                        <institution>
+                            <institution_name>Department, Institution</institution_name>
+                            <institution_place>City, Country</institution_place>
+                        </institution>
+                    </affiliations>
+                    <ORCID authenticated="false">https://orcid.org/0000-0000-0000-0000</ORCID>
+                </person_name>
+                <person_name contributor_role="author" sequence="additional">
+                    <given_name>Given names</given_name>
+                    <surname>Second</surname>
+                    <affiliations>
+                        <institution>
+                            <institution_name>Department, Institution</institution_name>
+                            <institution_place>City, Country</institution_place>
+                        </institution>
+                    </affiliations>
+                </person_name>
+            </contributors>
+            <titles>
+                <title>Timely sleep coupling: spindle-slow wave synchrony is linked to early amyloid-β burden and predicts memory decline</title>
+            </titles>
+            <posted_date>
+                <month>03</month>
+                <day>03</day>
+                <year>2022</year>
+            </posted_date>
+            <item_number item_number_type="article_number">e202200001</item_number>
+            <jats:abstract>
+                <jats:p>
+                    An 
+                    <jats:italic>abstract</jats:italic>
+                     x
+                    <jats:sup>2</jats:sup>
+                    .
+                </jats:p>
+            </jats:abstract>
+            <ai:program name="AccessIndicators">
+                <ai:license_ref applies_to="vor">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+                <ai:license_ref applies_to="am">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+                <ai:license_ref applies_to="tdm">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+            </ai:program>
+            <rel:program>
+                <rel:related_item>
+                    <rel:intra_work_relation identifier-type="doi" relationship-type="isVersionOf">10.7554/article_version_with_doi</rel:intra_work_relation>
+                </rel:related_item>
+                <rel:related_item>
+                    <rel:intra_work_relation identifier-type="uri" relationship-type="isVersionOf">10.7554/article_version_with_uri</rel:intra_work_relation>
+                </rel:related_item>
+            </rel:program>
+            <doi_data>
+                <doi>10.7554/eLife.202200001</doi>
+                <resource>https://example.org/articles/202200001</resource>
+            </doi_data>
+        </posted_content>
+    </body>
+</doi_batch>
