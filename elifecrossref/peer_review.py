@@ -65,11 +65,14 @@ def set_type(parent, review_article):
     if review_article.article_type in [
         "article-commentary",
         "editor-report",
+        "evaluation-summary",
         "decision-letter",
     ]:
         parent.set("type", "editor-report")
     elif review_article.article_type in ["author-comment", "reply"]:
         parent.set("type", "author-comment")
+    elif review_article.article_type in ["referee-report", "review-article"]:
+        parent.set("type", "referee-report")
 
 
 def set_title(parent, review_article, poa_article, crossref_config):
