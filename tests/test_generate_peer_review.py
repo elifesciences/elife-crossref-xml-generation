@@ -125,6 +125,35 @@ def sample_data():
     # append it
     reviews.append(author_response)
 
+    # anonymous review
+    review_article = Article()
+    review_article.article_type = "referee-report"
+    review_article.id = "SA3"
+    article_author = Contributor("author", None, None)
+    article_author.anonymous = True
+    review_article.contributors.append(article_author)
+    review_article.title = "Reviewer #1 (Public Review)"
+    # review date
+    review_date = ArticleDate(
+        "review_date", time.strptime("2018-01-12 00:00:00", "%Y-%m-%d %H:%M:%S")
+    )
+    review_article.add_date(review_date)
+    # license
+    license_object = License()
+    license_object.href = "http://creativecommons.org/licenses/by/4.0/"
+    review_article.license = license_object
+    # related article doi
+    related_article = Article()
+    related_article.doi = "10.7554/eLife.00666"
+    related_article.title = "The eLife research article"
+    review_article.related_articles = [related_article]
+    # review article doi
+    review_article.doi = "10.7554/eLife.00666.sa3"
+    # a hack to get the resource url right for now
+    review_article.manuscript = "00666#SA3"
+    # append it
+    reviews.append(review_article)
+
     return reviews
 
 
