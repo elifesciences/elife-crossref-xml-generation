@@ -99,5 +99,30 @@
                 <resource>https://elifesciences.org/articles/00666#SA2</resource>
             </doi_data>
         </peer_review>
+        <peer_review stage="pre-publication" type="referee-report">
+            <contributors>
+                <anonymous contributor_role="author" sequence="first"/>
+            </contributors>
+            <titles>
+                <title>Reviewer #1 (Public Review): The eLife research article</title>
+            </titles>
+            <review_date>
+                <month>01</month>
+                <day>12</day>
+                <year>2018</year>
+            </review_date>
+            <ai:program name="AccessIndicators">
+                <ai:license_ref>http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+            </ai:program>
+            <rel:program>
+                <rel:related_item>
+                    <rel:inter_work_relation identifier-type="doi" relationship-type="isReviewOf">10.7554/eLife.00666</rel:inter_work_relation>
+                </rel:related_item>
+            </rel:program>
+            <doi_data>
+                <doi>10.7554/eLife.00666.sa3</doi>
+                <resource>https://elifesciences.org/articles/00666#SA3</resource>
+            </doi_data>
+        </peer_review>
     </body>
 </doi_batch>

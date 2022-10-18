@@ -47,7 +47,12 @@ def set_contributor(parent, contributor, sequence):
         contributor_role = contributor.contrib_type
 
     # Skip contributors with no surname
-    if contributor.surname == "" or contributor.surname is None:
+    if contributor.anonymous:
+        # todo!! spin this out in a new function
+        anonymous_tag = SubElement(parent, "anonymous")
+        anonymous_tag.set("contributor_role", contributor_role)
+        anonymous_tag.set("sequence", sequence)
+    elif contributor.surname == "" or contributor.surname is None:
         # Most likely a group author
         set_org_contributor(parent, contributor, contributor_role, sequence)
 
