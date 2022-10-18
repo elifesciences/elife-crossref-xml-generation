@@ -15,7 +15,7 @@ setup(
     license="MIT",
     install_requires=[
         "elifetools",
-        "elifearticle",
+        "elifearticle>=0.10.0",
         "GitPython",
         "configparser",
         "requests",
