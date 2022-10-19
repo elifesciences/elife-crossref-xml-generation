@@ -40,9 +40,9 @@ def set_posted_content(parent, poa_article, crossref_config):
     abstract.set_abstract(posted_content_tag, poa_article, crossref_config)
 
     # ai:program license
-    access_indicators.set_access_indicators(
-        posted_content_tag, poa_article, crossref_config
-    )
+    if poa_article.license and poa_article.license.href:
+        ai_program_tag = access_indicators.set_ai_program(posted_content_tag)
+        access_indicators.set_ai_license_ref(ai_program_tag, poa_article.license.href)
 
     # rel:program related_item tags for preprint versions
     if poa_article.related_articles:
