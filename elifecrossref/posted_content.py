@@ -65,4 +65,10 @@ def set_posted_content(parent, poa_article, crossref_config):
                 related_item_text,
             )
 
-    doi.set_doi_data(posted_content_tag, poa_article, poa_article, crossref_config)
+    doi.set_doi_data(
+        posted_content_tag,
+        poa_article,
+        poa_article,
+        crossref_config,
+        pattern_type="doi_pattern",
+    )
