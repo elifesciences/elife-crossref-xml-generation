@@ -1,7 +1,7 @@
 import unittest
 from xml.etree import ElementTree
 from xml.etree.ElementTree import Element
-from elifearticle.article import Article, FundingAward, License
+from elifearticle.article import Article, Award, FundingAward, License
 from elifecrossref import crossmark
 from tests import create_crossref_config
 
@@ -146,7 +146,9 @@ class TestSetCustomMetadata(unittest.TestCase):
     def test_set_custom_metadata_license_funding(self):
         funding_award = FundingAward()
         funding_award.award_group_id = "group_id"
-        funding_award.award_ids = ["award_id"]
+        award_object = Award()
+        award_object.award_id = "award_id"
+        funding_award.awards = [award_object]
         funding_award.institution_name = "Institution"
         funding_award.institution_id = "institution_id"
         funding_award.principal_award_recipients = ["Recipient One", "Recipient Two"]
