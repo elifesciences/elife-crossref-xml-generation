@@ -14,8 +14,8 @@ setup(
     packages=["elifecrossref"],
     license="MIT",
     install_requires=[
-        "elifetools",
-        "elifearticle>=0.10.0",
+        "elifetools>=0.33.0",
+        "elifearticle>=0.16.0",
         "GitPython",
         "configparser",
         "requests",

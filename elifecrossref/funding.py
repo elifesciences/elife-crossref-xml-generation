@@ -42,7 +42,7 @@ def set_funder_identifier(parent, award):
 
 
 def set_award_number(parent, award):
-    for award_id in award.award_ids:
+    for award_object in award.awards:
         fr_award_number_tag = SubElement(parent, "fr:assertion")
         fr_award_number_tag.set("name", "award_number")
-        fr_award_number_tag.text = award_id
+        fr_award_number_tag.text = award_object.award_id
