@@ -123,31 +123,23 @@
 						<assertion group_name="post_publication_commenting" label="Post publication commenting" name="post_publication_commenting">open (sign in with ORCID iD required)</assertion>
 						<fr:program name="fundref">
 							<fr:assertion name="fundgroup">
-								<fr:assertion name="funder_name">
-									National Institute of Neurological Disorders and Stroke
-									<fr:assertion name="funder_identifier">http://dx.doi.org/10.13039/100000065</fr:assertion>
-								</fr:assertion>
+								<fr:assertion name="funder_name">National Institute of Neurological Disorders and Stroke</fr:assertion>
+								<fr:assertion name="funder_identifier">http://dx.doi.org/10.13039/100000065</fr:assertion>
 								<fr:assertion name="award_number">Intramural Research Program (NS003133)</fr:assertion>
 							</fr:assertion>
 							<fr:assertion name="fundgroup">
-								<fr:assertion name="funder_name">
-									National Eye Institute
-									<fr:assertion name="funder_identifier">http://dx.doi.org/10.13039/100000053</fr:assertion>
-								</fr:assertion>
+								<fr:assertion name="funder_name">National Eye Institute</fr:assertion>
+								<fr:assertion name="funder_identifier">http://dx.doi.org/10.13039/100000053</fr:assertion>
 								<fr:assertion name="award_number">EY017836</fr:assertion>
 							</fr:assertion>
 							<fr:assertion name="fundgroup">
-								<fr:assertion name="funder_name">
-									Pew Charitable Trusts
-									<fr:assertion name="funder_identifier">http://dx.doi.org/10.13039/100000875</fr:assertion>
-								</fr:assertion>
+								<fr:assertion name="funder_name">Pew Charitable Trusts</fr:assertion>
+								<fr:assertion name="funder_identifier">http://dx.doi.org/10.13039/100000875</fr:assertion>
 								<fr:assertion name="award_number">Pew Scholars Program in the Biomedical Sciences</fr:assertion>
 							</fr:assertion>
 							<fr:assertion name="fundgroup">
-								<fr:assertion name="funder_name">
-									Max-Planck-Gesellschaft
-									<fr:assertion name="funder_identifier">http://dx.doi.org/10.13039/501100004189</fr:assertion>
-								</fr:assertion>
+								<fr:assertion name="funder_name">Max-Planck-Gesellschaft</fr:assertion>
+								<fr:assertion name="funder_identifier">http://dx.doi.org/10.13039/501100004189</fr:assertion>
 							</fr:assertion>
 						</fr:program>
 						<ai:program name="AccessIndicators">
