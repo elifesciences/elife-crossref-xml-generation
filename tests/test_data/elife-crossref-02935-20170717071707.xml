@@ -636,64 +636,46 @@
 						<assertion group_name="post_publication_commenting" label="Post publication commenting" name="post_publication_commenting">open (sign in with ORCID iD required)</assertion>
 						<fr:program name="fundref">
 							<fr:assertion name="fundgroup">
-								<fr:assertion name="funder_name">
-									Wellcome Trust
-									<fr:assertion name="funder_identifier">http://dx.doi.org/10.13039/100004440</fr:assertion>
-								</fr:assertion>
+								<fr:assertion name="funder_name">Wellcome Trust</fr:assertion>
+								<fr:assertion name="funder_identifier">http://dx.doi.org/10.13039/100004440</fr:assertion>
 							</fr:assertion>
 							<fr:assertion name="fundgroup">
-								<fr:assertion name="funder_name">
-									Wellcome Trust
-									<fr:assertion name="funder_identifier">http://dx.doi.org/10.13039/100004440</fr:assertion>
-								</fr:assertion>
+								<fr:assertion name="funder_name">Wellcome Trust</fr:assertion>
+								<fr:assertion name="funder_identifier">http://dx.doi.org/10.13039/100004440</fr:assertion>
 								<fr:assertion name="award_number">Health Innovation Challenge Fund (HICF)</fr:assertion>
 							</fr:assertion>
 							<fr:assertion name="fundgroup">
-								<fr:assertion name="funder_name">
-									Kay Kendall Leukaemia Fund
-									<fr:assertion name="funder_identifier">http://dx.doi.org/10.13039/501100000402</fr:assertion>
-								</fr:assertion>
+								<fr:assertion name="funder_name">Kay Kendall Leukaemia Fund</fr:assertion>
+								<fr:assertion name="funder_identifier">http://dx.doi.org/10.13039/501100000402</fr:assertion>
 							</fr:assertion>
 							<fr:assertion name="fundgroup">
 								<fr:assertion name="funder_name">Chordoma Foundation</fr:assertion>
 							</fr:assertion>
 							<fr:assertion name="fundgroup">
-								<fr:assertion name="funder_name">
-									Adenoid Cystic Carcinoma Research Foundation
-									<fr:assertion name="funder_identifier">http://dx.doi.org/10.13039/100006386</fr:assertion>
-								</fr:assertion>
+								<fr:assertion name="funder_name">Adenoid Cystic Carcinoma Research Foundation</fr:assertion>
+								<fr:assertion name="funder_identifier">http://dx.doi.org/10.13039/100006386</fr:assertion>
 							</fr:assertion>
 							<fr:assertion name="fundgroup">
-								<fr:assertion name="funder_name">
-									European Molecular Biology Organization
-									<fr:assertion name="funder_identifier">http://dx.doi.org/10.13039/100004410</fr:assertion>
-								</fr:assertion>
+								<fr:assertion name="funder_name">European Molecular Biology Organization</fr:assertion>
+								<fr:assertion name="funder_identifier">http://dx.doi.org/10.13039/100004410</fr:assertion>
 								<fr:assertion name="award_number">ALTF 1203_2012</fr:assertion>
 							</fr:assertion>
 							<fr:assertion name="fundgroup">
-								<fr:assertion name="funder_name">
-									National Institute for Health Research
-									<fr:assertion name="funder_identifier">http://dx.doi.org/10.13039/501100000272</fr:assertion>
-								</fr:assertion>
+								<fr:assertion name="funder_name">National Institute for Health Research</fr:assertion>
+								<fr:assertion name="funder_identifier">http://dx.doi.org/10.13039/501100000272</fr:assertion>
 								<fr:assertion name="award_number">Biomedical Research Center at University College London Hospitals</fr:assertion>
 							</fr:assertion>
 							<fr:assertion name="fundgroup">
-								<fr:assertion name="funder_name">
-									Leukaemia and Lymphoma Research
-									<fr:assertion name="funder_identifier">http://dx.doi.org/10.13039/501100000651</fr:assertion>
-								</fr:assertion>
+								<fr:assertion name="funder_name">Leukaemia and Lymphoma Research</fr:assertion>
+								<fr:assertion name="funder_identifier">http://dx.doi.org/10.13039/501100000651</fr:assertion>
 							</fr:assertion>
 							<fr:assertion name="fundgroup">
-								<fr:assertion name="funder_name">
-									Cancer Research UK
-									<fr:assertion name="funder_identifier">http://dx.doi.org/10.13039/501100000289</fr:assertion>
-								</fr:assertion>
+								<fr:assertion name="funder_name">Cancer Research UK</fr:assertion>
+								<fr:assertion name="funder_identifier">http://dx.doi.org/10.13039/501100000289</fr:assertion>
 							</fr:assertion>
 							<fr:assertion name="fundgroup">
-								<fr:assertion name="funder_name">
-									Leukemia and Lymphoma Society
-									<fr:assertion name="funder_identifier">http://dx.doi.org/10.13039/100005189</fr:assertion>
-								</fr:assertion>
+								<fr:assertion name="funder_name">Leukemia and Lymphoma Society</fr:assertion>
+								<fr:assertion name="funder_identifier">http://dx.doi.org/10.13039/100005189</fr:assertion>
 							</fr:assertion>
 							<fr:assertion name="fundgroup">
 								<fr:assertion name="funder_name">European Union</fr:assertion>
@@ -704,31 +686,23 @@
 								<fr:assertion name="award_number">PROMPT: G0500966/75466</fr:assertion>
 							</fr:assertion>
 							<fr:assertion name="fundgroup">
-								<fr:assertion name="funder_name">
-									National Institute of Environmental Health Sciences
-									<fr:assertion name="funder_identifier">http://dx.doi.org/10.13039/100000066</fr:assertion>
-								</fr:assertion>
+								<fr:assertion name="funder_name">National Institute of Environmental Health Sciences</fr:assertion>
+								<fr:assertion name="funder_identifier">http://dx.doi.org/10.13039/100000066</fr:assertion>
 								<fr:assertion name="award_number">Intramural Research Program of the NIH</fr:assertion>
 							</fr:assertion>
 							<fr:assertion name="fundgroup">
-								<fr:assertion name="funder_name">
-									National Institute for Health Research
-									<fr:assertion name="funder_identifier">http://dx.doi.org/10.13039/501100000272</fr:assertion>
-								</fr:assertion>
+								<fr:assertion name="funder_name">National Institute for Health Research</fr:assertion>
+								<fr:assertion name="funder_identifier">http://dx.doi.org/10.13039/501100000272</fr:assertion>
 								<fr:assertion name="award_number">Cambridge Biomedical Research Center</fr:assertion>
 							</fr:assertion>
 							<fr:assertion name="fundgroup">
-								<fr:assertion name="funder_name">
-									European Molecular Biology Organization
-									<fr:assertion name="funder_identifier">http://dx.doi.org/10.13039/100004410</fr:assertion>
-								</fr:assertion>
+								<fr:assertion name="funder_name">European Molecular Biology Organization</fr:assertion>
+								<fr:assertion name="funder_identifier">http://dx.doi.org/10.13039/100004410</fr:assertion>
 								<fr:assertion name="award_number">ALTF 1287-2012</fr:assertion>
 							</fr:assertion>
 							<fr:assertion name="fundgroup">
-								<fr:assertion name="funder_name">
-									Department of Health
-									<fr:assertion name="funder_identifier">http://dx.doi.org/10.13039/501100000276</fr:assertion>
-								</fr:assertion>
+								<fr:assertion name="funder_name">Department of Health</fr:assertion>
+								<fr:assertion name="funder_identifier">http://dx.doi.org/10.13039/501100000276</fr:assertion>
 								<fr:assertion name="award_number">Health Innovation Challenge Fund (HICF)</fr:assertion>
 							</fr:assertion>
 						</fr:program>
