@@ -21,7 +21,7 @@ def set_funding_award(parent, award):
     fr_fundgroup_tag.set("name", "fundgroup")
     fr_funder_name_tag = set_funder_name(fr_fundgroup_tag, award)
     if fr_funder_name_tag is not None:
-        set_funder_identifier(fr_funder_name_tag, award)
+        set_funder_identifier(fr_fundgroup_tag, award)
     set_award_number(fr_fundgroup_tag, award)
 
 

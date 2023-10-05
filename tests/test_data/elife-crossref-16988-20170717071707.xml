@@ -125,17 +125,13 @@
 						<assertion group_name="post_publication_commenting" label="Post publication commenting" name="post_publication_commenting">open (sign in with ORCID iD required)</assertion>
 						<fr:program name="fundref">
 							<fr:assertion name="fundgroup">
-								<fr:assertion name="funder_name">
-									Agence Nationale de la Recherche
-									<fr:assertion name="funder_identifier">http://dx.doi.org/10.13039/501100001665</fr:assertion>
-								</fr:assertion>
+								<fr:assertion name="funder_name">Agence Nationale de la Recherche</fr:assertion>
+								<fr:assertion name="funder_identifier">http://dx.doi.org/10.13039/501100001665</fr:assertion>
 								<fr:assertion name="award_number">ANR-11-LABX-0028-01</fr:assertion>
 							</fr:assertion>
 							<fr:assertion name="fundgroup">
-								<fr:assertion name="funder_name">
-									European Research Council
-									<fr:assertion name="funder_identifier">http://dx.doi.org/10.13039/501100000781</fr:assertion>
-								</fr:assertion>
+								<fr:assertion name="funder_name">European Research Council</fr:assertion>
+								<fr:assertion name="funder_identifier">http://dx.doi.org/10.13039/501100000781</fr:assertion>
 								<fr:assertion name="award_number">Advanced Grant 268 888</fr:assertion>
 							</fr:assertion>
 							<fr:assertion name="fundgroup">
