@@ -1,7 +1,14 @@
 import unittest
 from xml.etree import ElementTree
 from xml.etree.ElementTree import Element
-from elifearticle.article import Article, Citation, Dataset, Preprint
+from elifearticle.article import (
+    Article,
+    Award,
+    Citation,
+    Dataset,
+    FundingAward,
+    Preprint,
+)
 from elifecrossref import related
 
 
@@ -58,6 +65,29 @@ class TestDoRelationsProgram(unittest.TestCase):
         article.preprint = Preprint(uri="https://example.org")
         do_result = related.do_relations_program(article)
         self.assertTrue(do_result)
+
+    def test_funding_doi(self):
+        "test when an article has a funding DOI"
+        article = Article("10.7554/eLife.00666")
+        award = Award()
+        award.award_id = "award_id"
+        award.award_id_type = "doi"
+        funding_award = FundingAward()
+        funding_award.add_award(award)
+        article.funding_awards = [funding_award]
+        do_result = related.do_relations_program(article)
+        self.assertTrue(do_result)
+
+    def test_no_funding_doi(self):
+        "test if article award has no funding DOI"
+        article = Article("10.7554/eLife.00666")
+        award = Award()
+        award.award_id = "award_id"
+        funding_award = FundingAward()
+        funding_award.add_award(award)
+        article.funding_awards = [funding_award]
+        do_result = related.do_relations_program(article)
+        self.assertEqual(do_result, None)
 
 
 class TestSetRelationsProgram(unittest.TestCase):

@@ -2,9 +2,11 @@ import unittest
 
 from elifearticle.article import (
     Article,
+    Award,
     Component,
     Citation,
     Dataset,
+    FundingAward,
     Contributor,
     Affiliation,
     Preprint,
@@ -388,6 +390,36 @@ class TestGeneratePreprint(unittest.TestCase):
         crossref_xml_string = crossref_object.output_xml()
         # test assertion
         self.assertTrue(expected_contains in crossref_xml_string)
+
+
+class TestGenerateFunding(unittest.TestCase):
+    def test_set_funding(self):
+        "a basic non-XML example for funding data"
+        doi = "10.7554/eLife.00666"
+        title = "Test article"
+        article = Article(doi, title)
+        award = Award()
+        award.award_id = "10.13039/501100001824"
+        award.award_id_type = "doi"
+        funding_award = FundingAward()
+        funding_award.add_award(award)
+        article.funding_awards = [funding_award]
+        # expected values
+        expected_xml_snippet = (
+            "<rel:program>"
+            "<rel:related_item>"
+            '<rel:inter_work_relation identifier-type="doi" relationship-type="isFinancedBy">'
+            "10.13039/501100001824"
+            "</rel:inter_work_relation>"
+            "</rel:related_item>"
+            "</rel:program>"
+        )
+        # generate output
+        c_xml = generate.build_crossref_xml([article])
+        crossref_xml_string = c_xml.output_xml()
+        self.assertIsNotNone(crossref_xml_string)
+        # Test for expected strings in the XML output
+        self.assertTrue(expected_xml_snippet in crossref_xml_string)
 
 
 if __name__ == "__main__":

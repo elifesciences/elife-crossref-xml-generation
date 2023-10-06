@@ -1,4 +1,5 @@
 from xml.etree.ElementTree import SubElement
+from elifecrossref import related
 
 
 def do_funding(poa_article):
@@ -46,3 +47,34 @@ def set_award_number(parent, award):
         fr_award_number_tag = SubElement(parent, "fr:assertion")
         fr_award_number_tag.set("name", "award_number")
         fr_award_number_tag.text = award_object.award_id
+
+
+def set_finance_relation(relations_program_tag, poa_article):
+    "create related_item tags for awards with a funding DOI"
+    for award in poa_article.funding_awards:
+        for award_object in [
+            award_object
+            for award_object in award.awards
+            if award_object.award_id_type == "doi"
+        ]:
+            set_finance_related_item(
+                relations_program_tag,
+                "isFinancedBy",
+                award_object.award_id_type,
+                award_object.award_id,
+            )
+
+
+def set_finance_related_item(
+    parent, relationship_type, identifier_type, related_item_text
+):
+    "add a related_item tag"
+    related_item_tag = SubElement(parent, "rel:related_item")
+    related_item_type = "inter_work_relation"
+    related.set_related_item_work_relation(
+        related_item_tag,
+        related_item_type,
+        relationship_type,
+        identifier_type,
+        related_item_text,
+    )
