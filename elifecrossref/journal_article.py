@@ -69,6 +69,8 @@ def set_journal_article(parent, poa_article, pub_date, crossref_config):
             journal_article_tag, relations_program_tag
         )
 
+    funding.set_finance_relation(relations_program_tag, poa_article)
+
     dataset.set_datasets(relations_program_tag, poa_article)
 
     set_archive_locations(journal_article_tag, crossref_config.get("archive_locations"))
