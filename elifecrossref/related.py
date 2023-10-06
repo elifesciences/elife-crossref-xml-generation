@@ -34,6 +34,21 @@ def do_relations_program(poa_article):
             if do_citation_related_item(ref) is True:
                 do_relations = True
                 break
+    if do_relations is not True and poa_article.funding_awards:
+        for funding_award in poa_article.funding_awards:
+            if (
+                funding_award.awards
+                and len(
+                    [
+                        award
+                        for award in funding_award.awards
+                        if award.award_id_type == "doi"
+                    ]
+                )
+                > 0
+            ):
+                do_relations = True
+                break
     if do_relations is not True and do_preprint_related_item(poa_article):
         do_relations = True
     return do_relations
