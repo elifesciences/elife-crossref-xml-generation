@@ -272,6 +272,11 @@
 							<resource mime_type="application/xml">https://cdn.elifesciences.org/articles/04637/elife-04637-v2.xml</resource>
 						</item>
 					</collection>
+					<collection property="crawler-based">
+						<item crawler="iParadigms">
+							<resource>https://elifesciences.org/articles/04637</resource>
+						</item>
+					</collection>
 				</doi_data>
 				<citation_list>
 					<citation key="bib2">

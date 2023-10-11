@@ -22,6 +22,11 @@
             <doi_data>
                 <doi>10.7554/eLife.202200002</doi>
                 <resource>https://example.org/articles/202200002</resource>
+                <collection property="crawler-based">
+                    <item crawler="iParadigms">
+                        <resource>https://elifesciences.org/reviewed-preprints/202200002/pdf</resource>
+                    </item>
+                </collection>
             </doi_data>
         </posted_content>
     </body>

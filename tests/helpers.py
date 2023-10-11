@@ -13,6 +13,7 @@ from elifearticle.article import (
 def build_preprint_article():
     "populate an Article object with lots of test data"
     article = Article("10.7554/eLife.202200001")
+    article.article_type = "preprint"
     article.version_doi = "10.7554/eLife.202200001.2"
     article.manuscript = "202200001"
     article.elocation_id = "RP202200001"

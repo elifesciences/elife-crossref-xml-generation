@@ -242,6 +242,11 @@
 							<resource mime_type="application/xml">https://cdn.elifesciences.org/articles/02725/elife-02725.xml</resource>
 						</item>
 					</collection>
+					<collection property="crawler-based">
+						<item crawler="iParadigms">
+							<resource>https://cdn.elifesciences.org/articles/02725/elife-02725.pdf</resource>
+						</item>
+					</collection>
 				</doi_data>
 			</journal_article>
 		</journal>
