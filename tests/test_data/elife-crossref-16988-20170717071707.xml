@@ -160,6 +160,11 @@
 							<resource mime_type="application/xml">https://cdn.elifesciences.org/articles/16988/elife-16988-v1.xml</resource>
 						</item>
 					</collection>
+					<collection property="crawler-based">
+						<item crawler="iParadigms">
+							<resource>https://elifesciences.org/articles/16988</resource>
+						</item>
+					</collection>
 				</doi_data>
 				<citation_list>
 					<citation key="bib1">

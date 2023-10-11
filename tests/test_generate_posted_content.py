@@ -22,6 +22,7 @@ class TestGeneratePostedContentMinimal(unittest.TestCase):
         "minimal data to generate a posted_content deposit"
         article = Article("10.7554/eLife.202200002")
         article.manuscript = "202200002"
+        article.article_type = "preprint"
         # use self_uri to set the doi resource address
         self_uri = Uri()
         self_uri.xlink_href = "https://example.org/articles/202200002"

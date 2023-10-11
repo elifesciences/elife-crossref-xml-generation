@@ -257,6 +257,11 @@
 							<resource mime_type="application/xml">https://cdn.elifesciences.org/articles/12444/elife-12444-v2.xml</resource>
 						</item>
 					</collection>
+					<collection property="crawler-based">
+						<item crawler="iParadigms">
+							<resource>https://elifesciences.org/articles/12444</resource>
+						</item>
+					</collection>
 				</doi_data>
 				<citation_list>
 					<citation key="bib1">
