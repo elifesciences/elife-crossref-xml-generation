@@ -189,6 +189,11 @@
 							<resource mime_type="application/xml">https://cdn.elifesciences.org/articles/02020/elife-02020-v1.xml</resource>
 						</item>
 					</collection>
+					<collection property="crawler-based">
+						<item crawler="iParadigms">
+							<resource>https://elifesciences.org/articles/02020</resource>
+						</item>
+					</collection>
 				</doi_data>
 				<citation_list>
 					<citation key="bib1">

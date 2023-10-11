@@ -2,6 +2,7 @@ from xml.etree.ElementTree import SubElement
 from elifecrossref import (
     abstract,
     access_indicators,
+    collection,
     contributor,
     dates,
     doi,
@@ -65,10 +66,14 @@ def set_posted_content(parent, poa_article, crossref_config):
                 related_item_text,
             )
 
-    doi.set_doi_data(
+    doi_data_tag = doi.set_doi_data(
         posted_content_tag,
         poa_article,
         poa_article,
         crossref_config,
         pattern_type="doi_pattern",
+    )
+
+    collection.set_collection(
+        doi_data_tag, poa_article, "crawler-based", crossref_config
     )
