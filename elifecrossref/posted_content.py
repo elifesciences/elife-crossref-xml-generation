@@ -46,18 +46,18 @@ def set_posted_content(parent, poa_article, crossref_config):
         access_indicators.set_ai_license_ref(ai_program_tag, poa_article.license.href)
 
     # rel:program related_item tags for preprint versions
-    if poa_article.related_articles:
+    if poa_article.publication_history:
         program_tag = related.set_relations_program(posted_content_tag, None)
-        for preprint in poa_article.related_articles:
+        for event in poa_article.publication_history:
             related_item_tag = SubElement(program_tag, "rel:related_item")
             related_item_type = "intra_work_relation"
             relationship_type = "isVersionOf"
-            if preprint.doi:
+            if event.doi:
                 identifier_type = "doi"
-                related_item_text = preprint.doi
-            elif preprint.uri:
+                related_item_text = event.doi
+            elif event.uri:
                 identifier_type = "uri"
-                related_item_text = preprint.uri
+                related_item_text = event.uri
             related.set_related_item_work_relation(
                 related_item_tag,
                 related_item_type,
