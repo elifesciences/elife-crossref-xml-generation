@@ -78,7 +78,11 @@ def set_type(parent, review_article):
 def set_title(parent, review_article, poa_article, crossref_config):
     """concatenate the review and parent article titles"""
     title_value = ": ".join(
-        [value for value in [review_article.title, poa_article.title] if value]
+        [
+            value.rstrip(":")
+            for value in [review_article.title, poa_article.title]
+            if value
+        ]
     )
     title.set_titles(parent, title_value, crossref_config)
 
