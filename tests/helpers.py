@@ -4,6 +4,7 @@ from elifearticle.article import (
     Article,
     ArticleDate,
     Contributor,
+    Event,
     License,
     Preprint,
     Uri,
@@ -53,10 +54,14 @@ def build_preprint_article():
     author_2 = Contributor("author", "Second", "Given names")
     author_2.set_affiliation(aff)
     article.add_contributor(author_2)
-    # related article version tests
-    related_preprint_1 = Preprint()
-    related_preprint_1.doi = "10.7554/article_version_with_doi"
-    related_preprint_2 = Preprint()
-    related_preprint_2.uri = "10.7554/article_version_with_uri"
-    article.related_articles = [related_preprint_1, related_preprint_2]
+    # preprint publicaiton history events
+    event_object_1 = Event()
+    event_object_1.doi = "10.7554/article_version_with_doi"
+    event_object_1.event_type = "preprint"
+    article.publication_history.append(event_object_1)
+    event_object_2 = Event()
+    event_object_2.uri = "10.7554/article_version_with_uri"
+    event_object_2.event_type = "reviewed-preprint"
+    article.publication_history.append(event_object_2)
+
     return article
