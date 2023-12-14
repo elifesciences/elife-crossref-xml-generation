@@ -17,6 +17,7 @@ def build_preprint_article():
     article = Article("10.7554/eLife.202200001")
     article.article_type = "preprint"
     article.version_doi = "10.7554/eLife.202200001.2"
+    article.version = "2"
     article.manuscript = "202200001"
     article.elocation_id = "RP202200001"
     # use self_uri to set the doi resource address
@@ -69,4 +70,11 @@ def build_preprint_article():
     citation_object.article_title = "An article title"
     article.ref_list = [citation_object]
 
+    return article
+
+
+def build_preprint_article_version():
+    article = build_preprint_article()
+    # reset the self_uri values
+    article.self_uri_list = []
     return article

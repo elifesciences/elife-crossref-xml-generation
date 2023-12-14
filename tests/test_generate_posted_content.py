@@ -71,15 +71,24 @@ class TestGeneratePostedContentMinimal(unittest.TestCase):
 class TestGeneratePostedContent(unittest.TestCase):
     def setUp(self):
         article = helpers.build_preprint_article()
+        article_version = helpers.build_preprint_article_version()
         # add the test to the passing test list
         self.passes = []
         self.passes.append(
             (
                 [article],
-                "elife-crossref-preprint-posted_content-202200001-20170717071707.xml",
+                "elife-crossref-preprint-posted_content-202200001-v2-20170717071707.xml",
                 "elife_preprint",
                 DEFAULT_PUB_DATE,
-            )
+            ),
+        )
+        self.passes.append(
+            (
+                [article_version],
+                "elife-crossref-preprint-version-posted_content-202200001-v2-20170717071707.xml",
+                "elife_preprint_version",
+                DEFAULT_PUB_DATE,
+            ),
         )
 
     def test_generate_posted_content(self):

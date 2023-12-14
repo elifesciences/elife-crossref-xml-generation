@@ -7,7 +7,7 @@ from xml.dom import minidom
 from elifearticle import utils as eautils
 from elifearticle import parse
 
-from elifecrossref import body, head, utils
+from elifecrossref import body, elife, head, utils
 
 from elifecrossref.conf import raw_config, parse_raw_config
 
@@ -115,6 +115,14 @@ def get_batch_id(batch_file_prefix, pub_date, poa_articles, submission_type):
     if poa_articles:
         # If only one article is supplied, then add the doi to the batch file name
         batch_id_parts.append(str(utils.clean_string(poa_articles[0].manuscript)))
+        if (
+            submission_type == "posted_content"
+            or poa_articles[0].article_type == "preprint"
+        ):
+            # add version
+            version_string = elife.elife_style_article_url_version(poa_articles[0])
+            if version_string:
+                batch_id_parts.append(version_string)
     # add detail about the date
     batch_id_parts.append(time.strftime("%Y%m%d%H%M%S", pub_date))
     # concatenate and return the final batch id

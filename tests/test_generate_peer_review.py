@@ -337,7 +337,7 @@ class TestGeneratePreprintPeerReview(unittest.TestCase):
         self.passes.append(
             (
                 [article],
-                "elife-crossref-preprint-peer_review-202200001-20170717071707.xml",
+                "elife-crossref-preprint-peer_review-202200001-v2-20170717071707.xml",
                 "elife_preprint",
                 DEFAULT_PUB_DATE,
             )
