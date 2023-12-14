@@ -3,6 +3,7 @@ from elifearticle.article import (
     Affiliation,
     Article,
     ArticleDate,
+    Citation,
     Contributor,
     Event,
     License,
@@ -63,5 +64,9 @@ def build_preprint_article():
     event_object_2.uri = "10.7554/article_version_with_uri"
     event_object_2.event_type = "reviewed-preprint"
     article.publication_history.append(event_object_2)
+    # citations
+    citation_object = Citation()
+    citation_object.article_title = "An article title"
+    article.ref_list = [citation_object]
 
     return article

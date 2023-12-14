@@ -73,6 +73,11 @@
                     </item>
                 </collection>
             </doi_data>
+            <citation_list>
+                <citation key="1">
+                    <article_title>An article title</article_title>
+                </citation>
+            </citation_list>
         </posted_content>
     </body>
 </doi_batch>
