@@ -1,9 +1,14 @@
 def elife_style_article_attributes(obj):
     # Special logic for elife article style
     version = ""
-    if obj.version:
+    if hasattr(obj, "version") and obj.version:
         version = "-v" + str(obj.version)
     return version
+
+
+def elife_style_article_url_version(obj):
+    # version string for use in URLs
+    return elife_style_article_attributes(obj).lstrip("-")
 
 
 def elife_style_component_attributes(obj):

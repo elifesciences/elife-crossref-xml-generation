@@ -27,6 +27,7 @@ def generate_resource_url(obj, poa_article, crossref_config, pattern_type=None):
             volume=poa_article.volume,
             prefix1=prefix1,
             id=id_value,
+            url_version=elife.elife_style_article_url_version(poa_article),
         )
     if isinstance(obj, Article):
         version = elife.elife_style_article_attributes(obj)
@@ -36,6 +37,7 @@ def generate_resource_url(obj, poa_article, crossref_config, pattern_type=None):
                 manuscript=obj.manuscript,
                 volume=obj.volume,
                 version=version,
+                url_version=elife.elife_style_article_url_version(poa_article),
             )
 
     return ""

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <doi_batch xmlns="http://www.crossref.org/schema/5.3.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:fr="http://www.crossref.org/fundref.xsd" xmlns:ai="http://www.crossref.org/AccessIndicators.xsd" xmlns:ct="http://www.crossref.org/clinicaltrials.xsd" xmlns:rel="http://www.crossref.org/relations.xsd" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:jats="http://www.ncbi.nlm.nih.gov/JATS1" version="5.3.1" xsi:schemaLocation="http://www.crossref.org/schema/5.3.1 http://www.crossref.org/schemas/crossref5.3.1.xsd">
     <head>
-        <doi_batch_id>elife-crossref-preprint-peer_review-202200001-20170717071707</doi_batch_id>
+        <doi_batch_id>elife-crossref-preprint-peer_review-202200001-v2-20170717071707</doi_batch_id>
         <timestamp>20170717071707</timestamp>
         <depositor>
             <depositor_name>eLife</depositor_name>
@@ -35,7 +35,7 @@
             </rel:program>
             <doi_data>
                 <doi>10.7554/eLife.202200001.2.sa0</doi>
-                <resource>https://elifesciences.org/reviewed-preprints/202200001/reviews#sa0</resource>
+                <resource>https://elifesciences.org/reviewed-preprints/202200001v2/reviews#sa0</resource>
             </doi_data>
         </peer_review>
         <peer_review stage="pre-publication" type="referee-report">
@@ -60,7 +60,7 @@
             </rel:program>
             <doi_data>
                 <doi>10.7554/eLife.202200001.2.sa1</doi>
-                <resource>https://elifesciences.org/reviewed-preprints/202200001/reviews#sa1</resource>
+                <resource>https://elifesciences.org/reviewed-preprints/202200001v2/reviews#sa1</resource>
             </doi_data>
         </peer_review>
         <peer_review stage="pre-publication" type="referee-report">
@@ -85,7 +85,7 @@
             </rel:program>
             <doi_data>
                 <doi>10.7554/eLife.202200001.2.sa2</doi>
-                <resource>https://elifesciences.org/reviewed-preprints/202200001/reviews#sa2</resource>
+                <resource>https://elifesciences.org/reviewed-preprints/202200001v2/reviews#sa2</resource>
             </doi_data>
         </peer_review>
         <peer_review stage="pre-publication" type="referee-report">
@@ -110,7 +110,7 @@
             </rel:program>
             <doi_data>
                 <doi>10.7554/eLife.202200001.2.sa3</doi>
-                <resource>https://elifesciences.org/reviewed-preprints/202200001/reviews#sa3</resource>
+                <resource>https://elifesciences.org/reviewed-preprints/202200001v2/reviews#sa3</resource>
             </doi_data>
         </peer_review>
         <peer_review stage="pre-publication" type="author-comment">
@@ -139,7 +139,7 @@
             </rel:program>
             <doi_data>
                 <doi>10.7554/eLife.202200001.2.sa4</doi>
-                <resource>https://elifesciences.org/reviewed-preprints/202200001/reviews#sa4</resource>
+                <resource>https://elifesciences.org/reviewed-preprints/202200001v2/reviews#sa4</resource>
             </doi_data>
         </peer_review>
     </body>
