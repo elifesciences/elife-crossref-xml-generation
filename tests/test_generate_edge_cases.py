@@ -332,8 +332,8 @@ class TestGenerateAbstract(unittest.TestCase):
 class TestGenerateTitles(unittest.TestCase):
     def setUp(self):
         self.title = (
-            '<bold>Test article</bold> for <ext-link ext-link-type="uri" '
-            + 'xlink:href="http://dx.doi.org/10.1601/nm.3602">Desulfocapsa sulfexigens</ext-link>'
+            '\n<bold>Test article</bold>\n for \n<ext-link ext-link-type="uri" '
+            + 'xlink:href="http://dx.doi.org/10.1601/nm.3602">Desulfocapsa sulfexigens</ext-link>\n'
         )
 
     def test_set_titles(self):

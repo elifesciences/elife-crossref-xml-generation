@@ -12,6 +12,8 @@ def set_titles(parent, title, crossref_config):
     root_xml_element = Element(root_tag_name)
     # remove unwanted tags
     tag_converted_title = eautils.remove_tag("ext-link", title)
+    # remove extra whitespace in pretty XML
+    tag_converted_title = tag_converted_title.lstrip("\n").rstrip("\n").replace("\n", "")
     if crossref_config.get("face_markup") is True:
         tags.add_inline_tag(root_xml_element, tag_name, tag_converted_title)
     else:
