@@ -48,12 +48,19 @@ def set_peer_review(parent, poa_article, crossref_config):
                     related_object.xlink_href,
                 )
 
+        if review_article.article_type == "editor-report" and crossref_config.get(
+            "editor_report_doi_pattern"
+        ):
+            doi_pattern = "editor_report_doi_pattern"
+        else:
+            doi_pattern = "peer_review_doi_pattern"
+
         doi.set_doi_data(
             peer_review_tag,
             review_article,
             poa_article,
             crossref_config,
-            "peer_review_doi_pattern",
+            doi_pattern,
         )
 
 
