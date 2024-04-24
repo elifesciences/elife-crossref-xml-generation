@@ -35,7 +35,7 @@
             </rel:program>
             <doi_data>
                 <doi>10.7554/eLife.202200001.2.sa0</doi>
-                <resource>https://elifesciences.org/reviewed-preprints/202200001v2/reviews#sa0</resource>
+                <resource>https://elifesciences.org/reviewed-preprints/202200001v2</resource>
             </doi_data>
         </peer_review>
         <peer_review stage="pre-publication" type="referee-report">
@@ -60,7 +60,7 @@
             </rel:program>
             <doi_data>
                 <doi>10.7554/eLife.202200001.2.sa1</doi>
-                <resource>https://elifesciences.org/reviewed-preprints/202200001v2/reviews#sa1</resource>
+                <resource>https://elifesciences.org/reviewed-preprints/202200001v2/reviews</resource>
             </doi_data>
         </peer_review>
         <peer_review stage="pre-publication" type="referee-report">
@@ -85,7 +85,7 @@
             </rel:program>
             <doi_data>
                 <doi>10.7554/eLife.202200001.2.sa2</doi>
-                <resource>https://elifesciences.org/reviewed-preprints/202200001v2/reviews#sa2</resource>
+                <resource>https://elifesciences.org/reviewed-preprints/202200001v2/reviews</resource>
             </doi_data>
         </peer_review>
         <peer_review stage="pre-publication" type="referee-report">
@@ -110,7 +110,7 @@
             </rel:program>
             <doi_data>
                 <doi>10.7554/eLife.202200001.2.sa3</doi>
-                <resource>https://elifesciences.org/reviewed-preprints/202200001v2/reviews#sa3</resource>
+                <resource>https://elifesciences.org/reviewed-preprints/202200001v2/reviews</resource>
             </doi_data>
         </peer_review>
         <peer_review stage="pre-publication" type="author-comment">
@@ -139,7 +139,7 @@
             </rel:program>
             <doi_data>
                 <doi>10.7554/eLife.202200001.2.sa4</doi>
-                <resource>https://elifesciences.org/reviewed-preprints/202200001v2/reviews#sa4</resource>
+                <resource>https://elifesciences.org/reviewed-preprints/202200001v2/reviews</resource>
             </doi_data>
         </peer_review>
     </body>

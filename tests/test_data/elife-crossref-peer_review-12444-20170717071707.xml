@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <doi_batch xmlns="http://www.crossref.org/schema/5.3.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:fr="http://www.crossref.org/fundref.xsd" xmlns:ai="http://www.crossref.org/AccessIndicators.xsd" xmlns:ct="http://www.crossref.org/clinicaltrials.xsd" xmlns:rel="http://www.crossref.org/relations.xsd" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:jats="http://www.ncbi.nlm.nih.gov/JATS1" version="5.3.1" xsi:schemaLocation="http://www.crossref.org/schema/5.3.1 http://www.crossref.org/schemas/crossref5.3.1.xsd">
     <head>
-        <doi_batch_id>elife-crossref-peer_review-00666-20170717071707</doi_batch_id>
+        <doi_batch_id>elife-crossref-peer_review-12444-20170717071707</doi_batch_id>
         <timestamp>20170717071707</timestamp>
         <depositor>
             <depositor_name>eLife</depositor_name>
@@ -19,7 +19,7 @@
                 <organization contributor_role="author" sequence="additional">eLife Editorial Production Group</organization>
             </contributors>
             <titles>
-                <title>Editor's evaluation: The eLife research article</title>
+                <title>Editor's evaluation: The autophagy gene Atg16l1 differentially regulates Treg and TH2 cells to control intestinal inflammation</title>
             </titles>
             <review_date>
                 <month>01</month>
@@ -31,15 +31,15 @@
             </ai:program>
             <rel:program>
                 <rel:related_item>
-                    <rel:inter_work_relation identifier-type="doi" relationship-type="isReviewOf">10.7554/eLife.00666</rel:inter_work_relation>
+                    <rel:inter_work_relation identifier-type="doi" relationship-type="isReviewOf">10.7554/eLife.12444</rel:inter_work_relation>
                 </rel:related_item>
                 <rel:related_item>
                     <rel:inter_work_relation identifier-type="uri" relationship-type="hasRelatedMaterial">https://sciety.org/articles/activity/10.1101/2020.11.21.391326</rel:inter_work_relation>
                 </rel:related_item>
             </rel:program>
             <doi_data>
-                <doi>10.7554/eLife.00666.sa0</doi>
-                <resource>https://elifesciences.org/articles/00666</resource>
+                <doi>10.7554/eLife.12444.sa0</doi>
+                <resource>https://elifesciences.org/articles/12444v2</resource>
             </doi_data>
         </peer_review>
         <peer_review stage="pre-publication" type="editor-report">
@@ -50,7 +50,7 @@
                 </person_name>
             </contributors>
             <titles>
-                <title>Decision letter: The eLife research article</title>
+                <title>Decision letter: The autophagy gene Atg16l1 differentially regulates Treg and TH2 cells to control intestinal inflammation</title>
             </titles>
             <review_date>
                 <month>01</month>
@@ -62,12 +62,12 @@
             </ai:program>
             <rel:program>
                 <rel:related_item>
-                    <rel:inter_work_relation identifier-type="doi" relationship-type="isReviewOf">10.7554/eLife.00666</rel:inter_work_relation>
+                    <rel:inter_work_relation identifier-type="doi" relationship-type="isReviewOf">10.7554/eLife.12444</rel:inter_work_relation>
                 </rel:related_item>
             </rel:program>
             <doi_data>
-                <doi>10.7554/eLife.00666.029</doi>
-                <resource>https://elifesciences.org/articles/00666/peer-reviews</resource>
+                <doi>10.7554/eLife.12444.029</doi>
+                <resource>https://elifesciences.org/articles/12444v2/peer-reviews</resource>
             </doi_data>
         </peer_review>
         <peer_review stage="pre-publication" type="author-comment">
@@ -79,7 +79,7 @@
                 <organization contributor_role="author" sequence="additional">eLife Editorial Production Group</organization>
             </contributors>
             <titles>
-                <title>Author response: The eLife research article</title>
+                <title>Author response: The autophagy gene Atg16l1 differentially regulates Treg and TH2 cells to control intestinal inflammation</title>
             </titles>
             <review_date>
                 <month>01</month>
@@ -91,12 +91,12 @@
             </ai:program>
             <rel:program>
                 <rel:related_item>
-                    <rel:inter_work_relation identifier-type="doi" relationship-type="isReviewOf">10.7554/eLife.00666</rel:inter_work_relation>
+                    <rel:inter_work_relation identifier-type="doi" relationship-type="isReviewOf">10.7554/eLife.12444</rel:inter_work_relation>
                 </rel:related_item>
             </rel:program>
             <doi_data>
-                <doi>10.7554/eLife.00666.030</doi>
-                <resource>https://elifesciences.org/articles/00666/peer-reviews</resource>
+                <doi>10.7554/eLife.12444.030</doi>
+                <resource>https://elifesciences.org/articles/12444v2/peer-reviews</resource>
             </doi_data>
         </peer_review>
         <peer_review stage="pre-publication" type="referee-report">
@@ -104,7 +104,7 @@
                 <anonymous contributor_role="author" sequence="first"/>
             </contributors>
             <titles>
-                <title>Reviewer #1 (Public Review): The eLife research article</title>
+                <title>Reviewer #1 (Public Review): The autophagy gene Atg16l1 differentially regulates Treg and TH2 cells to control intestinal inflammation</title>
             </titles>
             <review_date>
                 <month>01</month>
@@ -116,12 +116,12 @@
             </ai:program>
             <rel:program>
                 <rel:related_item>
-                    <rel:inter_work_relation identifier-type="doi" relationship-type="isReviewOf">10.7554/eLife.00666</rel:inter_work_relation>
+                    <rel:inter_work_relation identifier-type="doi" relationship-type="isReviewOf">10.7554/eLife.12444</rel:inter_work_relation>
                 </rel:related_item>
             </rel:program>
             <doi_data>
-                <doi>10.7554/eLife.00666.sa3</doi>
-                <resource>https://elifesciences.org/articles/00666/peer-reviews</resource>
+                <doi>10.7554/eLife.12444.sa3</doi>
+                <resource>https://elifesciences.org/articles/12444v2/peer-reviews</resource>
             </doi_data>
         </peer_review>
     </body>
