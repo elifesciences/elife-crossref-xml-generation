@@ -24,7 +24,7 @@ from tests import (
 generate.TMP_DIR = TEST_BASE_PATH + "tmp" + os.sep
 
 
-def sample_data():
+def sample_data(base_doi="10.7554/eLife.00666"):
     """some sample data for development until real object definition is final and XML is parsed"""
     reviews = []
     # editor's evaluation
@@ -49,11 +49,11 @@ def sample_data():
     editor_evaluation.license = license_object
     # related article doi
     related_article = Article()
-    related_article.doi = "10.7554/eLife.00666"
+    related_article.doi = base_doi
     related_article.title = "The eLife research article"
     editor_evaluation.related_articles = [related_article]
     # review article doi
-    editor_evaluation.doi = "10.7554/eLife.00666.sa0"
+    editor_evaluation.doi = "%s.sa0" % base_doi
     # related material with a uri
     related_object = RelatedObject()
     related_object.xlink_href = (
@@ -61,14 +61,12 @@ def sample_data():
     )
     related_object.link_type = "continued-by"
     editor_evaluation.related_objects = [related_object]
-    # a hack to get the resource url right for now
-    editor_evaluation.manuscript = "00666#sa0"
     # append it
     reviews.append(editor_evaluation)
 
     # decision letter
     decision_letter = Article()
-    decision_letter.article_type = "editor-report"
+    decision_letter.article_type = "decision-letter"
     decision_letter.id = "SA1"
     dec_author = Contributor("editor", "Christian", "Rutz")
     decision_letter.contributors.append(dec_author)
@@ -84,13 +82,11 @@ def sample_data():
     decision_letter.license = license_object
     # related article doi
     related_article = Article()
-    related_article.doi = "10.7554/eLife.00666"
+    related_article.doi = base_doi
     related_article.title = "The eLife research article"
     decision_letter.related_articles = [related_article]
     # review article doi
-    decision_letter.doi = "10.7554/eLife.00666.029"
-    # a hack to get the resource url right for now
-    decision_letter.manuscript = "00666#SA1"
+    decision_letter.doi = "%s.029" % base_doi
     # append it
     reviews.append(decision_letter)
 
@@ -116,13 +112,11 @@ def sample_data():
     author_response.license = license_object
     # related article doi
     related_article = Article()
-    related_article.doi = "10.7554/eLife.00666"
+    related_article.doi = base_doi
     related_article.title = "The eLife research article"
     author_response.related_articles = [related_article]
     # review article doi
-    author_response.doi = "10.7554/eLife.00666.030"
-    # a hack to get the resource url right for now
-    author_response.manuscript = "00666#SA2"
+    author_response.doi = "%s.030" % base_doi
     # append it
     reviews.append(author_response)
 
@@ -145,13 +139,11 @@ def sample_data():
     review_article.license = license_object
     # related article doi
     related_article = Article()
-    related_article.doi = "10.7554/eLife.00666"
+    related_article.doi = base_doi
     related_article.title = "The eLife research article"
     review_article.related_articles = [related_article]
     # review article doi
-    review_article.doi = "10.7554/eLife.00666.sa3"
-    # a hack to get the resource url right for now
-    review_article.manuscript = "00666#SA3"
+    review_article.doi = "%s.sa3" % base_doi
     # append it
     reviews.append(review_article)
 
@@ -164,7 +156,17 @@ class TestGeneratePeerReview(unittest.TestCase):
         self.passes.append(
             (
                 "elife-00666.xml",
+                "10.7554/eLife.00666",
                 "elife-crossref-peer_review-00666-20170717071707.xml",
+                "elife",
+                DEFAULT_PUB_DATE,
+            )
+        )
+        self.passes.append(
+            (
+                "elife-12444-v2.xml",
+                "10.7554/eLife.12444",
+                "elife-crossref-peer_review-12444-20170717071707.xml",
                 "elife",
                 DEFAULT_PUB_DATE,
             )
@@ -173,6 +175,7 @@ class TestGeneratePeerReview(unittest.TestCase):
     def test_generate_peer_review(self):
         for (
             article_xml_file,
+            base_doi,
             crossref_xml_file,
             config_section,
             pub_date,
@@ -180,7 +183,7 @@ class TestGeneratePeerReview(unittest.TestCase):
             file_path = TEST_DATA_PATH + article_xml_file
             articles = generate.build_articles_for_crossref([file_path])
             # set some review sample data
-            articles[0].review_articles = sample_data()
+            articles[0].review_articles = sample_data(base_doi)
             crossref_config = None
             if config_section:
                 crossref_config = create_crossref_config(config_section)
