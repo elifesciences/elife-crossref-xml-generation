@@ -3,5 +3,5 @@ elifetools==0.39.0
 elifearticle==0.17.0
 GitPython==3.1.41
 configparser==3.5.0
-requests==2.31.0
+requests==2.32.2
 pytest==7.1.2
