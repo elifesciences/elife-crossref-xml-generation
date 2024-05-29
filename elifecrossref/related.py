@@ -3,7 +3,14 @@ from xml.etree.ElementTree import SubElement
 
 def do_citation_related_item(ref):
     """decide whether to create a related_item for a citation"""
-    if ref.publication_type and ref.publication_type == "data":
+    if ref.publication_type and (
+        ref.publication_type == "data"
+        or (
+            ref.publication_type == "software"
+            and ref.uri
+            and "softwareheritage.org" in ref.uri
+        )
+    ):
         return bool(ref.doi or ref.accession or ref.pmid or ref.uri)
     return False
 
