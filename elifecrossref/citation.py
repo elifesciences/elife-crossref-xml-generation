@@ -15,7 +15,11 @@ def set_citation_list(parent, poa_article, relations_program_tag, crossref_confi
         # decide whether to create a related_item for the citation
         if related.do_citation_related_item(ref):
             set_citation_related_item(relations_program_tag, ref)
-
+        # decide whether to create a related_item for the citation
+        if related.do_software_related_item(ref):
+            set_citation_related_item(
+                relations_program_tag, ref, relationship_type="isSupplementedBy"
+            )
         # continue with creating a citation tag
         set_citation(
             citation_list_tag,
