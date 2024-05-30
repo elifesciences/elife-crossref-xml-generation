@@ -1,5 +1,5 @@
 from xml.etree.ElementTree import SubElement
-from elifecrossref import related
+from elifecrossref import citation, related
 
 # order matters when choosing the identifier
 IDENTIFIER_NAMES = ["doi", "accession_id", "uri"]
@@ -16,6 +16,12 @@ def set_datasets(relations_program_tag, poa_article):
         if not related.do_dataset_related_item(dataset_object):
             continue
         set_dataset_related_item(relations_program_tag, dataset_object)
+    for ref in poa_article.ref_list:
+        # decide whether to create a related_item for the citation
+        if related.do_software_related_item(ref):
+            citation.set_citation_related_item(
+                relations_program_tag, ref, relationship_type="isSupplementedBy"
+            )
 
 
 def set_dataset_related_item(parent, dataset_object):

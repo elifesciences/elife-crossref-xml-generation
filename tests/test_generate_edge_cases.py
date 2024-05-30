@@ -234,6 +234,12 @@ class TestGenerateCrossrefDatasets(unittest.TestCase):
         article.add_dataset(dataset_4)
         article.add_dataset(dataset_5)
         article.add_dataset(dataset_6)
+        # add a software citation
+        citation = Citation()
+        citation.publication_type = "software"
+        citation.article_title = "Data citation"
+        citation.uri = "https://archive.softwareheritage.org"
+        article.ref_list = [citation]
         # expected values
         expected_xml_snippet_1 = (
             "<rel:program><rel:related_item><rel:description>Kitchen sink</rel:description>"
@@ -262,6 +268,11 @@ class TestGenerateCrossrefDatasets(unittest.TestCase):
             + 'relationship-type="isSupplementedBy">https://elifesciences.org'
             + "</rel:inter_work_relation></rel:related_item>"
         )
+        expected_xml_snippet_6 = (
+            '<rel:related_item><rel:inter_work_relation identifier-type="uri" '
+            'relationship-type="isSupplementedBy">https://archive.softwareheritage.org'
+            "</rel:inter_work_relation></rel:related_item>"
+        )
         # generate output
         c_xml = generate.build_crossref_xml([article])
         crossref_xml_string = c_xml.output_xml()
@@ -272,6 +283,7 @@ class TestGenerateCrossrefDatasets(unittest.TestCase):
         self.assertTrue(expected_xml_snippet_3 in crossref_xml_string)
         self.assertTrue(expected_xml_snippet_4 in crossref_xml_string)
         self.assertTrue(expected_xml_snippet_5 in crossref_xml_string)
+        self.assertTrue(expected_xml_snippet_6 in crossref_xml_string)
 
 
 class TestGenerateCrossrefDataCitation(unittest.TestCase):
