@@ -25,25 +25,31 @@ class TestDoCitationRelatedItem(unittest.TestCase):
         do_result = related.do_citation_related_item(citation)
         self.assertEqual(do_result, False)
 
+
+class TestDoSoftwareRelatedItem(unittest.TestCase):
+    "tests for related.do_software_related_item()"
+
     def test_do_citation_software(self):
-        "test for"
+        "test for softwareheritage citation"
         citation = Citation()
         citation.publication_type = "software"
         citation.uri = "https://archive.softwareheritage.org/foo"
-        do_result = related.do_citation_related_item(citation)
+        do_result = related.do_software_related_item(citation)
         self.assertTrue(do_result)
 
     def test_do_citation_software_no_uri(self):
+        "test if the citation has no uri"
         citation = Citation()
         citation.publication_type = "software"
-        do_result = related.do_citation_related_item(citation)
+        do_result = related.do_software_related_item(citation)
         self.assertEqual(do_result, False)
 
     def test_do_citation_software_false(self):
+        "test a non-softwareheritage citation"
         citation = Citation()
         citation.publication_type = "software"
         citation.uri = "https://example.org/"
-        do_result = related.do_citation_related_item(citation)
+        do_result = related.do_software_related_item(citation)
         self.assertEqual(do_result, False)
 
 
