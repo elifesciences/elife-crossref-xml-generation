@@ -15,7 +15,11 @@ def set_citation_list(parent, poa_article, relations_program_tag, crossref_confi
         # decide whether to create a related_item for the citation
         if related.do_citation_related_item(ref):
             set_citation_related_item(relations_program_tag, ref)
-
+        # decide whether to create a related_item for the citation
+        if related.do_software_related_item(ref):
+            set_citation_related_item(
+                relations_program_tag, ref, relationship_type="isSupplementedBy"
+            )
         # continue with creating a citation tag
         set_citation(
             citation_list_tag,
@@ -134,14 +138,14 @@ def set_elocation_id(parent, ref, crossref_schema_version):
             elocation_id_tag.text = ref.elocation_id
 
 
-def set_citation_related_item(parent, ref):
+def set_citation_related_item(parent, ref, relationship_type="references"):
     related_item_tag = SubElement(parent, "rel:related_item")
     if ref.data_title:
         related.set_related_item_description(related_item_tag, ref.data_title)
     identifier_type = None
     related_item_text = None
     related_item_type = "inter_work_relation"
-    relationship_type = "references"
+    relationship_type = relationship_type
     if ref.doi:
         identifier_type = "doi"
         related_item_text = ref.doi
