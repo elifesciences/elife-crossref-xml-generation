@@ -13,7 +13,12 @@ def set_pending_publication(parent, poa_article, crossref_config):
 
     title.set_titles(pending_publication_tag, poa_article.title, crossref_config)
 
-    dates.set_acceptance_date(pending_publication_tag, poa_article.get_date("accepted"))
+    for date_type in ["accepted", "sent-for-review"]:
+        if poa_article.get_date(date_type):
+            dates.set_acceptance_date(
+                pending_publication_tag, poa_article.get_date(date_type)
+            )
+            break
 
     doi_tag = SubElement(pending_publication_tag, "doi")
     doi_tag.text = poa_article.doi
