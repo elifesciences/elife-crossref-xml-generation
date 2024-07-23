@@ -46,11 +46,14 @@ def set_posted_content(parent, poa_article, crossref_config):
         ai_program_tag = access_indicators.set_ai_program(posted_content_tag)
         access_indicators.set_ai_license_ref(ai_program_tag, poa_article.license.href)
 
+    relations_program_tag = None
     # rel:program related_item tags for preprint versions
     if poa_article.publication_history:
-        program_tag = related.set_relations_program(posted_content_tag, None)
+        relations_program_tag = related.set_relations_program(
+            posted_content_tag, relations_program_tag
+        )
         for event in poa_article.publication_history:
-            related_item_tag = SubElement(program_tag, "rel:related_item")
+            related_item_tag = SubElement(relations_program_tag, "rel:related_item")
             related_item_type = "intra_work_relation"
             relationship_type = "isVersionOf"
             if event.doi:
@@ -79,7 +82,10 @@ def set_posted_content(parent, poa_article, crossref_config):
         doi_data_tag, poa_article, "crawler-based", crossref_config
     )
 
-    relations_program_tag = None
+    if related.do_relations_program(poa_article) is True:
+        relations_program_tag = related.set_relations_program(
+            posted_content_tag, relations_program_tag
+        )
     citation.set_citation_list(
         posted_content_tag, poa_article, relations_program_tag, crossref_config
     )
