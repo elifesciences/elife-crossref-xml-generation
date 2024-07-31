@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doi_batch xmlns="http://www.crossref.org/schema/5.3.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:fr="http://www.crossref.org/fundref.xsd" xmlns:ai="http://www.crossref.org/AccessIndicators.xsd" xmlns:ct="http://www.crossref.org/clinicaltrials.xsd" xmlns:rel="http://www.crossref.org/relations.xsd" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:jats="http://www.ncbi.nlm.nih.gov/JATS1" version="5.3.1" xsi:schemaLocation="http://www.crossref.org/schema/5.3.1 http://www.crossref.org/schemas/crossref5.3.1.xsd">
+	<head>
+		<doi_batch_id>elife-crossref-66683-20170717071707</doi_batch_id>
+		<timestamp>20170717071707</timestamp>
+		<depositor>
+			<depositor_name>eLife</depositor_name>
+			<email_address>production@elifesciences.org</email_address>
+		</depositor>
+		<registrant>eLife</registrant>
+	</head>
+	<body>
+		<journal>
+			<journal_metadata language="en">
+				<full_title>eLife</full_title>
+				<issn media_type="electronic">2050-084X</issn>
+			</journal_metadata>
+			<journal_issue>
+				<publication_date media_type="online">
+					<month>01</month>
+					<day>25</day>
+					<year>2021</year>
+				</publication_date>
+				<journal_volume>
+					<volume>10</volume>
+				</journal_volume>
+			</journal_issue>
+			<journal_article publication_type="full_text" reference_distribution_opts="any">
+				<titles>
+					<title>Expression of Concern: Salt-inducible kinase 3 regulates the mammalian circadian clock by destabilizing PER2 protein</title>
+				</titles>
+				<contributors>
+					<person_name contributor_role="author" sequence="first">
+						<given_name>Naoto</given_name>
+						<surname>Hayasaka</surname>
+						<ORCID authenticated="true">http://orcid.org/0000-0003-2844-524X</ORCID>
+					</person_name>
+					<person_name contributor_role="author" sequence="additional">
+						<given_name>Arisa</given_name>
+						<surname>Hirano</surname>
+						<ORCID authenticated="true">http://orcid.org/0000-0001-9732-6100</ORCID>
+					</person_name>
+					<person_name contributor_role="author" sequence="additional">
+						<given_name>Yuka</given_name>
+						<surname>Miyoshi</surname>
+					</person_name>
+					<person_name contributor_role="author" sequence="additional">
+						<given_name>Isao T</given_name>
+						<surname>Tokuda</surname>
+						<ORCID authenticated="true">http://orcid.org/0000-0001-6212-0022</ORCID>
+					</person_name>
+					<person_name contributor_role="author" sequence="additional">
+						<given_name>Hikari</given_name>
+						<surname>Yoshitane</surname>
+						<ORCID authenticated="true">https://orcid.org/0000-0001-6319-3354</ORCID>
+					</person_name>
+					<person_name contributor_role="author" sequence="additional">
+						<given_name>Junichiro</given_name>
+						<surname>Matsuda</surname>
+					</person_name>
+					<person_name contributor_role="author" sequence="additional">
+						<given_name>Yoshitaka</given_name>
+						<surname>Fukada</surname>
+					</person_name>
+				</contributors>
+				<publication_date media_type="online">
+					<month>01</month>
+					<day>25</day>
+					<year>2021</year>
+				</publication_date>
+				<publisher_item>
+					<item_number item_number_type="article_number">e66683</item_number>
+					<identifier id_type="doi">10.7554/eLife.66683</identifier>
+				</publisher_item>
+				<crossmark>
+					<crossmark_policy>10.7554/eLife.66683</crossmark_policy>
+					<crossmark_domains>
+						<crossmark_domain>
+							<domain>elifesciences.org</domain>
+						</crossmark_domain>
+					</crossmark_domains>
+					<crossmark_domain_exclusive>false</crossmark_domain_exclusive>
+					<updates>
+						<update date="2021-01-25" type="expression_of_concern">10.7554/eLife.24779</update>
+					</updates>
+					<custom_metadata>
+						<ai:program name="AccessIndicators">
+							<ai:license_ref applies_to="vor">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+							<ai:license_ref applies_to="am">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+							<ai:license_ref applies_to="tdm">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+						</ai:program>
+					</custom_metadata>
+				</crossmark>
+				<archive_locations>
+					<archive name="CLOCKSS"/>
+				</archive_locations>
+				<doi_data>
+					<doi>10.7554/eLife.66683</doi>
+					<resource>https://elifesciences.org/articles/66683</resource>
+					<collection property="text-mining">
+						<item>
+							<resource mime_type="application/xml">https://cdn.elifesciences.org/articles/66683/elife-66683.xml</resource>
+						</item>
+					</collection>
+					<collection property="crawler-based">
+						<item crawler="iParadigms">
+							<resource>https://elifesciences.org/articles/66683</resource>
+						</item>
+					</collection>
+				</doi_data>
+			</journal_article>
+		</journal>
+	</body>
+</doi_batch>
