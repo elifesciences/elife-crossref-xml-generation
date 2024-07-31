@@ -3,7 +3,11 @@ from elifecrossref import access_indicators, clinical_trials, dates, funding
 
 
 # article types currently supported for depositing simple updates via Crossmark
-UPDATES_ARTICLE_TYPES = ["correction", "retraction"]
+UPDATES_ARTICLE_TYPE_MAP = {
+    "correction": "correction",
+    "expression-of-concern": "expression_of_concern",
+    "retraction": "retraction",
+}
 
 
 def do_crossmark(poa_article, crossref_config):
@@ -89,7 +93,7 @@ def set_custom_metadata(parent, poa_article, crossref_config):
 def do_updates(poa_article):
     """decide if crossmark updates tag can be added"""
     return bool(
-        poa_article.article_type in UPDATES_ARTICLE_TYPES
+        poa_article.article_type in UPDATES_ARTICLE_TYPE_MAP.keys()
         and poa_article.related_articles
         and poa_article.related_articles[0].xlink_href
     )
@@ -99,10 +103,10 @@ def set_updates(parent, poa_article, crossref_config):
     default_pub_date = None
 
     updates = SubElement(parent, "updates")
-    if poa_article.article_type in UPDATES_ARTICLE_TYPES:
+    if poa_article.article_type in UPDATES_ARTICLE_TYPE_MAP.keys():
         set_update(
             updates,
-            poa_article.article_type,
+            UPDATES_ARTICLE_TYPE_MAP.get(poa_article.article_type),
             dates.iso_date_string(
                 dates.get_pub_date(poa_article, crossref_config, default_pub_date)
             ),
