@@ -47,14 +47,21 @@ def set_clinical_trials(parent, poa_article, crossref_config):
             if crossref_config.get("clinical_trials_registries")
             else None
         )
-        ai_program_tag = set_ct_program(parent)
+        ai_program_tag = None
         for clinical_trial in poa_article.clinical_trials:
+            # first populate the registry DOI
+            registry = clinical_trial.get_registry_doi(name_to_doi_map)
+            if not registry:
+                continue
+            # set the parent tag if it does not exist yet
+            if not ai_program_tag:
+                ai_program_tag = set_ct_program(parent)
+
             clinical_trial_number = SubElement(
                 ai_program_tag, "ct:clinical-trial-number"
             )
-            clinical_trial_number.set(
-                "registry", clinical_trial.get_registry_doi(name_to_doi_map)
-            )
+            clinical_trial_number.set("registry", registry)
+
             if (
                 clinical_trial.content_type
                 and clinical_trial.content_type in CONTENT_TYPE_MAP
