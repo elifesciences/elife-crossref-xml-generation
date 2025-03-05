@@ -175,3 +175,11 @@ class TestSetCustomMetadata(unittest.TestCase):
         crossmark.set_custom_metadata(self.parent, self.article, self.crossref_config)
         rough_string = ElementTree.tostring(self.parent).decode("utf-8")
         self.assertEqual(rough_string, expected)
+
+    def test_no_custom_metadata(self):
+        "test if there is no custom metadata tag content"
+        article = Article()
+        expected = "<crossmark />"
+        crossmark.set_custom_metadata(self.parent, article, self.crossref_config)
+        rough_string = ElementTree.tostring(self.parent).decode("utf-8")
+        self.assertEqual(rough_string, expected)

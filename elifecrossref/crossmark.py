@@ -88,6 +88,9 @@ def set_custom_metadata(parent, poa_article, crossref_config):
         clinical_trials.set_clinical_trials(
             custom_metadata, poa_article, crossref_config
         )
+        # remove the custom_metadata tag if it is empty
+        if not custom_metadata.findall("*"):
+            parent.remove(custom_metadata)
 
 
 def do_updates(poa_article):
