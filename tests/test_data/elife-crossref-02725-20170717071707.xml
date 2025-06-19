@@ -25,7 +25,7 @@
 					<volume>6</volume>
 				</journal_volume>
 			</journal_issue>
-			<journal_article publication_type="full_text" reference_distribution_opts="any">
+			<journal_article publication_type="full_text">
 				<titles>
 					<title>Mismatch repair deficiency endows tumors with a unique mutation signature and sensitivity to DNA double-strand breaks</title>
 				</titles>
@@ -49,7 +49,7 @@
 								<institution_place>Leuven, Belgium</institution_place>
 							</institution>
 						</affiliations>
-						<ORCID authenticated="true">http://orcid.org/0000-0002-8772-6845</ORCID>
+						<ORCID>http://orcid.org/0000-0002-8772-6845</ORCID>
 					</person_name>
 					<person_name contributor_role="author" sequence="additional">
 						<given_name>Betül Tuba</given_name>
@@ -70,7 +70,7 @@
 								<institution_place>Leuven, Belgium</institution_place>
 							</institution>
 						</affiliations>
-						<ORCID authenticated="true">http://orcid.org/0000-0001-8880-9311</ORCID>
+						<ORCID>http://orcid.org/0000-0001-8880-9311</ORCID>
 					</person_name>
 					<person_name contributor_role="author" sequence="additional">
 						<given_name>Joke</given_name>

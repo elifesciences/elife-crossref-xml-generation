@@ -25,7 +25,7 @@
 					<volume>4</volume>
 				</journal_volume>
 			</journal_issue>
-			<journal_article publication_type="full_text" reference_distribution_opts="any">
+			<journal_article publication_type="full_text">
 				<titles>
 					<title>cryo-EM structures of the E. coli replicative DNA polymerase reveal its dynamic interactions with the DNA sliding clamp, exonuclease and τ</title>
 				</titles>
@@ -39,7 +39,7 @@
 								<institution_place>Cambridge, United Kingdom</institution_place>
 							</institution>
 						</affiliations>
-						<ORCID authenticated="true">http://orcid.org/0000-0002-7941-0357</ORCID>
+						<ORCID>http://orcid.org/0000-0002-7941-0357</ORCID>
 					</person_name>
 					<person_name contributor_role="author" sequence="first">
 						<given_name>Julian</given_name>
@@ -60,7 +60,7 @@
 								<institution_place>Cambridge, United Kingdom</institution_place>
 							</institution>
 						</affiliations>
-						<ORCID authenticated="true">http://orcid.org/0000-0002-0462-6540</ORCID>
+						<ORCID>http://orcid.org/0000-0002-0462-6540</ORCID>
 					</person_name>
 					<person_name contributor_role="author" sequence="additional">
 						<given_name>Meindert H</given_name>

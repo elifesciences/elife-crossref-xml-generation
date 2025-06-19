@@ -25,7 +25,7 @@
 					<volume>5</volume>
 				</journal_volume>
 			</journal_issue>
-			<journal_article publication_type="full_text" reference_distribution_opts="any">
+			<journal_article publication_type="full_text">
 				<titles>
 					<title>A filter at the entrance of the Golgi that selects vesicles according to size and bulk lipid composition</title>
 				</titles>
@@ -79,7 +79,7 @@
 								<institution_place>Valbonne, France</institution_place>
 							</institution>
 						</affiliations>
-						<ORCID authenticated="true">http://orcid.org/0000-0003-2146-1140</ORCID>
+						<ORCID>http://orcid.org/0000-0003-2146-1140</ORCID>
 					</person_name>
 					<person_name contributor_role="author" sequence="additional">
 						<given_name>Bruno</given_name>
@@ -90,7 +90,7 @@
 								<institution_place>Valbonne, France</institution_place>
 							</institution>
 						</affiliations>
-						<ORCID authenticated="true">http://orcid.org/0000-0002-9166-8668</ORCID>
+						<ORCID>http://orcid.org/0000-0002-9166-8668</ORCID>
 					</person_name>
 				</contributors>
 				<jats:abstract>

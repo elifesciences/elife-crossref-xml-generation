@@ -25,7 +25,7 @@
 					<volume>5</volume>
 				</journal_volume>
 			</journal_issue>
-			<journal_article publication_type="full_text" reference_distribution_opts="any">
+			<journal_article publication_type="full_text">
 				<titles>
 					<title>Correction: Dosage compensation can buffer copy-number variation in wild yeast</title>
 				</titles>
@@ -53,7 +53,7 @@
 					<person_name contributor_role="author" sequence="additional">
 						<given_name>Audrey P</given_name>
 						<surname>Gasch</surname>
-						<ORCID authenticated="true">http://orcid.org/0000-0002-8182-257X</ORCID>
+						<ORCID>http://orcid.org/0000-0002-8182-257X</ORCID>
 					</person_name>
 				</contributors>
 				<publication_date media_type="online">
