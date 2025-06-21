@@ -54,6 +54,11 @@ if __name__ == "__main__":
     for xml_file, config_section, pub_date, add_comment in XML_FILES:
         generate.TMP_DIR = "tests/test_data"
         articles = generate.build_articles_for_crossref([xml_file])
+        # set contributor orcid_authenticated value
+        for article in articles:
+            for contributor in article.contributors:
+                if hasattr(contributor, "orcid_authenticated"):
+                    contributor.orcid_authenticated = True
         crossref_config = parse_raw_config(raw_config(config_section))
         generate.crossref_xml_to_disk(
             articles,
