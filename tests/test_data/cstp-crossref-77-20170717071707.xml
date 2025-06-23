@@ -89,7 +89,7 @@
 					<resource>http://theoryandpractice.citizenscienceassociation.org/articles/10.5334/cstp.77/</resource>
 				</doi_data>
 				<citation_list>
-					<citation key="B1">
+					<citation key="B1" type="journal_article">
 						<journal_title>Patient Education and Counseling</journal_title>
 						<author>Blanch</author>
 						<volume>72</volume>
@@ -98,7 +98,7 @@
 						<article_title>Medical student gender and issues of confidence</article_title>
 						<doi>10.1016/j.pec.2008.05.021</doi>
 					</citation>
-					<citation key="B2">
+					<citation key="B2" type="journal_article">
 						<journal_title>Public Understanding of Science</journal_title>
 						<author>Bonney</author>
 						<volume>25</volume>
@@ -108,7 +108,7 @@
 						<article_title>Can citizen science enhance public understanding of science?</article_title>
 						<doi>10.1177/0963662515607406</doi>
 					</citation>
-					<citation key="B3">
+					<citation key="B3" type="journal_article">
 						<journal_title>International Journal of Science Education</journal_title>
 						<author>Brossard</author>
 						<volume>27</volume>
@@ -118,23 +118,23 @@
 						<article_title>Scientific knowledge and attitude change: The impact of a citizen science project</article_title>
 						<doi>10.1080/09500690500069483</doi>
 					</citation>
-					<citation key="B4">
+					<citation key="B4" type="book">
 						<volume_title>Volunteering in the United States-2014</volume_title>
 						<author>Bureau of Labor Statistics</author>
 						<cYear>2014</cYear>
 					</citation>
-					<citation key="B5">
+					<citation key="B5" type="book">
 						<volume_title>The incidental steward: Reflections on citizen science</volume_title>
 						<author>Busch</author>
 						<cYear>2013</cYear>
 					</citation>
-					<citation key="B6">
+					<citation key="B6" type="conference_paper">
 						<author>Comber</author>
 						<cYear>2014</cYear>
 						<article_title>Semantic analysis of citizen sensing, crowdsourcing and VGI</article_title>
 						<unstructured_citation>Comber A., Schade S., See L., Mooney P., Foody G. 2014. Semantic analysis of citizen sensing, crowdsourcing and VGI. Paper presented at Connecting a Digital Europe through Location and Place. Proceedings of the AGILE 2014 International Conference on Geographic Information Science.</unstructured_citation>
 					</citation>
-					<citation key="B7">
+					<citation key="B7" type="journal_article">
 						<journal_title>Environmental Monitoring and Assessment</journal_title>
 						<author>Conrad</author>
 						<volume>176</volume>
@@ -144,7 +144,7 @@
 						<article_title>A review of citizen science and community-based environmental monitoring: Issues and opportunities</article_title>
 						<doi>10.1007/s10661-010-1582-5</doi>
 					</citation>
-					<citation key="B8">
+					<citation key="B8" type="journal_article">
 						<journal_title>Ecology and Society</journal_title>
 						<author>Cooper</author>
 						<volume>12</volume>
@@ -154,7 +154,7 @@
 						<article_title>Citizen science as a tool for conservation in residential ecosystems</article_title>
 						<doi>10.5751/ES-02197-120211</doi>
 					</citation>
-					<citation key="B9">
+					<citation key="B9" type="journal_article">
 						<journal_title>PloS One</journal_title>
 						<author>Cooper</author>
 						<volume>9</volume>
@@ -164,7 +164,7 @@
 						<article_title>The invisible prevalence of citizen science in global research: Migratory birds and climate change</article_title>
 						<doi>10.1371/journal.pone.0106508</doi>
 					</citation>
-					<citation key="B10">
+					<citation key="B10" type="journal_article">
 						<journal_title>Public Understanding of Science</journal_title>
 						<author>Crall</author>
 						<volume>22</volume>
@@ -174,7 +174,7 @@
 						<article_title>The impacts of an invasive species citizen science training program on participant attitudes, behavior, and science literacy</article_title>
 						<doi>10.1177/0963662511434894</doi>
 					</citation>
-					<citation key="B11">
+					<citation key="B11" type="journal_article">
 						<journal_title>Frontiers in Ecology and the Environment</journal_title>
 						<author>Dickinson</author>
 						<volume>10</volume>
@@ -184,7 +184,7 @@
 						<article_title>The current state of citizen science as a tool for ecological research and public engagement</article_title>
 						<doi>10.1890/110236</doi>
 					</citation>
-					<citation key="B12">
+					<citation key="B12" type="journal_article">
 						<journal_title>Annual Review of Ecology, Evolution, and Systematics</journal_title>
 						<author>Dickinson</author>
 						<volume>41</volume>
@@ -193,12 +193,12 @@
 						<article_title>Citizen science as an ecological research tool: Challenges and benefits</article_title>
 						<doi>10.1146/annurev-ecolsys-102209-144636</doi>
 					</citation>
-					<citation key="B13">
+					<citation key="B13" type="book">
 						<volume_title>Internet, mail, and mixed-mode surveys</volume_title>
 						<author>Dillman</author>
 						<cYear>2008</cYear>
 					</citation>
-					<citation key="B14">
+					<citation key="B14" type="journal_article">
 						<journal_title>Conservation Biology</journal_title>
 						<author>Evans</author>
 						<volume>19</volume>
@@ -208,7 +208,7 @@
 						<article_title>The Neighborhood Nestwatch Program: Participant outcomes of a citizen-science ecological research project</article_title>
 						<doi>10.1111/j.1523-1739.2005.00s01.x</doi>
 					</citation>
-					<citation key="B15">
+					<citation key="B15" type="journal_article">
 						<journal_title>Environmental Conservation</journal_title>
 						<author>Finn</author>
 						<volume>37</volume>
@@ -218,7 +218,7 @@
 						<article_title>Assessing the quality of seagrass data collected by community volunteers in Moreton Bay Marine Park, Australia</article_title>
 						<doi>10.1017/S0376892910000251</doi>
 					</citation>
-					<citation key="B16">
+					<citation key="B16" type="journal_article">
 						<journal_title>PloS ONE</journal_title>
 						<author>Follett</author>
 						<volume>10</volume>
@@ -227,7 +227,7 @@
 						<article_title>An analysis of citizen science based research: Usage and publication patterns</article_title>
 						<doi>10.1371/journal.pone.0143687</doi>
 					</citation>
-					<citation key="B17">
+					<citation key="B17" type="journal_article">
 						<journal_title>ACM SIGCSE Bulletin</journal_title>
 						<author>Irani</author>
 						<volume>36</volume>
@@ -237,7 +237,7 @@
 						<article_title>Understanding gender and confidence in CS course culture</article_title>
 						<doi>10.1145/1028174.971371</doi>
 					</citation>
-					<citation key="B18">
+					<citation key="B18" type="journal_article">
 						<journal_title>International Journal of Science Education</journal_title>
 						<author>Jenkins</author>
 						<volume>21</volume>
@@ -247,7 +247,7 @@
 						<article_title>School science, citizenship and the public understanding of science</article_title>
 						<doi>10.1080/095006999290363</doi>
 					</citation>
-					<citation key="B19">
+					<citation key="B19" type="journal_article">
 						<journal_title>Conservation Biology</journal_title>
 						<author>Jordan</author>
 						<volume>25</volume>
@@ -257,7 +257,7 @@
 						<article_title>Knowledge gain and behavioral change in citizen-science programs</article_title>
 						<doi>10.1111/j.1523-1739.2011.01745.x</doi>
 					</citation>
-					<citation key="B20">
+					<citation key="B20" type="journal_article">
 						<journal_title>Pacific Conservation Biology</journal_title>
 						<author>Koss</author>
 						<volume>15</volume>
@@ -266,7 +266,7 @@
 						<article_title>An evaluation of Sea Search as a citizen science programme in Marine Protected Areas</article_title>
 						<doi>10.1071/PC090116</doi>
 					</citation>
-					<citation key="B21">
+					<citation key="B21" type="journal_article">
 						<journal_title>Conservation Biology</journal_title>
 						<author>Kremen</author>
 						<volume>25</volume>
@@ -275,7 +275,7 @@
 						<article_title>Evaluating the quality of citizen-scientist data on pollinator communities</article_title>
 						<doi>10.1111/j.1523-1739.2011.01657.x</doi>
 					</citation>
-					<citation key="B22">
+					<citation key="B22" type="journal_article">
 						<journal_title>Biological Conservation</journal_title>
 						<author>Lewandowski</author>
 						<volume>208</volume>
@@ -284,7 +284,7 @@
 						<article_title>Butterfly citizen scientists in the United States increase their engagement in conservation</article_title>
 						<doi>10.1016/j.biocon.2015.07.029</doi>
 					</citation>
-					<citation key="B23">
+					<citation key="B23" type="journal_article">
 						<journal_title>Conservation Biology</journal_title>
 						<author>Lewandowski</author>
 						<volume>29</volume>
@@ -294,7 +294,7 @@
 						<article_title>Influence of volunteer and project characteristics on data quality of biological surveys</article_title>
 						<doi>10.1111/cobi.12481</doi>
 					</citation>
-					<citation key="B24">
+					<citation key="B24" type="journal_article">
 						<journal_title>BioScience</journal_title>
 						<author>Martin</author>
 						<volume>66</volume>
@@ -304,7 +304,7 @@
 						<article_title>Public interest in marine citizen science: Is there potential for growth?</article_title>
 						<doi>10.1093/biosci/biw070</doi>
 					</citation>
-					<citation key="B25">
+					<citation key="B25" type="journal_article">
 						<journal_title>Issues in Ecology</journal_title>
 						<author>McKinley</author>
 						<volume>19</volume>
@@ -317,12 +317,12 @@
 						<article_title>Minnesota state fair website</article_title>
 						<unstructured_citation>Minnesota State Fair. 2015. Minnesota state fair website. http://www.mnstatefair.org/.</unstructured_citation>
 					</citation>
-					<citation key="B27">
+					<citation key="B27" type="book">
 						<volume_title>Science and engineering indicators 2012 (NSB 12-01)</volume_title>
 						<author>National Science Board</author>
 						<cYear>2012</cYear>
 					</citation>
-					<citation key="B28">
+					<citation key="B28" type="journal_article">
 						<journal_title>Biological Conservation</journal_title>
 						<author>Newman</author>
 						<volume>208</volume>
@@ -331,7 +331,7 @@
 						<article_title>Leveraging the power of place in citizen science for effective conservation decision making</article_title>
 						<doi>10.1016/j.biocon.2016.07.019</doi>
 					</citation>
-					<citation key="B29">
+					<citation key="B29" type="journal_article">
 						<journal_title>Science and Public Policy</journal_title>
 						<author>Rayner</author>
 						<volume>30</volume>
@@ -341,7 +341,7 @@
 						<article_title>Democracy in the age of assessment: Reflections on the roles of expertise and democracy in public-sector decision making</article_title>
 						<doi>10.3152/147154303781780533</doi>
 					</citation>
-					<citation key="B30">
+					<citation key="B30" type="journal_article">
 						<journal_title>Public Understanding of Science</journal_title>
 						<author>Riesch</author>
 						<volume>23</volume>
@@ -351,12 +351,12 @@
 						<article_title>Citizen science as seen by scientists: Methodological, epistemological and ethical dimensions</article_title>
 						<doi>10.1177/0963662513497324</doi>
 					</citation>
-					<citation key="B31">
+					<citation key="B31" type="book">
 						<volume_title>Diary of a citizen scientist: Chasing tiger beetles and other new ways of engaging the world</volume_title>
 						<author>Russell</author>
 						<cYear>2014</cYear>
 					</citation>
-					<citation key="B32">
+					<citation key="B32" type="journal_article">
 						<journal_title>Environmental management</journal_title>
 						<author>Savan</author>
 						<volume>31</volume>
@@ -366,7 +366,7 @@
 						<article_title>Volunteer environmental monitoring and the role of the universities: The case of Citizens’ Environment Watch</article_title>
 						<doi>10.1007/s00267-002-2897-y</doi>
 					</citation>
-					<citation key="B33">
+					<citation key="B33" type="journal_article">
 						<journal_title>Biotropica</journal_title>
 						<author>Shanley</author>
 						<volume>41</volume>
@@ -376,7 +376,7 @@
 						<article_title>Out of the loop: Why research rarely reaches policy makers and the public and what can be done</article_title>
 						<doi>10.1111/j.1744-7429.2009.00561.x</doi>
 					</citation>
-					<citation key="B34">
+					<citation key="B34" type="journal_article">
 						<journal_title>Ecology and Society</journal_title>
 						<author>Shirk</author>
 						<volume>17</volume>
@@ -386,7 +386,7 @@
 						<article_title>Public participation in scientific research: A framework for deliberate design</article_title>
 						<doi>10.5751/ES-04705-170229</doi>
 					</citation>
-					<citation key="B35">
+					<citation key="B35" type="journal_article">
 						<journal_title>Studies in Science Education</journal_title>
 						<author>Stocklmayer</author>
 						<volume>46</volume>
@@ -396,7 +396,7 @@
 						<article_title>The roles of the formal and informal sectors in the provision of effective science education</article_title>
 						<doi>10.1080/03057260903562284</doi>
 					</citation>
-					<citation key="B36">
+					<citation key="B36" type="book">
 						<volume_title>Overview of race and hispanic origin: 2010</volume_title>
 						<author>U.S. Census Bureau</author>
 						<cYear>2011</cYear>
