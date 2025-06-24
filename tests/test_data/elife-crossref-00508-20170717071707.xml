@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<doi_batch xmlns="http://www.crossref.org/schema/5.3.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:fr="http://www.crossref.org/fundref.xsd" xmlns:ai="http://www.crossref.org/AccessIndicators.xsd" xmlns:ct="http://www.crossref.org/clinicaltrials.xsd" xmlns:rel="http://www.crossref.org/relations.xsd" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:jats="http://www.ncbi.nlm.nih.gov/JATS1" version="5.3.1" xsi:schemaLocation="http://www.crossref.org/schema/5.3.1 http://www.crossref.org/schemas/crossref5.3.1.xsd">
+<doi_batch xmlns="http://www.crossref.org/schema/5.4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:fr="http://www.crossref.org/fundref.xsd" xmlns:ai="http://www.crossref.org/AccessIndicators.xsd" xmlns:ct="http://www.crossref.org/clinicaltrials.xsd" xmlns:rel="http://www.crossref.org/relations.xsd" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:jats="http://www.ncbi.nlm.nih.gov/JATS1" version="5.4.0" xsi:schemaLocation="http://www.crossref.org/schema/5.4.0 http://www.crossref.org/schemas/crossref5.4.0.xsd">
 	<head>
 		<doi_batch_id>elife-crossref-00508-20170717071707</doi_batch_id>
 		<timestamp>20170717071707</timestamp>
@@ -25,7 +25,7 @@
 					<volume>2</volume>
 				</journal_volume>
 			</journal_issue>
-			<journal_article publication_type="full_text" reference_distribution_opts="any">
+			<journal_article publication_type="full_text">
 				<titles>
 					<title>Imaging-based chemical screening reveals activity-dependent neural differentiation of pluripotent stem cells</title>
 				</titles>
@@ -361,7 +361,7 @@
 					</collection>
 				</doi_data>
 				<citation_list>
-					<citation key="bib1">
+					<citation key="bib1" type="journal_article">
 						<journal_title>Biochem J</journal_title>
 						<author>Agrawal</author>
 						<volume>122</volume>
@@ -369,7 +369,7 @@
 						<cYear>1971</cYear>
 						<article_title>Subcellular distribution of taurine and cysteinesulphinate decarboxylase in developing rat brain</article_title>
 					</citation>
-					<citation key="bib2">
+					<citation key="bib2" type="journal_article">
 						<journal_title>Nat Rev Neurosci</journal_title>
 						<author>Alvarez-Buylla</author>
 						<volume>2</volume>
@@ -378,7 +378,7 @@
 						<article_title>A unified hypothesis on the lineage of neural stem cells</article_title>
 						<doi>10.1038/35067582</doi>
 					</citation>
-					<citation key="bib3">
+					<citation key="bib3" type="journal_article">
 						<journal_title>Cell</journal_title>
 						<author>Andersson</author>
 						<volume>124</volume>
@@ -387,7 +387,7 @@
 						<article_title>Identification of intrinsic determinants of midbrain dopamine neurons</article_title>
 						<doi>10.1016/j.cell.2005.10.037</doi>
 					</citation>
-					<citation key="bib4">
+					<citation key="bib4" type="journal_article">
 						<journal_title>Proc Natl Acad Sci USA</journal_title>
 						<author>Arrasate</author>
 						<volume>102</volume>
@@ -396,7 +396,7 @@
 						<article_title>Automated microscope system for determining factors that predict neuronal fate</article_title>
 						<doi>10.1073/pnas.0409777102</doi>
 					</citation>
-					<citation key="bib5">
+					<citation key="bib5" type="journal_article">
 						<journal_title>Nature</journal_title>
 						<author>Arrasate</author>
 						<volume>431</volume>
@@ -405,7 +405,7 @@
 						<article_title>Inclusion body formation reduces levels of mutant huntingtin and the risk of neuronal death</article_title>
 						<doi>10.1038/nature02998</doi>
 					</citation>
-					<citation key="bib6">
+					<citation key="bib6" type="journal_article">
 						<journal_title>Physiol Rev</journal_title>
 						<author>Ben-Ari</author>
 						<volume>87</volume>
@@ -414,7 +414,7 @@
 						<article_title>GABA: a pioneer transmitter that excites immature neurons and generates primitive oscillations</article_title>
 						<doi>10.1152/physrev.00017.2006</doi>
 					</citation>
-					<citation key="bib7">
+					<citation key="bib7" type="journal_article">
 						<journal_title>Nat Rev Neurosci</journal_title>
 						<author>Bertrand</author>
 						<volume>3</volume>
@@ -423,7 +423,7 @@
 						<article_title>Proneural genes and the specification of neural cell types</article_title>
 						<doi>10.1038/nrn874</doi>
 					</citation>
-					<citation key="bib8">
+					<citation key="bib8" type="journal_article">
 						<journal_title>Vet Parasitol</journal_title>
 						<author>Bishop</author>
 						<volume>91</volume>
@@ -432,7 +432,7 @@
 						<article_title>Selamectin: a novel broad-spectrum endectocide for dogs and cats</article_title>
 						<doi>10.1016/S0304-4017(00)00289-2</doi>
 					</citation>
-					<citation key="bib9">
+					<citation key="bib9" type="journal_article">
 						<journal_title>Arch Insect Biochem Physiol</journal_title>
 						<author>Bloomquist</author>
 						<volume>54</volume>
@@ -441,7 +441,7 @@
 						<article_title>Chloride channels as tools for developing selective insecticides</article_title>
 						<doi>10.1002/arch.10112</doi>
 					</citation>
-					<citation key="bib10">
+					<citation key="bib10" type="journal_article">
 						<journal_title>Cell Stem Cell</journal_title>
 						<author>Borowiak</author>
 						<volume>4</volume>
@@ -450,7 +450,7 @@
 						<article_title>Small molecules efficiently direct endodermal differentiation of mouse and human embryonic stem cells</article_title>
 						<doi>10.1016/j.stem.2009.01.014</doi>
 					</citation>
-					<citation key="bib11">
+					<citation key="bib11" type="journal_article">
 						<journal_title>Nat Biotechnol</journal_title>
 						<author>Chambers</author>
 						<volume>27</volume>
@@ -459,7 +459,7 @@
 						<article_title>Highly efficient neural conversion of human ES and iPS cells by dual inhibition of SMAD signaling</article_title>
 						<doi>10.1038/nbt.1529</doi>
 					</citation>
-					<citation key="bib12">
+					<citation key="bib12" type="journal_article">
 						<journal_title>J Pharmacol Exp Ther</journal_title>
 						<author>Dawson</author>
 						<volume>295</volume>
@@ -467,7 +467,7 @@
 						<cYear>2000</cYear>
 						<article_title>Anticonvulsant and adverse effects of avermectin analogs in mice are mediated through the gamma-aminobutyric acid(A) receptor</article_title>
 					</citation>
-					<citation key="bib13">
+					<citation key="bib13" type="journal_article">
 						<journal_title>Neuron</journal_title>
 						<author>Demarque</author>
 						<volume>67</volume>
@@ -476,7 +476,7 @@
 						<article_title>Activity-dependent expression of Lmx1b regulates specification of serotonergic neurons modulating swimming behavior</article_title>
 						<doi>10.1016/j.neuron.2010.06.006</doi>
 					</citation>
-					<citation key="bib14">
+					<citation key="bib14" type="journal_article">
 						<journal_title>Cell Stem Cell</journal_title>
 						<author>Desbordes</author>
 						<volume>2</volume>
@@ -485,7 +485,7 @@
 						<article_title>High-throughput screening assay for the identification of compounds regulating self-renewal and differentiation in human embryonic stem cells</article_title>
 						<doi>10.1016/j.stem.2008.05.010</doi>
 					</citation>
-					<citation key="bib15">
+					<citation key="bib15" type="journal_article">
 						<journal_title>Proc Natl Acad Sci USA</journal_title>
 						<author>Ding</author>
 						<volume>100</volume>
@@ -494,7 +494,7 @@
 						<article_title>Synthetic small molecules that control stem cell fate</article_title>
 						<doi>10.1073/pnas.0732087100</doi>
 					</citation>
-					<citation key="bib16">
+					<citation key="bib16" type="journal_article">
 						<journal_title>Genes Dev</journal_title>
 						<author>Elkabetz</author>
 						<volume>22</volume>
@@ -503,7 +503,7 @@
 						<article_title>Human ES cell-derived neural rosettes reveal a functionally distinct early neural stem cell stage</article_title>
 						<doi>10.1101/gad.1616208</doi>
 					</citation>
-					<citation key="bib17">
+					<citation key="bib17" type="journal_article">
 						<journal_title>Nat Rev Neurosci</journal_title>
 						<author>Farrant</author>
 						<volume>6</volume>
@@ -512,7 +512,7 @@
 						<article_title>Variations on an inhibitory theme: phasic and tonic activation of GABAA receptors</article_title>
 						<doi>10.1038/nrn1625</doi>
 					</citation>
-					<citation key="bib18">
+					<citation key="bib18" type="journal_article">
 						<journal_title>Neuron</journal_title>
 						<author>Flint</author>
 						<volume>20</volume>
@@ -521,7 +521,7 @@
 						<article_title>Nonsynaptic glycine receptor activation during early neocortical development</article_title>
 						<doi>10.1016/S0896-6273(00)80433-X</doi>
 					</citation>
-					<citation key="bib19">
+					<citation key="bib19" type="journal_article">
 						<journal_title>Curr Opin Neurobiol</journal_title>
 						<author>Gaspard</author>
 						<volume>20</volume>
@@ -530,7 +530,7 @@
 						<article_title>Mechanisms of neural specification from embryonic stem cells</article_title>
 						<doi>10.1016/j.conb.2009.12.001</doi>
 					</citation>
-					<citation key="bib20">
+					<citation key="bib20" type="journal_article">
 						<journal_title>Trends Neurosci</journal_title>
 						<author>Ge</author>
 						<volume>30</volume>
@@ -539,7 +539,7 @@
 						<article_title>GABA sets the tempo for activity-dependent adult neurogenesis</article_title>
 						<doi>10.1016/j.tins.2006.11.001</doi>
 					</citation>
-					<citation key="bib21">
+					<citation key="bib21" type="journal_article">
 						<journal_title>Drugs</journal_title>
 						<author>Goa</author>
 						<volume>42</volume>
@@ -548,7 +548,7 @@
 						<article_title>Ivermectin. A review of its antifilarial activity, pharmacokinetic properties and clinical efficacy in onchocerciasis</article_title>
 						<doi>10.2165/00003495-199142040-00007</doi>
 					</citation>
-					<citation key="bib22">
+					<citation key="bib22" type="journal_article">
 						<journal_title>J Pharmacol Exp Ther</journal_title>
 						<author>Huang</author>
 						<volume>281</volume>
@@ -556,7 +556,7 @@
 						<cYear>1997</cYear>
 						<article_title>Avermectin B1a binds to high- and low-affinity sites with dual effects on the gamma-aminobutyric acid-gated chloride channel of cultured cerebellar granule neurons</article_title>
 					</citation>
-					<citation key="bib23">
+					<citation key="bib23" type="journal_article">
 						<journal_title>PLOS ONE</journal_title>
 						<author>Jang</author>
 						<volume>5</volume>
@@ -565,7 +565,7 @@
 						<article_title>Deoxygedunin, a natural product with potent neurotrophic activity in mice</article_title>
 						<doi>10.1371/journal.pone.0011528</doi>
 					</citation>
-					<citation key="bib24">
+					<citation key="bib24" type="journal_article">
 						<journal_title>Proc Natl Acad Sci USA</journal_title>
 						<author>Jang</author>
 						<volume>107</volume>
@@ -574,7 +574,7 @@
 						<article_title>A selective TrkB agonist with potent neurotrophic activities by 7,8-dihydroxyflavone</article_title>
 						<doi>10.1073/pnas.0913572107</doi>
 					</citation>
-					<citation key="bib25">
+					<citation key="bib25" type="journal_article">
 						<journal_title>Am J Stem Cells</journal_title>
 						<author>Kreitzer</author>
 						<volume>2</volume>
@@ -582,7 +582,7 @@
 						<cYear>2013</cYear>
 						<article_title>A robust method to derive functional neural crest cells from human pluripotent stem cells</article_title>
 					</citation>
-					<citation key="bib26">
+					<citation key="bib26" type="journal_article">
 						<journal_title>Nat Biotech</journal_title>
 						<author>Lee</author>
 						<volume>18</volume>
@@ -591,7 +591,7 @@
 						<article_title>Efficient generation of midbrain and hindbrain neurons from mouse embryonic stem cells</article_title>
 						<doi>10.1038/76536</doi>
 					</citation>
-					<citation key="bib27">
+					<citation key="bib27" type="journal_article">
 						<journal_title>Nat Neurosci</journal_title>
 						<author>Liu</author>
 						<volume>8</volume>
@@ -600,7 +600,7 @@
 						<article_title>Nonsynaptic GABA signaling in postnatal subventricular zone controls proliferation of GFAP-expressing progenitors</article_title>
 						<doi>10.1038/nn1522</doi>
 					</citation>
-					<citation key="bib28">
+					<citation key="bib28" type="journal_article">
 						<journal_title>Neuron</journal_title>
 						<author>LoTurco</author>
 						<volume>15</volume>
@@ -609,7 +609,7 @@
 						<article_title>GABA and glutamate depolarize cortical progenitor cells and inhibit DNA synthesis</article_title>
 						<doi>10.1016/0896-6273(95)90008-X</doi>
 					</citation>
-					<citation key="bib29">
+					<citation key="bib29" type="journal_article">
 						<journal_title>Nat Neurosci</journal_title>
 						<author>Marek</author>
 						<volume>13</volume>
@@ -618,7 +618,7 @@
 						<article_title>cJun integrates calcium activity and tlx3 expression to regulate neurotransmitter specification</article_title>
 						<doi>10.1038/nn.2582</doi>
 					</citation>
-					<citation key="bib30">
+					<citation key="bib30" type="journal_article">
 						<journal_title>Proc Natl Acad Sci USA</journal_title>
 						<author>Martinat</author>
 						<volume>103</volume>
@@ -627,7 +627,7 @@
 						<article_title>Cooperative transcription activation by Nurr1 and Pitx3 induces embryonic stem cell maturation to the midbrain dopamine neuron phenotype</article_title>
 						<doi>10.1073/pnas.0511153103</doi>
 					</citation>
-					<citation key="bib31">
+					<citation key="bib31" type="journal_article">
 						<journal_title>Results Probl Cell Differ</journal_title>
 						<author>Mehler</author>
 						<volume>39</volume>
@@ -636,7 +636,7 @@
 						<article_title>Mechanisms regulating lineage diversity during mammalian cerebral cortical neurogenesis and gliogenesis</article_title>
 						<doi>10.1007/978-3-540-46006-0_2</doi>
 					</citation>
-					<citation key="bib32">
+					<citation key="bib32" type="journal_article">
 						<journal_title>Curr Opin Neurobiol</journal_title>
 						<author>Okano</author>
 						<volume>19</volume>
@@ -645,7 +645,7 @@
 						<article_title>Cell types to order: temporal specification of CNS stem cells</article_title>
 						<doi>10.1016/j.conb.2009.04.003</doi>
 					</citation>
-					<citation key="bib33">
+					<citation key="bib33" type="journal_article">
 						<journal_title>Nat Rev Neurosci</journal_title>
 						<author>Owens</author>
 						<volume>3</volume>
@@ -654,7 +654,7 @@
 						<article_title>Is there more to GABA than synaptic inhibition?</article_title>
 						<doi>10.1038/nrn919</doi>
 					</citation>
-					<citation key="bib34">
+					<citation key="bib34" type="journal_article">
 						<journal_title>J Neurosci Res</journal_title>
 						<author>Palackal</author>
 						<volume>15</volume>
@@ -663,7 +663,7 @@
 						<article_title>Abnormal visual cortex development in the kitten associated with maternal dietary taurine deprivation</article_title>
 						<doi>10.1002/jnr.490150212</doi>
 					</citation>
-					<citation key="bib35">
+					<citation key="bib35" type="journal_article">
 						<journal_title>Dev Biol</journal_title>
 						<author>Park</author>
 						<volume>227</volume>
@@ -672,7 +672,7 @@
 						<article_title>Analysis of upstream elements in the HuC promoter leads to the establishment of transgenic zebrafish with fluorescent neurons</article_title>
 						<doi>10.1006/dbio.2000.9898</doi>
 					</citation>
-					<citation key="bib36">
+					<citation key="bib36" type="journal_article">
 						<journal_title>J Neurosci</journal_title>
 						<author>Pong</author>
 						<volume>2</volume>
@@ -680,7 +680,7 @@
 						<cYear>1982</cYear>
 						<article_title>A comparative study of avermectin B1a and other modulators of the gamma-aminobutyric acid receptor. chloride ion channel complex</article_title>
 					</citation>
-					<citation key="bib37">
+					<citation key="bib37" type="journal_article">
 						<journal_title>Chem Biol</journal_title>
 						<author>Saxe</author>
 						<volume>14</volume>
@@ -689,7 +689,7 @@
 						<article_title>A phenotypic small-molecule screen identifies an orphan ligand-receptor pair that regulates neural stem cell differentiation</article_title>
 						<doi>10.1016/j.chembiol.2007.07.016</doi>
 					</citation>
-					<citation key="bib38">
+					<citation key="bib38" type="journal_article">
 						<journal_title>Nat Methods</journal_title>
 						<author>Schindelin</author>
 						<volume>9</volume>
@@ -698,7 +698,7 @@
 						<article_title>Fiji: an open-source platform for biological-image analysis</article_title>
 						<doi>10.1038/nmeth.2019</doi>
 					</citation>
-					<citation key="bib39">
+					<citation key="bib39" type="journal_article">
 						<journal_title>FASEB J</journal_title>
 						<author>Schwirtlich</author>
 						<volume>24</volume>
@@ -707,7 +707,7 @@
 						<article_title>GABAA and GABAB receptors of distinct properties affect oppositely the proliferation of mouse embryonic stem cells through synergistic elevation of intracellular Ca2+</article_title>
 						<doi>10.1096/fj.09-143586</doi>
 					</citation>
-					<citation key="bib40">
+					<citation key="bib40" type="journal_article">
 						<journal_title>J Biol Chem</journal_title>
 						<author>Shan</author>
 						<volume>276</volume>
@@ -716,7 +716,7 @@
 						<article_title>Ivermectin, an unconventional agonist of the glycine receptor chloride channel</article_title>
 						<doi>10.1074/jbc.M011264200</doi>
 					</citation>
-					<citation key="bib41">
+					<citation key="bib41" type="journal_article">
 						<journal_title>Methods Enzymol</journal_title>
 						<author>Sharma</author>
 						<volume>506</volume>
@@ -725,7 +725,7 @@
 						<article_title>High-throughput screening in primary neurons</article_title>
 						<doi>10.1016/B978-0-12-391856-7.00041-X</doi>
 					</citation>
-					<citation key="bib42">
+					<citation key="bib42" type="journal_article">
 						<journal_title>Annu Rev Cell Dev Biol</journal_title>
 						<author>Smith</author>
 						<volume>17</volume>
@@ -734,7 +734,7 @@
 						<article_title>Embryo-derived stem cells: of mice and men</article_title>
 						<doi>10.1146/annurev.cellbio.17.1.435</doi>
 					</citation>
-					<citation key="bib43">
+					<citation key="bib43" type="journal_article">
 						<journal_title>Nature</journal_title>
 						<author>Song</author>
 						<volume>489</volume>
@@ -743,7 +743,7 @@
 						<article_title>Neuronal circuitry mechanism regulating adult quiescent neural stem-cell fate decision</article_title>
 						<doi>10.1038/nature11306</doi>
 					</citation>
-					<citation key="bib44">
+					<citation key="bib44" type="journal_article">
 						<journal_title>Nature</journal_title>
 						<author>Spitzer</author>
 						<volume>444</volume>
@@ -752,7 +752,7 @@
 						<article_title>Electrical activity in early neuronal development</article_title>
 						<doi>10.1038/nature05300</doi>
 					</citation>
-					<citation key="bib45">
+					<citation key="bib45" type="journal_article">
 						<journal_title>Nat Rev Neurosci</journal_title>
 						<author>Spitzer</author>
 						<volume>13</volume>
@@ -761,7 +761,7 @@
 						<article_title>Activity-dependent neurotransmitter respecification</article_title>
 						<doi>10.1038/nrn3154</doi>
 					</citation>
-					<citation key="bib46">
+					<citation key="bib46" type="journal_article">
 						<journal_title>J Neurobiol</journal_title>
 						<author>Stewart</author>
 						<volume>50</volume>
@@ -770,7 +770,7 @@
 						<article_title>Neural progenitor cells of the neonatal rat anterior subventricular zone express functional GABA(A) receptors</article_title>
 						<doi>10.1002/neu.10038</doi>
 					</citation>
-					<citation key="bib47">
+					<citation key="bib47" type="journal_article">
 						<journal_title>Nature</journal_title>
 						<author>Stockwell</author>
 						<volume>432</volume>
@@ -779,7 +779,7 @@
 						<article_title>Exploring biology with small organic molecules</article_title>
 						<doi>10.1038/nature03196</doi>
 					</citation>
-					<citation key="bib48">
+					<citation key="bib48" type="journal_article">
 						<journal_title>Science</journal_title>
 						<author>Thomson</author>
 						<volume>282</volume>
@@ -788,7 +788,7 @@
 						<article_title>Embryonic stem cell lines derived from human blastocysts</article_title>
 						<doi>10.1126/science.282.5391.1145</doi>
 					</citation>
-					<citation key="bib49">
+					<citation key="bib49" type="journal_article">
 						<journal_title>Neuron</journal_title>
 						<author>Tozuka</author>
 						<volume>47</volume>
@@ -797,7 +797,7 @@
 						<article_title>GABAergic excitation promotes neuronal differentiation in adult hippocampal progenitor cells</article_title>
 						<doi>10.1016/j.neuron.2005.08.023</doi>
 					</citation>
-					<citation key="bib50">
+					<citation key="bib50" type="journal_article">
 						<journal_title>J Mol Evol</journal_title>
 						<author>Vassilatis</author>
 						<volume>44</volume>
@@ -806,7 +806,7 @@
 						<article_title>Evolutionary relationship of the ligand-gated ion channels and the avermectin-sensitive, glutamate-gated chloride channels</article_title>
 						<doi>10.1007/PL00006174</doi>
 					</citation>
-					<citation key="bib51">
+					<citation key="bib51" type="journal_article">
 						<journal_title>J Physiol</journal_title>
 						<author>Wang</author>
 						<volume>550</volume>
@@ -815,7 +815,7 @@
 						<article_title>GABA depolarizes neuronal progenitors of the postnatal subventricular zone via GABAA receptor activation</article_title>
 						<doi>10.1113/jphysiol.2003.042572</doi>
 					</citation>
-					<citation key="bib52">
+					<citation key="bib52" type="journal_article">
 						<journal_title>Cell</journal_title>
 						<author>Wichterle</author>
 						<volume>10</volume>
@@ -824,7 +824,7 @@
 						<article_title>Directed differentiation of embryonic stem cells into motor neurons</article_title>
 						<doi>10.1016/S0092-8674(02)00835-8</doi>
 					</citation>
-					<citation key="bib53">
+					<citation key="bib53" type="journal_article">
 						<journal_title>Stem Cells</journal_title>
 						<author>Yamada</author>
 						<volume>25</volume>
@@ -833,7 +833,7 @@
 						<article_title>Electrical stimulation modulates fate determination of differentiating embryonic stem cells</article_title>
 						<doi>10.1634/stemcells.2006-0011</doi>
 					</citation>
-					<citation key="bib54">
+					<citation key="bib54" type="journal_article">
 						<journal_title>Methods Enzymol</journal_title>
 						<author>Ying</author>
 						<volume>365</volume>
@@ -842,7 +842,7 @@
 						<article_title>Defined conditions for neural commitment and differentiation</article_title>
 						<doi>10.1016/S0076-6879(03)65023-8</doi>
 					</citation>
-					<citation key="bib55">
+					<citation key="bib55" type="journal_article">
 						<journal_title>Nat Biotechnol</journal_title>
 						<author>Ying</author>
 						<volume>21</volume>
@@ -851,7 +851,7 @@
 						<article_title>Conversion of embryonic stem cells into neuroectodermal precursors in adherent monoculture</article_title>
 						<doi>10.1038/nbt780</doi>
 					</citation>
-					<citation key="bib56">
+					<citation key="bib56" type="journal_article">
 						<journal_title>Stem Cells</journal_title>
 						<author>Zhou</author>
 						<volume>28</volume>
@@ -860,7 +860,7 @@
 						<article_title>High-efficiency induction of neural conversion in human ESCs and human induced pluripotent stem cells with a single chemical inhibitor of transforming growth factor beta superfamily receptors</article_title>
 						<doi>10.1002/stem.504</doi>
 					</citation>
-					<citation key="bib57">
+					<citation key="bib57" type="journal_article">
 						<journal_title>Nat Rev Drug Discovery</journal_title>
 						<author>Zon</author>
 						<volume>4</volume>

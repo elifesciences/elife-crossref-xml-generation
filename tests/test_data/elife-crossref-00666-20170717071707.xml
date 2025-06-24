@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<doi_batch xmlns="http://www.crossref.org/schema/5.3.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:fr="http://www.crossref.org/fundref.xsd" xmlns:ai="http://www.crossref.org/AccessIndicators.xsd" xmlns:ct="http://www.crossref.org/clinicaltrials.xsd" xmlns:rel="http://www.crossref.org/relations.xsd" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:jats="http://www.ncbi.nlm.nih.gov/JATS1" version="5.3.1" xsi:schemaLocation="http://www.crossref.org/schema/5.3.1 http://www.crossref.org/schemas/crossref5.3.1.xsd">
+<doi_batch xmlns="http://www.crossref.org/schema/5.4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:fr="http://www.crossref.org/fundref.xsd" xmlns:ai="http://www.crossref.org/AccessIndicators.xsd" xmlns:ct="http://www.crossref.org/clinicaltrials.xsd" xmlns:rel="http://www.crossref.org/relations.xsd" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:jats="http://www.ncbi.nlm.nih.gov/JATS1" version="5.4.0" xsi:schemaLocation="http://www.crossref.org/schema/5.4.0 http://www.crossref.org/schemas/crossref5.4.0.xsd">
 	<head>
 		<doi_batch_id>elife-crossref-00666-20170717071707</doi_batch_id>
 		<timestamp>20170717071707</timestamp>
@@ -25,7 +25,7 @@
 					<volume>5</volume>
 				</journal_volume>
 			</journal_issue>
-			<journal_article publication_type="full_text" reference_distribution_opts="any">
+			<journal_article publication_type="full_text">
 				<titles>
 					<title>The eLife research article</title>
 				</titles>
@@ -238,7 +238,7 @@
 					</collection>
 				</doi_data>
 				<citation_list>
-					<citation key="bib1">
+					<citation key="bib1" type="journal_article">
 						<journal_title>The Journal of Cell Biology</journal_title>
 						<author>Aivazian</author>
 						<volume>173</volume>
@@ -247,14 +247,14 @@
 						<article_title>TIP47 is a key effector for Rab9 localization</article_title>
 						<doi>10.1083/jcb.200510010</doi>
 					</citation>
-					<citation key="bib2">
+					<citation key="bib2" type="software">
 						<volume_title>CRAN</volume_title>
 						<author>Bates</author>
 						<cYear>2016</cYear>
 						<article_title>Lme4: Linear Mixed-Effects Models Using Eigen and S4</article_title>
 						<unstructured_citation>Bates D, Maechler M, Bolker B, Walker S, Haubo Bojesen Christensen R, Singmann H, Dai B, Grothendieck G, Green P, Bolker B. 2016. Lme4: Linear Mixed-Effects Models Using Eigen and S4. CRAN. 1.1-12. https://cran.r-project.org/web/packages/lme4/index.html.</unstructured_citation>
 					</citation>
-					<citation key="bib3">
+					<citation key="bib3" type="preprint">
 						<volume_title>bioRxiv</volume_title>
 						<author>Bloss</author>
 						<cYear>2016</cYear>
@@ -262,14 +262,14 @@
                 smartphone-enabled biosensors</article_title>
 						<doi>10.1101/029983</doi>
 					</citation>
-					<citation key="bib4">
+					<citation key="bib4" type="dataset">
 						<volume_title>NCBI Gene Expression Omnibus</volume_title>
 						<author>Bouveret</author>
 						<cYear>2015</cYear>
 						<article_title>NKX2-5 mutations causative for congenital heart disease retain
                 functionality and are directed to hundreds of targets</article_title>
 					</citation>
-					<citation key="bib5">
+					<citation key="bib5" type="journal_article">
 						<journal_title>International journal of systematic and evolutionary
                 microbiology</journal_title>
 						<author>Brettar</author>
@@ -281,7 +281,7 @@
                 water of the central Baltic Sea</article_title>
 						<doi>10.1099/ijs.0.63255-0</doi>
 					</citation>
-					<citation key="bib6">
+					<citation key="bib6" type="journal_article">
 						<journal_title>International journal of systematic and evolutionary
                 microbiology</journal_title>
 						<author>Brettar</author>
@@ -293,50 +293,50 @@
                 water of the central Baltic Sea</article_title>
 						<doi>10.1099/ijs.0.02752-0</doi>
 					</citation>
-					<citation key="bib7">
+					<citation key="bib7" type="software">
 						<author>Bricogne</author>
 						<cYear>2011</cYear>
 						<article_title>BUSTER</article_title>
 						<unstructured_citation>Bricogne G, Blanc E, Brandl M, Flensburg C, Keller P, Paciorek W, Roversi P, Sharff A, Smart OS, Vonrhein C, Womack TO. 2011. BUSTER. Cambridge, UK: Global Phasing Ltd. 2.10.0. https://www.globalphasing.com/buster/.</unstructured_citation>
 					</citation>
-					<citation key="bib8">
+					<citation key="bib8" type="book">
 						<volume_title>Advances in insect chemical ecology</volume_title>
 						<author>Cardé</author>
 						<cYear>2004</cYear>
 					</citation>
-					<citation key="bib9">
+					<citation key="bib9" type="preprint">
 						<volume_title>arXiv.org</volume_title>
 						<author>Cartwright</author>
 						<cYear>2016</cYear>
 						<article_title>The Venus Hypothesis</article_title>
 						<unstructured_citation>Cartwright A. 2016. The Venus Hypothesis. arXiv.org. https://arxiv.org/abs/1608.03074.</unstructured_citation>
 					</citation>
-					<citation key="bib10">
+					<citation key="bib10" type="book">
 						<volume_title>An Introduction to Work and Organizational Psychology: A European
                 Perspective</volume_title>
 						<author>Chmeil</author>
 						<cYear>2008</cYear>
 					</citation>
-					<citation key="bib11">
+					<citation key="bib11" type="book_chapter">
 						<volume_title>Speciation and its consequences</volume_title>
 						<author>Coyne</author>
 						<first_page>1</first_page>
 						<cYear>1989</cYear>
 					</citation>
-					<citation key="bib12">
+					<citation key="bib12" type="software">
 						<volume_title>PyMol</volume_title>
 						<author>DeLano</author>
 						<cYear>2002</cYear>
 						<article_title>The PyMol Molecular Graphics System</article_title>
 						<unstructured_citation>DeLano W. 2002. The PyMol Molecular Graphics System. Schrödinger LLC. PyMol. Version 1.7.4. https://www.pymol.org/.</unstructured_citation>
 					</citation>
-					<citation key="bib13">
+					<citation key="bib13" type="report">
 						<volume_title>Educational excellence everywhere</volume_title>
 						<author>Department of Education</author>
 						<cYear>2016</cYear>
 						<isbn>9781474130158</isbn>
 					</citation>
-					<citation key="bib14">
+					<citation key="bib14" type="dataset">
 						<volume_title>RCSB Protein Data Bank</volume_title>
 						<author>Du</author>
 						<cYear>2014</cYear>
@@ -344,20 +344,20 @@
                 SAH</article_title>
 						<doi>10.2210/pdb4qen/pdb</doi>
 					</citation>
-					<citation key="bib15">
+					<citation key="bib15" type="web_resource">
 						<volume_title>it is NOT junk</volume_title>
 						<author>Eisen</author>
 						<cYear>2016</cYear>
 						<article_title>The Imprinter of All Maladies</article_title>
 						<unstructured_citation>Eisen M. 2016. The Imprinter of All Maladies. it is NOT junk. http://www.michaeleisen.org/blog/?p=1894 [Accessed August 19, 2016].</unstructured_citation>
 					</citation>
-					<citation key="bib16">
+					<citation key="bib16" type="dataset">
 						<volume_title>Division of Clinical Neurology, University of Oxford</volume_title>
 						<author>Ferry</author>
 						<cYear>2014</cYear>
 						<article_title>Diagnostically relevant facial gestalt information from ordinary photos database</article_title>
 					</citation>
-					<citation key="bib17">
+					<citation key="bib17" type="journal_article">
 						<journal_title>Immunity</journal_title>
 						<author>Gall</author>
 						<volume>36</volume>
@@ -368,19 +368,19 @@
                 disease</article_title>
 						<doi>10.1016/j.immuni.2011.11.018</doi>
 					</citation>
-					<citation key="bib18">
+					<citation key="bib18" type="dataset">
 						<volume_title>NCBI Nucleotide</volume_title>
 						<author>Gavrilov</author>
 						<cYear>2014</cYear>
 						<article_title>Mus musculus T-box 2 (Tbx2), mRNA</article_title>
 					</citation>
-					<citation key="bib19">
+					<citation key="bib19" type="report">
 						<volume_title>Augmentin 250/62 SF Suspension</volume_title>
 						<author>GlaxoSmithKline UK</author>
 						<cYear>2016</cYear>
 						<unstructured_citation>GlaxoSmithKline UK. 2016. United Kingdom: GlaxoSmithKline UK. Augmentin 250/62 SF Suspension. https://www.medicines.org.uk/emc/medicine/19188.</unstructured_citation>
 					</citation>
-					<citation key="bib20">
+					<citation key="bib20" type="journal_article">
 						<journal_title>Bioinformatics</journal_title>
 						<author>Goodstadt</author>
 						<volume>26</volume>
@@ -391,26 +391,26 @@
             </article_title>
 						<doi>10.1093/bioinformatics/btq524</doi>
 					</citation>
-					<citation key="bib21">
+					<citation key="bib21" type="dataset">
 						<volume_title>NCBI Gene Expression Omnibus</volume_title>
 						<author>Hoang</author>
 						<cYear>2015</cYear>
 						<article_title>Effects on the transcriptome of adult mouse pancreas (principally
                 acinar cells) by the inactivation of the Ptf1a gene in vivo</article_title>
 					</citation>
-					<citation key="bib22">
+					<citation key="bib22" type="book">
 						<volume_title>Integrated pest management for crops and pastures</volume_title>
 						<author>Horne</author>
 						<cYear>2008</cYear>
 						<isbn>9780643092570</isbn>
 					</citation>
-					<citation key="bib23">
+					<citation key="bib23" type="software">
 						<volume_title>Naccess</volume_title>
 						<author>Hubbard</author>
 						<cYear>1993</cYear>
 						<unstructured_citation>Hubbard S, Thornton J. 1993. Department of Biochemistry Molecular Biology, University College London. Naccess. V2.1.1. http://www.bioinf.manchester.ac.uk/naccess.</unstructured_citation>
 					</citation>
-					<citation key="bib24">
+					<citation key="bib24" type="conference_paper">
 						<author>Jain</author>
 						<cYear>2010</cYear>
 						<article_title>Boundary learning by optimization with topological
@@ -418,20 +418,20 @@
 						<unstructured_citation>Jain BV, Bollman B, Richardson M, Berger DR, Helmstaedter MN, Briggman KL, Denk W, Bowden JB, Mendenhall JM, Abraham WC, Harris KM, Kasthuri N, Hayworth KJ, Schalek R, Tapia JC, Lichtman JW, Seung HS. 2010. Boundary learning by optimization with topological
                 constraints. IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2010.</unstructured_citation>
 					</citation>
-					<citation key="bib25">
+					<citation key="bib25" type="book">
 						<volume_title>Psychology A Study Of A Science</volume_title>
 						<author>Koch</author>
 						<volume>3: Formulations of the Person a</volume>
 						<cYear>1959</cYear>
 					</citation>
-					<citation key="bib26">
+					<citation key="bib26" type="dataset">
 						<volume_title>Dryad Digital Repository</volume_title>
 						<author>Kok</author>
 						<cYear>2015</cYear>
 						<article_title>Data from: Genome-wide errant targeting by Hairy</article_title>
 						<doi>10.5061/dryad.cv323</doi>
 					</citation>
-					<citation key="bib27">
+					<citation key="bib27" type="journal_article">
 						<journal_title>Nucleic Acids Res</journal_title>
 						<author>McQuilton</author>
 						<volume>40</volume>
@@ -440,27 +440,27 @@
 						<article_title>FlyBase 101—the basics of navigating FlyBase</article_title>
 						<doi>10.1093/nar/gkr1030</doi>
 					</citation>
-					<citation key="bib28">
+					<citation key="bib28" type="report">
 						<volume_title>Clinical training in serious mental illness (DHHS Publication No. ADM 90-1679)</volume_title>
 						<author>National Institute of Mental Health</author>
 						<cYear>1990</cYear>
 						<unstructured_citation>National Institute of Mental Health. 1990. Washington, DC, United States: Government Printing Office. Clinical training in serious mental illness (DHHS Publication No. ADM 90-1679).</unstructured_citation>
 					</citation>
-					<citation key="bib29">
+					<citation key="bib29" type="software">
 						<volume_title>Github</volume_title>
 						<author>Nellåker</author>
 						<cYear>2014</cYear>
 						<article_title>Clinical_Face_Phenotype_Space_Pipeline</article_title>
 						<unstructured_citation>Nellåker C. 2014. Clinical_Face_Phenotype_Space_Pipeline. Github. v1.2. https://github.com/ChristofferNellaker/Clinical_Face_Phenotype_Space_Pipeline.</unstructured_citation>
 					</citation>
-					<citation key="bib30">
+					<citation key="bib30" type="software">
 						<volume_title>Bioconductor</volume_title>
 						<author>Pages</author>
 						<cYear>2014</cYear>
 						<article_title>String objects representing biological sequences, and matching algorithms</article_title>
 						<unstructured_citation>Pages H, Gentleman R, Aboyoun P, Biostrings DS. 2014. String objects representing biological sequences, and matching algorithms. Bioconductor. R Package Version 2.30.1. https://bioconductor.org/packages/release/bioc/html/Biostrings.html.</unstructured_citation>
 					</citation>
-					<citation key="bib31">
+					<citation key="bib31" type="conference_paper">
 						<volume_title>Independent component analysis and signal separation</volume_title>
 						<author>Palmer</author>
 						<first_page>90</first_page>
@@ -468,26 +468,26 @@
 						<article_title>Probabilistic Formulation of Independent Vector Analysis Using Complex Gaussian Scale Mixtures</article_title>
 						<unstructured_citation>Palmer JA, Kreutz-Delgado K, Rao BD, Makeig S. 2007. Probabilistic Formulation of Independent Vector Analysis Using Complex Gaussian Scale Mixtures. Independent component analysis and signal separation.  8th International Conference, ICA 2009, Paraty, Brazil, March 15-18, 2009.</unstructured_citation>
 					</citation>
-					<citation key="bib32">
+					<citation key="bib32" type="patent">
 						<volume_title>United States patent</volume_title>
 						<cYear>2011</cYear>
 						<article_title>IRE-1alpha inhibitors</article_title>
 						<unstructured_citation>Patterson JB, Lonergan DG, Flynn GA, Qingpeng Z, Pallai PV, Mankind Corp. 2011. IRE-1alpha inhibitors. United States patent. US20100941530. http://europepmc.org/patents/PAT/US2011065162.</unstructured_citation>
 					</citation>
-					<citation key="bib33">
+					<citation key="bib33" type="software">
 						<author>R Development Core Team</author>
 						<cYear>2015</cYear>
 						<article_title>R: a language and environment for statistical computing</article_title>
 						<unstructured_citation>R Development Core Team. 2015. R: a language and environment for statistical computing. Vienna, Austria: R Foundation for Statistical Computing. 3.2.2. http://www.r-project.org/.</unstructured_citation>
 					</citation>
-					<citation key="bib34">
+					<citation key="bib34" type="dataset">
 						<volume_title>ProteomeXchange</volume_title>
 						<author>Radoshevich</author>
 						<cYear>2015</cYear>
 						<article_title>ISG15 counteracts Listeria monocytogenes
                 infection</article_title>
 					</citation>
-					<citation key="bib35">
+					<citation key="bib35" type="dataset">
 						<volume_title>ArrayExpress</volume_title>
 						<author>Radoshevich</author>
 						<cYear>2015</cYear>
@@ -495,55 +495,55 @@
                 cells infected with Listeria for 24 hr compared to uninfected
                 cells</article_title>
 					</citation>
-					<citation key="bib36">
+					<citation key="bib36" type="software">
 						<author>Rasband</author>
 						<cYear>1997</cYear>
 						<article_title>Image J</article_title>
 						<unstructured_citation>Rasband WS. 1997. Image J. Bethesda, MA: US National Institutes of Health. http://imagej.nih.gov/ij/.</unstructured_citation>
 					</citation>
-					<citation key="bib37">
+					<citation key="bib37" type="journal_article">
 						<journal_title>Genome Res</journal_title>
 						<author>Roy</author>
 						<cYear>2013</cYear>
 						<article_title>Arboretum: reconstruction and analysis of the evolutionary
                 history of condition-specific transcriptional programs</article_title>
 					</citation>
-					<citation key="bib38">
+					<citation key="bib38" type="dissertation">
 						<author>Schneider</author>
 						<cYear>2006</cYear>
 						<article_title>PhD thesis: Submicroscopic Plasmodium falciparum gametocytaemia and the contribution to malaria transmission</article_title>
 						<unstructured_citation>Schneider P. 2006. PhD thesis: Submicroscopic Plasmodium falciparum gametocytaemia and the contribution to malaria transmission. Nijmegen, The Netherlands: Radboud University Nijmegen Medical Centre.</unstructured_citation>
 					</citation>
-					<citation key="bib39">
+					<citation key="bib39" type="software">
 						<volume_title>The PyMOL Molecular Graphics System</volume_title>
 						<author>Schrödinger</author>
 						<cYear>2011</cYear>
 						<unstructured_citation>Schrödinger LLC. 2011. Schrödinger LLC. The PyMOL Molecular Graphics System. 1.2r3pre. https://www.pymol.org/.</unstructured_citation>
 					</citation>
-					<citation key="bib40">
+					<citation key="bib40" type="journal">
 						<volume_title>The Washington Post</volume_title>
 						<author>Schwartz</author>
 						<first_page>A1</first_page>
 						<cYear>1993</cYear>
 						<article_title>Obesity affects economic, social status</article_title>
 					</citation>
-					<citation key="bib41">
+					<citation key="bib41" type="other">
 						<cYear>2015</cYear>
 						<article_title>Scripps Wired for Health Study</article_title>
 					</citation>
-					<citation key="bib42">
+					<citation key="bib42" type="software">
 						<author>Smit</author>
 						<cYear>2010</cYear>
 						<article_title>RepeatModeler</article_title>
 						<unstructured_citation>Smit A, Hubley R. 2010. RepeatModeler. Seattle, USA: Institute for Systems Biology. open-1.0. http://www.repeatmasker.org/RepeatModeler.html.</unstructured_citation>
 					</citation>
-					<citation key="bib43">
+					<citation key="bib43" type="dataset">
 						<volume_title>JASPAR</volume_title>
 						<author>Staab</author>
 						<cYear>2013</cYear>
 						<article_title>SKN-1 from the JASPAR CORE database</article_title>
 					</citation>
-					<citation key="bib44">
+					<citation key="bib44" type="preprint">
 						<volume_title>preprints</volume_title>
 						<author>Tanaka</author>
 						<cYear>2016</cYear>
@@ -551,41 +551,41 @@
                 Activation of the PI3K/Akt/mTOR/HIF-1a Pathway</article_title>
 						<doi>10.20944/preprints201608.0124.v1</doi>
 					</citation>
-					<citation key="bib45">
+					<citation key="bib45" type="dataset">
 						<volume_title>NCBI BioProject</volume_title>
 						<author>The Shigella Genome Sequencing Consortium</author>
 						<cYear>2015</cYear>
 						<article_title>Global Diversity of Shigella Species</article_title>
 					</citation>
-					<citation key="bib46">
+					<citation key="bib46" type="dataset">
 						<volume_title>NCBI BioProject</volume_title>
 						<author>The Shigella Genome Sequencing Consortium</author>
 						<cYear>2015</cYear>
 						<article_title>Shigella sonnei and flexneri from around the world</article_title>
 					</citation>
-					<citation key="bib47">
+					<citation key="bib47" type="dataset">
 						<volume_title>NCBI BioProject </volume_title>
 						<author>The Shigella Genome Sequencing Consortium</author>
 						<cYear>2015</cYear>
 						<article_title>Shigella flexneri from around the world</article_title>
 					</citation>
-					<citation key="bib48">
+					<citation key="bib48" type="book_chapter">
 						<volume_title>Advances in insect chemical ecology</volume_title>
 						<author>Turlings</author>
 						<first_page>21</first_page>
 						<cYear>2004</cYear>
 					</citation>
-					<citation key="bib49">
+					<citation key="bib49" type="book">
 						<volume_title>Advances in insect chemical ecology</volume_title>
 						<author>Turlings</author>
 						<cYear>2004</cYear>
 					</citation>
-					<citation key="bib50">
+					<citation key="bib50" type="web_resource">
 						<author>Walker</author>
 						<article_title>Solar System Live</article_title>
 						<unstructured_citation>Walker J. Solar System Live. https://www.fourmilab.ch/solar/ [Accessed September 10, 1995].</unstructured_citation>
 					</citation>
-					<citation key="bib51">
+					<citation key="bib51" type="journal_article">
 						<journal_title>PLoS Biol</journal_title>
 						<author>Wolski</author>
 						<volume>6</volume>
@@ -595,20 +595,20 @@
 						<doi>10.1371/journal.pbio.0060149</doi>
 						<elocation_id>e149</elocation_id>
 					</citation>
-					<citation key="bib52">
+					<citation key="bib52" type="book">
 						<volume_title> Growing up unequal: gender and socioeconomic differences in young
                 people's health and well-being. Health Behaviour in School-aged Children
                 (HBSC) study</volume_title>
 						<author>World Health Organization</author>
 						<cYear>2016</cYear>
 					</citation>
-					<citation key="bib53">
+					<citation key="bib53" type="dataset">
 						<volume_title>NCBI</volume_title>
 						<author>Zhang</author>
 						<cYear>2010</cYear>
 						<article_title>Polymeric immunoglobulin receptor [Oncorhynchus mykiss]</article_title>
 					</citation>
-					<citation key="bib54">
+					<citation key="bib54" type="dataset">
 						<volume_title>modMine</volume_title>
 						<author>Zhong</author>
 						<cYear>2013</cYear>
