@@ -147,7 +147,7 @@
 					</collection>
 				</doi_data>
 				<citation_list>
-					<citation key="bib1">
+					<citation key="bib1" type="journal_article">
 						<journal_title>Science</journal_title>
 						<author>Bailey</author>
 						<volume>318</volume>
@@ -156,7 +156,7 @@
 						<article_title>Structure of hexameric DnaB helicase and its complex with a domain of DnaG primase</article_title>
 						<doi>10.1126/science.1147353</doi>
 					</citation>
-					<citation key="bib2">
+					<citation key="bib2" type="journal_article">
 						<journal_title>Cell</journal_title>
 						<author>Bailey</author>
 						<volume>126</volume>
@@ -165,7 +165,7 @@
 						<article_title>The structure of T. aquaticus DNA polymerase III is distinct from eukaryotic replicative DNA polymerases</article_title>
 						<doi>10.1016/j.cell.2006.07.027</doi>
 					</citation>
-					<citation key="bib3">
+					<citation key="bib3" type="journal_article">
 						<journal_title>Journal of Biological Chemistry</journal_title>
 						<author>Bloom</author>
 						<volume>272</volume>
@@ -174,7 +174,7 @@
 						<article_title>Fidelity of Escherichia coli DNA polymerase III holoenzyme: The effects of beta, gamma complex processivity proteins and epsilon proofreadingexonuclease on nucleotide misincorporation efficiencies</article_title>
 						<doi>10.1074/jbc.272.44.27919</doi>
 					</citation>
-					<citation key="bib4">
+					<citation key="bib4" type="journal_article">
 						<journal_title>The EMBO Journal</journal_title>
 						<author>Bunting</author>
 						<volume>22</volume>
@@ -183,7 +183,7 @@
 						<article_title>Structural basis for recruitment of translesion DNA polymerase Pol IV/DinB to the beta-clamp</article_title>
 						<doi>10.1093/emboj/cdg568</doi>
 					</citation>
-					<citation key="bib5">
+					<citation key="bib5" type="journal_article">
 						<journal_title>Ultramicroscopy</journal_title>
 						<author>Chen</author>
 						<volume>135</volume>
@@ -192,7 +192,7 @@
 						<article_title>High-resolution noise substitution to measure overfitting and validate resolution in 3D structure determination by single particle electron cryomicroscopy</article_title>
 						<doi>10.1016/j.ultramic.2013.06.004</doi>
 					</citation>
-					<citation key="bib6">
+					<citation key="bib6" type="journal_article">
 						<journal_title>Journal of Molecular Biology</journal_title>
 						<author>Dohrmann</author>
 						<volume>414</volume>
@@ -201,7 +201,7 @@
 						<article_title>The rate of polymerase release upon filling the gap between okazaki fragments is inadequate to support cycling during lagging strand synthesis</article_title>
 						<doi>10.1016/j.jmb.2011.09.039</doi>
 					</citation>
-					<citation key="bib7">
+					<citation key="bib7" type="journal_article">
 						<journal_title>Journal of Molecular Biology</journal_title>
 						<author>Dohrmann</author>
 						<volume>350</volume>
@@ -210,7 +210,7 @@
 						<article_title>A bipartite polymerase–processivity factor interaction: only the internal β binding site of the α subunit is required for processive replication by the DNA polymerase III holoenzyme</article_title>
 						<doi>10.1016/j.jmb.2005.04.065</doi>
 					</citation>
-					<citation key="bib8">
+					<citation key="bib8" type="journal_article">
 						<journal_title>Acta Crystallographica Section D. Biological Crystallography</journal_title>
 						<author>Emsley</author>
 						<volume>66</volume>
@@ -219,7 +219,7 @@
 						<article_title>Features and development of coot</article_title>
 						<doi>10.1107/S0907444910007493</doi>
 					</citation>
-					<citation key="bib9">
+					<citation key="bib9" type="journal_article">
 						<journal_title>Proceedings of the National Academy of Sciences of the United States of America</journal_title>
 						<author>Evans</author>
 						<volume>105</volume>
@@ -228,7 +228,7 @@
 						<article_title>Structure of PolC reveals unique DNA binding and fidelity determinants</article_title>
 						<doi>10.1073/pnas.0809989106</doi>
 					</citation>
-					<citation key="bib10">
+					<citation key="bib10" type="journal_article">
 						<journal_title>Cell</journal_title>
 						<author>Georgescu</author>
 						<volume>132</volume>
@@ -237,7 +237,7 @@
 						<article_title>Structure of a sliding clamp on DNA</article_title>
 						<doi>10.1016/j.cell.2007.11.045</doi>
 					</citation>
-					<citation key="bib11">
+					<citation key="bib11" type="journal_article">
 						<journal_title>The EMBO Journal</journal_title>
 						<author>Georgescu</author>
 						<volume>28</volume>
@@ -246,7 +246,7 @@
 						<article_title>Mechanism of polymerase collision release from sliding clamps on the lagging strand</article_title>
 						<doi>10.1038/emboj.2009.233</doi>
 					</citation>
-					<citation key="bib12">
+					<citation key="bib12" type="journal_article">
 						<journal_title>Proceedings of the National Academy of Sciences of the United States of America</journal_title>
 						<author>Georgescu</author>
 						<volume>105</volume>
@@ -255,7 +255,7 @@
 						<article_title>Structure of a small-molecule inhibitor of a DNA polymerase sliding clamp</article_title>
 						<doi>10.1073/pnas.0804754105</doi>
 					</citation>
-					<citation key="bib13">
+					<citation key="bib13" type="journal_article">
 						<journal_title>Structure</journal_title>
 						<author>Hamdan</author>
 						<volume>10</volume>
@@ -264,7 +264,7 @@
 						<article_title>Structural basis for proofreading during replication of the escherichia coli chromosome</article_title>
 						<doi>10.1016/S0969-2126(02)00738-4</doi>
 					</citation>
-					<citation key="bib14">
+					<citation key="bib14" type="journal_article">
 						<journal_title>Proceedings of the National Academy of Sciences of the United States of America</journal_title>
 						<author>Hwang</author>
 						<volume>108</volume>
@@ -273,7 +273,7 @@
 						<article_title>Protein induced fluorescence enhancement as a single molecule assay with short distance sensitivity</article_title>
 						<doi>10.1073/pnas.1017672108</doi>
 					</citation>
-					<citation key="bib15">
+					<citation key="bib15" type="journal_article">
 						<journal_title>Proceedings of the National Academy of Sciences of the United States of America</journal_title>
 						<author>Indiani</author>
 						<volume>106</volume>
@@ -282,7 +282,7 @@
 						<article_title>Translesion DNA polymerases remodel the replisome and alter the speed of the replicative helicase</article_title>
 						<doi>10.1073/pnas.0901403106</doi>
 					</citation>
-					<citation key="bib16">
+					<citation key="bib16" type="journal_article">
 						<journal_title>The EMBO Journal</journal_title>
 						<author>Jergic</author>
 						<volume>32</volume>
@@ -291,7 +291,7 @@
 						<article_title>A direct proofreader–clamp interaction stabilizes the Pol III replicase in the polymerization mode</article_title>
 						<doi>10.1038/emboj.2012.347</doi>
 					</citation>
-					<citation key="bib17">
+					<citation key="bib17" type="journal_article">
 						<journal_title>Nucleic Acids Research</journal_title>
 						<author>Jergic</author>
 						<volume>35</volume>
@@ -300,7 +300,7 @@
 						<article_title>The unstructured C-terminus of the tau subunit of Escherichia coli DNA polymerase III holoenzyme is the site of interaction with the alpha subunit</article_title>
 						<doi>10.1093/nar/gkm079</doi>
 					</citation>
-					<citation key="bib18">
+					<citation key="bib18" type="journal_article">
 						<journal_title>Cell</journal_title>
 						<author>Jeruzalmi</author>
 						<volume>106</volume>
@@ -309,7 +309,7 @@
 						<article_title>Crystal structure of the processivity clamp loader gamma (γ) complex of E. coli DNA polymerase III</article_title>
 						<doi>10.1016/S0092-8674(01)00463-9</doi>
 					</citation>
-					<citation key="bib19">
+					<citation key="bib19" type="journal_article">
 						<journal_title>Cell</journal_title>
 						<author>Jeruzalmi</author>
 						<volume>106</volume>
@@ -318,7 +318,7 @@
 						<article_title>Mechanism of processivity clamp opening by the delta subunit wrench of the clamp loader complex of E. coli DNA polymerase III</article_title>
 						<doi>10.1016/S0092-8674(01)00462-7</doi>
 					</citation>
-					<citation key="bib20">
+					<citation key="bib20" type="journal_article">
 						<journal_title>Cell</journal_title>
 						<author>Kong</author>
 						<volume>69</volume>
@@ -327,7 +327,7 @@
 						<article_title>Three-dimensional structure of the beta subunit of E. coli DNA polymerase III holoenzyme: a sliding DNA clamp</article_title>
 						<doi>10.1016/0092-8674(92)90445-I</doi>
 					</citation>
-					<citation key="bib21">
+					<citation key="bib21" type="journal_article">
 						<journal_title>Cell</journal_title>
 						<author>Lamers</author>
 						<volume>126</volume>
@@ -336,7 +336,7 @@
 						<article_title>Crystal structure of the catalytic alpha subunit of E. coli replicative DNA polymerase III</article_title>
 						<doi>10.1016/j.cell.2006.07.028</doi>
 					</citation>
-					<citation key="bib22">
+					<citation key="bib22" type="journal_article">
 						<journal_title>Journal of Bacteriology</journal_title>
 						<author>Lancy</author>
 						<volume>171</volume>
@@ -344,7 +344,7 @@
 						<cYear>1989</cYear>
 						<article_title>Isolation and characterization of mutants with deletions in dnaQ, the gene for the editing subunit of DNA polymerase III in Salmonella typhimurium</article_title>
 					</citation>
-					<citation key="bib23">
+					<citation key="bib23" type="journal_article">
 						<journal_title>Molecular Cell</journal_title>
 						<author>Leu</author>
 						<volume>11</volume>
@@ -353,7 +353,7 @@
 						<article_title>Mechanism of the E. coli tau processivity switch during lagging-strand synthesis</article_title>
 						<doi>10.1016/S1097-2765(03)00042-X</doi>
 					</citation>
-					<citation key="bib24">
+					<citation key="bib24" type="journal_article">
 						<journal_title>Journal of Biological Chemistry</journal_title>
 						<author>Li</author>
 						<volume>275</volume>
@@ -362,7 +362,7 @@
 						<article_title>Two distinct triggers for cycling of the lagging strand polymerase at the replication fork</article_title>
 						<doi>10.1074/jbc.M006556200</doi>
 					</citation>
-					<citation key="bib25">
+					<citation key="bib25" type="journal_article">
 						<journal_title>Nature Methods</journal_title>
 						<author>Li</author>
 						<volume>10</volume>
@@ -371,7 +371,7 @@
 						<article_title>Electron counting and beam-induced motion correction enable near-atomic-resolution single-particle cryo-EM</article_title>
 						<doi>10.1038/nmeth.2472</doi>
 					</citation>
-					<citation key="bib26">
+					<citation key="bib26" type="journal_article">
 						<journal_title>Proceedings of the National Academy of Sciences of the United States of America</journal_title>
 						<author>Li</author>
 						<volume>96</volume>
@@ -380,7 +380,7 @@
 						<article_title>Structure-based design of taq DNA polymerases with improved properties of dideoxynucleotide incorporation</article_title>
 						<doi>10.1073/pnas.96.17.9491</doi>
 					</citation>
-					<citation key="bib27">
+					<citation key="bib27" type="journal_article">
 						<journal_title>Structure</journal_title>
 						<author>Liu</author>
 						<volume>21</volume>
@@ -389,7 +389,7 @@
 						<article_title>Structure of the PolIIIα-τc-DNA complex suggests an atomic model of the replisome</article_title>
 						<doi>10.1016/j.str.2013.02.002</doi>
 					</citation>
-					<citation key="bib28">
+					<citation key="bib28" type="journal_article">
 						<journal_title>The Journal of Biological Chemistry</journal_title>
 						<author>Maki</author>
 						<volume>260</volume>
@@ -397,7 +397,7 @@
 						<cYear>1985</cYear>
 						<article_title>The polymerase subunit of DNA polymerase III of Escherichia coli. II. Purification of the alpha subunit, devoid of nuclease activities</article_title>
 					</citation>
-					<citation key="bib29">
+					<citation key="bib29" type="journal_article">
 						<journal_title>Proceedings of the National Academy of Sciences of the United States of America</journal_title>
 						<author>Mayanagi</author>
 						<volume>108</volume>
@@ -406,7 +406,7 @@
 						<article_title>Architecture of the DNA polymerase b-proliferating cell nuclear antigen (pCNA)-DNA ternary complex</article_title>
 						<doi>10.1073/pnas.1010933108</doi>
 					</citation>
-					<citation key="bib30">
+					<citation key="bib30" type="journal_article">
 						<journal_title>The Journal of Biological Chemistry</journal_title>
 						<author>McHenry</author>
 						<volume>257</volume>
@@ -414,7 +414,7 @@
 						<cYear>1982</cYear>
 						<article_title>Purification and characterization of DNA polymerase III'. Identification of tau as a subunit of the DNA polymerase III holoenzyme</article_title>
 					</citation>
-					<citation key="bib31">
+					<citation key="bib31" type="journal_article">
 						<journal_title>Molecular Cell</journal_title>
 						<author>McInerney</author>
 						<volume>27</volume>
@@ -423,7 +423,7 @@
 						<article_title>Characterization of a triple DNA polymerase replisome</article_title>
 						<doi>10.1016/j.molcel.2007.06.019</doi>
 					</citation>
-					<citation key="bib32">
+					<citation key="bib32" type="journal_article">
 						<journal_title>Journal of Structural Biology</journal_title>
 						<author>Mindell</author>
 						<volume>142</volume>
@@ -432,7 +432,7 @@
 						<article_title>Accurate determination of local defocus and specimen tilt in electron microscopy</article_title>
 						<doi>10.1016/S1047-8477(03)00069-8</doi>
 					</citation>
-					<citation key="bib33">
+					<citation key="bib33" type="journal_article">
 						<journal_title>The Journal of Biological Chemistry</journal_title>
 						<author>Mok</author>
 						<volume>262</volume>
@@ -440,7 +440,7 @@
 						<cYear>1987</cYear>
 						<article_title>The Escherichia coli preprimosome and DNA B helicase can form replication forks that move at the same rate</article_title>
 					</citation>
-					<citation key="bib34">
+					<citation key="bib34" type="journal_article">
 						<journal_title>Journal of Biological Chemistry</journal_title>
 						<author>Onrust</author>
 						<volume>270</volume>
@@ -449,7 +449,7 @@
 						<article_title>Assembly of a chromosomal replication machine: two DNA polymerases, a clamp loader, and sliding clamps in one holoenzyme particle: III. Interface between two polymerases and the clamp loader</article_title>
 						<doi>10.1074/jbc.270.22.13366</doi>
 					</citation>
-					<citation key="bib35">
+					<citation key="bib35" type="journal_article">
 						<journal_title>Nucleic Acids Research</journal_title>
 						<author>Ozawa</author>
 						<volume>41</volume>
@@ -458,7 +458,7 @@
 						<article_title>Proofreading exonuclease on a tether: the complex between the E. coli DNA polymerase III subunits and alpha, epsilon, theta and beta reveals a highly flexible arrangement of the proofreading domain</article_title>
 						<doi>10.1093/nar/gkt162</doi>
 					</citation>
-					<citation key="bib36">
+					<citation key="bib36" type="journal_article">
 						<journal_title>Journal of Molecular Biology</journal_title>
 						<author>Rosenthal</author>
 						<volume>333</volume>
@@ -467,7 +467,7 @@
 						<article_title>Optimal determination of particle orientation, absolute hand, and contrast loss in single-particle electron cryomicroscopy</article_title>
 						<doi>10.1016/j.jmb.2003.07.013</doi>
 					</citation>
-					<citation key="bib37">
+					<citation key="bib37" type="journal_article">
 						<journal_title>Nature Methods</journal_title>
 						<author>Scheres</author>
 						<volume>9</volume>
@@ -476,7 +476,7 @@
 						<article_title>Prevention of overfitting in cryo-EM structure determination</article_title>
 						<doi>10.1038/nmeth.2115</doi>
 					</citation>
-					<citation key="bib38">
+					<citation key="bib38" type="journal_article">
 						<journal_title>Journal of Structural Biology</journal_title>
 						<author>Scheres</author>
 						<volume>180</volume>
@@ -485,7 +485,7 @@
 						<article_title>RELION: implementation of a Bayesian approach to cryo-EM structure determination</article_title>
 						<doi>10.1016/j.jsb.2012.09.006</doi>
 					</citation>
-					<citation key="bib39">
+					<citation key="bib39" type="journal_article">
 						<journal_title>eLife</journal_title>
 						<author>Scheres</author>
 						<volume>3</volume>
@@ -494,7 +494,7 @@
 						<article_title>Beam-induced motion correction for sub-megadalton cryo-EM particles</article_title>
 						<doi>10.7554/eLife.03665.009</doi>
 					</citation>
-					<citation key="bib40">
+					<citation key="bib40" type="journal_article">
 						<journal_title>Proceedings of the National Academy of Sciences of the United States of America </journal_title>
 						<author>Scheuermann</author>
 						<volume>80</volume>
@@ -503,12 +503,12 @@
 						<article_title>Identification of the epsilon-subunit of escherichia coli DNA polymerase III holoenzyme as the dnaQ gene product: a fidelity subunit for DNA replication</article_title>
 						<doi>10.1073/pnas.80.23.7085</doi>
 					</citation>
-					<citation key="bib41">
+					<citation key="bib41" type="other">
 						<author>Schrödinger</author>
 						<cYear>2010</cYear>
 						<article_title>The PyMOL molecular graphics system</article_title>
 					</citation>
-					<citation key="bib42">
+					<citation key="bib42" type="journal_article">
 						<journal_title>Proceedings of the National Academy of Sciences of the United States of America</journal_title>
 						<author>Schwartz</author>
 						<volume>106</volume>
@@ -517,7 +517,7 @@
 						<article_title>Single molecule measurement of the &quot;speed limit&quot; of DNA polymerase</article_title>
 						<doi>10.1073/pnas.0907404106</doi>
 					</citation>
-					<citation key="bib43">
+					<citation key="bib43" type="journal_article">
 						<journal_title>Nucleic Acids Research</journal_title>
 						<author>Sharma</author>
 						<volume>41</volume>
@@ -526,7 +526,7 @@
 						<article_title>A strategically located serine residue is critical for the mutator activity of DNA polymerase IV from Escherichia coli</article_title>
 						<doi>10.1093/nar/gkt146</doi>
 					</citation>
-					<citation key="bib44">
+					<citation key="bib44" type="journal_article">
 						<journal_title>Cell</journal_title>
 						<author>Simonetta</author>
 						<volume>137</volume>
@@ -535,7 +535,7 @@
 						<article_title>The mechanism of ATP-dependent primer-template recognition by a clamp loader complex</article_title>
 						<doi>10.1016/j.cell.2009.03.044</doi>
 					</citation>
-					<citation key="bib45">
+					<citation key="bib45" type="journal_article">
 						<journal_title>The Journal of Biological Chemistry</journal_title>
 						<author>Stukenberg</author>
 						<volume>266</volume>
@@ -543,7 +543,7 @@
 						<cYear>1991</cYear>
 						<article_title>Mechanism of the sliding beta-clamp of DNA polymerase III holoenzyme</article_title>
 					</citation>
-					<citation key="bib46">
+					<citation key="bib46" type="journal_article">
 						<journal_title>Nucleic Acids Research</journal_title>
 						<author>Su</author>
 						<volume>35</volume>
@@ -552,7 +552,7 @@
 						<article_title>Solution structure of domains IVa and V of the tau subunit of Escherichia coli DNA polymerase III and interaction with the alpha subunit</article_title>
 						<doi>10.1093/nar/gkm080</doi>
 					</citation>
-					<citation key="bib47">
+					<citation key="bib47" type="journal_article">
 						<journal_title>Journal of Structural Biology</journal_title>
 						<author>Tang</author>
 						<volume>157</volume>
@@ -561,7 +561,7 @@
 						<article_title>EMAN2: an extensible image processing suite for electron microscopy</article_title>
 						<doi>10.1016/j.jsb.2006.05.009</doi>
 					</citation>
-					<citation key="bib48">
+					<citation key="bib48" type="journal_article">
 						<journal_title>The EMBO Journal</journal_title>
 						<author>Toste Rêgo</author>
 						<volume>32</volume>
@@ -570,7 +570,7 @@
 						<article_title>Architecture of the Pol III–clamp–exonuclease complex reveals key roles of the exonuclease subunit in processive DNA synthesis and repair</article_title>
 						<doi>10.1038/emboj.2013.68</doi>
 					</citation>
-					<citation key="bib49">
+					<citation key="bib49" type="journal_article">
 						<journal_title>Cell</journal_title>
 						<author>Wang</author>
 						<volume>139</volume>
@@ -579,7 +579,7 @@
 						<article_title>Structural insight into translesion synthesis by DNA Pol II</article_title>
 						<doi>10.1016/j.cell.2009.11.043</doi>
 					</citation>
-					<citation key="bib50">
+					<citation key="bib50" type="journal_article">
 						<journal_title>Nature Structural Molecular Biology</journal_title>
 						<author>Wang</author>
 						<volume>15</volume>
@@ -588,7 +588,7 @@
 						<article_title>The structure of a DnaB-family replicative helicase and its interactions with primase</article_title>
 						<doi>10.1038/nsmb1356</doi>
 					</citation>
-					<citation key="bib51">
+					<citation key="bib51" type="journal_article">
 						<journal_title>Biochemistry</journal_title>
 						<author>Wijffels</author>
 						<volume>43</volume>
@@ -597,7 +597,7 @@
 						<article_title>Inhibition of protein interactions with the beta 2 sliding clamp of Escherichia coli DNA polymerase III by peptides from beta 2 -binding proteins</article_title>
 						<doi>10.1021/bi036229j</doi>
 					</citation>
-					<citation key="bib52">
+					<citation key="bib52" type="journal_article">
 						<journal_title>Journal of Molecular Biology</journal_title>
 						<author>Wing</author>
 						<volume>382</volume>
@@ -606,7 +606,7 @@
 						<article_title>Insights into the replisome from the structure of a ternary complex of the DNA polymerase III α-subunit</article_title>
 						<doi>10.1016/j.jmb.2008.07.058</doi>
 					</citation>
-					<citation key="bib53">
+					<citation key="bib53" type="journal_article">
 						<journal_title>The Journal of Biological Chemistry</journal_title>
 						<author>Wu</author>
 						<volume>267</volume>
@@ -614,7 +614,7 @@
 						<cYear>1992</cYear>
 						<article_title>Coordinated leading- and lagging-strand synthesis at the Escherichia coli DNA replication fork. I. Multiple effectors act to modulate Okazaki fragment size</article_title>
 					</citation>
-					<citation key="bib54">
+					<citation key="bib54" type="journal_article">
 						<journal_title>The Journal of Biological Chemistry</journal_title>
 						<author>Wu</author>
 						<volume>267</volume>
@@ -622,7 +622,7 @@
 						<cYear>1992</cYear>
 						<article_title>Coordinated leading- and lagging-strand synthesis at the Escherichia coli DNA replication fork. V. primase action regulates the cycle of okazaki fragment synthesis</article_title>
 					</citation>
-					<citation key="bib55">
+					<citation key="bib55" type="journal_article">
 						<journal_title>Proceedings of the National Academy of Sciences of the United States of America</journal_title>
 						<author>Yao</author>
 						<volume>106</volume>
@@ -631,7 +631,7 @@
 						<article_title>Single-molecule analysis reveals that the lagging strand increases replisome processivity but slows replication fork progression</article_title>
 						<doi>10.1073/pnas.0906157106</doi>
 					</citation>
-					<citation key="bib56">
+					<citation key="bib56" type="journal_article">
 						<journal_title>Nucleic Acids Research</journal_title>
 						<author>Yuan</author>
 						<volume>42</volume>

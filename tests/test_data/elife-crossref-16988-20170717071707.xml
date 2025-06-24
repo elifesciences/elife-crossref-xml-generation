@@ -167,7 +167,7 @@
 					</collection>
 				</doi_data>
 				<citation_list>
-					<citation key="bib1">
+					<citation key="bib1" type="journal_article">
 						<journal_title>The EMBO Journal</journal_title>
 						<author>Ambroggio</author>
 						<volume>29</volume>
@@ -176,7 +176,7 @@
 						<article_title>ArfGAP1 generates an Arf1 gradient on continuous lipid membranes displaying flat and curved regions</article_title>
 						<doi>10.1038/emboj.2009.341</doi>
 					</citation>
-					<citation key="bib2">
+					<citation key="bib2" type="journal_article">
 						<journal_title>Annual Review of Biochemistry</journal_title>
 						<author>Antonny</author>
 						<volume>80</volume>
@@ -185,7 +185,7 @@
 						<article_title>Mechanisms of membrane curvature sensing</article_title>
 						<doi>10.1146/annurev-biochem-052809-155121</doi>
 					</citation>
-					<citation key="bib3">
+					<citation key="bib3" type="journal_article">
 						<journal_title>Cell</journal_title>
 						<author>Barlowe</author>
 						<volume>77</volume>
@@ -194,7 +194,7 @@
 						<article_title>COPII: a membrane coat formed by Sec proteins that drive vesicle budding from the endoplasmic reticulum</article_title>
 						<doi>10.1016/0092-8674(94)90138-4</doi>
 					</citation>
-					<citation key="bib4">
+					<citation key="bib4" type="journal_article">
 						<journal_title>Developmental Cell</journal_title>
 						<author>Bigay</author>
 						<volume>23</volume>
@@ -203,7 +203,7 @@
 						<article_title>Curvature, lipid packing, and electrostatics of membrane organelles: defining cellular territories in determining specificity</article_title>
 						<doi>10.1016/j.devcel.2012.10.009</doi>
 					</citation>
-					<citation key="bib5">
+					<citation key="bib5" type="journal_article">
 						<journal_title>The EMBO Journal</journal_title>
 						<author>Bigay</author>
 						<volume>24</volume>
@@ -212,7 +212,7 @@
 						<article_title>ArfGAP1 responds to membrane curvature through the folding of a lipid packing sensor motif</article_title>
 						<doi>10.1038/sj.emboj.7600714</doi>
 					</citation>
-					<citation key="bib6">
+					<citation key="bib6" type="journal_article">
 						<journal_title>Nature</journal_title>
 						<author>Bigay</author>
 						<volume>426</volume>
@@ -221,7 +221,7 @@
 						<article_title>Lipid packing sensed by ArfGAP1 couples COPI coat disassembly to membrane bilayer curvature</article_title>
 						<doi>10.1038/nature02108</doi>
 					</citation>
-					<citation key="bib7">
+					<citation key="bib7" type="journal_article">
 						<journal_title>Cell</journal_title>
 						<author>Bonifacino</author>
 						<volume>116</volume>
@@ -230,7 +230,7 @@
 						<article_title>The mechanisms of vesicle budding and fusion</article_title>
 						<doi>10.1016/S0092-8674(03)01079-1</doi>
 					</citation>
-					<citation key="bib8">
+					<citation key="bib8" type="journal_article">
 						<journal_title>Molecular Membrane Biology</journal_title>
 						<author>Brown</author>
 						<volume>27</volume>
@@ -239,7 +239,7 @@
 						<article_title>An update on transport vesicle tethering</article_title>
 						<doi>10.3109/09687688.2010.501765</doi>
 					</citation>
-					<citation key="bib9">
+					<citation key="bib9" type="journal_article">
 						<journal_title>Journal of Cell Biology</journal_title>
 						<author>Brügger</author>
 						<volume>151</volume>
@@ -248,7 +248,7 @@
 						<article_title>Evidence for segregation of sphingomyelin and cholesterol during formation of COPI-coated vesicles</article_title>
 						<doi>10.1083/jcb.151.3.507</doi>
 					</citation>
-					<citation key="bib10">
+					<citation key="bib10" type="journal_article">
 						<journal_title>Developmental Cell</journal_title>
 						<author>Cai</author>
 						<volume>12</volume>
@@ -257,7 +257,7 @@
 						<article_title>Coats, tethers, Rabs, and SNAREs work together to mediate the intracellular destination of a transport vesicle</article_title>
 						<doi>10.1016/j.devcel.2007.04.005</doi>
 					</citation>
-					<citation key="bib11">
+					<citation key="bib11" type="journal_article">
 						<journal_title>BMC Biology</journal_title>
 						<author>Cardenas</author>
 						<volume>7</volume>
@@ -266,7 +266,7 @@
 						<article_title>Golgi localisation of GMAP210 requires two distinct cis-membrane binding mechanisms</article_title>
 						<doi>10.1186/1741-7007-7-56</doi>
 					</citation>
-					<citation key="bib12">
+					<citation key="bib12" type="journal_article">
 						<journal_title>Current Opinion in Structural Biology</journal_title>
 						<author>Cherfils</author>
 						<volume>29</volume>
@@ -275,7 +275,7 @@
 						<article_title>Arf GTPases and their effectors: assembling multivalent membrane-binding platforms</article_title>
 						<doi>10.1016/j.sbi.2014.09.007</doi>
 					</citation>
-					<citation key="bib13">
+					<citation key="bib13" type="journal_article">
 						<journal_title>eLife</journal_title>
 						<author>Cheung</author>
 						<volume>4</volume>
@@ -284,7 +284,7 @@
 						<doi>10.7554/eLife.12790</doi>
 						<elocation_id>e12790</elocation_id>
 					</citation>
-					<citation key="bib14">
+					<citation key="bib14" type="journal_article">
 						<journal_title>Biophysical Journal</journal_title>
 						<author>Cui</author>
 						<volume>100</volume>
@@ -293,7 +293,7 @@
 						<article_title>Mechanism of membrane curvature sensing by amphipathic helix containing proteins</article_title>
 						<doi>10.1016/j.bpj.2011.01.036</doi>
 					</citation>
-					<citation key="bib15">
+					<citation key="bib15" type="journal_article">
 						<journal_title>PLoS One</journal_title>
 						<author>Doucet</author>
 						<volume>10</volume>
@@ -302,7 +302,7 @@
 						<doi>10.1371/journal.pone.0137965</doi>
 						<elocation_id>e0137965</elocation_id>
 					</citation>
-					<citation key="bib16">
+					<citation key="bib16" type="journal_article">
 						<journal_title>FEBS Letters</journal_title>
 						<author>Drin</author>
 						<volume>584</volume>
@@ -311,7 +311,7 @@
 						<article_title>Amphipathic helices and membrane curvature</article_title>
 						<doi>10.1016/j.febslet.2009.10.022</doi>
 					</citation>
-					<citation key="bib17">
+					<citation key="bib17" type="journal_article">
 						<journal_title>Nature Structural &amp; Molecular Biology</journal_title>
 						<author>Drin</author>
 						<volume>14</volume>
@@ -320,7 +320,7 @@
 						<article_title>A general amphipathic alpha-helical motif for sensing membrane curvature</article_title>
 						<doi>10.1038/nsmb1194</doi>
 					</citation>
-					<citation key="bib18">
+					<citation key="bib18" type="journal_article">
 						<journal_title>Science</journal_title>
 						<author>Drin</author>
 						<volume>320</volume>
@@ -329,7 +329,7 @@
 						<article_title>Asymmetric tethering of flat and curved lipid membranes by a golgin</article_title>
 						<doi>10.1126/science.1155821</doi>
 					</citation>
-					<citation key="bib19">
+					<citation key="bib19" type="journal_article">
 						<journal_title>PLoS Genetics</journal_title>
 						<author>Follit</author>
 						<volume>4</volume>
@@ -338,7 +338,7 @@
 						<doi>10.1371/journal.pgen.1000315</doi>
 						<elocation_id>e1000315</elocation_id>
 					</citation>
-					<citation key="bib20">
+					<citation key="bib20" type="journal_article">
 						<journal_title>Bioinformatics</journal_title>
 						<author>Gautier</author>
 						<volume>24</volume>
@@ -347,7 +347,7 @@
 						<article_title>HELIQUEST: a web server to screen sequences with specific -helical properties</article_title>
 						<doi>10.1093/bioinformatics/btn392</doi>
 					</citation>
-					<citation key="bib21">
+					<citation key="bib21" type="journal_article">
 						<journal_title>Trends in Cell Biology</journal_title>
 						<author>Gillingham</author>
 						<volume>26</volume>
@@ -356,7 +356,7 @@
 						<article_title>Finding the Golgi: Golgin coiled-coil proteins show the way</article_title>
 						<doi>10.1016/j.tcb.2016.02.005</doi>
 					</citation>
-					<citation key="bib22">
+					<citation key="bib22" type="journal_article">
 						<journal_title>Journal of Cell Biology</journal_title>
 						<author>Gillingham</author>
 						<volume>167</volume>
@@ -365,7 +365,7 @@
 						<article_title>The GTPase Arf1p and the ER to Golgi cargo receptor Erv14p cooperate to recruit the golgin Rud3p to the cis-Golgi</article_title>
 						<doi>10.1083/jcb.200407088</doi>
 					</citation>
-					<citation key="bib23">
+					<citation key="bib23" type="journal_article">
 						<journal_title>Biochimica Et Biophysica Acta</journal_title>
 						<author>González-Rubio</author>
 						<volume>1808</volume>
@@ -374,7 +374,7 @@
 						<article_title>Amphipathic-lipid-packing-sensor interactions with lipids assessed by atomistic molecular dynamics</article_title>
 						<doi>10.1016/j.bbamem.2011.05.006</doi>
 					</citation>
-					<citation key="bib24">
+					<citation key="bib24" type="journal_article">
 						<journal_title>Molecular Biology of the Cell</journal_title>
 						<author>Ho</author>
 						<volume>26</volume>
@@ -383,7 +383,7 @@
 						<article_title>The HOPS/class C Vps complex tethers membranes by binding to one Rab GTPase in each apposed membrane</article_title>
 						<doi>10.1091/mbc.E14-04-0922</doi>
 					</citation>
-					<citation key="bib25">
+					<citation key="bib25" type="journal_article">
 						<journal_title>PLoS One</journal_title>
 						<author>Horchani</author>
 						<volume>9</volume>
@@ -392,7 +392,7 @@
 						<doi>10.1371/journal.pone.0113484</doi>
 						<elocation_id>e113484</elocation_id>
 					</citation>
-					<citation key="bib26">
+					<citation key="bib26" type="journal_article">
 						<journal_title>Journal of Molecular Biology</journal_title>
 						<author>Hristova</author>
 						<volume>290</volume>
@@ -401,7 +401,7 @@
 						<article_title>An amphipathic alpha-helix at a membrane interface: a structural study using a novel X-ray diffraction method</article_title>
 						<doi>10.1006/jmbi.1999.2840</doi>
 					</citation>
-					<citation key="bib27">
+					<citation key="bib27" type="journal_article">
 						<journal_title>Journal of Cell Biology</journal_title>
 						<author>Infante</author>
 						<volume>145</volume>
@@ -410,7 +410,7 @@
 						<article_title>GMAP-210, A cis-Golgi network-associated protein, is a minus end microtubule-binding protein</article_title>
 						<doi>10.1083/jcb.145.1.83</doi>
 					</citation>
-					<citation key="bib28">
+					<citation key="bib28" type="journal_article">
 						<journal_title>FEBS Journal</journal_title>
 						<author>Ishida</author>
 						<volume>282</volume>
@@ -419,7 +419,7 @@
 						<article_title>GM130 is a parallel tetramer with a flexible rod-like structure and N-terminally open (Y-shaped) and closed (I-shaped) conformations</article_title>
 						<doi>10.1111/febs.13271</doi>
 					</citation>
-					<citation key="bib29">
+					<citation key="bib29" type="journal_article">
 						<journal_title>Journal of Cell Biology</journal_title>
 						<author>Klemm</author>
 						<volume>185</volume>
@@ -428,7 +428,7 @@
 						<article_title>Segregation of sphingolipids and sterols during formation of secretory vesicles at the trans-Golgi network</article_title>
 						<doi>10.1083/jcb.200901145</doi>
 					</citation>
-					<citation key="bib30">
+					<citation key="bib30" type="journal_article">
 						<journal_title>Cell</journal_title>
 						<author>Kobayashi</author>
 						<volume>55</volume>
@@ -437,7 +437,7 @@
 						<article_title>ATP-dependent fusion of liposomes with the Golgi apparatus of perforated cells</article_title>
 						<doi>10.1016/0092-8674(88)90135-3</doi>
 					</citation>
-					<citation key="bib31">
+					<citation key="bib31" type="journal_article">
 						<journal_title>FEBS Letters</journal_title>
 						<author>Kuhlee</author>
 						<volume>589</volume>
@@ -446,7 +446,7 @@
 						<article_title>Functional homologies in vesicle tethering</article_title>
 						<doi>10.1016/j.febslet.2015.06.001</doi>
 					</citation>
-					<citation key="bib32">
+					<citation key="bib32" type="journal_article">
 						<journal_title>Journal of Cell Biology</journal_title>
 						<author>Ladinsky</author>
 						<volume>144</volume>
@@ -455,7 +455,7 @@
 						<article_title>Golgi structure in three dimensions: functional insights from the normal rat kidney cell</article_title>
 						<doi>10.1083/jcb.144.6.1135</doi>
 					</citation>
-					<citation key="bib33">
+					<citation key="bib33" type="journal_article">
 						<journal_title>Annual Review of Cell and Developmental Biology</journal_title>
 						<author>Malhotra</author>
 						<volume>31</volume>
@@ -464,7 +464,7 @@
 						<article_title>The pathway of collagen secretion</article_title>
 						<doi>10.1146/annurev-cellbio-100913-013002</doi>
 					</citation>
-					<citation key="bib34">
+					<citation key="bib34" type="journal_article">
 						<journal_title>Cell</journal_title>
 						<author>Malhotra</author>
 						<volume>58</volume>
@@ -473,7 +473,7 @@
 						<article_title>Purification of a novel class of coated vesicles mediating biosynthetic protein transport through the Golgi stack</article_title>
 						<doi>10.1016/0092-8674(89)90847-7</doi>
 					</citation>
-					<citation key="bib35">
+					<citation key="bib35" type="journal_article">
 						<journal_title>Science</journal_title>
 						<author>Malsam</author>
 						<volume>307</volume>
@@ -482,7 +482,7 @@
 						<article_title>Golgin tethers define subpopulations of COPI vesicles</article_title>
 						<doi>10.1126/science.1108061</doi>
 					</citation>
-					<citation key="bib36">
+					<citation key="bib36" type="journal_article">
 						<journal_title>PNAS</journal_title>
 						<author>Marsh</author>
 						<volume>98</volume>
@@ -491,7 +491,7 @@
 						<article_title>Organellar relationships in the Golgi region of the pancreatic beta cell line, HIT-T15, visualized by high resolution electron tomography</article_title>
 						<doi>10.1073/pnas.051631998</doi>
 					</citation>
-					<citation key="bib37">
+					<citation key="bib37" type="journal_article">
 						<journal_title>Biochemistry</journal_title>
 						<author>Mesmin</author>
 						<volume>46</volume>
@@ -500,7 +500,7 @@
 						<article_title>Two lipid-packing sensor motifs contribute to the sensitivity of ArfGAP1 to membrane curvature</article_title>
 						<doi>10.1021/bi062288w</doi>
 					</citation>
-					<citation key="bib38">
+					<citation key="bib38" type="journal_article">
 						<journal_title>Cold Spring Harbor Perspectives in Biology</journal_title>
 						<author>Munro</author>
 						<volume>3</volume>
@@ -509,7 +509,7 @@
 						<article_title>The Golgin coiled-coil proteins of the Golgi apparatus</article_title>
 						<doi>10.1101/cshperspect.a005256</doi>
 					</citation>
-					<citation key="bib39">
+					<citation key="bib39" type="journal_article">
 						<journal_title>Nature</journal_title>
 						<author>Ohya</author>
 						<volume>459</volume>
@@ -518,7 +518,7 @@
 						<article_title>Reconstitution of Rab- and SNARE-dependent membrane fusion by synthetic endosomes</article_title>
 						<doi>10.1038/nature08107</doi>
 					</citation>
-					<citation key="bib40">
+					<citation key="bib40" type="journal_article">
 						<journal_title>Traffic</journal_title>
 						<author>Pernet-Gallay</author>
 						<volume>3</volume>
@@ -527,7 +527,7 @@
 						<article_title>The overexpression of GMAP-210 blocks anterograde and retrograde transport between the ER and the Golgi apparatus</article_title>
 						<doi>10.1034/j.1600-0854.2002.31107.x</doi>
 					</citation>
-					<citation key="bib41">
+					<citation key="bib41" type="journal_article">
 						<journal_title>Journal of Cell Biology</journal_title>
 						<author>Pranke</author>
 						<volume>194</volume>
@@ -536,7 +536,7 @@
 						<article_title>α-Synuclein and ALPS motifs are membrane curvature sensors whose contrasting chemistry mediates selective vesicle binding</article_title>
 						<doi>10.1083/jcb.201011118</doi>
 					</citation>
-					<citation key="bib42">
+					<citation key="bib42" type="journal_article">
 						<journal_title>Physical Chemistry Chemical Physics</journal_title>
 						<author>Risselada</author>
 						<volume>11</volume>
@@ -545,7 +545,7 @@
 						<article_title>Curvature effects on lipid packing and dynamics in liposomes revealed by coarse grained molecular dynamics simulations</article_title>
 						<doi>10.1039/b818782g</doi>
 					</citation>
-					<citation key="bib43">
+					<citation key="bib43" type="journal_article">
 						<journal_title>Journal of Cell Science</journal_title>
 						<author>Roboti</author>
 						<volume>128</volume>
@@ -554,7 +554,7 @@
 						<article_title>The golgin GMAP-210 is required for efficient membrane trafficking in the early secretory pathway</article_title>
 						<doi>10.1242/jcs.166710</doi>
 					</citation>
-					<citation key="bib44">
+					<citation key="bib44" type="journal_article">
 						<journal_title>Molecular Biology of the Cell</journal_title>
 						<author>Sato</author>
 						<volume>26</volume>
@@ -563,7 +563,7 @@
 						<article_title>Coupling of vesicle tethering and Rab binding is required for in vivo functionality of the golgin GMAP-210</article_title>
 						<doi>10.1091/mbc.E14-10-1450</doi>
 					</citation>
-					<citation key="bib45">
+					<citation key="bib45" type="journal_article">
 						<journal_title>The EMBO Journal</journal_title>
 						<author>Simons</author>
 						<volume>6</volume>
@@ -571,7 +571,7 @@
 						<cYear>1987</cYear>
 						<article_title>Perforated MDCK cells support intracellular transport</article_title>
 					</citation>
-					<citation key="bib46">
+					<citation key="bib46" type="journal_article">
 						<journal_title>Journal of Cell Biology</journal_title>
 						<author>Sinka</author>
 						<volume>183</volume>
@@ -580,7 +580,7 @@
 						<article_title>Golgi coiled-coil proteins contain multiple binding sites for Rab family G proteins</article_title>
 						<doi>10.1083/jcb.200808018</doi>
 					</citation>
-					<citation key="bib47">
+					<citation key="bib47" type="journal_article">
 						<journal_title>New England Journal of Medicine</journal_title>
 						<author>Smits</author>
 						<volume>362</volume>
@@ -589,7 +589,7 @@
 						<article_title>Lethal skeletal dysplasia in mice and humans lacking the Golgin GMAP-210</article_title>
 						<doi>10.1056/NEJMoa0900158</doi>
 					</citation>
-					<citation key="bib48">
+					<citation key="bib48" type="journal_article">
 						<journal_title>Biophysical Journal</journal_title>
 						<author>Vamparys</author>
 						<volume>104</volume>
@@ -598,7 +598,7 @@
 						<article_title>Conical lipids in flat bilayers induce packing defects similar to that induced by positive curvature</article_title>
 						<doi>10.1016/j.bpj.2012.11.3836</doi>
 					</citation>
-					<citation key="bib49">
+					<citation key="bib49" type="journal_article">
 						<journal_title>Nature Reviews Molecular Cell Biology</journal_title>
 						<author>van Meer</author>
 						<volume>9</volume>
@@ -607,7 +607,7 @@
 						<article_title>Membrane lipids: where they are and how they behave</article_title>
 						<doi>10.1038/nrm2330</doi>
 					</citation>
-					<citation key="bib50">
+					<citation key="bib50" type="journal_article">
 						<journal_title>Nature Communications</journal_title>
 						<author>Vanni</author>
 						<volume>5</volume>
@@ -616,7 +616,7 @@
 						<article_title>A sub-nanometre view of how membrane curvature and composition modulate lipid packing and protein recruitment</article_title>
 						<doi>10.1038/ncomms5916</doi>
 					</citation>
-					<citation key="bib51">
+					<citation key="bib51" type="journal_article">
 						<journal_title>Biophysical Journal</journal_title>
 						<author>Vanni</author>
 						<volume>104</volume>
@@ -625,7 +625,7 @@
 						<article_title>Amphipathic lipid packing sensor motifs: probing bilayer defects with hydrophobic residues</article_title>
 						<doi>10.1016/j.bpj.2012.11.3837</doi>
 					</citation>
-					<citation key="bib52">
+					<citation key="bib52" type="journal_article">
 						<journal_title>Current Opinion in Cell Biology</journal_title>
 						<author>Verhey</author>
 						<volume>41</volume>
@@ -634,7 +634,7 @@
 						<article_title>Permeability barriers for generating a unique ciliary protein and lipid composition</article_title>
 						<doi>10.1016/j.ceb.2016.05.004</doi>
 					</citation>
-					<citation key="bib53">
+					<citation key="bib53" type="journal_article">
 						<journal_title>Frontiers in Cell and Developmental Biology</journal_title>
 						<author>Witkos</author>
 						<volume>3</volume>
@@ -643,7 +643,7 @@
 						<doi>10.3389/fcell.2015.00086</doi>
 						<elocation_id>86</elocation_id>
 					</citation>
-					<citation key="bib54">
+					<citation key="bib54" type="journal_article">
 						<journal_title>Science</journal_title>
 						<author>Wong</author>
 						<volume>346</volume>

@@ -74,22 +74,22 @@
 						<article_title>AMISOM must leave Somalia before ‘Mission Creep’ sets in</article_title>
 						<unstructured_citation>2014. AMISOM must leave Somalia before ‘Mission Creep’ sets in. The Star (Kenya). http://www.the-star.co.ke/news/2014/03/11/amisom-must-leave-somalia-before-mission-creep-sets-in_c906058.</unstructured_citation>
 					</citation>
-					<citation key="B2">
+					<citation key="B2" type="book">
 						<volume_title>AMISOM Annual Report 2010</volume_title>
 						<author>AMISOM</author>
 						<cYear>2010</cYear>
 					</citation>
-					<citation key="B3">
+					<citation key="B3" type="book">
 						<volume_title>AMISOM Annual Report 2011</volume_title>
 						<author>AMISOM</author>
 						<cYear>2011</cYear>
 					</citation>
-					<citation key="B4">
+					<citation key="B4" type="book">
 						<volume_title>AMISOM Mission Implementation Plan 2012</volume_title>
 						<author>AMISOM</author>
 						<cYear>2012</cYear>
 					</citation>
-					<citation key="B5">
+					<citation key="B5" type="book">
 						<volume_title>AMISOM Strategic Directive 2013</volume_title>
 						<author>AMISOM</author>
 						<cYear>2013</cYear>
@@ -111,7 +111,7 @@
 						<article_title>Continuity and Change: The evolution and resilience of Al-Shabab’s media insurgency, 2006–2016</article_title>
 						<unstructured_citation>2016. Continuity and Change: The evolution and resilience of Al-Shabab’s media insurgency, 2006–2016. https://www.hate-speech.org/new-report-on-al-shabab-media/.</unstructured_citation>
 					</citation>
-					<citation key="B9">
+					<citation key="B9" type="journal_article">
 						<journal_title>Procedia–Social and Behavioral Sciences</journal_title>
 						<volume>148</volume>
 						<first_page>579</first_page>
@@ -119,7 +119,7 @@
 						<article_title>Cultural Awareness in Peace Operations: Effective Marketing or Strategic Communications</article_title>
 						<doi>10.1016/j.sbspro.2014.07.083</doi>
 					</citation>
-					<citation key="B10">
+					<citation key="B10" type="book_chapter">
 						<volume_title>Communication and Peace: Mapping an Emerging Field</volume_title>
 						<first_page>163</first_page>
 						<cYear>2015</cYear>
@@ -142,12 +142,12 @@
 						<article_title>Somalia. Committee to Protect Journalists</article_title>
 						<unstructured_citation>CPJ. 2017. Somalia. Committee to Protect Journalists. https://cpj.org/africa/somalia/.</unstructured_citation>
 					</citation>
-					<citation key="B14">
+					<citation key="B14" type="book_chapter">
 						<volume_title>The African Standby Force: Quo Vadis?</volume_title>
 						<first_page>63</first_page>
 						<cYear>2017</cYear>
 					</citation>
-					<citation key="B15">
+					<citation key="B15" type="journal_article">
 						<journal_title>International Peacekeeping</journal_title>
 						<volume>7</volume>
 						<issue>1</issue>
@@ -156,12 +156,12 @@
 						<article_title>Cultural Issues in Contemporary Peacekeeping</article_title>
 						<doi>10.1080/13533310008413823</doi>
 					</citation>
-					<citation key="B16">
+					<citation key="B16" type="book">
 						<volume_title>Final Report: Radio in a Box Program</volume_title>
 						<author>Farsight Africa Group</author>
 						<cYear>2017</cYear>
 					</citation>
-					<citation key="B17">
+					<citation key="B17" type="book">
 						<volume_title>The World’s Most Dangerous Place</volume_title>
 						<cYear>2013</cYear>
 					</citation>
@@ -170,7 +170,7 @@
 						<article_title>Mastering the Narrative: Counterterrorism Strategic Communications and the United Nations. Center on Global Counterterrorism Cooperation</article_title>
 						<unstructured_citation>2013. Mastering the Narrative: Counterterrorism Strategic Communications and the United Nations. Center on Global Counterterrorism Cooperation. http://globalcenter.org/wp-content/uploads/2013/03/Feb2013_CT_StratComm.pdf.</unstructured_citation>
 					</citation>
-					<citation key="B19">
+					<citation key="B19" type="journal_article">
 						<journal_title>Stability</journal_title>
 						<volume>2</volume>
 						<issue>2</issue>
@@ -179,7 +179,7 @@
 						<article_title>Lessons from the African Union Mission for Somalia (AMISOM) for Peace Operations in Mali</article_title>
 						<doi>10.5334/sta.bj</doi>
 					</citation>
-					<citation key="B20">
+					<citation key="B20" type="journal_article">
 						<journal_title>International Journal of Strategic Communication</journal_title>
 						<volume>1</volume>
 						<issue>1</issue>
@@ -188,12 +188,12 @@
 						<article_title>Defining strategic communication</article_title>
 						<doi>10.1080/15531180701285244</doi>
 					</citation>
-					<citation key="B21">
+					<citation key="B21" type="book">
 						<volume_title>Al-Shabaab in Somalia</volume_title>
 						<cYear>2013</cYear>
 						<doi>10.1093/acprof:oso/9780199327874.001.0001</doi>
 					</citation>
-					<citation key="B22">
+					<citation key="B22" type="journal_article">
 						<journal_title>Uniting our Strengths for Peace–Politics, Partnership and People</journal_title>
 						<author>HIPPO</author>
 						<cYear>2015</cYear>
@@ -204,46 +204,46 @@
 						<cYear>2010</cYear>
 						<unstructured_citation>ICG. 2010. Somalia’s Divided Islamists. https://www.crisisgroup.org/africa/horn-africa/somalia/somalia-s-divided-islamists.</unstructured_citation>
 					</citation>
-					<citation key="B24">
+					<citation key="B24" type="journal_article">
 						<journal_title>Citizens’ Perception of Peace and Stabilization Initiatives in Somalia</journal_title>
 						<author>Ipsos</author>
 						<cYear>2015</cYear>
 					</citation>
-					<citation key="B25">
+					<citation key="B25" type="journal_article">
 						<journal_title>Citizens Perception of Peace and Stabilization Initiative in Somalia</journal_title>
 						<author>Ipsos</author>
 						<cYear>2016</cYear>
 					</citation>
-					<citation key="B26">
+					<citation key="B26" type="journal_article">
 						<journal_title>Final Report: Information Support Services to UNSOA/AMISOM: November 2009–November 2012</journal_title>
 						<author>IST</author>
 						<cYear>2012</cYear>
 					</citation>
-					<citation key="B27">
+					<citation key="B27" type="journal_article">
 						<journal_title>Mogadishu Polling Survey 2013 (Wave 2)</journal_title>
 						<author>IST</author>
 						<cYear>2013</cYear>
 					</citation>
-					<citation key="B28">
+					<citation key="B28" type="journal_article">
 						<journal_title>Citizens Perception of Peace and Stabilization Initiatives in Somalia</journal_title>
 						<author>IST</author>
 						<cYear>2015</cYear>
 					</citation>
-					<citation key="B29">
+					<citation key="B29" type="dissertation">
 						<volume_title>TV, Twitter and Telegram: How Do Jihadi Insurgents Attempt to Influence the Mass Media?</volume_title>
 						<cYear>2017</cYear>
 						<unstructured_citation>2017. King’s College London. TV, Twitter and Telegram: How Do Jihadi Insurgents Attempt to Influence the Mass Media?.</unstructured_citation>
 					</citation>
-					<citation key="B30">
+					<citation key="B30" type="book">
 						<volume_title>Peacekeeping and Public Information</volume_title>
 						<cYear>1999</cYear>
 					</citation>
-					<citation key="B31">
+					<citation key="B31" type="book_chapter">
 						<volume_title>Communication and Peace: Mapping an Emerging Field</volume_title>
 						<first_page>135</first_page>
 						<cYear>2015</cYear>
 					</citation>
-					<citation key="B32">
+					<citation key="B32" type="journal_article">
 						<journal_title>International Peacekeeping</journal_title>
 						<volume>11</volume>
 						<issue>4</issue>
@@ -257,7 +257,7 @@
 						<cYear>2016</cYear>
 						<unstructured_citation>2016. New York: International Peace Institute. The Surge to Stabilize: Lessons for the UN from the AU’s Experience in Somalia. https://www.ipinst.org/2016/05/un-au-stabilize-somalia.</unstructured_citation>
 					</citation>
-					<citation key="B34">
+					<citation key="B34" type="journal_article">
 						<author>NATO</author>
 						<cYear>2009</cYear>
 						<article_title>Strategic Communication Policy</article_title>
@@ -268,13 +268,13 @@
 						<cYear>2010</cYear>
 						<unstructured_citation>NATO. 2010. Military Concept for Strategic Communications. http://info.publicintelligence.net/NATO-STRATCOM-Concept.pdf.</unstructured_citation>
 					</citation>
-					<citation key="B36">
+					<citation key="B36" type="journal_article">
 						<journal_title>International Peacekeeping</journal_title>
 						<cYear>2017</cYear>
 						<article_title>Policy Entrepreneurship by International Bureaucracies: The Evolution of Public Information in UN Peacekeeping</article_title>
 						<doi>10.1080/13533312.2017.1395286</doi>
 					</citation>
-					<citation key="B37">
+					<citation key="B37" type="book">
 						<volume_title>Strategic Communication: Origins, Concepts and Current Debates</volume_title>
 						<cYear>2011</cYear>
 					</citation>
@@ -284,21 +284,21 @@
 						<article_title>Multi-National Force Iraq Commander’s Counterinsurgency Guidance</article_title>
 						<unstructured_citation>2008. Multi-National Force Iraq Commander’s Counterinsurgency Guidance. Military Review. http://usacac.army.mil/CAC2/MilitaryReview/Archives/English/MilitaryReview_20081031_art004.pdf.</unstructured_citation>
 					</citation>
-					<citation key="B39">
+					<citation key="B39" type="conference_paper">
 						<cYear>2013</cYear>
 						<unstructured_citation>2013. Remarks to the Institute for Horn of Africa Studies and Affairs conference, Minneapolis, October. http://www.youtube.com/watch?v=iq3PfPwlzBk&amp;feature=youtu.be.</unstructured_citation>
 					</citation>
-					<citation key="B40">
+					<citation key="B40" type="journal_article">
 						<journal_title>Citizens’ Perceptions of the United Nations in Somalia: A Qualitative Analysis</journal_title>
 						<author>UNSOM</author>
 						<cYear>2016</cYear>
 					</citation>
-					<citation key="B41">
+					<citation key="B41" type="journal_article">
 						<journal_title>Citizens Perception of Peace and Stabilization Initiative in Somalia</journal_title>
 						<author>UNSOM-AU</author>
 						<cYear>2016</cYear>
 					</citation>
-					<citation key="B42">
+					<citation key="B42" type="journal_article">
 						<author>Wikileak Cable</author>
 						<cYear>2010</cYear>
 					</citation>
@@ -312,7 +312,7 @@
 						<cYear>2017</cYear>
 						<unstructured_citation>2017. New York: International Peace Institute. UN Support to Regional Peace Operations: Lessons from UNSOA. https://www.ipinst.org/2017/02/un-support-regional-peace-ops-unsoa.</unstructured_citation>
 					</citation>
-					<citation key="B45">
+					<citation key="B45" type="book">
 						<volume_title>Fighting for Peace in Somalia: A History and Analysis of the African Union Mission (AMISOM), 2007–2017</volume_title>
 						<cYear>2018</cYear>
 					</citation>

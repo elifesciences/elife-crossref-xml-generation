@@ -2,6 +2,26 @@ from xml.etree.ElementTree import SubElement
 from elifecrossref import related, tags
 
 
+PUB_TYPE_TO_CITATION_TYPE_MAP = {
+    "book": "book",
+    "clinicaltrial": "other",
+    "confproc": "conference_paper",
+    "data": "dataset",
+    "journal": "journal_article",
+    "other": "other",
+    "patent": "patent",
+    "periodical": "journal",
+    "preprint": "preprint",
+    "report": "report",
+    "software": "software",
+    "thesis": "dissertation",
+    "web": "web_resource",
+}
+
+
+BOOK_TYPE_TO_CITATION_TYPE_MAP = {"chapter-title": "book_chapter"}
+
+
 def set_citation_list(parent, poa_article, relations_program_tag, crossref_config):
     """
     Set the citation_list from the article object ref_list objects
@@ -34,6 +54,9 @@ def set_citation(parent, ref, ref_index, face_markup, crossref_schema_version):
     # continue with creating a citation tag
     citation_tag = SubElement(parent, "citation")
     set_citation_key(citation_tag, ref, ref_index)
+    citation_type = get_citation_type(ref)
+    if citation_type:
+        citation_tag.set("type", citation_type)
     set_citation_title(citation_tag, ref)
     set_citation_authors(citation_tag, ref)
     set_citation_volume(citation_tag, ref)
@@ -47,6 +70,16 @@ def set_citation(parent, ref, ref_index, face_markup, crossref_schema_version):
     # unstructured-citation
     if do_unstructured_citation(ref) is True:
         set_unstructured_citation(citation_tag, ref, face_markup)
+
+
+def get_citation_type(ref):
+    "determine a Crossref citation type attribute from an article Citation object"
+    citation_type = PUB_TYPE_TO_CITATION_TYPE_MAP.get(ref.publication_type, None)
+    if citation_type == "book" and ref.chapter_title:
+        citation_type = BOOK_TYPE_TO_CITATION_TYPE_MAP.get(
+            "chapter-title", citation_type
+        )
+    return citation_type
 
 
 def set_citation_key(citation_tag, ref, ref_index):

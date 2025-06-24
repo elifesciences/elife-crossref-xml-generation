@@ -180,7 +180,7 @@
 					</collection>
 				</doi_data>
 				<citation_list>
-					<citation key="bib1">
+					<citation key="bib1" type="journal_article">
 						<journal_title>Scientific American</journal_title>
 						<author>Appel</author>
 						<volume>237</volume>
@@ -189,7 +189,7 @@
 						<article_title>The Solution of the Four-color-map Problem</article_title>
 						<doi>10.1038/scientificamerican1077-108</doi>
 					</citation>
-					<citation key="bib2">
+					<citation key="bib2" type="journal_article">
 						<journal_title>Neuron</journal_title>
 						<author>Berning</author>
 						<volume>87</volume>
@@ -198,7 +198,7 @@
 						<article_title>SegEM: efficient image analysis for high-resolution connectomics</article_title>
 						<doi>10.1016/j.neuron.2015.09.003</doi>
 					</citation>
-					<citation key="bib3">
+					<citation key="bib3" type="journal_article">
 						<journal_title>Nature Protocols</journal_title>
 						<author>Bischofberger</author>
 						<volume>1</volume>
@@ -207,12 +207,12 @@
 						<article_title>Patch-clamp recording from mossy fiber terminals in hippocampal slices</article_title>
 						<doi>10.1038/nprot.2006.312</doi>
 					</citation>
-					<citation key="bib4">
+					<citation key="bib4" type="book">
 						<volume_title>Neural Networks for Pattern Recognition</volume_title>
 						<author>Bishop</author>
 						<cYear>1995</cYear>
 					</citation>
-					<citation key="bib5">
+					<citation key="bib5" type="journal_article">
 						<journal_title>The Histochemical Journal</journal_title>
 						<author>Bone</author>
 						<volume>4</volume>
@@ -221,7 +221,7 @@
 						<article_title>Osmolarity of osmium tetroxide and glutaraldehyde fixatives</article_title>
 						<doi>10.1007/BF01005008</doi>
 					</citation>
-					<citation key="bib6">
+					<citation key="bib6" type="journal_article">
 						<journal_title>Neuropharmacology</journal_title>
 						<author>Bourne</author>
 						<volume>52</volume>
@@ -230,7 +230,7 @@
 						<article_title>Warmer preparation of hippocampal slices prevents synapse proliferation that might obscure LTP-related structural plasticity</article_title>
 						<doi>10.1016/j.neuropharm.2006.06.020</doi>
 					</citation>
-					<citation key="bib7">
+					<citation key="bib7" type="journal_article">
 						<journal_title>Current Opinion in Neurobiology</journal_title>
 						<author>Briggman</author>
 						<volume>22</volume>
@@ -239,7 +239,7 @@
 						<article_title>Volume electron microscopy for neuronal circuit reconstruction</article_title>
 						<doi>10.1016/j.conb.2011.10.022</doi>
 					</citation>
-					<citation key="bib8">
+					<citation key="bib8" type="journal_article">
 						<journal_title>Nature</journal_title>
 						<author>Briggman</author>
 						<volume>471</volume>
@@ -248,13 +248,13 @@
 						<article_title>Wiring specificity in the direction-selectivity circuit of the retina</article_title>
 						<doi>10.1038/nature09818</doi>
 					</citation>
-					<citation key="bib9">
+					<citation key="bib9" type="journal_article">
 						<journal_title>Neutral Information Processing Systems(2012)</journal_title>
 						<author>Ciresan</author>
 						<cYear>2012</cYear>
 						<article_title>Deep neural networks segment neuronal membranes in electron microscopy images</article_title>
 					</citation>
-					<citation key="bib10">
+					<citation key="bib10" type="journal_article">
 						<journal_title>Neuroscience Letters</journal_title>
 						<author>Cragg</author>
 						<volume>15</volume>
@@ -263,7 +263,7 @@
 						<article_title>Brain extracellular space fixed for electron microscopy</article_title>
 						<doi>10.1016/0304-3940(79)96130-5</doi>
 					</citation>
-					<citation key="bib11">
+					<citation key="bib11" type="journal_article">
 						<journal_title>Tissue and Cell</journal_title>
 						<author>Cragg</author>
 						<volume>12</volume>
@@ -272,7 +272,7 @@
 						<article_title>Preservation of extracellular space during fixation of the brain for electron microscopy</article_title>
 						<doi>10.1016/0040-8166(80)90052-X</doi>
 					</citation>
-					<citation key="bib12">
+					<citation key="bib12" type="journal_article">
 						<journal_title>Visual Neuroscience</journal_title>
 						<author>Demb</author>
 						<volume>29</volume>
@@ -281,7 +281,7 @@
 						<article_title>Intrinsic properties and functional circuitry of the AII amacrine cell</article_title>
 						<doi>10.1017/S0952523811000368</doi>
 					</citation>
-					<citation key="bib13">
+					<citation key="bib13" type="journal_article">
 						<journal_title>PLoS Biology</journal_title>
 						<author>Denk</author>
 						<volume>2</volume>
@@ -290,7 +290,7 @@
 						<doi>10.1371/journal.pbio.0020329</doi>
 						<elocation_id>e329</elocation_id>
 					</citation>
-					<citation key="bib14">
+					<citation key="bib14" type="journal_article">
 						<journal_title>Brain Research</journal_title>
 						<author>Hartveit</author>
 						<volume>1487</volume>
@@ -299,7 +299,7 @@
 						<article_title>Electrical synapses between AII amacrine cells in the retina: Function and modulation</article_title>
 						<doi>10.1016/j.brainres.2012.05.060</doi>
 					</citation>
-					<citation key="bib15">
+					<citation key="bib15" type="journal_article">
 						<journal_title>Nature Neuroscience</journal_title>
 						<author>Helmstaedter</author>
 						<volume>14</volume>
@@ -308,7 +308,7 @@
 						<article_title>High-accuracy neurite reconstruction for high-throughput neuroanatomy</article_title>
 						<doi>10.1038/nn.2868</doi>
 					</citation>
-					<citation key="bib16">
+					<citation key="bib16" type="journal_article">
 						<journal_title>Nature</journal_title>
 						<author>Helmstaedter</author>
 						<volume>500</volume>
@@ -317,14 +317,14 @@
 						<article_title>Connectomic reconstruction of the inner plexiform layer in the mouse retina</article_title>
 						<doi>10.1038/nature12346</doi>
 					</citation>
-					<citation key="bib17">
+					<citation key="bib17" type="journal_article">
 						<journal_title>Neural and Evolutionary Computing</journal_title>
 						<author>Hinton</author>
 						<cYear>2012</cYear>
 						<article_title>Improving neural networks by preventing co-adaptation of feature detectors</article_title>
 						<elocation_id>arXiv:1207.0580v1</elocation_id>
 					</citation>
-					<citation key="bib18">
+					<citation key="bib18" type="journal_article">
 						<journal_title>Journal of Classification</journal_title>
 						<author>Hubert</author>
 						<volume>2</volume>
@@ -332,19 +332,19 @@
 						<cYear>1985</cYear>
 						<article_title>Comparing partitions</article_title>
 					</citation>
-					<citation key="bib19">
+					<citation key="bib19" type="conference_paper">
 						<author>Jain</author>
 						<cYear>2010</cYear>
 						<article_title>Boundary learning by optimization with topological constraints</article_title>
 						<unstructured_citation>Jain BV, Bollman B, Richardson M, Berger DR, Helmstaedter MN, Briggman KL, Denk W, Bowden JB, Mendenhall JM, Abraham WC, Harris KM, Kasthuri N, Hayworth KJ, Schalek R, Tapia JC, Lichtman JW, Seung HS. 2010. Boundary learning by optimization with topological constraints. Computer Vision and Pattern Recognition (CVPR), 2010 IEEE Conference On, IEEE.</unstructured_citation>
 					</citation>
-					<citation key="bib20">
+					<citation key="bib20" type="conference_paper">
 						<author>Jain</author>
 						<cYear>2007</cYear>
 						<article_title>Supervised learning of image restoration with convolutional networks</article_title>
 						<unstructured_citation>Jain V, Murray JF, Roth F, Turaga S, Zhigulin V, Briggman KL, Helmstaedter MN. 2007. Supervised learning of image restoration with convolutional networks. Computer Vision, 2007. ICCV 2007. IEEE 11th International Conference On.</unstructured_citation>
 					</citation>
-					<citation key="bib21">
+					<citation key="bib21" type="journal_article">
 						<journal_title>Current Opinion in Neurobiology</journal_title>
 						<author>Jain</author>
 						<volume>20</volume>
@@ -353,7 +353,7 @@
 						<article_title>Machines that learn to segment images: a crucial technology for connectomics</article_title>
 						<doi>10.1016/j.conb.2010.07.004</doi>
 					</citation>
-					<citation key="bib22">
+					<citation key="bib22" type="journal_article">
 						<journal_title>Advances in Neural Information Processing Systems</journal_title>
 						<author>Jain</author>
 						<volume>24</volume>
@@ -361,7 +361,7 @@
 						<cYear>2011</cYear>
 						<article_title>Learning to agglomerate superpixel hierarchies</article_title>
 					</citation>
-					<citation key="bib23">
+					<citation key="bib23" type="journal_article">
 						<journal_title>The Journal of Neuroscience</journal_title>
 						<author>Johnson</author>
 						<volume>23</volume>
@@ -369,7 +369,7 @@
 						<cYear>2003</cYear>
 						<article_title>Vesicular neurotransmitter transporter expression in developing postnatal rodent retina: GABA and glycine precede glutamate</article_title>
 					</citation>
-					<citation key="bib24">
+					<citation key="bib24" type="journal_article">
 						<journal_title>Medical Image Analysis</journal_title>
 						<author>Jurrus</author>
 						<volume>14</volume>
@@ -378,7 +378,7 @@
 						<article_title>Detection of neuron membranes in electron microscopy images using a serial neural network architecture</article_title>
 						<doi>10.1016/j.media.2010.06.002</doi>
 					</citation>
-					<citation key="bib25">
+					<citation key="bib25" type="journal_article">
 						<journal_title>Nature</journal_title>
 						<author>Kim</author>
 						<volume>509</volume>
@@ -387,7 +387,7 @@
 						<article_title>Space–time wiring specificity supports direction selectivity in the retina</article_title>
 						<doi>10.1038/nature13240</doi>
 					</citation>
-					<citation key="bib26">
+					<citation key="bib26" type="journal_article">
 						<journal_title>Neuroscience</journal_title>
 						<author>Kirov</author>
 						<volume>127</volume>
@@ -396,7 +396,7 @@
 						<article_title>Dendritic spines disappear with chilling but proliferate excessively upon rewarming of mature hippocampus</article_title>
 						<doi>10.1016/j.neuroscience.2004.04.053</doi>
 					</citation>
-					<citation key="bib27">
+					<citation key="bib27" type="journal_article">
 						<journal_title>Computer Vision, Graphics, and Image Processing</journal_title>
 						<author>Kong</author>
 						<volume>48</volume>
@@ -405,7 +405,7 @@
 						<article_title>Digital topology: Introduction and survey</article_title>
 						<doi>10.1016/0734-189X(89)90147-3</doi>
 					</citation>
-					<citation key="bib28">
+					<citation key="bib28" type="journal_article">
 						<journal_title>eLife</journal_title>
 						<author>Korogod</author>
 						<volume>4</volume>
@@ -414,7 +414,7 @@
 						<doi>10.7554/eLife.05793</doi>
 						<elocation_id>e05793</elocation_id>
 					</citation>
-					<citation key="bib29">
+					<citation key="bib29" type="journal_article">
 						<journal_title>NeuroReport</journal_title>
 						<author>Koulen</author>
 						<volume>8</volume>
@@ -423,13 +423,13 @@
 						<article_title>Vesicular acetylcholine transporter (VAChT)</article_title>
 						<doi>10.1097/00001756-199709080-00008</doi>
 					</citation>
-					<citation key="bib30">
+					<citation key="bib30" type="conference_paper">
 						<author>Krizhevsky</author>
 						<cYear>2012</cYear>
 						<article_title>Imagenet classification with deep convolutional neural networks</article_title>
 						<unstructured_citation>Krizhevsky A, Sutskever I, Hinton GE. 2012. Imagenet classification with deep convolutional neural networks. Neutral Information Processing Systems(2012).</unstructured_citation>
 					</citation>
-					<citation key="bib31">
+					<citation key="bib31" type="journal_article">
 						<journal_title>Image Analysis &amp; Stereology</journal_title>
 						<author>Legland</author>
 						<volume>26</volume>
@@ -438,7 +438,7 @@
 						<article_title>Computation of Minkowski measures on 2D and 3D binary images</article_title>
 						<doi>10.5566/ias.v26.p83-92</doi>
 					</citation>
-					<citation key="bib32">
+					<citation key="bib32" type="journal_article">
 						<journal_title>PLoS ONE</journal_title>
 						<author>Nunez-Iglesias</author>
 						<volume>8</volume>
@@ -447,7 +447,7 @@
 						<doi>10.1371/journal.pone.0071715.s004</doi>
 						<elocation_id>e71715</elocation_id>
 					</citation>
-					<citation key="bib33">
+					<citation key="bib33" type="journal_article">
 						<journal_title>Frontiers in Neuroinformatics</journal_title>
 						<author>Nunez-Iglesias</author>
 						<volume>8</volume>
@@ -456,19 +456,19 @@
 						<article_title>Graph-based active learning of agglomeration (GALA): a Python library to segment 2D and 3D neuroimages</article_title>
 						<doi>10.1109/TPAMI.2012.120</doi>
 					</citation>
-					<citation key="bib34">
+					<citation key="bib34" type="dataset">
 						<volume_title>Dryad Digital Repository</volume_title>
 						<author>Pallotto</author>
 						<cYear>2015</cYear>
 						<article_title>Data from: extracellular space preservation aids the connectomic analysis of neural circuits</article_title>
 						<doi>10.5061/dryad.36h28</doi>
 					</citation>
-					<citation key="bib35">
+					<citation key="bib35" type="book">
 						<volume_title>The Fine Structure of the Nervous System: Neurons and Their Supporting Cells</volume_title>
 						<author>Peters</author>
 						<cYear>1991</cYear>
 					</citation>
-					<citation key="bib36">
+					<citation key="bib36" type="journal_article">
 						<journal_title>Cell Biology International</journal_title>
 						<author>Rash</author>
 						<volume>22</volume>
@@ -477,7 +477,7 @@
 						<article_title>Ultrastructure, histological distribution, and freeze-fracture immunocytochemistry of gap junctions in rat brain and spinal cord</article_title>
 						<doi>10.1006/cbir.1998.0392</doi>
 					</citation>
-					<citation key="bib37">
+					<citation key="bib37" type="journal_article">
 						<journal_title>Pattern Recognition, Springer Berlin Heidelberg</journal_title>
 						<author>Rigoll</author>
 						<volume>5096</volume>
@@ -485,7 +485,7 @@
 						<cYear>2008</cYear>
 						<article_title>Segmentation of SBFSEM volume data of neural tissue by hierarchical classification</article_title>
 					</citation>
-					<citation key="bib38">
+					<citation key="bib38" type="journal_article">
 						<journal_title>Journal of Histochemistry &amp; Cytochemistry</journal_title>
 						<author>Rostaing</author>
 						<volume>52</volume>
@@ -494,7 +494,7 @@
 						<article_title>Preservation of Immunoreactivity and Fine Structure of Adult C. elegans Tissues Using High-pressure Freezing</article_title>
 						<doi>10.1177/002215540405200101</doi>
 					</citation>
-					<citation key="bib39">
+					<citation key="bib39" type="journal_article">
 						<journal_title>The Journal of Comparative Neurology</journal_title>
 						<author>Strettoi</author>
 						<volume>325</volume>
@@ -503,7 +503,7 @@
 						<article_title>Synaptic connections of the narrow-field, bistratified rod amacrine cell (aII) in the rabbit retina</article_title>
 						<doi>10.1002/cne.903250203</doi>
 					</citation>
-					<citation key="bib40">
+					<citation key="bib40" type="journal_article">
 						<journal_title>Physiological Reviews</journal_title>
 						<author>Sykova</author>
 						<volume>88</volume>
@@ -512,7 +512,7 @@
 						<article_title>Diffusion in brain extracellular space</article_title>
 						<doi>10.1152/physrev.00027.2007</doi>
 					</citation>
-					<citation key="bib41">
+					<citation key="bib41" type="journal_article">
 						<journal_title>Nature</journal_title>
 						<author>Takemura</author>
 						<volume>500</volume>
@@ -521,7 +521,7 @@
 						<article_title>A visual motion detection circuit suggested by Drosophila connectomics</article_title>
 						<doi>10.1038/nature12450</doi>
 					</citation>
-					<citation key="bib42">
+					<citation key="bib42" type="journal_article">
 						<journal_title>The Journal of Comparative Neurology</journal_title>
 						<author>Tao-Cheng</author>
 						<volume>501</volume>
@@ -530,7 +530,7 @@
 						<article_title>Structural changes at synapses after delayed perfusion fixation in different regions of the mouse brain</article_title>
 						<doi>10.1002/cne.21276</doi>
 					</citation>
-					<citation key="bib43">
+					<citation key="bib43" type="journal_article">
 						<journal_title>Neural Computation</journal_title>
 						<author>Turaga</author>
 						<volume>22</volume>
@@ -539,7 +539,7 @@
 						<article_title>Convolutional networks can learn to generate affinity graphs for image segmentation</article_title>
 						<doi>10.1098/rstb.1986.0056</doi>
 					</citation>
-					<citation key="bib44">
+					<citation key="bib44" type="journal_article">
 						<journal_title>The Anatomical Record</journal_title>
 						<author>van Harreveld</author>
 						<volume>182</volume>
@@ -548,7 +548,7 @@
 						<article_title>Rapid freezing of deep cerebral structures for electron microscopy</article_title>
 						<doi>10.1002/ar.1091820311</doi>
 					</citation>
-					<citation key="bib45">
+					<citation key="bib45" type="journal_article">
 						<journal_title>Journal of Anatomy</journal_title>
 						<author>van Harreveld</author>
 						<volume>101</volume>
@@ -556,7 +556,7 @@
 						<cYear>1967</cYear>
 						<article_title>Extracellular space in the cerebral cortex of the mouse</article_title>
 					</citation>
-					<citation key="bib46">
+					<citation key="bib46" type="journal_article">
 						<journal_title>The Anatomical Record</journal_title>
 						<author>van Harreveld</author>
 						<volume>166</volume>
@@ -565,7 +565,7 @@
 						<article_title>Extracellular space in frozen and ethanol substituted central nervous tissue</article_title>
 						<doi>10.1002/ar.1091660109</doi>
 					</citation>
-					<citation key="bib47">
+					<citation key="bib47" type="journal_article">
 						<journal_title>Journal of Cell Science</journal_title>
 						<author>Van Harreveld</author>
 						<volume>6</volume>
@@ -573,7 +573,7 @@
 						<cYear>1970</cYear>
 						<article_title>The magnitude of the extracellular space in electron micrographs of superficial and deep regions of the cerebral cortex</article_title>
 					</citation>
-					<citation key="bib48">
+					<citation key="bib48" type="journal_article">
 						<journal_title>Springer Berlin Heidelberg</journal_title>
 						<author>Vucetic</author>
 						<volume>2167</volume>
@@ -581,7 +581,7 @@
 						<cYear>2001</cYear>
 						<article_title>Classification on Data with Biased Class Distribution</article_title>
 					</citation>
-					<citation key="bib49">
+					<citation key="bib49" type="journal_article">
 						<journal_title>Nature</journal_title>
 						<author>Young</author>
 						<volume>135</volume>
@@ -590,7 +590,7 @@
 						<article_title>Osmotic pressure of fixing solutions</article_title>
 						<doi>10.1038/135823b0</doi>
 					</citation>
-					<citation key="bib50">
+					<citation key="bib50" type="journal_article">
 						<journal_title>NeuroImage</journal_title>
 						<author>Yushkevich</author>
 						<volume>31</volume>
@@ -599,7 +599,7 @@
 						<article_title>User-guided 3D active contour segmentation of anatomical structures: significantly improved efficiency and reliability</article_title>
 						<doi>10.1016/j.neuroimage.2006.01.015</doi>
 					</citation>
-					<citation key="bib51">
+					<citation key="bib51" type="journal_article">
 						<journal_title>Computer Vision and Pattern Recognition</journal_title>
 						<author>Zeiler</author>
 						<cYear>2013</cYear>

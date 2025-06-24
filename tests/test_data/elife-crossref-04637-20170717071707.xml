@@ -279,7 +279,7 @@
 					</collection>
 				</doi_data>
 				<citation_list>
-					<citation key="bib2">
+					<citation key="bib2" type="journal_article">
 						<journal_title>Human Molecular Genetics</journal_title>
 						<author>Antonacci</author>
 						<volume>18</volume>
@@ -288,7 +288,7 @@
 						<article_title>Characterization of six human disease-associated inversion polymorphisms</article_title>
 						<doi>10.1093/hmg/ddp187</doi>
 					</citation>
-					<citation key="bib3">
+					<citation key="bib3" type="journal_article">
 						<journal_title>American Journal of Human Genetics</journal_title>
 						<author>Ardlie</author>
 						<volume>69</volume>
@@ -297,7 +297,7 @@
 						<article_title>Lower-than-expected linkage disequilibrium between tightly linked markers in humans suggests a role for gene conversion</article_title>
 						<doi>10.1086/323251</doi>
 					</citation>
-					<citation key="bib4">
+					<citation key="bib4" type="journal_article">
 						<journal_title>Science</journal_title>
 						<author>Auton</author>
 						<volume>336</volume>
@@ -306,7 +306,7 @@
 						<article_title>A Fine-Scale Chimpanzee genetic map from population sequencing</article_title>
 						<doi>10.1126/science.1216872</doi>
 					</citation>
-					<citation key="bib5">
+					<citation key="bib5" type="journal_article">
 						<journal_title>Science</journal_title>
 						<author>Bailey</author>
 						<volume>297</volume>
@@ -315,7 +315,7 @@
 						<article_title>Recent segmental duplications in the human genome</article_title>
 						<doi>10.1126/science.1072047</doi>
 					</citation>
-					<citation key="bib7">
+					<citation key="bib7" type="journal_article">
 						<journal_title>Science</journal_title>
 						<author>Baudat</author>
 						<volume>327</volume>
@@ -324,7 +324,7 @@
 						<article_title>PRDM9 is a major Determinant of meiotic recombination hotspots in humans and Mice</article_title>
 						<doi>10.1126/science.1183439</doi>
 					</citation>
-					<citation key="bib6">
+					<citation key="bib6" type="journal_article">
 						<journal_title>Chromosome Research</journal_title>
 						<author>Baudat</author>
 						<volume>15</volume>
@@ -333,7 +333,7 @@
 						<article_title>Regulating double-stranded DNA break repair towards crossover or non-crossover during mammalian meiosis</article_title>
 						<doi>10.1007/s10577-007-1140-3</doi>
 					</citation>
-					<citation key="bib8">
+					<citation key="bib8" type="journal_article">
 						<journal_title>Nature Reviews Genetics</journal_title>
 						<author>Baudat</author>
 						<volume>14</volume>
@@ -342,7 +342,7 @@
 						<article_title>Meiotic recombination in mammals: localization and regulation</article_title>
 						<doi>10.1038/nrg3573</doi>
 					</citation>
-					<citation key="bib9">
+					<citation key="bib9" type="journal_article">
 						<journal_title>Nucleic Acids Research</journal_title>
 						<author>Benson</author>
 						<volume>42</volume>
@@ -351,7 +351,7 @@
 						<article_title>GenBank</article_title>
 						<doi>10.1093/nar/gkt1030</doi>
 					</citation>
-					<citation key="bib10">
+					<citation key="bib10" type="journal_article">
 						<journal_title>Proceedings of the National Academy of Sciences of USA</journal_title>
 						<author>Berg</author>
 						<volume>108</volume>
@@ -360,14 +360,14 @@
 						<article_title>Variants of the protein PRDM9 differentially regulate a set of human meiotic recombination hotspots highly active in African populations</article_title>
 						<doi>10.1073/pnas.1109531108</doi>
 					</citation>
-					<citation key="bib11">
+					<citation key="bib11" type="book">
 						<volume_title>Science and statistics: a festschrift for terry speed</volume_title>
 						<author>Broman</author>
 						<first_page>237</first_page>
 						<cYear>2003</cYear>
 						<article_title>Common long human inversion polymorphism on chromosome 8p</article_title>
 					</citation>
-					<citation key="bib12">
+					<citation key="bib12" type="journal_article">
 						<journal_title>Nature Genetics</journal_title>
 						<author>Campbell</author>
 						<volume>44</volume>
@@ -376,7 +376,7 @@
 						<article_title>Estimating the human mutation rate using autozygosity in a founder population</article_title>
 						<doi>10.1038/ng.2418</doi>
 					</citation>
-					<citation key="bib14">
+					<citation key="bib14" type="journal_article">
 						<journal_title>Nature Cell Biology</journal_title>
 						<author>Cole</author>
 						<volume>14</volume>
@@ -385,7 +385,7 @@
 						<article_title>Homeostatic control of recombination is implemented progressively in mouse meiosis</article_title>
 						<doi>10.1038/ncb2451</doi>
 					</citation>
-					<citation key="bib13">
+					<citation key="bib13" type="journal_article">
 						<journal_title>Annals of the New York Academy of Sciences</journal_title>
 						<author>Cole</author>
 						<volume>1267</volume>
@@ -394,7 +394,7 @@
 						<article_title>Preaching about the converted: how meiotic gene conversion influences genomic diversity</article_title>
 						<doi>10.1111/j.1749-6632.2012.06595.x</doi>
 					</citation>
-					<citation key="bib15">
+					<citation key="bib15" type="journal_article">
 						<journal_title>Nature Genetics</journal_title>
 						<author>Cole</author>
 						<volume>46</volume>
@@ -403,7 +403,7 @@
 						<article_title>Mouse tetrad analysis provides insights into recombination mechanisms and hotspot evolutionary dynamics</article_title>
 						<doi>10.1038/ng.3068</doi>
 					</citation>
-					<citation key="bib16">
+					<citation key="bib16" type="journal_article">
 						<journal_title>The American Journal of Human Genetics</journal_title>
 						<author>Duggirala</author>
 						<volume>64</volume>
@@ -412,7 +412,7 @@
 						<article_title>Linkage of type 2 diabetes mellitus and of age at onset to a genetic location on chromosome 10q in mexican americans</article_title>
 						<doi>10.1086/302316</doi>
 					</citation>
-					<citation key="bib17">
+					<citation key="bib17" type="journal_article">
 						<journal_title>Annual Review of Genomics and Human Genetics</journal_title>
 						<author>Duret</author>
 						<volume>10</volume>
@@ -421,7 +421,7 @@
 						<article_title>Biased gene conversion and the evolution of mammalian genomic Landscapes</article_title>
 						<doi>10.1146/annurev-genom-082908-150001</doi>
 					</citation>
-					<citation key="bib19">
+					<citation key="bib19" type="journal_article">
 						<journal_title>PLOS ONE</journal_title>
 						<author>Fledel-Alon</author>
 						<volume>6</volume>
@@ -430,7 +430,7 @@
 						<article_title>Variation in human recombination rates and its genetic determinants</article_title>
 						<doi>10.1371/journal.pone.0020321</doi>
 					</citation>
-					<citation key="bib18">
+					<citation key="bib18" type="journal_article">
 						<journal_title>PLOS Genetics</journal_title>
 						<author>Fledel-Alon</author>
 						<volume>5</volume>
@@ -439,7 +439,7 @@
 						<article_title>Broad-scale recombination patterns underlying proper disjunction in humans</article_title>
 						<doi>10.1371/journal.pgen.1000658</doi>
 					</citation>
-					<citation key="bib20">
+					<citation key="bib20" type="journal_article">
 						<journal_title>American Journal of Human Genetics</journal_title>
 						<author>Frisse</author>
 						<volume>69</volume>
@@ -448,7 +448,7 @@
 						<article_title>Gene conversion and different population histories may explain the contrast between polymorphism and linkage disequilibrium levels</article_title>
 						<doi>10.1086/323612</doi>
 					</citation>
-					<citation key="bib21">
+					<citation key="bib21" type="journal_article">
 						<journal_title>Genome Research</journal_title>
 						<author>Fungtammasan</author>
 						<volume>22</volume>
@@ -457,7 +457,7 @@
 						<article_title>A genome-wide analysis of common fragile sites: what features determine chromosomal instability in the human genome?</article_title>
 						<doi>10.1101/gr.134395.111</doi>
 					</citation>
-					<citation key="bib22">
+					<citation key="bib22" type="journal_article">
 						<journal_title>Trends in Genetics</journal_title>
 						<author>Galtier</author>
 						<volume>23</volume>
@@ -466,7 +466,7 @@
 						<article_title>Adaptation or biased gene conversion? Extending the null hypothesis of molecular evolution</article_title>
 						<doi>10.1016/j.tig.2007.03.011</doi>
 					</citation>
-					<citation key="bib23">
+					<citation key="bib23" type="journal_article">
 						<journal_title>Genetics</journal_title>
 						<author>Gay</author>
 						<volume>177</volume>
@@ -475,7 +475,7 @@
 						<article_title>Estimating meiotic gene conversion rates from population genetic data</article_title>
 						<doi>10.1534/genetics.107.078907</doi>
 					</citation>
-					<citation key="bib24">
+					<citation key="bib24" type="journal_article">
 						<journal_title>American Journal of Human Genetics</journal_title>
 						<author>Genovese</author>
 						<volume>93</volume>
@@ -484,12 +484,12 @@
 						<article_title>Mapping the human reference genome s missing sequence by three-way admixture in Latino genomes</article_title>
 						<doi>10.1016/j.ajhg.2013.07.002</doi>
 					</citation>
-					<citation key="bib25">
+					<citation key="bib25" type="book">
 						<volume_title>From start to finish: Fine scale mapping of meiotic double strand breaks and gene conversion tracts reveals new insights into homologous recombination</volume_title>
 						<author>Globus</author>
 						<cYear>2013</cYear>
 					</citation>
-					<citation key="bib26">
+					<citation key="bib26" type="journal_article">
 						<journal_title>Nature</journal_title>
 						<author>Hinch</author>
 						<volume>476</volume>
@@ -498,7 +498,7 @@
 						<article_title>The landscape of recombination in African Americans</article_title>
 						<doi>10.1038/nature10336</doi>
 					</citation>
-					<citation key="bib27">
+					<citation key="bib27" type="journal_article">
 						<journal_title>Diabetes</journal_title>
 						<author>Hunt</author>
 						<volume>54</volume>
@@ -507,7 +507,7 @@
 						<article_title>Genome-wide linkage analyses of type 2 diabetes in mexican americans: The san antonio family diabetes/gallbladder study</article_title>
 						<doi>10.2337/diabetes.54.9.2655</doi>
 					</citation>
-					<citation key="bib28">
+					<citation key="bib28" type="journal_article">
 						<journal_title>Nature Genetics</journal_title>
 						<author>Jeffreys</author>
 						<volume>36</volume>
@@ -516,7 +516,7 @@
 						<article_title>Intense and highly localized gene conversion activity in human meiotic crossover hot spots</article_title>
 						<doi>10.1038/ng1287</doi>
 					</citation>
-					<citation key="bib29">
+					<citation key="bib29" type="journal_article">
 						<journal_title>Nature</journal_title>
 						<author>Kong</author>
 						<volume>467</volume>
@@ -525,7 +525,7 @@
 						<article_title>Fine-scale recombination rate differences between sexes, populations and individuals</article_title>
 						<doi>10.1038/nature09525</doi>
 					</citation>
-					<citation key="bib30">
+					<citation key="bib30" type="journal_article">
 						<journal_title>Molecular Biology and Evolution</journal_title>
 						<author>Lesecque</author>
 						<volume>30</volume>
@@ -534,7 +534,7 @@
 						<article_title>GC-biased gene conversion in yeast is specifically associated with crossovers: molecular mechanisms and evolutionary significance</article_title>
 						<doi>10.1093/molbev/mst056</doi>
 					</citation>
-					<citation key="bib31">
+					<citation key="bib31" type="journal_article">
 						<journal_title>PLOS Biology</journal_title>
 						<author>Levy</author>
 						<volume>5</volume>
@@ -543,7 +543,7 @@
 						<article_title>The diploid genome sequence of an individual human</article_title>
 						<doi>10.1371/journal.pbio.0050254</doi>
 					</citation>
-					<citation key="bib32">
+					<citation key="bib32" type="journal_article">
 						<journal_title>Bioinformatics</journal_title>
 						<author>Li</author>
 						<volume>25</volume>
@@ -552,7 +552,7 @@
 						<article_title>Fast and accurate short read alignment with Burrows–Wheeler transform</article_title>
 						<doi>10.1093/bioinformatics/btp324</doi>
 					</citation>
-					<citation key="bib33">
+					<citation key="bib33" type="journal_article">
 						<journal_title>Nature</journal_title>
 						<author>Mancera</author>
 						<volume>454</volume>
@@ -561,7 +561,7 @@
 						<article_title>High-resolution mapping of meiotic crossovers and non-crossovers in yeast</article_title>
 						<doi>10.1038/nature07135</doi>
 					</citation>
-					<citation key="bib34">
+					<citation key="bib34" type="journal_article">
 						<journal_title>PLOS Genetics</journal_title>
 						<author>Martini</author>
 						<volume>7</volume>
@@ -570,7 +570,7 @@
 						<article_title>Genome-wide analysis of heteroduplex DNA in Mismatch Repair–Deficient yeast cells reveals Novel properties of meiotic recombination pathways</article_title>
 						<doi>10.1371/journal.pgen.1002305</doi>
 					</citation>
-					<citation key="bib35">
+					<citation key="bib35" type="journal_article">
 						<journal_title>Science</journal_title>
 						<author>McVean</author>
 						<volume>304</volume>
@@ -579,7 +579,7 @@
 						<article_title>The Fine-Scale Structure of recombination rate variation in the human genome</article_title>
 						<doi>10.1126/science.1092500</doi>
 					</citation>
-					<citation key="bib36">
+					<citation key="bib36" type="journal_article">
 						<journal_title>Circulation</journal_title>
 						<author>Mitchell</author>
 						<volume>94</volume>
@@ -588,7 +588,7 @@
 						<article_title>Genetic and environmental contributions to cardiovascular risk factors in mexican americans: the san antonio family heart study</article_title>
 						<doi>10.1161/01.CIR.94.9.2159</doi>
 					</citation>
-					<citation key="bib37">
+					<citation key="bib37" type="journal_article">
 						<journal_title>Nature Genetics</journal_title>
 						<author>Myers</author>
 						<volume>40</volume>
@@ -597,7 +597,7 @@
 						<article_title>A common sequence motif associated with recombination hot spots and genome instability in humans</article_title>
 						<doi>10.1038/ng.213</doi>
 					</citation>
-					<citation key="bib38">
+					<citation key="bib38" type="journal_article">
 						<journal_title>PLOS Genetics</journal_title>
 						<author>Odenthal-Hesse</author>
 						<volume>10</volume>
@@ -606,7 +606,7 @@
 						<article_title>Transmission distortion affecting human noncrossover but not crossover recombination: a hidden source of meiotic drive</article_title>
 						<doi>10.1371/journal.pgen.1004106</doi>
 					</citation>
-					<citation key="bib39">
+					<citation key="bib39" type="journal_article">
 						<journal_title>Science</journal_title>
 						<author>Parvanov</author>
 						<volume>327</volume>
@@ -615,7 +615,7 @@
 						<article_title>Prdm9 controls activation of mammalian recombination hotspots</article_title>
 						<doi>10.1126/science.1181495</doi>
 					</citation>
-					<citation key="bib40">
+					<citation key="bib40" type="journal_article">
 						<journal_title>PLOS Genetics</journal_title>
 						<author>Patterson</author>
 						<volume>2</volume>
@@ -624,7 +624,7 @@
 						<article_title>Population structure and eigenanalysis</article_title>
 						<doi>10.1371/journal.pgen.0020190</doi>
 					</citation>
-					<citation key="bib41">
+					<citation key="bib41" type="journal_article">
 						<journal_title>Science</journal_title>
 						<author>Pratto</author>
 						<volume>346</volume>
@@ -633,7 +633,7 @@
 						<article_title>Recombination initiation maps of individual human genomes</article_title>
 						<doi>10.1126/science.1256442</doi>
 					</citation>
-					<citation key="bib41a">
+					<citation key="bib41a" type="journal_article">
 						<journal_title>Genetical Research</journal_title>
 						<author>Przeworski</author>
 						<volume>77</volume>
@@ -642,7 +642,7 @@
 						<article_title>Why is there so little intragenic linkage disequilibrium in humans?</article_title>
 						<doi>10.1017/S0016672301004967</doi>
 					</citation>
-					<citation key="bib42">
+					<citation key="bib42" type="journal_article">
 						<journal_title>Annual Review of Genomics and Human Genetics</journal_title>
 						<author>Ségurel</author>
 						<volume>15</volume>
@@ -651,7 +651,7 @@
 						<article_title>Determinants of mutation rate variation in the human Germline</article_title>
 						<doi>10.1146/annurev-genom-031714-125740</doi>
 					</citation>
-					<citation key="bib43">
+					<citation key="bib43" type="journal_article">
 						<journal_title>Proceedings of the National Academy of Sciences of USA</journal_title>
 						<author>Song</author>
 						<volume>111</volume>
@@ -660,7 +660,7 @@
 						<article_title>Genome-wide high-resolution mapping of chromosome fragile sites in Saccharomyces cerevisiae</article_title>
 						<doi>10.1073/pnas.1406847111</doi>
 					</citation>
-					<citation key="bib44">
+					<citation key="bib44" type="journal_article">
 						<journal_title>PLOS Genetics</journal_title>
 						<author>St Charles</author>
 						<volume>9</volume>
@@ -669,7 +669,7 @@
 						<article_title>High-resolution mapping of spontaneous mitotic recombination hotspots on the 1.1 Mb arm of yeast chromosome IV</article_title>
 						<doi>10.1371/journal.pgen.1003434</doi>
 					</citation>
-					<citation key="bib45">
+					<citation key="bib45" type="journal_article">
 						<journal_title>Nature</journal_title>
 						<author>The 1000 Genomes Project Consortium</author>
 						<volume>491</volume>
@@ -678,7 +678,7 @@
 						<article_title>An integrated map of genetic variation from 1,092 human genomes</article_title>
 						<doi>10.1038/nature11632</doi>
 					</citation>
-					<citation key="bib46">
+					<citation key="bib46" type="journal_article">
 						<journal_title>Nature</journal_title>
 						<author>The International HapMap Consortium</author>
 						<volume>449</volume>
@@ -687,7 +687,7 @@
 						<article_title>A second generation human haplotype map of over 3.1 million SNPs</article_title>
 						<doi>10.1038/nature06258</doi>
 					</citation>
-					<citation key="bib47">
+					<citation key="bib47" type="journal_article">
 						<journal_title>Molecular Cell</journal_title>
 						<author>Tsaponina</author>
 						<volume>55</volume>
@@ -696,7 +696,7 @@
 						<article_title>Frequent Interchromosomal template switches during gene conversion in S. cerevisiae</article_title>
 						<doi>10.1016/j.molcel.2014.06.025</doi>
 					</citation>
-					<citation key="bib48">
+					<citation key="bib48" type="journal_article">
 						<journal_title>Proceedings of the National Academy of Sciences of USA</journal_title>
 						<author>Webb</author>
 						<volume>105</volume>
@@ -705,7 +705,7 @@
 						<article_title>Sperm cross-over activity in regions of the human genome showing extreme breakdown of marker association</article_title>
 						<doi>10.1073/pnas.0804933105</doi>
 					</citation>
-					<citation key="bib49">
+					<citation key="bib49" type="journal_article">
 						<journal_title>Genome Biology</journal_title>
 						<author>Williams</author>
 						<volume>11</volume>
@@ -714,7 +714,7 @@
 						<article_title>Rapid haplotype inference for nuclear families</article_title>
 						<doi>10.1186/gb-2010-11-10-r108</doi>
 					</citation>
-					<citation key="bib50">
+					<citation key="bib50" type="journal_article">
 						<journal_title>PLOS Genetics</journal_title>
 						<author>Yin</author>
 						<volume>9</volume>
@@ -723,7 +723,7 @@
 						<article_title>Genome-wide high-resolution mapping of UV-induced mitotic recombination events in Saccharomyces cerevisiae</article_title>
 						<doi>10.1371/journal.pgen.1003894</doi>
 					</citation>
-					<citation key="bib51">
+					<citation key="bib51" type="journal_article">
 						<journal_title>Journal of Cell Science</journal_title>
 						<author>Youds</author>
 						<volume>124</volume>
