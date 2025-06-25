@@ -64,6 +64,9 @@
                     <rel:intra_work_relation identifier-type="uri" relationship-type="isVersionOf">10.7554/article_version_with_uri</rel:intra_work_relation>
                 </rel:related_item>
             </rel:program>
+            <version_info>
+                <version xml:lang="en">2</version>
+            </version_info>
             <doi_data>
                 <doi>10.7554/eLife.202200001</doi>
                 <resource>https://example.org/articles/202200001</resource>

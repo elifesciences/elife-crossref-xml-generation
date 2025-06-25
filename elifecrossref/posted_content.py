@@ -9,6 +9,7 @@ from elifecrossref import (
     doi,
     related,
     title,
+    version,
 )
 
 
@@ -69,6 +70,9 @@ def set_posted_content(parent, poa_article, crossref_config):
                 identifier_type,
                 related_item_text,
             )
+
+    if poa_article.version:
+        version.set_version_info(posted_content_tag, poa_article)
 
     doi_data_tag = doi.set_doi_data(
         posted_content_tag,
