@@ -72,6 +72,13 @@ class TestGeneratePostedContent(unittest.TestCase):
     def setUp(self):
         article = helpers.build_preprint_article()
         article_version = helpers.build_preprint_article_version()
+        # retracted example
+        file_path = TEST_DATA_PATH + "elife-preprint-94685-v2.xml"
+        article_retracted = generate.build_articles_for_crossref([file_path])[0]
+        review_date = ArticleDate(
+            "posted_date", time.strptime("2024-03-28 00:00:00", "%Y-%m-%d %H:%M:%S")
+        )
+        article_retracted.add_date(review_date)
         # add the test to the passing test list
         self.passes = []
         self.passes.append(
@@ -87,6 +94,14 @@ class TestGeneratePostedContent(unittest.TestCase):
                 [article_version],
                 "elife-crossref-preprint-version-posted_content-202200001-v2-20170717071707.xml",
                 "elife_preprint_version",
+                DEFAULT_PUB_DATE,
+            ),
+        )
+        self.passes.append(
+            (
+                [article_retracted],
+                "elife-crossref-preprint-posted_content-94685-v2-20170717071707.xml",
+                "elife_preprint",
                 DEFAULT_PUB_DATE,
             ),
         )
