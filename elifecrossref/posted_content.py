@@ -8,9 +8,13 @@ from elifecrossref import (
     dates,
     doi,
     related,
+    status,
     title,
     version,
 )
+
+# description tag text for a retracted article
+WITHDRAWN_DESCRIPTION = "This article is retracted."
 
 
 def set_posted_content(parent, poa_article, crossref_config):
@@ -32,6 +36,15 @@ def set_posted_content(parent, poa_article, crossref_config):
 
     # date is required
     dates.set_posted_date(posted_content_tag, poa_article.get_date("posted_date"))
+
+    # status tag for a retracted article
+    if poa_article.get_date("retracted"):
+        status.set_status_tag(
+            posted_content_tag,
+            "withdrawn",
+            poa_article.get_date("retracted").date,
+            WITHDRAWN_DESCRIPTION,
+        )
 
     # item_number
     if poa_article.elocation_id:
