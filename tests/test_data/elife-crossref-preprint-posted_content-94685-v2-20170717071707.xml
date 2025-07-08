@@ -1,0 +1,1048 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doi_batch xmlns="http://www.crossref.org/schema/5.4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:fr="http://www.crossref.org/fundref.xsd" xmlns:ai="http://www.crossref.org/AccessIndicators.xsd" xmlns:ct="http://www.crossref.org/clinicaltrials.xsd" xmlns:rel="http://www.crossref.org/relations.xsd" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:jats="http://www.ncbi.nlm.nih.gov/JATS1" version="5.4.0" xsi:schemaLocation="http://www.crossref.org/schema/5.4.0 http://www.crossref.org/schemas/crossref5.4.0.xsd">
+    <head>
+        <doi_batch_id>elife-crossref-preprint-posted_content-94685-v2-20170717071707</doi_batch_id>
+        <timestamp>20170717071707</timestamp>
+        <depositor>
+            <depositor_name>eLife</depositor_name>
+            <email_address>production@elifesciences.org</email_address>
+        </depositor>
+        <registrant>eLife</registrant>
+    </head>
+    <body>
+        <posted_content type="preprint">
+            <contributors>
+                <person_name contributor_role="author" sequence="first">
+                    <given_name>Nima</given_name>
+                    <surname>Mohseni</surname>
+                    <affiliations>
+                        <institution>
+                            <institution_name>Lund University, Department of Biology</institution_name>
+                            <institution_id type="ror">https://ror.org/012a77v79</institution_id>
+                            <institution_place>Sweden</institution_place>
+                        </institution>
+                    </affiliations>
+                    <ORCID>http://orcid.org/0000-0002-6567-4167</ORCID>
+                </person_name>
+                <person_name contributor_role="author" sequence="additional">
+                    <given_name>Eran</given_name>
+                    <surname>Elhaik</surname>
+                    <affiliations>
+                        <institution>
+                            <institution_name>Lund University, Department of Biology</institution_name>
+                            <institution_id type="ror">https://ror.org/012a77v79</institution_id>
+                            <institution_place>Sweden</institution_place>
+                        </institution>
+                    </affiliations>
+                    <ORCID>http://orcid.org/0000-0003-4795-1084</ORCID>
+                </person_name>
+            </contributors>
+            <titles>
+                <title>RETRACTED: Biases of Principal Component Analysis (PCA) in Physical Anthropology Studies Require a Reevaluation of Evolutionary Insights</title>
+            </titles>
+            <posted_date>
+                <month>03</month>
+                <day>28</day>
+                <year>2024</year>
+            </posted_date>
+            <status date="2025-05-16" type="withdrawn">
+                <description>This article is retracted.</description>
+            </status>
+            <item_number item_number_type="article_number">RP94685</item_number>
+            <jats:abstract>
+                <jats:title>Abstract</jats:title>
+                <jats:p>
+                    Evolutionary biologists, primarily palaeoanthropologists, anatomists and ontogenists, employ modern geometric morphometrics to quantitatively analyse physical forms (e.g., skull morphology) and explore relationships, variations, and differences between samples and taxa using landmark coordinates. The standard approach comprises two steps: Generalised Procrustes Analysis (GPA) followed by Principal Component Analysis (PCA). PCA projects the superimposed data produced by GPA onto a set of uncorrelated variables, which can be visualised on scatterplots and used to draw phenetic, evolutionary, and ontogenetic conclusions. Recently, the use of PCA in genetic studies has been challenged. Due to PCA’s central role in morphometrics, we sought to evaluate the standard approach and claims based on PCA outcomes. To test PCA’s accuracy, robustness, and reproducibility using benchmark data of the crania of five papionin genera, we developed MORPHIX, a Python package for processing superimposed landmark data with classifier and outlier detection methods, which can be further visualised using various plots. Throughout this manuscript, we address the recent and contentious use of PCA in physical anthropology and phylogenetic inference, such as the case of 
+                    <jats:italic>Homo Nesher Ramla</jats:italic>
+                    , an archaic hominin with a questionable taxonomy. We found that PCA outcomes are artefacts of the input data and are neither reliable, robust, nor reproducible as field members may assume. We also found that supervised machine learning classifiers are more accurate both for classification and detecting new taxa. Our findings raise concerns about PCA-based findings applied in 18,400 to 35,200 Physical anthropology studies. Our work can be used to evaluate prior and novel claims concerning the origins and relatedness of inter- and intra-species and improve phylogenetic and taxonomic reconstructions.
+                </jats:p>
+            </jats:abstract>
+            <ai:program name="AccessIndicators">
+                <ai:license_ref>https://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+            </ai:program>
+            <rel:program>
+                <rel:related_item>
+                    <rel:intra_work_relation identifier-type="doi" relationship-type="isVersionOf">10.1101/2023.12.06.570437</rel:intra_work_relation>
+                </rel:related_item>
+                <rel:related_item>
+                    <rel:intra_work_relation identifier-type="doi" relationship-type="isVersionOf">10.7554/eLife.94685.1</rel:intra_work_relation>
+                </rel:related_item>
+            </rel:program>
+            <version_info>
+                <version xml:lang="en">2</version>
+            </version_info>
+            <doi_data>
+                <doi>10.7554/eLife.94685</doi>
+                <resource>https://elifesciences.org/reviewed-preprints/94685</resource>
+            </doi_data>
+            <citation_list>
+                <citation key="c1" type="journal_article">
+                    <journal_title>动物分类学报</journal_title>
+                    <author>MacLeod</author>
+                    <volume>42</volume>
+                    <issue>1</issue>
+                    <first_page>4</first_page>
+                    <cYear>2017</cYear>
+                    <article_title>Morphometrics: History, development methods and prospects</article_title>
+                </citation>
+                <citation key="c2" type="book">
+                    <volume_title>Statistical shape analysis: with applications in R</volume_title>
+                    <author>Dryden</author>
+                    <cYear>2016</cYear>
+                </citation>
+                <citation key="c3" type="book">
+                    <volume_title>The origin of the fittest: Essays on evolution</volume_title>
+                    <author>Cope</author>
+                    <cYear>1886</cYear>
+                </citation>
+                <citation key="c4" type="book">
+                    <volume_title>On growth and form</volume_title>
+                    <author>Thomson</author>
+                    <cYear>1917</cYear>
+                </citation>
+                <citation key="c5" type="journal_article">
+                    <journal_title>Evolutionary Biology</journal_title>
+                    <author>Bookstein</author>
+                    <volume>46</volume>
+                    <issue>4</issue>
+                    <first_page>271</first_page>
+                    <cYear>2019</cYear>
+                    <article_title>Pathologies of between-groups principal components analysis in geometric morphometrics</article_title>
+                </citation>
+                <citation key="c6" type="book">
+                    <volume_title>Statistical shape analysis</volume_title>
+                    <author>Dryden</author>
+                    <cYear>1998</cYear>
+                </citation>
+                <citation key="c7" type="journal_article">
+                    <journal_title>Modern morphometrics in physical anthropology</journal_title>
+                    <author>Gunz</author>
+                    <first_page>73</first_page>
+                    <cYear>2005</cYear>
+                    <article_title>Semilandmarks in three dimensions</article_title>
+                </citation>
+                <citation key="c8" type="book">
+                    <volume_title>Modern morphometrics in physical anthropology</volume_title>
+                    <author>Slice</author>
+                    <cYear>2006</cYear>
+                </citation>
+                <citation key="c9" type="journal_article">
+                    <journal_title>Taxon</journal_title>
+                    <author>Sokal</author>
+                    <first_page>190</first_page>
+                    <cYear>1963</cYear>
+                    <article_title>The principles and practice of numerical taxonomy</article_title>
+                </citation>
+                <citation key="c10" type="journal_article">
+                    <journal_title>Systematic Biology</journal_title>
+                    <author>Sneath</author>
+                    <volume>44</volume>
+                    <issue>3</issue>
+                    <first_page>281</first_page>
+                    <cYear>1995</cYear>
+                    <article_title>Thirty years of numerical taxonomy</article_title>
+                </citation>
+                <citation key="c11" type="journal_article">
+                    <journal_title>Evolution</journal_title>
+                    <author>Hull</author>
+                    <first_page>174</first_page>
+                    <cYear>1967</cYear>
+                    <article_title>Certainty and circularity in evolutionary taxonomy</article_title>
+                </citation>
+                <citation key="c12" type="book">
+                    <volume_title>Early career researchers and their publishing and authorship practices</volume_title>
+                    <author>Nicholas</author>
+                    <volume>30</volume>
+                    <issue>3</issue>
+                    <cYear>2017</cYear>
+                </citation>
+                <citation key="c13" type="book">
+                    <volume_title>Sheets HD. Geometric morphometrics for biologists</volume_title>
+                    <author>Zelditch</author>
+                    <cYear>2012</cYear>
+                </citation>
+                <citation key="c14" type="journal_article">
+                    <journal_title>Cladistics</journal_title>
+                    <author>Palci</author>
+                    <volume>35</volume>
+                    <issue>2</issue>
+                    <first_page>230</first_page>
+                    <cYear>2019</cYear>
+                    <article_title>Geometric morphometrics, homology and cladistics: review and recommendations</article_title>
+                </citation>
+                <citation key="c15" type="journal_article">
+                    <journal_title>The Anatomical Record</journal_title>
+                    <author>Cooke</author>
+                    <volume>298</volume>
+                    <issue>1</issue>
+                    <first_page>5</first_page>
+                    <cYear>2015</cYear>
+                    <article_title>Form, function, and geometric morphometrics</article_title>
+                </citation>
+                <citation key="c16" type="journal_article">
+                    <journal_title>Journal of human evolution</journal_title>
+                    <author>Lague</author>
+                    <volume>75</volume>
+                    <first_page>90</first_page>
+                    <cYear>2014</cYear>
+                    <article_title>The pattern of hominin postcranial evolution reconsidered in light of size-related shape variation of the distal humerus</article_title>
+                </citation>
+                <citation key="c17" type="journal_article">
+                    <journal_title>American Journal of Physical Anthropology: The Official Publication of the American Association of Physical Anthropologists</journal_title>
+                    <author>Bacon</author>
+                    <volume>111</volume>
+                    <issue>4</issue>
+                    <first_page>479</first_page>
+                    <cYear>2000</cYear>
+                    <article_title>Principal components analysis of distal humeral shape in Pliocene to recent African hominids: the contribution of geometric morphometrics</article_title>
+                </citation>
+                <citation key="c18" type="journal_article">
+                    <journal_title>Journal of Human Evolution</journal_title>
+                    <author>Wu</author>
+                    <volume>182</volume>
+                    <issue>103411</issue>
+                    <cYear>2023</cYear>
+                    <article_title>Morphological and morphometric analyses of a late Middle Pleistocene hominin mandible from Hualongdong, China</article_title>
+                </citation>
+                <citation key="c19" type="journal_article">
+                    <journal_title>Annual Review of Ecology and Systematics</journal_title>
+                    <author>Oxnard</author>
+                    <volume>9</volume>
+                    <issue>1</issue>
+                    <first_page>219</first_page>
+                    <cYear>1978</cYear>
+                    <article_title>One biologist’s view of morphometrics</article_title>
+                </citation>
+                <citation key="c20" type="book">
+                    <volume_title>Morphometric tools for landmark data</volume_title>
+                    <author>Bookstein</author>
+                    <cYear>1997</cYear>
+                </citation>
+                <citation key="c21" type="book">
+                    <volume_title>Virtual anthropology</volume_title>
+                    <author>Weber</author>
+                    <cYear>2011</cYear>
+                </citation>
+                <citation key="c22" type="journal_article">
+                    <journal_title>Science</journal_title>
+                    <author>Hershkovitz</author>
+                    <volume>372</volume>
+                    <first_page>1424</first_page>
+                    <cYear>2021</cYear>
+                    <article_title>A middle pleistocene homo from Nesher Ramla, Israel</article_title>
+                </citation>
+                <citation key="c23" type="journal_article">
+                    <journal_title>Integrative Organismal Biology</journal_title>
+                    <author>Bardua</author>
+                    <volume>1</volume>
+                    <issue>1</issue>
+                    <cYear>2019</cYear>
+                    <article_title>A practical guide to sliding and surface semilandmarks in morphometric analyses</article_title>
+                    <elocation_id>obz016</elocation_id>
+                </citation>
+                <citation key="c24" type="journal_article">
+                    <journal_title>Zoomorphology</journal_title>
+                    <author>Cardini</author>
+                    <volume>139</volume>
+                    <issue>4</issue>
+                    <first_page>513</first_page>
+                    <cYear>2020</cYear>
+                    <article_title>Less tautology, more biology? A comment on “high-density” morphometrics</article_title>
+                </citation>
+                <citation key="c25" type="journal_article">
+                    <journal_title>Journal of human evolution</journal_title>
+                    <author>Mitteroecker</author>
+                    <volume>46</volume>
+                    <issue>6</issue>
+                    <first_page>679</first_page>
+                    <cYear>2004</cYear>
+                    <article_title>Comparison of cranial ontogenetic trajectories among great apes and humans</article_title>
+                </citation>
+                <citation key="c26" type="journal_article">
+                    <journal_title>American Journal of Human Biology</journal_title>
+                    <author>Franklin</author>
+                    <volume>19</volume>
+                    <issue>1</issue>
+                    <first_page>20</first_page>
+                    <cYear>2007</cYear>
+                    <article_title>Geometric morphometric study of population variation in indigenous southern African crania</article_title>
+                </citation>
+                <citation key="c27" type="journal_article">
+                    <journal_title>American Journal of Physical Anthropology: The Official Publication of the American Association of Physical Anthropologists</journal_title>
+                    <author>Harvati</author>
+                    <volume>120</volume>
+                    <issue>4</issue>
+                    <first_page>323</first_page>
+                    <cYear>2003</cYear>
+                    <article_title>Quantitative analysis of Neanderthal temporal bone morphology using three- dimensional geometric morphometrics</article_title>
+                </citation>
+                <citation key="c28" type="journal_article">
+                    <journal_title>Journal of Human Evolution</journal_title>
+                    <author>Velez</author>
+                    <volume>174</volume>
+                    <issue>103280</issue>
+                    <cYear>2023</cYear>
+                    <article_title>Geometric morphometric analysis of the bony labyrinth of the Sima de los Huesos hominins</article_title>
+                </citation>
+                <citation key="c29" type="journal_article">
+                    <journal_title>Nature Communications</journal_title>
+                    <author>Da Silva</author>
+                    <volume>9</volume>
+                    <issue>1</issue>
+                    <first_page>376</first_page>
+                    <cYear>2018</cYear>
+                    <article_title>The ecological origins of snakes as revealed by skull evolution</article_title>
+                </citation>
+                <citation key="c30" type="journal_article">
+                    <journal_title>Nature</journal_title>
+                    <author>Harvati</author>
+                    <volume>571</volume>
+                    <first_page>500</first_page>
+                    <cYear>2019</cYear>
+                    <article_title>Apidima Cave fossils provide earliest evidence of Homo sapiens in Eurasia</article_title>
+                </citation>
+                <citation key="c31" type="journal_article">
+                    <journal_title>Greece). American Journal of Physical Anthropology</journal_title>
+                    <author>Ioannidou</author>
+                    <volume>170</volume>
+                    <issue>2</issue>
+                    <first_page>295</first_page>
+                    <cYear>2019</cYear>
+                    <article_title>A new three-dimensional geometric morphometrics analysis of the Ouranopithecus macedoniensis cranium (Late Miocene, Central Macedonia</article_title>
+                </citation>
+                <citation key="c32" type="journal_article">
+                    <journal_title>Journal of Zoology</journal_title>
+                    <author>O’Higgins</author>
+                    <volume>257</volume>
+                    <issue>2</issue>
+                    <first_page>255</first_page>
+                    <cYear>2002</cYear>
+                    <article_title>Sexual dimorphism and facial growth in papionin monkeys</article_title>
+                </citation>
+                <citation key="c33" type="journal_article">
+                    <journal_title>Nature</journal_title>
+                    <author>Jones</author>
+                    <first_page>595</first_page>
+                    <cYear>2021</cYear>
+                    <article_title>Mysterious skull fossils expand human family tree - but questions remain</article_title>
+                </citation>
+                <citation key="c34" type="journal_article">
+                    <journal_title>Journal of Evolutionary Biology</journal_title>
+                    <author>Friedman</author>
+                    <volume>29</volume>
+                    <issue>5</issue>
+                    <first_page>965</first_page>
+                    <cYear>2016</cYear>
+                    <article_title>Ecomorphological convergence in planktivorous surgeonfishes</article_title>
+                </citation>
+                <citation key="c35" type="journal_article">
+                    <journal_title>Evolutionary Biology</journal_title>
+                    <author>Mitteroecker</author>
+                    <volume>36</volume>
+                    <first_page>235</first_page>
+                    <cYear>2009</cYear>
+                    <article_title>Advances in geometric morphometrics</article_title>
+                </citation>
+                <citation key="c36" type="journal_article">
+                    <journal_title>Evolutionary Biology</journal_title>
+                    <author>Bookstein</author>
+                    <volume>43</volume>
+                    <first_page>277</first_page>
+                    <cYear>2016</cYear>
+                    <article_title>The inappropriate symmetries of multivariate statistical analysis in geometric morphometrics</article_title>
+                </citation>
+                <citation key="c37" type="journal_article">
+                    <journal_title>Biological Theory</journal_title>
+                    <author>Oxnard</author>
+                    <volume>4</volume>
+                    <issue>1</issue>
+                    <first_page>84</first_page>
+                    <cYear>2009</cYear>
+                    <article_title>Biology clearly needs morphometrics. Does morphometrics need biology?</article_title>
+                </citation>
+                <citation key="c38" type="journal_article">
+                    <journal_title>The Anatomical Record: An Official Publication of the American Association of Anatomists</journal_title>
+                    <author>Tattersall</author>
+                    <volume>253</volume>
+                    <issue>4</issue>
+                    <first_page>113</first_page>
+                    <cYear>1998</cYear>
+                    <article_title>and Neanderthals</article_title>
+                </citation>
+                <citation key="c39" type="journal_article">
+                    <journal_title>Journal of human evolution</journal_title>
+                    <author>Pontzer</author>
+                    <volume>58</volume>
+                    <issue>6</issue>
+                    <first_page>492</first_page>
+                    <cYear>2010</cYear>
+                    <article_title>Locomotor anatomy and biomechanics of the Dmanisi hominins</article_title>
+                </citation>
+                <citation key="c40" type="book">
+                    <volume_title>The history of early Homo. On Human Nature</volume_title>
+                    <author>Lordkipanidze</author>
+                    <cYear>2017</cYear>
+                </citation>
+                <citation key="c41" type="book">
+                    <volume_title>Evolution: the human story</volume_title>
+                    <author>Roberts</author>
+                    <cYear>2018</cYear>
+                </citation>
+                <citation key="c42" type="journal_article">
+                    <journal_title>Science</journal_title>
+                    <author>Lordkipanidze</author>
+                    <volume>342</volume>
+                    <first_page>326</first_page>
+                    <cYear>2013</cYear>
+                    <article_title>A complete skull from Dmanisi, Georgia, and the evolutionary biology of early Homo</article_title>
+                </citation>
+                <citation key="c43" type="journal_article">
+                    <journal_title>NY</journal_title>
+                    <author>Schwartz</author>
+                    <first_page>344</first_page>
+                    <cYear>2014</cYear>
+                    <article_title>Comment on “A complete skull from Dmanisi, Georgia, and the evolutionary biology of early Homo”. Science (New York</article_title>
+                </citation>
+                <citation key="c44" type="journal_article">
+                    <journal_title>Hystrix</journal_title>
+                    <author>Polly</author>
+                    <volume>24</volume>
+                    <issue>1</issue>
+                    <first_page>33</first_page>
+                    <cYear>2013</cYear>
+                    <article_title>Phylogenetic principal components analysis and geometric morphometrics</article_title>
+                </citation>
+                <citation key="c45" type="journal_article">
+                    <journal_title>Methods in Ecology and Evolution</journal_title>
+                    <author>Collyer</author>
+                    <volume>12</volume>
+                    <first_page>359</first_page>
+                    <cYear>2021</cYear>
+                    <article_title>Phylogenetically aligned component analysis</article_title>
+                </citation>
+                <citation key="c46" type="journal_article">
+                    <journal_title>Systematic Biology</journal_title>
+                    <author>Rohlf</author>
+                    <volume>17</volume>
+                    <issue>3</issue>
+                    <first_page>246</first_page>
+                    <cYear>1968</cYear>
+                    <article_title>Stereograms in numerical taxonomy</article_title>
+                </citation>
+                <citation key="c47" type="journal_article">
+                    <journal_title>Journal of human evolution</journal_title>
+                    <author>Adams</author>
+                    <volume>60</volume>
+                    <issue>2</issue>
+                    <first_page>240</first_page>
+                    <cYear>2011</cYear>
+                    <article_title>Morphometrics and phylogenetics: principal components of shape from cranial modules are neither appropriate nor effective cladistic characters</article_title>
+                </citation>
+                <citation key="c48" type="journal_article">
+                    <journal_title>Evolutionary Biology</journal_title>
+                    <author>Cardini</author>
+                    <volume>47</volume>
+                    <issue>1</issue>
+                    <first_page>85</first_page>
+                    <cYear>2020</cYear>
+                    <article_title>Cross-validated between group PCA scatterplots: a solution to spurious group separation?</article_title>
+                </citation>
+                <citation key="c49" type="book">
+                    <volume_title>Common principal components &amp; related multivariate models</volume_title>
+                    <author>Flury</author>
+                    <cYear>1988</cYear>
+                </citation>
+                <citation key="c50" type="journal_article">
+                    <journal_title>Oecologia</journal_title>
+                    <author>Berner</author>
+                    <volume>166</volume>
+                    <issue>4</issue>
+                    <first_page>961</first_page>
+                    <cYear>2011</cYear>
+                    <article_title>Size correction in biology: how reliable are approaches based on (common) principal component analysis?</article_title>
+                </citation>
+                <citation key="c51" type="journal_article">
+                    <journal_title>Scientific reports</journal_title>
+                    <author>Elhaik</author>
+                    <volume>12</volume>
+                    <issue>1</issue>
+                    <first_page>1</first_page>
+                    <cYear>2022</cYear>
+                    <article_title>Principal Component Analyses (PCA)-based findings in population genetic studies are highly biased and must be reevaluated</article_title>
+                </citation>
+                <citation key="c52" type="journal_article">
+                    <journal_title>The Anatomical Record: An Official Publication of the American Association of Anatomists</journal_title>
+                    <author>Delson</author>
+                    <volume>262</volume>
+                    <issue>4</issue>
+                    <first_page>380</first_page>
+                    <cYear>2001</cYear>
+                    <article_title>The Sambungmacan 3 Homo erectus calvaria: a comparative morphometric and morphological analysis</article_title>
+                </citation>
+                <citation key="c53" type="journal_article">
+                    <journal_title>American Journal of Physical Anthropology</journal_title>
+                    <author>Brophy</author>
+                    <volume>174</volume>
+                    <issue>2</issue>
+                    <first_page>299</first_page>
+                    <cYear>2021</cYear>
+                    <article_title>Comparative morphometric analyses of the deciduous molars of Homo naledi from the Dinaledi Chamber, South Africa</article_title>
+                </citation>
+                <citation key="c54" type="journal_article">
+                    <journal_title>Genetics and Molecular Research</journal_title>
+                    <author>Pozharskiy</author>
+                    <volume>19</volume>
+                    <issue>1</issue>
+                    <cYear>2020</cYear>
+                    <article_title>Genotyping and morphometric analysis of Kazakhstani grapevine cultivars versus Asian and European cultivars</article_title>
+                    <elocation_id>gmr18482</elocation_id>
+                </citation>
+                <citation key="c55" type="journal_article">
+                    <journal_title>Journal of Experimental Zoology Part B: Molecular and Developmental Evolution</journal_title>
+                    <author>Cobb</author>
+                    <volume>302</volume>
+                    <issue>3</issue>
+                    <first_page>302</first_page>
+                    <cYear>2004</cYear>
+                    <article_title>Hominins do not share a common postnatal facial ontogenetic shape trajectory</article_title>
+                </citation>
+                <citation key="c56" type="journal_article">
+                    <journal_title>Evolution &amp; development</journal_title>
+                    <author>Mitteroecker</author>
+                    <volume>7</volume>
+                    <issue>3</issue>
+                    <first_page>244</first_page>
+                    <cYear>2005</cYear>
+                    <article_title>Heterochrony and geometric morphometrics: a comparison of cranial growth in Pan paniscus versus Pan troglodytes</article_title>
+                </citation>
+                <citation key="c57" type="journal_article">
+                    <journal_title>Evolution</journal_title>
+                    <author>Klingenberg</author>
+                    <volume>52</volume>
+                    <issue>5</issue>
+                    <first_page>1363</first_page>
+                    <cYear>1998</cYear>
+                    <article_title>Geometric morphometrics of developmental instability: analyzing patterns of fluctuating asymmetry with Procrustes methods</article_title>
+                </citation>
+                <citation key="c58" type="journal_article">
+                    <journal_title>Journal of Anatomy</journal_title>
+                    <author>Lockwood</author>
+                    <volume>201</volume>
+                    <issue>6</issue>
+                    <first_page>447</first_page>
+                    <cYear>2002</cYear>
+                    <article_title>Quantifying temporal bone morphology of great apes and humans: an approach using geometric morphometrics</article_title>
+                </citation>
+                <citation key="c59" type="book">
+                    <volume_title>Fundamentals of machine learning for predictive data analytics: algorithms, worked examples, and case studies</volume_title>
+                    <author>Kelleher</author>
+                    <cYear>2020</cYear>
+                </citation>
+                <citation key="c60" type="conference_paper">
+                    <author>Brodersen</author>
+                    <cYear>2010</cYear>
+                    <article_title>The balanced accuracy and its posterior distribution</article_title>
+                    <unstructured_citation>Brodersen KH, Ong CS, Stephan KE, Buhmann JM. 2010. The balanced accuracy and its posterior distribution. 20th international conference on pattern recognition.</unstructured_citation>
+                </citation>
+                <citation key="c61" type="journal_article">
+                    <journal_title>Journal of machine learning research</journal_title>
+                    <author>Van der Maaten</author>
+                    <volume>9</volume>
+                    <issue>11</issue>
+                    <cYear>2008</cYear>
+                    <article_title>Visualizing data using t-SNE</article_title>
+                </citation>
+                <citation key="c62" type="journal_article">
+                    <journal_title>Communications Biology</journal_title>
+                    <author>Quilodrán</author>
+                    <volume>3</volume>
+                    <issue>1</issue>
+                    <first_page>391</first_page>
+                    <cYear>2020</cYear>
+                    <article_title>Harmonizing hybridization dissonance in conservation</article_title>
+                </citation>
+                <citation key="c63" type="journal_article">
+                    <journal_title>Molecular ecology</journal_title>
+                    <author>Verardi</author>
+                    <volume>15</volume>
+                    <issue>10</issue>
+                    <first_page>2845</first_page>
+                    <cYear>2006</cYear>
+                    <article_title>Detecting introgressive hybridization between free-ranging domestic dogs and wild wolves (Canis lupus) by admixture linkage disequilibrium analysis</article_title>
+                </citation>
+                <citation key="c64" type="journal_article">
+                    <journal_title>Philosophical Transactions of the Royal Society B: Biological Sciences</journal_title>
+                    <author>Oliveira</author>
+                    <volume>363</volume>
+                    <first_page>2953</first_page>
+                    <cYear>2008</cYear>
+                    <article_title>Hybridization versus conservation: are domestic cats threatening the genetic integrity of wildcats (Felis silvestris silvestris) in Iberian Peninsula?</article_title>
+                </citation>
+                <citation key="c65" type="journal_article">
+                    <journal_title>Journal of Zoology</journal_title>
+                    <author>Biró</author>
+                    <volume>266</volume>
+                    <issue>2</issue>
+                    <first_page>187</first_page>
+                    <cYear>2005</cYear>
+                    <article_title>Feeding habits of feral domestic cats (Felis catus), wild cats (Felis silvestris) and their hybrids: trophic niche overlap among cat groups in Hungary</article_title>
+                </citation>
+                <citation key="c66" type="journal_article">
+                    <journal_title>Molecular ecology</journal_title>
+                    <author>Randi</author>
+                    <volume>17</volume>
+                    <issue>1</issue>
+                    <first_page>285</first_page>
+                    <cYear>2008</cYear>
+                    <article_title>Detecting hybridization between wild species and their domesticated relatives</article_title>
+                </citation>
+                <citation key="c67" type="journal_article">
+                    <journal_title>Ibis</journal_title>
+                    <author>Smith</author>
+                    <cYear>2023</cYear>
+                    <article_title>Rapid assessment of the extent of feral introgression in British and Irish Rock Dove Columba livia populations</article_title>
+                </citation>
+                <citation key="c68" type="journal_article">
+                    <journal_title>Journal of Human Evolution</journal_title>
+                    <author>Arsuaga</author>
+                    <volume>20</volume>
+                    <issue>3</issue>
+                    <first_page>191</first_page>
+                    <cYear>1991</cYear>
+                    <article_title>Cranial remains and long bones from Atapuerca/Ibeas (Spain)</article_title>
+                </citation>
+                <citation key="c69" type="conference_paper">
+                    <author>Breunig</author>
+                    <cYear>2000</cYear>
+                    <article_title>LOF: identifying density-based local outliers</article_title>
+                    <unstructured_citation>Breunig MM, Kriegel H-P, Ng RT, Sander J. 2000. LOF: identifying density-based local outliers. Proceedings of the 2000 ACM SIGMOD international conference on Management of data.</unstructured_citation>
+                </citation>
+                <citation key="c70" type="journal_article">
+                    <journal_title>ACM Transactions on Knowledge Discovery from Data (TKDD</journal_title>
+                    <author>Liu</author>
+                    <volume>6</volume>
+                    <issue>1</issue>
+                    <first_page>1</first_page>
+                    <cYear>2012</cYear>
+                    <article_title>Isolation-based anomaly detection</article_title>
+                </citation>
+                <citation key="c71" type="journal_article">
+                    <journal_title>Neural computation</journal_title>
+                    <author>Schölkopf</author>
+                    <volume>13</volume>
+                    <issue>7</issue>
+                    <first_page>1443</first_page>
+                    <cYear>2001</cYear>
+                    <article_title>Estimating the support of a high-dimensional distribution</article_title>
+                </citation>
+                <citation key="c72" type="journal_article">
+                    <journal_title>AMS math challenges lecture</journal_title>
+                    <author>Donoho</author>
+                    <first_page>1</first_page>
+                    <cYear>2000</cYear>
+                    <article_title>High-dimensional data analysis: The curses and blessings of dimensionality</article_title>
+                </citation>
+                <citation key="c73" type="book">
+                    <volume_title>Dynamic programming</volume_title>
+                    <author>Bellman</author>
+                    <cYear>1957</cYear>
+                </citation>
+                <citation key="c74" type="journal_article">
+                    <journal_title>Pattern classification: Wiley Hoboken</journal_title>
+                    <author>Hart</author>
+                    <cYear>2000</cYear>
+                    <article_title>Duda RO</article_title>
+                </citation>
+                <citation key="c75" type="journal_article">
+                    <journal_title>Advances in bioinformatics</journal_title>
+                    <author>Hira</author>
+                    <volume>2015</volume>
+                    <cYear>2015</cYear>
+                    <article_title>A review of feature selection and feature extraction methods applied on microarray data</article_title>
+                </citation>
+                <citation key="c76" type="journal_article">
+                    <journal_title>Journal of machine learning research</journal_title>
+                    <author>Torkkola</author>
+                    <volume>3</volume>
+                    <issue>7/8</issue>
+                    <first_page>1415</first_page>
+                    <cYear>2003</cYear>
+                    <article_title>Feature extraction by non-parametric mutual information maximization</article_title>
+                </citation>
+                <citation key="c77" type="conference_paper">
+                    <author>Lanzi</author>
+                    <cYear>1997</cYear>
+                    <article_title>Fast feature selection with genetic algorithms: a filter approach</article_title>
+                    <unstructured_citation>Lanzi PL. 1997. Fast feature selection with genetic algorithms: a filter approach. Proceedings of 1997 IEEE International Conference on Evolutionary Computation (ICEC’97).</unstructured_citation>
+                </citation>
+                <citation key="c78" type="book">
+                    <volume_title>Haupt SE</volume_title>
+                    <author>Haupt</author>
+                    <cYear>2004</cYear>
+                </citation>
+                <citation key="c79" type="journal_article">
+                    <journal_title>Knowledge-Based Systems</journal_title>
+                    <author>Lu</author>
+                    <volume>21</volume>
+                    <issue>8</issue>
+                    <first_page>887</first_page>
+                    <cYear>2008</cYear>
+                    <article_title>Feature selection based-on genetic algorithm for image annotation</article_title>
+                </citation>
+                <citation key="c80" type="software">
+                    <volume_title>Zenodo</volume_title>
+                    <author>Calzolari</author>
+                    <cYear>2020</cYear>
+                    <article_title>sklearn-genetic: sklearn-genetic 0.3.0</article_title>
+                    <unstructured_citation>Calzolari M. 2020. sklearn-genetic: sklearn-genetic 0.3.0. Zenodo.</unstructured_citation>
+                </citation>
+                <citation key="c81" type="journal_article">
+                    <journal_title>Journal of Gastrointestinal Cancer</journal_title>
+                    <author>Mohseni</author>
+                    <volume>54</volume>
+                    <issue>3</issue>
+                    <first_page>937</first_page>
+                    <cYear>2023</cYear>
+                    <article_title>Identification of Novel Biomarkers for Response to Preoperative Chemoradiation in Locally Advanced Rectal Cancer with Genetic Algorithm– Based Gene Selection</article_title>
+                </citation>
+                <citation key="c82" type="journal_article">
+                    <journal_title>Cell reports methods</journal_title>
+                    <author>Behnamian</author>
+                    <volume>2</volume>
+                    <issue>8</issue>
+                    <cYear>2022</cYear>
+                    <article_title>Temporal population structure, a genetic dating method for ancient Eurasian genomes from the past 10,000 years</article_title>
+                </citation>
+                <citation key="c83" type="journal_article">
+                    <journal_title>Frontiers in genetics</journal_title>
+                    <author>Das</author>
+                    <volume>8</volume>
+                    <issue>87</issue>
+                    <cYear>2017</cYear>
+                    <article_title>The origins of Ashkenaz, Ashkenazic Jews, and Yiddish</article_title>
+                </citation>
+                <citation key="c84" type="journal_article">
+                    <journal_title>Nature communications</journal_title>
+                    <author>Elhaik</author>
+                    <volume>5</volume>
+                    <issue>1</issue>
+                    <first_page>3513</first_page>
+                    <cYear>2014</cYear>
+                    <article_title>Geographic population structure analysis of worldwide human populations infers their biogeographical origins</article_title>
+                </citation>
+                <citation key="c85" type="report">
+                    <volume_title>The Stone Age of Mount Carmel: Excavations at the Wady El- Mughara;[report of the Joint Expedition of the British School of Archaeology in Jerusalem and the American School of Prehistoric Research 1929-34]</volume_title>
+                    <author>Garrod</author>
+                    <cYear>1937</cYear>
+                    <unstructured_citation>Garrod DAE, Bate DMA. 1937. Clarendon Press. The Stone Age of Mount Carmel: Excavations at the Wady El- Mughara;[report of the Joint Expedition of the British School of Archaeology in Jerusalem and the American School of Prehistoric Research 1929-34].</unstructured_citation>
+                </citation>
+                <citation key="c86" type="preprint">
+                    <volume_title>BioRxiv</volume_title>
+                    <author>Chari</author>
+                    <cYear>2022</cYear>
+                    <article_title>The specious art of single-cell genomics</article_title>
+                    <unstructured_citation>Chari T, Pachter L. 2022. The specious art of single-cell genomics. BioRxiv.</unstructured_citation>
+                </citation>
+                <citation key="c87" type="journal_article">
+                    <journal_title>Science</journal_title>
+                    <author>Marom</author>
+                    <volume>374</volume>
+                    <issue>6572</issue>
+                    <cYear>2021</cYear>
+                    <article_title>Comment on “A Middle Pleistocene Homo from Nesher Ramla, Israel”</article_title>
+                    <elocation_id>eabl4336</elocation_id>
+                </citation>
+                <citation key="c88" type="journal_article">
+                    <journal_title>Evolutionary Biology</journal_title>
+                    <author>Mitteroecker</author>
+                    <volume>38</volume>
+                    <first_page>100</first_page>
+                    <cYear>2011</cYear>
+                    <article_title>Linear discrimination, ordination, and the visualization of selection gradients in modern morphometrics</article_title>
+                </citation>
+                <citation key="c89" type="journal_article">
+                    <journal_title>Biological Journal of the Linnean Society</journal_title>
+                    <author>Baylac</author>
+                    <volume>80</volume>
+                    <issue>1</issue>
+                    <first_page>89</first_page>
+                    <cYear>2003</cYear>
+                    <article_title>Combining geometric morphometrics with pattern recognition for the investigation of species complexes</article_title>
+                </citation>
+                <citation key="c90" type="journal_article">
+                    <journal_title>BMC bioinformatics</journal_title>
+                    <author>Nazri</author>
+                    <volume>21</volume>
+                    <issue>1</issue>
+                    <first_page>1</first_page>
+                    <cYear>2020</cYear>
+                    <article_title>A novel investigation of the effect of iterations in sliding semi-landmarks for 3D human facial images</article_title>
+                </citation>
+                <citation key="c91" type="journal_article">
+                    <journal_title>Journal of anatomy</journal_title>
+                    <author>Perez</author>
+                    <volume>208</volume>
+                    <issue>6</issue>
+                    <first_page>769</first_page>
+                    <cYear>2006</cYear>
+                    <article_title>Differences between sliding semi-landmark methods in geometric morphometrics, with an application to human craniofacial and dental variation</article_title>
+                </citation>
+                <citation key="c92" type="book">
+                    <volume_title>An introduction to statistical learning</volume_title>
+                    <author>James</author>
+                    <cYear>2013</cYear>
+                </citation>
+                <citation key="c93" type="journal_article">
+                    <journal_title>Genome Biology and Evolution</journal_title>
+                    <author>Elhaik</author>
+                    <volume>9</volume>
+                    <issue>12</issue>
+                    <first_page>3225</first_page>
+                    <cYear>2017</cYear>
+                    <article_title>The Diversity of REcent and Ancient huMan (DREAM): a new microarray for genetic anthropology and genealogy, forensics, and personalized medicine</article_title>
+                </citation>
+                <citation key="c94" type="journal_article">
+                    <journal_title>History and Philosophy of the Life Sciences</journal_title>
+                    <author>Staunton</author>
+                    <volume>43</volume>
+                    <issue>4</issue>
+                    <first_page>115</first_page>
+                    <cYear>2021</cYear>
+                    <article_title>Open science, data sharing and solidarity: who benefits?</article_title>
+                </citation>
+                <citation key="c95" type="other">
+                    <volume_title>The Times</volume_title>
+                    <cYear>2021</cYear>
+                    <article_title>Meet Nesher Ramla Homo: New form of human found [press release]</article_title>
+                </citation>
+                <citation key="c96" type="other">
+                    <volume_title>The Guardian</volume_title>
+                    <cYear>2021</cYear>
+                    <article_title>Fossilised bones found in Israel could belong to mystery extinct humans [press release]</article_title>
+                </citation>
+                <citation key="c97" type="other">
+                    <volume_title>Science Alert</volume_title>
+                    <cYear>2021</cYear>
+                    <article_title>A Previously Unknown Type of Ancient Human Has Been Discovered in The Levant [press release]</article_title>
+                </citation>
+                <citation key="c98" type="other">
+                    <volume_title>Haaretz</volume_title>
+                    <cYear>2021</cYear>
+                    <article_title>A Bitter Archaeological Battle Is Rocking Tel Aviv University [press release]</article_title>
+                </citation>
+                <citation key="c99" type="other">
+                    <volume_title>The Times</volume_title>
+                    <cYear>2021</cYear>
+                    <article_title>Academic locked out of lab over fossil feud [press release]</article_title>
+                </citation>
+                <citation key="c100" type="other">
+                    <volume_title>CNN</volume_title>
+                    <cYear>2023</cYear>
+                    <article_title>300,000-year-old skull found in China unlike any early human seen before [press release]</article_title>
+                </citation>
+                <citation key="c101" type="other">
+                    <volume_title>The Daily Mail</volume_title>
+                    <cYear>2023</cYear>
+                    <article_title>Have scientists discovered a new species of HUMAN? Ancient skull belonging to a child with no chin who lived 300,000 years ago suggests our family tree ’needs another branch’ [press release]</article_title>
+                </citation>
+                <citation key="c102" type="other">
+                    <volume_title>Nature</volume_title>
+                    <cYear>2023</cYear>
+                    <article_title>A new human species? Mystery surrounds 300,000-year-old fossil [press release]</article_title>
+                </citation>
+                <citation key="c103" type="book">
+                    <volume_title>The logic of scientific discovery</volume_title>
+                    <author>Popper</author>
+                    <cYear>1959</cYear>
+                </citation>
+                <citation key="c104" type="journal_article">
+                    <journal_title>The Journal of Machine Learning Research</journal_title>
+                    <author>Pedregosa</author>
+                    <volume>12</volume>
+                    <first_page>2825</first_page>
+                    <cYear>2011</cYear>
+                    <article_title>Scikit-learn: Machine learning in Python</article_title>
+                </citation>
+                <citation key="c105" type="journal_article">
+                    <journal_title>Proceedings of the National Academy of Sciences</journal_title>
+                    <author>Gilbert</author>
+                    <volume>104</volume>
+                    <issue>29</issue>
+                    <first_page>11910</first_page>
+                    <cYear>2007</cYear>
+                    <article_title>Congruence of molecules and morphology using a narrow allometric approach</article_title>
+                </citation>
+                <citation key="c106" type="journal_article">
+                    <journal_title>Hystrix-the Italian Journal of Mammalogy</journal_title>
+                    <author>Rohlf</author>
+                    <volume>11</volume>
+                    <issue>1</issue>
+                    <cYear>2000</cYear>
+                    <article_title>On the use of shape spaces to compare morphometric methods</article_title>
+                </citation>
+                <citation key="c107" type="journal_article">
+                    <journal_title>Bulletin of the London mathematical society</journal_title>
+                    <author>Kendall</author>
+                    <volume>16</volume>
+                    <issue>2</issue>
+                    <first_page>81</first_page>
+                    <cYear>1984</cYear>
+                    <article_title>Shape manifolds, procrustean metrics, and complex projective spaces</article_title>
+                </citation>
+                <citation key="c108" type="journal_article">
+                    <journal_title>The Journal of Anatomy</journal_title>
+                    <author>O’HIGGINS</author>
+                    <volume>193</volume>
+                    <issue>2</issue>
+                    <first_page>251</first_page>
+                    <cYear>1998</cYear>
+                    <article_title>Facial growth in Cercocebus torquatus: an application of three- dimensional geometric morphometric techniques to the study of morphological variation</article_title>
+                </citation>
+                <citation key="c109" type="journal_article">
+                    <journal_title>The Journal of Machine Learning Research</journal_title>
+                    <author>Rasmussen</author>
+                    <volume>11</volume>
+                    <first_page>3011</first_page>
+                    <cYear>2010</cYear>
+                    <article_title>Gaussian processes for machine learning (GPML) toolbox</article_title>
+                </citation>
+                <citation key="c110" type="book">
+                    <volume_title>Neural networks and learning machines, third edition</volume_title>
+                    <author>Haykin</author>
+                    <cYear>2009</cYear>
+                </citation>
+                <citation key="c111" type="conference_paper">
+                    <author>Ho</author>
+                    <cYear>1995</cYear>
+                    <article_title>Random decision forests</article_title>
+                    <unstructured_citation>Ho TK. 1995. Random decision forests. Proceedings of 3rd international conference on document analysis and recognition.</unstructured_citation>
+                </citation>
+                <citation key="c112" type="journal_article">
+                    <journal_title>IEEE transactions on pattern analysis and machine intelligence</journal_title>
+                    <author>Ho</author>
+                    <volume>20</volume>
+                    <issue>8</issue>
+                    <first_page>832</first_page>
+                    <cYear>1998</cYear>
+                    <article_title>The random subspace method for constructing decision forests</article_title>
+                </citation>
+                <citation key="c113" type="journal_article">
+                    <journal_title>Machine learning</journal_title>
+                    <author>Geurts</author>
+                    <volume>63</volume>
+                    <issue>1</issue>
+                    <first_page>3</first_page>
+                    <cYear>2006</cYear>
+                    <article_title>Extremely randomized trees</article_title>
+                </citation>
+                <citation key="c114" type="conference_paper">
+                    <author>Chen</author>
+                    <cYear>2016</cYear>
+                    <article_title>Xgboost: A scalable tree boosting system</article_title>
+                    <unstructured_citation>Chen T, Guestrin C. 2016. Xgboost: A scalable tree boosting system. Proceedings of the 22nd acm sigkdd international conference on knowledge discovery and data mining.</unstructured_citation>
+                </citation>
+                <citation key="c115" type="journal_article">
+                    <journal_title>Nature</journal_title>
+                    <author>Harris</author>
+                    <volume>585</volume>
+                    <first_page>357</first_page>
+                    <cYear>2020</cYear>
+                    <article_title>Array programming with NumPy</article_title>
+                </citation>
+                <citation key="c116" type="conference_paper">
+                    <author>McKinney</author>
+                    <cYear>2010</cYear>
+                    <article_title>Data structures for statistical computing in python</article_title>
+                    <unstructured_citation>McKinney W. 2010. Data structures for statistical computing in python. Proceedings of the 9th Python in Science Conference.</unstructured_citation>
+                </citation>
+                <citation key="c117" type="journal_article">
+                    <journal_title>The Journal of Machine Learning Research</journal_title>
+                    <author>Fortin</author>
+                    <volume>13</volume>
+                    <issue>1</issue>
+                    <first_page>2171</first_page>
+                    <cYear>2012</cYear>
+                    <article_title>DEAP: Evolutionary algorithms made easy</article_title>
+                </citation>
+                <citation key="c118" type="other">
+                    <author>De Rainville</author>
+                    <cYear>2012</cYear>
+                    <article_title>Deap: A python framework for evolutionary algorithms</article_title>
+                </citation>
+                <citation key="c119" type="journal_article">
+                    <journal_title>Nature methods</journal_title>
+                    <author>Virtanen</author>
+                    <volume>17</volume>
+                    <issue>3</issue>
+                    <first_page>261</first_page>
+                    <cYear>2020</cYear>
+                    <article_title>SciPy 1.0: fundamental algorithms for scientific computing in Python</article_title>
+                </citation>
+                <citation key="c120" type="conference_paper">
+                    <author>Taunk</author>
+                    <cYear>2019</cYear>
+                    <article_title>A brief review of nearest neighbor algorithm for learning and classification</article_title>
+                    <unstructured_citation>Taunk K, De S, Verma S, Swetapadma A. 2019. A brief review of nearest neighbor algorithm for learning and classification. 2019 International Conference on Intelligent Computing and Control Systems (ICCS).</unstructured_citation>
+                </citation>
+                <citation key="c121" type="journal_article">
+                    <journal_title>Data Mining and Knowledge Discovery</journal_title>
+                    <author>Migut</author>
+                    <volume>29</volume>
+                    <issue>1</issue>
+                    <first_page>273</first_page>
+                    <cYear>2015</cYear>
+                    <article_title>Visualizing multi-dimensional decision boundaries in 2D</article_title>
+                </citation>
+                <citation key="c122" type="journal_article">
+                    <journal_title>The elements of statistical learning: data mining, inference, and prediction: Springer</journal_title>
+                    <author>Hastie</author>
+                    <cYear>2009</cYear>
+                    <article_title>Friedman JH</article_title>
+                </citation>
+                <citation key="c123" type="journal_article">
+                    <journal_title>Procedia Computer Science</journal_title>
+                    <author>Jung</author>
+                    <volume>18</volume>
+                    <first_page>2337</first_page>
+                    <cYear>2013</cYear>
+                    <article_title>A guided hybrid genetic algorithm for feature selection with expensive cost functions</article_title>
+                </citation>
+                <citation key="c124" type="journal_article">
+                    <journal_title>Methods in ecology and evolution</journal_title>
+                    <author>Adams</author>
+                    <volume>4</volume>
+                    <issue>4</issue>
+                    <first_page>393</first_page>
+                    <cYear>2013</cYear>
+                    <article_title>Otárola-Castillo E. geomorph: an R package for the collection and analysis of geometric morphometric shape data</article_title>
+                </citation>
+                <citation key="c125" type="journal_article">
+                    <journal_title>Molecular ecology resources</journal_title>
+                    <author>Klingenberg</author>
+                    <volume>11</volume>
+                    <issue>2</issue>
+                    <first_page>353</first_page>
+                    <cYear>2011</cYear>
+                    <article_title>MorphoJ: an integrated software package for geometric morphometrics</article_title>
+                </citation>
+                <citation key="c126" type="journal_article">
+                    <journal_title>Hystrix</journal_title>
+                    <author>Rohlf</author>
+                    <volume>26</volume>
+                    <issue>1</issue>
+                    <first_page>9</first_page>
+                    <cYear>2015</cYear>
+                    <article_title>The tps series of software</article_title>
+                </citation>
+                <citation key="c127" type="journal_article">
+                    <journal_title>Plant Systematics and Evolution</journal_title>
+                    <author>Koutecký</author>
+                    <volume>301</volume>
+                    <first_page>1115</first_page>
+                    <cYear>2015</cYear>
+                    <article_title>MorphoTools: a set of R functions for morphometric analysis</article_title>
+                </citation>
+            </citation_list>
+        </posted_content>
+    </body>
+</doi_batch>
