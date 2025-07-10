@@ -140,11 +140,13 @@ def set_citation_year(parent, ref):
 
 
 def set_citation_article_title(parent, ref):
-    if ref.article_title or ref.data_title:
+    if ref.article_title or ref.data_title or ref.chapter_title:
         if ref.article_title:
             tags.add_clean_tag(parent, "article_title", ref.article_title)
         elif ref.data_title:
             tags.add_clean_tag(parent, "article_title", ref.data_title)
+        elif ref.chapter_title:
+            tags.add_clean_tag(parent, "article_title", ref.chapter_title)
 
 
 def set_citation_doi(parent, ref):
@@ -208,6 +210,7 @@ def set_unstructured_citation(parent, ref, face_markup):
 
     if ref.publication_type and ref.publication_type in [
         "confproc",
+        "data",
         "patent",
         "preprint",
         "report",
@@ -230,6 +233,7 @@ def set_unstructured_citation(parent, ref, face_markup):
                     ref.patent,
                     ref.conf_name,
                     citation_uri(ref),
+                    ref.accession,
                 ]
                 if item is not None
             ]
@@ -303,6 +307,8 @@ def do_unstructured_citation(ref):
     ):
         return True
     if ref.publication_type and ref.publication_type in ["report"] and ref.isbn is None:
+        return True
+    if ref.publication_type and ref.publication_type in ["data"]:
         return True
     return False
 

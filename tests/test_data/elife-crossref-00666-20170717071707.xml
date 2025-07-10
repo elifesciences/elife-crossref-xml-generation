@@ -268,6 +268,8 @@
 						<cYear>2015</cYear>
 						<article_title>NKX2-5 mutations causative for congenital heart disease retain
                 functionality and are directed to hundreds of targets</article_title>
+						<unstructured_citation>Bouveret R, Waardenberg AJ, Schonrock N, Ramialison M, Doan T, de Jong D, Bondue A, Kaur G, Mohamed S, Fonoudi H, Chen C, Wouters M, Bhattacharya S,  Plachta N, Dunwoodie SL, Chapman G, Blanpain C, Harvey RP. 2015. NKX2-5 mutations causative for congenital heart disease retain
+                functionality and are directed to hundreds of targets. NCBI Gene Expression Omnibus. https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE44902. GSE44902.</unstructured_citation>
 					</citation>
 					<citation key="bib5" type="journal_article">
 						<journal_title>International journal of systematic and evolutionary
@@ -322,6 +324,7 @@
 						<author>Coyne</author>
 						<first_page>1</first_page>
 						<cYear>1989</cYear>
+						<article_title>Two rules of speciation</article_title>
 					</citation>
 					<citation key="bib12" type="software">
 						<volume_title>PyMol</volume_title>
@@ -343,6 +346,8 @@
 						<article_title>Crystal structure of KRYPTONITE in complex with mCHH DNA and
                 SAH</article_title>
 						<doi>10.2210/pdb4qen/pdb</doi>
+						<unstructured_citation>Du J, Johnson LM, Groth M, Feng S, Hale CJ, Li S, Vashisht AA, Gallego-Bartolome J, Wohlschlegel JA, Patel DJ, Jacobsen SE. 2014. Crystal structure of KRYPTONITE in complex with mCHH DNA and
+                SAH. RCSB Protein Data Bank.</unstructured_citation>
 					</citation>
 					<citation key="bib15" type="web_resource">
 						<volume_title>it is NOT junk</volume_title>
@@ -356,6 +361,7 @@
 						<author>Ferry</author>
 						<cYear>2014</cYear>
 						<article_title>Diagnostically relevant facial gestalt information from ordinary photos database</article_title>
+						<unstructured_citation>Ferry Q, Steinberg J, Webber C, FitzPatrick DR, Ponting CP, Zisserman A, Nellåker C. 2014. Diagnostically relevant facial gestalt information from ordinary photos database. Division of Clinical Neurology, University of Oxford. https://github.com/ChristofferNellaker/Clinical_Face_Phenotype_Space_Pipeline.</unstructured_citation>
 					</citation>
 					<citation key="bib17" type="journal_article">
 						<journal_title>Immunity</journal_title>
@@ -373,6 +379,7 @@
 						<author>Gavrilov</author>
 						<cYear>2014</cYear>
 						<article_title>Mus musculus T-box 2 (Tbx2), mRNA</article_title>
+						<unstructured_citation>Gavrilov S, Harvey RP, Papaioannou VE. 2014. Mus musculus T-box 2 (Tbx2), mRNA. NCBI Nucleotide. NM_009324.2. http://www.ncbi.nlm.nih.gov/nuccore/120407038. NM_009324.</unstructured_citation>
 					</citation>
 					<citation key="bib19" type="report">
 						<volume_title>Augmentin 250/62 SF Suspension</volume_title>
@@ -397,6 +404,8 @@
 						<cYear>2015</cYear>
 						<article_title>Effects on the transcriptome of adult mouse pancreas (principally
                 acinar cells) by the inactivation of the Ptf1a gene in vivo</article_title>
+						<unstructured_citation>Hoang C, Swift GH, Azevedo-Pouly A, MacDonald RJ. 2015. Effects on the transcriptome of adult mouse pancreas (principally
+                acinar cells) by the inactivation of the Ptf1a gene in vivo. NCBI Gene Expression Omnibus. http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE70542. GSE70542.</unstructured_citation>
 					</citation>
 					<citation key="bib22" type="book">
 						<volume_title>Integrated pest management for crops and pastures</volume_title>
@@ -430,6 +439,7 @@
 						<cYear>2015</cYear>
 						<article_title>Data from: Genome-wide errant targeting by Hairy</article_title>
 						<doi>10.5061/dryad.cv323</doi>
+						<unstructured_citation>Kok K, Ay A, Li L, Arnosti DN. 2015. Data from: Genome-wide errant targeting by Hairy. Dryad Digital Repository.</unstructured_citation>
 					</citation>
 					<citation key="bib27" type="journal_article">
 						<journal_title>Nucleic Acids Res</journal_title>
@@ -486,6 +496,8 @@
 						<cYear>2015</cYear>
 						<article_title>ISG15 counteracts Listeria monocytogenes
                 infection</article_title>
+						<unstructured_citation>Radoshevich L, Impens F, Ribet D, Quereda JJ, Nam Tham T, Nahori MA, Bierne H, Dussurget O, Pizarro-Cerdá J, Knobeloch KP, Cossart P. 2015a. ISG15 counteracts Listeria monocytogenes
+                infection. ProteomeXchange. http://proteomecentral.proteomexchange.org/cgi/GetDataset?ID=PXD001805. PXD001805.</unstructured_citation>
 					</citation>
 					<citation key="bib35" type="dataset">
 						<volume_title>ArrayExpress</volume_title>
@@ -494,6 +506,9 @@
 						<article_title>Transcription profiling by high throughput sequencing of LoVo
                 cells infected with Listeria for 24 hr compared to uninfected
                 cells</article_title>
+						<unstructured_citation>Radoshevich L, Impens F, Ribet D, Quereda JJ, Nam Tham T, Nahori MA, Bierne H, Dussurget O, Pizarro-Cerdá J, Knobeloch KP, Cossart P. 2015b. Transcription profiling by high throughput sequencing of LoVo
+                cells infected with Listeria for 24 hr compared to uninfected
+                cells. ArrayExpress. https://www.ebi.ac.uk/arrayexpress/experiments/E-MTAB-3649/. E-MTAB-3649.</unstructured_citation>
 					</citation>
 					<citation key="bib36" type="software">
 						<author>Rasband</author>
@@ -542,6 +557,7 @@
 						<author>Staab</author>
 						<cYear>2013</cYear>
 						<article_title>SKN-1 from the JASPAR CORE database</article_title>
+						<unstructured_citation>Staab TA, Griffen TC, Corcoran C, Evgrafov O, Knowles JA, Sieburth D. 2013. SKN-1 from the JASPAR CORE database. JASPAR. http://jaspar.genereg.net/cgi-bin/jaspar_db.pl. MA0547.1.</unstructured_citation>
 					</citation>
 					<citation key="bib44" type="preprint">
 						<volume_title>preprints</volume_title>
@@ -556,24 +572,29 @@
 						<author>The Shigella Genome Sequencing Consortium</author>
 						<cYear>2015</cYear>
 						<article_title>Global Diversity of Shigella Species</article_title>
+						<unstructured_citation>The Shigella Genome Sequencing Consortium. 2015a. Global Diversity of Shigella Species. NCBI BioProject. http://www.ncbi.nlm.nih.gov/bioproject/?term=PRJEB2846. PRJEB2846.</unstructured_citation>
 					</citation>
 					<citation key="bib46" type="dataset">
 						<volume_title>NCBI BioProject</volume_title>
 						<author>The Shigella Genome Sequencing Consortium</author>
 						<cYear>2015</cYear>
 						<article_title>Shigella sonnei and flexneri from around the world</article_title>
+						<unstructured_citation>The Shigella Genome Sequencing Consortium. 2015b. Shigella sonnei and flexneri from around the world. NCBI BioProject. http://www.ncbi.nlm.nih.gov/bioproject/204320. PRJEB2460.</unstructured_citation>
 					</citation>
 					<citation key="bib47" type="dataset">
 						<volume_title>NCBI BioProject </volume_title>
 						<author>The Shigella Genome Sequencing Consortium</author>
 						<cYear>2015</cYear>
 						<article_title>Shigella flexneri from around the world</article_title>
+						<unstructured_citation>The Shigella Genome Sequencing Consortium. 2015c. Shigella flexneri from around the world. NCBI BioProject . http://www.ncbi.nlm.nih.gov/bioproject/?term=PRJEB2542. PRJEB2542.</unstructured_citation>
 					</citation>
 					<citation key="bib48" type="book_chapter">
 						<volume_title>Advances in insect chemical ecology</volume_title>
 						<author>Turlings</author>
 						<first_page>21</first_page>
 						<cYear>2004</cYear>
+						<article_title>Recruitment of predators and parasitoids by herbivore-injured
+                plants</article_title>
 					</citation>
 					<citation key="bib49" type="book">
 						<volume_title>Advances in insect chemical ecology</volume_title>
@@ -607,12 +628,14 @@
 						<author>Zhang</author>
 						<cYear>2010</cYear>
 						<article_title>Polymeric immunoglobulin receptor [Oncorhynchus mykiss]</article_title>
+						<unstructured_citation>Zhang YA, Salinas I, Li J, Parra D, Bjork S, Xu Z, LaPatra SE, Bartholomew J, Sunyer JO. 2010. Polymeric immunoglobulin receptor [Oncorhynchus mykiss]. NCBI. http://www.ncbi.nlm.nih.gov/protein/ADB81776.1. GenBank: ADB81776.1.</unstructured_citation>
 					</citation>
 					<citation key="bib54" type="dataset">
 						<volume_title>modMine</volume_title>
 						<author>Zhong</author>
 						<cYear>2013</cYear>
 						<article_title>ChIP-Seq Identification of C. elegans TF Binding Sites</article_title>
+						<unstructured_citation>Zhong M, Snyder M, Slightam C, Kim S, Murray J, Waterston R, Gerstein M, Niu W, Janette J, Raha D, Agarwal A, Reinke V, Sarov M, Hyman A. 2013. ChIP-Seq Identification of C. elegans TF Binding Sites. modMine. http://intermine.modencode.org/release-33/report.do?id=77000379. modENCODE_3369.</unstructured_citation>
 					</citation>
 				</citation_list>
 				<component_list>
