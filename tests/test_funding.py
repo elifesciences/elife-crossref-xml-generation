@@ -33,7 +33,7 @@ class TestSetFundref(unittest.TestCase):
         funding_award = FundingAward()
         funding_award.institution_name = "Test Funder"
         funding_award.institution_id = "123456"
-        funding_award.id_type = "Fundref"
+        funding_award.institution_id_type = "FundRef"
         funding_award.awards = [award]
         article.funding_awards = [funding_award]
         expected = (
@@ -57,6 +57,36 @@ class TestSetFundref(unittest.TestCase):
         parent = Element("root")
         article = Article("10.7554/eLife.00666", "Test article")
         expected = b"<?xml version='1.0' encoding='utf8'?>\n" b"<root />"
+        # invoke
+        funding.set_fundref(parent, article)
+        parent_string = ElementTree.tostring(parent, "utf8")
+        self.assertEqual(parent_string, expected)
+
+    def test_set_ror(self):
+        "test settinga ror institution id"
+        parent = Element("root")
+        article = Article("10.7554/eLife.00666", "Test article")
+        award = Award()
+        award.award_id = "award_id"
+        award.award_id_type = "doi"
+        funding_award = FundingAward()
+        funding_award.institution_name = "Test Funder"
+        funding_award.institution_id = "123456"
+        funding_award.institution_id_type = "ror"
+        funding_award.awards = [award]
+        article.funding_awards = [funding_award]
+        expected = (
+            b"<?xml version='1.0' encoding='utf8'?>\n"
+            b"<root>"
+            b'<fr:program name="fundref">'
+            b'<fr:assertion name="fundgroup">'
+            b'<fr:assertion name="funder_name">Test Funder</fr:assertion>'
+            b'<fr:assertion name="ror">123456</fr:assertion>'
+            b'<fr:assertion name="award_number">award_id</fr:assertion>'
+            b"</fr:assertion>"
+            b"</fr:program>"
+            b"</root>"
+        )
         # invoke
         funding.set_fundref(parent, article)
         parent_string = ElementTree.tostring(parent, "utf8")
