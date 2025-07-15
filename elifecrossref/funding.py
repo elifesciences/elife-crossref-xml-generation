@@ -22,7 +22,15 @@ def set_funding_award(parent, award):
     fr_fundgroup_tag.set("name", "fundgroup")
     fr_funder_name_tag = set_funder_name(fr_fundgroup_tag, award)
     if fr_funder_name_tag is not None:
-        set_funder_identifier(fr_fundgroup_tag, award)
+        # set ror value otherwise set FundRef funder_name
+        if (
+            award.institution_id
+            and hasattr(award, "institution_id_type")
+            and award.institution_id_type == "ror"
+        ):
+            set_funder_ror(fr_fundgroup_tag, award)
+        else:
+            set_funder_identifier(fr_fundgroup_tag, award)
     set_award_number(fr_fundgroup_tag, award)
 
 
@@ -40,6 +48,12 @@ def set_funder_identifier(parent, award):
         fr_funder_identifier_tag = SubElement(parent, "fr:assertion")
         fr_funder_identifier_tag.set("name", "funder_identifier")
         fr_funder_identifier_tag.text = award.institution_id
+
+
+def set_funder_ror(parent, award):
+    fr_award_number_tag = SubElement(parent, "fr:assertion")
+    fr_award_number_tag.set("name", "ror")
+    fr_award_number_tag.text = award.institution_id
 
 
 def set_award_number(parent, award):
