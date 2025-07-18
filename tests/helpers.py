@@ -3,9 +3,11 @@ from elifearticle.article import (
     Affiliation,
     Article,
     ArticleDate,
+    Award,
     Citation,
     Contributor,
     Event,
+    FundingAward,
     License,
     Preprint,
     Uri,
@@ -69,6 +71,15 @@ def build_preprint_article():
     citation_object = Citation()
     citation_object.article_title = "An article title"
     article.ref_list = [citation_object]
+    # funding
+    funding_award_object = FundingAward()
+    funding_award_object.institution_name = "Example Funding Institution"
+    funding_award_object.institution_id = "example_ror_id"
+    funding_award_object.institution_id_type = "ror"
+    award_object = Award()
+    award_object.award_id = "example_award_id"
+    funding_award_object.awards = [award_object]
+    article.funding_awards = [funding_award_object]
 
     return article
 
