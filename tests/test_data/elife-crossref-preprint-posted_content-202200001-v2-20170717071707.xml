@@ -53,6 +53,13 @@
                     .
                 </jats:p>
             </jats:abstract>
+            <fr:program name="fundref">
+                <fr:assertion name="fundgroup">
+                    <fr:assertion name="funder_name">Example Funding Institution</fr:assertion>
+                    <fr:assertion name="ror">example_ror_id</fr:assertion>
+                    <fr:assertion name="award_number">example_award_id</fr:assertion>
+                </fr:assertion>
+            </fr:program>
             <ai:program name="AccessIndicators">
                 <ai:license_ref>http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
             </ai:program>
