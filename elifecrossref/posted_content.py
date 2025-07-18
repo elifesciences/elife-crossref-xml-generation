@@ -7,6 +7,7 @@ from elifecrossref import (
     contributor,
     dates,
     doi,
+    funding,
     related,
     status,
     title,
@@ -54,6 +55,9 @@ def set_posted_content(parent, poa_article, crossref_config):
 
     # abstract
     abstract.set_abstract(posted_content_tag, poa_article, crossref_config)
+
+    # funding
+    funding.set_fundref(posted_content_tag, poa_article)
 
     # ai:program license
     if poa_article.license and poa_article.license.href:
