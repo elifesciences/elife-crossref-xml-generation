@@ -70,6 +70,9 @@
                 <rel:related_item>
                     <rel:intra_work_relation identifier-type="uri" relationship-type="isVersionOf">10.7554/article_version_with_uri</rel:intra_work_relation>
                 </rel:related_item>
+                <rel:related_item>
+                    <rel:inter_work_relation identifier-type="doi" relationship-type="isFinancedBy">example_award_id</rel:inter_work_relation>
+                </rel:related_item>
             </rel:program>
             <version_info>
                 <version xml:lang="en">2</version>

@@ -64,12 +64,18 @@ def set_posted_content(parent, poa_article, crossref_config):
         ai_program_tag = access_indicators.set_ai_program(posted_content_tag)
         access_indicators.set_ai_license_ref(ai_program_tag, poa_article.license.href)
 
+    # this is the spot to add the relations program tag if it is required
     relations_program_tag = None
-    # rel:program related_item tags for preprint versions
-    if poa_article.publication_history:
+    if (
+        related.do_relations_program_funding(poa_article) is True
+        or poa_article.publication_history
+    ):
         relations_program_tag = related.set_relations_program(
             posted_content_tag, relations_program_tag
         )
+
+    # rel:program related_item tags for preprint versions
+    if poa_article.publication_history:
         for event in poa_article.publication_history:
             related_item_tag = SubElement(relations_program_tag, "rel:related_item")
             related_item_type = "intra_work_relation"
@@ -87,6 +93,9 @@ def set_posted_content(parent, poa_article, crossref_config):
                 identifier_type,
                 related_item_text,
             )
+
+    if relations_program_tag is not None:
+        funding.set_finance_relation(relations_program_tag, poa_article)
 
     if poa_article.version:
         version.set_version_info(posted_content_tag, poa_article)

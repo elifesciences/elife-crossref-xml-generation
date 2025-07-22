@@ -78,6 +78,7 @@ def build_preprint_article():
     funding_award_object.institution_id_type = "ror"
     award_object = Award()
     award_object.award_id = "example_award_id"
+    award_object.award_id_type = "doi"
     funding_award_object.awards = [award_object]
     article.funding_awards = [funding_award_object]
 

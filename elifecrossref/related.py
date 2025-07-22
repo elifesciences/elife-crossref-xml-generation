@@ -47,6 +47,15 @@ def do_relations_program(poa_article):
                 do_relations = True
                 break
     if do_relations is not True and poa_article.funding_awards:
+        do_relations = do_relations_program_funding(poa_article)
+    if do_relations is not True and do_preprint_related_item(poa_article):
+        do_relations = True
+    return do_relations
+
+
+def do_relations_program_funding(poa_article):
+    "whether to add a relations program tag based on funding data"
+    if poa_article.funding_awards:
         for funding_award in poa_article.funding_awards:
             if (
                 funding_award.awards
@@ -59,11 +68,7 @@ def do_relations_program(poa_article):
                 )
                 > 0
             ):
-                do_relations = True
-                break
-    if do_relations is not True and do_preprint_related_item(poa_article):
-        do_relations = True
-    return do_relations
+                return True
 
 
 def set_relations_program(parent, relations_program_tag):
