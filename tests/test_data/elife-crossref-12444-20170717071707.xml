@@ -211,28 +211,38 @@
 						<assertion group_name="post_publication_commenting" label="Post publication commenting" name="post_publication_commenting">open (sign in with ORCID iD required)</assertion>
 						<fr:program name="fundref">
 							<fr:assertion name="fundgroup">
-								<fr:assertion name="funder_name">Wellcome Trust</fr:assertion>
-								<fr:assertion name="funder_identifier">http://dx.doi.org/10.13039/100004440</fr:assertion>
+								<fr:assertion name="funder_name">
+									Wellcome Trust
+									<fr:assertion name="funder_identifier">http://dx.doi.org/10.13039/100004440</fr:assertion>
+								</fr:assertion>
 								<fr:assertion name="award_number">Graduate Student Scholarship 097112</fr:assertion>
 							</fr:assertion>
 							<fr:assertion name="fundgroup">
-								<fr:assertion name="funder_name">Wellcome Trust</fr:assertion>
-								<fr:assertion name="funder_identifier">http://dx.doi.org/10.13039/100004440</fr:assertion>
+								<fr:assertion name="funder_name">
+									Wellcome Trust
+									<fr:assertion name="funder_identifier">http://dx.doi.org/10.13039/100004440</fr:assertion>
+								</fr:assertion>
 								<fr:assertion name="award_number">100290</fr:assertion>
 							</fr:assertion>
 							<fr:assertion name="fundgroup">
-								<fr:assertion name="funder_name">Wellcome Trust</fr:assertion>
-								<fr:assertion name="funder_identifier">http://dx.doi.org/10.13039/100004440</fr:assertion>
+								<fr:assertion name="funder_name">
+									Wellcome Trust
+									<fr:assertion name="funder_identifier">http://dx.doi.org/10.13039/100004440</fr:assertion>
+								</fr:assertion>
 								<fr:assertion name="award_number">100156</fr:assertion>
 							</fr:assertion>
 							<fr:assertion name="fundgroup">
-								<fr:assertion name="funder_name">Medical Research Council</fr:assertion>
-								<fr:assertion name="funder_identifier">http://dx.doi.org/10.13039/501100000265</fr:assertion>
+								<fr:assertion name="funder_name">
+									Medical Research Council
+									<fr:assertion name="funder_identifier">http://dx.doi.org/10.13039/501100000265</fr:assertion>
+								</fr:assertion>
 								<fr:assertion name="award_number">MR/K011898/1</fr:assertion>
 							</fr:assertion>
 							<fr:assertion name="fundgroup">
-								<fr:assertion name="funder_name">Wellcome Trust</fr:assertion>
-								<fr:assertion name="funder_identifier">http://dx.doi.org/10.13039/100004440</fr:assertion>
+								<fr:assertion name="funder_name">
+									Wellcome Trust
+									<fr:assertion name="funder_identifier">http://dx.doi.org/10.13039/100004440</fr:assertion>
+								</fr:assertion>
 								<fr:assertion name="award_number">102972</fr:assertion>
 							</fr:assertion>
 						</fr:program>
