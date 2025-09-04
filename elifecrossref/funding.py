@@ -20,17 +20,17 @@ def set_fundref(parent, poa_article):
 def set_funding_award(parent, award):
     fr_fundgroup_tag = SubElement(parent, "fr:assertion")
     fr_fundgroup_tag.set("name", "fundgroup")
-    fr_funder_name_tag = set_funder_name(fr_fundgroup_tag, award)
-    if fr_funder_name_tag is not None:
-        # set ror value otherwise set FundRef funder_name
-        if (
-            award.institution_id
-            and hasattr(award, "institution_id_type")
-            and award.institution_id_type == "ror"
-        ):
-            set_funder_ror(fr_fundgroup_tag, award)
-        else:
-            set_funder_identifier(fr_fundgroup_tag, award)
+    # set ror value otherwise set FundRef funder_name
+    if (
+        award.institution_id
+        and hasattr(award, "institution_id_type")
+        and award.institution_id_type == "ror"
+    ):
+        set_funder_ror(fr_fundgroup_tag, award)
+    elif award.get_funder_name():
+        fr_funder_name_tag = set_funder_name(fr_fundgroup_tag, award)
+        if fr_funder_name_tag is not None:
+            set_funder_identifier(fr_funder_name_tag, award)
     set_award_number(fr_fundgroup_tag, award)
 
 
