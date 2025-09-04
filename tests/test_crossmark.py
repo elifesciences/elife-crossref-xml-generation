@@ -159,8 +159,9 @@ class TestSetCustomMetadata(unittest.TestCase):
             "<custom_metadata>"
             '<fr:program name="fundref">'
             '<fr:assertion name="fundgroup">'
-            '<fr:assertion name="funder_name">Institution</fr:assertion>'
+            '<fr:assertion name="funder_name">Institution'
             '<fr:assertion name="funder_identifier">institution_id</fr:assertion>'
+            '</fr:assertion>'
             '<fr:assertion name="award_number">award_id</fr:assertion>'
             "</fr:assertion>"
             "</fr:program>"
