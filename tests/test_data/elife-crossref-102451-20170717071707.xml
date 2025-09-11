@@ -1,0 +1,806 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doi_batch xmlns="http://www.crossref.org/schema/5.4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:fr="http://www.crossref.org/fundref.xsd" xmlns:ai="http://www.crossref.org/AccessIndicators.xsd" xmlns:ct="http://www.crossref.org/clinicaltrials.xsd" xmlns:rel="http://www.crossref.org/relations.xsd" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:jats="http://www.ncbi.nlm.nih.gov/JATS1" version="5.4.0" xsi:schemaLocation="http://www.crossref.org/schema/5.4.0 http://www.crossref.org/schemas/crossref5.4.0.xsd">
+	<head>
+		<doi_batch_id>elife-crossref-102451-20170717071707</doi_batch_id>
+		<timestamp>20170717071707</timestamp>
+		<depositor>
+			<depositor_name>eLife</depositor_name>
+			<email_address>production@elifesciences.org</email_address>
+		</depositor>
+		<registrant>eLife</registrant>
+	</head>
+	<body>
+		<journal>
+			<journal_metadata language="en">
+				<full_title>eLife</full_title>
+				<issn media_type="electronic">2050-084X</issn>
+			</journal_metadata>
+			<journal_issue>
+				<publication_date media_type="online">
+					<month>03</month>
+					<day>04</day>
+					<year>2025</year>
+				</publication_date>
+				<journal_volume>
+					<volume>13</volume>
+				</journal_volume>
+			</journal_issue>
+			<journal_article publication_type="full_text">
+				<titles>
+					<title>Autologous P63+ lung progenitor cell transplantation in idiopathic pulmonary fibrosis: a phase 1 clinical trial</title>
+				</titles>
+				<contributors>
+					<person_name contributor_role="author" sequence="first">
+						<given_name>Shiyu</given_name>
+						<surname>Zhang</surname>
+						<affiliations>
+							<institution>
+								<institution_name>Shanghai East Hospital, School of Medicine, Tongji University</institution_name>
+								<institution_id type="ror">https://ror.org/03rc6as71</institution_id>
+								<institution_place>Shanghai, China</institution_place>
+							</institution>
+							<institution>
+								<institution_name>Tongji Stem Cell Center, Tongji University</institution_name>
+								<institution_id type="ror">https://ror.org/03rc6as71</institution_id>
+								<institution_place>Shanghai, China</institution_place>
+							</institution>
+						</affiliations>
+					</person_name>
+					<person_name contributor_role="author" sequence="first">
+						<given_name>Min</given_name>
+						<surname>Zhou</surname>
+						<affiliations>
+							<institution>
+								<institution_name>Department of Respiratory and Critical Care Medicine, Ruijin Hospital, Shanghai Jiao Tong University School of Medicine</institution_name>
+								<institution_id type="ror">https://ror.org/01hv94n30</institution_id>
+								<institution_place>Shanghai, China</institution_place>
+							</institution>
+						</affiliations>
+					</person_name>
+					<person_name contributor_role="author" sequence="first">
+						<given_name>Chi</given_name>
+						<surname>Shao</surname>
+						<affiliations>
+							<institution>
+								<institution_name>Department of Respiratory and Critical Care Medicine, Peking Union Medical College Hospital, Chinese Academy of Medical Sciences &amp; Peking Union Medical College</institution_name>
+								<institution_id type="ror">https://ror.org/04jztag35</institution_id>
+								<institution_place>Beijing, China</institution_place>
+							</institution>
+						</affiliations>
+					</person_name>
+					<person_name contributor_role="author" sequence="first">
+						<given_name>Yu</given_name>
+						<surname>Zhao</surname>
+						<affiliations>
+							<institution>
+								<institution_name>Shanghai East Hospital, School of Medicine, Tongji University</institution_name>
+								<institution_id type="ror">https://ror.org/03rc6as71</institution_id>
+								<institution_place>Shanghai, China</institution_place>
+							</institution>
+							<institution>
+								<institution_name>Tongji Stem Cell Center, Tongji University</institution_name>
+								<institution_id type="ror">https://ror.org/03rc6as71</institution_id>
+								<institution_place>Shanghai, China</institution_place>
+							</institution>
+						</affiliations>
+					</person_name>
+					<person_name contributor_role="author" sequence="additional">
+						<given_name>Mingzhe</given_name>
+						<surname>Liu</surname>
+						<affiliations>
+							<institution>
+								<institution_name>Shanghai East Hospital, School of Medicine, Tongji University</institution_name>
+								<institution_id type="ror">https://ror.org/03rc6as71</institution_id>
+								<institution_place>Shanghai, China</institution_place>
+							</institution>
+							<institution>
+								<institution_name>Tongji Stem Cell Center, Tongji University</institution_name>
+								<institution_id type="ror">https://ror.org/03rc6as71</institution_id>
+								<institution_place>Shanghai, China</institution_place>
+							</institution>
+						</affiliations>
+					</person_name>
+					<person_name contributor_role="author" sequence="additional">
+						<given_name>Lei</given_name>
+						<surname>Ni</surname>
+						<affiliations>
+							<institution>
+								<institution_name>Department of Respiratory and Critical Care Medicine, Ruijin Hospital, Shanghai Jiao Tong University School of Medicine</institution_name>
+								<institution_id type="ror">https://ror.org/01hv94n30</institution_id>
+								<institution_place>Shanghai, China</institution_place>
+							</institution>
+						</affiliations>
+					</person_name>
+					<person_name contributor_role="author" sequence="additional">
+						<given_name>Zhiyao</given_name>
+						<surname>Bao</surname>
+						<affiliations>
+							<institution>
+								<institution_name>Department of Respiratory and Critical Care Medicine, Ruijin Hospital, Shanghai Jiao Tong University School of Medicine</institution_name>
+								<institution_id type="ror">https://ror.org/01hv94n30</institution_id>
+								<institution_place>Shanghai, China</institution_place>
+							</institution>
+						</affiliations>
+					</person_name>
+					<person_name contributor_role="author" sequence="additional">
+						<given_name>Qiurui</given_name>
+						<surname>Zhang</surname>
+						<affiliations>
+							<institution>
+								<institution_name>Department of Respiratory and Critical Care Medicine, Ruijin Hospital, Shanghai Jiao Tong University School of Medicine</institution_name>
+								<institution_id type="ror">https://ror.org/01hv94n30</institution_id>
+								<institution_place>Shanghai, China</institution_place>
+							</institution>
+						</affiliations>
+					</person_name>
+					<person_name contributor_role="author" sequence="additional">
+						<given_name>Ting</given_name>
+						<surname>Zhang</surname>
+						<affiliations>
+							<institution>
+								<institution_name>Super Organ R&amp;D Center, Regend Therapeutics</institution_name>
+								<institution_id type="ror">https://ror.org/05xdrcw34</institution_id>
+								<institution_place>Shanghai, China</institution_place>
+							</institution>
+						</affiliations>
+					</person_name>
+					<person_name contributor_role="author" sequence="additional">
+						<given_name>Qun</given_name>
+						<surname>Luo</surname>
+						<affiliations>
+							<institution>
+								<institution_name>Department of Respiratory and Critical Care Medicine, The First Affiliated Hospital of Guangzhou Medical University</institution_name>
+								<institution_id type="ror">https://ror.org/00z0j0d77</institution_id>
+								<institution_place>Guangzhou, China</institution_place>
+							</institution>
+						</affiliations>
+					</person_name>
+					<person_name contributor_role="author" sequence="additional">
+						<given_name>Jieming</given_name>
+						<surname>Qu</surname>
+						<affiliations>
+							<institution>
+								<institution_name>Department of Respiratory and Critical Care Medicine, Ruijin Hospital, Shanghai Jiao Tong University School of Medicine</institution_name>
+								<institution_id type="ror">https://ror.org/01hv94n30</institution_id>
+								<institution_place>Shanghai, China</institution_place>
+							</institution>
+						</affiliations>
+					</person_name>
+					<person_name contributor_role="author" sequence="additional">
+						<given_name>Zuojun</given_name>
+						<surname>Xu</surname>
+						<affiliations>
+							<institution>
+								<institution_name>Department of Respiratory and Critical Care Medicine, Peking Union Medical College Hospital, Chinese Academy of Medical Sciences &amp; Peking Union Medical College</institution_name>
+								<institution_id type="ror">https://ror.org/04jztag35</institution_id>
+								<institution_place>Beijing, China</institution_place>
+							</institution>
+						</affiliations>
+					</person_name>
+					<person_name contributor_role="author" sequence="additional">
+						<given_name>Wei</given_name>
+						<surname>Zuo</surname>
+						<affiliations>
+							<institution>
+								<institution_name>Shanghai East Hospital, School of Medicine, Tongji University</institution_name>
+								<institution_id type="ror">https://ror.org/03rc6as71</institution_id>
+								<institution_place>Shanghai, China</institution_place>
+							</institution>
+							<institution>
+								<institution_name>Tongji Stem Cell Center, Tongji University</institution_name>
+								<institution_id type="ror">https://ror.org/03rc6as71</institution_id>
+								<institution_place>Shanghai, China</institution_place>
+							</institution>
+							<institution>
+								<institution_name>Super Organ R&amp;D Center, Regend Therapeutics</institution_name>
+								<institution_id type="ror">https://ror.org/05xdrcw34</institution_id>
+								<institution_place>Shanghai, China</institution_place>
+							</institution>
+							<institution>
+								<institution_name>Kiangnan Stem Cell Institute</institution_name>
+								<institution_place>Zhejiang, China</institution_place>
+							</institution>
+						</affiliations>
+						<ORCID authenticated="true">https://orcid.org/0000-0002-4460-0337</ORCID>
+					</person_name>
+				</contributors>
+				<jats:abstract>
+					<jats:p>Background:</jats:p>
+					<jats:p>In idiopathic pulmonary fibrosis (IPF) patients, alveolar architectures are lost and gas transfer function would decline, which cannot be rescued by conventional anti-fibrotic therapy. P63+ lung basal progenitor cells are reported to have potential to repair damaged lung epithelium in animal models, which need further investigation in clinical trials.</jats:p>
+					<jats:p>Methods:</jats:p>
+					<jats:p>We cloned and expanded P63+ progenitor cells from IPF patients to manufacture cell product REGEND001, which were further characterized by morphology and single-cell transcriptomic analysis. Subsequently, an open-label, dose-escalation autologous progenitor cell transplantation clinical trial was conducted. We treated 12 patients with ascending doses of cells: 0.6x, 1x, 2x and 3.3x106 cells/kg bodyweight. The primary outcome was the incidence and severity of cell therapy-related adverse events (AEs); secondary outcome included other safety and efficacy evaluations.</jats:p>
+					<jats:p>Results:</jats:p>
+					<jats:p>P63+ basal progenitor cell was safe and tolerated at all doses, with no dose-limiting toxicity or cell therapy-related severe adverse events observed. Patients in three higher dose groups showed significant improvement of lung gas transfer function as well as exercise ability. Resolution of honeycomb lesion was observed in patients of higher dose groups.</jats:p>
+					<jats:p>Conclusions:</jats:p>
+					<jats:p>REGEND001 has high safety profile and meanwhile encourages further efficacy exploration in IPF patients.</jats:p>
+					<jats:p>Funding:</jats:p>
+					<jats:p>National High Level Hospital Clinical Research Funding (2022-PUMCH-B-108), National Key Research and Development Plan (2024YFA1108900, 2024YFA1108500), Jiangsu Province Science and Technology Special Project Funding (BE2023727), National Biopharmaceutical Technology Research Project Funding (NCTIB2023XB01011), Non-profit Central Research Institute Fund of Chinese Academy of Medical Science (2020-PT320-005), and Regend Therapeutics.</jats:p>
+					<jats:p>Clinical trial number:</jats:p>
+					<jats:p>Chinese clinical trial registry: CTR20210349.</jats:p>
+				</jats:abstract>
+				<publication_date media_type="online">
+					<month>03</month>
+					<day>04</day>
+					<year>2025</year>
+				</publication_date>
+				<publisher_item>
+					<item_number item_number_type="article_number">RP102451</item_number>
+					<identifier id_type="doi">10.7554/eLife.102451</identifier>
+				</publisher_item>
+				<crossmark>
+					<crossmark_policy>10.7554/eLife.102451</crossmark_policy>
+					<crossmark_domains>
+						<crossmark_domain>
+							<domain>elifesciences.org</domain>
+						</crossmark_domain>
+					</crossmark_domains>
+					<crossmark_domain_exclusive>false</crossmark_domain_exclusive>
+					<custom_metadata>
+						<assertion group_name="peer_review_taxonomy" label="Peer review transparency" name="peer_review_transparency">single anonymised</assertion>
+						<assertion group_name="peer_review_taxonomy" label="Peer review interaction" name="peer_review_interaction">other reviewer(s), editor</assertion>
+						<assertion group_name="peer_review_taxonomy" label="Peer review published" name="peer_review_published">review summaries, review reports, author/editor communication, reviewer identities reviewer opt in, editor identities</assertion>
+						<assertion group_name="post_publication_commenting" label="Post publication commenting" name="post_publication_commenting">open (sign in with ORCID iD required)</assertion>
+						<fr:program name="fundref">
+							<fr:assertion name="fundgroup">
+								<fr:assertion name="funder_name">National High Level Hospital Clinical Research Funding</fr:assertion>
+								<fr:assertion name="award_number">2022-PUMCH-B-108</fr:assertion>
+							</fr:assertion>
+							<fr:assertion name="fundgroup">
+								<fr:assertion name="funder_name">National Key Research and Development Plan</fr:assertion>
+								<fr:assertion name="award_number">2024YFA1108900</fr:assertion>
+							</fr:assertion>
+							<fr:assertion name="fundgroup">
+								<fr:assertion name="funder_name">National Key Research and Development Plan</fr:assertion>
+								<fr:assertion name="award_number">2024YFA1108500</fr:assertion>
+							</fr:assertion>
+							<fr:assertion name="fundgroup">
+								<fr:assertion name="funder_name">Jiangsu Province Science and Technology Special Project (Key Research and Development Plan for Social Development) Funding</fr:assertion>
+								<fr:assertion name="award_number">BE2023727</fr:assertion>
+							</fr:assertion>
+							<fr:assertion name="fundgroup">
+								<fr:assertion name="funder_name">National Biopharmaceutical Technology Research Project Funding</fr:assertion>
+								<fr:assertion name="award_number">NCTIB2023XB01011</fr:assertion>
+							</fr:assertion>
+							<fr:assertion name="fundgroup">
+								<fr:assertion name="funder_name">Non-profit Central Research institute Fund of Chinese Academy of Medical Science</fr:assertion>
+								<fr:assertion name="award_number">2020-PT320-005</fr:assertion>
+							</fr:assertion>
+						</fr:program>
+						<ai:program name="AccessIndicators">
+							<ai:license_ref applies_to="vor">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+							<ai:license_ref applies_to="am">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+							<ai:license_ref applies_to="tdm">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+						</ai:program>
+					</custom_metadata>
+				</crossmark>
+				<rel:program>
+					<rel:related_item>
+						<rel:description>NCBI Gene Expression Omnibus</rel:description>
+						<rel:inter_work_relation identifier-type="accession" relationship-type="isSupplementedBy">GSE269794</rel:inter_work_relation>
+					</rel:related_item>
+					<rel:related_item>
+						<rel:description>NCBI Gene Expression Omnibus</rel:description>
+						<rel:inter_work_relation identifier-type="accession" relationship-type="references">GSE190889</rel:inter_work_relation>
+					</rel:related_item>
+					<rel:related_item>
+						<rel:intra_work_relation identifier-type="doi" relationship-type="hasPreprint">10.1101/2024.09.18.24313787</rel:intra_work_relation>
+					</rel:related_item>
+				</rel:program>
+				<archive_locations>
+					<archive name="CLOCKSS"/>
+				</archive_locations>
+				<doi_data>
+					<doi>10.7554/eLife.102451</doi>
+					<resource>https://elifesciences.org/articles/102451</resource>
+					<collection property="text-mining">
+						<item>
+							<resource mime_type="application/pdf">https://cdn.elifesciences.org/articles/102451/elife-102451-v1.pdf</resource>
+						</item>
+						<item>
+							<resource mime_type="application/xml">https://cdn.elifesciences.org/articles/102451/elife-102451-v1.xml</resource>
+						</item>
+					</collection>
+					<collection property="crawler-based">
+						<item crawler="iParadigms">
+							<resource>https://elifesciences.org/articles/102451</resource>
+						</item>
+					</collection>
+				</doi_data>
+				<citation_list>
+					<citation key="bib1" type="journal_article">
+						<journal_title>The Lancet. Respiratory Medicine</journal_title>
+						<author>Antoniou</author>
+						<volume>5</volume>
+						<first_page>472</first_page>
+						<cYear>2017</cYear>
+						<article_title>Mesenchymal stem cell treatment for IPF-time for phase 2 trials?</article_title>
+						<doi>10.1016/S2213-2600(17)30180-7</doi>
+					</citation>
+					<citation key="bib2" type="journal_article">
+						<journal_title>Cell Stem Cell</journal_title>
+						<author>Basil</author>
+						<volume>31</volume>
+						<first_page>439</first_page>
+						<cYear>2024</cYear>
+						<article_title>Lung repair and regeneration: Advanced models and insights into human disease</article_title>
+						<doi>10.1016/j.stem.2024.02.009</doi>
+					</citation>
+					<citation key="bib3" type="journal_article">
+						<journal_title>American Journal of Respiratory and Critical Care Medicine</journal_title>
+						<author>Cheng</author>
+						<volume>209</volume>
+						<cYear>2024</cYear>
+						<article_title>interim analysis of human autologous lung stem cell transplant for idiopathic pulmonary fibrosis</article_title>
+						<doi>10.1164/ajrccm-conference.2024.209.1_MeetingAbstracts.A3748</doi>
+						<elocation_id>A3748</elocation_id>
+					</citation>
+					<citation key="bib4" type="journal_article">
+						<journal_title>American Journal of Respiratory and Critical Care Medicine</journal_title>
+						<author>Collard</author>
+						<volume>168</volume>
+						<first_page>538</first_page>
+						<cYear>2003</cYear>
+						<article_title>Changes in clinical and physiologic variables predict survival in idiopathic pulmonary fibrosis</article_title>
+						<doi>10.1164/rccm.200211-1311OC</doi>
+					</citation>
+					<citation key="bib5" type="journal_article">
+						<journal_title>Mucosal Immunology</journal_title>
+						<author>Davis</author>
+						<volume>14</volume>
+						<first_page>978</first_page>
+						<cYear>2021</cYear>
+						<article_title>Cellular and functional heterogeneity of the airway epithelium</article_title>
+						<doi>10.1038/s41385-020-00370-7</doi>
+					</citation>
+					<citation key="bib6" type="journal_article">
+						<journal_title>The Clinical Respiratory Journal</journal_title>
+						<author>Doubková</author>
+						<volume>12</volume>
+						<first_page>1526</first_page>
+						<cYear>2018</cYear>
+						<article_title>EMPIRE Registry, Czech Part: Impact of demographics, pulmonary function and HRCT on survival and clinical course in idiopathic pulmonary fibrosis</article_title>
+						<doi>10.1111/crj.12700</doi>
+					</citation>
+					<citation key="bib7" type="journal_article">
+						<journal_title>American Journal of Respiratory and Critical Care Medicine</journal_title>
+						<author>du Bois</author>
+						<volume>184</volume>
+						<first_page>1382</first_page>
+						<cYear>2011</cYear>
+						<article_title>Forced vital capacity in patients with idiopathic pulmonary fibrosis: test properties and minimal clinically important difference</article_title>
+						<doi>10.1164/rccm.201105-0840OC</doi>
+					</citation>
+					<citation key="bib8" type="journal_article">
+						<journal_title>American Journal of Respiratory and Critical Care Medicine</journal_title>
+						<author>du Bois</author>
+						<volume>184</volume>
+						<first_page>459</first_page>
+						<cYear>2011</cYear>
+						<article_title>Ascertainment of individual risk of mortality for patients with idiopathic pulmonary fibrosis</article_title>
+						<doi>10.1164/rccm.201011-1790OC</doi>
+					</citation>
+					<citation key="bib9" type="journal_article">
+						<journal_title>American Journal of Respiratory and Critical Care Medicine</journal_title>
+						<author>du Bois</author>
+						<volume>183</volume>
+						<first_page>1231</first_page>
+						<cYear>2011</cYear>
+						<article_title>Six-minute-walk test in idiopathic pulmonary fibrosis: test validation and minimal clinically important difference</article_title>
+						<doi>10.1164/rccm.201007-1179OC</doi>
+					</citation>
+					<citation key="bib10" type="journal_article">
+						<journal_title>Respirology</journal_title>
+						<author>Durheim</author>
+						<volume>26</volume>
+						<first_page>982</first_page>
+						<cYear>2021</cYear>
+						<article_title>Outcomes of patients with advanced idiopathic pulmonary fibrosis treated with nintedanib or pirfenidone in a real-world multicentre cohort</article_title>
+						<doi>10.1111/resp.14116</doi>
+					</citation>
+					<citation key="bib11" type="journal_article">
+						<journal_title>The Lancet. Digital Health</journal_title>
+						<author>Fainberg</author>
+						<volume>4</volume>
+						<first_page>e862</first_page>
+						<cYear>2022</cYear>
+						<article_title>Forced vital capacity trajectories in patients with idiopathic pulmonary fibrosis: a secondary analysis of a multicentre, prospective, observational cohort</article_title>
+						<doi>10.1016/S2589-7500(22)00173-X</doi>
+					</citation>
+					<citation key="bib12" type="journal_article">
+						<journal_title>American Journal of Respiratory and Critical Care Medicine</journal_title>
+						<author>Fell</author>
+						<volume>179</volume>
+						<first_page>402</first_page>
+						<cYear>2009</cYear>
+						<article_title>The prognostic value of cardiopulmonary exercise testing in idiopathic pulmonary fibrosis</article_title>
+						<doi>10.1164/rccm.200802-241OC</doi>
+					</citation>
+					<citation key="bib13" type="journal_article">
+						<journal_title>Medical Sciences</journal_title>
+						<author>Fernández Fabrellas</author>
+						<volume>6</volume>
+						<cYear>2018</cYear>
+						<article_title>Prognosis and follow-up of idiopathic pulmonary fibrosis</article_title>
+						<doi>10.3390/medsci6020051</doi>
+						<elocation_id>51</elocation_id>
+					</citation>
+					<citation key="bib14" type="journal_article">
+						<journal_title>The European Respiratory Journal</journal_title>
+						<author>Flaherty</author>
+						<volume>52</volume>
+						<cYear>2018</cYear>
+						<article_title>Safety of nintedanib added to pirfenidone treatment for idiopathic pulmonary fibrosis</article_title>
+						<doi>10.1183/13993003.00230-2018</doi>
+						<elocation_id>1800230</elocation_id>
+					</citation>
+					<citation key="bib15" type="journal_article">
+						<journal_title>Cell Reports</journal_title>
+						<author>Frank</author>
+						<volume>17</volume>
+						<first_page>2312</first_page>
+						<cYear>2016</cYear>
+						<article_title>Emergence of a wave of wnt signaling that regulates lung alveologenesis by controlling epithelial self-renewal and differentiation</article_title>
+						<doi>10.1016/j.celrep.2016.11.001</doi>
+					</citation>
+					<citation key="bib16" type="journal_article">
+						<journal_title>The European Respiratory Journal</journal_title>
+						<author>Graham</author>
+						<volume>49</volume>
+						<cYear>2017</cYear>
+						<article_title>2017 ERS/ATS standards for single-breath carbon monoxide uptake in the lung</article_title>
+						<doi>10.1183/13993003.00016-2016</doi>
+						<elocation_id>1600016</elocation_id>
+					</citation>
+					<citation key="bib17" type="journal_article">
+						<journal_title>Science Advances</journal_title>
+						<author>Habermann</author>
+						<volume>6</volume>
+						<cYear>2020</cYear>
+						<article_title>Single-cell RNA sequencing reveals profibrotic roles of distinct epithelial and mesenchymal lineages in pulmonary fibrosis</article_title>
+						<doi>10.1126/sciadv.aba1972</doi>
+						<elocation_id>eaba1972</elocation_id>
+					</citation>
+					<citation key="bib18" type="journal_article">
+						<journal_title>Nature Biotechnology</journal_title>
+						<author>Hao</author>
+						<volume>42</volume>
+						<first_page>293</first_page>
+						<cYear>2024</cYear>
+						<article_title>Dictionary learning for integrative, multimodal and scalable single-cell analysis</article_title>
+						<doi>10.1038/s41587-023-01767-y</doi>
+					</citation>
+					<citation key="bib19" type="journal_article">
+						<journal_title>The European Respiratory Journal</journal_title>
+						<author>Heinzelmann</author>
+						<volume>59</volume>
+						<cYear>2022</cYear>
+						<article_title>Single-cell RNA sequencing identifies G-protein coupled receptor 87 as a basal cell marker expressed in distal honeycomb cysts in idiopathic pulmonary fibrosis</article_title>
+						<doi>10.1183/13993003.02373-2021</doi>
+						<elocation_id>2102373</elocation_id>
+					</citation>
+					<citation key="bib20" type="journal_article">
+						<journal_title>Cell Stem Cell</journal_title>
+						<author>Herriges</author>
+						<volume>30</volume>
+						<first_page>1217</first_page>
+						<cYear>2023</cYear>
+						<article_title>Durable alveolar engraftment of PSC-derived lung epithelial cells into immunocompetent mice</article_title>
+						<doi>10.1016/j.stem.2023.07.016</doi>
+					</citation>
+					<citation key="bib21" type="journal_article">
+						<journal_title>Nature Communications</journal_title>
+						<author>Hewitt</author>
+						<volume>14</volume>
+						<cYear>2023</cYear>
+						<article_title>Lung extracellular matrix modulates KRT5+ basal cell activity in pulmonary fibrosis</article_title>
+						<doi>10.1038/s41467-023-41621-y</doi>
+						<elocation_id>6039</elocation_id>
+					</citation>
+					<citation key="bib22" type="journal_article">
+						<journal_title>Nature Communications</journal_title>
+						<author>Heydemann</author>
+						<volume>14</volume>
+						<cYear>2023</cYear>
+						<article_title>Hamster model for post-COVID-19 alveolar regeneration offers an opportunity to understand post-acute sequelae of SARS-CoV-2</article_title>
+						<doi>10.1038/s41467-023-39049-5</doi>
+						<elocation_id>3267</elocation_id>
+					</citation>
+					<citation key="bib23" type="journal_article">
+						<journal_title>Nature Communications</journal_title>
+						<author>Jaeger</author>
+						<volume>13</volume>
+						<cYear>2022</cYear>
+						<article_title>Airway basal cells show a dedifferentiated KRT17highPhenotype and promote fibrosis in idiopathic pulmonary fibrosis</article_title>
+						<doi>10.1038/s41467-022-33193-0</doi>
+						<elocation_id>5637</elocation_id>
+					</citation>
+					<citation key="bib24" type="journal_article">
+						<journal_title>Breathe</journal_title>
+						<author>Kang</author>
+						<volume>17</volume>
+						<cYear>2021</cYear>
+						<article_title>Minimal clinically important difference in idiopathic pulmonary fibrosis</article_title>
+						<doi>10.1183/20734735.0345-2020</doi>
+						<elocation_id>200345</elocation_id>
+					</citation>
+					<citation key="bib25" type="journal_article">
+						<journal_title>Cell Stem Cell</journal_title>
+						<author>Kathiriya</author>
+						<volume>26</volume>
+						<first_page>346</first_page>
+						<cYear>2020</cYear>
+						<article_title>Distinct airway epithelial stem cells hide among club cells but mobilize to promote alveolar regeneration</article_title>
+						<doi>10.1016/j.stem.2019.12.014</doi>
+					</citation>
+					<citation key="bib26" type="journal_article">
+						<journal_title>Cell</journal_title>
+						<author>Kumar</author>
+						<volume>147</volume>
+						<first_page>525</first_page>
+						<cYear>2011</cYear>
+						<article_title>Distal airway stem cells yield alveoli in vitro and during lung regeneration following H1N1 influenza infection</article_title>
+						<doi>10.1016/j.cell.2011.10.001</doi>
+					</citation>
+					<citation key="bib27" type="journal_article">
+						<journal_title>American Journal of Respiratory and Critical Care Medicine</journal_title>
+						<author>Latsi</author>
+						<volume>168</volume>
+						<first_page>531</first_page>
+						<cYear>2003</cYear>
+						<article_title>Fibrotic idiopathic interstitial pneumonia: the prognostic value of longitudinal functional trends</article_title>
+						<doi>10.1164/rccm.200210-1245OC</doi>
+					</citation>
+					<citation key="bib28" type="journal_article">
+						<journal_title>Clinical Rehabilitation</journal_title>
+						<author>Lei</author>
+						<volume>36</volume>
+						<first_page>999</first_page>
+						<cYear>2022</cYear>
+						<article_title>Clinical evidence for improving exercise tolerance and quality of life with pulmonary rehabilitation in patients with idiopathic pulmonary fibrosis: A systematic review and meta-analysis</article_title>
+						<doi>10.1177/02692155221095481</doi>
+					</citation>
+					<citation key="bib29" type="journal_article">
+						<journal_title>American Journal of Respiratory and Critical Care Medicine</journal_title>
+						<author>Ley</author>
+						<volume>183</volume>
+						<first_page>431</first_page>
+						<cYear>2011</cYear>
+						<article_title>Clinical course and prediction of survival in idiopathic pulmonary fibrosis</article_title>
+						<doi>10.1164/rccm.201006-0894CI</doi>
+					</citation>
+					<citation key="bib30" type="journal_article">
+						<journal_title>Protein &amp; Cell</journal_title>
+						<author>Ma</author>
+						<volume>9</volume>
+						<first_page>267</first_page>
+						<cYear>2018</cYear>
+						<article_title>Regeneration of functional alveoli by adult human SOX9+ airway basal cell transplantation</article_title>
+						<doi>10.1007/s13238-018-0506-y</doi>
+					</citation>
+					<citation key="bib31" type="journal_article">
+						<journal_title>The European Respiratory Journal</journal_title>
+						<author>Milger</author>
+						<volume>46</volume>
+						<first_page>1217</first_page>
+						<cYear>2015</cYear>
+						<article_title>Switching to nintedanib after discontinuation of pirfenidone due to adverse events in IPF</article_title>
+						<doi>10.1183/13993003.00584-2015</doi>
+					</citation>
+					<citation key="bib32" type="journal_article">
+						<journal_title>Aging and Disease</journal_title>
+						<author>Moreno-Valladares</author>
+						<volume>14</volume>
+						<first_page>1013</first_page>
+						<cYear>2023</cYear>
+						<article_title>KRT5(+)/p63(+) Stem cells undergo senescence in the human lung with pathological aging</article_title>
+						<doi>10.14336/AD.2022.1128</doi>
+					</citation>
+					<citation key="bib33" type="journal_article">
+						<journal_title>Lancet</journal_title>
+						<author>Noble</author>
+						<volume>377</volume>
+						<first_page>1760</first_page>
+						<cYear>2011</cYear>
+						<article_title>Pirfenidone in patients with idiopathic pulmonary fibrosis (CAPACITY): two randomised trials</article_title>
+						<doi>10.1016/S0140-6736(11)60405-4</doi>
+					</citation>
+					<citation key="bib34" type="journal_article">
+						<journal_title>American Journal of Respiratory and Critical Care Medicine</journal_title>
+						<author>Prasse</author>
+						<volume>199</volume>
+						<first_page>622</first_page>
+						<cYear>2019</cYear>
+						<article_title>BAL cell gene expression is indicative of outcome and airway basal cell involvement in idiopathic pulmonary fibrosis</article_title>
+						<doi>10.1164/rccm.201712-2551OC</doi>
+					</citation>
+					<citation key="bib35" type="journal_article">
+						<journal_title>Respiratory Research</journal_title>
+						<author>Prior</author>
+						<volume>20</volume>
+						<cYear>2019</cYear>
+						<article_title>Validation of the IPF-specific version of St. George’s Respiratory Questionnaire</article_title>
+						<doi>10.1186/s12931-019-1169-9</doi>
+						<elocation_id>199</elocation_id>
+					</citation>
+					<citation key="bib36" type="journal_article">
+						<journal_title>American Journal of Respiratory and Critical Care Medicine</journal_title>
+						<author>Raghu</author>
+						<volume>205</volume>
+						<first_page>e18</first_page>
+						<cYear>2022</cYear>
+						<article_title>Idiopathic pulmonary fibrosis (an update) and progressive pulmonary fibrosis in adults: An Official ATS/ERS/JRS/ALAT Clinical Practice Guideline</article_title>
+						<doi>10.1164/rccm.202202-0399ST</doi>
+					</citation>
+					<citation key="bib37" type="journal_article">
+						<journal_title>STAR Protocols</journal_title>
+						<author>Rao</author>
+						<volume>1</volume>
+						<cYear>2020</cYear>
+						<article_title>Protocol for cloning epithelial stem cell variants from human lung</article_title>
+						<doi>10.1016/j.xpro.2020.100063</doi>
+						<elocation_id>100063</elocation_id>
+					</citation>
+					<citation key="bib38" type="journal_article">
+						<journal_title>The New England Journal of Medicine</journal_title>
+						<author>Richeldi</author>
+						<volume>370</volume>
+						<first_page>2071</first_page>
+						<cYear>2014</cYear>
+						<article_title>Efficacy and safety of nintedanib in idiopathic pulmonary fibrosis</article_title>
+						<doi>10.1056/NEJMoa1402584</doi>
+					</citation>
+					<citation key="bib39" type="journal_article">
+						<journal_title>Stem Cell Research &amp; Therapy</journal_title>
+						<author>Shi</author>
+						<volume>10</volume>
+						<cYear>2019</cYear>
+						<article_title>Distal airway stem cells ameliorate bleomycin-induced pulmonary fibrosis in mice</article_title>
+						<doi>10.1186/s13287-019-1257-2</doi>
+						<elocation_id>161</elocation_id>
+					</citation>
+					<citation key="bib40" type="journal_article">
+						<journal_title>Physiotherapy Theory and Practice</journal_title>
+						<author>Silva</author>
+						<volume>40</volume>
+						<first_page>736</first_page>
+						<cYear>2024</cYear>
+						<article_title>The impact of sleep duration on physical activity in daily life in patients with idiopathic pulmonary fibrosis</article_title>
+						<doi>10.1080/09593985.2022.2160679</doi>
+					</citation>
+					<citation key="bib41" type="journal_article">
+						<journal_title>European Respiratory Journal</journal_title>
+						<author>Smyth</author>
+						<volume>62</volume>
+						<cYear>2023</cYear>
+						<article_title>Late breaking abstract - systemic determinants of exercise intolerance in patients with fibrosing interstitial lung disease and a severely impaired DLCO</article_title>
+						<doi>10.1183/13993003.congress-2023.OA4951</doi>
+						<elocation_id>A4951</elocation_id>
+					</citation>
+					<citation key="bib42" type="journal_article">
+						<journal_title>Medical Science Monitor</journal_title>
+						<author>Song</author>
+						<volume>25</volume>
+						<first_page>4193</first_page>
+						<cYear>2019</cYear>
+						<article_title>Independent clinical factors relevant to prognosis of patients with idiopathic pulmonary fibrosis</article_title>
+						<doi>10.12659/MSM.914725</doi>
+					</citation>
+					<citation key="bib43" type="journal_article">
+						<journal_title>American Journal of Respiratory and Critical Care Medicine</journal_title>
+						<author>Vancheri</author>
+						<volume>197</volume>
+						<first_page>356</first_page>
+						<cYear>2018</cYear>
+						<article_title>Nintedanib with Add-on Pirfenidone in Idiopathic Pulmonary Fibrosis. Results of the INJOURNEY Trial</article_title>
+						<doi>10.1164/rccm.201706-1301OC</doi>
+					</citation>
+					<citation key="bib44" type="journal_article">
+						<journal_title>Nature</journal_title>
+						<author>Vaughan</author>
+						<volume>517</volume>
+						<first_page>621</first_page>
+						<cYear>2015</cYear>
+						<article_title>Lineage-negative progenitors mobilize to regenerate lung epithelium after major injury</article_title>
+						<doi>10.1038/nature14112</doi>
+					</citation>
+					<citation key="bib45" type="journal_article">
+						<journal_title>Science Translational Medicine</journal_title>
+						<author>Wang</author>
+						<volume>15</volume>
+						<cYear>2023</cYear>
+						<article_title>Cloning a profibrotic stem cell variant in idiopathic pulmonary fibrosis</article_title>
+						<doi>10.1126/scitranslmed.abp9528</doi>
+						<elocation_id>eabp9528</elocation_id>
+					</citation>
+					<citation key="bib46" type="journal_article">
+						<journal_title>Science Translational Medicine</journal_title>
+						<author>Wang</author>
+						<volume>16</volume>
+						<cYear>2024</cYear>
+						<article_title>Autologous transplantation of P63+ lung progenitor cells for chronic obstructive pulmonary disease therapy</article_title>
+						<doi>10.1126/scitranslmed.adi3360</doi>
+						<elocation_id>eadi3360</elocation_id>
+					</citation>
+					<citation key="bib47" type="journal_article">
+						<journal_title>Nature Cell Biology</journal_title>
+						<author>Xi</author>
+						<volume>19</volume>
+						<first_page>904</first_page>
+						<cYear>2017</cYear>
+						<article_title>Local lung hypoxia determines epithelial fate decisions during alveolar regeneration</article_title>
+						<doi>10.1038/ncb3580</doi>
+					</citation>
+					<citation key="bib48" type="journal_article">
+						<journal_title>OMICS</journal_title>
+						<author>Yu</author>
+						<volume>16</volume>
+						<first_page>284</first_page>
+						<cYear>2012</cYear>
+						<article_title>clusterProfiler: an R package for comparing biological themes among gene clusters</article_title>
+						<doi>10.1089/omi.2011.0118</doi>
+					</citation>
+					<citation key="bib49" type="journal_article">
+						<journal_title>Nature</journal_title>
+						<author>Zacharias</author>
+						<volume>555</volume>
+						<first_page>251</first_page>
+						<cYear>2018</cYear>
+						<article_title>Regeneration of the lung alveolus by an evolutionarily conserved epithelial progenitor</article_title>
+						<doi>10.1038/nature25786</doi>
+					</citation>
+					<citation key="bib50" type="journal_article">
+						<journal_title>EMBO Molecular Medicine</journal_title>
+						<author>Zhou</author>
+						<volume>12</volume>
+						<cYear>2020</cYear>
+						<article_title>Genetically engineered distal airway stem cell transplantation protects mice from pulmonary infection</article_title>
+						<doi>10.15252/emmm.201810233</doi>
+						<elocation_id>e10233</elocation_id>
+					</citation>
+					<citation key="bib51" type="journal_article">
+						<journal_title>Stem Cells International</journal_title>
+						<author>Zhou</author>
+						<volume>2021</volume>
+						<cYear>2021</cYear>
+						<article_title>Stable long-term culture of human distal airway stem cells for transplantation</article_title>
+						<doi>10.1155/2021/9974635</doi>
+						<elocation_id>9974635</elocation_id>
+					</citation>
+					<citation key="bib52" type="journal_article">
+						<journal_title>Nature</journal_title>
+						<author>Zuo</author>
+						<volume>517</volume>
+						<first_page>616</first_page>
+						<cYear>2015</cYear>
+						<article_title>p63(+)Krt5(+) distal airway stem cells are essential for lung regeneration</article_title>
+						<doi>10.1038/nature13903</doi>
+					</citation>
+					<citation key="bib53" type="journal_article">
+						<journal_title>Respiratory Research</journal_title>
+						<author>Zurkova</author>
+						<volume>20</volume>
+						<cYear>2019</cYear>
+						<article_title>Effect of pirfenidone on lung function decline and survival: 5-yr experience from a real-life IPF cohort from the Czech EMPIRE registry</article_title>
+						<doi>10.1186/s12931-019-0977-2</doi>
+						<elocation_id>16</elocation_id>
+					</citation>
+					<citation key="dataset2" type="dataset">
+						<volume_title>NCBI Gene Expression Omnibus</volume_title>
+						<author>Zhao</author>
+						<cYear>2024</cYear>
+						<article_title>Single cell RNA sequencing analysis of P63+ lung progenitor cells isolated from IPF patients</article_title>
+						<unstructured_citation>Zhao Y. 2024. Single cell RNA sequencing analysis of P63+ lung progenitor cells isolated from IPF patients. NCBI Gene Expression Omnibus. https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE269794. GSE269794.</unstructured_citation>
+					</citation>
+					<citation key="dataset3" type="dataset">
+						<volume_title>NCBI Gene Expression Omnibus</volume_title>
+						<author>Heinzelmann</author>
+						<cYear>2022</cYear>
+						<article_title>Single cell RNA Sequencing Identifies G-protein Coupled Receptor 87 as a Basal Cell Marker Expressed in Distal Honeycomb Cysts in Idiopathic Pulmonary Fibrosis</article_title>
+						<unstructured_citation>Heinzelmann K, Hu Q, Hu Y, Dobrinskikh E, Ansari M, Melo-Narváez M, Ulke HM, Leavitt C, Mirita C, Trudeau T, Saal ML, Rice P, Gao B, Janssen WJ, Yang IV, Schiller HB, Vladar EK, Lehmann M, Königshoff M. 2022. Single cell RNA Sequencing Identifies G-protein Coupled Receptor 87 as a Basal Cell Marker Expressed in Distal Honeycomb Cysts in Idiopathic Pulmonary Fibrosis. NCBI Gene Expression Omnibus. https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE190889. GSE190889.</unstructured_citation>
+					</citation>
+				</citation_list>
+				<component_list/>
+			</journal_article>
+		</journal>
+	</body>
+</doi_batch>

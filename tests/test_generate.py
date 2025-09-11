@@ -133,6 +133,22 @@ class TestGenerate(unittest.TestCase):
         )
         self.passes.append(
             (
+                "elife-102451-v1.xml",
+                "elife-crossref-102451-20170717071707.xml",
+                "elife",
+                DEFAULT_PUB_DATE,
+            )
+        )
+        self.passes.append(
+            (
+                "elife-1234567890-v2.xml",
+                "elife-crossref-1234567890-20170717071707.xml",
+                "elife",
+                DEFAULT_PUB_DATE,
+            )
+        )
+        self.passes.append(
+            (
                 "cstp77-jats.xml",
                 "cstp-crossref-77-20170717071707.xml",
                 "cstp",
