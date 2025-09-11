@@ -48,6 +48,19 @@ def set_citation_list(parent, poa_article, relations_program_tag, crossref_confi
             crossref_config.get("face_markup"),
             crossref_config.get("crossref_schema_version"),
         )
+    # add citation for datasets
+    if hasattr(poa_article, "data_ref_list") and poa_article.data_ref_list:
+        for ref in poa_article.data_ref_list:
+            # Increment
+            ref_index = ref_index + 1
+            # continue with creating a citation tag
+            set_citation(
+                citation_list_tag,
+                ref,
+                ref_index,
+                crossref_config.get("face_markup"),
+                crossref_config.get("crossref_schema_version"),
+            )
 
 
 def set_citation(parent, ref, ref_index, face_markup, crossref_schema_version):
