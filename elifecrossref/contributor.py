@@ -116,17 +116,25 @@ def set_affiliations(parent, contributor):
     for aff in affiliations_to_add:
         # format name and place tag strings
         text_name, text_place = affiliation_name_place(aff)
-        # add tags
-        institution_tag = SubElement(affiliations_tag, "institution")
-        institution_name_tag = SubElement(institution_tag, "institution_name")
-        institution_name_tag.text = text_name
+        ror = None
         if hasattr(aff, "ror") and aff.ror:
-            institution_id_tag = SubElement(institution_tag, "institution_id")
-            institution_id_tag.set("type", "ror")
-            institution_id_tag.text = aff.ror
-        if text_place:
-            institution_place_tag = SubElement(institution_tag, "institution_place")
-            institution_place_tag.text = text_place
+            ror = aff.ror
+        # add tags
+        set_institution(affiliations_tag, text_name, ror, text_place)
+
+
+def set_institution(parent, name, ror=None, place=None):
+    "add an institution tag and subtags for metadata"
+    institution_tag = SubElement(parent, "institution")
+    institution_name_tag = SubElement(institution_tag, "institution_name")
+    institution_name_tag.text = name
+    if ror:
+        institution_id_tag = SubElement(institution_tag, "institution_id")
+        institution_id_tag.set("type", "ror")
+        institution_id_tag.text = ror
+    if place:
+        institution_place_tag = SubElement(institution_tag, "institution_place")
+        institution_place_tag.text = place
 
 
 def affiliation_name_place(aff):

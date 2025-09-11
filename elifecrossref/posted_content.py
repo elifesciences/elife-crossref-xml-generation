@@ -38,6 +38,9 @@ def set_posted_content(parent, poa_article, crossref_config):
     # date is required
     dates.set_posted_date(posted_content_tag, poa_article.get_date("posted_date"))
 
+    # add institution if provided
+    add_institution(posted_content_tag, crossref_config)
+
     # status tag for a retracted article
     if poa_article.get_date("retracted"):
         status.set_status_tag(
@@ -119,3 +122,15 @@ def set_posted_content(parent, poa_article, crossref_config):
     citation.set_citation_list(
         posted_content_tag, poa_article, relations_program_tag, crossref_config
     )
+
+
+def add_institution(parent, crossref_config):
+    "add institution name and id if specified in the config values"
+    if crossref_config.get("institution_name") and crossref_config.get(
+        "institution_ror"
+    ):
+        contributor.set_institution(
+            parent,
+            crossref_config.get("institution_name"),
+            crossref_config.get("institution_ror"),
+        )
