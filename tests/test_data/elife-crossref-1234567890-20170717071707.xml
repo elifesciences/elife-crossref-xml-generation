@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doi_batch xmlns="http://www.crossref.org/schema/5.4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:fr="http://www.crossref.org/fundref.xsd" xmlns:ai="http://www.crossref.org/AccessIndicators.xsd" xmlns:ct="http://www.crossref.org/clinicaltrials.xsd" xmlns:rel="http://www.crossref.org/relations.xsd" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:jats="http://www.ncbi.nlm.nih.gov/JATS1" version="5.4.0" xsi:schemaLocation="http://www.crossref.org/schema/5.4.0 http://www.crossref.org/schemas/crossref5.4.0.xsd">
+	<head>
+		<doi_batch_id>elife-crossref-1234567890-20170717071707</doi_batch_id>
+		<timestamp>20170717071707</timestamp>
+		<depositor>
+			<depositor_name>eLife</depositor_name>
+			<email_address>production@elifesciences.org</email_address>
+		</depositor>
+		<registrant>eLife</registrant>
+	</head>
+	<body>
+		<journal>
+			<journal_metadata language="en">
+				<full_title>eLife</full_title>
+				<issn media_type="electronic">2050-084X</issn>
+			</journal_metadata>
+			<journal_issue>
+				<publication_date media_type="online">
+					<month>10</month>
+					<day>22</day>
+					<year>2023</year>
+				</publication_date>
+				<journal_volume>
+					<volume>12</volume>
+				</journal_volume>
+			</journal_issue>
+			<journal_article publication_type="full_text">
+				<titles>
+					<title>eLife kitchen sink 3.0</title>
+				</titles>
+				<contributors>
+					<person_name contributor_role="author" sequence="first">
+						<given_name>Frederick Peter</given_name>
+						<surname>Atherden</surname>
+						<suffix>III</suffix>
+						<affiliations>
+							<institution>
+								<institution_name>The department of production, eLife Sciences</institution_name>
+								<institution_place>Cambridge, United Kingdom</institution_place>
+							</institution>
+						</affiliations>
+						<ORCID authenticated="true">https://orcid.org/0000-0002-6048-1470</ORCID>
+					</person_name>
+					<person_name contributor_role="author" sequence="first">
+						<given_name>Melissa</given_name>
+						<surname>Harrison</surname>
+						<affiliations>
+							<institution>
+								<institution_name>The department of production, eLife Sciences</institution_name>
+								<institution_place>Cambridge, United Kingdom</institution_place>
+							</institution>
+						</affiliations>
+						<ORCID authenticated="true">https://orcid.org/0000-0002-4932-938X</ORCID>
+					</person_name>
+					<organization contributor_role="author" sequence="additional">Example Group author</organization>
+					<person_name contributor_role="author" sequence="additional">
+						<given_name>James</given_name>
+						<surname>Gilbert</surname>
+						<affiliations>
+							<institution>
+								<institution_name>eLife</institution_name>
+								<institution_place>Cambridge, United Kingdom</institution_place>
+							</institution>
+						</affiliations>
+						<ORCID authenticated="true">https://orcid.org/0000-1002-4932-938X</ORCID>
+					</person_name>
+					<person_name contributor_role="author" sequence="additional">
+						<given_name>Santa</given_name>
+						<surname>Claus</surname>
+						<affiliations>
+							<institution>
+								<institution_name>The department of production, eLife Sciences</institution_name>
+								<institution_place>Cambridge, United Kingdom</institution_place>
+							</institution>
+						</affiliations>
+					</person_name>
+					<person_name contributor_role="author" sequence="additional">
+						<given_name>Cornel</given_name>
+						<surname>West</surname>
+						<suffix>Jnr</suffix>
+						<affiliations>
+							<institution>
+								<institution_name>JATS4R</institution_name>
+								<institution_id type="ror">https://ror.org/046rm7j60</institution_id>
+								<institution_place>Bethesda, United States</institution_place>
+							</institution>
+						</affiliations>
+					</person_name>
+					<organization contributor_role="author" sequence="additional">on behalf of whoever finds this interesting</organization>
+				</contributors>
+				<jats:abstract xmlns:mml="http://www.w3.org/1998/Math/MathML">
+					<jats:p>Background:</jats:p>
+					<jats:p xmlns:mml="http://www.w3.org/1998/Math/MathML">
+						Since 2015, the World Health Organisation (WHO) ab... 
+&lt;alternatives&gt;
+
+						<mml:math id="infm1">
+							<mml:mi>P</mml:mi>
+							<mml:mi>P</mml:mi>
+							<mml:mi>V</mml:mi>
+							<mml:mi/>
+							<mml:mo>=</mml:mo>
+							<mml:mi/>
+							<mml:mfrac>
+								<mml:mrow>
+									<mml:mi>T</mml:mi>
+									<mml:mi>P</mml:mi>
+								</mml:mrow>
+								<mml:mrow>
+									<mml:mi>T</mml:mi>
+									<mml:mi>P</mml:mi>
+									<mml:mi/>
+									<mml:mo>+</mml:mo>
+									<mml:mi/>
+									<mml:mi>F</mml:mi>
+									<mml:mi>P</mml:mi>
+								</mml:mrow>
+							</mml:mfrac>
+						</mml:math>
+						&lt;tex-math id=&quot;inft1&quot;&gt;\begin{document}PPV=\frac{TP}{TP+FP}\end{document}&lt;/tex-math&gt;
+&lt;/alternatives&gt;
+
+					</jats:p>
+					<jats:p>Methods:</jats:p>
+					<jats:p>We conducted a stepped-wedge ...</jats:p>
+					<jats:p>Results:</jats:p>
+					<jats:p>A total sample of 3019 participants ...</jats:p>
+					<jats:p>Conclusions:</jats:p>
+					<jats:p>Our findings do not provide evidence ...</jats:p>
+					<jats:p>Funding:</jats:p>
+					<jats:p>Funded by the Dutch Postcode Lottery in the Netherlands ...</jats:p>
+					<jats:p>Clinical trial number:</jats:p>
+					&lt;!-- Known registries (values of related-object/source-id) at
+                         https://github.com/elifesciences/eLife-JATS-schematron/blob/master/src/clinical-trial-registries.xml --&gt;
+
+					<jats:p>NCT02909218 and 
+                        ChiCTR-IOR-14005319.</jats:p>
+				</jats:abstract>
+				<jats:abstract abstract-type="executive-summary">
+					<jats:p>This is a digest.</jats:p>
+					<jats:p>It will consist of multiple paragraphs.</jats:p>
+					<jats:p>No links, citations etc. will appear here.</jats:p>
+				</jats:abstract>
+				<publication_date media_type="online">
+					<month>10</month>
+					<day>22</day>
+					<year>2023</year>
+				</publication_date>
+				<publisher_item>
+					<item_number item_number_type="article_number">RP1234567890</item_number>
+					<identifier id_type="doi">10.7554/eLife.1234567890</identifier>
+				</publisher_item>
+				<crossmark>
+					<crossmark_policy>10.7554/eLife.1234567890</crossmark_policy>
+					<crossmark_domains>
+						<crossmark_domain>
+							<domain>elifesciences.org</domain>
+						</crossmark_domain>
+					</crossmark_domains>
+					<crossmark_domain_exclusive>false</crossmark_domain_exclusive>
+					<custom_metadata>
+						<assertion group_name="peer_review_taxonomy" label="Peer review transparency" name="peer_review_transparency">single anonymised</assertion>
+						<assertion group_name="peer_review_taxonomy" label="Peer review interaction" name="peer_review_interaction">other reviewer(s), editor</assertion>
+						<assertion group_name="peer_review_taxonomy" label="Peer review published" name="peer_review_published">review summaries, review reports, author/editor communication, reviewer identities reviewer opt in, editor identities</assertion>
+						<assertion group_name="post_publication_commenting" label="Post publication commenting" name="post_publication_commenting">open (sign in with ORCID iD required)</assertion>
+						<fr:program name="fundref">
+							<fr:assertion name="fundgroup">
+								<fr:assertion name="ror">https://ror.org/01cwqze88</fr:assertion>
+								<fr:assertion name="award_number">DA037327</fr:assertion>
+							</fr:assertion>
+							<fr:assertion name="fundgroup">
+								<fr:assertion name="ror">https://ror.org/01pv73b02</fr:assertion>
+								<fr:assertion name="award_number">10.13039/501100001824</fr:assertion>
+							</fr:assertion>
+							<fr:assertion name="fundgroup">
+								<fr:assertion name="funder_name">eLife Sciences</fr:assertion>
+								<fr:assertion name="award_number">00000000001</fr:assertion>
+							</fr:assertion>
+						</fr:program>
+						<ai:program name="AccessIndicators">
+							<ai:license_ref applies_to="vor">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+							<ai:license_ref applies_to="am">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+							<ai:license_ref applies_to="tdm">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+						</ai:program>
+						<ct:program>
+							<ct:clinical-trial-number registry="10.18810/clinical-trials-gov">NCT02909218</ct:clinical-trial-number>
+							<ct:clinical-trial-number registry="10.18810/chictr">ChiCTR-IOR-14005319</ct:clinical-trial-number>
+						</ct:program>
+					</custom_metadata>
+				</crossmark>
+				<rel:program>
+					<rel:related_item>
+						<rel:inter_work_relation identifier-type="doi" relationship-type="isFinancedBy">10.13039/501100001824</rel:inter_work_relation>
+					</rel:related_item>
+					<rel:related_item>
+						<rel:description>MATLAB scripts for Adrenergic activation modulates the signal from the Reissner fiber to cerebrospinal fluid-contacting neurons during development</rel:description>
+						<rel:inter_work_relation identifier-type="uri" relationship-type="isSupplementedBy">https://archive.softwareheritage.org/swh:1:dir:1f91fb94fed0c4a03fc9056163b442f9f9b9abd1;origin=https://github.com/wyartlab/Cantaut-Belarif-et-al.-2020;visit=swh:1:snp:2e499081fea02d16adea6449c5637a879ce0c7da;anchor=swh:1:rev:3396034de4726cb8c895a6e43bbc3d774b726fcb</rel:inter_work_relation>
+					</rel:related_item>
+					<rel:related_item>
+						<rel:description>poly A+ RNA sequencing of cell cycle-synchronized RNA from U2OS cells</rel:description>
+						<rel:inter_work_relation identifier-type="accession" relationship-type="references">GSE143275</rel:inter_work_relation>
+					</rel:related_item>
+					<rel:related_item>
+						<rel:description>Genome-wide errant targeting by Hairy</rel:description>
+						<rel:inter_work_relation identifier-type="doi" relationship-type="references">10.5061/dryad.cv323</rel:inter_work_relation>
+					</rel:related_item>
+					<rel:related_item>
+						<rel:description>EpiCoV</rel:description>
+						<rel:inter_work_relation identifier-type="uri" relationship-type="references">https://www.gisaid.org/</rel:inter_work_relation>
+					</rel:related_item>
+					<rel:related_item>
+						<rel:intra_work_relation identifier-type="doi" relationship-type="hasPreprint">10.1101/2021.11.09.467796</rel:intra_work_relation>
+					</rel:related_item>
+				</rel:program>
+				<archive_locations>
+					<archive name="CLOCKSS"/>
+				</archive_locations>
+				<doi_data>
+					<doi>10.7554/eLife.1234567890</doi>
+					<resource>https://elifesciences.org/articles/1234567890</resource>
+					<collection property="text-mining">
+						<item>
+							<resource mime_type="application/pdf">https://cdn.elifesciences.org/articles/1234567890/elife-1234567890-v2.pdf</resource>
+						</item>
+						<item>
+							<resource mime_type="application/xml">https://cdn.elifesciences.org/articles/1234567890/elife-1234567890-v2.xml</resource>
+						</item>
+					</collection>
+					<collection property="crawler-based">
+						<item crawler="iParadigms">
+							<resource>https://elifesciences.org/articles/1234567890</resource>
+						</item>
+					</collection>
+				</doi_data>
+				<citation_list>
+					<citation key="bib1" type="software">
+						<volume_title>Software Heritage</volume_title>
+						<author>Cantaut-Belarif</author>
+						<cYear>2020</cYear>
+						<article_title>MATLAB scripts for Adrenergic activation modulates the signal from the Reissner fiber to cerebrospinal fluid-contacting neurons during development</article_title>
+						<unstructured_citation>Cantaut-Belarif Y, Orts Del'Immagine A, Penru M, Pézeron G, Wyart C, Bardet P-L. 2020. MATLAB scripts for Adrenergic activation modulates the signal from the Reissner fiber to cerebrospinal fluid-contacting neurons during development. Software Heritage. https://archive.softwareheritage.org/swh:1:dir:1f91fb94fed0c4a03fc9056163b442f9f9b9abd1;origin=https://github.com/wyartlab/Cantaut-Belarif-et-al.-2020;visit=swh:1:snp:2e499081fea02d16adea6449c5637a879ce0c7da;anchor=swh:1:rev:3396034de4726cb8c895a6e43bbc3d774b726fcb.</unstructured_citation>
+					</citation>
+					<citation key="bib2" type="book">
+						<volume_title>Against Method</volume_title>
+						<author>Feyerabend</author>
+						<cYear>2010</cYear>
+						<isbn>978-1844674428</isbn>
+					</citation>
+					<citation key="bib3" type="journal_article">
+						<journal_title>Nature Structural &amp; Molecular Biology</journal_title>
+						<author>Galkin</author>
+						<volume>17</volume>
+						<first_page>614</first_page>
+						<cYear>2010</cYear>
+						<article_title>Opening of tandem calponin homology domains regulates their affinity for F-actin</article_title>
+						<doi>10.1038/nsmb.1789</doi>
+					</citation>
+					<citation key="bib4" type="journal_article">
+						<journal_title>Nature Structural &amp; Molecular Biology</journal_title>
+						<author>Galkin</author>
+						<volume>17</volume>
+						<first_page>1318</first_page>
+						<cYear>2010</cYear>
+						<article_title>Structural polymorphism in F-actin</article_title>
+						<doi>10.1038/nsmb.1930</doi>
+					</citation>
+					<citation key="bib5" type="dataset">
+						<volume_title>NCBI Gene Expression Omnibus</volume_title>
+						<author>Hao</author>
+						<cYear>2020</cYear>
+						<article_title>poly A+ RNA sequencing of cell cycle-synchronized RNA from U2OS cells</article_title>
+						<unstructured_citation>Hao Q, Prasanth KV, Sun Q. 2020. poly A+ RNA sequencing of cell cycle-synchronized RNA from U2OS cells. NCBI Gene Expression Omnibus. https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE143275. GSE143275.</unstructured_citation>
+					</citation>
+					<citation key="bib6" type="web_resource">
+						<volume_title>The New York Times</volume_title>
+						<author>Harmon</author>
+						<cYear>2019</cYear>
+						<article_title>James Watson had a chance to salvage his reputation on race. He made things worse</article_title>
+						<unstructured_citation>Harmon A. 2019. James Watson had a chance to salvage his reputation on race. He made things worse. The New York Times. https://www.nytimes.com/2019/01/01/science/watson-dna-genetics-race.html [Accessed January 1, 2019].</unstructured_citation>
+					</citation>
+					<citation key="bib7" type="book_chapter">
+						<volume_title>Applied Radiological Anatomy</volume_title>
+						<author>Hogarth</author>
+						<first_page>1</first_page>
+						<cYear>2012</cYear>
+						<article_title>The skull and brain</article_title>
+						<doi>10.1017/CBO9780511977930.001</doi>
+						<isbn>9780511977930</isbn>
+					</citation>
+					<citation key="bib8" type="dataset">
+						<volume_title>Dryad Digital Repository</volume_title>
+						<author>Kok</author>
+						<cYear>2015</cYear>
+						<article_title>Genome-wide errant targeting by Hairy</article_title>
+						<doi>10.5061/dryad.cv323</doi>
+						<unstructured_citation>Kok K, Ay A, Li L. 2015. Genome-wide errant targeting by Hairy. Dryad Digital Repository.</unstructured_citation>
+					</citation>
+					<citation key="bib9" type="patent">
+						<volume_title>World Intellectual Property Organization</volume_title>
+						<cYear>2015</cYear>
+						<article_title>Imidazopyridine Derivative</article_title>
+						<unstructured_citation>Onoda T. 2015. Imidazopyridine Derivative. World Intellectual Property Organization. 2015087996. https://patents.google.com/patent/WO2015087996A1/en.</unstructured_citation>
+					</citation>
+					<citation key="bib10" type="journal_article">
+						<journal_title>Science Advances</journal_title>
+						<author>Paciência</author>
+						<cYear>2019</cYear>
+						<article_title>Mating avoidance in female olive baboons (Papio anubis) infected by Treponema pallidum</article_title>
+					</citation>
+					<citation key="bib11" type="software">
+						<author>R Development Core Team</author>
+						<cYear>2017</cYear>
+						<article_title>R: a language and environment for statistical computing</article_title>
+						<unstructured_citation>R Development Core Team. 2017. R: a language and environment for statistical computing. Vienna, Austria: R Foundation for Statistical Computing. 3.3.2. http://www.r-project.org/.</unstructured_citation>
+					</citation>
+					<citation key="bib12" type="dissertation">
+						<author>Richter</author>
+						<cYear>2013</cYear>
+						<article_title>The Gene Content of Diverse Choanoflagellates Illuminates Animal Origins</article_title>
+						<unstructured_citation>Richter DJ. 2013. The Gene Content of Diverse Choanoflagellates Illuminates Animal Origins. University of California, Berkeley. https://escholarship.org/uc/item/7xc2p94p.</unstructured_citation>
+					</citation>
+					<citation key="bib13" type="conference_paper">
+						<author>Spangler</author>
+						<first_page>1877</first_page>
+						<cYear>2014</cYear>
+						<article_title>Automated hypothesis generation based on mining scientific literature</article_title>
+						<doi>10.1145/2623330.2623667</doi>
+						<unstructured_citation>Spangler S. 2014. Automated hypothesis generation based on mining scientific literature. Proceedings of the 20th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining.</unstructured_citation>
+					</citation>
+					<citation key="bib14" type="journal_article">
+						<journal_title>eLife</journal_title>
+						<author>Srinivasan</author>
+						<volume>8</volume>
+						<cYear>2019</cYear>
+						<article_title>A multiphase theory for spreadingmicrobial swarms and films</article_title>
+						<doi>10.7554/eLife.42697</doi>
+						<elocation_id>e42697</elocation_id>
+					</citation>
+					<citation key="bib15" type="report">
+						<volume_title>World Malaria Report 2015</volume_title>
+						<author>World Health Organization</author>
+						<cYear>2015</cYear>
+						<unstructured_citation>World Health Organization. 2015. Geneva: World Health Organization. World Malaria Report 2015. http://www.who.int/malaria/publications/world-malaria-report-2015/en/.</unstructured_citation>
+					</citation>
+					<citation key="bib16" type="dataset">
+						<volume_title>GSAID's EpiFlu</volume_title>
+						<author>Zok</author>
+						<cYear>2020</cYear>
+						<article_title>EpiCoV</article_title>
+						<unstructured_citation>Zok K. 2020. EpiCoV. GSAID's EpiFlu. https://www.gisaid.org/.</unstructured_citation>
+					</citation>
+					<citation key="bib17" type="preprint">
+						<volume_title>bioRxiv</volume_title>
+						<author>Zurray</author>
+						<cYear>2019</cYear>
+						<article_title>Gender and international diversity improves equity in peer review</article_title>
+						<doi>10.1101/400515</doi>
+					</citation>
+					<citation key="bib18" type="software">
+						<volume_title>Zenodo</volume_title>
+						<author>Himmelstein</author>
+						<cYear>2016</cYear>
+						<article_title>Dhimmel/Bgee V1.0: Anatomy-Specific Gene Expression In Humans From Bgee</article_title>
+						<doi>10.5281/zenodo.47157</doi>
+						<unstructured_citation>Himmelstein D, Bastian F, Baranzini S. 2016. Dhimmel/Bgee V1.0: Anatomy-Specific Gene Expression In Humans From Bgee. Zenodo.</unstructured_citation>
+					</citation>
+				</citation_list>
+				<component_list/>
+			</journal_article>
+		</journal>
+	</body>
+</doi_batch>
