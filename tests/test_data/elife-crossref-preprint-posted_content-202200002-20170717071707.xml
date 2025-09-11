@@ -19,6 +19,10 @@
                 <day>03</day>
                 <year>2022</year>
             </posted_date>
+            <institution>
+                <institution_name>eLife</institution_name>
+                <institution_id type="ror">https://ror.org/04rjz5883</institution_id>
+            </institution>
             <doi_data>
                 <doi>10.7554/eLife.202200002</doi>
                 <resource>https://example.org/articles/202200002</resource>
