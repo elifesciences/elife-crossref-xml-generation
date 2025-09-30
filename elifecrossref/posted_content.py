@@ -103,16 +103,10 @@ def set_posted_content(parent, poa_article, crossref_config):
     if poa_article.version:
         version.set_version_info(posted_content_tag, poa_article)
 
-    doi_data_tag = doi.set_doi_data(
+    doi_data_tag = doi.set_article_doi_data(
         posted_content_tag,
         poa_article,
-        poa_article,
         crossref_config,
-        pattern_type="doi_pattern",
-    )
-
-    collection.set_collection(
-        doi_data_tag, poa_article, "crawler-based", crossref_config
     )
 
     if related.do_relations_program(poa_article) is True:
