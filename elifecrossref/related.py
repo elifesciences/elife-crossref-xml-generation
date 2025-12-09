@@ -43,7 +43,7 @@ def do_relations_program(poa_article):
             break
     if do_relations is not True and poa_article.ref_list:
         for ref in poa_article.ref_list:
-            if do_citation_related_item(ref) is True:
+            if do_citation_related_item(ref) is True or do_software_related_item(ref) is True:
                 do_relations = True
                 break
     if do_relations is not True and poa_article.funding_awards:
