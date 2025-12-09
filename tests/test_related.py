@@ -87,6 +87,16 @@ class TestDoRelationsProgram(unittest.TestCase):
         do_result = related.do_relations_program(article)
         self.assertTrue(do_result)
 
+    def test_do_relations_program_swh_citation(self):
+        "test Software Heritage citation"
+        article = Article("10.7554/eLife.00666")
+        citation = Citation()
+        citation.publication_type = "software"
+        citation.uri = "https://archive.softwareheritage.org/"
+        article.ref_list = [citation]
+        do_result = related.do_relations_program(article)
+        self.assertTrue(do_result)
+
     def test_do_relations_program_preprint(self):
         article = Article("10.7554/eLife.00666")
         article.preprint = Preprint(uri="https://example.org")
