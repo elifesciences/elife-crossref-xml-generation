@@ -27,7 +27,9 @@ def set_citation_list(parent, poa_article, relations_program_tag, crossref_confi
     Set the citation_list from the article object ref_list objects
     """
     ref_index = 0
-    if poa_article.ref_list:
+    if poa_article.ref_list or (
+        hasattr(poa_article, "data_ref_list") and poa_article.data_ref_list
+    ):
         citation_list_tag = SubElement(parent, "citation_list")
     for ref in poa_article.ref_list:
         # Increment
