@@ -60,7 +60,7 @@
             <fr:program name="fundref">
                 <fr:assertion name="fundgroup">
                     <fr:assertion name="ror">example_ror_id</fr:assertion>
-                    <fr:assertion name="award_number">example_award_id</fr:assertion>
+                    <fr:assertion name="grant_doi">example_award_id</fr:assertion>
                 </fr:assertion>
             </fr:program>
             <ai:program name="AccessIndicators">
