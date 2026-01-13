@@ -59,7 +59,10 @@ def set_funder_ror(parent, award):
 def set_award_number(parent, award):
     for award_object in award.awards:
         fr_award_number_tag = SubElement(parent, "fr:assertion")
-        fr_award_number_tag.set("name", "award_number")
+        if award_object.award_id_type == "doi":
+            fr_award_number_tag.set("name", "grant_doi")
+        else:
+            fr_award_number_tag.set("name", "award_number")
         fr_award_number_tag.text = award_object.award_id
 
 

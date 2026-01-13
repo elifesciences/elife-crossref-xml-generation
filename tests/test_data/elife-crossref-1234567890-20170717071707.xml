@@ -171,7 +171,7 @@
 							</fr:assertion>
 							<fr:assertion name="fundgroup">
 								<fr:assertion name="ror">https://ror.org/01pv73b02</fr:assertion>
-								<fr:assertion name="award_number">10.13039/501100001824</fr:assertion>
+								<fr:assertion name="grant_doi">10.13039/501100001824</fr:assertion>
 							</fr:assertion>
 							<fr:assertion name="fundgroup">
 								<fr:assertion name="funder_name">eLife Sciences</fr:assertion>
