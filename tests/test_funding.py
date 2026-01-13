@@ -44,7 +44,7 @@ class TestSetFundref(unittest.TestCase):
             b'<fr:assertion name="funder_name">Test Funder'
             b'<fr:assertion name="funder_identifier">123456</fr:assertion>'
             b"</fr:assertion>"
-            b'<fr:assertion name="award_number">award_id</fr:assertion>'
+            b'<fr:assertion name="grant_doi">award_id</fr:assertion>'
             b"</fr:assertion>"
             b"</fr:program>"
             b"</root>"
@@ -82,7 +82,7 @@ class TestSetFundref(unittest.TestCase):
             b'<fr:program name="fundref">'
             b'<fr:assertion name="fundgroup">'
             b'<fr:assertion name="ror">123456</fr:assertion>'
-            b'<fr:assertion name="award_number">award_id</fr:assertion>'
+            b'<fr:assertion name="grant_doi">award_id</fr:assertion>'
             b"</fr:assertion>"
             b"</fr:program>"
             b"</root>"
