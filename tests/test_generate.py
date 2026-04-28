@@ -1,8 +1,10 @@
 import unittest
+from unittest.mock import patch
+from collections import OrderedDict
 import os
 import sys
 from xml.etree.ElementTree import Comment
-from elifecrossref import generate
+from elifecrossref import clinical_trials, generate
 from tests import (
     DEFAULT_PUB_DATE,
     TEST_BASE_PATH,
@@ -172,7 +174,14 @@ class TestGenerate(unittest.TestCase):
             )
         )
 
-    def test_generate(self):
+    @patch.object(clinical_trials, "registry_name_to_doi_map")
+    def test_generate(self, fake_name_map):
+        fake_name_map.return_value = OrderedDict(
+            [
+                ("ClinicalTrials.gov", "10.18810/clinical-trials-gov"),
+                ("ChiCTR", "10.18810/chictr"),
+            ]
+        )
         for (
             article_xml_file,
             crossref_xml_file,
