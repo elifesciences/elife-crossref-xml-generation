@@ -80,15 +80,20 @@ def set_posted_content(parent, poa_article, crossref_config):
     # rel:program related_item tags for preprint versions
     if poa_article.publication_history:
         for event in poa_article.publication_history:
-            related_item_tag = SubElement(relations_program_tag, "rel:related_item")
-            related_item_type = "intra_work_relation"
-            relationship_type = "isVersionOf"
+            # look for a URI before adding a rel:related_item tag
             if event.doi:
                 identifier_type = "doi"
                 related_item_text = event.doi
             elif event.uri:
                 identifier_type = "uri"
                 related_item_text = event.uri
+            else:
+                continue
+
+            related_item_tag = SubElement(relations_program_tag, "rel:related_item")
+            related_item_type = "intra_work_relation"
+            relationship_type = "isVersionOf"
+
             related.set_related_item_work_relation(
                 related_item_tag,
                 related_item_type,
