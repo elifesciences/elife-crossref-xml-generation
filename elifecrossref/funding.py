@@ -26,6 +26,7 @@ def set_funding_award(parent, award):
         and hasattr(award, "institution_id_type")
         and award.institution_id_type == "ror"
     ):
+        fr_funder_name_tag = set_funder_name(fr_fundgroup_tag, award)
         set_funder_ror(fr_fundgroup_tag, award)
     elif award.get_funder_name():
         fr_funder_name_tag = set_funder_name(fr_fundgroup_tag, award)
