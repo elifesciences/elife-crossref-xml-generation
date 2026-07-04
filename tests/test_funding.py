@@ -81,6 +81,7 @@ class TestSetFundref(unittest.TestCase):
             b"<root>"
             b'<fr:program name="fundref">'
             b'<fr:assertion name="fundgroup">'
+            b'<fr:assertion name="funder_name">Test Funder</fr:assertion>'
             b'<fr:assertion name="ror">123456</fr:assertion>'
             b'<fr:assertion name="grant_doi">award_id</fr:assertion>'
             b"</fr:assertion>"

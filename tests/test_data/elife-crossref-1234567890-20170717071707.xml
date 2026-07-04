@@ -166,10 +166,12 @@
 						<assertion group_name="post_publication_commenting" label="Post publication commenting" name="post_publication_commenting">open (sign in with ORCID iD required)</assertion>
 						<fr:program name="fundref">
 							<fr:assertion name="fundgroup">
+								<fr:assertion name="funder_name">National Institutes of Health</fr:assertion>
 								<fr:assertion name="ror">https://ror.org/01cwqze88</fr:assertion>
 								<fr:assertion name="award_number">DA037327</fr:assertion>
 							</fr:assertion>
 							<fr:assertion name="fundgroup">
+								<fr:assertion name="funder_name">Czech Science Foundation</fr:assertion>
 								<fr:assertion name="ror">https://ror.org/01pv73b02</fr:assertion>
 								<fr:assertion name="grant_doi">10.13039/501100001824</fr:assertion>
 							</fr:assertion>

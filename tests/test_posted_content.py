@@ -68,6 +68,7 @@ class TestSetPostedContent(unittest.TestCase):
                 "</jats:abstract>"
                 '<fr:program name="fundref">'
                 '<fr:assertion name="fundgroup">'
+                '<fr:assertion name="funder_name">Example Funding Institution</fr:assertion>'
                 '<fr:assertion name="ror">example_ror_id</fr:assertion>'
                 '<fr:assertion name="grant_doi">example_award_id</fr:assertion>'
                 "</fr:assertion>"
