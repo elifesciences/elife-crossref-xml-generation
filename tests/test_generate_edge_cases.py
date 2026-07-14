@@ -269,7 +269,8 @@ class TestGenerateCrossrefDatasets(unittest.TestCase):
             + "</rel:inter_work_relation></rel:related_item>"
         )
         expected_xml_snippet_6 = (
-            '<rel:related_item><rel:inter_work_relation identifier-type="uri" '
+            "<rel:related_item><rel:description>Data citation</rel:description>"
+            '<rel:inter_work_relation identifier-type="uri" '
             'relationship-type="isSupplementedBy">https://archive.softwareheritage.org'
             "</rel:inter_work_relation></rel:related_item>"
         )
