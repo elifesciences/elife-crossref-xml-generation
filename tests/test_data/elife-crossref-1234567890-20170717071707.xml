@@ -201,7 +201,7 @@
 					</rel:related_item>
 					<rel:related_item>
 						<rel:description>poly A+ RNA sequencing of cell cycle-synchronized RNA from U2OS cells</rel:description>
-						<rel:inter_work_relation identifier-type="accession" relationship-type="references">GSE143275</rel:inter_work_relation>
+						<rel:inter_work_relation identifier-type="accession" relationship-type="isSupplementedBy">GSE143275</rel:inter_work_relation>
 					</rel:related_item>
 					<rel:related_item>
 						<rel:description>Genome-wide errant targeting by Hairy</rel:description>

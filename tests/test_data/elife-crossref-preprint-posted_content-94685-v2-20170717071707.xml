@@ -71,6 +71,10 @@
                 <rel:related_item>
                     <rel:intra_work_relation identifier-type="doi" relationship-type="isVersionOf">10.7554/eLife.94685.1</rel:intra_work_relation>
                 </rel:related_item>
+                <rel:related_item>
+                    <rel:description>EXAMPLE DATASET: Fully computational design of SaCas9 with relaxed PAM requirement</rel:description>
+                    <rel:inter_work_relation identifier-type="doi" relationship-type="isSupplementedBy">10.5281/zenodo.18058217</rel:inter_work_relation>
+                </rel:related_item>
             </rel:program>
             <version_info>
                 <version xml:lang="en">2</version>
@@ -1053,6 +1057,14 @@
                     <first_page>1115</first_page>
                     <cYear>2015</cYear>
                     <article_title>MorphoTools: a set of R functions for morphometric analysis</article_title>
+                </citation>
+                <citation key="dataref1" type="dataset">
+                    <volume_title>Zenodo</volume_title>
+                    <author>Xiaoqiang Huang</author>
+                    <cYear>2025</cYear>
+                    <article_title>EXAMPLE DATASET: Fully computational design of SaCas9 with relaxed PAM requirement</article_title>
+                    <doi>10.5281/zenodo.18058217</doi>
+                    <unstructured_citation>Xiaoqiang Huang. 2025. EXAMPLE DATASET: Fully computational design of SaCas9 with relaxed PAM requirement. Zenodo.</unstructured_citation>
                 </citation>
             </citation_list>
         </posted_content>
