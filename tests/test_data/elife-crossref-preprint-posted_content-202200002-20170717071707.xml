@@ -23,6 +23,9 @@
                 <institution_name>eLife</institution_name>
                 <institution_id type="ror">https://ror.org/04rjz5883</institution_id>
             </institution>
+            <archive_locations>
+                <archive name="CLOCKSS"/>
+            </archive_locations>
             <doi_data>
                 <doi>10.7554/eLife.202200002</doi>
                 <resource>https://example.org/articles/202200002</resource>

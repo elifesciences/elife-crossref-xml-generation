@@ -2,6 +2,7 @@ from xml.etree.ElementTree import SubElement
 from elifecrossref import (
     abstract,
     access_indicators,
+    archive_locations,
     citation,
     component,
     contributor,
@@ -19,14 +20,6 @@ from elifecrossref import (
 def set_journal_article(parent, poa_article, pub_date, crossref_config):
     journal_article_tag = SubElement(parent, "journal_article")
     journal_article_tag.set("publication_type", "full_text")
-    if (
-        crossref_config.get("reference_distribution_opts")
-        and crossref_config.get("reference_distribution_opts") != ""
-    ):
-        journal_article_tag.set(
-            "reference_distribution_opts",
-            crossref_config.get("reference_distribution_opts"),
-        )
 
     # Set the title with italic tag support
     title.set_titles(journal_article_tag, poa_article.title, crossref_config)
@@ -73,7 +66,9 @@ def set_journal_article(parent, poa_article, pub_date, crossref_config):
 
     dataset.set_datasets(relations_program_tag, poa_article)
 
-    set_archive_locations(journal_article_tag, crossref_config.get("archive_locations"))
+    archive_locations.set_archive_locations(
+        journal_article_tag, crossref_config.get("archive_locations")
+    )
 
     doi.set_article_doi_data(journal_article_tag, poa_article, crossref_config)
 
@@ -85,11 +80,3 @@ def set_journal_article(parent, poa_article, pub_date, crossref_config):
 
     if related.do_preprint_related_item(poa_article) is True:
         preprint.set_preprint(relations_program_tag, poa_article.preprint)
-
-
-def set_archive_locations(parent, archive_locations):
-    if archive_locations:
-        archive_locations_tag = SubElement(parent, "archive_locations")
-        for archive_location in archive_locations:
-            archive_tag = SubElement(archive_locations_tag, "archive")
-            archive_tag.set("name", archive_location)
