@@ -93,6 +93,9 @@ class TestSetPostedContent(unittest.TestCase):
                 "</rel:inter_work_relation>"
                 "</rel:related_item>"
                 "</rel:program>"
+                "<archive_locations>"
+                '<archive name="CLOCKSS" />'
+                "</archive_locations>"
                 "<version_info>"
                 '<version xml:lang="en">2</version>'
                 "</version_info>"
