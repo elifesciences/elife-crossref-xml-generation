@@ -2,6 +2,7 @@ from xml.etree.ElementTree import SubElement
 from elifecrossref import (
     abstract,
     access_indicators,
+    archive_locations,
     citation,
     collection,
     contributor,
@@ -38,9 +39,6 @@ def set_posted_content(parent, poa_article, crossref_config):
     # date is required
     dates.set_posted_date(posted_content_tag, poa_article.get_date("posted_date"))
 
-    # add institution if provided
-    add_institution(posted_content_tag, crossref_config)
-
     # status tag for a retracted article
     if poa_article.get_date("retracted"):
         status.set_status_tag(
@@ -49,6 +47,9 @@ def set_posted_content(parent, poa_article, crossref_config):
             poa_article.get_date("retracted").date,
             WITHDRAWN_DESCRIPTION,
         )
+
+    # add institution if provided
+    add_institution(posted_content_tag, crossref_config)
 
     # item_number
     if poa_article.elocation_id:
@@ -104,6 +105,10 @@ def set_posted_content(parent, poa_article, crossref_config):
 
     if relations_program_tag is not None:
         funding.set_finance_relation(relations_program_tag, poa_article)
+
+    archive_locations.set_archive_locations(
+        posted_content_tag, crossref_config.get("archive_locations")
+    )
 
     if poa_article.version:
         version.set_version_info(posted_content_tag, poa_article)
