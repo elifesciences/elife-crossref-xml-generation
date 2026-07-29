@@ -1,7 +1,7 @@
 import unittest
 from xml.etree import ElementTree
 from xml.etree.ElementTree import Element
-from elifearticle.article import Event
+from elifearticle.article import ClinicalTrial, Event
 from elifecrossref import posted_content
 from tests import create_crossref_config, helpers
 
@@ -18,6 +18,13 @@ class TestSetPostedContent(unittest.TestCase):
         event_object = Event()
         event_object.event_type = "sent-for-review"
         article.publication_history.insert(0, event_object)
+        # add sample clinical_trial data
+        clinical_trial = ClinicalTrial()
+        clinical_trial.source_id = "ClinicalTrials.gov"
+        clinical_trial.source_id_type = "registry-name"
+        clinical_trial.document_id = "TEST999"
+        clinical_trial.content_type = "preResults"
+        article.clinical_trials = [clinical_trial]
 
         expected = bytes(
             (
@@ -76,6 +83,12 @@ class TestSetPostedContent(unittest.TestCase):
                 '<ai:program name="AccessIndicators">'
                 "<ai:license_ref>http://creativecommons.org/licenses/by/4.0/</ai:license_ref>"
                 "</ai:program>"
+                "<ct:program>"
+                "<ct:clinical-trial-number"
+                ' registry="10.18810/clinical-trials-gov" type="preResults">'
+                "TEST999"
+                "</ct:clinical-trial-number>"
+                "</ct:program>"
                 "<rel:program>"
                 "<rel:related_item>"
                 '<rel:intra_work_relation identifier-type="doi" relationship-type="isVersionOf">'
