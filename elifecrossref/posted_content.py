@@ -4,6 +4,7 @@ from elifecrossref import (
     access_indicators,
     archive_locations,
     citation,
+    clinical_trials,
     collection,
     contributor,
     dates,
@@ -67,6 +68,12 @@ def set_posted_content(parent, poa_article, crossref_config):
     if poa_article.license and poa_article.license.href:
         ai_program_tag = access_indicators.set_ai_program(posted_content_tag)
         access_indicators.set_ai_license_ref(ai_program_tag, poa_article.license.href)
+
+    # clinical trial data
+    if clinical_trials.do_clinical_trials(poa_article):
+        clinical_trials.set_clinical_trials(
+            posted_content_tag, poa_article, crossref_config
+        )
 
     # this is the spot to add the relations program tag if it is required
     relations_program_tag = None
