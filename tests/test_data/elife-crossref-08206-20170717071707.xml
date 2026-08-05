@@ -30,7 +30,8 @@
 					<title>Extracellular space preservation aids the connectomic analysis of neural circuits</title>
 				</titles>
 				<contributors>
-					<person_name contributor_role="author" sequence="first">
+					<person_name sequence="first">
+						<role type="author" vocab="crossref"/>
 						<given_name>Marta</given_name>
 						<surname>Pallotto</surname>
 						<affiliations>
@@ -41,7 +42,8 @@
 						</affiliations>
 						<ORCID authenticated="true">http://orcid.org/0000-0001-7694-0398</ORCID>
 					</person_name>
-					<person_name contributor_role="author" sequence="first">
+					<person_name sequence="first">
+						<role type="author" vocab="crossref"/>
 						<given_name>Paul V</given_name>
 						<surname>Watkins</surname>
 						<affiliations>
@@ -51,7 +53,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Boma</given_name>
 						<surname>Fubara</surname>
 						<affiliations>
@@ -61,7 +64,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Joshua H</given_name>
 						<surname>Singer</surname>
 						<affiliations>
@@ -71,7 +75,9 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
+						<role type="corresponding-author" vocab="crossref"/>
 						<given_name>Kevin L</given_name>
 						<surname>Briggman</surname>
 						<affiliations>

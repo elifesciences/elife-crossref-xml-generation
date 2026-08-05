@@ -30,7 +30,9 @@
 					<title>eLife kitchen sink 3.0</title>
 				</titles>
 				<contributors>
-					<person_name contributor_role="author" sequence="first">
+					<person_name sequence="first">
+						<role type="author" vocab="crossref"/>
+						<role type="corresponding-author" vocab="crossref"/>
 						<given_name>Frederick Peter</given_name>
 						<surname>Atherden</surname>
 						<suffix>III</suffix>
@@ -42,7 +44,9 @@
 						</affiliations>
 						<ORCID authenticated="true">https://orcid.org/0000-0002-6048-1470</ORCID>
 					</person_name>
-					<person_name contributor_role="author" sequence="first">
+					<person_name sequence="first">
+						<role type="author" vocab="crossref"/>
+						<role type="corresponding-author" vocab="crossref"/>
 						<given_name>Melissa</given_name>
 						<surname>Harrison</surname>
 						<affiliations>
@@ -54,7 +58,8 @@
 						<ORCID authenticated="true">https://orcid.org/0000-0002-4932-938X</ORCID>
 					</person_name>
 					<organization contributor_role="author" sequence="additional">Example Group author</organization>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>James</given_name>
 						<surname>Gilbert</surname>
 						<affiliations>
@@ -65,7 +70,8 @@
 						</affiliations>
 						<ORCID authenticated="true">https://orcid.org/0000-1002-4932-938X</ORCID>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Santa</given_name>
 						<surname>Claus</surname>
 						<affiliations>
@@ -75,7 +81,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Cornel</given_name>
 						<surname>West</surname>
 						<suffix>Jnr</suffix>
@@ -87,7 +94,7 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<organization contributor_role="author" sequence="additional">on behalf of whoever finds this interesting</organization>
+					<organization contributor_role="other" sequence="additional">on behalf of whoever finds this interesting</organization>
 				</contributors>
 				<jats:abstract xmlns:mml="http://www.w3.org/1998/Math/MathML">
 					<jats:p>Background:</jats:p>

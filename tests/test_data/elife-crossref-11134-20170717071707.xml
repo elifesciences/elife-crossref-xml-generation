@@ -30,7 +30,8 @@
 					<title>cryo-EM structures of the E. coli replicative DNA polymerase reveal its dynamic interactions with the DNA sliding clamp, exonuclease and τ</title>
 				</titles>
 				<contributors>
-					<person_name contributor_role="author" sequence="first">
+					<person_name sequence="first">
+						<role type="author" vocab="crossref"/>
 						<given_name>Rafael</given_name>
 						<surname>Fernandez-Leiro</surname>
 						<affiliations>
@@ -41,7 +42,8 @@
 						</affiliations>
 						<ORCID authenticated="true">http://orcid.org/0000-0002-7941-0357</ORCID>
 					</person_name>
-					<person_name contributor_role="author" sequence="first">
+					<person_name sequence="first">
+						<role type="author" vocab="crossref"/>
 						<given_name>Julian</given_name>
 						<surname>Conrad</surname>
 						<affiliations>
@@ -51,7 +53,9 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
+						<role type="corresponding-author" vocab="crossref"/>
 						<given_name>Sjors HW</given_name>
 						<surname>Scheres</surname>
 						<affiliations>
@@ -62,7 +66,9 @@
 						</affiliations>
 						<ORCID authenticated="true">http://orcid.org/0000-0002-0462-6540</ORCID>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
+						<role type="corresponding-author" vocab="crossref"/>
 						<given_name>Meindert H</given_name>
 						<surname>Lamers</surname>
 						<affiliations>

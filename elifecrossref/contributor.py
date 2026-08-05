@@ -39,32 +39,49 @@ def set_contributors(parent, contributors):
         prev_equal_contrib = contributor.equal_contrib
 
 
+def set_roles(parent, contributor_roles):
+    "add role tags from a list of roles"
+    if contributor_roles:
+        for contributor_role in contributor_roles:
+            role_tag = SubElement(parent, "role")
+            role_tag.set("type", contributor_role.get("type"))
+            role_tag.set("vocab", contributor_role.get("vocab"))
+
+
 def set_contributor(parent, contributor, sequence):
     """add tags for a contributor to the parent tag"""
+    contributor_roles = []
     if contributor.contrib_type == "on-behalf-of":
-        contributor_role = "author"
+        contributor_roles.append({"vocab": "crossref", "type": "other"})
     else:
-        contributor_role = contributor.contrib_type
+        contributor_roles.append(
+            {"vocab": "crossref", "type": contributor.contrib_type}
+        )
+
+    # add corresponding role to all but organization contributors
+    if contributor.corresp and not contributor.collab:
+        contributor_roles.append({"vocab": "crossref", "type": "corresponding-author"})
 
     # Skip contributors with no surname
     if contributor.anonymous:
         # todo!! spin this out in a new function
         anonymous_tag = SubElement(parent, "anonymous")
-        anonymous_tag.set("contributor_role", contributor_role)
         anonymous_tag.set("sequence", sequence)
+        set_roles(anonymous_tag, contributor_roles)
     elif contributor.surname == "" or contributor.surname is None:
         # Most likely a group author
-        set_org_contributor(parent, contributor, contributor_role, sequence)
+        set_org_contributor(parent, contributor, contributor_roles, sequence)
 
     else:
-        set_person_contributor(parent, contributor, contributor_role, sequence)
+        set_person_contributor(parent, contributor, contributor_roles, sequence)
 
 
-def set_org_contributor(parent, contributor, contributor_role, sequence):
+def set_org_contributor(parent, contributor, contributor_roles, sequence):
     if contributor.collab:
         organization_tag = SubElement(parent, "organization")
         organization_tag.text = contributor.collab
-        organization_tag.set("contributor_role", contributor_role)
+        if contributor_roles:
+            organization_tag.set("contributor_role", contributor_roles[0]["type"])
         organization_tag.set("sequence", sequence)
 
 
@@ -74,10 +91,11 @@ def set_person_contributor(parent, contributor, contributor_role, sequence):
     set_orcid(person_name_tag, contributor)
 
 
-def set_person_name(parent, contributor, contributor_role, sequence):
+def set_person_name(parent, contributor, contributor_roles, sequence):
     person_name_tag = SubElement(parent, "person_name")
-    person_name_tag.set("contributor_role", contributor_role)
     person_name_tag.set("sequence", sequence)
+
+    set_roles(person_name_tag, contributor_roles)
 
     if contributor.given_name:
         given_name_tag = SubElement(person_name_tag, "given_name")

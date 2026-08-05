@@ -5,6 +5,28 @@ from elifearticle.article import Affiliation, Contributor
 from elifecrossref import contributor
 
 
+class TestSetRoles(unittest.TestCase):
+    "tests for set_roles()"
+
+    def test_set_roles(self):
+        "test adding role tags"
+        person_name_tag = Element("person_name")
+        contributor_roles = [
+            {"vocab": "crossref", "type": "author"},
+            {"vocab": "crossref", "type": "corresponding-author"},
+        ]
+        expected = (
+            '<person_name><role type="author" vocab="crossref" />'
+            '<role type="corresponding-author" vocab="crossref" />'
+            "</person_name>"
+        )
+        # invoke
+        contributor.set_roles(person_name_tag, contributor_roles)
+        # assert
+        rough_string = ElementTree.tostring(person_name_tag).decode("utf-8")
+        self.assertEqual(rough_string, expected)
+
+
 class TestSetPersonName(unittest.TestCase):
     def setUp(self):
         pass
@@ -13,16 +35,21 @@ class TestSetPersonName(unittest.TestCase):
         """all person name fields"""
         contributor_object = Contributor(None, "Aardvark", "Adam")
         contributor_object.suffix = "Jr."
-        contributor_role = "author"
+        contributor_roles = [
+            {"vocab": "crossref", "type": "author"},
+            {"vocab": "crossref", "type": "corresponding-author"},
+        ]
         sequence = "first"
         parent_tag = Element("person_name")
         expected = (
-            '<person_name contributor_role="author" sequence="first">'
+            '<person_name sequence="first">'
+            '<role type="author" vocab="crossref" />'
+            '<role type="corresponding-author" vocab="crossref" />'
             "<given_name>Adam</given_name>"
             "<surname>Aardvark</surname><suffix>Jr.</suffix></person_name>"
         )
         person_name_element = contributor.set_person_name(
-            parent_tag, contributor_object, contributor_role, sequence
+            parent_tag, contributor_object, contributor_roles, sequence
         )
         rough_string = ElementTree.tostring(person_name_element).decode("utf-8")
         self.assertEqual(rough_string, expected)
@@ -30,15 +57,16 @@ class TestSetPersonName(unittest.TestCase):
     def test_set_person_name_no_given_name(self):
         """all person name fields"""
         contributor_object = Contributor(None, "Aardvark", "")
-        contributor_role = "author"
+        contributor_roles = [{"vocab": "crossref", "type": "author"}]
         sequence = "first"
         parent_tag = Element("person_name")
         expected = (
-            '<person_name contributor_role="author" sequence="first">'
+            '<person_name sequence="first">'
+            '<role type="author" vocab="crossref" />'
             "<surname>Aardvark</surname></person_name>"
         )
         person_name_element = contributor.set_person_name(
-            parent_tag, contributor_object, contributor_role, sequence
+            parent_tag, contributor_object, contributor_roles, sequence
         )
         rough_string = ElementTree.tostring(person_name_element).decode("utf-8")
         self.assertEqual(rough_string, expected)

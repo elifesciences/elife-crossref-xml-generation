@@ -30,7 +30,8 @@
 					<title>Mismatch repair deficiency endows tumors with a unique mutation signature and sensitivity to DNA double-strand breaks</title>
 				</titles>
 				<contributors>
-					<person_name contributor_role="author" sequence="first">
+					<person_name sequence="first">
+						<role type="author" vocab="crossref"/>
 						<given_name>Hui</given_name>
 						<surname>Zhao</surname>
 						<affiliations>
@@ -40,7 +41,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Bernard</given_name>
 						<surname>Thienpont</surname>
 						<affiliations>
@@ -51,7 +53,8 @@
 						</affiliations>
 						<ORCID authenticated="true">http://orcid.org/0000-0002-8772-6845</ORCID>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Betül Tuba</given_name>
 						<surname>Yesilyurt</surname>
 						<affiliations>
@@ -61,7 +64,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Matthieu</given_name>
 						<surname>Moisse</surname>
 						<affiliations>
@@ -72,7 +76,8 @@
 						</affiliations>
 						<ORCID authenticated="true">http://orcid.org/0000-0001-8880-9311</ORCID>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Joke</given_name>
 						<surname>Reumers</surname>
 						<affiliations>
@@ -82,7 +87,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Lieve</given_name>
 						<surname>Coenegrachts</surname>
 						<affiliations>
@@ -92,7 +98,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Xavier</given_name>
 						<surname>Sagaert</surname>
 						<affiliations>
@@ -102,7 +109,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Stefanie</given_name>
 						<surname>Schrauwen</surname>
 						<affiliations>
@@ -112,7 +120,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Dominiek</given_name>
 						<surname>Smeets</surname>
 						<affiliations>
@@ -122,7 +131,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Gert</given_name>
 						<surname>Matthijs</surname>
 						<affiliations>
@@ -132,7 +142,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Stein</given_name>
 						<surname>Aerts</surname>
 						<affiliations>
@@ -142,7 +153,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Jan</given_name>
 						<surname>Cools</surname>
 						<affiliations>
@@ -152,7 +164,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Alex</given_name>
 						<surname>Metcalf</surname>
 						<affiliations>
@@ -162,7 +175,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Amanda</given_name>
 						<surname>Spurdle</surname>
 						<affiliations>
@@ -173,7 +187,8 @@
 						</affiliations>
 					</person_name>
 					<organization contributor_role="author" sequence="additional">ANECS</organization>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Frederic</given_name>
 						<surname>Amant</surname>
 						<affiliations>
@@ -183,7 +198,9 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
+						<role type="corresponding-author" vocab="crossref"/>
 						<given_name>Diether</given_name>
 						<surname>Lambrechts</surname>
 						<affiliations>

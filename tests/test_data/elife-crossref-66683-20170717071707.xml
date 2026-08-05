@@ -30,35 +30,43 @@
 					<title>Expression of Concern: Salt-inducible kinase 3 regulates the mammalian circadian clock by destabilizing PER2 protein</title>
 				</titles>
 				<contributors>
-					<person_name contributor_role="author" sequence="first">
+					<person_name sequence="first">
+						<role type="author" vocab="crossref"/>
+						<role type="corresponding-author" vocab="crossref"/>
 						<given_name>Naoto</given_name>
 						<surname>Hayasaka</surname>
 						<ORCID authenticated="true">http://orcid.org/0000-0003-2844-524X</ORCID>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Arisa</given_name>
 						<surname>Hirano</surname>
 						<ORCID authenticated="true">http://orcid.org/0000-0001-9732-6100</ORCID>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Yuka</given_name>
 						<surname>Miyoshi</surname>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Isao T</given_name>
 						<surname>Tokuda</surname>
 						<ORCID authenticated="true">http://orcid.org/0000-0001-6212-0022</ORCID>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Hikari</given_name>
 						<surname>Yoshitane</surname>
 						<ORCID authenticated="true">https://orcid.org/0000-0001-6319-3354</ORCID>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Junichiro</given_name>
 						<surname>Matsuda</surname>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Yoshitaka</given_name>
 						<surname>Fukada</surname>
 					</person_name>
