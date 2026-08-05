@@ -30,7 +30,9 @@
 					<title>The eLife research article</title>
 				</titles>
 				<contributors>
-					<person_name contributor_role="author" sequence="first">
+					<person_name sequence="first">
+						<role type="author" vocab="crossref"/>
+						<role type="corresponding-author" vocab="crossref"/>
 						<given_name>Melissa</given_name>
 						<surname>Harrison</surname>
 						<suffix>Jnr</suffix>
@@ -42,7 +44,8 @@
 						</affiliations>
 						<ORCID authenticated="true">http://orcid.org/0000-0003-3523-4408</ORCID>
 					</person_name>
-					<person_name contributor_role="author" sequence="first">
+					<person_name sequence="first">
+						<role type="author" vocab="crossref"/>
 						<given_name>James F</given_name>
 						<surname>Gilbert</surname>
 						<affiliations>
@@ -54,7 +57,7 @@
 					</person_name>
 					<organization contributor_role="author" sequence="first">eLife Editorial Production Group</organization>
 					<organization contributor_role="author" sequence="first">eLife Technology Group</organization>
-					<organization contributor_role="author" sequence="additional">for the eLife Staff Team</organization>
+					<organization contributor_role="other" sequence="additional">for the eLife Staff Team</organization>
 				</contributors>
 				<jats:abstract xmlns:mml="http://www.w3.org/1998/Math/MathML">
 					<jats:p xmlns:mml="http://www.w3.org/1998/Math/MathML">

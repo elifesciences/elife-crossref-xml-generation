@@ -30,7 +30,8 @@
 					<title>Diagnostically relevant facial gestalt information from ordinary photos</title>
 				</titles>
 				<contributors>
-					<person_name contributor_role="author" sequence="first">
+					<person_name sequence="first">
+						<role type="author" vocab="crossref"/>
 						<given_name>Quentin</given_name>
 						<surname>Ferry</surname>
 						<affiliations>
@@ -44,7 +45,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Julia</given_name>
 						<surname>Steinberg</surname>
 						<affiliations>
@@ -58,7 +60,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Caleb</given_name>
 						<surname>Webber</surname>
 						<affiliations>
@@ -68,7 +71,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>David R</given_name>
 						<surname>FitzPatrick</surname>
 						<affiliations>
@@ -78,7 +82,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Chris P</given_name>
 						<surname>Ponting</surname>
 						<affiliations>
@@ -88,7 +93,9 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
+						<role type="corresponding-author" vocab="crossref"/>
 						<given_name>Andrew</given_name>
 						<surname>Zisserman</surname>
 						<affiliations>
@@ -98,7 +105,9 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
+						<role type="corresponding-author" vocab="crossref"/>
 						<given_name>Christoffer</given_name>
 						<surname>Nellåker</surname>
 						<affiliations>

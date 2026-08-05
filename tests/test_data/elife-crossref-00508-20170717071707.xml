@@ -30,7 +30,8 @@
 					<title>Imaging-based chemical screening reveals activity-dependent neural differentiation of pluripotent stem cells</title>
 				</titles>
 				<contributors>
-					<person_name contributor_role="author" sequence="first">
+					<person_name sequence="first">
+						<role type="author" vocab="crossref"/>
 						<given_name>Yaping</given_name>
 						<surname>Sun</surname>
 						<affiliations>
@@ -48,7 +49,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="first">
+					<person_name sequence="first">
+						<role type="author" vocab="crossref"/>
 						<given_name>Zhiqiang</given_name>
 						<surname>Dong</surname>
 						<affiliations>
@@ -66,7 +68,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Taihao</given_name>
 						<surname>Jin</surname>
 						<affiliations>
@@ -84,7 +87,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Kean-Hooi</given_name>
 						<surname>Ang</surname>
 						<affiliations>
@@ -98,7 +102,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Miller</given_name>
 						<surname>Huang</surname>
 						<affiliations>
@@ -116,7 +121,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Kelly M</given_name>
 						<surname>Haston</surname>
 						<affiliations>
@@ -130,7 +136,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Jisong</given_name>
 						<surname>Peng</surname>
 						<affiliations>
@@ -148,7 +155,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Tao P</given_name>
 						<surname>Zhong</surname>
 						<affiliations>
@@ -158,7 +166,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Steven</given_name>
 						<surname>Finkbeiner</surname>
 						<affiliations>
@@ -184,7 +193,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>William A</given_name>
 						<surname>Weiss</surname>
 						<affiliations>
@@ -202,7 +212,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Michelle R</given_name>
 						<surname>Arkin</surname>
 						<affiliations>
@@ -216,7 +227,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Lily Y</given_name>
 						<surname>Jan</surname>
 						<affiliations>
@@ -234,7 +246,9 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
+						<role type="corresponding-author" vocab="crossref"/>
 						<given_name>Su</given_name>
 						<surname>Guo</surname>
 						<affiliations>

@@ -30,7 +30,8 @@
 					<title>Origins and functional consequences of somatic mitochondrial DNA mutations in human cancer</title>
 				</titles>
 				<contributors>
-					<person_name contributor_role="author" sequence="first">
+					<person_name sequence="first">
+						<role type="author" vocab="crossref"/>
 						<given_name>Young Seok</given_name>
 						<surname>Ju</surname>
 						<affiliations>
@@ -40,7 +41,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Ludmil B</given_name>
 						<surname>Alexandrov</surname>
 						<affiliations>
@@ -50,7 +52,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Moritz</given_name>
 						<surname>Gerstung</surname>
 						<affiliations>
@@ -60,7 +63,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Inigo</given_name>
 						<surname>Martincorena</surname>
 						<affiliations>
@@ -70,7 +74,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Serena</given_name>
 						<surname>Nik-Zainal</surname>
 						<affiliations>
@@ -80,7 +85,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Manasa</given_name>
 						<surname>Ramakrishna</surname>
 						<affiliations>
@@ -90,7 +96,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Helen R</given_name>
 						<surname>Davies</surname>
 						<affiliations>
@@ -100,7 +107,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Elli</given_name>
 						<surname>Papaemmanuil</surname>
 						<affiliations>
@@ -110,7 +118,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Gunes</given_name>
 						<surname>Gundem</surname>
 						<affiliations>
@@ -120,7 +129,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Adam</given_name>
 						<surname>Shlien</surname>
 						<affiliations>
@@ -130,7 +140,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Niccolo</given_name>
 						<surname>Bolli</surname>
 						<affiliations>
@@ -140,7 +151,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Sam</given_name>
 						<surname>Behjati</surname>
 						<affiliations>
@@ -150,7 +162,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Patrick S</given_name>
 						<surname>Tarpey</surname>
 						<affiliations>
@@ -160,7 +173,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Jyoti</given_name>
 						<surname>Nangalia</surname>
 						<affiliations>
@@ -178,7 +192,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Charles E</given_name>
 						<surname>Massie</surname>
 						<affiliations>
@@ -196,7 +211,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Adam P</given_name>
 						<surname>Butler</surname>
 						<affiliations>
@@ -206,7 +222,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Jon W</given_name>
 						<surname>Teague</surname>
 						<affiliations>
@@ -216,7 +233,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>George S</given_name>
 						<surname>Vassiliou</surname>
 						<affiliations>
@@ -234,7 +252,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Anthony R</given_name>
 						<surname>Green</surname>
 						<affiliations>
@@ -248,7 +267,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Ming-Qing</given_name>
 						<surname>Du</surname>
 						<affiliations>
@@ -258,7 +278,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Ashwin</given_name>
 						<surname>Unnikrishnan</surname>
 						<affiliations>
@@ -268,7 +289,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>John E</given_name>
 						<surname>Pimanda</surname>
 						<affiliations>
@@ -278,7 +300,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Bin Tean</given_name>
 						<surname>Teh</surname>
 						<affiliations>
@@ -292,7 +315,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Nikhil</given_name>
 						<surname>Munshi</surname>
 						<affiliations>
@@ -302,7 +326,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Mel</given_name>
 						<surname>Greaves</surname>
 						<affiliations>
@@ -312,7 +337,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Paresh</given_name>
 						<surname>Vyas</surname>
 						<affiliations>
@@ -322,7 +348,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Adel K</given_name>
 						<surname>El-Naggar</surname>
 						<affiliations>
@@ -332,7 +359,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Tom</given_name>
 						<surname>Santarius</surname>
 						<affiliations>
@@ -342,7 +370,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>V Peter</given_name>
 						<surname>Collins</surname>
 						<affiliations>
@@ -352,7 +381,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Richard</given_name>
 						<surname>Grundy</surname>
 						<affiliations>
@@ -362,7 +392,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Jack A</given_name>
 						<surname>Taylor</surname>
 						<affiliations>
@@ -372,7 +403,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>D Neil</given_name>
 						<surname>Hayes</surname>
 						<affiliations>
@@ -382,7 +414,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>David</given_name>
 						<surname>Malkin</surname>
 						<affiliations>
@@ -395,7 +428,8 @@
 					<organization contributor_role="author" sequence="additional">ICGC Breast Cancer Group</organization>
 					<organization contributor_role="author" sequence="additional">ICGC Chronic Myeloid Disorders Group</organization>
 					<organization contributor_role="author" sequence="additional">ICGC Prostate Cancer Group</organization>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Christopher S</given_name>
 						<surname>Foster</surname>
 						<affiliations>
@@ -409,7 +443,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Anne Y</given_name>
 						<surname>Warren</surname>
 						<affiliations>
@@ -419,7 +454,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Hayley C</given_name>
 						<surname>Whitaker</surname>
 						<affiliations>
@@ -429,7 +465,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Daniel</given_name>
 						<surname>Brewer</surname>
 						<affiliations>
@@ -443,7 +480,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Rosalind</given_name>
 						<surname>Eeles</surname>
 						<affiliations>
@@ -453,7 +491,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Colin</given_name>
 						<surname>Cooper</surname>
 						<affiliations>
@@ -467,7 +506,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>David</given_name>
 						<surname>Neal</surname>
 						<affiliations>
@@ -477,7 +517,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Tapio</given_name>
 						<surname>Visakorpi</surname>
 						<affiliations>
@@ -487,7 +528,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>William B</given_name>
 						<surname>Isaacs</surname>
 						<affiliations>
@@ -497,7 +539,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>G Steven</given_name>
 						<surname>Bova</surname>
 						<affiliations>
@@ -507,7 +550,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Adrienne M</given_name>
 						<surname>Flanagan</surname>
 						<affiliations>
@@ -521,7 +565,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>P Andrew</given_name>
 						<surname>Futreal</surname>
 						<affiliations>
@@ -535,7 +580,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Andy G</given_name>
 						<surname>Lynch</surname>
 						<affiliations>
@@ -545,7 +591,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Patrick F</given_name>
 						<surname>Chinnery</surname>
 						<affiliations>
@@ -555,7 +602,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Ultan</given_name>
 						<surname>McDermott</surname>
 						<affiliations>
@@ -569,7 +617,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Michael R</given_name>
 						<surname>Stratton</surname>
 						<affiliations>
@@ -579,7 +628,9 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
+						<role type="corresponding-author" vocab="crossref"/>
 						<given_name>Peter J</given_name>
 						<surname>Campbell</surname>
 						<affiliations>

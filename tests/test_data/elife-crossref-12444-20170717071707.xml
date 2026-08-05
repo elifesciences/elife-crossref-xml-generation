@@ -30,7 +30,8 @@
 					<title>The autophagy gene Atg16l1 differentially regulates Treg and TH2 cells to control intestinal inflammation</title>
 				</titles>
 				<contributors>
-					<person_name contributor_role="author" sequence="first">
+					<person_name sequence="first">
+						<role type="author" vocab="crossref"/>
 						<given_name>Agnieszka M</given_name>
 						<surname>Kabat</surname>
 						<affiliations>
@@ -40,7 +41,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Oliver J</given_name>
 						<surname>Harrison</surname>
 						<affiliations>
@@ -54,7 +56,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Thomas</given_name>
 						<surname>Riffelmacher</surname>
 						<affiliations>
@@ -68,7 +71,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Amin E</given_name>
 						<surname>Moghaddam</surname>
 						<affiliations>
@@ -78,7 +82,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Claire F</given_name>
 						<surname>Pearson</surname>
 						<affiliations>
@@ -88,7 +93,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Adam</given_name>
 						<surname>Laing</surname>
 						<affiliations>
@@ -98,7 +104,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Lucie</given_name>
 						<surname>Abeler-Dörner</surname>
 						<affiliations>
@@ -108,7 +115,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Simon P</given_name>
 						<surname>Forman</surname>
 						<affiliations>
@@ -118,7 +126,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Richard K</given_name>
 						<surname>Grencis</surname>
 						<affiliations>
@@ -128,7 +137,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Quentin</given_name>
 						<surname>Sattentau</surname>
 						<affiliations>
@@ -138,7 +148,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Anna Katharina</given_name>
 						<surname>Simon</surname>
 						<affiliations>
@@ -152,7 +163,9 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
+						<role type="corresponding-author" vocab="crossref"/>
 						<given_name>Johanna</given_name>
 						<surname>Pott</surname>
 						<affiliations>
@@ -162,7 +175,9 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
+						<role type="corresponding-author" vocab="crossref"/>
 						<given_name>Kevin J</given_name>
 						<surname>Maloy</surname>
 						<affiliations>

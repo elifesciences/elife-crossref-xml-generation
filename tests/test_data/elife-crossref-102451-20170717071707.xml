@@ -30,7 +30,8 @@
 					<title>Autologous P63+ lung progenitor cell transplantation in idiopathic pulmonary fibrosis: a phase 1 clinical trial</title>
 				</titles>
 				<contributors>
-					<person_name contributor_role="author" sequence="first">
+					<person_name sequence="first">
+						<role type="author" vocab="crossref"/>
 						<given_name>Shiyu</given_name>
 						<surname>Zhang</surname>
 						<affiliations>
@@ -46,7 +47,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="first">
+					<person_name sequence="first">
+						<role type="author" vocab="crossref"/>
 						<given_name>Min</given_name>
 						<surname>Zhou</surname>
 						<affiliations>
@@ -57,7 +59,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="first">
+					<person_name sequence="first">
+						<role type="author" vocab="crossref"/>
 						<given_name>Chi</given_name>
 						<surname>Shao</surname>
 						<affiliations>
@@ -68,7 +71,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="first">
+					<person_name sequence="first">
+						<role type="author" vocab="crossref"/>
 						<given_name>Yu</given_name>
 						<surname>Zhao</surname>
 						<affiliations>
@@ -84,7 +88,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Mingzhe</given_name>
 						<surname>Liu</surname>
 						<affiliations>
@@ -100,7 +105,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Lei</given_name>
 						<surname>Ni</surname>
 						<affiliations>
@@ -111,7 +117,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Zhiyao</given_name>
 						<surname>Bao</surname>
 						<affiliations>
@@ -122,7 +129,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Qiurui</given_name>
 						<surname>Zhang</surname>
 						<affiliations>
@@ -133,7 +141,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Ting</given_name>
 						<surname>Zhang</surname>
 						<affiliations>
@@ -144,7 +153,9 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
+						<role type="corresponding-author" vocab="crossref"/>
 						<given_name>Qun</given_name>
 						<surname>Luo</surname>
 						<affiliations>
@@ -155,7 +166,9 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
+						<role type="corresponding-author" vocab="crossref"/>
 						<given_name>Jieming</given_name>
 						<surname>Qu</surname>
 						<affiliations>
@@ -166,7 +179,9 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
+						<role type="corresponding-author" vocab="crossref"/>
 						<given_name>Zuojun</given_name>
 						<surname>Xu</surname>
 						<affiliations>
@@ -177,7 +192,9 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
+						<role type="corresponding-author" vocab="crossref"/>
 						<given_name>Wei</given_name>
 						<surname>Zuo</surname>
 						<affiliations>

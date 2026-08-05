@@ -30,7 +30,9 @@
 					<title>Non-crossover gene conversions show strong GC bias and unexpected clustering in humans</title>
 				</titles>
 				<contributors>
-					<person_name contributor_role="author" sequence="first">
+					<person_name sequence="first">
+						<role type="author" vocab="crossref"/>
+						<role type="corresponding-author" vocab="crossref"/>
 						<given_name>Amy L</given_name>
 						<surname>Williams</surname>
 						<affiliations>
@@ -48,7 +50,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Giulio</given_name>
 						<surname>Genovese</surname>
 						<affiliations>
@@ -58,7 +61,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Thomas</given_name>
 						<surname>Dyer</surname>
 						<affiliations>
@@ -68,7 +72,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Nicolas</given_name>
 						<surname>Altemose</surname>
 						<affiliations>
@@ -78,7 +83,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Katherine</given_name>
 						<surname>Truax</surname>
 						<affiliations>
@@ -88,7 +94,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Goo</given_name>
 						<surname>Jun</surname>
 						<affiliations>
@@ -98,7 +105,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Nick</given_name>
 						<surname>Patterson</surname>
 						<affiliations>
@@ -108,7 +116,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Simon R</given_name>
 						<surname>Myers</surname>
 						<affiliations>
@@ -118,7 +127,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Joanne E</given_name>
 						<surname>Curran</surname>
 						<affiliations>
@@ -128,7 +138,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Ravi</given_name>
 						<surname>Duggirala</surname>
 						<affiliations>
@@ -138,7 +149,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>John</given_name>
 						<surname>Blangero</surname>
 						<affiliations>
@@ -148,7 +160,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>David</given_name>
 						<surname>Reich</surname>
 						<affiliations>
@@ -166,7 +179,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Molly</given_name>
 						<surname>Przeworski</surname>
 						<affiliations>
@@ -180,7 +194,7 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<organization contributor_role="author" sequence="additional">on behalf of the T2D-GENES Consortium</organization>
+					<organization contributor_role="other" sequence="additional">on behalf of the T2D-GENES Consortium</organization>
 				</contributors>
 				<jats:abstract>
 					<jats:p>Although the past decade has seen tremendous progress in our understanding of fine-scale recombination, little is known about non-crossover (NCO) gene conversion. We report the first genome-wide study of NCO events in humans. Using SNP array data from 98 meioses, we identified 103 sites affected by NCO, of which 50/52 were confirmed in sequence data. Overlap with double strand break (DSB) hotspots indicates that most of the events are likely of meiotic origin. We estimate that a site is involved in a NCO at a rate of 5.9 × 10−6/bp/generation, consistent with sperm-typing studies, and infer that tract lengths span at least an order of magnitude. Observed NCO events show strong allelic bias at heterozygous AT/GC SNPs, with 68% (58–78%) transmitting GC alleles (p = 5 × 10−4). Strikingly, in 4 of 15 regions with resequencing data, multiple disjoint NCO tracts cluster in close proximity (∼20–30 kb), a phenomenon not previously seen in mammals.</jats:p>
