@@ -31,10 +31,10 @@
 				</titles>
 				<contributors>
 					<person_name sequence="first">
-						<role type="author" vocab="crossref"/>
-						<role type="corresponding-author" vocab="crossref"/>
 						<given_name>Niall M</given_name>
 						<surname>Mangan</surname>
+						<role type="author" vocab="crossref"/>
+						<role type="corresponding-author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>School of Engineering and Applied Sciences and Kavli Institute for Bionano Science and Technology, Harvard University</institution_name>
@@ -43,10 +43,10 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
-						<role type="corresponding-author" vocab="crossref"/>
 						<given_name>Michael P</given_name>
 						<surname>Brenner</surname>
+						<role type="author" vocab="crossref"/>
+						<role type="corresponding-author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>School of Engineering and Applied Sciences and Kavli Institute for Bionano Science and Technology, Harvard University</institution_name>

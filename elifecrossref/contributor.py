@@ -95,8 +95,6 @@ def set_person_name(parent, contributor, contributor_roles, sequence):
     person_name_tag = SubElement(parent, "person_name")
     person_name_tag.set("sequence", sequence)
 
-    set_roles(person_name_tag, contributor_roles)
-
     if contributor.given_name:
         given_name_tag = SubElement(person_name_tag, "given_name")
         given_name_tag.text = contributor.given_name
@@ -107,6 +105,8 @@ def set_person_name(parent, contributor, contributor_roles, sequence):
     if contributor.suffix:
         suffix_tag = SubElement(person_name_tag, "suffix")
         suffix_tag.text = contributor.suffix
+
+    set_roles(person_name_tag, contributor_roles)
 
     return person_name_tag
 

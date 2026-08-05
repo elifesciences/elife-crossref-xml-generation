@@ -31,9 +31,9 @@
 				</titles>
 				<contributors>
 					<person_name sequence="first">
-						<role type="author" vocab="crossref"/>
 						<given_name>Chantal</given_name>
 						<surname>Akoua-Koffi</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>1</institution_name>
@@ -41,9 +41,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Vincent</given_name>
 						<surname>Asse Kouadio</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>2</institution_name>
@@ -51,9 +51,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Jean Jacques</given_name>
 						<surname>Yao Atteby</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>3</institution_name>

@@ -31,10 +31,10 @@
 				</titles>
 				<contributors>
 					<person_name sequence="first">
-						<role type="author" vocab="crossref"/>
-						<role type="corresponding-author" vocab="crossref"/>
 						<given_name>Amy L</given_name>
 						<surname>Williams</surname>
+						<role type="author" vocab="crossref"/>
+						<role type="corresponding-author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Department of Biological Sciences, Columbia University</institution_name>
@@ -51,9 +51,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Giulio</given_name>
 						<surname>Genovese</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Program in Medical and Population Genetics, Broad Institute of Harvard and MIT</institution_name>
@@ -62,9 +62,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Thomas</given_name>
 						<surname>Dyer</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Department of Genetics, Texas Biomedical Research Institute</institution_name>
@@ -73,9 +73,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Nicolas</given_name>
 						<surname>Altemose</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Wellcome Trust Centre for Human Genetics, Oxford University</institution_name>
@@ -84,9 +84,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Katherine</given_name>
 						<surname>Truax</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Department of Genetics, Texas Biomedical Research Institute</institution_name>
@@ -95,9 +95,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Goo</given_name>
 						<surname>Jun</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Department of Biostatistics, University of Michigan</institution_name>
@@ -106,9 +106,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Nick</given_name>
 						<surname>Patterson</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Program in Medical and Population Genetics, Broad Institute of Harvard and MIT</institution_name>
@@ -117,9 +117,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Simon R</given_name>
 						<surname>Myers</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Wellcome Trust Centre for Human Genetics, Oxford University</institution_name>
@@ -128,9 +128,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Joanne E</given_name>
 						<surname>Curran</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Department of Genetics, Texas Biomedical Research Institute</institution_name>
@@ -139,9 +139,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Ravi</given_name>
 						<surname>Duggirala</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Department of Genetics, Texas Biomedical Research Institute</institution_name>
@@ -150,9 +150,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>John</given_name>
 						<surname>Blangero</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Department of Genetics, Texas Biomedical Research Institute</institution_name>
@@ -161,9 +161,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>David</given_name>
 						<surname>Reich</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Program in Medical and Population Genetics, Broad Institute of Harvard and MIT</institution_name>
@@ -180,9 +180,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Molly</given_name>
 						<surname>Przeworski</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Department of Biological Sciences, Columbia University</institution_name>

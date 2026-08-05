@@ -31,9 +31,9 @@
 				</titles>
 				<contributors>
 					<person_name sequence="first">
-						<role type="author" vocab="crossref"/>
 						<given_name>Shiyu</given_name>
 						<surname>Zhang</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Shanghai East Hospital, School of Medicine, Tongji University</institution_name>
@@ -48,9 +48,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="first">
-						<role type="author" vocab="crossref"/>
 						<given_name>Min</given_name>
 						<surname>Zhou</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Department of Respiratory and Critical Care Medicine, Ruijin Hospital, Shanghai Jiao Tong University School of Medicine</institution_name>
@@ -60,9 +60,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="first">
-						<role type="author" vocab="crossref"/>
 						<given_name>Chi</given_name>
 						<surname>Shao</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Department of Respiratory and Critical Care Medicine, Peking Union Medical College Hospital, Chinese Academy of Medical Sciences &amp; Peking Union Medical College</institution_name>
@@ -72,9 +72,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="first">
-						<role type="author" vocab="crossref"/>
 						<given_name>Yu</given_name>
 						<surname>Zhao</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Shanghai East Hospital, School of Medicine, Tongji University</institution_name>
@@ -89,9 +89,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Mingzhe</given_name>
 						<surname>Liu</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Shanghai East Hospital, School of Medicine, Tongji University</institution_name>
@@ -106,9 +106,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Lei</given_name>
 						<surname>Ni</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Department of Respiratory and Critical Care Medicine, Ruijin Hospital, Shanghai Jiao Tong University School of Medicine</institution_name>
@@ -118,9 +118,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Zhiyao</given_name>
 						<surname>Bao</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Department of Respiratory and Critical Care Medicine, Ruijin Hospital, Shanghai Jiao Tong University School of Medicine</institution_name>
@@ -130,9 +130,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Qiurui</given_name>
 						<surname>Zhang</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Department of Respiratory and Critical Care Medicine, Ruijin Hospital, Shanghai Jiao Tong University School of Medicine</institution_name>
@@ -142,9 +142,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Ting</given_name>
 						<surname>Zhang</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Super Organ R&amp;D Center, Regend Therapeutics</institution_name>
@@ -154,10 +154,10 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
-						<role type="corresponding-author" vocab="crossref"/>
 						<given_name>Qun</given_name>
 						<surname>Luo</surname>
+						<role type="author" vocab="crossref"/>
+						<role type="corresponding-author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Department of Respiratory and Critical Care Medicine, The First Affiliated Hospital of Guangzhou Medical University</institution_name>
@@ -167,10 +167,10 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
-						<role type="corresponding-author" vocab="crossref"/>
 						<given_name>Jieming</given_name>
 						<surname>Qu</surname>
+						<role type="author" vocab="crossref"/>
+						<role type="corresponding-author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Department of Respiratory and Critical Care Medicine, Ruijin Hospital, Shanghai Jiao Tong University School of Medicine</institution_name>
@@ -180,10 +180,10 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
-						<role type="corresponding-author" vocab="crossref"/>
 						<given_name>Zuojun</given_name>
 						<surname>Xu</surname>
+						<role type="author" vocab="crossref"/>
+						<role type="corresponding-author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Department of Respiratory and Critical Care Medicine, Peking Union Medical College Hospital, Chinese Academy of Medical Sciences &amp; Peking Union Medical College</institution_name>
@@ -193,10 +193,10 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
-						<role type="corresponding-author" vocab="crossref"/>
 						<given_name>Wei</given_name>
 						<surname>Zuo</surname>
+						<role type="author" vocab="crossref"/>
+						<role type="corresponding-author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Shanghai East Hospital, School of Medicine, Tongji University</institution_name>

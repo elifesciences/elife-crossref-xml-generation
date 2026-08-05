@@ -31,11 +31,11 @@
 				</titles>
 				<contributors>
 					<person_name sequence="first">
-						<role type="author" vocab="crossref"/>
-						<role type="corresponding-author" vocab="crossref"/>
 						<given_name>Frederick Peter</given_name>
 						<surname>Atherden</surname>
 						<suffix>III</suffix>
+						<role type="author" vocab="crossref"/>
+						<role type="corresponding-author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>The department of production, eLife Sciences</institution_name>
@@ -45,10 +45,10 @@
 						<ORCID authenticated="true">https://orcid.org/0000-0002-6048-1470</ORCID>
 					</person_name>
 					<person_name sequence="first">
-						<role type="author" vocab="crossref"/>
-						<role type="corresponding-author" vocab="crossref"/>
 						<given_name>Melissa</given_name>
 						<surname>Harrison</surname>
+						<role type="author" vocab="crossref"/>
+						<role type="corresponding-author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>The department of production, eLife Sciences</institution_name>
@@ -59,9 +59,9 @@
 					</person_name>
 					<organization contributor_role="author" sequence="additional">Example Group author</organization>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>James</given_name>
 						<surname>Gilbert</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>eLife</institution_name>
@@ -71,9 +71,9 @@
 						<ORCID authenticated="true">https://orcid.org/0000-1002-4932-938X</ORCID>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Santa</given_name>
 						<surname>Claus</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>The department of production, eLife Sciences</institution_name>
@@ -82,10 +82,10 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Cornel</given_name>
 						<surname>West</surname>
 						<suffix>Jnr</suffix>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>JATS4R</institution_name>

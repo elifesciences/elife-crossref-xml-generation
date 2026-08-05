@@ -43,10 +43,11 @@ class TestSetPersonName(unittest.TestCase):
         parent_tag = Element("person_name")
         expected = (
             '<person_name sequence="first">'
+            "<given_name>Adam</given_name>"
+            "<surname>Aardvark</surname><suffix>Jr.</suffix>"
             '<role type="author" vocab="crossref" />'
             '<role type="corresponding-author" vocab="crossref" />'
-            "<given_name>Adam</given_name>"
-            "<surname>Aardvark</surname><suffix>Jr.</suffix></person_name>"
+            "</person_name>"
         )
         person_name_element = contributor.set_person_name(
             parent_tag, contributor_object, contributor_roles, sequence
@@ -62,8 +63,9 @@ class TestSetPersonName(unittest.TestCase):
         parent_tag = Element("person_name")
         expected = (
             '<person_name sequence="first">'
+            "<surname>Aardvark</surname>"
             '<role type="author" vocab="crossref" />'
-            "<surname>Aardvark</surname></person_name>"
+            "</person_name>"
         )
         person_name_element = contributor.set_person_name(
             parent_tag, contributor_object, contributor_roles, sequence

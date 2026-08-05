@@ -31,9 +31,9 @@
 				</titles>
 				<contributors>
 					<person_name sequence="first">
-						<role type="author" vocab="crossref"/>
 						<given_name>Paul D.</given_name>
 						<surname>Williams</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>The George Washington University, USA</institution_name>

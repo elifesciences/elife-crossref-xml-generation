@@ -33,9 +33,9 @@ class TestSetPostedContent(unittest.TestCase):
                 "<group_title>eLife RP</group_title>"
                 "<contributors>"
                 '<person_name sequence="first">'
-                '<role type="author" vocab="crossref" />'
                 "<given_name>Given names</given_name>"
                 "<surname>First</surname>"
+                '<role type="author" vocab="crossref" />'
                 "<affiliations>"
                 "<institution>"
                 "<institution_name>Department, Institution</institution_name>"
@@ -45,9 +45,9 @@ class TestSetPostedContent(unittest.TestCase):
                 '<ORCID authenticated="false">https://orcid.org/0000-0000-0000-0000</ORCID>'
                 "</person_name>"
                 '<person_name sequence="additional">'
-                '<role type="author" vocab="crossref" />'
                 "<given_name>Given names</given_name>"
                 "<surname>Second</surname>"
+                '<role type="author" vocab="crossref" />'
                 "<affiliations>"
                 "<institution>"
                 "<institution_name>Department, Institution</institution_name>"

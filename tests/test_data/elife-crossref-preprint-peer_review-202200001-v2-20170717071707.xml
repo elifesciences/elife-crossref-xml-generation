@@ -13,9 +13,9 @@
         <peer_review stage="pre-publication" type="editor-report">
             <contributors>
                 <person_name sequence="first">
-                    <role type="author" vocab="crossref"/>
                     <given_name>Ed</given_name>
                     <surname>Itor</surname>
+                    <role type="author" vocab="crossref"/>
                 </person_name>
             </contributors>
             <titles>
@@ -123,9 +123,9 @@
         <peer_review stage="pre-publication" type="author-comment">
             <contributors>
                 <person_name sequence="first">
-                    <role type="author" vocab="crossref"/>
                     <given_name>Auth</given_name>
                     <surname>Or</surname>
+                    <role type="author" vocab="crossref"/>
                 </person_name>
                 <organization contributor_role="author" sequence="additional">Research Group</organization>
             </contributors>

@@ -31,9 +31,9 @@
 				</titles>
 				<contributors>
 					<person_name sequence="first">
-						<role type="author" vocab="crossref"/>
 						<given_name>Maud</given_name>
 						<surname>Magdeleine</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>CNRS, Institut de Pharmacologie Moléculaire et Cellulaire, Université Côte d'Azur</institution_name>
@@ -42,9 +42,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Romain</given_name>
 						<surname>Gautier</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>CNRS, Institut de Pharmacologie Moléculaire et Cellulaire, Université Côte d'Azur</institution_name>
@@ -53,9 +53,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Pierre</given_name>
 						<surname>Gounon</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Centre Commun de Microscopie Appliquée, Université Côte d'Azur</institution_name>
@@ -64,9 +64,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Hélène</given_name>
 						<surname>Barelli</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>CNRS, Institut de Pharmacologie Moléculaire et Cellulaire, Université Côte d'Azur</institution_name>
@@ -75,9 +75,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Stefano</given_name>
 						<surname>Vanni</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>CNRS, Institut de Pharmacologie Moléculaire et Cellulaire, Université Côte d'Azur</institution_name>
@@ -87,10 +87,10 @@
 						<ORCID authenticated="true">http://orcid.org/0000-0003-2146-1140</ORCID>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
-						<role type="corresponding-author" vocab="crossref"/>
 						<given_name>Bruno</given_name>
 						<surname>Antonny</surname>
+						<role type="author" vocab="crossref"/>
+						<role type="corresponding-author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>CNRS, Institut de Pharmacologie Moléculaire et Cellulaire, Université Côte d'Azur</institution_name>
