@@ -31,9 +31,9 @@
 				</titles>
 				<contributors>
 					<person_name sequence="first">
-						<role type="author" vocab="crossref"/>
 						<given_name>Yaping</given_name>
 						<surname>Sun</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Department of Bioengineering and Therapeutic Science, University of California, San Francisco</institution_name>
@@ -50,9 +50,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="first">
-						<role type="author" vocab="crossref"/>
 						<given_name>Zhiqiang</given_name>
 						<surname>Dong</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Department of Bioengineering and Therapeutic Science, University of California, San Francisco</institution_name>
@@ -69,9 +69,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Taihao</given_name>
 						<surname>Jin</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Department of Physiology, University of California, San Francisco</institution_name>
@@ -88,9 +88,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Kean-Hooi</given_name>
 						<surname>Ang</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Department of Pharmaceutical Chemistry, University of California, San Francisco</institution_name>
@@ -103,9 +103,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Miller</given_name>
 						<surname>Huang</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Department of Neurology, University of California, San Francisco</institution_name>
@@ -122,9 +122,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Kelly M</given_name>
 						<surname>Haston</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Department of Physiology, University of California, San Francisco</institution_name>
@@ -137,9 +137,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Jisong</given_name>
 						<surname>Peng</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Department of Bioengineering and Therapeutic Science, University of California, San Francisco</institution_name>
@@ -156,9 +156,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Tao P</given_name>
 						<surname>Zhong</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>State Key Laboratory of Genetic Engineering, Department of Genetics, Fudan University School of Life Sciences</institution_name>
@@ -167,9 +167,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Steven</given_name>
 						<surname>Finkbeiner</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Department of Physiology, University of California, San Francisco</institution_name>
@@ -194,9 +194,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>William A</given_name>
 						<surname>Weiss</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Department of Neurology, University of California, San Francisco</institution_name>
@@ -213,9 +213,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Michelle R</given_name>
 						<surname>Arkin</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Department of Pharmaceutical Chemistry, University of California, San Francisco</institution_name>
@@ -228,9 +228,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Lily Y</given_name>
 						<surname>Jan</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Department of Physiology, University of California, San Francisco</institution_name>
@@ -247,10 +247,10 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
-						<role type="corresponding-author" vocab="crossref"/>
 						<given_name>Su</given_name>
 						<surname>Guo</surname>
+						<role type="author" vocab="crossref"/>
+						<role type="corresponding-author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Department of Bioengineering and Therapeutic Science, University of California, San Francisco</institution_name>

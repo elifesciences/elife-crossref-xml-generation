@@ -31,11 +31,11 @@
 				</titles>
 				<contributors>
 					<person_name sequence="first">
-						<role type="author" vocab="crossref"/>
-						<role type="corresponding-author" vocab="crossref"/>
 						<given_name>Melissa</given_name>
 						<surname>Harrison</surname>
 						<suffix>Jnr</suffix>
+						<role type="author" vocab="crossref"/>
+						<role type="corresponding-author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Department of Production, eLife</institution_name>
@@ -45,9 +45,9 @@
 						<ORCID authenticated="true">http://orcid.org/0000-0003-3523-4408</ORCID>
 					</person_name>
 					<person_name sequence="first">
-						<role type="author" vocab="crossref"/>
 						<given_name>James F</given_name>
 						<surname>Gilbert</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Department of Production, eLife</institution_name>

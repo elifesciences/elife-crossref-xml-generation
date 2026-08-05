@@ -31,9 +31,9 @@
 				</titles>
 				<contributors>
 					<person_name sequence="first">
-						<role type="author" vocab="crossref"/>
 						<given_name>Young Seok</given_name>
 						<surname>Ju</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Cancer Genome Project, Wellcome Trust Sanger Institute</institution_name>
@@ -42,9 +42,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Ludmil B</given_name>
 						<surname>Alexandrov</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Cancer Genome Project, Wellcome Trust Sanger Institute</institution_name>
@@ -53,9 +53,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Moritz</given_name>
 						<surname>Gerstung</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Cancer Genome Project, Wellcome Trust Sanger Institute</institution_name>
@@ -64,9 +64,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Inigo</given_name>
 						<surname>Martincorena</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Cancer Genome Project, Wellcome Trust Sanger Institute</institution_name>
@@ -75,9 +75,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Serena</given_name>
 						<surname>Nik-Zainal</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Cancer Genome Project, Wellcome Trust Sanger Institute</institution_name>
@@ -86,9 +86,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Manasa</given_name>
 						<surname>Ramakrishna</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Cancer Genome Project, Wellcome Trust Sanger Institute</institution_name>
@@ -97,9 +97,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Helen R</given_name>
 						<surname>Davies</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Cancer Genome Project, Wellcome Trust Sanger Institute</institution_name>
@@ -108,9 +108,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Elli</given_name>
 						<surname>Papaemmanuil</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Cancer Genome Project, Wellcome Trust Sanger Institute</institution_name>
@@ -119,9 +119,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Gunes</given_name>
 						<surname>Gundem</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Cancer Genome Project, Wellcome Trust Sanger Institute</institution_name>
@@ -130,9 +130,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Adam</given_name>
 						<surname>Shlien</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Cancer Genome Project, Wellcome Trust Sanger Institute</institution_name>
@@ -141,9 +141,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Niccolo</given_name>
 						<surname>Bolli</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Cancer Genome Project, Wellcome Trust Sanger Institute</institution_name>
@@ -152,9 +152,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Sam</given_name>
 						<surname>Behjati</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Cancer Genome Project, Wellcome Trust Sanger Institute</institution_name>
@@ -163,9 +163,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Patrick S</given_name>
 						<surname>Tarpey</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Cancer Genome Project, Wellcome Trust Sanger Institute</institution_name>
@@ -174,9 +174,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Jyoti</given_name>
 						<surname>Nangalia</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Cancer Genome Project, Wellcome Trust Sanger Institute</institution_name>
@@ -193,9 +193,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Charles E</given_name>
 						<surname>Massie</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Cancer Genome Project, Wellcome Trust Sanger Institute</institution_name>
@@ -212,9 +212,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Adam P</given_name>
 						<surname>Butler</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Cancer Genome Project, Wellcome Trust Sanger Institute</institution_name>
@@ -223,9 +223,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Jon W</given_name>
 						<surname>Teague</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Cancer Genome Project, Wellcome Trust Sanger Institute</institution_name>
@@ -234,9 +234,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>George S</given_name>
 						<surname>Vassiliou</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Cancer Genome Project, Wellcome Trust Sanger Institute</institution_name>
@@ -253,9 +253,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Anthony R</given_name>
 						<surname>Green</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Cambridge University Hospitals NHS Foundation Trust</institution_name>
@@ -268,9 +268,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Ming-Qing</given_name>
 						<surname>Du</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Cambridge University Hospitals NHS Foundation Trust</institution_name>
@@ -279,9 +279,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Ashwin</given_name>
 						<surname>Unnikrishnan</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Lowy Cancer Research Centre, University of New South Wales</institution_name>
@@ -290,9 +290,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>John E</given_name>
 						<surname>Pimanda</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Lowy Cancer Research Centre, University of New South Wales</institution_name>
@@ -301,9 +301,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Bin Tean</given_name>
 						<surname>Teh</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Laboratory of Cancer Epigenome, National Cancer Centre</institution_name>
@@ -316,9 +316,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Nikhil</given_name>
 						<surname>Munshi</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Department of Hematologic Oncology, Dana-Farber Cancer Institute</institution_name>
@@ -327,9 +327,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Mel</given_name>
 						<surname>Greaves</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Institute of Cancer Research, Sutton</institution_name>
@@ -338,9 +338,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Paresh</given_name>
 						<surname>Vyas</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Weatherall Institute for Molecular Medicine, University of Oxford</institution_name>
@@ -349,9 +349,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Adel K</given_name>
 						<surname>El-Naggar</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Department of Pathology, MD Anderson Cancer Center</institution_name>
@@ -360,9 +360,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Tom</given_name>
 						<surname>Santarius</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Cambridge University Hospitals NHS Foundation Trust</institution_name>
@@ -371,9 +371,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>V Peter</given_name>
 						<surname>Collins</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Cambridge University Hospitals NHS Foundation Trust</institution_name>
@@ -382,9 +382,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Richard</given_name>
 						<surname>Grundy</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Children's Brain Tumour Research Centre, University of Nottingham</institution_name>
@@ -393,9 +393,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Jack A</given_name>
 						<surname>Taylor</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>National Institute of Environmental Health Sciences, National Institute of Health</institution_name>
@@ -404,9 +404,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>D Neil</given_name>
 						<surname>Hayes</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Department of Internal Medicine, University of North Carolina</institution_name>
@@ -415,9 +415,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>David</given_name>
 						<surname>Malkin</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Hospital for Sick Children, University of Toronto</institution_name>
@@ -429,9 +429,9 @@
 					<organization contributor_role="author" sequence="additional">ICGC Chronic Myeloid Disorders Group</organization>
 					<organization contributor_role="author" sequence="additional">ICGC Prostate Cancer Group</organization>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Christopher S</given_name>
 						<surname>Foster</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Department of Molecular and Clinical Cancer Medicine, University of Liverpool</institution_name>
@@ -444,9 +444,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Anne Y</given_name>
 						<surname>Warren</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Cambridge University Hospitals NHS Foundation Trust</institution_name>
@@ -455,9 +455,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Hayley C</given_name>
 						<surname>Whitaker</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Cancer Research UK Cambridge Institute, University of Cambridge</institution_name>
@@ -466,9 +466,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Daniel</given_name>
 						<surname>Brewer</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Institute of Cancer Research, Sutton</institution_name>
@@ -481,9 +481,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Rosalind</given_name>
 						<surname>Eeles</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Institute of Cancer Research, Sutton</institution_name>
@@ -492,9 +492,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Colin</given_name>
 						<surname>Cooper</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Institute of Cancer Research, Sutton</institution_name>
@@ -507,9 +507,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>David</given_name>
 						<surname>Neal</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Cancer Research UK Cambridge Institute, University of Cambridge</institution_name>
@@ -518,9 +518,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Tapio</given_name>
 						<surname>Visakorpi</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Institute of Biosciences and Medical Technology - BioMediTech and Fimlab Laboratories, University of Tampere and Tampere University Hospital</institution_name>
@@ -529,9 +529,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>William B</given_name>
 						<surname>Isaacs</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Department of Oncology, Johns Hopkins University</institution_name>
@@ -540,9 +540,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>G Steven</given_name>
 						<surname>Bova</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Institute of Biosciences and Medical Technology - BioMediTech and Fimlab Laboratories, University of Tampere and Tampere University Hospital</institution_name>
@@ -551,9 +551,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Adrienne M</given_name>
 						<surname>Flanagan</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Department of Histopathology, Royal National Orthopaedic Hospital</institution_name>
@@ -566,9 +566,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>P Andrew</given_name>
 						<surname>Futreal</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Cancer Genome Project, Wellcome Trust Sanger Institute</institution_name>
@@ -581,9 +581,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Andy G</given_name>
 						<surname>Lynch</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Cancer Research UK Cambridge Institute, University of Cambridge</institution_name>
@@ -592,9 +592,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Patrick F</given_name>
 						<surname>Chinnery</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Wellcome Trust Centre for Mitochondrial Research, Institute of Genetic Medicine, Newcastle University</institution_name>
@@ -603,9 +603,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Ultan</given_name>
 						<surname>McDermott</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Cancer Genome Project, Wellcome Trust Sanger Institute</institution_name>
@@ -618,9 +618,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Michael R</given_name>
 						<surname>Stratton</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Cancer Genome Project, Wellcome Trust Sanger Institute</institution_name>
@@ -629,10 +629,10 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
-						<role type="corresponding-author" vocab="crossref"/>
 						<given_name>Peter J</given_name>
 						<surname>Campbell</surname>
+						<role type="author" vocab="crossref"/>
+						<role type="corresponding-author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Cancer Genome Project, Wellcome Trust Sanger Institute</institution_name>

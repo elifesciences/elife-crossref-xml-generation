@@ -31,35 +31,35 @@
 				</titles>
 				<contributors>
 					<person_name sequence="first">
-						<role type="author" vocab="crossref"/>
 						<given_name>James</given_name>
 						<surname>Hose</surname>
+						<role type="author" vocab="crossref"/>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Chris Mun</given_name>
 						<surname>Yong</surname>
+						<role type="author" vocab="crossref"/>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Maria</given_name>
 						<surname>Sardi</surname>
+						<role type="author" vocab="crossref"/>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Zhishi</given_name>
 						<surname>Wang</surname>
+						<role type="author" vocab="crossref"/>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Michael A</given_name>
 						<surname>Newton</surname>
+						<role type="author" vocab="crossref"/>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
-						<role type="corresponding-author" vocab="crossref"/>
 						<given_name>Audrey P</given_name>
 						<surname>Gasch</surname>
+						<role type="author" vocab="crossref"/>
+						<role type="corresponding-author" vocab="crossref"/>
 						<ORCID authenticated="true">http://orcid.org/0000-0002-8182-257X</ORCID>
 					</person_name>
 				</contributors>

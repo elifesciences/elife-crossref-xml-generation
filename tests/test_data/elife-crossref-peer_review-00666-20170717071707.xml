@@ -13,9 +13,9 @@
         <peer_review stage="pre-publication" type="editor-report">
             <contributors>
                 <person_name sequence="first">
-                    <role type="author" vocab="crossref"/>
                     <given_name>Melissa</given_name>
                     <surname>Harrison</surname>
+                    <role type="author" vocab="crossref"/>
                 </person_name>
                 <organization contributor_role="author" sequence="additional">eLife Editorial Production Group</organization>
             </contributors>
@@ -46,9 +46,9 @@
         <peer_review stage="pre-publication" type="editor-report">
             <contributors>
                 <person_name sequence="first">
-                    <role type="editor" vocab="crossref"/>
                     <given_name>Rutz</given_name>
                     <surname>Christian</surname>
+                    <role type="editor" vocab="crossref"/>
                 </person_name>
             </contributors>
             <titles>
@@ -75,9 +75,9 @@
         <peer_review stage="pre-publication" type="author-comment">
             <contributors>
                 <person_name sequence="first">
-                    <role type="author" vocab="crossref"/>
                     <given_name>Melissa</given_name>
                     <surname>Harrison</surname>
+                    <role type="author" vocab="crossref"/>
                 </person_name>
                 <organization contributor_role="author" sequence="additional">eLife Editorial Production Group</organization>
             </contributors>

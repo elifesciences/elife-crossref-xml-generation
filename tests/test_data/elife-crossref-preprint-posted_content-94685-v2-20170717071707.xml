@@ -13,10 +13,10 @@
         <posted_content type="preprint">
             <contributors>
                 <person_name sequence="first">
-                    <role type="author" vocab="crossref"/>
-                    <role type="corresponding-author" vocab="crossref"/>
                     <given_name>Nima</given_name>
                     <surname>Mohseni</surname>
+                    <role type="author" vocab="crossref"/>
+                    <role type="corresponding-author" vocab="crossref"/>
                     <affiliations>
                         <institution>
                             <institution_name>Lund University, Department of Biology</institution_name>
@@ -27,10 +27,10 @@
                     <ORCID>http://orcid.org/0000-0002-6567-4167</ORCID>
                 </person_name>
                 <person_name sequence="additional">
-                    <role type="author" vocab="crossref"/>
-                    <role type="corresponding-author" vocab="crossref"/>
                     <given_name>Eran</given_name>
                     <surname>Elhaik</surname>
+                    <role type="author" vocab="crossref"/>
+                    <role type="corresponding-author" vocab="crossref"/>
                     <affiliations>
                         <institution>
                             <institution_name>Lund University, Department of Biology</institution_name>
