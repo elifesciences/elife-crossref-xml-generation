@@ -30,7 +30,9 @@
 					<title>Public Perceptions of Citizen Science</title>
 				</titles>
 				<contributors>
-					<person_name contributor_role="author" sequence="first">
+					<person_name sequence="first">
+						<role type="author" vocab="crossref"/>
+						<role type="corresponding-author" vocab="crossref"/>
 						<given_name>Eva</given_name>
 						<surname>Lewandowski</surname>
 						<affiliations>
@@ -39,7 +41,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Wendy</given_name>
 						<surname>Caldwell</surname>
 						<affiliations>
@@ -48,7 +51,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Dane</given_name>
 						<surname>Elmquist</surname>
 						<affiliations>
@@ -57,7 +61,8 @@
 							</institution>
 						</affiliations>
 					</person_name>
-					<person_name contributor_role="author" sequence="additional">
+					<person_name sequence="additional">
+						<role type="author" vocab="crossref"/>
 						<given_name>Karen</given_name>
 						<surname>Oberhauser</surname>
 						<affiliations>

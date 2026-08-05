@@ -30,7 +30,8 @@
 					<title>Strategic Communications for Peace Operations: The African Union’s Information War Against al-Shabaab</title>
 				</titles>
 				<contributors>
-					<person_name contributor_role="author" sequence="first">
+					<person_name sequence="first">
+						<role type="author" vocab="crossref"/>
 						<given_name>Paul D.</given_name>
 						<surname>Williams</surname>
 						<affiliations>

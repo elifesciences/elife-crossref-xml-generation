@@ -12,7 +12,8 @@
     <body>
         <peer_review stage="pre-publication" type="editor-report">
             <contributors>
-                <person_name contributor_role="author" sequence="first">
+                <person_name sequence="first">
+                    <role type="author" vocab="crossref"/>
                     <given_name>Melissa</given_name>
                     <surname>Harrison</surname>
                 </person_name>
@@ -44,7 +45,8 @@
         </peer_review>
         <peer_review stage="pre-publication" type="editor-report">
             <contributors>
-                <person_name contributor_role="editor" sequence="first">
+                <person_name sequence="first">
+                    <role type="editor" vocab="crossref"/>
                     <given_name>Rutz</given_name>
                     <surname>Christian</surname>
                 </person_name>
@@ -72,7 +74,8 @@
         </peer_review>
         <peer_review stage="pre-publication" type="author-comment">
             <contributors>
-                <person_name contributor_role="author" sequence="first">
+                <person_name sequence="first">
+                    <role type="author" vocab="crossref"/>
                     <given_name>Melissa</given_name>
                     <surname>Harrison</surname>
                 </person_name>
@@ -101,7 +104,9 @@
         </peer_review>
         <peer_review stage="pre-publication" type="referee-report">
             <contributors>
-                <anonymous contributor_role="author" sequence="first"/>
+                <anonymous sequence="first">
+                    <role type="author" vocab="crossref"/>
+                </anonymous>
             </contributors>
             <titles>
                 <title>Reviewer #1 (Public Review): The eLife research article</title>
