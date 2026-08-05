@@ -31,9 +31,9 @@
 				</titles>
 				<contributors>
 					<person_name sequence="first">
-						<role type="author" vocab="crossref"/>
 						<given_name>Rafael</given_name>
 						<surname>Fernandez-Leiro</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>MRC Laboratory of Molecular Biology</institution_name>
@@ -43,9 +43,9 @@
 						<ORCID authenticated="true">http://orcid.org/0000-0002-7941-0357</ORCID>
 					</person_name>
 					<person_name sequence="first">
-						<role type="author" vocab="crossref"/>
 						<given_name>Julian</given_name>
 						<surname>Conrad</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>MRC Laboratory of Molecular Biology</institution_name>
@@ -54,10 +54,10 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
-						<role type="corresponding-author" vocab="crossref"/>
 						<given_name>Sjors HW</given_name>
 						<surname>Scheres</surname>
+						<role type="author" vocab="crossref"/>
+						<role type="corresponding-author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>MRC Laboratory of Molecular Biology</institution_name>
@@ -67,10 +67,10 @@
 						<ORCID authenticated="true">http://orcid.org/0000-0002-0462-6540</ORCID>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
-						<role type="corresponding-author" vocab="crossref"/>
 						<given_name>Meindert H</given_name>
 						<surname>Lamers</surname>
+						<role type="author" vocab="crossref"/>
+						<role type="corresponding-author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>MRC Laboratory of Molecular Biology</institution_name>

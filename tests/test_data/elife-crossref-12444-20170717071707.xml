@@ -31,9 +31,9 @@
 				</titles>
 				<contributors>
 					<person_name sequence="first">
-						<role type="author" vocab="crossref"/>
 						<given_name>Agnieszka M</given_name>
 						<surname>Kabat</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Sir William Dunn School of Pathology, University of Oxford</institution_name>
@@ -42,9 +42,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Oliver J</given_name>
 						<surname>Harrison</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Sir William Dunn School of Pathology, University of Oxford</institution_name>
@@ -57,9 +57,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Thomas</given_name>
 						<surname>Riffelmacher</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>MRC Human Immunology Unit, Weatherall Institute of Molecular Medicine, University of Oxford</institution_name>
@@ -72,9 +72,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Amin E</given_name>
 						<surname>Moghaddam</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Sir William Dunn School of Pathology, University of Oxford</institution_name>
@@ -83,9 +83,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Claire F</given_name>
 						<surname>Pearson</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Kennedy Institute of Rheumatology, University of Oxford</institution_name>
@@ -94,9 +94,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Adam</given_name>
 						<surname>Laing</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Peter Gorer Department of Immunobiology, King's College London</institution_name>
@@ -105,9 +105,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Lucie</given_name>
 						<surname>Abeler-Dörner</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Peter Gorer Department of Immunobiology, King's College London</institution_name>
@@ -116,9 +116,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Simon P</given_name>
 						<surname>Forman</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Faculty of Life Sciences, The University of Manchester</institution_name>
@@ -127,9 +127,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Richard K</given_name>
 						<surname>Grencis</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Faculty of Life Sciences, The University of Manchester</institution_name>
@@ -138,9 +138,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Quentin</given_name>
 						<surname>Sattentau</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Sir William Dunn School of Pathology, University of Oxford</institution_name>
@@ -149,9 +149,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Anna Katharina</given_name>
 						<surname>Simon</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>MRC Human Immunology Unit, Weatherall Institute of Molecular Medicine, University of Oxford</institution_name>
@@ -164,10 +164,10 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
-						<role type="corresponding-author" vocab="crossref"/>
 						<given_name>Johanna</given_name>
 						<surname>Pott</surname>
+						<role type="author" vocab="crossref"/>
+						<role type="corresponding-author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Sir William Dunn School of Pathology, University of Oxford</institution_name>
@@ -176,10 +176,10 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
-						<role type="corresponding-author" vocab="crossref"/>
 						<given_name>Kevin J</given_name>
 						<surname>Maloy</surname>
+						<role type="author" vocab="crossref"/>
+						<role type="corresponding-author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Sir William Dunn School of Pathology, University of Oxford</institution_name>

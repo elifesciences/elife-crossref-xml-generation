@@ -31,9 +31,9 @@
 				</titles>
 				<contributors>
 					<person_name sequence="first">
-						<role type="author" vocab="crossref"/>
 						<given_name>Hui</given_name>
 						<surname>Zhao</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>VIB Vesalius Research Center, KU Leuven</institution_name>
@@ -42,9 +42,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Bernard</given_name>
 						<surname>Thienpont</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>VIB Vesalius Research Center, KU Leuven</institution_name>
@@ -54,9 +54,9 @@
 						<ORCID authenticated="true">http://orcid.org/0000-0002-8772-6845</ORCID>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Betül Tuba</given_name>
 						<surname>Yesilyurt</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>VIB Vesalius Research Center, KU Leuven</institution_name>
@@ -65,9 +65,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Matthieu</given_name>
 						<surname>Moisse</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>VIB Vesalius Research Center, KU Leuven</institution_name>
@@ -77,9 +77,9 @@
 						<ORCID authenticated="true">http://orcid.org/0000-0001-8880-9311</ORCID>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Joke</given_name>
 						<surname>Reumers</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>VIB Vesalius Research Center, KU Leuven</institution_name>
@@ -88,9 +88,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Lieve</given_name>
 						<surname>Coenegrachts</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Division of Gynaecologic Oncology, Department of Obstetrics and Gynaecology, University Hospital Gasthuisberg</institution_name>
@@ -99,9 +99,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Xavier</given_name>
 						<surname>Sagaert</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Division of Pathology, University Hospital Gasthuisberg</institution_name>
@@ -110,9 +110,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Stefanie</given_name>
 						<surname>Schrauwen</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Division of Gynaecologic Oncology, Department of Obstetrics and Gynaecology, University Hospital Gasthuisberg</institution_name>
@@ -121,9 +121,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Dominiek</given_name>
 						<surname>Smeets</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>VIB Vesalius Research Center, KU Leuven</institution_name>
@@ -132,9 +132,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Gert</given_name>
 						<surname>Matthijs</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Department of Human Genetics, KU Leuven</institution_name>
@@ -143,9 +143,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Stein</given_name>
 						<surname>Aerts</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Department of Human Genetics, University of Leuven</institution_name>
@@ -154,9 +154,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Jan</given_name>
 						<surname>Cools</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Department of Human Genetics, KU Leuven</institution_name>
@@ -165,9 +165,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Alex</given_name>
 						<surname>Metcalf</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Division of Genetics and Computational Biology, Queensland Institute of Medical Research</institution_name>
@@ -176,9 +176,9 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Amanda</given_name>
 						<surname>Spurdle</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Division of Genetics and Computational Biology, Queensland Institute of Medical Research</institution_name>
@@ -188,9 +188,9 @@
 					</person_name>
 					<organization contributor_role="author" sequence="additional">ANECS</organization>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
 						<given_name>Frederic</given_name>
 						<surname>Amant</surname>
+						<role type="author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>Division of Gynaecologic Oncology, Department of Obstetrics and Gynaecology, University Hospital Gasthuisberg</institution_name>
@@ -199,10 +199,10 @@
 						</affiliations>
 					</person_name>
 					<person_name sequence="additional">
-						<role type="author" vocab="crossref"/>
-						<role type="corresponding-author" vocab="crossref"/>
 						<given_name>Diether</given_name>
 						<surname>Lambrechts</surname>
+						<role type="author" vocab="crossref"/>
+						<role type="corresponding-author" vocab="crossref"/>
 						<affiliations>
 							<institution>
 								<institution_name>VIB Vesalius Research Center, KU Leuven</institution_name>
