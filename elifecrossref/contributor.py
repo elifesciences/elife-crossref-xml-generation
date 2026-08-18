@@ -48,6 +48,32 @@ def set_roles(parent, contributor_roles):
             role_tag.set("vocab", contributor_role.get("vocab"))
 
 
+# map of CRediT role to its simplified name used in Crossref schema
+CROSSREF_CREDIT_ROLE_MAP = {
+    "Conceptualization": "conceptualization",
+    "Data curation": "data-curation",
+    "Formal analysis": "formal-analysis",
+    "Funding acquisition": "funding-acquisition",
+    "Investigation": "investigation",
+    "Methodology": "methodology",
+    "Project administration": "project-administration",
+    "Resources": "resources",
+    "Software": "software",
+    "Supervision": "supervision",
+    "Validation": "validation",
+    "Visualization": "visualization",
+    "Writing - original draft": "writing-original-draft",
+    "Writing - review & editing": "writing-review-editing",
+}
+
+
+def crossref_credit_role(credit_role):
+    "from CRedit role return the value Crossref schema uses"
+    if credit_role in CROSSREF_CREDIT_ROLE_MAP:
+        return CROSSREF_CREDIT_ROLE_MAP[credit_role]
+    return None
+
+
 def set_contributor(parent, contributor, sequence):
     """add tags for a contributor to the parent tag"""
     contributor_roles = []
@@ -61,6 +87,19 @@ def set_contributor(parent, contributor, sequence):
     # add corresponding role to all but organization contributors
     if contributor.corresp and not contributor.collab:
         contributor_roles.append({"vocab": "crossref", "type": "corresponding-author"})
+
+    # add CRediT roles
+    if hasattr(contributor, "credit_roles"):
+        collected_credit_roles = set()
+        for credit_role in contributor.credit_roles:
+            # match to map of Crossref CRediT role to simplified name value
+            role = crossref_credit_role(credit_role)
+            if role:
+                collected_credit_roles.add(role)
+        if collected_credit_roles:
+            # add CRediT roles to the list in alphabetical order
+            for role in sorted(collected_credit_roles):
+                contributor_roles.append({"vocab": "credit", "type": role})
 
     # Skip contributors with no surname
     if contributor.anonymous:

@@ -36,6 +36,14 @@
 						<suffix>III</suffix>
 						<role type="author" vocab="crossref"/>
 						<role type="corresponding-author" vocab="crossref"/>
+						<role type="conceptualization" vocab="credit"/>
+						<role type="data-curation" vocab="credit"/>
+						<role type="formal-analysis" vocab="credit"/>
+						<role type="investigation" vocab="credit"/>
+						<role type="methodology" vocab="credit"/>
+						<role type="validation" vocab="credit"/>
+						<role type="visualization" vocab="credit"/>
+						<role type="writing-original-draft" vocab="credit"/>
 						<affiliations>
 							<institution>
 								<institution_name>The department of production, eLife Sciences</institution_name>
@@ -49,6 +57,12 @@
 						<surname>Harrison</surname>
 						<role type="author" vocab="crossref"/>
 						<role type="corresponding-author" vocab="crossref"/>
+						<role type="conceptualization" vocab="credit"/>
+						<role type="funding-acquisition" vocab="credit"/>
+						<role type="resources" vocab="credit"/>
+						<role type="supervision" vocab="credit"/>
+						<role type="validation" vocab="credit"/>
+						<role type="writing-review-editing" vocab="credit"/>
 						<affiliations>
 							<institution>
 								<institution_name>The department of production, eLife Sciences</institution_name>
@@ -74,6 +88,9 @@
 						<given_name>Santa</given_name>
 						<surname>Claus</surname>
 						<role type="author" vocab="crossref"/>
+						<role type="resources" vocab="credit"/>
+						<role type="supervision" vocab="credit"/>
+						<role type="writing-review-editing" vocab="credit"/>
 						<affiliations>
 							<institution>
 								<institution_name>The department of production, eLife Sciences</institution_name>
@@ -86,6 +103,9 @@
 						<surname>West</surname>
 						<suffix>Jnr</suffix>
 						<role type="author" vocab="crossref"/>
+						<role type="resources" vocab="credit"/>
+						<role type="supervision" vocab="credit"/>
+						<role type="writing-review-editing" vocab="credit"/>
 						<affiliations>
 							<institution>
 								<institution_name>JATS4R</institution_name>
